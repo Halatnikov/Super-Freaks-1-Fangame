@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>Event sheet 1</name>
+    <name>E_Launch</name>
     <events>
         <event-block sid="999804906256369">
             <conditions />
@@ -44,19 +44,19 @@
                     <sub-events>
                         <event-block sid="260775789462149">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="949802313180480" type="Sprite2">
+                                <condition id="-7" name="Compare instance variable" sid="949802313180480" type="Loading">
                                     <param id="0" name="Instance variable">ID</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">4</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="LiteTween" id="3" name="Set target" sid="498323247217198" type="Sprite2">
+                                <action behavior="LiteTween" id="3" name="Set target" sid="498323247217198" type="Loading">
                                     <param id="0" name="Target is">1</param>
                                     <param id="1" name="Relativity">0</param>
                                     <param id="2" name="Value">320</param>
                                 </action>
-                                <action behavior="LiteTween" id="10" name="Start" sid="642405097047319" type="Sprite2">
+                                <action behavior="LiteTween" id="10" name="Start" sid="642405097047319" type="Loading">
                                     <param id="0" name="Start Mode">0</param>
                                     <param id="1" name="Force use current">0</param>
                                 </action>
@@ -64,19 +64,19 @@
                         </event-block>
                         <event-block sid="222311926572434">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="943867595731397" type="Sprite2">
+                                <condition id="-7" name="Compare instance variable" sid="943867595731397" type="Loading">
                                     <param id="0" name="Instance variable">ID</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="LiteTween" id="3" name="Set target" sid="793662723489656" type="Sprite2">
+                                <action behavior="LiteTween" id="3" name="Set target" sid="793662723489656" type="Loading">
                                     <param id="0" name="Target is">1</param>
                                     <param id="1" name="Relativity">0</param>
                                     <param id="2" name="Value">306</param>
                                 </action>
-                                <action behavior="LiteTween" id="10" name="Start" sid="140628422465901" type="Sprite2">
+                                <action behavior="LiteTween" id="10" name="Start" sid="140628422465901" type="Loading">
                                     <param id="0" name="Start Mode">0</param>
                                     <param id="1" name="Force use current">0</param>
                                 </action>
@@ -96,19 +96,19 @@
                     <sub-events>
                         <event-block sid="456335974464680">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="259558720983600" type="Sprite2">
+                                <condition id="-7" name="Compare instance variable" sid="259558720983600" type="Loading">
                                     <param id="0" name="Instance variable">ID</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="LiteTween" id="3" name="Set target" sid="439381531119006" type="Sprite2">
+                                <action behavior="LiteTween" id="3" name="Set target" sid="439381531119006" type="Loading">
                                     <param id="0" name="Target is">1</param>
                                     <param id="1" name="Relativity">0</param>
                                     <param id="2" name="Value">320</param>
                                 </action>
-                                <action behavior="LiteTween" id="10" name="Start" sid="198163084216323" type="Sprite2">
+                                <action behavior="LiteTween" id="10" name="Start" sid="198163084216323" type="Loading">
                                     <param id="0" name="Start Mode">0</param>
                                     <param id="1" name="Force use current">0</param>
                                 </action>
@@ -116,19 +116,19 @@
                         </event-block>
                         <event-block sid="789183087458750">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="130959539159941" type="Sprite2">
+                                <condition id="-7" name="Compare instance variable" sid="130959539159941" type="Loading">
                                     <param id="0" name="Instance variable">ID</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">2</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="LiteTween" id="3" name="Set target" sid="264123775803180" type="Sprite2">
+                                <action behavior="LiteTween" id="3" name="Set target" sid="264123775803180" type="Loading">
                                     <param id="0" name="Target is">1</param>
                                     <param id="1" name="Relativity">0</param>
                                     <param id="2" name="Value">306</param>
                                 </action>
-                                <action behavior="LiteTween" id="10" name="Start" sid="391114132165831" type="Sprite2">
+                                <action behavior="LiteTween" id="10" name="Start" sid="391114132165831" type="Loading">
                                     <param id="0" name="Start Mode">0</param>
                                     <param id="1" name="Force use current">0</param>
                                 </action>
@@ -148,19 +148,19 @@
                     <sub-events>
                         <event-block sid="441164832906817">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="778859920543495" type="Sprite2">
+                                <condition id="-7" name="Compare instance variable" sid="778859920543495" type="Loading">
                                     <param id="0" name="Instance variable">ID</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">2</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="LiteTween" id="3" name="Set target" sid="684023361456922" type="Sprite2">
+                                <action behavior="LiteTween" id="3" name="Set target" sid="684023361456922" type="Loading">
                                     <param id="0" name="Target is">1</param>
                                     <param id="1" name="Relativity">0</param>
                                     <param id="2" name="Value">320</param>
                                 </action>
-                                <action behavior="LiteTween" id="10" name="Start" sid="793892297902223" type="Sprite2">
+                                <action behavior="LiteTween" id="10" name="Start" sid="793892297902223" type="Loading">
                                     <param id="0" name="Start Mode">0</param>
                                     <param id="1" name="Force use current">0</param>
                                 </action>
@@ -168,19 +168,19 @@
                         </event-block>
                         <event-block sid="209577034786766">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="315910090852954" type="Sprite2">
+                                <condition id="-7" name="Compare instance variable" sid="315910090852954" type="Loading">
                                     <param id="0" name="Instance variable">ID</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">3</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="LiteTween" id="3" name="Set target" sid="351157364941112" type="Sprite2">
+                                <action behavior="LiteTween" id="3" name="Set target" sid="351157364941112" type="Loading">
                                     <param id="0" name="Target is">1</param>
                                     <param id="1" name="Relativity">0</param>
                                     <param id="2" name="Value">306</param>
                                 </action>
-                                <action behavior="LiteTween" id="10" name="Start" sid="541156074645369" type="Sprite2">
+                                <action behavior="LiteTween" id="10" name="Start" sid="541156074645369" type="Loading">
                                     <param id="0" name="Start Mode">0</param>
                                     <param id="1" name="Force use current">0</param>
                                 </action>
@@ -200,19 +200,19 @@
                     <sub-events>
                         <event-block sid="555181324079618">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="592261983856758" type="Sprite2">
+                                <condition id="-7" name="Compare instance variable" sid="592261983856758" type="Loading">
                                     <param id="0" name="Instance variable">ID</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">3</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="LiteTween" id="3" name="Set target" sid="326655028664276" type="Sprite2">
+                                <action behavior="LiteTween" id="3" name="Set target" sid="326655028664276" type="Loading">
                                     <param id="0" name="Target is">1</param>
                                     <param id="1" name="Relativity">0</param>
                                     <param id="2" name="Value">320</param>
                                 </action>
-                                <action behavior="LiteTween" id="10" name="Start" sid="361903634063900" type="Sprite2">
+                                <action behavior="LiteTween" id="10" name="Start" sid="361903634063900" type="Loading">
                                     <param id="0" name="Start Mode">0</param>
                                     <param id="1" name="Force use current">0</param>
                                 </action>
@@ -220,19 +220,19 @@
                         </event-block>
                         <event-block sid="559101585584546">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="294714150820258" type="Sprite2">
+                                <condition id="-7" name="Compare instance variable" sid="294714150820258" type="Loading">
                                     <param id="0" name="Instance variable">ID</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">4</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="LiteTween" id="3" name="Set target" sid="298998602747450" type="Sprite2">
+                                <action behavior="LiteTween" id="3" name="Set target" sid="298998602747450" type="Loading">
                                     <param id="0" name="Target is">1</param>
                                     <param id="1" name="Relativity">0</param>
                                     <param id="2" name="Value">306</param>
                                 </action>
-                                <action behavior="LiteTween" id="10" name="Start" sid="450399164705323" type="Sprite2">
+                                <action behavior="LiteTween" id="10" name="Start" sid="450399164705323" type="Loading">
                                     <param id="0" name="Start Mode">0</param>
                                     <param id="1" name="Force use current">0</param>
                                 </action>
@@ -263,7 +263,7 @@
             </conditions>
             <actions>
                 <action id="-2" name="Go to layout" sid="109878052037867" type="System">
-                    <param id="0" name="Layout">Layout 2</param>
+                    <param id="0" name="Layout">Menu</param>
                 </action>
             </actions>
         </event-block>

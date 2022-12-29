@@ -2,7 +2,7 @@
 <c2project>
     <name>Super Freaks 1 Fangame - Scruffy Goes To The Store To Buy Bread</name>
     <description></description>
-    <version>0.1.0-1</version>
+    <version>0.1.0-2</version>
     <author>Halatnikov</author>
     <author-email></author-email>
     <author-website>https://halatnikov.github.io</author-website>
@@ -11,9 +11,12 @@
     <saved-with-version>28000</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Toby R" id="Globals" version="1">Globals</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="NodeWebkit" version="1">NW.js</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
@@ -32,7 +35,7 @@
     </window-size>
     <pixel-rounding>1</pixel-rounding>
     <preview-effects>1</preview-effects>
-    <first-layout>Layout 1</first-layout>
+    <first-layout>_LAUNCH</first-layout>
     <use-loader-layout>1</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">No</prop>
@@ -56,6 +59,18 @@
             </object-type>
             <object-type name="Browser" sid="398302097699813">
                 <plugin id="Browser" />
+            </object-type>
+            <object-type name="NWjs" sid="821554640924705">
+                <plugin id="NodeWebkit" />
+            </object-type>
+        </object-folder>
+        <object-folder name=".Variables">
+            <object-type global="1" name="Var_Gameplay" sid="330730497597134">
+                <plugin id="Globals" />
+                <instance-variables>
+                    <instance-variable name="LevelTimer" sid="286023917782480" type="number" />
+                    <instance-variable name="TitlecardSeen" sid="595973637287574" type="boolean" />
+                </instance-variables>
             </object-type>
         </object-folder>
         <object-type name="Chain" sid="376113381833434">
@@ -127,7 +142,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite" sid="213937284505522">
+        <object-type name="BoneyM" sid="213937284505522">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="861583988857777" speed="10">
@@ -164,7 +179,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite2" sid="583897952510769">
+        <object-type name="Loading" sid="583897952510769">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="ID" sid="973001659792705" type="number" />
@@ -209,12 +224,72 @@
             <plugin id="Spritefont2" />
             <texture />
         </object-type>
+        <object-type name="HUD_PlayerNum" sid="986767488551995">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="885314177149810" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="HUD_PlayerIcon" sid="125489137427435">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="974336143194293" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="HUD_HP" sid="183858299206209">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="601550869498542" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="HUD_HPBar" sid="240086487866440">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="HUD_Trophy" sid="394560992230124">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="835930916457516" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="HUDTitleCard_BG" sid="685669622034497">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="InititalY" sid="310904688509168" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="LiteTween" sid="341692856614784">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="237561624533504" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="ObjectsAttachable" plugin-id="Sprite" sid="345415041156877">
             <members>
+                <member>BoneyM</member>
                 <member>ChainStart</member>
-                <member>Sprite</member>
             </members>
             <instance-variables>
                 <instance-variable name="AttachAllowed" sid="875303024979866" type="boolean" />
@@ -226,20 +301,36 @@
                 </behavior-type>
             </behaviors>
         </family>
+        <family name="Text" plugin-id="Spritefont2" sid="193627768008748">
+            <members>
+                <member>Text_Big</member>
+                <member>Text_Regular</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="ID" sid="935393005548187" type="string" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="LiteTween" sid="344124223762186">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+            </behaviors>
+        </family>
     </families>
     <layout-folder>
-        <layout>Layout 1.xml</layout>
-        <layout>Layout 2.xml</layout>
-        <layout>Layout 3.xml</layout>
+        <layout>_LAUNCH.xml</layout>
+        <layout>Menu.xml</layout>
+        <layout>Game.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>Event sheet 1.xml</event-sheet>
-        <event-sheet>Event sheet 2.xml</event-sheet>
-        <event-sheet>Event sheet 3.xml</event-sheet>
+        <event-sheet>E_Launch.xml</event-sheet>
+        <event-sheet>E_Menu.xml</event-sheet>
+        <event-sheet>E_Game.xml</event-sheet>
+        <event-sheet>E_GLOBAL.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="2" />
         <global-instance type="Browser" uid="3" />
+        <global-instance type="NWjs" uid="42" />
     </global-instances>
     <sounds-folder />
     <music-folder />

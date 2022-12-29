@@ -1,144 +1,152 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>Event sheet 2</name>
+    <name>E_GLOBAL</name>
     <events>
-        <event-block sid="451941634852816">
+        <event-block sid="285894410113596">
             <conditions>
-                <condition id="0" name="On key pressed" sid="480987941128410" type="Keyboard">
-                    <param id="0" name="Key">13</param>
-                </condition>
+                <condition id="-2" name="On start of layout" sid="295304382784672" type="System" />
             </conditions>
             <actions>
-                <action id="-2" name="Go to layout" sid="251488893465561" type="System">
-                    <param id="0" name="Layout">Layout 3</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="520506214028898">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="409175279797103" type="System" />
-            </conditions>
-            <actions>
-                <action id="5" name="Set character width" sid="878729752319411" type="Text_Regular">
+                <action id="5" name="Set character width" sid="790426660344445" type="Text_Regular">
                     <param id="0" name="Character">&quot;!.il&quot;</param>
                     <param id="1" name="Width">3</param>
                 </action>
-                <action id="5" name="Set character width" sid="507539968626897" type="Text_Regular">
+                <action id="5" name="Set character width" sid="793451040769983" type="Text_Regular">
                     <param id="0" name="Character">&quot;&apos;,:;|&quot;</param>
                     <param id="1" name="Width">4</param>
                 </action>
-                <action id="5" name="Set character width" sid="269829189154657" type="Text_Regular">
+                <action id="5" name="Set character width" sid="491453572069360" type="Text_Regular">
                     <param id="0" name="Character">&quot;&quot;&quot;[]`&quot;</param>
                     <param id="1" name="Width">6</param>
                 </action>
-                <action id="5" name="Set character width" sid="996698120615483" type="Text_Regular">
+                <action id="5" name="Set character width" sid="163389880909118" type="Text_Regular">
                     <param id="0" name="Character">&quot;()j&quot;</param>
                     <param id="1" name="Width">7</param>
                 </action>
-                <action id="5" name="Set character width" sid="563635556481413" type="Text_Regular">
+                <action id="5" name="Set character width" sid="903159513605700" type="Text_Regular">
                     <param id="0" name="Character">&quot;*1I^r{}&quot;</param>
                     <param id="1" name="Width">8</param>
                 </action>
-                <action id="5" name="Set character width" sid="216760017048379" type="Text_Regular">
+                <action id="5" name="Set character width" sid="759856927611670" type="Text_Regular">
                     <param id="0" name="Character">&quot;+-=fht&quot;</param>
                     <param id="1" name="Width">9</param>
                 </action>
-                <action id="5" name="Set character width" sid="524703045210247" type="Text_Regular">
+                <action id="5" name="Set character width" sid="556024449996702" type="Text_Regular">
                     <param id="0" name="Character">&quot;234789&lt;&gt;?JLOabcdegknpqsuvz&quot;</param>
                     <param id="1" name="Width">10</param>
                 </action>
-                <action id="5" name="Set character width" sid="811423319909989" type="Text_Regular">
+                <action id="5" name="Set character width" sid="184429647407860" type="Text_Regular">
                     <param id="0" name="Character">&quot;$/56BEFKPRS\oy&quot;</param>
                     <param id="1" name="Width">11</param>
                 </action>
-                <action id="5" name="Set character width" sid="861619128447661" type="Text_Regular">
+                <action id="5" name="Set character width" sid="835228447000908" type="Text_Regular">
                     <param id="0" name="Character">&quot;0ADNTx~&quot;</param>
                     <param id="1" name="Width">12</param>
                 </action>
-                <action id="5" name="Set character width" sid="588290116136890" type="Text_Regular">
+                <action id="5" name="Set character width" sid="316566066156297" type="Text_Regular">
                     <param id="0" name="Character">&quot;&amp;CHUVZ_&quot;</param>
                     <param id="1" name="Width">13</param>
                 </action>
-                <action id="5" name="Set character width" sid="405031984836961" type="Text_Regular">
+                <action id="5" name="Set character width" sid="268001882148282" type="Text_Regular">
                     <param id="0" name="Character">&quot;%QXYw&quot;</param>
                     <param id="1" name="Width">14</param>
                 </action>
-                <action id="5" name="Set character width" sid="708091774186503" type="Text_Regular">
+                <action id="5" name="Set character width" sid="437738521486061" type="Text_Regular">
                     <param id="0" name="Character">&quot;Gm&quot;</param>
                     <param id="1" name="Width">15</param>
                 </action>
-                <action id="5" name="Set character width" sid="186058322993530" type="Text_Regular">
+                <action id="5" name="Set character width" sid="711386523714380" type="Text_Regular">
                     <param id="0" name="Character">&quot;#@MW &quot;</param>
                     <param id="1" name="Width">16</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="857881012015278">
+        <event-block sid="191103132455313">
             <conditions>
-                <condition id="-2" name="On start of layout" sid="610881135175903" type="System" />
+                <condition id="-2" name="On start of layout" sid="213344721226304" type="System" />
             </conditions>
             <actions>
-                <action id="5" name="Set character width" sid="711338649754980" type="Text_Big">
+                <action id="5" name="Set character width" sid="396615184897669" type="Text_Big">
                     <param id="0" name="Character">&quot;:&quot;</param>
                     <param id="1" name="Width">8</param>
                 </action>
-                <action id="5" name="Set character width" sid="132095738171072" type="Text_Big">
+                <action id="5" name="Set character width" sid="586311414060997" type="Text_Big">
                     <param id="0" name="Character">&quot;!&quot;</param>
                     <param id="1" name="Width">9</param>
                 </action>
-                <action id="5" name="Set character width" sid="402519200405687" type="Text_Big">
+                <action id="5" name="Set character width" sid="580353065654204" type="Text_Big">
                     <param id="0" name="Character">&quot;I&quot;</param>
                     <param id="1" name="Width">11</param>
                 </action>
-                <action id="5" name="Set character width" sid="742635249365631" type="Text_Big">
+                <action id="5" name="Set character width" sid="404404776426639" type="Text_Big">
                     <param id="0" name="Character">&quot;1,&quot;</param>
                     <param id="1" name="Width">12</param>
                 </action>
-                <action id="5" name="Set character width" sid="876969858726248" type="Text_Big">
+                <action id="5" name="Set character width" sid="402041547592759" type="Text_Big">
                     <param id="0" name="Character">&quot;35&quot;</param>
                     <param id="1" name="Width">17</param>
                 </action>
-                <action id="5" name="Set character width" sid="669929733191557" type="Text_Big">
+                <action id="5" name="Set character width" sid="587771411056590" type="Text_Big">
                     <param id="0" name="Character">&quot;J028&quot;</param>
                     <param id="1" name="Width">18</param>
                 </action>
-                <action id="5" name="Set character width" sid="273795888053118" type="Text_Big">
+                <action id="5" name="Set character width" sid="340126609870857" type="Text_Big">
                     <param id="0" name="Character">&quot;LU4679?&quot;</param>
                     <param id="1" name="Width">19</param>
                 </action>
-                <action id="5" name="Set character width" sid="325861836993746" type="Text_Big">
+                <action id="5" name="Set character width" sid="729831979145840" type="Text_Big">
                     <param id="0" name="Character">&quot;BH&quot;</param>
                     <param id="1" name="Width">20</param>
                 </action>
-                <action id="5" name="Set character width" sid="610342598996627" type="Text_Big">
+                <action id="5" name="Set character width" sid="295471168637670" type="Text_Big">
                     <param id="0" name="Character">&quot;DEGNPT&quot;</param>
                     <param id="1" name="Width">21</param>
                 </action>
-                <action id="5" name="Set character width" sid="776684461371002" type="Text_Big">
+                <action id="5" name="Set character width" sid="846957730310613" type="Text_Big">
                     <param id="0" name="Character">&quot;FKV&quot;</param>
                     <param id="1" name="Width">22</param>
                 </action>
-                <action id="5" name="Set character width" sid="149918143828384" type="Text_Big">
+                <action id="5" name="Set character width" sid="365426619261093" type="Text_Big">
                     <param id="0" name="Character">&quot;ACRSXZ&quot;</param>
                     <param id="1" name="Width">23</param>
                 </action>
-                <action id="5" name="Set character width" sid="736938041723351" type="Text_Big">
+                <action id="5" name="Set character width" sid="159504202574914" type="Text_Big">
                     <param id="0" name="Character">&quot;O&quot;</param>
                     <param id="1" name="Width">24</param>
                 </action>
-                <action id="5" name="Set character width" sid="928344031086339" type="Text_Big">
+                <action id="5" name="Set character width" sid="715607594132270" type="Text_Big">
                     <param id="0" name="Character">&quot;QY&quot;</param>
                     <param id="1" name="Width">25</param>
                 </action>
-                <action id="5" name="Set character width" sid="774492665292061" type="Text_Big">
+                <action id="5" name="Set character width" sid="288716408264269" type="Text_Big">
                     <param id="0" name="Character">&quot;M&quot;</param>
                     <param id="1" name="Width">29</param>
                 </action>
-                <action id="5" name="Set character width" sid="847041088039685" type="Text_Big">
+                <action id="5" name="Set character width" sid="559199864211361" type="Text_Big">
                     <param id="0" name="Character">&quot;W &quot;</param>
                     <param id="1" name="Width">30</param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block sid="949200808020883">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="998880760192631" type="Keyboard">
+                    <param id="0" name="Key">113</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Reload" sid="247341438491407" type="Browser" />
+            </actions>
+        </event-block>
+        <event-block sid="140920201879895">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="349511888838759" type="Keyboard">
+                    <param id="0" name="Key">114</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="986751899849214" type="System" />
             </actions>
         </event-block>
     </events>

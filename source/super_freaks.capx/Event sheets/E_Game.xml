@@ -1,0 +1,417 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>E_Game</name>
+    <events>
+        <include>E_GLOBAL</include>
+        <event-block sid="646885427636377">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="460730747856340" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="517553472524735" type="Chain">
+                    <param id="0" name="Frame number">clamp(Self.Chains-1,0,15)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="949523767416057">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="216751364966355" type="System" />
+                <condition id="-11" name="For Each" sid="278299972311648" type="System">
+                    <param id="0" name="Object">Chain</param>
+                </condition>
+                <condition disabled="1" id="-11" name="For Each" sid="585577813910261" type="System">
+                    <param id="0" name="Object">ChainStart</param>
+                </condition>
+                <condition disabled="1" id="-15" name="Pick nearest/furthest" sid="521607168864638" type="ChainStart">
+                    <param id="0" name="Which">0</param>
+                    <param id="1" name="X">chain.X</param>
+                    <param id="2" name="Y">chain.Y</param>
+                </condition>
+                <condition disabled="1" id="-15" name="Pick nearest/furthest" sid="293687934270843" type="Chain">
+                    <param id="0" name="Which">0</param>
+                    <param id="1" name="X">16</param>
+                    <param id="2" name="Y">16</param>
+                </condition>
+                <condition disabled="1" id="1" name="Is overlapping another object" sid="649428710844692" type="Chain">
+                    <param id="0" name="Object">ChainStart</param>
+                </condition>
+                <condition id="9" name="Is overlapping at offset" sid="733534644098527" type="Chain">
+                    <param id="0" name="Object">ChainStart</param>
+                    <param id="1" name="Offset X">16</param>
+                    <param id="2" name="Offset Y">16</param>
+                </condition>
+                <condition behavior="Pin" id="0" inverted="1" name="Is pinned" sid="697125704343866" type="Chain" />
+                <condition disabled="1" id="-17" name="Pick top/bottom" sid="523749871424393" type="ChainStart">
+                    <param id="0" name="Which">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="516679176814185" type="Chain">
+                    <param id="0" name="Object">ChainStart</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="152848685918353" type="Chain">
+                    <param id="0" name="Pin to">ChainStart</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="113302086771234">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="963025354580097" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="501424502336401" type="ChainEndAttach" />
+            </actions>
+        </event-block>
+        <event-block sid="561808908651112">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="778040678391187" type="System" />
+                <condition id="-11" name="For Each" sid="913155803096750" type="System">
+                    <param id="0" name="Object">Chain</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="797897251087197" type="System">
+                    <param id="0" name="Object to create">ChainEndAttach</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">chain.X</param>
+                    <param id="3" name="Y">chain.ImageHeight-16</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="700235701564127" type="ChainEndAttach">
+                    <param id="0" name="Object">Chain</param>
+                    <param id="1" name="Image point (optional)">1</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="912991910300480" type="ChainEndAttach">
+                    <param id="0" name="Pin to">Chain</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="362517146205648">
+            <conditions>
+                <condition id="-11" name="For Each" sid="783359069799471" type="System">
+                    <param id="0" name="Object">ChainEndAttach</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="413149728347653" type="ObjectsAttachable">
+                    <param id="0" name="Instance variable">AttachAllowed</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="776276476070657" type="ObjectsAttachable">
+                    <param id="0" name="Instance variable">Attached</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" sid="562592947113476" type="ChainEndAttach">
+                    <param id="0" name="Object">ObjectsAttachable</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="220730635447290" type="Chain">
+                    <param id="0" name="Unique ID">ChainEndAttach.Pin.PinnedUID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="890908753428326" type="ObjectsAttachable">
+                    <param id="0" name="Object">ChainEndAttach</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="357421251700399" type="ObjectsAttachable">
+                    <param id="0" name="Pin to">Chain</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="240779034114133" type="ChainEndAttach" />
+            </actions>
+        </event-block>
+        <event-block sid="109497664241729">
+            <conditions>
+                <condition behavior="Pin" id="0" name="Is pinned" sid="767609870697933" type="ObjectsAttachable" />
+                <condition id="-4" name="Trigger once while true" sid="960042591376163" type="System" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="672918423655730" type="ObjectsAttachable">
+                    <param id="0" name="Instance variable">Attached</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="190208353425480">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="445643822568023" type="Text">
+                    <param id="0" name="Instance variable">ID</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;HUD_Timer&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="767738888040290" type="Text">
+                    <param id="0" name="Text">floor(Var_Gameplay.LevelTimer/3600)&amp;&quot;:&quot;&amp;zeropad(floor(Var_Gameplay.LevelTimer/60),2)&amp;&quot;:&quot;&amp;zeropad(floor(Var_Gameplay.LevelTimer)%60,2)&amp;&quot;.&quot;&amp;zeropad(floor(Var_Gameplay.LevelTimer*100)%100,2)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="606525394984013">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="462872950909345" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="549051585182918" type="Var_Gameplay">
+                    <param id="0" name="Instance variable">LevelTimer</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="677766789100312">
+            <conditions />
+            <actions>
+                <action id="-11" name="Add to" sid="791572305524494" type="Var_Gameplay">
+                    <param id="0" name="Instance variable">LevelTimer</param>
+                    <param id="1" name="Value">dt</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="721660464940670">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="269507046070103" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="309133750777568" type="HUDTitleCard_BG">
+                    <param id="0" name="Instance variable">InititalY</param>
+                    <param id="1" name="Value">Self.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="865389301660078">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="210149566052326" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="674785088293975">
+                    <conditions />
+                    <actions>
+                        <action id="-35" name="Set layer transparent" sid="493625815133625" type="System">
+                            <param id="0" name="Layer">&quot;HUD_TitleCard&quot;</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="731331523234733" type="Var_Gameplay">
+                            <param id="0" name="Instance variable">TitlecardSeen</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="268212073020159">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="268756313915468" type="Text">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;HUD_TitleCard1&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="LiteTween" id="14" name="Stop" sid="196520035700992" type="Text">
+                            <param id="0" name="Stop Mode">1</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="676752155280863" type="Text">
+                            <param id="0" name="X">-OriginalWindowWidth</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="950639583302989" type="Text">
+                            <param id="0" name="Target is">0</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="515633395809923" type="Text">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="812247270369589">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="124623324404191" type="Text">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;HUD_TitleCard2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="LiteTween" id="14" name="Stop" sid="682340600356953" type="Text">
+                            <param id="0" name="Stop Mode">1</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="641783761528669" type="Text">
+                            <param id="0" name="X">-OriginalWindowWidth</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="154427695106969" type="Text">
+                            <param id="0" name="Target is">0</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="305567124289813" type="Text">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="174509459728795">
+                    <conditions />
+                    <actions>
+                        <action behavior="LiteTween" id="14" name="Stop" sid="447194409033657" type="HUDTitleCard_BG">
+                            <param id="0" name="Stop Mode">1</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="931905033933281" type="HUDTitleCard_BG">
+                            <param id="0" name="Y">Self.InititalY</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="572334287893553" type="HUDTitleCard_BG">
+                            <param id="0" name="Target is">1</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">OriginalWindowHeight/2</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="906541028793927" type="HUDTitleCard_BG">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="420603937114949">
+            <conditions>
+                <condition behavior="LiteTween" id="4" name="On tween end" sid="178370516515431" type="HUDTitleCard_BG" />
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="238168603485418" type="Var_Gameplay">
+                    <param id="0" name="Instance variable">TitlecardSeen</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="367866905978696">
+                    <conditions />
+                    <actions>
+                        <action id="-16" name="Wait" sid="379870796815697" type="System">
+                            <param id="0" name="Seconds">1.5</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="386697911683943" type="Var_Gameplay">
+                            <param id="0" name="Instance variable">TitlecardSeen</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-35" name="Set layer transparent" sid="491895070477455" type="System">
+                            <param id="0" name="Layer">&quot;HUD_TitleCard&quot;</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="391902035800746">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="993907461311421" type="Text">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;HUD_TitleCard1&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="LiteTween" id="14" name="Stop" sid="177780687517825" type="Text">
+                                    <param id="0" name="Stop Mode">2</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="175225838103513" type="Text">
+                                    <param id="0" name="X">0</param>
+                                </action>
+                                <action behavior="LiteTween" id="3" name="Set target" sid="722979175986856" type="Text">
+                                    <param id="0" name="Target is">0</param>
+                                    <param id="1" name="Relativity">0</param>
+                                    <param id="2" name="Value">OriginalWindowWidth</param>
+                                </action>
+                                <action behavior="LiteTween" id="10" name="Start" sid="932917959982683" type="Text">
+                                    <param id="0" name="Start Mode">0</param>
+                                    <param id="1" name="Force use current">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="312324225199361">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="716613121262333" type="Text">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;HUD_TitleCard2&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="LiteTween" id="14" name="Stop" sid="297853785302002" type="Text">
+                                    <param id="0" name="Stop Mode">2</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="141940798920822" type="Text">
+                                    <param id="0" name="X">0</param>
+                                </action>
+                                <action behavior="LiteTween" id="3" name="Set target" sid="636889137237756" type="Text">
+                                    <param id="0" name="Target is">0</param>
+                                    <param id="1" name="Relativity">0</param>
+                                    <param id="2" name="Value">OriginalWindowWidth</param>
+                                </action>
+                                <action behavior="LiteTween" id="10" name="Start" sid="795256311309155" type="Text">
+                                    <param id="0" name="Start Mode">0</param>
+                                    <param id="1" name="Force use current">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="563640822794700">
+                            <conditions />
+                            <actions>
+                                <action behavior="LiteTween" id="14" name="Stop" sid="825527831563790" type="HUDTitleCard_BG">
+                                    <param id="0" name="Stop Mode">2</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="930150807609731" type="HUDTitleCard_BG">
+                                    <param id="0" name="Y">OriginalWindowHeight/2</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="863702837123919">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="260352608559686" type="HUDTitleCard_BG">
+                                            <param id="0" name="Instance variable">InititalY</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">-0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="LiteTween" id="3" name="Set target" sid="389877371347649" type="HUDTitleCard_BG">
+                                            <param id="0" name="Target is">1</param>
+                                            <param id="1" name="Relativity">0</param>
+                                            <param id="2" name="Value">(Self.Height/2)+OriginalWindowHeight</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="391708423805171">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="170809982189149" type="HUDTitleCard_BG">
+                                            <param id="0" name="Instance variable">InititalY</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="LiteTween" id="3" name="Set target" sid="391101483108288" type="HUDTitleCard_BG">
+                                            <param id="0" name="Target is">1</param>
+                                            <param id="1" name="Relativity">0</param>
+                                            <param id="2" name="Value">-(Self.Height/2)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="435365435167643">
+                                    <conditions />
+                                    <actions>
+                                        <action behavior="LiteTween" id="10" name="Start" sid="468483007220459" type="HUDTitleCard_BG">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="355427010687977">
+                            <conditions />
+                            <actions>
+                                <action id="-10" name="Set value" sid="154010944158969" type="Var_Gameplay">
+                                    <param id="0" name="Instance variable">LevelTimer</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
