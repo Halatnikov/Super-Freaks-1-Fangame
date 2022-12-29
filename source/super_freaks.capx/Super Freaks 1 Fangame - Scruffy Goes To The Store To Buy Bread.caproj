@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Super Freaks 1 Fangame - Scruffy Goes To The Store To Buy Bread</name>
+    <description></description>
+    <version>0.1.0-1</version>
+    <author>Halatnikov</author>
+    <author-email></author-email>
+    <author-website>https://halatnikov.github.io</author-website>
+    <app-id>com.holat.superfreaks1</app-id>
+    <unique-id>2rt1an0g1roua</unique-id>
+    <saved-with-version>28000</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="lunarray" id="lunarray_LiteTween" version="1.700000048">LiteTween</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>640</width>
+        <height>360</height>
+    </window-size>
+    <pixel-rounding>1</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>Layout 1</first-layout>
+    <use-loader-layout>1</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">No</prop>
+        <prop name="Downscaling">Low quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">Low quality</prop>
+        <prop name="Loader style">Nothing (not recommended)</prop>
+        <prop name="Orientations">Landscape</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">NW.js</prop>
+        <prop name="Sampling">Point</prop>
+        <prop name="Use high-DPI display">No</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="..SystemObjects">
+            <object-type name="Keyboard" sid="671627819927464">
+                <plugin id="Keyboard" />
+            </object-type>
+            <object-type name="Browser" sid="398302097699813">
+                <plugin id="Browser" />
+            </object-type>
+        </object-folder>
+        <object-type name="Chain" sid="376113381833434">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Chains" sid="833714304584837" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Rotate" sid="702068073914315">
+                    <behavior id="Rotate" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="589108636838391">
+                    <behavior id="Pin" />
+                </behavior-type>
+                <behavior-type name="Sine" sid="594335153512270">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="16" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="756665623240321" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1u_github\sprites\spr_chain\fd201161-4c0d-40b4-8d13-203c84432209.png">
+                        <image-point name="Imagepoint 1" x="0.5" y="1.5" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.25">
+                        <image-point name="Imagepoint 1" x="0.5" y="1.25" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.166667">
+                        <image-point name="Imagepoint 1" x="0.5" y="1.16667" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.125">
+                        <image-point name="Imagepoint 1" x="0.5" y="1.125" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.1">
+                        <image-point name="Imagepoint 1" x="0.5" y="1.1" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.0833333">
+                        <image-point name="Imagepoint 1" x="0.5" y="1.08333" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.0714286">
+                        <image-point name="Imagepoint 1" x="0.5" y="1.07143" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.0625">
+                        <image-point name="Imagepoint 1" x="0.5" y="1.0625" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.0555556">
+                        <image-point name="Imagepoint 1" x="0.5" y="1.05556" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.05">
+                        <image-point name="Imagepoint 1" x="0.5" y="1.05" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.0454545">
+                        <image-point name="Imagepoint 1" x="0.5" y="1.04545" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.0416667">
+                        <image-point name="Imagepoint 1" x="0.5" y="1.04167" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.0384615">
+                        <image-point name="Imagepoint 1" x="0.5" y="1.03846" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.0357143">
+                        <image-point name="Imagepoint 1" x="0.5" y="1.03571" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.0333333">
+                        <image-point name="Imagepoint 1" x="0.5" y="1.03333" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.03125">
+                        <image-point name="Imagepoint 1" x="0.5" y="1.03125" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="213937284505522">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="861583988857777" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1u_github\sprites\spr_boneym_walk\3a8269c4-0273-43d1-ab54-96cf7bca3e3b.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1u_github\sprites\spr_boneym_walk\b77f8643-5790-4e6a-9ae3-187b8323d651.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1u_github\sprites\spr_boneym_walk\eac95bbf-d721-4851-933b-f32471e5043f.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1u_github\sprites\spr_boneym_walk\27aa040d-bfbe-4d8a-aedc-9fc3fa62b093.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ChainStart" sid="398292666682154">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="DragDrop" sid="388428556064147">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="311429752878432" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ChainEndAttach" sid="195489207258414">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="886495406342674">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="628287263388338" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="583897952510769">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="ID" sid="973001659792705" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="LiteTween" sid="981685487839499">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="1" name="Scruffy" pingpong="0" repeatcount="1" repeatto="0" sid="299100370800857" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.625" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1u_github\sprites\spr_player_walk_scruffy\5facf508-49cb-4a1b-86b4-12104c38aaa0.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.625" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1u_github\sprites\spr_player_walk_scruffy\7574de78-7337-4f3d-b2d0-472a198afe8a.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.625" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1u_github\sprites\spr_player_walk_scruffy\9392caf3-035b-42d1-8697-d51afb0bc3b0.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.625" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1u_github\sprites\spr_player_walk_scruffy\8f3df6f0-c977-4220-8568-2e2806ddef54.png" />
+                </animation>
+                <animation framecount="4" loop="1" name="KingQuincy" pingpong="0" repeatcount="1" repeatto="0" sid="108608149457186" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.625" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1u_github\sprites\spr_player_walk_quincy\6b91cb6d-bad8-48b0-8d25-a37221def249.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.625" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1u_github\sprites\spr_player_walk_quincy\2cd9fc59-7ed8-4e95-9e2c-239fb84cec4d.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.625" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1u_github\sprites\spr_player_walk_quincy\504f18fd-243e-43d0-b403-22682eb9ba7b.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.625" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1u_github\sprites\spr_player_walk_quincy\48ae5fff-698e-4cb0-b6e8-48800dfb4cdd.png" />
+                </animation>
+                <animation framecount="4" loop="1" name="Gambi" pingpong="0" repeatcount="1" repeatto="0" sid="256444707321520" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.625" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1u_github\sprites\spr_player_walk_gambi\30b6846f-1903-439a-a2d3-848d5a865a3b.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.625" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1u_github\sprites\spr_player_walk_gambi\94670e5e-820b-4856-a4f0-24181ddb5b7b.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.625" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1u_github\sprites\spr_player_walk_gambi\64798392-d141-4d10-8f68-ba856b351850.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.625" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1u_github\sprites\spr_player_walk_gambi\3b2982ea-2d2e-4649-b5bf-76aa6a3bcb03.png" />
+                </animation>
+                <animation framecount="4" loop="1" name="Tikiman" pingpong="0" repeatcount="1" repeatto="0" sid="280350965637734" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.625" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1u_github\sprites\spr_player_walk_tikiman\88ba4f82-ed33-4713-bdfb-0346febf15ef.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.625" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1u_github\sprites\spr_player_walk_tikiman\c481a825-cf2c-4bde-b448-b056afdeca6d.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.625" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1u_github\sprites\spr_player_walk_tikiman\b06486ec-d558-45a2-b544-ac18f2108e8a.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.625" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1u_github\sprites\spr_player_walk_tikiman\59a80693-0fed-4c9e-a2c0-b3db4e066ab2.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text_Regular" sid="612266844631081">
+            <plugin id="Spritefont2" />
+            <texture original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\spr_font_16_strip94.png" />
+        </object-type>
+        <object-type name="Text_Big" sid="327917397823839">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+    </object-folder>
+    <families>
+        <family name="ObjectsAttachable" plugin-id="Sprite" sid="345415041156877">
+            <members>
+                <member>ChainStart</member>
+                <member>Sprite</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="AttachAllowed" sid="875303024979866" type="boolean" />
+                <instance-variable name="Attached" sid="505617299131878" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pin" sid="169813163913773">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </family>
+    </families>
+    <layout-folder>
+        <layout>Layout 1.xml</layout>
+        <layout>Layout 2.xml</layout>
+        <layout>Layout 3.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Event sheet 2.xml</event-sheet>
+        <event-sheet>Event sheet 3.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Keyboard" uid="2" />
+        <global-instance type="Browser" uid="3" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
