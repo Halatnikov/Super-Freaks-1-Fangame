@@ -185,6 +185,8 @@
             <effects />
         </layer>
     </layers>
-    <nonworld-instances />
+    <nonworld-instances>
+        <instance type="JSON" uid="53" />
+    </nonworld-instances>
     <effects />
 </c2layout>

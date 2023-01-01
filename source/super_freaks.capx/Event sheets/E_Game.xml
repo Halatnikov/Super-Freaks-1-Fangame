@@ -10,7 +10,7 @@
             </conditions>
             <actions>
                 <action id="5" name="Set frame" sid="517553472524735" type="Chain">
-                    <param id="0" name="Frame number">clamp(Self.Chains-1,0,15)</param>
+                    <param id="0" name="Frame number">clamp(Self.Segments-1,0,15)</param>
                 </action>
             </actions>
         </event-block>
@@ -21,9 +21,9 @@
                     <param id="0" name="Object">Chain</param>
                 </condition>
                 <condition disabled="1" id="-11" name="For Each" sid="585577813910261" type="System">
-                    <param id="0" name="Object">ChainStart</param>
+                    <param id="0" name="Object">ChainController</param>
                 </condition>
-                <condition disabled="1" id="-15" name="Pick nearest/furthest" sid="521607168864638" type="ChainStart">
+                <condition disabled="1" id="-15" name="Pick nearest/furthest" sid="521607168864638" type="ChainController">
                     <param id="0" name="Which">0</param>
                     <param id="1" name="X">chain.X</param>
                     <param id="2" name="Y">chain.Y</param>
@@ -34,25 +34,25 @@
                     <param id="2" name="Y">16</param>
                 </condition>
                 <condition disabled="1" id="1" name="Is overlapping another object" sid="649428710844692" type="Chain">
-                    <param id="0" name="Object">ChainStart</param>
+                    <param id="0" name="Object">ChainController</param>
                 </condition>
                 <condition id="9" name="Is overlapping at offset" sid="733534644098527" type="Chain">
-                    <param id="0" name="Object">ChainStart</param>
+                    <param id="0" name="Object">ChainController</param>
                     <param id="1" name="Offset X">16</param>
                     <param id="2" name="Offset Y">16</param>
                 </condition>
                 <condition behavior="Pin" id="0" inverted="1" name="Is pinned" sid="697125704343866" type="Chain" />
-                <condition disabled="1" id="-17" name="Pick top/bottom" sid="523749871424393" type="ChainStart">
+                <condition disabled="1" id="-17" name="Pick top/bottom" sid="523749871424393" type="ChainController">
                     <param id="0" name="Which">1</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-4" name="Set position to another object" sid="516679176814185" type="Chain">
-                    <param id="0" name="Object">ChainStart</param>
+                    <param id="0" name="Object">ChainController</param>
                     <param id="1" name="Image point (optional)">0</param>
                 </action>
                 <action behavior="Pin" id="0" name="Pin to object" sid="152848685918353" type="Chain">
-                    <param id="0" name="Pin to">ChainStart</param>
+                    <param id="0" name="Pin to">ChainController</param>
                     <param id="1" name="Mode">1</param>
                 </action>
             </actions>
@@ -62,7 +62,7 @@
                 <condition id="-2" name="On start of layout" sid="963025354580097" type="System" />
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="501424502336401" type="ChainEndAttach" />
+                <action id="-9" name="Destroy" sid="501424502336401" type="ChainAttachPoint" />
             </actions>
         </event-block>
         <event-block sid="561808908651112">
@@ -74,16 +74,16 @@
             </conditions>
             <actions>
                 <action id="-3" name="Create object" sid="797897251087197" type="System">
-                    <param id="0" name="Object to create">ChainEndAttach</param>
+                    <param id="0" name="Object to create">ChainAttachPoint</param>
                     <param id="1" name="Layer">0</param>
                     <param id="2" name="X">chain.X</param>
                     <param id="3" name="Y">chain.ImageHeight-16</param>
                 </action>
-                <action id="-4" name="Set position to another object" sid="700235701564127" type="ChainEndAttach">
+                <action id="-4" name="Set position to another object" sid="700235701564127" type="ChainAttachPoint">
                     <param id="0" name="Object">Chain</param>
                     <param id="1" name="Image point (optional)">1</param>
                 </action>
-                <action behavior="Pin" id="0" name="Pin to object" sid="912991910300480" type="ChainEndAttach">
+                <action behavior="Pin" id="0" name="Pin to object" sid="912991910300480" type="ChainAttachPoint">
                     <param id="0" name="Pin to">Chain</param>
                     <param id="1" name="Mode">1</param>
                 </action>
@@ -92,7 +92,7 @@
         <event-block sid="362517146205648">
             <conditions>
                 <condition id="-11" name="For Each" sid="783359069799471" type="System">
-                    <param id="0" name="Object">ChainEndAttach</param>
+                    <param id="0" name="Object">ChainAttachPoint</param>
                 </condition>
                 <condition id="-8" name="Is boolean instance variable set" sid="413149728347653" type="ObjectsAttachable">
                     <param id="0" name="Instance variable">AttachAllowed</param>
@@ -100,23 +100,23 @@
                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="776276476070657" type="ObjectsAttachable">
                     <param id="0" name="Instance variable">Attached</param>
                 </condition>
-                <condition id="1" name="Is overlapping another object" sid="562592947113476" type="ChainEndAttach">
+                <condition id="1" name="Is overlapping another object" sid="562592947113476" type="ChainAttachPoint">
                     <param id="0" name="Object">ObjectsAttachable</param>
                 </condition>
                 <condition id="-14" name="Pick by unique ID" sid="220730635447290" type="Chain">
-                    <param id="0" name="Unique ID">ChainEndAttach.Pin.PinnedUID</param>
+                    <param id="0" name="Unique ID">ChainAttachPoint.Pin.PinnedUID</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-4" name="Set position to another object" sid="890908753428326" type="ObjectsAttachable">
-                    <param id="0" name="Object">ChainEndAttach</param>
+                    <param id="0" name="Object">ChainAttachPoint</param>
                     <param id="1" name="Image point (optional)">0</param>
                 </action>
                 <action behavior="Pin" id="0" name="Pin to object" sid="357421251700399" type="ObjectsAttachable">
                     <param id="0" name="Pin to">Chain</param>
                     <param id="1" name="Mode">1</param>
                 </action>
-                <action id="-9" name="Destroy" sid="240779034114133" type="ChainEndAttach" />
+                <action id="-9" name="Destroy" sid="240779034114133" type="ChainAttachPoint" />
             </actions>
         </event-block>
         <event-block sid="109497664241729">
@@ -131,6 +131,7 @@
                 </action>
             </actions>
         </event-block>
+        <comment></comment>
         <event-block sid="190208353425480">
             <conditions>
                 <condition id="-7" name="Compare instance variable" sid="445643822568023" type="Text">
@@ -145,17 +146,6 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="606525394984013">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="462872950909345" type="System" />
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="549051585182918" type="Var_Gameplay">
-                    <param id="0" name="Instance variable">LevelTimer</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="677766789100312">
             <conditions />
             <actions>
@@ -165,6 +155,7 @@
                 </action>
             </actions>
         </event-block>
+        <comment></comment>
         <event-block sid="721660464940670">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="269507046070103" type="System" />
@@ -185,6 +176,10 @@
                 <event-block sid="674785088293975">
                     <conditions />
                     <actions>
+                        <action id="-4" name="Set layer visible" sid="109360424375800" type="System">
+                            <param id="0" name="Layer">&quot;HUD_TitleCard&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
                         <action id="-35" name="Set layer transparent" sid="493625815133625" type="System">
                             <param id="0" name="Layer">&quot;HUD_TitleCard&quot;</param>
                             <param id="1" name="Mode">0</param>
@@ -407,7 +402,272 @@
                                     <param id="0" name="Instance variable">LevelTimer</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
+                                <action id="-16" name="Wait" sid="600213534641748" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="146640972438824" type="System">
+                                    <param id="0" name="Layer">&quot;HUD_TitleCard&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
                             </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment></comment>
+        <event-block sid="365076518208647">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="312239687488348" type="Keyboard">
+                    <param id="0" name="Key">90</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="555303504311546" type="Function">
+                    <param id="0" name="Name">&quot;HUD_Fade&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;in&quot;{###}&quot;red&quot;{###}0.5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="131300023895693">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="835987775767088" type="Keyboard">
+                    <param id="0" name="Key">88</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="584844693669978" type="Function">
+                    <param id="0" name="Name">&quot;HUD_Fade&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;out&quot;{###}&quot;&quot;{###}0.5</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment></comment>
+        <event-block sid="577376908791050">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="125860624960735" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="173401062282480" type="Sprite">
+                    <param id="0" name="Frame number">clamp(Self.Segments-1,0,7)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="327132748530169">
+            <conditions>
+                <condition id="-18" name="On created" sid="467842587335562" type="Sprite4" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="314867872371700" type="Sprite4">
+                    <param id="0" name="Frame number">(Self.X+Self.Y)%Self.AnimationFrameCount</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="310270245454972">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="985097596112786" type="System" />
+            </conditions>
+            <actions>
+                <action id="55" name="Clear" sid="992043885828004" type="JSON">
+                    <param id="0" name="Reference point">0</param>
+                    <param id="1" name="Key {n}"></param>
+                </action>
+                <action id="0" name="Set New Object" sid="532203740883598" type="JSON">
+                    <param id="0" name="Reference point">0</param>
+                    <param id="1" name="Key {n}"></param>
+                </action>
+                <action id="60" name="LoadJSON" sid="330306038463974" type="JSON">
+                    <param id="0" name="JSON">NWjs.ReadFile(&quot;D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\stadium1.json&quot;)</param>
+                    <param id="1" name="Reference point">0</param>
+                    <param id="2" name="Key {n}"></param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="937541764222967">
+                    <conditions>
+                        <condition id="100" name="For each property" sid="785477111356121" type="JSON">
+                            <param id="0" name="Reference point">0</param>
+                            <param id="1" name="Key {n}">&quot;layers&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="408549091594472">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="241793606536432" type="System">
+                                    <param id="0" name="First value">JSON.Value(0,&quot;layers&quot;,JSON.CurrentKey,&quot;resourceType&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;GMRInstanceLayer&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="577538957468857">
+                    <conditions>
+                        <condition id="100" name="For each property" sid="128047125701045" type="JSON">
+                            <param id="0" name="Reference point">0</param>
+                            <param id="1" name="Key {n}">&quot;layers&quot;{###}0{###}&quot;instances&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="400314956336185">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="270776357055891" type="System">
+                                    <param id="0" name="First value">JSON.Value(0,&quot;layers&quot;,0,&quot;instances&quot;,JSON.CurrentKey,&quot;objectId&quot;,&quot;name&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;obj_yorb&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="751278690680166" type="System">
+                                    <param id="0" name="Object to create">Sprite4</param>
+                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                    <param id="2" name="X">float(JSON.Value(0,&quot;layers&quot;,0,&quot;instances&quot;,JSON.CurrentKey,&quot;x&quot;))</param>
+                                    <param id="3" name="Y">float(JSON.Value(0,&quot;layers&quot;,0,&quot;instances&quot;,JSON.CurrentKey,&quot;y&quot;))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="746614836925767">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="160184896754583" type="System">
+                                    <param id="0" name="First value">JSON.Value(0,&quot;layers&quot;,0,&quot;instances&quot;,JSON.CurrentKey,&quot;objectId&quot;,&quot;name&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;obj_heart&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="172955287800391" type="System">
+                                    <param id="0" name="Object to create">Sprite5</param>
+                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                    <param id="2" name="X">float(JSON.Value(0,&quot;layers&quot;,0,&quot;instances&quot;,JSON.CurrentKey,&quot;x&quot;))</param>
+                                    <param id="3" name="Y">float(JSON.Value(0,&quot;layers&quot;,0,&quot;instances&quot;,JSON.CurrentKey,&quot;y&quot;))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="211599307105194">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="614268324998050" type="System">
+                                    <param id="0" name="First value">JSON.Value(0,&quot;layers&quot;,0,&quot;instances&quot;,JSON.CurrentKey,&quot;objectId&quot;,&quot;name&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;obj_boneym&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="112223086581119" type="System">
+                                    <param id="0" name="Object to create">BoneyM</param>
+                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                    <param id="2" name="X">float(JSON.Value(0,&quot;layers&quot;,0,&quot;instances&quot;,JSON.CurrentKey,&quot;x&quot;))</param>
+                                    <param id="3" name="Y">float(JSON.Value(0,&quot;layers&quot;,0,&quot;instances&quot;,JSON.CurrentKey,&quot;y&quot;))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="218189126486967">
+                    <conditions>
+                        <condition id="100" name="For each property" sid="295782394527686" type="JSON">
+                            <param id="0" name="Reference point">0</param>
+                            <param id="1" name="Key {n}">&quot;layers&quot;{###}2{###}&quot;tiles&quot;{###}&quot;TileCompressedData&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="h" sid="396816737182231" static="1" type="number">0</variable>
+                        <variable constant="0" name="v" sid="802735312517954" static="1" type="number">0</variable>
+                        <variable constant="0" name="key" sid="331311682111522" static="1" type="number">0</variable>
+                        <event-block sid="908194914105519">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="465100995640343" type="System">
+                                    <param id="0" name="Variable">key</param>
+                                    <param id="1" name="Value">int(JSON.Value(0,&quot;layers&quot;,2,&quot;tiles&quot;,&quot;TileCompressedData&quot;,JSON.CurrentKey))</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="348055308413926">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="612902675356885" type="System">
+                                            <param id="0" name="First value">left(str(key),1)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;-&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="385481222690991">
+                    <conditions>
+                        <condition id="100" name="For each property" sid="109348487004949" type="JSON">
+                            <param id="0" name="Reference point">0</param>
+                            <param id="1" name="Key {n}">&quot;layers&quot;{###}2{###}&quot;tiles&quot;{###}&quot;TileCompressedData&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="h" sid="692997187696228" static="1" type="number">-1</variable>
+                        <variable constant="0" name="v" sid="700926695231315" static="1" type="number">1</variable>
+                        <variable constant="0" name="key" sid="596362830234309" static="1" type="number">0</variable>
+                        <event-block sid="287771671842984">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="834533358637902" type="System">
+                                    <param id="0" name="Variable">key</param>
+                                    <param id="1" name="Value">int(JSON.Value(0,&quot;layers&quot;,2,&quot;tiles&quot;,&quot;TileCompressedData&quot;,JSON.CurrentKey))</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="863280464111772">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="997596478464555" type="System">
+                                            <param id="0" name="Variable">h</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="385116523693866">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="993444036483427" type="System">
+                                            <param id="0" name="Variable">h</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">int(JSON.Value(0,&quot;layers&quot;,2,&quot;tiles&quot;,&quot;SerialiseWidth&quot;))</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="684840842829543" type="System">
+                                            <param id="0" name="Variable">h</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="107999240141493" type="System">
+                                            <param id="0" name="Variable">v</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="806871226458963">
+                                    <conditions>
+                                        <condition id="-14" inverted="1" name="Compare variable" sid="258142459042617" type="System">
+                                            <param id="0" name="Variable">key</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="718827824181004" type="System">
+                                            <param id="0" name="Object to create">Sprite2</param>
+                                            <param id="1" name="Layer">1</param>
+                                            <param id="2" name="X">32*h</param>
+                                            <param id="3" name="Y">32*v</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>

@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
-    <name>Super Freaks 1 Fangame - Scruffy Goes To The Store To Buy Bread</name>
+    <name>Super Freaks 1 Fangame</name>
     <description></description>
-    <version>0.1.0-2</version>
+    <version>0.1.0-3</version>
     <author>Halatnikov</author>
     <author-email></author-email>
     <author-website>https://halatnikov.github.io</author-website>
@@ -11,19 +11,27 @@
     <saved-with-version>28000</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Toby R" id="Globals" version="1">Globals</plugin>
+        <plugin author="Yann Granjon" id="JSON" version="1">JSON</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="NodeWebkit" version="1">NW.js</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Valera Popov" id="ValerypopoffEase" version="1">Valerypopoff Ease</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="lunarray" id="lunarray_LiteTween" version="1.700000048">LiteTween</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -63,6 +71,15 @@
             <object-type name="NWjs" sid="821554640924705">
                 <plugin id="NodeWebkit" />
             </object-type>
+            <object-type name="Ease" sid="962761842249907">
+                <plugin id="ValerypopoffEase" />
+            </object-type>
+            <object-type name="Function" sid="908337620654264">
+                <plugin id="Function" />
+            </object-type>
+            <object-type global="1" name="JSON" sid="828111349069334">
+                <plugin id="JSON" />
+            </object-type>
         </object-folder>
         <object-folder name=".Variables">
             <object-type global="1" name="Var_Gameplay" sid="330730497597134">
@@ -72,18 +89,21 @@
                     <instance-variable name="TitlecardSeen" sid="595973637287574" type="boolean" />
                 </instance-variables>
             </object-type>
+            <object-type global="1" name="Var_CONSTANTS" sid="548262914357161">
+                <plugin id="Globals" />
+            </object-type>
         </object-folder>
         <object-type name="Chain" sid="376113381833434">
             <plugin id="Sprite" />
             <instance-variables>
-                <instance-variable name="Chains" sid="833714304584837" type="number" />
+                <instance-variable name="Segments" sid="833714304584837" type="number" />
             </instance-variables>
             <behaviors>
-                <behavior-type name="Rotate" sid="702068073914315">
-                    <behavior id="Rotate" />
-                </behavior-type>
                 <behavior-type name="Pin" sid="589108636838391">
                     <behavior id="Pin" />
+                </behavior-type>
+                <behavior-type name="Rotate" sid="702068073914315">
+                    <behavior id="Rotate" />
                 </behavior-type>
                 <behavior-type name="Sine" sid="594335153512270">
                     <behavior id="Sin" />
@@ -146,27 +166,22 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="861583988857777" speed="10">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1u_github\sprites\spr_boneym_walk\3a8269c4-0273-43d1-ab54-96cf7bca3e3b.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1u_github\sprites\spr_boneym_walk\b77f8643-5790-4e6a-9ae3-187b8323d651.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1u_github\sprites\spr_boneym_walk\eac95bbf-d721-4851-933b-f32471e5043f.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1u_github\sprites\spr_boneym_walk\27aa040d-bfbe-4d8a-aedc-9fc3fa62b093.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.604167" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1u_github\sprites\spr_boneym_walk\3a8269c4-0273-43d1-ab54-96cf7bca3e3b.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.604167" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1u_github\sprites\spr_boneym_walk\b77f8643-5790-4e6a-9ae3-187b8323d651.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.604167" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1u_github\sprites\spr_boneym_walk\eac95bbf-d721-4851-933b-f32471e5043f.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.604167" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1u_github\sprites\spr_boneym_walk\27aa040d-bfbe-4d8a-aedc-9fc3fa62b093.png" />
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="ChainStart" sid="398292666682154">
+        <object-type name="ChainController" sid="398292666682154">
             <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="DragDrop" sid="388428556064147">
-                    <behavior id="DragnDrop" />
-                </behavior-type>
-            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="311429752878432" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="ChainEndAttach" sid="195489207258414">
+        <object-type name="ChainAttachPoint" sid="195489207258414">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Pin" sid="886495406342674">
@@ -284,12 +299,129 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Sprite" sid="236663330808823">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Segments" sid="427719089423064" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Jumpthru" sid="616109974721108">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="8" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="521282859579575" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.4" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\Levels\Fruit Juice Factory\spr_platform_orange.png" />
+                    <frame duration="1" hotspotX="0.492308" hotspotY="0.4" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.4" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.4">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.992188" y="0" />
+                            <point x="0.992188" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.49375" hotspotY="0.4">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.9875" y="0" />
+                            <point x="0.9875" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.494792" hotspotY="0.4">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.984375" y="0" />
+                            <point x="0.984375" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.491071" hotspotY="0.4">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.982143" y="0" />
+                            <point x="0.982143" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.492188" hotspotY="0.4">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.980469" y="0" />
+                            <point x="0.980469" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground" sid="835295854604257">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="Sprite2" sid="612446696419818">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="410775380158930">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="303794167808551" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite3" sid="213508341822418">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="998743709330852">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="950701306293301">
+                    <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="8Direction" sid="961308563670720">
+                    <behavior id="EightDir" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="219601152232728" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite4" sid="695670177902263">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="6" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="431061044900218" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite5" sid="727379108881708">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="298478504161004" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="ObjectsAttachable" plugin-id="Sprite" sid="345415041156877">
             <members>
                 <member>BoneyM</member>
-                <member>ChainStart</member>
+                <member>ChainController</member>
+                <member>Sprite</member>
             </members>
             <instance-variables>
                 <instance-variable name="AttachAllowed" sid="875303024979866" type="boolean" />
@@ -298,6 +430,9 @@
             <behaviors>
                 <behavior-type name="Pin" sid="169813163913773">
                     <behavior id="Pin" />
+                </behavior-type>
+                <behavior-type name="DragDrop" sid="523384624581293">
+                    <behavior id="DragnDrop" />
                 </behavior-type>
             </behaviors>
         </family>
@@ -331,6 +466,8 @@
         <global-instance type="Keyboard" uid="2" />
         <global-instance type="Browser" uid="3" />
         <global-instance type="NWjs" uid="42" />
+        <global-instance type="Ease" uid="43" />
+        <global-instance type="Function" uid="44" />
     </global-instances>
     <sounds-folder />
     <music-folder />

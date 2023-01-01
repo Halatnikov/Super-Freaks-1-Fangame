@@ -4,8 +4,8 @@
     <sid>916335836469029</sid>
     <event-sheet>E_Game</event-sheet>
     <size>
-        <width>1708</width>
-        <height>960</height>
+        <width>5000</width>
+        <height>5000</height>
     </size>
     <margins>
         <horizontal>500</horizontal>
@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="ChainStart" uid="18">
+                <instance type="ChainController" uid="18">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -72,16 +72,16 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Chains>3</Chains>
+                        <Segments>3</Segments>
                     </instance-variables>
                     <behavior-instances>
+                        <behavior-instance type="Pin" />
                         <behavior-instance type="Rotate">
                             <properties>
                                 <speed>-90</speed>
                                 <acceleration>0</acceleration>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Pin" />
                         <behavior-instance type="Sine">
                             <properties>
                                 <active-on-start>No</active-on-start>
@@ -119,16 +119,16 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Chains>3</Chains>
+                        <Segments>3</Segments>
                     </instance-variables>
                     <behavior-instances>
+                        <behavior-instance type="Pin" />
                         <behavior-instance type="Rotate">
                             <properties>
                                 <speed>90</speed>
                                 <acceleration>0</acceleration>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Pin" />
                         <behavior-instance type="Sine">
                             <properties>
                                 <active-on-start>No</active-on-start>
@@ -171,23 +171,29 @@
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
+                        <behavior-instance type="DragDrop">
+                            <properties>
+                                <axes>Both</axes>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>252</x>
-                        <y>269</y>
+                        <x>618</x>
+                        <y>326</y>
                         <z>0</z>
                         <width>32</width>
                         <height>48</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0.604166687</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ChainStart" uid="22">
+                <instance type="ChainController" uid="22">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -210,8 +216,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>291</x>
-                        <y>176</y>
+                        <x>11</x>
+                        <y>138</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -230,16 +236,16 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Chains>6</Chains>
+                        <Segments>6</Segments>
                     </instance-variables>
                     <behavior-instances>
+                        <behavior-instance type="Pin" />
                         <behavior-instance type="Rotate">
                             <properties>
                                 <speed>-90</speed>
                                 <acceleration>0</acceleration>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Pin" />
                         <behavior-instance type="Sine">
                             <properties>
                                 <active-on-start>No</active-on-start>
@@ -257,8 +263,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>290</x>
-                        <y>173</y>
+                        <x>14</x>
+                        <y>135</y>
                         <z>0</z>
                         <width>32</width>
                         <height>192</height>
@@ -282,23 +288,29 @@
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
+                        <behavior-instance type="DragDrop">
+                            <properties>
+                                <axes>Both</axes>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>475</x>
-                        <y>124</y>
+                        <x>624</x>
+                        <y>222</y>
                         <z>0</z>
                         <width>32</width>
                         <height>48</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0.604166687</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ChainEndAttach" uid="25">
+                <instance type="ChainAttachPoint" uid="25">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -323,7 +335,7 @@
                         <opacity>0.25</opacity>
                     </world>
                 </instance>
-                <instance type="ChainStart" uid="26">
+                <instance type="ChainController" uid="26">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -346,8 +358,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>110</x>
-                        <y>145</y>
+                        <x>42</x>
+                        <y>221</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -366,16 +378,16 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Chains>6</Chains>
+                        <Segments>6</Segments>
                     </instance-variables>
                     <behavior-instances>
+                        <behavior-instance type="Pin" />
                         <behavior-instance type="Rotate">
                             <properties>
                                 <speed>-90</speed>
                                 <acceleration>0</acceleration>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Pin" />
                         <behavior-instance type="Sine">
                             <properties>
                                 <active-on-start>No</active-on-start>
@@ -393,8 +405,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>109</x>
-                        <y>142</y>
+                        <x>41</x>
+                        <y>218</y>
                         <z>0</z>
                         <width>32</width>
                         <height>192</height>
@@ -418,18 +430,24 @@
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
+                        <behavior-instance type="DragDrop">
+                            <properties>
+                                <axes>Both</axes>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>199</x>
-                        <y>52</y>
+                        <x>638</x>
+                        <y>267</y>
                         <z>0</z>
                         <width>32</width>
                         <height>48</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0.604166687</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -438,20 +456,20 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Chains>2</Chains>
+                        <Segments>2</Segments>
                     </instance-variables>
                     <behavior-instances>
+                        <behavior-instance type="Pin" />
                         <behavior-instance type="Rotate">
                             <properties>
                                 <speed>-90</speed>
                                 <acceleration>0</acceleration>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Pin" />
                         <behavior-instance type="Sine">
                             <properties>
                                 <active-on-start>No</active-on-start>
@@ -469,15 +487,78 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>107</x>
-                        <y>143</y>
+                        <x>40</x>
+                        <y>223</y>
                         <z>0</z>
                         <width>32</width>
-                        <height>32</height>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.25</hotspotY>
+                        <angle>-0.040267203</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Sprite" uid="46">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>2</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <AttachAllowed>true</AttachAllowed>
+                        <Attached>false</Attached>
+                        <Segments>3</Segments>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                        <behavior-instance type="DragDrop">
+                            <properties>
+                                <axes>Both</axes>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Jumpthru">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>590</x>
+                        <y>137</y>
+                        <z>0</z>
+                        <width>96</width>
+                        <height>40</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.400000006</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Sprite4" uid="70">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>430</x>
+                        <y>258</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>16</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>-0.040267203</angle>
+                        <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -571,7 +652,103 @@
             <use-render-cells>0</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
-            <instances />
+            <instances>
+                <instance type="Sprite5" uid="54">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>480</x>
+                        <y>250</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
+        <layer name="Player" sid="272254581867024">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="Sprite3" uid="48">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>330</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>650</jump-strength>
+                                <gravity>1500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <double-jump>Disabled</double-jump>
+                                <jump-sustain>0</jump-sustain>
+                                <default-controls>Yes</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ScrollTo">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>400</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>No</set-angle>
+                                <default-controls>Yes</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>341</x>
+                        <y>271</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>48</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
             <effects />
         </layer>
         <layer name="Collisions" sid="482401880765482">
@@ -589,7 +766,37 @@
             <use-render-cells>0</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
-            <instances />
+            <instances>
+                <instance type="Sprite2" uid="47">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>135</x>
+                        <y>260</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
             <effects />
         </layer>
         <layer name="Camera" sid="549765490851456">
@@ -874,7 +1081,7 @@
             <effects />
         </layer>
         <layer name="HUD_TitleCard" sid="553351829434650">
-            <initially-visible>1</initially-visible>
+            <initially-visible>0</initially-visible>
             <background-color>0,0,0</background-color>
             <transparent>1</transparent>
             <parallax>
@@ -1136,6 +1343,24 @@
             </instances>
             <effects />
         </layer>
+        <layer name="GLOBAL_Fade" sid="432486605174122">
+            <initially-visible>1</initially-visible>
+            <background-color>0,0,0</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>1</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances />
+            <effects />
+        </layer>
     </layers>
     <nonworld-instances>
         <instance type="Var_Gameplay" uid="35">
@@ -1144,6 +1369,7 @@
                 <TitlecardSeen>false</TitlecardSeen>
             </instance-variables>
         </instance>
+        <instance type="Var_CONSTANTS" uid="45" />
     </nonworld-instances>
     <effects />
 </c2layout>

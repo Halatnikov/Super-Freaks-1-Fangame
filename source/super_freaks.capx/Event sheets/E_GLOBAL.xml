@@ -3,132 +3,137 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>E_GLOBAL</name>
     <events>
-        <event-block sid="285894410113596">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="295304382784672" type="System" />
-            </conditions>
-            <actions>
-                <action id="5" name="Set character width" sid="790426660344445" type="Text_Regular">
-                    <param id="0" name="Character">&quot;!.il&quot;</param>
-                    <param id="1" name="Width">3</param>
-                </action>
-                <action id="5" name="Set character width" sid="793451040769983" type="Text_Regular">
-                    <param id="0" name="Character">&quot;&apos;,:;|&quot;</param>
-                    <param id="1" name="Width">4</param>
-                </action>
-                <action id="5" name="Set character width" sid="491453572069360" type="Text_Regular">
-                    <param id="0" name="Character">&quot;&quot;&quot;[]`&quot;</param>
-                    <param id="1" name="Width">6</param>
-                </action>
-                <action id="5" name="Set character width" sid="163389880909118" type="Text_Regular">
-                    <param id="0" name="Character">&quot;()j&quot;</param>
-                    <param id="1" name="Width">7</param>
-                </action>
-                <action id="5" name="Set character width" sid="903159513605700" type="Text_Regular">
-                    <param id="0" name="Character">&quot;*1I^r{}&quot;</param>
-                    <param id="1" name="Width">8</param>
-                </action>
-                <action id="5" name="Set character width" sid="759856927611670" type="Text_Regular">
-                    <param id="0" name="Character">&quot;+-=fht&quot;</param>
-                    <param id="1" name="Width">9</param>
-                </action>
-                <action id="5" name="Set character width" sid="556024449996702" type="Text_Regular">
-                    <param id="0" name="Character">&quot;234789&lt;&gt;?JLOabcdegknpqsuvz&quot;</param>
-                    <param id="1" name="Width">10</param>
-                </action>
-                <action id="5" name="Set character width" sid="184429647407860" type="Text_Regular">
-                    <param id="0" name="Character">&quot;$/56BEFKPRS\oy&quot;</param>
-                    <param id="1" name="Width">11</param>
-                </action>
-                <action id="5" name="Set character width" sid="835228447000908" type="Text_Regular">
-                    <param id="0" name="Character">&quot;0ADNTx~&quot;</param>
-                    <param id="1" name="Width">12</param>
-                </action>
-                <action id="5" name="Set character width" sid="316566066156297" type="Text_Regular">
-                    <param id="0" name="Character">&quot;&amp;CHUVZ_&quot;</param>
-                    <param id="1" name="Width">13</param>
-                </action>
-                <action id="5" name="Set character width" sid="268001882148282" type="Text_Regular">
-                    <param id="0" name="Character">&quot;%QXYw&quot;</param>
-                    <param id="1" name="Width">14</param>
-                </action>
-                <action id="5" name="Set character width" sid="437738521486061" type="Text_Regular">
-                    <param id="0" name="Character">&quot;Gm&quot;</param>
-                    <param id="1" name="Width">15</param>
-                </action>
-                <action id="5" name="Set character width" sid="711386523714380" type="Text_Regular">
-                    <param id="0" name="Character">&quot;#@MW &quot;</param>
-                    <param id="1" name="Width">16</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="191103132455313">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="213344721226304" type="System" />
-            </conditions>
-            <actions>
-                <action id="5" name="Set character width" sid="396615184897669" type="Text_Big">
-                    <param id="0" name="Character">&quot;:&quot;</param>
-                    <param id="1" name="Width">8</param>
-                </action>
-                <action id="5" name="Set character width" sid="586311414060997" type="Text_Big">
-                    <param id="0" name="Character">&quot;!&quot;</param>
-                    <param id="1" name="Width">9</param>
-                </action>
-                <action id="5" name="Set character width" sid="580353065654204" type="Text_Big">
-                    <param id="0" name="Character">&quot;I&quot;</param>
-                    <param id="1" name="Width">11</param>
-                </action>
-                <action id="5" name="Set character width" sid="404404776426639" type="Text_Big">
-                    <param id="0" name="Character">&quot;1,&quot;</param>
-                    <param id="1" name="Width">12</param>
-                </action>
-                <action id="5" name="Set character width" sid="402041547592759" type="Text_Big">
-                    <param id="0" name="Character">&quot;35&quot;</param>
-                    <param id="1" name="Width">17</param>
-                </action>
-                <action id="5" name="Set character width" sid="587771411056590" type="Text_Big">
-                    <param id="0" name="Character">&quot;J028&quot;</param>
-                    <param id="1" name="Width">18</param>
-                </action>
-                <action id="5" name="Set character width" sid="340126609870857" type="Text_Big">
-                    <param id="0" name="Character">&quot;LU4679?&quot;</param>
-                    <param id="1" name="Width">19</param>
-                </action>
-                <action id="5" name="Set character width" sid="729831979145840" type="Text_Big">
-                    <param id="0" name="Character">&quot;BH&quot;</param>
-                    <param id="1" name="Width">20</param>
-                </action>
-                <action id="5" name="Set character width" sid="295471168637670" type="Text_Big">
-                    <param id="0" name="Character">&quot;DEGNPT&quot;</param>
-                    <param id="1" name="Width">21</param>
-                </action>
-                <action id="5" name="Set character width" sid="846957730310613" type="Text_Big">
-                    <param id="0" name="Character">&quot;FKV&quot;</param>
-                    <param id="1" name="Width">22</param>
-                </action>
-                <action id="5" name="Set character width" sid="365426619261093" type="Text_Big">
-                    <param id="0" name="Character">&quot;ACRSXZ&quot;</param>
-                    <param id="1" name="Width">23</param>
-                </action>
-                <action id="5" name="Set character width" sid="159504202574914" type="Text_Big">
-                    <param id="0" name="Character">&quot;O&quot;</param>
-                    <param id="1" name="Width">24</param>
-                </action>
-                <action id="5" name="Set character width" sid="715607594132270" type="Text_Big">
-                    <param id="0" name="Character">&quot;QY&quot;</param>
-                    <param id="1" name="Width">25</param>
-                </action>
-                <action id="5" name="Set character width" sid="288716408264269" type="Text_Big">
-                    <param id="0" name="Character">&quot;M&quot;</param>
-                    <param id="1" name="Width">29</param>
-                </action>
-                <action id="5" name="Set character width" sid="559199864211361" type="Text_Big">
-                    <param id="0" name="Character">&quot;W &quot;</param>
-                    <param id="1" name="Width">30</param>
-                </action>
-            </actions>
-        </event-block>
+        <event-group description="" sid="661773340998997" title="Fonts">
+            <sub-events>
+                <event-block sid="285894410113596">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="295304382784672" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set character width" sid="790426660344445" type="Text_Regular">
+                            <param id="0" name="Character">&quot;!.il&quot;</param>
+                            <param id="1" name="Width">3</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="793451040769983" type="Text_Regular">
+                            <param id="0" name="Character">&quot;&apos;,:;|&quot;</param>
+                            <param id="1" name="Width">4</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="491453572069360" type="Text_Regular">
+                            <param id="0" name="Character">&quot;&quot;&quot;[]`&quot;</param>
+                            <param id="1" name="Width">6</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="163389880909118" type="Text_Regular">
+                            <param id="0" name="Character">&quot;()j&quot;</param>
+                            <param id="1" name="Width">7</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="903159513605700" type="Text_Regular">
+                            <param id="0" name="Character">&quot;*1I^r{}&quot;</param>
+                            <param id="1" name="Width">8</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="759856927611670" type="Text_Regular">
+                            <param id="0" name="Character">&quot;+-=fht&quot;</param>
+                            <param id="1" name="Width">9</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="556024449996702" type="Text_Regular">
+                            <param id="0" name="Character">&quot;234789&lt;&gt;?JLOabcdegknpqsuvz&quot;</param>
+                            <param id="1" name="Width">10</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="184429647407860" type="Text_Regular">
+                            <param id="0" name="Character">&quot;$/56BEFKPRS\oy&quot;</param>
+                            <param id="1" name="Width">11</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="835228447000908" type="Text_Regular">
+                            <param id="0" name="Character">&quot;0ADNTx~&quot;</param>
+                            <param id="1" name="Width">12</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="316566066156297" type="Text_Regular">
+                            <param id="0" name="Character">&quot;&amp;CHUVZ_&quot;</param>
+                            <param id="1" name="Width">13</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="268001882148282" type="Text_Regular">
+                            <param id="0" name="Character">&quot;%QXYw&quot;</param>
+                            <param id="1" name="Width">14</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="437738521486061" type="Text_Regular">
+                            <param id="0" name="Character">&quot;Gm&quot;</param>
+                            <param id="1" name="Width">15</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="711386523714380" type="Text_Regular">
+                            <param id="0" name="Character">&quot;#@MW &quot;</param>
+                            <param id="1" name="Width">16</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="191103132455313">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="213344721226304" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set character width" sid="396615184897669" type="Text_Big">
+                            <param id="0" name="Character">&quot;:&quot;</param>
+                            <param id="1" name="Width">8</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="586311414060997" type="Text_Big">
+                            <param id="0" name="Character">&quot;!&quot;</param>
+                            <param id="1" name="Width">9</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="580353065654204" type="Text_Big">
+                            <param id="0" name="Character">&quot;I&quot;</param>
+                            <param id="1" name="Width">11</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="404404776426639" type="Text_Big">
+                            <param id="0" name="Character">&quot;1,&quot;</param>
+                            <param id="1" name="Width">12</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="402041547592759" type="Text_Big">
+                            <param id="0" name="Character">&quot;35&quot;</param>
+                            <param id="1" name="Width">17</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="587771411056590" type="Text_Big">
+                            <param id="0" name="Character">&quot;J028&quot;</param>
+                            <param id="1" name="Width">18</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="340126609870857" type="Text_Big">
+                            <param id="0" name="Character">&quot;LU4679?&quot;</param>
+                            <param id="1" name="Width">19</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="729831979145840" type="Text_Big">
+                            <param id="0" name="Character">&quot;BH&quot;</param>
+                            <param id="1" name="Width">20</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="295471168637670" type="Text_Big">
+                            <param id="0" name="Character">&quot;DEGNPT&quot;</param>
+                            <param id="1" name="Width">21</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="846957730310613" type="Text_Big">
+                            <param id="0" name="Character">&quot;FKV&quot;</param>
+                            <param id="1" name="Width">22</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="365426619261093" type="Text_Big">
+                            <param id="0" name="Character">&quot;ACRSXZ&quot;</param>
+                            <param id="1" name="Width">23</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="159504202574914" type="Text_Big">
+                            <param id="0" name="Character">&quot;O&quot;</param>
+                            <param id="1" name="Width">24</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="715607594132270" type="Text_Big">
+                            <param id="0" name="Character">&quot;QY&quot;</param>
+                            <param id="1" name="Width">25</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="288716408264269" type="Text_Big">
+                            <param id="0" name="Character">&quot;M&quot;</param>
+                            <param id="1" name="Width">29</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="559199864211361" type="Text_Big">
+                            <param id="0" name="Character">&quot;W &quot;</param>
+                            <param id="1" name="Width">30</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment></comment>
         <event-block sid="949200808020883">
             <conditions>
                 <condition id="0" name="On key pressed" sid="998880760192631" type="Keyboard">
@@ -149,5 +154,185 @@
                 <action id="-26" name="Restart layout" sid="986751899849214" type="System" />
             </actions>
         </event-block>
+        <comment></comment>
+        <event-group description="" sid="292781356636098" title="Fade Transition">
+            <sub-events>
+                <event-block sid="586954300419460">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="350606315227059" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-34" name="Set layer background color" sid="710590483579377" type="System">
+                            <param id="0" name="Layer">&quot;GLOBAL_Fade&quot;</param>
+                            <param id="1" name="Color">rgb(0, 0, 0)</param>
+                        </action>
+                        <action id="-18" name="Set layer opacity" sid="135931887419912" type="System">
+                            <param id="0" name="Layer">&quot;GLOBAL_Fade&quot;</param>
+                            <param id="1" name="Opacity">0</param>
+                        </action>
+                        <action id="-35" name="Set layer transparent" sid="789374037604137" type="System">
+                            <param id="0" name="Layer">&quot;GLOBAL_Fade&quot;</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="717801578855021">
+                    <conditions>
+                        <condition id="3" name="On ticked" sid="113486463268744" type="Ease">
+                            <param id="0" name="Ease tag">&quot;HUD_Fade&quot;</param>
+                            <param id="1" name="Ease parameter {n}"></param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-18" name="Set layer opacity" sid="794946289135384" type="System">
+                            <param id="0" name="Layer">&quot;GLOBAL_Fade&quot;</param>
+                            <param id="1" name="Opacity">Ease.TickedValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="729563418023676">
+                    <conditions>
+                        <condition id="0" name="On function" sid="313578086646797" type="Function">
+                            <param id="0" name="Name">&quot;HUD_Fade&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="866941737203491">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="223234732378840" type="Function">
+                                    <param id="0" name="Index">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;black&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-34" name="Set layer background color" sid="249455234582764" type="System">
+                                    <param id="0" name="Layer">&quot;GLOBAL_Fade&quot;</param>
+                                    <param id="1" name="Color">rgb(0, 0, 0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="260352209049921">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="183468397242377" type="Function">
+                                    <param id="0" name="Index">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;white&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-34" name="Set layer background color" sid="113284944126992" type="System">
+                                    <param id="0" name="Layer">&quot;GLOBAL_Fade&quot;</param>
+                                    <param id="1" name="Color">rgb(255, 255, 255)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="578325780475954">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="479342945095021" type="Function">
+                                    <param id="0" name="Index">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;red&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-34" name="Set layer background color" sid="505640870940517" type="System">
+                                    <param id="0" name="Layer">&quot;GLOBAL_Fade&quot;</param>
+                                    <param id="1" name="Color">rgb(255, 0, 0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <variable constant="0" name="duration" sid="824930030209178" static="0" type="number">0</variable>
+                        <event-block sid="851795018380096">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="621761550233779" type="Function">
+                                    <param id="0" name="Index">2</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="170588410638856" type="System">
+                                    <param id="0" name="Variable">duration</param>
+                                    <param id="1" name="Value">0.5</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="744445259532366">
+                            <conditions>
+                                <condition id="1" inverted="1" name="Compare parameter" sid="432833410481493" type="Function">
+                                    <param id="0" name="Index">2</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="684462078915432" type="System">
+                                    <param id="0" name="Variable">duration</param>
+                                    <param id="1" name="Value">Function.Param(2)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="730795968157399">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="387352624953481" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;in&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Ease" sid="148604587592138" type="Ease">
+                                    <param id="0" name="Ease tag">&quot;HUD_Fade&quot;</param>
+                                    <param id="1" name="Start value">0</param>
+                                    <param id="2" name="End value">100</param>
+                                    <param id="3" name="Duration">duration</param>
+                                    <param id="4" name="Easing effect">0</param>
+                                    <param id="5" name="Bounce back">0</param>
+                                    <param id="6" name="Ease parameter {n}"></param>
+                                </action>
+                                <action id="-18" name="Set layer opacity" sid="565810460027739" type="System">
+                                    <param id="0" name="Layer">&quot;GLOBAL_Fade&quot;</param>
+                                    <param id="1" name="Opacity">0</param>
+                                </action>
+                                <action id="-35" name="Set layer transparent" sid="754315520490196" type="System">
+                                    <param id="0" name="Layer">&quot;GLOBAL_Fade&quot;</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="302428348324938">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="450549840653538" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;out&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Ease" sid="369311595627416" type="Ease">
+                                    <param id="0" name="Ease tag">&quot;HUD_Fade&quot;</param>
+                                    <param id="1" name="Start value">100</param>
+                                    <param id="2" name="End value">0</param>
+                                    <param id="3" name="Duration">duration</param>
+                                    <param id="4" name="Easing effect">0</param>
+                                    <param id="5" name="Bounce back">0</param>
+                                    <param id="6" name="Ease parameter {n}"></param>
+                                </action>
+                                <action id="-18" name="Set layer opacity" sid="152323781288541" type="System">
+                                    <param id="0" name="Layer">&quot;GLOBAL_Fade&quot;</param>
+                                    <param id="1" name="Opacity">100</param>
+                                </action>
+                                <action id="-35" name="Set layer transparent" sid="311455029505942" type="System">
+                                    <param id="0" name="Layer">&quot;GLOBAL_Fade&quot;</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
