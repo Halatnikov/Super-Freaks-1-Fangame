@@ -154,6 +154,34 @@
                 <action id="-26" name="Restart layout" sid="986751899849214" type="System" />
             </actions>
         </event-block>
+        <event-block sid="858408243768774">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="470259389840237" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="322133388154988" type="Var_CONSTANTS">
+                    <param id="0" name="Instance variable">Path_Assets</param>
+                    <param id="1" name="Value">&quot;D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\github\SuperFreaks&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="824470504421707" type="Var_CONSTANTS">
+                    <param id="0" name="Instance variable">Path_SourceCode1u</param>
+                    <param id="1" name="Value">&quot;D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1u_github&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="515134027227376">
+            <conditions>
+                <condition id="0" name="On function" sid="641512531373508" type="Function">
+                    <param id="0" name="Name">&quot;Util_ExecJS&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="677873880387433" type="Var_CONSTANTS">
+                    <param id="0" name="Instance variable">ExecJS_Return</param>
+                    <param id="1" name="Value">Function.Param(0)</param>
+                </action>
+            </actions>
+        </event-block>
         <comment></comment>
         <event-group description="" sid="292781356636098" title="Fade Transition">
             <sub-events>

@@ -186,7 +186,9 @@
         </layer>
     </layers>
     <nonworld-instances>
-        <instance type="JSON" uid="53" />
+        <instance type="JSON_Room" uid="53" />
+        <instance type="INI" uid="56" />
+        <instance type="JSON_Collisions" uid="57" />
     </nonworld-instances>
     <effects />
 </c2layout>

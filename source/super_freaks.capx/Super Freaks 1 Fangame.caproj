@@ -2,7 +2,7 @@
 <c2project>
     <name>Super Freaks 1 Fangame</name>
     <description></description>
-    <version>0.1.0-3</version>
+    <version>0.1.0-4</version>
     <author>Halatnikov</author>
     <author-email></author-email>
     <author-website>https://halatnikov.github.io</author-website>
@@ -11,14 +11,19 @@
     <saved-with-version>28000</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Francesco Iafulli (aka fiaful)" id="CreateObjectByVal" version="1">CreateObjectByVal</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Toby R" id="Globals" version="1">Globals</plugin>
         <plugin author="Yann Granjon" id="JSON" version="1">JSON</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
         <plugin author="Scirra" id="NodeWebkit" version="1">NW.js</plugin>
+        <plugin author="Rex.Rainbow" id="Rex_INI" version="0.100000001">INI</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
         <plugin author="Valera Popov" id="ValerypopoffEase" version="1">Valerypopoff Ease</plugin>
     </used-plugins>
     <used-behaviors>
@@ -30,7 +35,6 @@
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="lunarray" id="lunarray_LiteTween" version="1.700000048">LiteTween</behavior>
-        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects />
@@ -50,7 +54,7 @@
         <prop name="Downscaling">Low quality</prop>
         <prop name="Enable WebGL">On</prop>
         <prop name="Fullscreen in browser">Letterbox scale</prop>
-        <prop name="Fullscreen scaling">Low quality</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
         <prop name="Loader style">Nothing (not recommended)</prop>
         <prop name="Orientations">Landscape</prop>
         <prop name="Pause on unfocus">No</prop>
@@ -77,8 +81,20 @@
             <object-type name="Function" sid="908337620654264">
                 <plugin id="Function" />
             </object-type>
-            <object-type global="1" name="JSON" sid="828111349069334">
+            <object-type global="1" name="JSON_Room" sid="828111349069334">
                 <plugin id="JSON" />
+            </object-type>
+            <object-type global="1" name="INI" sid="537936813415790">
+                <plugin id="Rex_INI" />
+            </object-type>
+            <object-type global="1" name="JSON_Collisions" sid="948471886390573">
+                <plugin id="JSON" />
+            </object-type>
+            <object-type name="Mouse" sid="611250776509903">
+                <plugin id="Mouse" />
+            </object-type>
+            <object-type name="CreateObjectByVal" sid="638240513226112">
+                <plugin id="CreateObjectByVal" />
             </object-type>
         </object-folder>
         <object-folder name=".Variables">
@@ -91,9 +107,20 @@
             </object-type>
             <object-type global="1" name="Var_CONSTANTS" sid="548262914357161">
                 <plugin id="Globals" />
+                <instance-variables>
+                    <instance-variable name="ExecJS_Return" sid="383914473741899" type="string" />
+                    <instance-variable name="Path_Assets" sid="848621485292649" type="string" />
+                    <instance-variable name="Path_SourceCode1u" sid="885943548537521" type="string" />
+                </instance-variables>
+            </object-type>
+            <object-type global="1" name="Var_Level" sid="285604653832218">
+                <plugin id="Globals" />
+                <instance-variables>
+                    <instance-variable name="ImportRoom" sid="660012425076251" type="string" />
+                </instance-variables>
             </object-type>
         </object-folder>
-        <object-type name="Chain" sid="376113381833434">
+        <object-type name="Obj_Chain" sid="376113381833434">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="Segments" sid="833714304584837" type="number" />
@@ -162,7 +189,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="BoneyM" sid="213937284505522">
+        <object-type name="Enemy_BoneyM" sid="213937284505522">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="861583988857777" speed="10">
@@ -173,7 +200,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="ChainController" sid="398292666682154">
+        <object-type name="Special_ChainController" sid="398292666682154">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="311429752878432" speed="5">
@@ -181,7 +208,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="ChainAttachPoint" sid="195489207258414">
+        <object-type name="Special_ChainAttachPoint" sid="195489207258414">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Pin" sid="886495406342674">
@@ -299,7 +326,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite" sid="236663330808823">
+        <object-type name="Obj_FruitPlatform" sid="236663330808823">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="Segments" sid="427719089423064" type="number" />
@@ -357,31 +384,19 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="TiledBackground" sid="835295854604257">
-            <plugin id="TiledBg" />
-            <texture />
-        </object-type>
-        <object-type name="Sprite2" sid="612446696419818">
+        <object-type name="Col_Solid" sid="612446696419818">
             <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Solid" sid="410775380158930">
-                    <behavior id="solid" />
-                </behavior-type>
-            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="303794167808551" speed="5">
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite3" sid="213508341822418">
+        <object-type name="Player" sid="213508341822418">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Platform" sid="998743709330852">
                     <behavior id="Platform" />
-                </behavior-type>
-                <behavior-type name="ScrollTo" sid="950701306293301">
-                    <behavior id="scrollto" />
                 </behavior-type>
                 <behavior-type name="8Direction" sid="961308563670720">
                     <behavior id="EightDir" />
@@ -393,7 +408,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite4" sid="695670177902263">
+        <object-type name="Obj_Yorb" sid="695670177902263">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="6" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="431061044900218" speed="10">
@@ -406,7 +421,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite5" sid="727379108881708">
+        <object-type name="Obj_Heart" sid="727379108881708">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="298478504161004" speed="10">
@@ -415,13 +430,244 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Col_Platform" sid="416153993386786">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="252216216995268" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Col_Slope" sid="543657655845611">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="256672724326189" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0">
+                        <collision-poly>
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Col_Slope2_1" sid="513025124675340">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="294076311039806" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0">
+                        <collision-poly>
+                            <point x="1" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Col_Slope2_2" sid="209396546415730">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="308638000686923" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0">
+                        <collision-poly>
+                            <point x="0" y="0.5" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Special_StartPos" sid="367247652728977">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="282900739715099" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\Level Design\spr_spawn_pos.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Tiles_Main" sid="569645948577950">
+            <plugin id="Tilemap" />
+            <texture />
+            <tiles />
+        </object-type>
+        <object-type name="Player_Camera" sid="242835396996920">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="SelfX" sid="511980711841230" type="number" />
+                <instance-variable name="SelfY" sid="370556864317512" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="767335193238136" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\Level Design\spr_view_trapper.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Obj_YorbStar" sid="219933065652113">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="275876830711105">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="6" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="754919398269149" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Enemy_Pinhead" sid="453917621500824">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="780674104949987" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Enemy_BoneyM_Giant" sid="350981977105324">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="424656542911593" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.604167" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1u_github\sprites\spr_boneym_walk\3a8269c4-0273-43d1-ab54-96cf7bca3e3b.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.604167" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1u_github\sprites\spr_boneym_walk\b77f8643-5790-4e6a-9ae3-187b8323d651.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.604167" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1u_github\sprites\spr_boneym_walk\eac95bbf-d721-4851-933b-f32471e5043f.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.604167" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1u_github\sprites\spr_boneym_walk\27aa040d-bfbe-4d8a-aedc-9fc3fa62b093.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Obj_WalkieTalkie" sid="247803071819259">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="654283975655142" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Obj_Platform" sid="925532427406616">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Jumpthru" sid="749315417507155">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="947216935637444" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\Things\spr_platform.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="9patch" sid="459288986699147">
+            <plugin id="NinePatch" />
+            <behaviors>
+                <behavior-type name="Pin" sid="305620070005674">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="Obj_Ray" sid="780760331153782">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="186189150492959" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="2" loop="1" name="Activated" pingpong="0" repeatcount="1" repeatto="0" sid="187937046349827" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Obj_Trophy" sid="853181014650803">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="6" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="467789773658018" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Obj_Portal" sid="538682456767700">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="907585357897626" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Obj_StarArrow" sid="365225403563390">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="819903724648037" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Enemy_Propello" sid="486965290876968">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="986510222377324" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.604167" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.604167" />
+                </animation>
+                <animation framecount="2" loop="1" name="Prepare" pingpong="0" repeatcount="1" repeatto="0" sid="973455949791768" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Obj_SkullJar" sid="255662193623842">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="6" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="647555417766473" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Special_CameraLimit" sid="869541680617420">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="435508569564360" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="ObjectsAttachable" plugin-id="Sprite" sid="345415041156877">
             <members>
-                <member>BoneyM</member>
-                <member>ChainController</member>
-                <member>Sprite</member>
+                <member>Obj_FruitPlatform</member>
+                <member>Special_ChainController</member>
             </members>
             <instance-variables>
                 <instance-variable name="AttachAllowed" sid="875303024979866" type="boolean" />
@@ -450,6 +696,59 @@
                 </behavior-type>
             </behaviors>
         </family>
+        <family name="Enemies" plugin-id="Sprite" sid="356567601124726">
+            <members>
+                <member>Enemy_BoneyM</member>
+                <member>Enemy_BoneyM_Giant</member>
+                <member>Enemy_Pinhead</member>
+                <member>Enemy_Propello</member>
+            </members>
+        </family>
+        <family name="LevelCollisions" plugin-id="Sprite" sid="467150110647657">
+            <members>
+                <member>Col_Platform</member>
+                <member>Col_Slope</member>
+                <member>Col_Slope2_1</member>
+                <member>Col_Slope2_2</member>
+                <member>Col_Solid</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Solid" sid="933053361145158">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Jumpthru" sid="298991453601211">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="LevelObjects" plugin-id="Sprite" sid="341350025659352">
+            <members>
+                <member>Enemy_BoneyM</member>
+                <member>Enemy_BoneyM_Giant</member>
+                <member>Enemy_Pinhead</member>
+                <member>Enemy_Propello</member>
+                <member>Obj_Chain</member>
+                <member>Obj_FruitPlatform</member>
+                <member>Obj_Heart</member>
+                <member>Obj_Platform</member>
+                <member>Obj_Portal</member>
+                <member>Obj_Ray</member>
+                <member>Obj_SkullJar</member>
+                <member>Obj_StarArrow</member>
+                <member>Obj_Trophy</member>
+                <member>Obj_WalkieTalkie</member>
+                <member>Obj_Yorb</member>
+                <member>Obj_YorbStar</member>
+                <member>Special_CameraLimit</member>
+                <member>Special_ChainAttachPoint</member>
+                <member>Special_ChainController</member>
+                <member>Special_StartPos</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Object_ImportID" sid="355071632191646" type="string" />
+                <instance-variable name="Object_ImportInstance" sid="243342808568357" type="string" />
+            </instance-variables>
+        </family>
     </families>
     <layout-folder>
         <layout>_LAUNCH.xml</layout>
@@ -468,6 +767,12 @@
         <global-instance type="NWjs" uid="42" />
         <global-instance type="Ease" uid="43" />
         <global-instance type="Function" uid="44" />
+        <global-instance type="Mouse" uid="58" />
+        <global-instance type="CreateObjectByVal" uid="28">
+            <properties>
+                <more-than-one>First only</more-than-one>
+            </properties>
+        </global-instance>
     </global-instances>
     <sounds-folder />
     <music-folder />
