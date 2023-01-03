@@ -182,6 +182,30 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="807350252493289">
+            <conditions>
+                <condition id="0" name="On function" sid="517791422419953" type="Function">
+                    <param id="0" name="Name">&quot;Audio_PlaySFX&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="422176615114005">
+                    <conditions />
+                    <actions>
+                        <action id="6" name="Stop" sid="177243720071428" type="BetterAudio">
+                            <param id="0" name="Tag">&quot;SFX_&quot;&amp;Function.Param(0)</param>
+                        </action>
+                        <action id="99" name="Play at path" sid="582583297643488" type="BetterAudio">
+                            <param id="0" name="Path">Var_CONSTANTS.Path_Assets&amp;&quot;\assets\sounds\SFX_&quot;&amp;Function.Param(0)&amp;&quot;.ogg&quot;</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SFX_&quot;&amp;Function.Param(0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
         <comment></comment>
         <event-group description="" sid="292781356636098" title="Fade Transition">
             <sub-events>
@@ -362,5 +386,121 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="987393754035631">
+            <conditions>
+                <condition id="0" name="On function" sid="631565119861502" type="Function">
+                    <param id="0" name="Name">&quot;GMS2_InstanceProperty&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <comment>param 0 - gms2 instance name&#x0D;&#x0A;param 1 - property name to find&#x0D;&#x0A;param 2 - default value if search fails</comment>
+                <variable constant="0" name="instance" sid="297891480524838" static="1" type="text"></variable>
+                <variable constant="0" name="instance_property" sid="607921564579505" static="1" type="text"></variable>
+                <variable constant="0" name="return" sid="763877159966644" static="1" type="text"></variable>
+                <event-block sid="131043730057021">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="216781852401234" type="System">
+                            <param id="0" name="Variable">instance</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="557413275989108" type="System">
+                            <param id="0" name="Variable">instance_property</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="864482984845080" type="System">
+                            <param id="0" name="Variable">return</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="132975312378119">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="193647688959989" type="System">
+                            <param id="0" name="Variable">return</param>
+                            <param id="1" name="Value">Function.Param(2)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="105730973113728">
+                    <conditions>
+                        <condition id="100" name="For each property" sid="101218525522095" type="JSON_Room">
+                            <param id="0" name="Reference point">0</param>
+                            <param id="1" name="Key {n}">&quot;layers&quot;{###}JSON_Room.Layer_Instances{###}&quot;instances&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="243761896687063" type="System">
+                            <param id="0" name="First value">JSON_Room.Value(0,&quot;layers&quot;,JSON_Room.Layer_Instances,&quot;instances&quot;,JSON_Room.CurrentKey,&quot;name&quot;)</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="501496453782951" type="System">
+                            <param id="0" name="Variable">instance</param>
+                            <param id="1" name="Value">JSON_Room.CurrentKey</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="102948153274938">
+                            <conditions>
+                                <condition id="100" name="For each property" sid="193746305866570" type="JSON_Room">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}">&quot;layers&quot;{###}JSON_Room.Layer_Instances{###}&quot;instances&quot;{###}instance{###}&quot;properties&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="668466102664068" type="System">
+                                    <param id="0" name="Variable">instance_property</param>
+                                    <param id="1" name="Value">JSON_Room.CurrentKey</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="719668147563316">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="638900294437126" type="System">
+                                            <param id="0" name="First value">JSON_Room.Value(0,&quot;layers&quot;,JSON_Room.Layer_Instances,&quot;instances&quot;,instance,&quot;properties&quot;,instance_property,&quot;resourceType&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;GMOverriddenProperty&quot;</param>
+                                        </condition>
+                                        <condition id="100" name="For each property" sid="211508741510749" type="JSON_Room">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}">&quot;layers&quot;{###}JSON_Room.Layer_Instances{###}&quot;instances&quot;{###}instance{###}&quot;properties&quot;{###}instance_property</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="413236780573123">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="200110309637356" type="System">
+                                                    <param id="0" name="First value">JSON_Room.Value(0,&quot;layers&quot;,JSON_Room.Layer_Instances,&quot;instances&quot;,instance,&quot;properties&quot;,instance_property,&quot;propertyId&quot;,&quot;name&quot;)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">Function.Param(1)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="966633749234764" type="System">
+                                                    <param id="0" name="Variable">return</param>
+                                                    <param id="1" name="Value">JSON_Room.Value(0,&quot;layers&quot;,JSON_Room.Layer_Instances,&quot;instances&quot;,instance,&quot;properties&quot;,instance_property,&quot;value&quot;)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="517269155529299">
+                    <conditions />
+                    <actions>
+                        <action id="1" name="Set return value" sid="341559856055025" type="Function">
+                            <param id="0" name="Value">return</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
     </events>
 </c2eventsheet>
