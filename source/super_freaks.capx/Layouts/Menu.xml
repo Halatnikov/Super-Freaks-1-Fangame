@@ -46,6 +46,7 @@
                     </properties>
                     <instance-variables>
                         <ID></ID>
+                        <ParentUID>0</ParentUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="LiteTween">
@@ -92,6 +93,7 @@
                     </properties>
                     <instance-variables>
                         <ID></ID>
+                        <ParentUID>0</ParentUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="LiteTween">
@@ -138,6 +140,7 @@
                     </properties>
                     <instance-variables>
                         <ID></ID>
+                        <ParentUID>0</ParentUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="LiteTween">
@@ -184,6 +187,7 @@
                     </properties>
                     <instance-variables>
                         <ID></ID>
+                        <ParentUID>0</ParentUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="LiteTween">
@@ -230,6 +234,7 @@
                     </properties>
                     <instance-variables>
                         <ID></ID>
+                        <ParentUID>0</ParentUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="LiteTween">
@@ -276,6 +281,7 @@
                     </properties>
                     <instance-variables>
                         <ID></ID>
+                        <ParentUID>0</ParentUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="LiteTween">
@@ -322,6 +328,7 @@
                     </properties>
                     <instance-variables>
                         <ID></ID>
+                        <ParentUID>0</ParentUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="LiteTween">
@@ -368,6 +375,7 @@
                     </properties>
                     <instance-variables>
                         <ID></ID>
+                        <ParentUID>0</ParentUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="LiteTween">

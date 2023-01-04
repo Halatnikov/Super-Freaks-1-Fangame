@@ -191,7 +191,13 @@
             <actions />
             <sub-events>
                 <event-block sid="422176615114005">
-                    <conditions />
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="515291839081868" type="System">
+                            <param id="0" name="First value">find(Function.Param(0),&quot;_loop&quot;)</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">-1</param>
+                        </condition>
+                    </conditions>
                     <actions>
                         <action id="6" name="Stop" sid="177243720071428" type="BetterAudio">
                             <param id="0" name="Tag">&quot;SFX_&quot;&amp;Function.Param(0)</param>
@@ -199,6 +205,26 @@
                         <action id="99" name="Play at path" sid="582583297643488" type="BetterAudio">
                             <param id="0" name="Path">Var_CONSTANTS.Path_Assets&amp;&quot;\assets\sounds\SFX_&quot;&amp;Function.Param(0)&amp;&quot;.ogg&quot;</param>
                             <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SFX_&quot;&amp;Function.Param(0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="889453356690952">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Compare two values" sid="664649048996928" type="System">
+                            <param id="0" name="First value">find(Function.Param(0),&quot;_loop&quot;)</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">-1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="234433773866763" type="BetterAudio">
+                            <param id="0" name="Tag">&quot;SFX_&quot;&amp;Function.Param(0)</param>
+                        </action>
+                        <action id="99" name="Play at path" sid="600190312333899" type="BetterAudio">
+                            <param id="0" name="Path">Var_CONSTANTS.Path_Assets&amp;&quot;\assets\sounds\SFX_&quot;&amp;Function.Param(0)&amp;&quot;.ogg&quot;</param>
+                            <param id="2" name="Loop">1</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;SFX_&quot;&amp;Function.Param(0)</param>
                         </action>
@@ -295,37 +321,6 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <variable constant="0" name="duration" sid="824930030209178" static="0" type="number">0</variable>
-                        <event-block sid="851795018380096">
-                            <conditions>
-                                <condition id="1" name="Compare parameter" sid="621761550233779" type="Function">
-                                    <param id="0" name="Index">2</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="170588410638856" type="System">
-                                    <param id="0" name="Variable">duration</param>
-                                    <param id="1" name="Value">0.5</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="744445259532366">
-                            <conditions>
-                                <condition id="1" inverted="1" name="Compare parameter" sid="432833410481493" type="Function">
-                                    <param id="0" name="Index">2</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="684462078915432" type="System">
-                                    <param id="0" name="Variable">duration</param>
-                                    <param id="1" name="Value">Function.Param(2)</param>
-                                </action>
-                            </actions>
-                        </event-block>
                         <event-block sid="730795968157399">
                             <conditions>
                                 <condition id="1" name="Compare parameter" sid="387352624953481" type="Function">
@@ -339,7 +334,7 @@
                                     <param id="0" name="Ease tag">&quot;HUD_Fade&quot;</param>
                                     <param id="1" name="Start value">0</param>
                                     <param id="2" name="End value">100</param>
-                                    <param id="3" name="Duration">duration</param>
+                                    <param id="3" name="Duration">Function.Param(2)</param>
                                     <param id="4" name="Easing effect">0</param>
                                     <param id="5" name="Bounce back">0</param>
                                     <param id="6" name="Ease parameter {n}"></param>
@@ -367,7 +362,7 @@
                                     <param id="0" name="Ease tag">&quot;HUD_Fade&quot;</param>
                                     <param id="1" name="Start value">100</param>
                                     <param id="2" name="End value">0</param>
-                                    <param id="3" name="Duration">duration</param>
+                                    <param id="3" name="Duration">Function.Param(2)</param>
                                     <param id="4" name="Easing effect">0</param>
                                     <param id="5" name="Bounce back">0</param>
                                     <param id="6" name="Ease parameter {n}"></param>
@@ -426,12 +421,12 @@
                 </event-block>
                 <event-block sid="105730973113728">
                     <conditions>
-                        <condition id="100" name="For each property" sid="101218525522095" type="JSON_Room">
+                        <condition id="100" name="For each property" sid="101218525522095" type="JSON_GMS2Room">
                             <param id="0" name="Reference point">0</param>
-                            <param id="1" name="Key {n}">&quot;layers&quot;{###}JSON_Room.Layer_Instances{###}&quot;instances&quot;</param>
+                            <param id="1" name="Key {n}">&quot;layers&quot;{###}JSON_GMS2Room.Layer_Instances{###}&quot;instances&quot;</param>
                         </condition>
                         <condition id="-8" name="Compare two values" sid="243761896687063" type="System">
-                            <param id="0" name="First value">JSON_Room.Value(0,&quot;layers&quot;,JSON_Room.Layer_Instances,&quot;instances&quot;,JSON_Room.CurrentKey,&quot;name&quot;)</param>
+                            <param id="0" name="First value">JSON_GMS2Room.Value(0,&quot;layers&quot;,JSON_GMS2Room.Layer_Instances,&quot;instances&quot;,JSON_GMS2Room.CurrentKey,&quot;name&quot;)</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Second value">Function.Param(0)</param>
                         </condition>
@@ -439,34 +434,34 @@
                     <actions>
                         <action id="-9" name="Set value" sid="501496453782951" type="System">
                             <param id="0" name="Variable">instance</param>
-                            <param id="1" name="Value">JSON_Room.CurrentKey</param>
+                            <param id="1" name="Value">JSON_GMS2Room.CurrentKey</param>
                         </action>
                     </actions>
                     <sub-events>
                         <event-block sid="102948153274938">
                             <conditions>
-                                <condition id="100" name="For each property" sid="193746305866570" type="JSON_Room">
+                                <condition id="100" name="For each property" sid="193746305866570" type="JSON_GMS2Room">
                                     <param id="0" name="Reference point">0</param>
-                                    <param id="1" name="Key {n}">&quot;layers&quot;{###}JSON_Room.Layer_Instances{###}&quot;instances&quot;{###}instance{###}&quot;properties&quot;</param>
+                                    <param id="1" name="Key {n}">&quot;layers&quot;{###}JSON_GMS2Room.Layer_Instances{###}&quot;instances&quot;{###}instance{###}&quot;properties&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="-9" name="Set value" sid="668466102664068" type="System">
                                     <param id="0" name="Variable">instance_property</param>
-                                    <param id="1" name="Value">JSON_Room.CurrentKey</param>
+                                    <param id="1" name="Value">JSON_GMS2Room.CurrentKey</param>
                                 </action>
                             </actions>
                             <sub-events>
                                 <event-block sid="719668147563316">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="638900294437126" type="System">
-                                            <param id="0" name="First value">JSON_Room.Value(0,&quot;layers&quot;,JSON_Room.Layer_Instances,&quot;instances&quot;,instance,&quot;properties&quot;,instance_property,&quot;resourceType&quot;)</param>
+                                            <param id="0" name="First value">JSON_GMS2Room.Value(0,&quot;layers&quot;,JSON_GMS2Room.Layer_Instances,&quot;instances&quot;,instance,&quot;properties&quot;,instance_property,&quot;resourceType&quot;)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">&quot;GMOverriddenProperty&quot;</param>
                                         </condition>
-                                        <condition id="100" name="For each property" sid="211508741510749" type="JSON_Room">
+                                        <condition id="100" name="For each property" sid="211508741510749" type="JSON_GMS2Room">
                                             <param id="0" name="Reference point">0</param>
-                                            <param id="1" name="Key {n}">&quot;layers&quot;{###}JSON_Room.Layer_Instances{###}&quot;instances&quot;{###}instance{###}&quot;properties&quot;{###}instance_property</param>
+                                            <param id="1" name="Key {n}">&quot;layers&quot;{###}JSON_GMS2Room.Layer_Instances{###}&quot;instances&quot;{###}instance{###}&quot;properties&quot;{###}instance_property</param>
                                         </condition>
                                     </conditions>
                                     <actions />
@@ -474,7 +469,7 @@
                                         <event-block sid="413236780573123">
                                             <conditions>
                                                 <condition id="-8" name="Compare two values" sid="200110309637356" type="System">
-                                                    <param id="0" name="First value">JSON_Room.Value(0,&quot;layers&quot;,JSON_Room.Layer_Instances,&quot;instances&quot;,instance,&quot;properties&quot;,instance_property,&quot;propertyId&quot;,&quot;name&quot;)</param>
+                                                    <param id="0" name="First value">JSON_GMS2Room.Value(0,&quot;layers&quot;,JSON_GMS2Room.Layer_Instances,&quot;instances&quot;,instance,&quot;properties&quot;,instance_property,&quot;propertyId&quot;,&quot;name&quot;)</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Second value">Function.Param(1)</param>
                                                 </condition>
@@ -482,7 +477,7 @@
                                             <actions>
                                                 <action id="-9" name="Set value" sid="966633749234764" type="System">
                                                     <param id="0" name="Variable">return</param>
-                                                    <param id="1" name="Value">JSON_Room.Value(0,&quot;layers&quot;,JSON_Room.Layer_Instances,&quot;instances&quot;,instance,&quot;properties&quot;,instance_property,&quot;value&quot;)</param>
+                                                    <param id="1" name="Value">JSON_GMS2Room.Value(0,&quot;layers&quot;,JSON_GMS2Room.Layer_Instances,&quot;instances&quot;,instance,&quot;properties&quot;,instance_property,&quot;value&quot;)</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -497,6 +492,26 @@
                     <actions>
                         <action id="1" name="Set return value" sid="341559856055025" type="Function">
                             <param id="0" name="Value">return</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="906733987117344">
+            <conditions>
+                <condition id="0" name="On function" sid="239195939990939" type="Function">
+                    <param id="0" name="Name">&quot;GMS2_FixJSON&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <comment>fix trailing commas in the room json</comment>
+                <comment>(taken from https://github.com/nokazn/strip-json-trailing-commas/blob/main/src/index.ts)</comment>
+                <event-block sid="722567303739453">
+                    <conditions />
+                    <actions>
+                        <action id="1" name="Set return value" sid="994799791968799" type="Function">
+                            <param id="0" name="Value">RegexReplace(Function.Param(0),&quot;(?&lt;=(true|false|null|[&quot;&quot;\d}\]])\s*),(?=\s*[}\]])&quot;,&quot;g&quot;,&quot;&quot;)</param>
                         </action>
                     </actions>
                 </event-block>

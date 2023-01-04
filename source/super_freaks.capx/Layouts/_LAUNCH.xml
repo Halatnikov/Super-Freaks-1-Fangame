@@ -186,7 +186,7 @@
         </layer>
     </layers>
     <nonworld-instances>
-        <instance type="JSON_Room" uid="53">
+        <instance type="JSON_GMS2Room" uid="53">
             <instance-variables>
                 <Layer_Tiles>0</Layer_Tiles>
                 <Layer_Instances>0</Layer_Instances>
@@ -194,6 +194,12 @@
         </instance>
         <instance type="INI" uid="56" />
         <instance type="JSON_Collisions" uid="57" />
+        <instance type="JSON_COMMON" uid="86">
+            <instance-variables>
+                <ParentUID>0</ParentUID>
+            </instance-variables>
+        </instance>
+        <instance type="InstanceBank2" uid="89" />
     </nonworld-instances>
     <effects />
 </c2layout>
