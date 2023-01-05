@@ -2,7 +2,7 @@
 <c2project>
     <name>Super Freaks 1 Fangame</name>
     <description></description>
-    <version>0.1.0-6</version>
+    <version>0.1.0-7</version>
     <author>Halatnikov</author>
     <author-email></author-email>
     <author-website>https://halatnikov.github.io</author-website>
@@ -33,8 +33,10 @@
         <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Rex.Rainbow" id="Rex_MoveTo" version="1">MoveTo</behavior>
         <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="lunarray" id="lunarray_LiteTween" version="1.700000048">LiteTween</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -152,6 +154,7 @@
                     <instance-variable name="ActiveStarTrophy" sid="859313321983173" type="number" />
                     <instance-variable name="NumberStarStreak" sid="343928028724910" type="number" />
                     <instance-variable name="TimedStarStreak" sid="903789600284950" type="number" />
+                    <instance-variable name="GimmickState" sid="493211812958846" type="string" />
                 </instance-variables>
             </object-type>
             <object-type global="1" name="Var_Main" sid="816879087551174">
@@ -399,7 +402,19 @@
                     </instance-variables>
                     <animation-folder>
                         <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="819903724648037" speed="10">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <image-point name="Imagepoint 1" x="0.916667" y="0.5" />
+                                <collision-poly>
+                                    <point x="0.472222" y="0" />
+                                    <point x="0.847222" y="0.125" />
+                                    <point x="1" y="0.472222" />
+                                    <point x="0.847222" y="0.847222" />
+                                    <point x="0.472222" y="1" />
+                                    <point x="0.125" y="0.847222" />
+                                    <point x="0" y="0.472222" />
+                                    <point x="0.125" y="0.125" />
+                                </collision-poly>
+                            </frame>
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -933,6 +948,12 @@
                     <behavior-type name="Platform" sid="998743709330852">
                         <behavior id="Platform" />
                     </behavior-type>
+                    <behavior-type name="MoveTo" sid="802609686941784">
+                        <behavior id="Rex_MoveTo" />
+                    </behavior-type>
+                    <behavior-type name="Timer" sid="683782677882141">
+                        <behavior id="Timer" />
+                    </behavior-type>
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="219601152232728" speed="5">
@@ -1032,6 +1053,33 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="673247996670178" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="963818342590875">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="ParentUID" sid="998191051035778" type="number" />
+                <instance-variable name="ID" sid="289647866498654" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="569963181402491" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.25" y="0.25" />
+                            <point x="0.75" y="0.25" />
+                            <point x="0.75" y="0.75" />
+                            <point x="0.25" y="0.75" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.25" y="0.25" />
+                            <point x="0.75" y="0.25" />
+                            <point x="0.75" y="0.75" />
+                            <point x="0.25" y="0.75" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -1167,6 +1215,19 @@
                     <behavior id="Platform" />
                 </behavior-type>
             </behaviors>
+        </family>
+        <family name="ObjectsRotation" plugin-id="Sprite" sid="907411334364502">
+            <members>
+                <member>Obj_StarArrow</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Rot_XDistance" sid="310676175889206" type="number" />
+                <instance-variable name="Rot_YDistance" sid="736839789743138" type="number" />
+                <instance-variable name="Rot_CircleW" sid="424389779502583" type="number" />
+                <instance-variable name="Rot_CircleH" sid="762725629088125" type="number" />
+                <instance-variable name="Rot_Speed" sid="940082178222060" type="number" />
+                <instance-variable name="Rot__Timer" sid="557011028183496" type="number" />
+            </instance-variables>
         </family>
     </families>
     <layout-folder>

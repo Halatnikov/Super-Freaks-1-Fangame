@@ -790,6 +790,12 @@
                         <Obj_ImportID>obj_star_arrow</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
                         <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Rot_XDistance>0</Rot_XDistance>
+                        <Rot_YDistance>0</Rot_YDistance>
+                        <Rot_CircleW>32</Rot_CircleW>
+                        <Rot_CircleH>32</Rot_CircleH>
+                        <Rot_Speed>1</Rot_Speed>
+                        <Rot__Timer>0</Rot__Timer>
                         <launch_speed>0</launch_speed>
                         <launch_duration>0</launch_duration>
                     </instance-variables>
@@ -799,8 +805,8 @@
                         <x>366</x>
                         <y>515</y>
                         <z>0</z>
-                        <width>32</width>
-                        <height>32</height>
+                        <width>72</width>
+                        <height>72</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1283,6 +1289,32 @@
                         <opacity>0.899999976</opacity>
                     </world>
                 </instance>
+                <instance type="Sprite" uid="94">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <ParentUID>0</ParentUID>
+                        <ID>0</ID>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>375</x>
+                        <y>551</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -1351,6 +1383,17 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="MoveTo">
+                            <properties>
+                                <activated>No</activated>
+                                <max-speed>400</max-speed>
+                                <acceleration>9000</acceleration>
+                                <deceleration>9000</deceleration>
+                                <stop-by-solid>Yes</stop-by-solid>
+                                <continued-mode>Yes</continued-mode>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Timer" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2632,7 +2675,7 @@
         </instance>
         <instance type="Var_Level" uid="59">
             <instance-variables>
-                <ImportRoom>rm_stadium_3</ImportRoom>
+                <ImportRoom>rm_skyway_1</ImportRoom>
                 <Difficulty>Normal</Difficulty>
                 <ImportErrorAttempts>0</ImportErrorAttempts>
             </instance-variables>
@@ -2644,6 +2687,7 @@
                 <ActiveStarTrophy>0</ActiveStarTrophy>
                 <NumberStarStreak>0</NumberStarStreak>
                 <TimedStarStreak>0</TimedStarStreak>
+                <GimmickState></GimmickState>
             </instance-variables>
         </instance>
         <instance type="Var_Main" uid="93" />

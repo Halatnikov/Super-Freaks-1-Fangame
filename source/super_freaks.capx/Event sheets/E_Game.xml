@@ -31,6 +31,19 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="904940266550056">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="558050913234688" type="Keyboard">
+                    <param id="0" name="Key">81</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="127752390608987" type="Player">
+                    <param id="0" name="Object">Obj_Portal</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="381579928292213">
             <conditions>
                 <condition id="0" name="On key pressed" sid="596241384301603" type="Keyboard">
@@ -634,6 +647,7 @@
                             <param id="1" name="Key {n}"></param>
                         </action>
                         <action id="-9" name="Destroy" sid="365192406075485" type="Special_TimedStarPie" />
+                        <action id="-9" name="Destroy" sid="701085289011264" type="Sprite" />
                     </actions>
                 </event-block>
                 <comment>after loading room</comment>
@@ -711,46 +725,42 @@
                 <comment>replace needed for compatibility objects to proper ones</comment>
                 <event-block sid="524135221169171">
                     <conditions>
-                        <condition id="-18" name="On created" sid="258802862780004" type="ObjCompat_ClimbMesh_Fall" />
+                        <condition id="-11" name="For Each" sid="919265863370208" type="System">
+                            <param id="0" name="Object">ObjCompat_ClimbMesh_Fall</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="280792526093268" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-16" name="Wait" sid="385151311798147" type="System">
-                            <param id="0" name="Seconds">0.1</param>
-                        </action>
-                        <action id="0" name="Spawn another object" sid="262554223277964" type="ObjCompat_ClimbMesh_Fall">
-                            <param id="0" name="Object">Obj_ClimbMesh</param>
+                        <action id="-3" name="Create object" sid="992226785091136" type="System">
+                            <param id="0" name="Object to create">Obj_ClimbMesh</param>
                             <param id="1" name="Layer">&quot;Objects&quot;</param>
-                            <param id="2" name="Image point">0</param>
+                            <param id="2" name="X">ObjCompat_ClimbMesh_Fall.X</param>
+                            <param id="3" name="Y">ObjCompat_ClimbMesh_Fall.Y</param>
                         </action>
                         <action id="-7" name="Set size" sid="874212680392631" type="Obj_ClimbMesh">
                             <param id="0" name="Width">ObjCompat_ClimbMesh_Fall.Width</param>
                             <param id="1" name="Height">ObjCompat_ClimbMesh_Fall.Height</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="253752351238543" type="System">
-                            <param id="0" name="Seconds">0.1</param>
                         </action>
                         <action id="-9" name="Destroy" sid="897192079572980" type="ObjCompat_ClimbMesh_Fall" />
                     </actions>
                 </event-block>
                 <event-block sid="302957810100337">
                     <conditions>
-                        <condition id="-18" name="On created" sid="948467788388739" type="ObjCompat_ClimbMesh_Path" />
+                        <condition id="-11" name="For Each" sid="841007298112155" type="System">
+                            <param id="0" name="Object">ObjCompat_ClimbMesh_Path</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="967934504655351" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-16" name="Wait" sid="540516246007215" type="System">
-                            <param id="0" name="Seconds">0.1</param>
-                        </action>
-                        <action id="0" name="Spawn another object" sid="662047141702086" type="ObjCompat_ClimbMesh_Path">
-                            <param id="0" name="Object">Obj_ClimbMesh</param>
+                        <action id="-3" name="Create object" sid="319827876982097" type="System">
+                            <param id="0" name="Object to create">Obj_ClimbMesh</param>
                             <param id="1" name="Layer">&quot;Objects&quot;</param>
-                            <param id="2" name="Image point">0</param>
+                            <param id="2" name="X">ObjCompat_ClimbMesh_Path.X</param>
+                            <param id="3" name="Y">ObjCompat_ClimbMesh_Path.Y</param>
                         </action>
                         <action id="-7" name="Set size" sid="370831428679962" type="Obj_ClimbMesh">
                             <param id="0" name="Width">ObjCompat_ClimbMesh_Path.Width</param>
                             <param id="1" name="Height">ObjCompat_ClimbMesh_Path.Height</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="327619034012742" type="System">
-                            <param id="0" name="Seconds">0.1</param>
                         </action>
                         <action id="-9" name="Destroy" sid="752759907115014" type="ObjCompat_ClimbMesh_Path" />
                     </actions>
@@ -761,7 +771,7 @@
                         <condition id="-18" name="On created" sid="186673084960816" type="Objects9patch_Parent" />
                     </conditions>
                     <actions>
-                        <action id="-16" name="Wait" sid="966530661384966" type="System">
+                        <action id="-16" name="Wait" sid="500954937374838" type="System">
                             <param id="0" name="Seconds">0.1</param>
                         </action>
                         <action id="-15" name="Set visible" sid="215681426209024" type="Objects9patch_Parent">
@@ -989,24 +999,6 @@
                         <action id="-10" name="Set value" sid="263786955649270" type="Obj_WalkieTalkie">
                             <param id="0" name="Instance variable">hint</param>
                             <param id="1" name="Value">Function.Call(&quot;GMS2_InstanceProperty&quot;,Self.Obj_ImportInstance,&quot;hint&quot;,&quot;What&apos;s up gamers&quot;)</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="805804476529896">
-                    <conditions>
-                        <condition id="-18" name="On created" sid="270292938365122" type="Obj_StarArrow" />
-                    </conditions>
-                    <actions>
-                        <action id="-16" name="Wait" sid="522907522140590" type="System">
-                            <param id="0" name="Seconds">0.1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="985537154522991" type="Obj_StarArrow">
-                            <param id="0" name="Instance variable">launch_speed</param>
-                            <param id="1" name="Value">Function.Call(&quot;GMS2_InstanceProperty&quot;,Self.Obj_ImportInstance,&quot;launch_speed&quot;,&quot;6&quot;)</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="656106522272951" type="Obj_StarArrow">
-                            <param id="0" name="Instance variable">launch_duration</param>
-                            <param id="1" name="Value">Function.Call(&quot;GMS2_InstanceProperty&quot;,Self.Obj_ImportInstance,&quot;launch_duration&quot;,&quot;20&quot;)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2147,9 +2139,15 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="486672706931930">
+                <event-block sid="119450451689371">
                     <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="498007445349638" type="Obj_Trophy">
+                        <condition id="0" name="On collision with another object" sid="976517575386253" type="Player">
+                            <param id="0" name="Object">Obj_Trophy</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="223015818833652" type="Obj_Trophy">
+                            <param id="0" name="Instance variable">Locked</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="787701414712681" type="Obj_Trophy">
                             <param id="0" name="Instance variable">Collected</param>
                         </condition>
                         <condition id="-7" name="Compare instance variable" sid="114994961608330" type="HUD_Trophy">
@@ -2324,34 +2322,44 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="589680830684946">
+                <event-block sid="633293820573376">
                     <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="182645273530318" type="Obj_Trophy">
-                            <param id="0" name="Instance variable">Locked</param>
+                        <condition id="-11" name="For Each" sid="924148508739097" type="System">
+                            <param id="0" name="Object">Obj_Trophy</param>
                         </condition>
-                        <condition id="-4" name="Trigger once while true" sid="185464838364521" type="System" />
                     </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="387783889942795" type="Obj_Trophy">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="554263957217266">
-                    <conditions>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="445688273587050" type="Obj_Trophy">
-                            <param id="0" name="Instance variable">Collected</param>
-                        </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="489247427034578" type="Obj_Trophy">
-                            <param id="0" name="Instance variable">Locked</param>
-                        </condition>
-                        <condition id="-4" name="Trigger once while true" sid="188941861164405" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="801935605465272" type="Obj_Trophy">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="589680830684946">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="182645273530318" type="Obj_Trophy">
+                                    <param id="0" name="Instance variable">Locked</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="185464838364521" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="387783889942795" type="Obj_Trophy">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="554263957217266">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="489247427034578" type="Obj_Trophy">
+                                    <param id="0" name="Instance variable">Locked</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="651507867443655" type="Obj_Trophy">
+                                    <param id="0" name="Instance variable">Collected</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="188941861164405" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="801935605465272" type="Obj_Trophy">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-group description="" sid="568902975555854" title="Numbered stars">
                     <sub-events>
@@ -3516,5 +3524,438 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <comment>rotation formula taken from core engine by nihil</comment>
+        <event-block sid="171721454306909">
+            <conditions />
+            <actions>
+                <action id="-11" name="Add to" sid="482635844844250" type="ObjectsRotation">
+                    <param id="0" name="Instance variable">Rot__Timer</param>
+                    <param id="1" name="Value">Self.Rot_Speed</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment></comment>
+        <event-block sid="628988466226267">
+            <conditions>
+                <condition id="-18" name="On created" sid="544512606878145" type="Obj_StarArrow" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="522907522140590" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="-10" name="Set value" sid="985537154522991" type="Obj_StarArrow">
+                    <param id="0" name="Instance variable">launch_speed</param>
+                    <param id="1" name="Value">int(Function.Call(&quot;GMS2_InstanceProperty&quot;,Self.Obj_ImportInstance,&quot;launch_speed&quot;,&quot;6&quot;))*60</param>
+                </action>
+                <action id="-10" name="Set value" sid="656106522272951" type="Obj_StarArrow">
+                    <param id="0" name="Instance variable">launch_duration</param>
+                    <param id="1" name="Value">int(Function.Call(&quot;GMS2_InstanceProperty&quot;,Self.Obj_ImportInstance,&quot;launch_duration&quot;,&quot;20&quot;))/60</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="507939803802922">
+                    <conditions />
+                    <actions>
+                        <action id="-10" name="Set value" sid="724846828951887" type="Obj_StarArrow">
+                            <param id="0" name="Instance variable">Rot_XDistance</param>
+                            <param id="1" name="Value">360/8</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="261677124664071" type="Obj_StarArrow">
+                            <param id="0" name="Instance variable">Rot_YDistance</param>
+                            <param id="1" name="Value">360/8</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="490596407318538">
+                    <conditions>
+                        <condition id="-12" name="Repeat" sid="947586417810020" type="System">
+                            <param id="0" name="Count">8</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="217790499915181" type="System">
+                            <param id="0" name="Object to create">Sprite</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="X">Obj_StarArrow.X</param>
+                            <param id="3" name="Y">Obj_StarArrow.Y</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="401548312823545" type="Sprite">
+                            <param id="0" name="Instance variable">ParentUID</param>
+                            <param id="1" name="Value">Obj_StarArrow.UID</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="409365337085755" type="Sprite">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Value">loopindex</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="120985593731822">
+                    <conditions />
+                    <actions>
+                        <action id="-24" name="Move to top" sid="624643067532937" type="Obj_StarArrow" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="801219097034877">
+            <conditions>
+                <condition id="-11" name="For Each" sid="632276748528707" type="System">
+                    <param id="0" name="Object">Obj_StarArrow</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="606103826088204" type="Sprite">
+                    <param id="0" name="Instance variable">ParentUID</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">Obj_StarArrow.UID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="476906170317283" type="Sprite">
+                    <param id="0" name="X">Obj_StarArrow.X+cos(Obj_StarArrow.Rot__Timer+Self.ID*Obj_StarArrow.Rot_XDistance)*Obj_StarArrow.Rot_CircleW</param>
+                    <param id="1" name="Y">Obj_StarArrow.Y-sin(Obj_StarArrow.Rot__Timer+Self.ID*Obj_StarArrow.Rot_YDistance)*Obj_StarArrow.Rot_CircleH</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="174947702973394">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="536375478702205" type="Obj_StarArrow" />
+                <condition id="-11" name="For Each" sid="990408709841455" type="System">
+                    <param id="0" name="Object">Sprite</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="359778173967043" type="Sprite">
+                    <param id="0" name="Instance variable">ParentUID</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">Obj_StarArrow.UID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="252625768082085" type="Sprite" />
+            </actions>
+        </event-block>
+        <event-block sid="246869861497409">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="888717037076536" type="Player">
+                    <param id="0" name="Object">Obj_StarArrow</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Ease" sid="904817660275373" type="Ease">
+                    <param id="0" name="Ease tag">&quot;Obj_StarArrow_Circle&quot;</param>
+                    <param id="1" name="Start value">0</param>
+                    <param id="2" name="End value">32</param>
+                    <param id="3" name="Duration">0.25</param>
+                    <param id="4" name="Easing effect">0</param>
+                    <param id="5" name="Bounce back">0</param>
+                    <param id="6" name="Ease parameter {n}">Obj_StarArrow.UID</param>
+                </action>
+                <action id="0" name="Ease" sid="399197660630848" type="Ease">
+                    <param id="0" name="Ease tag">&quot;Obj_StarArrow_Speed&quot;</param>
+                    <param id="1" name="Start value">8</param>
+                    <param id="2" name="End value">1</param>
+                    <param id="3" name="Duration">1</param>
+                    <param id="4" name="Easing effect">0</param>
+                    <param id="5" name="Bounce back">0</param>
+                    <param id="6" name="Ease parameter {n}">Obj_StarArrow.UID</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="814712864285063">
+            <conditions>
+                <condition id="3" name="On ticked" sid="464920535958231" type="Ease">
+                    <param id="0" name="Ease tag">&quot;Obj_StarArrow_Circle&quot;</param>
+                    <param id="1" name="Ease parameter {n}"></param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="261377976261810" type="Obj_StarArrow">
+                    <param id="0" name="Unique ID">Ease.TickedParam(0)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="686198434840024" type="Obj_StarArrow">
+                    <param id="0" name="Instance variable">Rot_CircleW</param>
+                    <param id="1" name="Value">Ease.TickedValue</param>
+                </action>
+                <action id="-10" name="Set value" sid="894758986332777" type="Obj_StarArrow">
+                    <param id="0" name="Instance variable">Rot_CircleH</param>
+                    <param id="1" name="Value">Ease.TickedValue</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="530761402452768">
+            <conditions>
+                <condition id="3" name="On ticked" sid="135338048153180" type="Ease">
+                    <param id="0" name="Ease tag">&quot;Obj_StarArrow_Speed&quot;</param>
+                    <param id="1" name="Ease parameter {n}"></param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="297569092305651" type="Obj_StarArrow">
+                    <param id="0" name="Unique ID">Ease.TickedParam(0)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="895018207798087" type="Obj_StarArrow">
+                    <param id="0" name="Instance variable">Rot_Speed</param>
+                    <param id="1" name="Value">Ease.TickedValue</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment></comment>
+        <event-block sid="466888026697391">
+            <conditions />
+            <actions />
+            <sub-events>
+                <variable constant="0" name="duration" sid="213560103786548" static="1" type="number">0</variable>
+                <variable constant="0" name="vectory" sid="192896330331194" static="1" type="number">0</variable>
+                <variable constant="0" name="vectorx" sid="199834910324507" static="1" type="number">0</variable>
+                <event-block sid="526526311002306">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="238617058085750" type="Var_Player">
+                            <param id="0" name="Instance variable">GimmickState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;StarArrow_Launch&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="185605677151594">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="662989753618522" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="809032151057120" type="Player">
+                                    <param id="0" name="Vector Y">0</param>
+                                </action>
+                                <action behavior="Platform" id="8" name="Set vector X" sid="891843960288907" type="Player">
+                                    <param id="0" name="Vector X">0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="579345937461785" type="Player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="MoveTo" id="5" name="Set current speed" sid="869479343525363" type="Player">
+                                    <param id="0" name="Current speed">0</param>
+                                </action>
+                                <action behavior="MoveTo" id="0" name="Set enabled" sid="839216314411220" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="575596686869440" type="System">
+                                    <param id="0" name="Seconds">duration</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="106102860182973" type="Var_Player">
+                                    <param id="0" name="Instance variable">GimmickState</param>
+                                    <param id="1" name="Value">&quot;StarArrow_Land&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="538535674759006">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="943860639493890" type="Var_Player">
+                            <param id="0" name="Instance variable">GimmickState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;StarArrow_Land&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="499740660397088">
+                            <conditions>
+                                <condition id="-14" inverted="1" name="Compare variable" sid="999711084105013" type="System">
+                                    <param id="0" name="Variable">vectorx</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="8" name="Set vector X" sid="639271621615782" type="Player">
+                                    <param id="0" name="Vector X">vectorx</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="964514466680842">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="657173479013261" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="0" name="Set ignoring input" sid="806787172896510" type="Player">
+                                            <param id="0" name="Input">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="436176925551376">
+                            <conditions>
+                                <condition id="-14" inverted="1" name="Compare variable" sid="790952152907533" type="System">
+                                    <param id="0" name="Variable">vectory</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="960494055203083" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="404491112091129" type="Player">
+                                    <param id="0" name="Vector Y">vectory</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="881472022897845">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="180980683007377" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="MoveTo" id="9" name="Stop" sid="319015097101877" type="Player" />
+                                <action behavior="Platform" id="11" name="Set enabled" sid="490400197595016" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="MoveTo" id="0" name="Set enabled" sid="729679191491624" type="Player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="341882258978004" type="System">
+                                    <param id="0" name="Seconds">duration/1.25</param>
+                                </action>
+                                <action behavior="Platform" id="0" name="Set ignoring input" sid="116866054712237" type="Player">
+                                    <param id="0" name="Input">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="442949250203260" type="Var_Player">
+                                    <param id="0" name="Instance variable">GimmickState</param>
+                                    <param id="1" name="Value">&quot;null&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="344446982771678">
+                            <conditions>
+                                <condition behavior="Platform" id="2" name="Is on floor" sid="888262110544002" type="Player" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="261516566557401" type="Var_Player">
+                                    <param id="0" name="Instance variable">GimmickState</param>
+                                    <param id="1" name="Value">&quot;null&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="425333550312758">
+                    <conditions>
+                        <condition behavior="MoveTo" id="5" name="On stopped by solid" sid="108438168185197" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="633897569561871" type="Var_Player">
+                            <param id="0" name="Instance variable">GimmickState</param>
+                            <param id="1" name="Value">&quot;null&quot;</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="687261794741469" type="Player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="MoveTo" id="0" name="Set enabled" sid="473839529374077" type="Player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="503239556808595" type="Player">
+                            <param id="0" name="Vector Y">0</param>
+                        </action>
+                        <action behavior="Platform" id="8" name="Set vector X" sid="914964640186837" type="Player">
+                            <param id="0" name="Vector X">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="338210054428594">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="184179296469841" type="Player">
+                            <param id="0" name="Object">Obj_StarArrow</param>
+                        </condition>
+                        <condition id="-7" inverted="1" name="Compare instance variable" sid="249585921685251" type="Var_Player">
+                            <param id="0" name="Instance variable">GimmickState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;StarArrow_Launch&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="908356009165005" type="Var_Player">
+                            <param id="0" name="Instance variable">GimmickState</param>
+                            <param id="1" name="Value">&quot;StarArrow_Launch&quot;</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="309053531778283" type="Player">
+                            <param id="0" name="Object">Obj_StarArrow</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                        <action behavior="MoveTo" id="1" name="Set maximum speed" sid="386669482078506" type="Player">
+                            <param id="0" name="Max speed">Obj_StarArrow.launch_speed</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="999356222961437" type="System">
+                            <param id="0" name="Variable">duration</param>
+                            <param id="1" name="Value">Obj_StarArrow.launch_duration*1.25</param>
+                        </action>
+                        <action behavior="MoveTo" id="8" name="Move to distance-angle" sid="411425157252185" type="Player">
+                            <param id="0" name="Distance">512</param>
+                            <param id="1" name="Angle">Obj_StarArrow.Angle</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="936451803133417" type="System">
+                            <param id="0" name="Variable">vectory</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="198156743189072" type="System">
+                            <param id="0" name="Variable">vectorx</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="327616673960273">
+                            <conditions>
+                                <condition id="-13" name="Is between angles" sid="745292293221812" type="Obj_StarArrow">
+                                    <param id="0" name="First angle">185</param>
+                                    <param id="1" name="Second angle">355</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="433508133468506" type="System">
+                                    <param id="0" name="Variable">vectory</param>
+                                    <param id="1" name="Value">-(Player.Platform.JumpStrength/2)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="910090932817460">
+                            <conditions>
+                                <condition id="-13" name="Is between angles" sid="331293166596515" type="Obj_StarArrow">
+                                    <param id="0" name="First angle">5</param>
+                                    <param id="1" name="Second angle">175</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="750609203405639" type="System">
+                                    <param id="0" name="Variable">vectory</param>
+                                    <param id="1" name="Value">Player.Platform.JumpStrength</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="840743397411751">
+                            <conditions>
+                                <condition id="-13" name="Is between angles" sid="119591997735496" type="Obj_StarArrow">
+                                    <param id="0" name="First angle">275</param>
+                                    <param id="1" name="Second angle">85</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="328910357395638" type="System">
+                                    <param id="0" name="Variable">vectorx</param>
+                                    <param id="1" name="Value">Player.Platform.MaxSpeed</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="415116617626158">
+                            <conditions>
+                                <condition id="-13" name="Is between angles" sid="250654190017909" type="Obj_StarArrow">
+                                    <param id="0" name="First angle">95</param>
+                                    <param id="1" name="Second angle">265</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="952282203895965" type="System">
+                                    <param id="0" name="Variable">vectorx</param>
+                                    <param id="1" name="Value">-Player.Platform.MaxSpeed</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
     </events>
 </c2eventsheet>
