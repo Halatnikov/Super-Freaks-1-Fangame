@@ -197,6 +197,7 @@
         <instance type="JSON_COMMON" uid="86">
             <instance-variables>
                 <ParentUID>0</ParentUID>
+                <ID></ID>
             </instance-variables>
         </instance>
         <instance type="InstanceBank2" uid="89" />

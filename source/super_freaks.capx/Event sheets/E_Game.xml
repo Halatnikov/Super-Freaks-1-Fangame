@@ -79,6 +79,7 @@
         </event-block>
         <event-group description="" sid="968064589850318" title="Importing GMS2 Room">
             <sub-events>
+                <comment></comment>
                 <event-block sid="310270245454972">
                     <conditions>
                         <condition id="0" name="On function" sid="936542365430394" type="Function">
@@ -152,6 +153,39 @@
                             </conditions>
                             <actions />
                             <sub-events>
+                                <comment>path layers</comment>
+                                <event-block sid="442137655603415">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="616277035101518" type="System">
+                                            <param id="0" name="First value">JSON_GMS2Room.Value(0,&quot;layers&quot;,JSON_GMS2Room.CurrentKey,&quot;resourceType&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;GMRPathLayer&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="230765392718579">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="374658443118138" type="System">
+                                                    <param id="0" name="First value">find(JSON_GMS2Room.Value(0,&quot;layers&quot;,JSON_GMS2Room.CurrentKey,&quot;pathId&quot;,&quot;name&quot;),&quot;time_star&quot;)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">-1</param>
+                                                </condition>
+                                                <condition id="-8" name="Compare two values" sid="885913938022966" type="System">
+                                                    <param id="0" name="First value">find(JSON_GMS2Room.Value(0,&quot;layers&quot;,JSON_GMS2Room.CurrentKey,&quot;pathId&quot;,&quot;name&quot;),&quot;number_star&quot;)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">-1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="729148465450488" type="Function">
+                                                    <param id="0" name="Name">&quot;GMS2_PathImport&quot;</param>
+                                                    <param id="1" name="Parameter {n}">JSON_GMS2Room.Value(0,&quot;layers&quot;,JSON_GMS2Room.CurrentKey,&quot;pathId&quot;,&quot;name&quot;)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
                                 <comment>objects layer</comment>
                                 <event-block sid="408549091594472">
                                     <conditions>
@@ -544,6 +578,263 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment></comment>
+                <event-block sid="173209430893099">
+                    <conditions>
+                        <condition id="0" name="On function" sid="642241057586613" type="Function">
+                            <param id="0" name="Name">&quot;GMS2_PathImport&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="json" sid="778647046468457" static="1" type="text"></variable>
+                        <variable constant="0" name="x1" sid="244999975674443" static="1" type="number">0</variable>
+                        <variable constant="0" name="y1" sid="401999567753087" static="1" type="number">0</variable>
+                        <variable constant="0" name="x2" sid="203013397679445" static="1" type="number">0</variable>
+                        <variable constant="0" name="y2" sid="602640889056685" static="1" type="number">0</variable>
+                        <event-block sid="328787021974700">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="784869470221304" type="System">
+                                    <param id="0" name="Variable">json</param>
+                                    <param id="1" name="Value">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="701320414373918">
+                            <conditions />
+                            <actions>
+                                <action id="-3" name="Create object" sid="309300740992175" type="System">
+                                    <param id="0" name="Object to create">JSON_COMMON</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">0</param>
+                                    <param id="3" name="Y">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="362734809324396" type="System">
+                                    <param id="0" name="Variable">json</param>
+                                    <param id="1" name="Value">NWjs.ReadFile(Var_CONSTANTS.Path_SourceCode1u&amp;&quot;\paths\&quot;&amp;Function.Param(0)&amp;&quot;\&quot;&amp;Function.Param(0)&amp;&quot;.yy&quot;)</param>
+                                </action>
+                                <action id="60" name="LoadJSON" sid="889090116456029" type="JSON_COMMON">
+                                    <param id="0" name="JSON">Function.Call(&quot;GMS2_FixJSON&quot;,json)</param>
+                                    <param id="1" name="Reference point">0</param>
+                                    <param id="2" name="Key {n}"></param>
+                                </action>
+                                <action id="-9" name="Set value" sid="668507338738709" type="System">
+                                    <param id="0" name="Variable">json</param>
+                                    <param id="1" name="Value">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="409245522085815">
+                                    <conditions>
+                                        <condition id="100" name="For each property" sid="185098489616942" type="JSON_COMMON">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}">&quot;points&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="996525818516992" type="System">
+                                            <param id="0" name="Object to create">Sprite</param>
+                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                            <param id="2" name="X">float(JSON_Common.Value(0,&quot;points&quot;,JSON_Common.CurrentKey,&quot;x&quot;))</param>
+                                            <param id="3" name="Y">float(JSON_Common.Value(0,&quot;points&quot;,JSON_Common.CurrentKey,&quot;y&quot;))</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="639444314550092" type="Sprite">
+                                            <param id="0" name="Instance variable">Path_ID</param>
+                                            <param id="1" name="Value">Function.Param(0)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="597133520000262" type="Sprite">
+                                            <param id="0" name="Instance variable">path_curved</param>
+                                            <param id="1" name="Value">int(JSON_COMMON.Value(0,&quot;kind&quot;))</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="293753502145824" type="Sprite">
+                                            <param id="0" name="Instance variable">path_closed</param>
+                                            <param id="1" name="Value">JSON_COMMON.Value(0,&quot;closed&quot;)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="159370760687457" type="Sprite">
+                                            <param id="0" name="Instance variable">Path_Points</param>
+                                            <param id="1" name="Value">JSON_COMMON.Size(0,&quot;points&quot;)</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="453746176705824" type="Sprite">
+                                            <param id="0" name="Instance variable">Path_Visible</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="616769316154785" type="Sprite">
+                                            <param id="0" name="Instance variable">point_speed</param>
+                                            <param id="1" name="Value">float(JSON_COMMON.Value(0,&quot;points&quot;,JSON_COMMON.CurrentKey,&quot;speed&quot;))</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="851595632461175" type="Sprite">
+                                            <param id="0" name="Instance variable">Point_ID</param>
+                                            <param id="1" name="Value">int(JSON_COMMON.CurrentKey)</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="537509349502237">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="293778996516541" type="System">
+                                                    <param id="0" name="Variable">x1</param>
+                                                    <param id="1" name="Value">float(JSON_Common.Value(0,&quot;points&quot;,JSON_Common.CurrentKey,&quot;x&quot;))</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="881375890728394" type="System">
+                                                    <param id="0" name="Variable">y1</param>
+                                                    <param id="1" name="Value">float(JSON_Common.Value(0,&quot;points&quot;,JSON_Common.CurrentKey,&quot;y&quot;))</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="775280098310631">
+                                            <conditions>
+                                                <condition id="60" name="Is undefined" sid="686767293941071" type="JSON_COMMON">
+                                                    <param id="0" name="Reference point">0</param>
+                                                    <param id="1" name="Key {n}">&quot;points&quot;{###}int(JSON_COMMON.CurrentKey)+1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="188566049209584" type="System">
+                                                    <param id="0" name="Variable">x2</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="520010812076085" type="System">
+                                                    <param id="0" name="Variable">y2</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="987302309574338">
+                                            <conditions>
+                                                <condition id="60" inverted="1" name="Is undefined" sid="600432832117142" type="JSON_COMMON">
+                                                    <param id="0" name="Reference point">0</param>
+                                                    <param id="1" name="Key {n}">&quot;points&quot;{###}int(JSON_COMMON.CurrentKey)+1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="220991733469719" type="System">
+                                                    <param id="0" name="Variable">x2</param>
+                                                    <param id="1" name="Value">float(JSON_Common.Value(0,&quot;points&quot;,int(JSON_Common.CurrentKey)+1,&quot;x&quot;))</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="165018157656543" type="System">
+                                                    <param id="0" name="Variable">y2</param>
+                                                    <param id="1" name="Value">float(JSON_Common.Value(0,&quot;points&quot;,int(JSON_Common.CurrentKey)+1,&quot;y&quot;))</param>
+                                                </action>
+                                                <action id="5" name="Set frame" sid="730107032729819" type="Sprite">
+                                                    <param id="0" name="Frame number">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="714353222710885">
+                                            <conditions>
+                                                <condition id="60" name="Is undefined" sid="258924221401948" type="JSON_COMMON">
+                                                    <param id="0" name="Reference point">0</param>
+                                                    <param id="1" name="Key {n}">&quot;points&quot;{###}int(JSON_COMMON.CurrentKey)+1</param>
+                                                </condition>
+                                                <condition id="-8" name="Compare two values" sid="602801603594698" type="System">
+                                                    <param id="0" name="First value">JSON_COMMON.Value(0,&quot;closed&quot;)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="493312973106190" type="System">
+                                                    <param id="0" name="Variable">x2</param>
+                                                    <param id="1" name="Value">float(JSON_Common.Value(0,&quot;points&quot;,0,&quot;x&quot;))</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="398495249522919" type="System">
+                                                    <param id="0" name="Variable">y2</param>
+                                                    <param id="1" name="Value">float(JSON_Common.Value(0,&quot;points&quot;,0,&quot;y&quot;))</param>
+                                                </action>
+                                                <action id="5" name="Set frame" sid="467823646322981" type="Sprite">
+                                                    <param id="0" name="Frame number">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="241991916355707">
+                                            <conditions>
+                                                <condition id="-14" inverted="1" name="Compare variable" sid="717083556542922" type="System">
+                                                    <param id="0" name="Variable">x2</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                                <condition id="-14" inverted="1" name="Compare variable" sid="853944578799020" type="System">
+                                                    <param id="0" name="Variable">y2</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="469286675803618" type="System">
+                                                    <param id="0" name="Object to create">TiledBackground</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">x1</param>
+                                                    <param id="3" name="Y">y1</param>
+                                                </action>
+                                                <action id="-8" name="Set angle" sid="338058861224370" type="TiledBackground">
+                                                    <param id="0" name="Angle">angle(x1,y1,x2,y2)</param>
+                                                </action>
+                                                <action id="-5" name="Set width" sid="725875100608575" type="TiledBackground">
+                                                    <param id="0" name="Width">distance(x1,y1,x2,y2)</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="274664466417781" type="TiledBackground">
+                                                    <param id="0" name="Instance variable">ParentUID</param>
+                                                    <param id="1" name="Value">Sprite.UID</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="912648308513315">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Compare two values" sid="354329655089653" type="System">
+                                                    <param id="0" name="First value">JSON_COMMON.Value(0,&quot;closed&quot;)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">1</param>
+                                                </condition>
+                                                <condition id="-8" name="Compare two values" sid="506145972230228" type="System">
+                                                    <param id="0" name="First value">int(JSON_COMMON.CurrentKey)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="5" name="Set frame" sid="384194054066298" type="Sprite">
+                                                    <param id="0" name="Frame number">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="479752540962771">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Compare two values" sid="666382647445529" type="System">
+                                                    <param id="0" name="First value">JSON_COMMON.Value(0,&quot;closed&quot;)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">1</param>
+                                                </condition>
+                                                <condition id="-8" name="Compare two values" sid="448039327054774" type="System">
+                                                    <param id="0" name="First value">int(JSON_COMMON.CurrentKey)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">JSON_COMMON.Size(0,&quot;points&quot;)-1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="5" name="Set frame" sid="699241375958510" type="Sprite">
+                                                    <param id="0" name="Frame number">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="262307261918786">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-24" name="Move to top" sid="444338399504614" type="Sprite" />
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="811202178592862">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="717126708850795" type="JSON_COMMON" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="731406363725118" title="Room Init">
@@ -621,7 +912,6 @@
                         <action id="-9" name="Destroy" sid="486572255626404" type="LevelObjects" />
                         <action id="-9" name="Destroy" sid="600067926547933" type="LevelCollisions" />
                         <action id="-9" name="Destroy" sid="180751184684975" type="Objects9patch_Child" />
-                        <action id="-9" name="Destroy" sid="416441269446760" type="HUD_FinishExplosion" />
                         <action id="-10" name="Set value" sid="472892655036420" type="JSON_GMS2Room">
                             <param id="0" name="Instance variable">Layer_Tiles</param>
                             <param id="1" name="Value">0</param>
@@ -646,8 +936,11 @@
                             <param id="0" name="Reference point">0</param>
                             <param id="1" name="Key {n}"></param>
                         </action>
+                        <action id="-9" name="Destroy" sid="416441269446760" type="HUD_FinishExplosion" />
                         <action id="-9" name="Destroy" sid="365192406075485" type="Special_TimedStarPie" />
-                        <action id="-9" name="Destroy" sid="701085289011264" type="Sprite" />
+                        <action id="-9" name="Destroy" sid="701085289011264" type="Special_StarArrowStars" />
+                        <action id="-9" name="Destroy" sid="491016988973140" type="JSON_COMMON" />
+                        <action id="-9" name="Destroy" sid="990779449453444" type="Sprite" />
                     </actions>
                 </event-block>
                 <comment>after loading room</comment>
@@ -673,19 +966,36 @@
                             </actions>
                         </event-block>
                         <event-block sid="779927662793972">
+                            <conditions />
+                            <actions>
+                                <action id="-12" name="Set group active" sid="980001930824245" type="System">
+                                    <param id="0" name="Group name">&quot;Loading stabilizer&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="851456976191514">
+                    <conditions>
+                        <condition id="0" name="On function" sid="803044079565080" type="Function">
+                            <param id="0" name="Name">&quot;Util_LoadingStabilizerOut&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="671159886515304" type="System">
+                            <param id="0" name="Layer">&quot;GLOBAL_Loading&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="985438130028846">
                             <conditions>
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="484475718549864" type="Var_Gameplay">
                                     <param id="0" name="Instance variable">TitlecardSeen</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-16" name="Wait" sid="429277494285802" type="System">
-                                    <param id="0" name="Seconds">0.15</param>
-                                </action>
-                                <action id="-4" name="Set layer visible" sid="671159886515304" type="System">
-                                    <param id="0" name="Layer">&quot;GLOBAL_Loading&quot;</param>
-                                    <param id="1" name="Visibility">0</param>
-                                </action>
                                 <action id="0" name="Call function" sid="952172456367172" type="Function">
                                     <param id="0" name="Name">&quot;HUD_Fade&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;out&quot;{###}&quot;black&quot;{###}&quot;0&quot;</param>
@@ -703,13 +1013,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-16" name="Wait" sid="384269354633840" type="System">
-                                    <param id="0" name="Seconds">0.15</param>
-                                </action>
-                                <action id="-4" name="Set layer visible" sid="654967207795779" type="System">
-                                    <param id="0" name="Layer">&quot;GLOBAL_Loading&quot;</param>
-                                    <param id="1" name="Visibility">0</param>
-                                </action>
                                 <action id="0" name="Call function" sid="540452912755107" type="Function">
                                     <param id="0" name="Name">&quot;HUD_Fade&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;out&quot;{###}&quot;black&quot;{###}&quot;0.25&quot;</param>
@@ -717,6 +1020,9 @@
                                 <action id="-13" name="Set boolean" sid="935521674236578" type="Var_Gameplay">
                                     <param id="0" name="Instance variable">TimerActive</param>
                                     <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="775047683458753" type="Player">
+                                    <param id="0" name="State">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1228,8 +1534,8 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Platform" id="11" name="Set enabled" sid="951246027433014" type="Player">
-                            <param id="0" name="State">1</param>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="624402464999273" type="Player">
+                            <param id="0" name="State">0</param>
                         </action>
                         <action behavior="Platform" id="8" name="Set vector X" sid="975147580654558" type="Player">
                             <param id="0" name="Vector X">0</param>
@@ -1239,6 +1545,10 @@
                         </action>
                         <action behavior="Platform" id="0" name="Set ignoring input" sid="630566706984078" type="Player">
                             <param id="0" name="Input">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="246673459643498" type="Var_Gameplay">
+                            <param id="0" name="Instance variable">Pause</param>
+                            <param id="1" name="Value">&quot;False&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1665,6 +1975,9 @@
                                             <param id="0" name="Instance variable">LevelTimer</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
+                                        <action behavior="Platform" id="11" name="Set enabled" sid="691636466881845" type="Player">
+                                            <param id="0" name="State">1</param>
+                                        </action>
                                         <action id="-16" name="Wait" sid="586972507816406" type="System">
                                             <param id="0" name="Seconds">0.5</param>
                                         </action>
@@ -1801,6 +2114,21 @@
         </event-group>
         <event-group description="" sid="316576208948558" title="Level Misc">
             <sub-events>
+                <comment></comment>
+                <event-block sid="692973203355213">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="963127576659214" type="Var_Gameplay">
+                            <param id="0" name="Instance variable">TimerActive</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="849404106290073" type="Var_Gameplay">
+                            <param id="0" name="Instance variable">LevelTimer</param>
+                            <param id="1" name="Value">dt</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment></comment>
                 <event-block sid="561944467901855">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="291426941184023" type="Player">
@@ -1905,20 +2233,6 @@
                         <action id="4" name="Set animation" sid="887696586203180" type="Obj_Ray">
                             <param id="0" name="Animation">&quot;Activated&quot;</param>
                             <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment></comment>
-                <event-block sid="692973203355213">
-                    <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="963127576659214" type="Var_Gameplay">
-                            <param id="0" name="Instance variable">TimerActive</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-11" name="Add to" sid="849404106290073" type="Var_Gameplay">
-                            <param id="0" name="Instance variable">LevelTimer</param>
-                            <param id="1" name="Value">dt</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2088,6 +2402,16 @@
                         </action>
                         <action id="9" name="Set scale" sid="948934397832490" type="HUD_FinishExplosion">
                             <param id="0" name="Scale">4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>rotation formula taken from core engine by nihil</comment>
+                <event-block sid="171721454306909">
+                    <conditions />
+                    <actions>
+                        <action id="-11" name="Add to" sid="482635844844250" type="ObjectsRotation">
+                            <param id="0" name="Instance variable">Rot__Timer</param>
+                            <param id="1" name="Value">Self.Rot_Speed</param>
                         </action>
                     </actions>
                 </event-block>
@@ -3315,20 +3639,20 @@
                         <action id="-15" name="Set visible" sid="837753539026234" type="Text">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-3" name="Set position" sid="328097465571456" type="9patch">
+                        <action id="-3" name="Set position" sid="328097465571456" type="HUD_Message">
                             <param id="0" name="X">OriginalWindowWidth/2</param>
                             <param id="1" name="Y">OriginalWindowHeight/2</param>
                         </action>
-                        <action id="-7" name="Set size" sid="861103798104303" type="9patch">
+                        <action id="-7" name="Set size" sid="861103798104303" type="HUD_Message">
                             <param id="0" name="Width">32</param>
                             <param id="1" name="Height">32</param>
                         </action>
-                        <action behavior="LiteTween" id="3" name="Set target" sid="354976890423978" type="9patch">
+                        <action behavior="LiteTween" id="3" name="Set target" sid="354976890423978" type="HUD_Message">
                             <param id="0" name="Target is">4</param>
                             <param id="1" name="Relativity">0</param>
                             <param id="2" name="Value">OriginalWindowWidth-64</param>
                         </action>
-                        <action behavior="LiteTween2" id="3" name="Set target" sid="703826009885117" type="9patch">
+                        <action behavior="LiteTween2" id="3" name="Set target" sid="703826009885117" type="HUD_Message">
                             <param id="0" name="Target is">5</param>
                             <param id="1" name="Relativity">0</param>
                             <param id="2" name="Value">OriginalWindowHeight-64</param>
@@ -3358,11 +3682,11 @@
                         <action id="0" name="Set text" sid="727595470297881" type="Text">
                             <param id="0" name="Text">replace(Obj_WalkieTalkie.hint,&quot;&quot;&quot;&quot;,&quot;&quot;)</param>
                         </action>
-                        <action behavior="LiteTween" id="10" name="Start" sid="449760712670892" type="9patch">
+                        <action behavior="LiteTween" id="10" name="Start" sid="449760712670892" type="HUD_Message">
                             <param id="0" name="Start Mode">0</param>
                             <param id="1" name="Force use current">0</param>
                         </action>
-                        <action behavior="LiteTween2" id="10" name="Start" sid="780690758289922" type="9patch">
+                        <action behavior="LiteTween2" id="10" name="Start" sid="780690758289922" type="HUD_Message">
                             <param id="0" name="Start Mode">0</param>
                             <param id="1" name="Force use current">0</param>
                         </action>
@@ -3374,7 +3698,7 @@
                 </event-block>
                 <event-block sid="162593050390504">
                     <conditions>
-                        <condition behavior="LiteTween" id="4" name="On tween end" sid="612320527897341" type="9patch" />
+                        <condition behavior="LiteTween" id="4" name="On tween end" sid="612320527897341" type="HUD_Message" />
                         <condition id="-7" name="Compare instance variable" sid="599044195844101" type="Text">
                             <param id="0" name="Instance variable">ID</param>
                             <param id="1" name="Comparison">0</param>
@@ -3407,10 +3731,10 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="LiteTween" id="11" name="Reverse" sid="823550059975909" type="9patch">
+                                <action behavior="LiteTween" id="11" name="Reverse" sid="823550059975909" type="HUD_Message">
                                     <param id="0" name="Reverse mode">1</param>
                                 </action>
-                                <action behavior="LiteTween2" id="11" name="Reverse" sid="487250592685500" type="9patch">
+                                <action behavior="LiteTween2" id="11" name="Reverse" sid="487250592685500" type="HUD_Message">
                                     <param id="0" name="Reverse mode">1</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="848485519684481" type="Text">
@@ -3424,7 +3748,7 @@
                         </event-block>
                         <event-block sid="567926941785461">
                             <conditions>
-                                <condition behavior="LiteTween" id="6" name="On tween reverse end" sid="118436302412966" type="9patch" />
+                                <condition behavior="LiteTween" id="6" name="On tween reverse end" sid="118436302412966" type="HUD_Message" />
                             </conditions>
                             <actions>
                                 <action id="-4" name="Set layer visible" sid="771305195461563" type="System">
@@ -3524,179 +3848,178 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <comment>rotation formula taken from core engine by nihil</comment>
-        <event-block sid="171721454306909">
-            <conditions />
-            <actions>
-                <action id="-11" name="Add to" sid="482635844844250" type="ObjectsRotation">
-                    <param id="0" name="Instance variable">Rot__Timer</param>
-                    <param id="1" name="Value">Self.Rot_Speed</param>
-                </action>
-            </actions>
-        </event-block>
-        <comment></comment>
-        <event-block sid="628988466226267">
-            <conditions>
-                <condition id="-18" name="On created" sid="544512606878145" type="Obj_StarArrow" />
-            </conditions>
-            <actions>
-                <action id="-16" name="Wait" sid="522907522140590" type="System">
-                    <param id="0" name="Seconds">0.1</param>
-                </action>
-                <action id="-10" name="Set value" sid="985537154522991" type="Obj_StarArrow">
-                    <param id="0" name="Instance variable">launch_speed</param>
-                    <param id="1" name="Value">int(Function.Call(&quot;GMS2_InstanceProperty&quot;,Self.Obj_ImportInstance,&quot;launch_speed&quot;,&quot;6&quot;))*60</param>
-                </action>
-                <action id="-10" name="Set value" sid="656106522272951" type="Obj_StarArrow">
-                    <param id="0" name="Instance variable">launch_duration</param>
-                    <param id="1" name="Value">int(Function.Call(&quot;GMS2_InstanceProperty&quot;,Self.Obj_ImportInstance,&quot;launch_duration&quot;,&quot;20&quot;))/60</param>
-                </action>
-            </actions>
+        <event-group description="launch stars?" sid="590935091025104" title="Star Arrows">
             <sub-events>
-                <event-block sid="507939803802922">
-                    <conditions />
+                <event-block sid="628988466226267">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="544512606878145" type="Obj_StarArrow" />
+                    </conditions>
                     <actions>
-                        <action id="-10" name="Set value" sid="724846828951887" type="Obj_StarArrow">
-                            <param id="0" name="Instance variable">Rot_XDistance</param>
-                            <param id="1" name="Value">360/8</param>
+                        <action id="-16" name="Wait" sid="522907522140590" type="System">
+                            <param id="0" name="Seconds">0.1</param>
                         </action>
-                        <action id="-10" name="Set value" sid="261677124664071" type="Obj_StarArrow">
-                            <param id="0" name="Instance variable">Rot_YDistance</param>
-                            <param id="1" name="Value">360/8</param>
+                        <action id="-10" name="Set value" sid="985537154522991" type="Obj_StarArrow">
+                            <param id="0" name="Instance variable">launch_speed</param>
+                            <param id="1" name="Value">int(Function.Call(&quot;GMS2_InstanceProperty&quot;,Self.Obj_ImportInstance,&quot;launch_speed&quot;,&quot;6&quot;))*60</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="656106522272951" type="Obj_StarArrow">
+                            <param id="0" name="Instance variable">launch_duration</param>
+                            <param id="1" name="Value">int(Function.Call(&quot;GMS2_InstanceProperty&quot;,Self.Obj_ImportInstance,&quot;launch_duration&quot;,&quot;20&quot;))/60</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="507939803802922">
+                            <conditions />
+                            <actions>
+                                <action id="-10" name="Set value" sid="724846828951887" type="Obj_StarArrow">
+                                    <param id="0" name="Instance variable">Rot_XDistance</param>
+                                    <param id="1" name="Value">360/8</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="261677124664071" type="Obj_StarArrow">
+                                    <param id="0" name="Instance variable">Rot_YDistance</param>
+                                    <param id="1" name="Value">360/8</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>small stars that rotate in a circle around the arrow</comment>
+                        <event-block sid="490596407318538">
+                            <conditions>
+                                <condition id="-12" name="Repeat" sid="947586417810020" type="System">
+                                    <param id="0" name="Count">8</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="217790499915181" type="System">
+                                    <param id="0" name="Object to create">Special_StarArrowStars</param>
+                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                    <param id="2" name="X">Obj_StarArrow.X</param>
+                                    <param id="3" name="Y">Obj_StarArrow.Y</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="401548312823545" type="Special_StarArrowStars">
+                                    <param id="0" name="Instance variable">ParentUID</param>
+                                    <param id="1" name="Value">Obj_StarArrow.UID</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="409365337085755" type="Special_StarArrowStars">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Value">loopindex</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="120985593731822">
+                            <conditions />
+                            <actions>
+                                <action id="-24" name="Move to top" sid="624643067532937" type="Obj_StarArrow" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
-                <event-block sid="490596407318538">
+                <event-block sid="801219097034877">
                     <conditions>
-                        <condition id="-12" name="Repeat" sid="947586417810020" type="System">
-                            <param id="0" name="Count">8</param>
+                        <condition id="-11" name="For Each" sid="632276748528707" type="System">
+                            <param id="0" name="Object">Obj_StarArrow</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="606103826088204" type="Special_StarArrowStars">
+                            <param id="0" name="Instance variable">ParentUID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Obj_StarArrow.UID</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Create object" sid="217790499915181" type="System">
-                            <param id="0" name="Object to create">Sprite</param>
-                            <param id="1" name="Layer">&quot;Objects&quot;</param>
-                            <param id="2" name="X">Obj_StarArrow.X</param>
-                            <param id="3" name="Y">Obj_StarArrow.Y</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="401548312823545" type="Sprite">
-                            <param id="0" name="Instance variable">ParentUID</param>
-                            <param id="1" name="Value">Obj_StarArrow.UID</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="409365337085755" type="Sprite">
-                            <param id="0" name="Instance variable">ID</param>
-                            <param id="1" name="Value">loopindex</param>
+                        <action id="-3" name="Set position" sid="476906170317283" type="Special_StarArrowStars">
+                            <param id="0" name="X">Obj_StarArrow.X+cos(Obj_StarArrow.Rot__Timer+Self.ID*Obj_StarArrow.Rot_XDistance)*Obj_StarArrow.Rot_CircleW</param>
+                            <param id="1" name="Y">Obj_StarArrow.Y-sin(Obj_StarArrow.Rot__Timer+Self.ID*Obj_StarArrow.Rot_YDistance)*Obj_StarArrow.Rot_CircleH</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="120985593731822">
-                    <conditions />
+                <event-block sid="174947702973394">
+                    <conditions>
+                        <condition id="-19" name="On destroyed" sid="536375478702205" type="Obj_StarArrow" />
+                        <condition id="-11" name="For Each" sid="990408709841455" type="System">
+                            <param id="0" name="Object">Special_StarArrowStars</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="359778173967043" type="Special_StarArrowStars">
+                            <param id="0" name="Instance variable">ParentUID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Obj_StarArrow.UID</param>
+                        </condition>
+                    </conditions>
                     <actions>
-                        <action id="-24" name="Move to top" sid="624643067532937" type="Obj_StarArrow" />
+                        <action id="-9" name="Destroy" sid="252625768082085" type="Special_StarArrowStars" />
+                    </actions>
+                </event-block>
+                <comment>the lil&apos; whoosh effect when you touch</comment>
+                <event-block sid="246869861497409">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="888717037076536" type="Player">
+                            <param id="0" name="Object">Obj_StarArrow</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="898811914640440" type="Function">
+                            <param id="0" name="Name">&quot;Audio_PlaySFX&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;stararrow&quot;</param>
+                        </action>
+                        <action id="0" name="Ease" sid="904817660275373" type="Ease">
+                            <param id="0" name="Ease tag">&quot;Obj_StarArrow_Circle&quot;</param>
+                            <param id="1" name="Start value">0</param>
+                            <param id="2" name="End value">32</param>
+                            <param id="3" name="Duration">0.25</param>
+                            <param id="4" name="Easing effect">0</param>
+                            <param id="5" name="Bounce back">0</param>
+                            <param id="6" name="Ease parameter {n}">Obj_StarArrow.UID</param>
+                        </action>
+                        <action id="0" name="Ease" sid="399197660630848" type="Ease">
+                            <param id="0" name="Ease tag">&quot;Obj_StarArrow_Speed&quot;</param>
+                            <param id="1" name="Start value">8</param>
+                            <param id="2" name="End value">1</param>
+                            <param id="3" name="Duration">1</param>
+                            <param id="4" name="Easing effect">0</param>
+                            <param id="5" name="Bounce back">0</param>
+                            <param id="6" name="Ease parameter {n}">Obj_StarArrow.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="814712864285063">
+                    <conditions>
+                        <condition id="3" name="On ticked" sid="464920535958231" type="Ease">
+                            <param id="0" name="Ease tag">&quot;Obj_StarArrow_Circle&quot;</param>
+                            <param id="1" name="Ease parameter {n}"></param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="261377976261810" type="Obj_StarArrow">
+                            <param id="0" name="Unique ID">Ease.TickedParam(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="686198434840024" type="Obj_StarArrow">
+                            <param id="0" name="Instance variable">Rot_CircleW</param>
+                            <param id="1" name="Value">Ease.TickedValue</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="894758986332777" type="Obj_StarArrow">
+                            <param id="0" name="Instance variable">Rot_CircleH</param>
+                            <param id="1" name="Value">Ease.TickedValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="530761402452768">
+                    <conditions>
+                        <condition id="3" name="On ticked" sid="135338048153180" type="Ease">
+                            <param id="0" name="Ease tag">&quot;Obj_StarArrow_Speed&quot;</param>
+                            <param id="1" name="Ease parameter {n}"></param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="297569092305651" type="Obj_StarArrow">
+                            <param id="0" name="Unique ID">Ease.TickedParam(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="895018207798087" type="Obj_StarArrow">
+                            <param id="0" name="Instance variable">Rot_Speed</param>
+                            <param id="1" name="Value">Ease.TickedValue</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
-        </event-block>
-        <event-block sid="801219097034877">
-            <conditions>
-                <condition id="-11" name="For Each" sid="632276748528707" type="System">
-                    <param id="0" name="Object">Obj_StarArrow</param>
-                </condition>
-                <condition id="-7" name="Compare instance variable" sid="606103826088204" type="Sprite">
-                    <param id="0" name="Instance variable">ParentUID</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">Obj_StarArrow.UID</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-3" name="Set position" sid="476906170317283" type="Sprite">
-                    <param id="0" name="X">Obj_StarArrow.X+cos(Obj_StarArrow.Rot__Timer+Self.ID*Obj_StarArrow.Rot_XDistance)*Obj_StarArrow.Rot_CircleW</param>
-                    <param id="1" name="Y">Obj_StarArrow.Y-sin(Obj_StarArrow.Rot__Timer+Self.ID*Obj_StarArrow.Rot_YDistance)*Obj_StarArrow.Rot_CircleH</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="174947702973394">
-            <conditions>
-                <condition id="-19" name="On destroyed" sid="536375478702205" type="Obj_StarArrow" />
-                <condition id="-11" name="For Each" sid="990408709841455" type="System">
-                    <param id="0" name="Object">Sprite</param>
-                </condition>
-                <condition id="-7" name="Compare instance variable" sid="359778173967043" type="Sprite">
-                    <param id="0" name="Instance variable">ParentUID</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">Obj_StarArrow.UID</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="252625768082085" type="Sprite" />
-            </actions>
-        </event-block>
-        <event-block sid="246869861497409">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="888717037076536" type="Player">
-                    <param id="0" name="Object">Obj_StarArrow</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Ease" sid="904817660275373" type="Ease">
-                    <param id="0" name="Ease tag">&quot;Obj_StarArrow_Circle&quot;</param>
-                    <param id="1" name="Start value">0</param>
-                    <param id="2" name="End value">32</param>
-                    <param id="3" name="Duration">0.25</param>
-                    <param id="4" name="Easing effect">0</param>
-                    <param id="5" name="Bounce back">0</param>
-                    <param id="6" name="Ease parameter {n}">Obj_StarArrow.UID</param>
-                </action>
-                <action id="0" name="Ease" sid="399197660630848" type="Ease">
-                    <param id="0" name="Ease tag">&quot;Obj_StarArrow_Speed&quot;</param>
-                    <param id="1" name="Start value">8</param>
-                    <param id="2" name="End value">1</param>
-                    <param id="3" name="Duration">1</param>
-                    <param id="4" name="Easing effect">0</param>
-                    <param id="5" name="Bounce back">0</param>
-                    <param id="6" name="Ease parameter {n}">Obj_StarArrow.UID</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="814712864285063">
-            <conditions>
-                <condition id="3" name="On ticked" sid="464920535958231" type="Ease">
-                    <param id="0" name="Ease tag">&quot;Obj_StarArrow_Circle&quot;</param>
-                    <param id="1" name="Ease parameter {n}"></param>
-                </condition>
-                <condition id="-14" name="Pick by unique ID" sid="261377976261810" type="Obj_StarArrow">
-                    <param id="0" name="Unique ID">Ease.TickedParam(0)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="686198434840024" type="Obj_StarArrow">
-                    <param id="0" name="Instance variable">Rot_CircleW</param>
-                    <param id="1" name="Value">Ease.TickedValue</param>
-                </action>
-                <action id="-10" name="Set value" sid="894758986332777" type="Obj_StarArrow">
-                    <param id="0" name="Instance variable">Rot_CircleH</param>
-                    <param id="1" name="Value">Ease.TickedValue</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="530761402452768">
-            <conditions>
-                <condition id="3" name="On ticked" sid="135338048153180" type="Ease">
-                    <param id="0" name="Ease tag">&quot;Obj_StarArrow_Speed&quot;</param>
-                    <param id="1" name="Ease parameter {n}"></param>
-                </condition>
-                <condition id="-14" name="Pick by unique ID" sid="297569092305651" type="Obj_StarArrow">
-                    <param id="0" name="Unique ID">Ease.TickedParam(0)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="895018207798087" type="Obj_StarArrow">
-                    <param id="0" name="Instance variable">Rot_Speed</param>
-                    <param id="1" name="Value">Ease.TickedValue</param>
-                </action>
-            </actions>
-        </event-block>
-        <comment></comment>
+        </event-group>
+        <comment>star arrow player state</comment>
         <event-block sid="466888026697391">
             <conditions />
             <actions />
@@ -3842,6 +4165,14 @@
                             <param id="0" name="Instance variable">GimmickState</param>
                             <param id="1" name="Value">&quot;null&quot;</param>
                         </action>
+                        <action id="-9" name="Set value" sid="690863892501240" type="System">
+                            <param id="0" name="Variable">vectory</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="191112802821728" type="System">
+                            <param id="0" name="Variable">vectorx</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
                         <action behavior="Platform" id="11" name="Set enabled" sid="687261794741469" type="Player">
                             <param id="0" name="State">1</param>
                         </action>
@@ -3956,6 +4287,82 @@
                     </sub-events>
                 </event-block>
             </sub-events>
+        </event-block>
+        <comment></comment>
+        <event-block sid="430482487730137">
+            <conditions>
+                <condition id="-18" name="On created" sid="725671880067646" type="ObjCompat_PathVisual" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="336748483693682" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="-10" name="Set value" sid="752649904016603" type="ObjCompat_PathVisual">
+                    <param id="0" name="Instance variable">my_path</param>
+                    <param id="1" name="Value">Function.Call(&quot;GMS2_InstanceProperty&quot;,Self.Obj_ImportInstance,&quot;my_path&quot;,&quot;-1&quot;)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="137470885244144">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="808898054791092" type="ObjCompat_PathVisual" />
+                <condition id="-7" inverted="1" name="Compare instance variable" sid="708213741018129" type="ObjCompat_PathVisual">
+                    <param id="0" name="Instance variable">Obj_Difficulty</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Everything&quot;</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="231010034952250" type="System">
+                    <param id="0" name="First value">find(ObjCompat_PathVisual.Obj_Difficulty,Var_Level.Difficulty)</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">-1</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="432963675095717" type="System">
+                    <param id="0" name="Object">Sprite</param>
+                    <param id="1" name="Expression">ObjCompat_PathVisual.my_path</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Sprite.path_ID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="618270394635719" type="Sprite" />
+            </actions>
+        </event-block>
+        <event-block sid="120304462864165">
+            <conditions>
+                <condition id="-11" name="For Each" sid="955259090220728" type="System">
+                    <param id="0" name="Object">ObjCompat_PathVisual</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="425548195846721" type="System">
+                    <param id="0" name="Object">Sprite</param>
+                    <param id="1" name="Expression">ObjCompat_PathVisual.my_path</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Sprite.path_ID</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="244688294186812" type="System" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="298912568571004" type="Sprite">
+                    <param id="0" name="Instance variable">Path_Visible</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="417947732573452" type="ObjCompat_PathVisual" />
+            </actions>
+        </event-block>
+        <event-block sid="621226516274319">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="508754756138563" type="Sprite" />
+                <condition id="-11" name="For Each" sid="188024616624741" type="System">
+                    <param id="0" name="Object">TiledBackground</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="745210767719912" type="TiledBackground">
+                    <param id="0" name="Instance variable">ParentUID</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">Sprite.UID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="763905522091699" type="TiledBackground" />
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

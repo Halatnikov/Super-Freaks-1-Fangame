@@ -2,7 +2,7 @@
 <c2project>
     <name>Super Freaks 1 Fangame</name>
     <description></description>
-    <version>0.1.0-7</version>
+    <version>0.1.0-8</version>
     <author>Halatnikov</author>
     <author-email></author-email>
     <author-website>https://halatnikov.github.io</author-website>
@@ -114,6 +114,7 @@
                 <plugin id="JSON" />
                 <instance-variables>
                     <instance-variable name="ParentUID" sid="328692180995777" type="number" />
+                    <instance-variable name="ID" sid="861903878072271" type="string" />
                 </instance-variables>
             </object-type>
             <object-type global="1" name="InstanceBank2" sid="669353983854358">
@@ -576,6 +577,17 @@
                         </animation>
                     </animation-folder>
                 </object-type>
+                <object-type name="ObjCompat_PathVisual" sid="778454536898664">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="my_path" sid="488512621334796" type="string" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="151955681103224" speed="7">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
             </object-folder>
             <object-type name="Obj9p_ClimbMesh" sid="351436448688202">
                 <plugin id="NinePatch" />
@@ -748,6 +760,78 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="Special_StarArrowStars" sid="963818342590875">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="ParentUID" sid="998191051035778" type="number" />
+                    <instance-variable name="ID" sid="289647866498654" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="569963181402491" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.25" y="0.25" />
+                                <point x="0.75" y="0.25" />
+                                <point x="0.75" y="0.75" />
+                                <point x="0.25" y="0.75" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.25" y="0.25" />
+                                <point x="0.75" y="0.25" />
+                                <point x="0.75" y="0.75" />
+                                <point x="0.25" y="0.75" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Special_TimedStarPie" sid="302705171052844">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="ParentUID" sid="399647082570738" type="number" />
+                    <instance-variable name="TrophyID" sid="673923197832481" type="number" />
+                    <instance-variable name="Speed" sid="572536438461240" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="30" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="327833479978483" speed="1">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-01.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-02.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-03.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-04.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-05.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-6.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-07.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-08.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-09.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-10.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-11.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-12.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-13.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-14.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-15.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-16.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-17.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-18.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-19.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-20.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-21.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-22.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-23.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-24.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-25.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-26.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-27.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-28.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-29.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Null" pingpong="0" repeatcount="1" repeatto="0" sid="200829278404409" speed="5">
+                        <frame duration="1" hotspotX="1" hotspotY="1" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="HUD">
             <object-type name="HUD_HP" sid="183858299206209">
@@ -823,6 +907,30 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="HUD_FinishExplosion" sid="529859702156741">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="9" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="706057327039125" speed="15">
+                        <frame duration="1" hotspotX="0.507042" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.507042" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.507042" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.507042" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.507042" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.507042" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.507042" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.507042" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.507042" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="HUD_PauseScreenshot" sid="930162403515540">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="673247996670178" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
@@ -935,6 +1043,18 @@
                 <plugin id="Spritefont2" />
                 <texture original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\spr_font_16_strip94.png" />
             </object-type>
+            <object-type name="HUD_Message" sid="204475721331783">
+                <plugin id="NinePatch" />
+                <behaviors>
+                    <behavior-type name="LiteTween" sid="200844614848896">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                    <behavior-type name="LiteTween2" sid="816500498109320">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\System\spr_menu.png" />
+            </object-type>
         </object-folder>
         <object-folder name="Level">
             <object-type name="Tiles_Main" sid="569645948577950">
@@ -975,113 +1095,30 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-type name="HUD_FinishExplosion" sid="529859702156741">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="9" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="706057327039125" speed="15">
-                    <frame duration="1" hotspotX="0.507042" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.507042" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.507042" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.507042" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.507042" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.507042" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.507042" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.507042" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.507042" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Special_TimedStarPie" sid="302705171052844">
+        <object-type name="Sprite" sid="696741111660129">
             <plugin id="Sprite" />
             <instance-variables>
-                <instance-variable name="ParentUID" sid="399647082570738" type="number" />
-                <instance-variable name="TrophyID" sid="673923197832481" type="number" />
-                <instance-variable name="Speed" sid="572536438461240" type="number" />
+                <instance-variable name="Path_ID" sid="834415813831038" type="string" />
+                <instance-variable name="path_curved" sid="140017990896125" type="number" />
+                <instance-variable name="path_closed" sid="980533522847840" type="string" />
+                <instance-variable name="Path_Points" sid="541961353908716" type="number" />
+                <instance-variable name="Path_Visible" sid="492689391278361" type="boolean" />
+                <instance-variable name="point_speed" sid="174912539342842" type="number" />
+                <instance-variable name="Point_ID" sid="185623514245895" type="number" />
             </instance-variables>
             <animation-folder>
-                <animation framecount="30" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="327833479978483" speed="1">
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="210539253497839" speed="0">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-01.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-02.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-03.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-04.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-05.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-6.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-07.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-08.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-09.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-10.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-11.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-12.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-13.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-14.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-15.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-16.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-17.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-18.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-19.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-20.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-21.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-22.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-23.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-24.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-25.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-26.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-27.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-28.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-29.png" />
-                </animation>
-                <animation framecount="1" loop="0" name="Null" pingpong="0" repeatcount="1" repeatto="0" sid="200829278404409" speed="5">
                     <frame duration="1" hotspotX="1" hotspotY="1" />
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="9patch" sid="204475721331783">
-            <plugin id="NinePatch" />
-            <behaviors>
-                <behavior-type name="LiteTween" sid="200844614848896">
-                    <behavior id="lunarray_LiteTween" />
-                </behavior-type>
-                <behavior-type name="LiteTween2" sid="816500498109320">
-                    <behavior id="lunarray_LiteTween" />
-                </behavior-type>
-            </behaviors>
-            <texture original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\System\spr_menu.png" />
-        </object-type>
-        <object-type name="HUD_PauseScreenshot" sid="930162403515540">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="673247996670178" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite" sid="963818342590875">
-            <plugin id="Sprite" />
+        <object-type name="TiledBackground" sid="723915377435125">
+            <plugin id="TiledBg" />
             <instance-variables>
-                <instance-variable name="ParentUID" sid="998191051035778" type="number" />
-                <instance-variable name="ID" sid="289647866498654" type="number" />
+                <instance-variable name="ParentUID" sid="141562239476987" type="number" />
             </instance-variables>
-            <animation-folder>
-                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="569963181402491" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.25" y="0.25" />
-                            <point x="0.75" y="0.25" />
-                            <point x="0.75" y="0.75" />
-                            <point x="0.25" y="0.75" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.25" y="0.25" />
-                            <point x="0.75" y="0.25" />
-                            <point x="0.75" y="0.75" />
-                            <point x="0.25" y="0.75" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
+            <texture />
         </object-type>
     </object-folder>
     <families>
@@ -1161,6 +1198,7 @@
                 <member>Obj_YorbStar</member>
                 <member>ObjCompat_ClimbMesh_Fall</member>
                 <member>ObjCompat_ClimbMesh_Path</member>
+                <member>ObjCompat_PathVisual</member>
                 <member>ObjCompat_ViewBlocker</member>
                 <member>ObjCompat_ViewTrapper</member>
                 <member>ObjCompat_Zone</member>
