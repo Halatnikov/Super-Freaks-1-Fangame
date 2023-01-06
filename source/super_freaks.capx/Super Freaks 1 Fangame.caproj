@@ -2,7 +2,7 @@
 <c2project>
     <name>Super Freaks 1 Fangame</name>
     <description></description>
-    <version>0.1.0-8</version>
+    <version>0.1.0-9</version>
     <author>Halatnikov</author>
     <author-email></author-email>
     <author-website>https://halatnikov.github.io</author-website>
@@ -30,7 +30,6 @@
         <plugin author="Valera Popov" id="ValerypopoffEase" version="1">Valerypopoff Ease</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Rex.Rainbow" id="Rex_MoveTo" version="1">MoveTo</behavior>
@@ -137,6 +136,7 @@
                     <instance-variable name="ExecJS_Return" sid="383914473741899" type="string" />
                     <instance-variable name="Path_Assets" sid="848621485292649" type="string" />
                     <instance-variable name="Path_SourceCode1u" sid="885943548537521" type="string" />
+                    <instance-variable name="LogVerbose" sid="819295291835664" type="number" />
                 </instance-variables>
             </object-type>
             <object-type global="1" name="Var_Level" sid="285604653832218">
@@ -508,8 +508,27 @@
                         </behavior-type>
                     </behaviors>
                     <animation-folder>
-                        <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="287624465527372" speed="7">
+                        <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="287624465527372" speed="0">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Obj_SwingingPineapple" sid="363163171523161">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="350419781225446" speed="7">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\Levels\Fruit Juice Factory\spr_spikeball_pineapple.png">
+                                <collision-poly>
+                                    <point x="0.1875" y="0.1875" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.8125" y="0.1875" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.8125" y="0.8125" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0.1875" y="0.8125" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -600,7 +619,11 @@
             <object-type name="Obj_Chain" sid="376113381833434">
                 <plugin id="Sprite" />
                 <instance-variables>
-                    <instance-variable name="Segments" sid="833714304584837" type="number" />
+                    <instance-variable name="chain_segments" sid="833714304584837" type="number" />
+                    <instance-variable name="starting_angle" sid="194902923105419" type="number" />
+                    <instance-variable name="swing_speed" sid="576985891685298" type="number" />
+                    <instance-variable name="circle_angle" sid="108657999391339" type="number" />
+                    <instance-variable name="AttachedUID" sid="947173645412683" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Pin" sid="589108636838391">
@@ -678,49 +701,74 @@
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="Segments" sid="427719089423064" type="number" />
+                    <instance-variable name="chain_segments" sid="665056136668579" type="number" />
+                    <instance-variable name="starting_angle" sid="780597458573494" type="number" />
+                    <instance-variable name="swing_speed" sid="901942664144458" type="number" />
+                    <instance-variable name="circle_angle" sid="306699115691749" type="number" />
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="8" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="521282859579575" speed="0">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.4" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\Levels\Fruit Juice Factory\spr_platform_orange.png" />
-                        <frame duration="1" hotspotX="0.492308" hotspotY="0.4" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.4" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.4" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\Levels\Fruit Juice Factory\spr_platform_orange.png">
+                            <collision-poly>
+                                <point x="0" y="0.2" />
+                                <point x="1" y="0.2" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.492308" hotspotY="0.4">
+                            <collision-poly>
+                                <point x="0" y="0.2" />
+                                <point x="1" y="0.2" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.4">
                             <collision-poly>
-                                <point x="0" y="0" />
-                                <point x="0.992188" y="0" />
-                                <point x="0.992188" y="1" />
+                                <point x="0" y="0.2" />
+                                <point x="1" y="0.2" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.4">
+                            <collision-poly>
+                                <point x="0" y="0.2" />
+                                <point x="1" y="0.2" />
+                                <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.49375" hotspotY="0.4">
                             <collision-poly>
-                                <point x="0" y="0" />
-                                <point x="0.9875" y="0" />
-                                <point x="0.9875" y="1" />
+                                <point x="0" y="0.2" />
+                                <point x="1" y="0.2" />
+                                <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.494792" hotspotY="0.4">
                             <collision-poly>
-                                <point x="0" y="0" />
-                                <point x="0.984375" y="0" />
-                                <point x="0.984375" y="1" />
+                                <point x="0" y="0.2" />
+                                <point x="1" y="0.2" />
+                                <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.491071" hotspotY="0.4">
                             <collision-poly>
-                                <point x="0" y="0" />
-                                <point x="0.982143" y="0" />
-                                <point x="0.982143" y="1" />
+                                <point x="0" y="0.2" />
+                                <point x="1" y="0.2" />
+                                <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.492188" hotspotY="0.4">
                             <collision-poly>
-                                <point x="0" y="0" />
-                                <point x="0.980469" y="0" />
-                                <point x="0.980469" y="1" />
+                                <point x="0" y="0.2" />
+                                <point x="1" y="0.2" />
+                                <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
                         </frame>
@@ -736,19 +784,6 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="947216935637444" speed="0">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\Things\spr_platform.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="Special_ChainAttachPoint" sid="195489207258414">
-                <plugin id="Sprite" />
-                <behaviors>
-                    <behavior-type name="Pin" sid="886495406342674">
-                        <behavior id="Pin" />
-                    </behavior-type>
-                </behaviors>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="628287263388338" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -828,9 +863,53 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\piechart\frame-29.png" />
                     </animation>
                     <animation framecount="1" loop="0" name="Null" pingpong="0" repeatcount="1" repeatto="0" sid="200829278404409" speed="5">
-                        <frame duration="1" hotspotX="1" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
+            </object-type>
+            <object-type name="Obj_RocketApplePlatform" sid="396306818727400">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="rocket_height" sid="342975783054376" type="number" />
+                    <instance-variable name="rocket_speed" sid="489894304450435" type="number" />
+                    <instance-variable name="lower_speed" sid="887705159609593" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="LiteTween" sid="701261209239263">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                    <behavior-type name="LiteTween2" sid="225895929037346">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="470020120971811" speed="15">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.166667" y="0.142857" />
+                                <point x="0.833333" y="0.142857" />
+                                <point x="0.833333" y="0.714286" />
+                                <point x="0.166667" y="0.714286" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.166667" y="0.142857" />
+                                <point x="0.833333" y="0.142857" />
+                                <point x="0.833333" y="0.714286" />
+                                <point x="0.166667" y="0.714286" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Obj9p_Platform2" sid="562780069502132">
+                <plugin id="NinePatch" />
+                <texture />
+            </object-type>
+            <object-type name="Obj9p_Platform3" sid="764610887903176">
+                <plugin id="NinePatch" />
+                <texture original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\rocket_2.png" />
             </object-type>
         </object-folder>
         <object-folder name="HUD">
@@ -849,6 +928,11 @@
             </object-type>
             <object-type name="HUD_HPBar" sid="240086487866440">
                 <plugin id="TiledBg" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="555084780888543" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
                 <texture />
             </object-type>
             <object-type name="HUD_PlayerIcon" sid="125489137427435">
@@ -1118,28 +1202,15 @@
             <instance-variables>
                 <instance-variable name="ParentUID" sid="141562239476987" type="number" />
             </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="299434148755318" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
             <texture />
         </object-type>
     </object-folder>
     <families>
-        <family name="ObjectsAttachable" plugin-id="Sprite" sid="345415041156877">
-            <members>
-                <member>Obj_FruitPlatform</member>
-                <member>Special_ChainController</member>
-            </members>
-            <instance-variables>
-                <instance-variable name="AttachAllowed" sid="875303024979866" type="boolean" />
-                <instance-variable name="Attached" sid="505617299131878" type="boolean" />
-            </instance-variables>
-            <behaviors>
-                <behavior-type name="Pin" sid="169813163913773">
-                    <behavior id="Pin" />
-                </behavior-type>
-                <behavior-type name="DragDrop" sid="523384624581293">
-                    <behavior id="DragnDrop" />
-                </behavior-type>
-            </behaviors>
-        </family>
         <family name="Text" plugin-id="Spritefont2" sid="193627768008748">
             <members>
                 <member>Text_Big</member>
@@ -1164,6 +1235,7 @@
                 <member>Col_Solid</member>
                 <member>Obj_FruitPlatform</member>
                 <member>Obj_Platform</member>
+                <member>Obj_RocketApplePlatform</member>
             </members>
             <behaviors>
                 <behavior-type name="Solid" sid="933053361145158">
@@ -1189,8 +1261,10 @@
                 <member>Obj_Platform</member>
                 <member>Obj_Portal</member>
                 <member>Obj_Ray</member>
+                <member>Obj_RocketApplePlatform</member>
                 <member>Obj_SkullJar</member>
                 <member>Obj_StarArrow</member>
+                <member>Obj_SwingingPineapple</member>
                 <member>Obj_TimeStar</member>
                 <member>Obj_Trophy</member>
                 <member>Obj_WalkieTalkie</member>
@@ -1202,7 +1276,6 @@
                 <member>ObjCompat_ViewBlocker</member>
                 <member>ObjCompat_ViewTrapper</member>
                 <member>ObjCompat_Zone</member>
-                <member>Special_ChainAttachPoint</member>
                 <member>Special_ChainController</member>
                 <member>Special_StartPos</member>
             </members>
@@ -1216,20 +1289,23 @@
             <members>
                 <member>Obj_ClimbMesh</member>
                 <member>Obj_Platform</member>
+                <member>Obj_RocketApplePlatform</member>
             </members>
             <instance-variables>
                 <instance-variable name="Obj9pParent_Child" sid="348705355723555" type="string" />
-                <instance-variable name="Obj9pParent_PinnedUID" sid="384431540647881" type="number" />
             </instance-variables>
         </family>
         <family name="Objects9patch_Child" plugin-id="NinePatch" sid="665040913581995">
             <members>
                 <member>Obj9p_ClimbMesh</member>
                 <member>Obj9p_Platform</member>
+                <member>Obj9p_Platform2</member>
+                <member>Obj9p_Platform3</member>
             </members>
             <instance-variables>
                 <instance-variable name="Obj9pChild_ID" sid="381168067643751" type="string" />
                 <instance-variable name="Obj9pChild_Parent" sid="337387422540156" type="string" />
+                <instance-variable name="Obj9pChild_AnimFrame" sid="157290390702153" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Pin" sid="583070261187000">
@@ -1246,6 +1322,7 @@
                 <member>Enemy_Skizzor</member>
             </members>
             <instance-variables>
+                <instance-variable name="Platformer" sid="730477256529643" type="boolean" />
                 <instance-variable name="HP" sid="666643145678727" type="number" />
             </instance-variables>
             <behaviors>
@@ -1267,17 +1344,36 @@
                 <instance-variable name="Rot__Timer" sid="557011028183496" type="number" />
             </instance-variables>
         </family>
+        <family name="ObjectsAttachable" plugin-id="Sprite" sid="822375110002735">
+            <members>
+                <member>Obj_FruitPlatform</member>
+                <member>Obj_SwingingPineapple</member>
+                <member>Special_ChainController</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Attach_Allowed" sid="195343785785979" type="boolean" />
+                <instance-variable name="Attach_True" sid="320796245212997" type="boolean" />
+                <instance-variable name="Compat_Chain" sid="889995281769091" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pin" sid="330340520074087">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </family>
     </families>
     <layout-folder>
         <layout>_LAUNCH.xml</layout>
         <layout>Menu.xml</layout>
         <layout>Game.xml</layout>
+        <layout>Layout 1.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>E_Launch.xml</event-sheet>
         <event-sheet>E_Menu.xml</event-sheet>
         <event-sheet>E_Game.xml</event-sheet>
         <event-sheet>E_GLOBAL.xml</event-sheet>
+        <event-sheet>Event sheet 1.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="2" />
@@ -1288,7 +1384,7 @@
         <global-instance type="Mouse" uid="58" />
         <global-instance type="CreateObjectByVal" uid="28">
             <properties>
-                <more-than-one>First only</more-than-one>
+                <more-than-one>All</more-than-one>
             </properties>
         </global-instance>
         <global-instance type="LiveAudio" uid="78" />

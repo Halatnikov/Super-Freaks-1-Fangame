@@ -40,6 +40,7 @@
                         <Obj_ImportID>obj_boneym</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
                         <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Platformer>true</Platformer>
                         <HP>1</HP>
                     </instance-variables>
                     <behavior-instances>
@@ -54,15 +55,15 @@
                                 <double-jump>Disabled</double-jump>
                                 <jump-sustain>0</jump-sustain>
                                 <default-controls>No</default-controls>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>676</x>
-                        <y>117</y>
+                        <x>496</x>
+                        <y>158</y>
                         <z>0</z>
                         <width>32</width>
                         <height>48</height>
@@ -73,36 +74,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Special_ChainAttachPoint" uid="25">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Obj_ImportID></Obj_ImportID>
-                        <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Pin" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>60</x>
-                        <y>294</y>
-                        <z>0</z>
-                        <width>32</width>
-                        <height>32</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>0.25</opacity>
-                    </world>
-                </instance>
                 <instance type="Special_ChainController" uid="26">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -111,20 +82,15 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <AttachAllowed>true</AttachAllowed>
-                        <Attached>false</Attached>
                         <Obj_ImportID></Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
                         <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Attach_Allowed>true</Attach_Allowed>
+                        <Attach_True>false</Attach_True>
+                        <Compat_Chain>true</Compat_Chain>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
-                        <behavior-instance type="DragDrop">
-                            <properties>
-                                <axes>Both</axes>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -152,13 +118,17 @@
                         <Obj_ImportID></Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
                         <Obj_Difficulty>Everything</Obj_Difficulty>
-                        <Segments>2</Segments>
+                        <chain_segments>1</chain_segments>
+                        <starting_angle>0</starting_angle>
+                        <swing_speed>0</swing_speed>
+                        <circle_angle>0</circle_angle>
+                        <AttachedUID>0</AttachedUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                         <behavior-instance type="Rotate">
                             <properties>
-                                <speed>-90</speed>
+                                <speed>0</speed>
                                 <acceleration>0</acceleration>
                             </properties>
                         </behavior-instance>
@@ -187,7 +157,7 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.25</hotspotY>
-                        <angle>-0.040267203</angle>
+                        <angle>0.007141547</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -199,24 +169,22 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <AttachAllowed>true</AttachAllowed>
-                        <Attached>false</Attached>
-                        <Obj_ImportID></Obj_ImportID>
+                        <Obj_ImportID>obj_platform_orange</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
                         <Obj_Difficulty>Everything</Obj_Difficulty>
-                        <Segments>3</Segments>
+                        <Attach_Allowed>true</Attach_Allowed>
+                        <Attach_True>false</Attach_True>
+                        <Compat_Chain>true</Compat_Chain>
+                        <Segments>0</Segments>
+                        <chain_segments>0</chain_segments>
+                        <starting_angle>0</starting_angle>
+                        <swing_speed>0</swing_speed>
+                        <circle_angle>0</circle_angle>
                     </instance-variables>
                     <behavior-instances>
-                        <behavior-instance type="Pin" />
-                        <behavior-instance type="DragDrop">
-                            <properties>
-                                <axes>Both</axes>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Jumpthru">
@@ -224,12 +192,13 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Pin" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>180</x>
-                        <y>238</y>
+                        <x>-61</x>
+                        <y>218</y>
                         <z>0</z>
                         <width>96</width>
                         <height>40</height>
@@ -508,6 +477,7 @@
                         <Obj_ImportID>obj_pinhead</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
                         <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Platformer>true</Platformer>
                         <HP>-1</HP>
                     </instance-variables>
                     <behavior-instances>
@@ -522,7 +492,7 @@
                                 <double-jump>Disabled</double-jump>
                                 <jump-sustain>0</jump-sustain>
                                 <default-controls>No</default-controls>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -552,6 +522,7 @@
                         <Obj_ImportID>obj_boneym_giant</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
                         <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Platformer>true</Platformer>
                         <HP>2</HP>
                     </instance-variables>
                     <behavior-instances>
@@ -566,7 +537,7 @@
                                 <double-jump>Disabled</double-jump>
                                 <jump-sustain>0</jump-sustain>
                                 <default-controls>No</default-controls>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -625,14 +596,13 @@
                         <Obj_ImportInstance></Obj_ImportInstance>
                         <Obj_Difficulty>Everything</Obj_Difficulty>
                         <Obj9pParent_Child>Obj9p_Platform</Obj9pParent_Child>
-                        <Obj9pParent_PinnedUID>0</Obj9pParent_PinnedUID>
                         <my_path>-1</my_path>
                         <speed_move>0</speed_move>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
                             <properties>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Jumpthru">
@@ -671,6 +641,7 @@
                     <instance-variables>
                         <Obj9pChild_ID>Obj9p_Platform</Obj9pChild_ID>
                         <Obj9pChild_Parent>Obj_Platform</Obj9pChild_Parent>
+                        <Obj9pChild_AnimFrame>0</Obj9pChild_AnimFrame>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -810,7 +781,7 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>-1.570796371</angle>
+                        <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -825,6 +796,7 @@
                         <Obj_ImportID>obj_propello</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
                         <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Platformer>false</Platformer>
                         <HP>1</HP>
                     </instance-variables>
                     <behavior-instances>
@@ -963,7 +935,6 @@
                         <Obj_ImportInstance></Obj_ImportInstance>
                         <Obj_Difficulty>Everything</Obj_Difficulty>
                         <Obj9pParent_Child>Obj9p_ClimbMesh</Obj9pParent_Child>
-                        <Obj9pParent_PinnedUID>0</Obj9pParent_PinnedUID>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1029,6 +1000,7 @@
                     <instance-variables>
                         <Obj9pChild_ID>Obj9p_ClimbMesh</Obj9pChild_ID>
                         <Obj9pChild_Parent>Obj_ClimbMesh</Obj9pChild_Parent>
+                        <Obj9pChild_AnimFrame>0</Obj9pChild_AnimFrame>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -1115,12 +1087,13 @@
                         <Obj_ImportID>obj_skizzor</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
                         <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Platformer>false</Platformer>
                         <HP>-1</HP>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
                             <properties>
-                                <max-speed>60</max-speed>
+                                <max-speed>0</max-speed>
                                 <acceleration>1500</acceleration>
                                 <deceleration>1500</deceleration>
                                 <jump-strength>0</jump-strength>
@@ -1394,6 +1367,172 @@
                         <hotspotX>0</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Obj_SwingingPineapple" uid="25">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Obj_ImportID>obj_swinging_spikeball_pineapple</Obj_ImportID>
+                        <Obj_ImportInstance></Obj_ImportInstance>
+                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Attach_Allowed>true</Attach_Allowed>
+                        <Attach_True>false</Attach_True>
+                        <Compat_Chain>true</Compat_Chain>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-42</x>
+                        <y>171</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Obj_RocketApplePlatform" uid="100">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Obj_ImportID>obj_platform_rocket_apple</Obj_ImportID>
+                        <Obj_ImportInstance></Obj_ImportInstance>
+                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj9pParent_Child>Obj9p_RocketApplePlatform</Obj9pParent_Child>
+                        <rocket_height>0</rocket_height>
+                        <rocket_speed>0</rocket_speed>
+                        <lower_speed>0</lower_speed>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Jumpthru">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="LiteTween">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <tweened-property>Vertical</tweened-property>
+                                <function>Linear</function>
+                                <target>0</target>
+                                <target-mode>Absolute</target-mode>
+                                <duration>0</duration>
+                                <enforce-mode>Enforce</enforce-mode>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="LiteTween2">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <tweened-property>Vertical</tweened-property>
+                                <function>Linear</function>
+                                <target>0</target>
+                                <target-mode>Absolute</target-mode>
+                                <duration>0</duration>
+                                <enforce-mode>Enforce</enforce-mode>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>17</x>
+                        <y>-77</y>
+                        <z>0</z>
+                        <width>48</width>
+                        <height>56</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Obj9p_Platform2" uid="99">
+                    <properties>
+                        <left-margin>12</left-margin>
+                        <right-margin>12</right-margin>
+                        <top-margin>9</top-margin>
+                        <bottom-margin>16</bottom-margin>
+                        <edges>Tile</edges>
+                        <fill>Tile</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Center</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <instance-variables>
+                        <Obj9pChild_ID>Obj9p_RocketApplePlatform</Obj9pChild_ID>
+                        <Obj9pChild_Parent>Obj_RocketApplePlatform</Obj9pChild_Parent>
+                        <Obj9pChild_AnimFrame>0</Obj9pChild_AnimFrame>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-52</x>
+                        <y>-61</y>
+                        <z>0</z>
+                        <width>72</width>
+                        <height>56</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Obj9p_Platform3" uid="101">
+                    <properties>
+                        <left-margin>12</left-margin>
+                        <right-margin>12</right-margin>
+                        <top-margin>9</top-margin>
+                        <bottom-margin>16</bottom-margin>
+                        <edges>Tile</edges>
+                        <fill>Tile</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Center</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <instance-variables>
+                        <Obj9pChild_ID>Obj9p_RocketApplePlatform</Obj9pChild_ID>
+                        <Obj9pChild_Parent>Obj_RocketApplePlatform</Obj9pChild_Parent>
+                        <Obj9pChild_AnimFrame>1</Obj9pChild_AnimFrame>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-51</x>
+                        <y>-27</y>
+                        <z>0</z>
+                        <width>72</width>
+                        <height>56</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -2092,7 +2231,29 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text_Regular" uid="60">
+                <instance type="HUD_PauseScreenshot" uid="92">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-6</x>
+                        <y>7</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Text_Regular" uid="102">
                     <properties>
                         <character-width>16</character-width>
                         <character-height>20</character-height>
@@ -2128,35 +2289,13 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>545</x>
-                        <y>3</y>
+                        <y>23</y>
                         <z>0</z>
                         <width>91</width>
-                        <height>32</height>
+                        <height>20</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="HUD_PauseScreenshot" uid="92">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-6</x>
-                        <y>7</y>
-                        <z>0</z>
-                        <width>16</width>
-                        <height>16</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -2738,6 +2877,72 @@
             </instances>
             <effects />
         </layer>
+        <layer name="GLOBAL_Overlay" sid="571773510276796">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>0</x>
+                <y>0</y>
+            </parallax>
+            <zoom-rate>0</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>1</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="Text_Regular" uid="60">
+                    <properties>
+                        <character-width>16</character-width>
+                        <character-height>20</character-height>
+                        <character-set>!&quot;#$%&amp;&apos;()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~</character-set>
+                        <text>Tile: -</text>
+                        <scale>1</scale>
+                        <initial-visibility>Visible</initial-visibility>
+                        <horizontal-alignment>Right</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Character</wrapping>
+                        <character-spacing>2</character-spacing>
+                        <line-height>0</line-height>
+                    </properties>
+                    <instance-variables>
+                        <ID>fps</ID>
+                        <ParentUID>0</ParentUID>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="LiteTween">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <tweened-property>Position</tweened-property>
+                                <function>Linear</function>
+                                <target>0</target>
+                                <target-mode>Absolute</target-mode>
+                                <duration>0</duration>
+                                <enforce-mode>Enforce</enforce-mode>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>426</x>
+                        <y>3</y>
+                        <z>0</z>
+                        <width>210</width>
+                        <height>20</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
     </layers>
     <nonworld-instances>
         <instance type="Var_Gameplay" uid="35">
@@ -2753,11 +2958,12 @@
                 <ExecJS_Return>a</ExecJS_Return>
                 <Path_Assets></Path_Assets>
                 <Path_SourceCode1u></Path_SourceCode1u>
+                <LogVerbose>1</LogVerbose>
             </instance-variables>
         </instance>
         <instance type="Var_Level" uid="59">
             <instance-variables>
-                <ImportRoom>rm_park_1</ImportRoom>
+                <ImportRoom>rm_fruit_2</ImportRoom>
                 <Difficulty>Normal</Difficulty>
                 <ImportErrorAttempts>0</ImportErrorAttempts>
             </instance-variables>

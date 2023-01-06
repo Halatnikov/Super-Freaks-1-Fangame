@@ -169,6 +169,19 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="948483132842872">
+            <conditions>
+                <condition id="0" name="On function" sid="731759598762194" type="Function">
+                    <param id="0" name="Name">&quot;Util_LogVerbose&quot;</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="171205432113577" type="Var_CONSTANTS">
+                    <param id="0" name="Instance variable">LogVerbose</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
         <event-block sid="515134027227376">
             <conditions>
                 <condition id="0" name="On function" sid="641512531373508" type="Function">
