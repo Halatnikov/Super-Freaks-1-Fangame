@@ -953,6 +953,7 @@
                         <action id="-9" name="Destroy" sid="491016988973140" type="JSON_COMMON" />
                         <action id="-9" name="Destroy" sid="990779449453444" type="Sprite" />
                         <action id="-9" name="Destroy" sid="682621879700006" type="TiledBackground" />
+                        <action id="-9" name="Destroy" sid="125116793515645" type="Special_EnemyGroundCollision" />
                     </actions>
                 </event-block>
                 <comment>after loading room</comment>
@@ -1113,38 +1114,31 @@
                 <event-block sid="929516641077682">
                     <conditions>
                         <condition id="-18" name="On created" sid="912974119235911" type="Objects9patch_Child" />
+                        <condition id="-15" name="Pick nearest/furthest" sid="459927923506294" type="Objects9patch_Parent">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="X">Objects9patch_Child.X</param>
+                            <param id="2" name="Y">Objects9patch_Child.Y</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="783656154304054" type="System">
+                            <param id="0" name="First value">Objects9patch_Child.Obj9pChild_ID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">Objects9patch_Parent.Obj9pParent_Child</param>
+                        </condition>
                     </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="307910695428208">
-                            <conditions>
-                                <condition id="-15" name="Pick nearest/furthest" sid="459927923506294" type="Objects9patch_Parent">
-                                    <param id="0" name="Which">0</param>
-                                    <param id="1" name="X">Objects9patch_Child.X</param>
-                                    <param id="2" name="Y">Objects9patch_Child.Y</param>
-                                </condition>
-                                <condition id="-8" name="Compare two values" sid="783656154304054" type="System">
-                                    <param id="0" name="First value">Objects9patch_Child.Obj9pChild_ID</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">Objects9patch_Parent.Obj9pParent_Child</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Set position" sid="831190844591040" type="Objects9patch_Child">
-                                    <param id="0" name="X">Objects9patch_Parent.X</param>
-                                    <param id="1" name="Y">Objects9patch_Parent.Y</param>
-                                </action>
-                                <action id="-7" name="Set size" sid="569103057471719" type="Objects9patch_Child">
-                                    <param id="0" name="Width">Objects9patch_Parent.Width</param>
-                                    <param id="1" name="Height">Objects9patch_Parent.Height</param>
-                                </action>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="628969223542880" type="Objects9patch_Child">
-                                    <param id="0" name="Pin to">Objects9patch_Parent</param>
-                                    <param id="1" name="Mode">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
+                    <actions>
+                        <action id="-3" name="Set position" sid="831190844591040" type="Objects9patch_Child">
+                            <param id="0" name="X">Objects9patch_Parent.X</param>
+                            <param id="1" name="Y">Objects9patch_Parent.Y</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="569103057471719" type="Objects9patch_Child">
+                            <param id="0" name="Width">Objects9patch_Parent.Width</param>
+                            <param id="1" name="Height">Objects9patch_Parent.Height</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="628969223542880" type="Objects9patch_Child">
+                            <param id="0" name="Pin to">Objects9patch_Parent</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="556861067134093">
                     <conditions>
@@ -1334,7 +1328,7 @@
                         </action>
                         <action id="-10" name="Set value" sid="497778931520473" type="ObjCompat_ViewTrapper">
                             <param id="0" name="Instance variable">my_zoom</param>
-                            <param id="1" name="Value">Function.Call(&quot;GMS2_InstanceProperty&quot;,Self.Obj_ImportInstance,&quot;my_zoom&quot;,&quot;0&quot;)</param>
+                            <param id="1" name="Value">Function.Call(&quot;GMS2_InstanceProperty&quot;,Self.Obj_ImportInstance,&quot;my_zoom&quot;,&quot;1&quot;)</param>
                         </action>
                         <action id="-10" name="Set value" sid="368386708840145" type="ObjCompat_ViewTrapper">
                             <param id="0" name="Instance variable">my_x</param>
@@ -1432,6 +1426,26 @@
         </event-group>
         <event-group description="" sid="315476438804670" title="Camera">
             <sub-events>
+                <event-block sid="199711517389540">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="991811246921779" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="796634196661714" type="Player_CameraLoadingZone">
+                            <param id="0" name="Width">OriginalWindowWidth*2</param>
+                            <param id="1" name="Height">OriginalWindowHeight*2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="814649503772085">
+                    <conditions />
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="995926494408902" type="Player_CameraLoadingZone">
+                            <param id="0" name="Object">Player</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="515805112476193">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="371644661024954" type="System" />
@@ -1463,6 +1477,222 @@
                             <param id="1" name="Value">Self.Y</param>
                         </action>
                     </actions>
+                </event-block>
+                <event-block disabled="1" sid="990266433584904">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="168271128587402" type="Player_Camera">
+                            <param id="0" name="Object">ObjCompat_ViewTrapper</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="zoom" sid="545752865954018" static="1" type="number">0</variable>
+                        <comment>it&apos;s actually 1/my_zoom but let&apos;s see if i like this more</comment>
+                        <event-block sid="101640594716043">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="464050559272556" type="ObjCompat_ViewTrapper">
+                                    <param id="0" name="Instance variable">my_zoom</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="384203764803980" type="System">
+                                    <param id="0" name="Variable">zoom</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="227831256852020">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="159753444241231" type="ObjCompat_ViewTrapper">
+                                    <param id="0" name="Instance variable">my_zoom</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1.25</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="369275186225492" type="System">
+                                    <param id="0" name="Variable">zoom</param>
+                                    <param id="1" name="Value">0.875</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="355204953376765">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="464469398309288" type="ObjCompat_ViewTrapper">
+                                    <param id="0" name="Instance variable">my_zoom</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1.5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="886158819604206" type="System">
+                                    <param id="0" name="Variable">zoom</param>
+                                    <param id="1" name="Value">0.75</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="914831266993016">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="301698974920596" type="ObjCompat_ViewTrapper">
+                                    <param id="0" name="Instance variable">my_zoom</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="403471614564871" type="System">
+                                    <param id="0" name="Variable">zoom</param>
+                                    <param id="1" name="Value">0.5</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="688288157101317">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="871601013747993" type="Special_StartPos">
+                                    <param id="0" name="Object">ObjCompat_ViewTrapper</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-20" name="Set layout scale" sid="363719203226949" type="System">
+                                    <param id="0" name="Scale">lerp(LayoutScale,zoom,dt)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="950697120153955">
+                                    <conditions>
+                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="800703422743637" type="ObjCompat_ViewTrapper">
+                                            <param id="0" name="Instance variable">my_x</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="412162294700659" type="Player_Camera">
+                                            <param id="0" name="Instance variable">OverridenX</param>
+                                            <param id="1" name="Value">ObjCompat_ViewTrapper.my_x</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="634693777620783" type="Player_Camera">
+                                            <param id="0" name="Instance variable">SelfX</param>
+                                            <param id="1" name="Value">lerp(Self.SelfX,ObjCompat_ViewTrapper.my_x,dt)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="218035634644072">
+                                    <conditions>
+                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="575789560320324" type="ObjCompat_ViewTrapper">
+                                            <param id="0" name="Instance variable">my_y</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="558693079433635" type="Player_Camera">
+                                            <param id="0" name="Instance variable">OverridenY</param>
+                                            <param id="1" name="Value">ObjCompat_ViewTrapper.my_y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="671335037702635" type="Player_Camera">
+                                            <param id="0" name="Instance variable">SelfY</param>
+                                            <param id="1" name="Value">lerp(Self.SelfY,ObjCompat_ViewTrapper.my_y,dt)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="710704632293270">
+                            <conditions>
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="616537175240604" type="Special_StartPos">
+                                    <param id="0" name="Object">ObjCompat_ViewTrapper</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-20" name="Set layout scale" sid="601130560267728" type="System">
+                                    <param id="0" name="Scale">zoom</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="227174203222702">
+                                    <conditions>
+                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="316222627685440" type="ObjCompat_ViewTrapper">
+                                            <param id="0" name="Instance variable">my_x</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="673854314681389" type="Player_Camera">
+                                            <param id="0" name="Instance variable">SelfX</param>
+                                            <param id="1" name="Value">ObjCompat_ViewTrapper.my_x</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="454203262435920">
+                                    <conditions>
+                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="328927676193490" type="ObjCompat_ViewTrapper">
+                                            <param id="0" name="Instance variable">my_y</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="965474788549598" type="Player_Camera">
+                                            <param id="0" name="Instance variable">SelfY</param>
+                                            <param id="1" name="Value">ObjCompat_ViewTrapper.my_y</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block disabled="1" sid="215768927679421">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="160383238927849" type="Player_Camera">
+                            <param id="0" name="Object">ObjCompat_ViewTrapper</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="853858726900325">
+                            <conditions />
+                            <actions>
+                                <action id="-20" name="Set layout scale" sid="167229645527567" type="System">
+                                    <param id="0" name="Scale">lerp(LayoutScale,1,dt)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="539665522530530">
+                            <conditions>
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="457478149084822" type="Player_Camera">
+                                    <param id="0" name="Instance variable">OverridenX</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="970496796484713" type="Player_Camera">
+                                    <param id="0" name="Instance variable">SelfY</param>
+                                    <param id="1" name="Value">lerp(Self.OverridenY,Self.SelfX,dt)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="477674438187511">
+                            <conditions>
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="113325225477163" type="Player_Camera">
+                                    <param id="0" name="Instance variable">OverridenY</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="807058506699270" type="Player_Camera">
+                                    <param id="0" name="Instance variable">SelfX</param>
+                                    <param id="1" name="Value">lerp(Self.OverridenX,Self.SelfX,dt)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="600261191369693">
                     <conditions>
@@ -2728,11 +2958,11 @@
                         </action>
                         <action id="-10" name="Set value" sid="774557090140333" type="Obj_RocketApplePlatform">
                             <param id="0" name="Instance variable">rocket_speed</param>
-                            <param id="1" name="Value">int(Function.Call(&quot;GMS2_InstanceProperty&quot;,Self.Obj_ImportInstance,&quot;rocket_speed&quot;,&quot;1&quot;))/6</param>
+                            <param id="1" name="Value">int(Function.Call(&quot;GMS2_InstanceProperty&quot;,Self.Obj_ImportInstance,&quot;rocket_speed&quot;,&quot;1&quot;))</param>
                         </action>
                         <action id="-10" name="Set value" sid="765155431144023" type="Obj_RocketApplePlatform">
                             <param id="0" name="Instance variable">lower_speed</param>
-                            <param id="1" name="Value">int(Function.Call(&quot;GMS2_InstanceProperty&quot;,Self.Obj_ImportInstance,&quot;lower_speed&quot;,&quot;4&quot;))/6</param>
+                            <param id="1" name="Value">int(Function.Call(&quot;GMS2_InstanceProperty&quot;,Self.Obj_ImportInstance,&quot;lower_speed&quot;,&quot;4&quot;))</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -2751,11 +2981,20 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>help</comment>
                         <event-block sid="847295757874909">
                             <conditions />
                             <actions>
                                 <action id="6" name="Set speed" sid="294279042127967" type="Obj_RocketApplePlatform">
                                     <param id="0" name="Speed">15</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="596991725198500" type="Obj_RocketApplePlatform">
+                                    <param id="0" name="Instance variable">rocket_speed</param>
+                                    <param id="1" name="Value">(Self.rocket_height/Self.rocket_speed)/60</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="104457885423538" type="Obj_RocketApplePlatform">
+                                    <param id="0" name="Instance variable">lower_speed</param>
+                                    <param id="1" name="Value">(Self.rocket_height/Self.lower_speed)/60</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -3980,6 +4219,20 @@
                                 <action behavior="Platform" id="11" name="Set enabled" sid="819284152668500" type="Enemies">
                                     <param id="0" name="State">1</param>
                                 </action>
+                                <action id="-3" name="Create object" sid="929186960163433" type="System">
+                                    <param id="0" name="Object to create">Special_EnemyGroundCollision</param>
+                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                    <param id="2" name="X">Enemies.X</param>
+                                    <param id="3" name="Y">Enemies.BBoxBottom</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="924420887617031" type="Special_EnemyGroundCollision">
+                                    <param id="0" name="Instance variable">LastSeenX</param>
+                                    <param id="1" name="Value">Enemies.X</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="259519191764184" type="Special_EnemyGroundCollision">
+                                    <param id="0" name="Pin to">Enemies</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="606421415778969">
@@ -4005,6 +4258,22 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="305203449852930">
+                    <conditions>
+                        <condition id="-19" name="On destroyed" sid="701491936502520" type="Enemies" />
+                        <condition id="-11" name="For Each" sid="846452524654520" type="System">
+                            <param id="0" name="Object">Special_EnemyGroundCollision</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="463040574261886" type="System">
+                            <param id="0" name="First value">Special_EnemyGroundCollision.Pin.PinnedUID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">Enemies.UID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="849106215320867" type="Special_EnemyGroundCollision" />
+                    </actions>
+                </event-block>
                 <comment>moving enemies on the ground </comment>
                 <event-block sid="937654994661003">
                     <conditions>
@@ -4013,6 +4282,9 @@
                             <param id="0" name="Instance variable">Pause</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;False&quot;</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="395040317938045" type="Enemies">
+                            <param id="0" name="Object">Player_CameraLoadingZone</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -4029,6 +4301,9 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;False&quot;</param>
                         </condition>
+                        <condition id="1" name="Is overlapping another object" sid="295042137980717" type="Enemies">
+                            <param id="0" name="Object">Player_CameraLoadingZone</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action behavior="Platform" id="7" name="Simulate control" sid="711649951426694" type="Enemies">
@@ -4038,57 +4313,183 @@
                 </event-block>
                 <event-block sid="858695599837454">
                     <conditions>
-                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="696234565991688" type="Enemies">
-                            <param id="0" name="Object">LevelCollisions</param>
-                            <param id="1" name="Offset X">-32</param>
-                            <param id="2" name="Offset Y">32</param>
+                        <condition id="-11" name="For Each" sid="591841001401256" type="System">
+                            <param id="0" name="Object">Special_EnemyGroundCollision</param>
                         </condition>
-                        <condition id="7" name="Is mirrored" sid="510862770519469" type="Enemies" />
-                    </conditions>
-                    <actions>
-                        <action id="7" name="Set mirrored" sid="999308900584114" type="Enemies">
-                            <param id="0" name="State">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="173860519147328">
-                    <conditions>
-                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="485237876605322" type="Enemies">
-                            <param id="0" name="Object">LevelCollisions</param>
-                            <param id="1" name="Offset X">32</param>
-                            <param id="2" name="Offset Y">32</param>
+                        <condition id="-14" name="Pick by unique ID" sid="433789418718938" type="Enemies">
+                            <param id="0" name="Unique ID">Special_EnemyGroundCollision.Pin.PinnedUID</param>
                         </condition>
-                        <condition id="7" inverted="1" name="Is mirrored" sid="133053964554831" type="Enemies" />
-                    </conditions>
-                    <actions>
-                        <action id="7" name="Set mirrored" sid="124639632265049" type="Enemies">
-                            <param id="0" name="State">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="711924513195760">
-                    <conditions>
-                        <condition behavior="Platform" id="10" name="Is by wall" sid="878005308042472" type="Enemies">
-                            <param id="0" name="Side">0</param>
+                        <condition id="1" name="Is overlapping another object" sid="464900892379613" type="Enemies">
+                            <param id="0" name="Object">Player_CameraLoadingZone</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="7" name="Set mirrored" sid="240757554946187" type="Enemies">
-                            <param id="0" name="State">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="155224582208772">
-                    <conditions>
-                        <condition behavior="Platform" id="10" name="Is by wall" sid="788748025345541" type="Enemies">
-                            <param id="0" name="Side">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="7" name="Set mirrored" sid="479629746166132" type="Enemies">
-                            <param id="0" name="State">0</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="887077923514693">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="294116725761873" type="Special_EnemyGroundCollision">
+                                    <param id="0" name="Object">LevelCollisions</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="840315590538352" type="Special_EnemyGroundCollision">
+                                    <param id="0" name="Instance variable">LastSeenX</param>
+                                    <param id="1" name="Value">Self.X</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="540363973802982" type="Special_EnemyGroundCollision">
+                                    <param id="0" name="Instance variable">RevertToOld</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="558743098091170">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="420807749759499" type="Special_EnemyGroundCollision">
+                                    <param id="0" name="Object">Obj_Platform</param>
+                                </condition>
+                                <condition id="1" name="Is overlapping another object" sid="390735941902146" type="Special_EnemyGroundCollision">
+                                    <param id="0" name="Object">Obj_FruitPlatform</param>
+                                </condition>
+                                <condition id="1" name="Is overlapping another object" sid="306606841937328" type="Special_EnemyGroundCollision">
+                                    <param id="0" name="Object">Obj_RocketApplePlatform</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="156834210701923" type="Special_EnemyGroundCollision">
+                                    <param id="0" name="Instance variable">RevertToOld</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="602492350900604">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="633205659660695" type="Special_EnemyGroundCollision">
+                                    <param id="0" name="Instance variable">RevertToOld</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="286137680200987">
+                                    <conditions>
+                                        <condition id="1" inverted="1" name="Is overlapping another object" sid="990744115815936" type="Special_EnemyGroundCollision">
+                                            <param id="0" name="Object">LevelCollisions</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="544524652966795" type="System">
+                                            <param id="0" name="First value">Enemies.Platform.VectorX</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">-Enemies.Platform.MaxSpeed</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="999308900584114" type="Enemies">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-1" name="Set X" sid="537066505116132" type="Enemies">
+                                            <param id="0" name="X">Special_EnemyGroundCollision.LastSeenX+2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="714101396608253">
+                                    <conditions>
+                                        <condition id="1" inverted="1" name="Is overlapping another object" sid="905988546613197" type="Special_EnemyGroundCollision">
+                                            <param id="0" name="Object">LevelCollisions</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="356815288722819" type="System">
+                                            <param id="0" name="First value">Enemies.Platform.VectorX</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">Enemies.Platform.MaxSpeed</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="340473441222475" type="Enemies">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action id="-1" name="Set X" sid="644229439652201" type="Enemies">
+                                            <param id="0" name="X">Special_EnemyGroundCollision.LastSeenX-2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="168275910297989">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="917369634507098" type="Special_EnemyGroundCollision">
+                                    <param id="0" name="Instance variable">RevertToOld</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="445717278464834">
+                                    <conditions>
+                                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="990097476400263" type="Enemies">
+                                            <param id="0" name="Object">LevelCollisions</param>
+                                            <param id="1" name="Offset X">-32</param>
+                                            <param id="2" name="Offset Y">32</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="312022504701579" type="System">
+                                            <param id="0" name="First value">Enemies.Platform.VectorX</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">-Enemies.Platform.MaxSpeed</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="886039585427429" type="Enemies">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="407570415950753">
+                                    <conditions>
+                                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="236865674142361" type="Enemies">
+                                            <param id="0" name="Object">LevelCollisions</param>
+                                            <param id="1" name="Offset X">32</param>
+                                            <param id="2" name="Offset Y">32</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="922130711546273" type="System">
+                                            <param id="0" name="First value">Enemies.Platform.VectorX</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">Enemies.Platform.MaxSpeed</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="148631469807480" type="Enemies">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="711924513195760">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="551254809696106" type="Special_EnemyGroundCollision">
+                                    <param id="0" name="Object">LevelCollisions</param>
+                                </condition>
+                                <condition behavior="Platform" id="10" name="Is by wall" sid="878005308042472" type="Enemies">
+                                    <param id="0" name="Side">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="240757554946187" type="Enemies">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="155224582208772">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="542049690616897" type="Special_EnemyGroundCollision">
+                                    <param id="0" name="Object">LevelCollisions</param>
+                                </condition>
+                                <condition behavior="Platform" id="10" name="Is by wall" sid="788748025345541" type="Enemies">
+                                    <param id="0" name="Side">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="479629746166132" type="Enemies">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -4697,6 +5098,23 @@
                             <param id="0" name="Vector X">0</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="439586619628928">
+                            <conditions>
+                                <condition id="9" name="Is overlapping at offset" sid="150928276348770" type="Player">
+                                    <param id="0" name="Object">Col_Solid</param>
+                                    <param id="1" name="Offset X">0</param>
+                                    <param id="2" name="Offset Y">-6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="762640129452891" type="Function">
+                                    <param id="0" name="Name">&quot;Audio_PlaySFX&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;honk&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="338210054428594">
                     <conditions>
@@ -4922,6 +5340,113 @@
                     <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
+        </event-block>
+        <comment></comment>
+        <event-block sid="257218143377570">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="753694627565644" type="System" />
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="826854009999311" type="TiledSprite">
+                    <param id="0" name="Width">2000</param>
+                </action>
+                <action id="-7" name="Set size" sid="759633365185863" type="TiledSprite2">
+                    <param id="0" name="Width">2000</param>
+                    <param id="1" name="Height">2000</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="657016538646426">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="594605573461623" type="Var_Room">
+                    <param id="0" name="Instance variable">Water</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="212458590547433" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="509281034969231" type="System">
+                    <param id="0" name="Layer">&quot;Water&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="331279165097307">
+            <conditions>
+                <condition id="-7" inverted="1" name="Compare instance variable" sid="758954348611797" type="Var_Room">
+                    <param id="0" name="Instance variable">Water</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="723079160106618">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="895083644971740" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="191086156236416" type="System">
+                            <param id="0" name="Layer">&quot;Water&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="682394178112539" type="TiledSprite2">
+                            <param id="0" name="Y">Var_Room.Water</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="672214558118690">
+                    <conditions />
+                    <actions>
+                        <action id="-2" name="Set Y" sid="425450828057155" type="TiledSprite">
+                            <param id="0" name="Y">TiledSprite2.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="690437393175604">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="306937799226235" type="Var_Room">
+                            <param id="0" name="Instance variable">Water_Type</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Lemonade&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="678875293823341">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="396835654684523" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="692752085916040" type="TiledSprite">
+                                    <param id="0" name="Animation">&quot;Lemonade&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="312767646670401" type="TiledSprite2">
+                                    <param id="0" name="Animation">&quot;Lemonade&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="790364037235996">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="488338023716850" type="Player">
+                                    <param id="0" name="Object">TiledSprite2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="677781099843961" type="Player">
+                                    <param id="0" name="Vector Y">-465</param>
+                                </action>
+                                <action behavior="Platform" id="8" name="Set vector X" sid="928177423230725" type="Player">
+                                    <param id="0" name="Vector X">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>

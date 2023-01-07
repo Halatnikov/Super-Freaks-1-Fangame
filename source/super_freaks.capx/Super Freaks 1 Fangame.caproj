@@ -2,7 +2,7 @@
 <c2project>
     <name>Super Freaks 1 Fangame</name>
     <description></description>
-    <version>0.1.0-9</version>
+    <version>0.1.0-10</version>
     <author>Halatnikov</author>
     <author-email></author-email>
     <author-website>https://halatnikov.github.io</author-website>
@@ -26,6 +26,7 @@
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Sir_G" id="TiledSprite" version="2">Tiled Sprite</plugin>
         <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
         <plugin author="Valera Popov" id="ValerypopoffEase" version="1">Valerypopoff Ease</plugin>
     </used-plugins>
@@ -160,6 +161,13 @@
             </object-type>
             <object-type global="1" name="Var_Main" sid="816879087551174">
                 <plugin id="Globals" />
+            </object-type>
+            <object-type global="1" name="Var_Room" sid="803519937269875">
+                <plugin id="Globals" />
+                <instance-variables>
+                    <instance-variable name="Water" sid="846440047345651" type="number" />
+                    <instance-variable name="Water_Type" sid="527170937054919" type="string" />
+                </instance-variables>
             </object-type>
         </object-folder>
         <object-folder name="LevelObjects">
@@ -310,13 +318,48 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="632901372062899" speed="7">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0.03125" y="0" />
+                                    <point x="0.96875" y="0" />
+                                    <point x="0.96875" y="1" />
+                                    <point x="0.03125" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0.03125" y="0" />
+                                    <point x="0.96875" y="0" />
+                                    <point x="0.96875" y="1" />
+                                    <point x="0.03125" y="1" />
+                                </collision-poly>
+                            </frame>
                         </animation>
                         <animation framecount="3" loop="1" name="Bite" pingpong="0" repeatcount="1" repeatto="0" sid="588061076192346" speed="7">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0.03125" y="0" />
+                                    <point x="0.96875" y="0" />
+                                    <point x="0.96875" y="1" />
+                                    <point x="0.03125" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0.03125" y="0" />
+                                    <point x="0.96875" y="0" />
+                                    <point x="0.96875" y="1" />
+                                    <point x="0.03125" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0.03125" y="0" />
+                                    <point x="0.96875" y="0" />
+                                    <point x="0.96875" y="1" />
+                                    <point x="0.03125" y="1" />
+                                </collision-poly>
+                            </frame>
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -522,11 +565,11 @@
                                     <point x="0.1875" y="0.1875" />
                                     <point x="0.5" y="0" />
                                     <point x="0.8125" y="0.1875" />
-                                    <point x="1" y="0.5" />
+                                    <point x="0.9375" y="0.5" />
                                     <point x="0.8125" y="0.8125" />
                                     <point x="0.5" y="1" />
                                     <point x="0.1875" y="0.8125" />
-                                    <point x="0" y="0.5" />
+                                    <point x="0.0625" y="0.5" />
                                 </collision-poly>
                             </frame>
                         </animation>
@@ -928,11 +971,6 @@
             </object-type>
             <object-type name="HUD_HPBar" sid="240086487866440">
                 <plugin id="TiledBg" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="555084780888543" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
                 <texture />
             </object-type>
             <object-type name="HUD_PlayerIcon" sid="125489137427435">
@@ -1171,9 +1209,19 @@
                     <instance-variable name="SelfX" sid="511980711841230" type="number" />
                     <instance-variable name="SelfY" sid="370556864317512" type="number" />
                     <instance-variable name="Ypriority" sid="623539305482340" type="number" />
+                    <instance-variable name="OverridenX" sid="819690680069679" type="number" />
+                    <instance-variable name="OverridenY" sid="151303015457076" type="number" />
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="767335193238136" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\Level Design\spr_view_trapper.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Player_CameraLoadingZone" sid="266027299701726">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="478118600660569" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\Level Design\spr_view_trapper.png" />
                     </animation>
                 </animation-folder>
@@ -1202,12 +1250,43 @@
             <instance-variables>
                 <instance-variable name="ParentUID" sid="141562239476987" type="number" />
             </instance-variables>
+            <texture />
+        </object-type>
+        <object-type name="Special_EnemyGroundCollision" sid="237989498936418">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="LastSeenX" sid="853656413143503" type="number" />
+                <instance-variable name="RevertToOld" sid="571662566512693" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pin" sid="593049187846816">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="299434148755318" speed="5">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="338910704541600" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledSprite" sid="239958837396251">
+            <plugin id="TiledSprite" />
+            <animation-folder>
+                <animation framecount="4" loop="1" name="Lemonade" pingpong="0" repeatcount="1" repeatto="0" sid="721918307087153" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
-            <texture />
+        </object-type>
+        <object-type name="TiledSprite2" sid="902501552467994">
+            <plugin id="TiledSprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Lemonade" pingpong="0" repeatcount="1" repeatto="0" sid="739236435527054" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families>
