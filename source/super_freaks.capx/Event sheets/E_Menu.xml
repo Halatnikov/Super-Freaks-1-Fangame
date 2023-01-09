@@ -4,19 +4,6 @@
     <name>E_Menu</name>
     <events>
         <include>E_GLOBAL</include>
-        <event-block sid="451941634852816">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="480987941128410" type="Keyboard">
-                    <param id="0" name="Key">13</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="33" name="Stop all" sid="367767532629114" type="BetterAudio" />
-                <action id="-2" name="Go to layout" sid="251488893465561" type="System">
-                    <param id="0" name="Layout">Game</param>
-                </action>
-            </actions>
-        </event-block>
         <event-group description="" inactive="1" sid="537239106005520" title="Group">
             <sub-events>
                 <event-block sid="665893973869933">
@@ -31,10 +18,6 @@
                         <action id="0" name="Call function" sid="131835721193843" type="Function">
                             <param id="0" name="Name">&quot;HUD_MenuChoose&quot;</param>
                             <param id="1" name="Parameter {n}">1</param>
-                        </action>
-                        <action disabled="1" id="0" name="Call function" sid="559608977791562" type="Function">
-                            <param id="0" name="Name">&quot;HUD_MenuChoose&quot;</param>
-                            <param id="1" name="Parameter {n}">7</param>
                         </action>
                     </actions>
                 </event-block>
@@ -915,123 +898,496 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="946913171009847">
+                        <event-block sid="566378459898102">
                             <conditions>
-                                <condition id="-33" name="Pick by comparison" sid="597424748723499" type="System">
-                                    <param id="0" name="Object">Text</param>
-                                    <param id="1" name="Expression">find(Text.ID,&quot;Option_&quot;)</param>
-                                    <param id="2" name="Comparison">1</param>
-                                    <param id="3" name="Value">-1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="112671957140306" type="Menu_Cursor">
-                                    <param id="0" name="Instance variable">Current</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="505734402851940" type="Menu_Cursor">
-                                    <param id="0" name="Instance variable">Menu</param>
-                                    <param id="1" name="Value">Function.Param(0)</param>
-                                </action>
-                                <action id="-9" name="Destroy" sid="200392218144242" type="Text" />
-                            </actions>
-                        </event-block>
-                        <event-block sid="167765032777856">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="612286335532308" type="Text">
-                                    <param id="0" name="Instance variable">ID</param>
+                                <condition id="1" name="Compare parameter" sid="575574191210848" type="Function">
+                                    <param id="0" name="Index">0</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Menu_Title&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Set text" sid="274337836880104" type="Text">
-                                    <param id="0" name="Text">JSON_PERSIST.Value(0,&quot;Menus&quot;,Menu_Cursor.Menu,&quot;Title&quot;)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="385615666341548">
-                            <conditions>
-                                <condition id="60" inverted="1" name="Is undefined" sid="116745286128732" type="JSON_PERSIST">
-                                    <param id="0" name="Reference point">0</param>
-                                    <param id="1" name="Key {n}">&quot;Menus&quot;{###}Menu_Cursor.Menu{###}&quot;Description&quot;</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="114388463020078" type="Text">
-                                    <param id="0" name="Instance variable">ID</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Menu_Description&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Set text" sid="938753023978700" type="Text">
-                                    <param id="0" name="Text">JSON_PERSIST.Value(0,&quot;Menus&quot;,Menu_Cursor.Menu,&quot;Description&quot;)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="297060461161817">
-                            <conditions>
-                                <condition id="100" name="For each property" sid="138839954217451" type="JSON_PERSIST">
-                                    <param id="0" name="Reference point">0</param>
-                                    <param id="1" name="Key {n}">&quot;Menus&quot;{###}Menu_Cursor.Menu</param>
-                                </condition>
-                                <condition id="-8" inverted="1" name="Compare two values" sid="369624271019701" type="System">
-                                    <param id="0" name="First value">JSON_PERSIST.CurrentKey</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">&quot;Title&quot;</param>
-                                </condition>
-                                <condition id="-8" inverted="1" name="Compare two values" sid="125396898426885" type="System">
-                                    <param id="0" name="First value">JSON_PERSIST.CurrentKey</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">&quot;Description&quot;</param>
+                                    <param id="2" name="Value">&quot;ImportRoom_GMS2&quot;</param>
                                 </condition>
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="214024066959663">
+                                <variable constant="0" name="json" sid="993701723178159" static="1" type="text"></variable>
+                                <variable constant="0" name="room" sid="429290691695117" static="1" type="text"></variable>
+                                <variable constant="0" name="size" sid="456964479323713" static="1" type="number">0</variable>
+                                <event-block sid="729552957502250">
                                     <conditions />
                                     <actions>
-                                        <action id="-3" name="Create object" sid="374359079936646" type="System">
-                                            <param id="0" name="Object to create">Text_Regular</param>
-                                            <param id="1" name="Layer">&quot;Menu&quot;</param>
-                                            <param id="2" name="X">24</param>
-                                            <param id="3" name="Y">24+(20*int(JSON_PERSIST.CurrentKey))</param>
+                                        <action id="-9" name="Set value" sid="308399333192057" type="System">
+                                            <param id="0" name="Variable">json</param>
+                                            <param id="1" name="Value">&quot;&quot;</param>
                                         </action>
-                                        <action id="-10" name="Set value" sid="915240741008702" type="Text_Regular">
-                                            <param id="0" name="Instance variable">ID</param>
-                                            <param id="1" name="Value">&quot;Option_&quot;&amp;JSON_PERSIST.CurrentKey</param>
+                                        <action id="-9" name="Set value" sid="183108442450620" type="System">
+                                            <param id="0" name="Variable">room</param>
+                                            <param id="1" name="Value">&quot;&quot;</param>
                                         </action>
-                                        <action id="0" name="Set text" sid="601946558692808" type="Text_Regular">
-                                            <param id="0" name="Text">JSON_PERSIST.Value(0,&quot;Menus&quot;,Menu_Cursor.Menu,JSON_PERSIST.CurrentKey,&quot;Title&quot;)</param>
+                                        <action id="-9" name="Set value" sid="958658198243252" type="System">
+                                            <param id="0" name="Variable">size</param>
+                                            <param id="1" name="Value">0</param>
                                         </action>
-                                        <action id="-27" name="Set effect enabled" sid="544240778062683" type="Text_Regular">
-                                            <param id="0" name="Mode">0</param>
-                                            <param id="1" name="Effect">&quot;SetColor&quot;</param>
+                                        <action id="0" name="Set New Object" sid="904837521957036" type="JSON_PERSIST">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}">&quot;Menus&quot;{###}&quot;ImportRoom_GMS2&quot;</param>
+                                        </action>
+                                        <action id="20" name="Set Value" sid="184651495340146" type="JSON_PERSIST">
+                                            <param id="0" name="Value">&quot;Super Freaks 1 Ultimate Edition&quot;</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;Menus&quot;{###}&quot;ImportRoom_GMS2&quot;{###}&quot;Title&quot;</param>
+                                        </action>
+                                        <action id="20" name="Set Value" sid="944734867279033" type="JSON_PERSIST">
+                                            <param id="0" name="Value">&quot;ImportRoom&quot;</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;Menus&quot;{###}&quot;ImportRoom_GMS2&quot;{###}&quot;Previous&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="359680999479891">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="785783236478604" type="System">
+                                            <param id="0" name="Object to create">JSON_COMMON</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="X">0</param>
+                                            <param id="3" name="Y">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="953190723472327" type="System">
+                                            <param id="0" name="Variable">json</param>
+                                            <param id="1" name="Value">NWjs.ReadFile(Var_CONSTANTS.Path_SourceCode1u&amp;&quot;\Super Freaks 1 Ultimate Edition.yyp&quot;)</param>
+                                        </action>
+                                        <action id="60" name="LoadJSON" sid="886479830303269" type="JSON_COMMON">
+                                            <param id="0" name="JSON">Function.Call(&quot;GMS2_FixJSON&quot;,json)</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}"></param>
                                         </action>
                                     </actions>
                                     <sub-events>
-                                        <event-block sid="901920110435826">
+                                        <event-block sid="737906142583790">
                                             <conditions>
-                                                <condition id="60" inverted="1" name="Is undefined" sid="127880527246552" type="JSON_PERSIST">
+                                                <condition id="100" name="For each property" sid="446101966335134" type="JSON_COMMON">
                                                     <param id="0" name="Reference point">0</param>
-                                                    <param id="1" name="Key {n}">&quot;Menus&quot;{###}Menu_Cursor.Menu{###}tokenat(Text_Regular.ID,1,&quot;_&quot;){###}&quot;Type&quot;</param>
+                                                    <param id="1" name="Key {n}">&quot;RoomOrderNodes&quot;</param>
                                                 </condition>
                                             </conditions>
-                                            <actions />
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="400045645194417" type="System">
+                                                    <param id="0" name="Variable">size</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="428516505426432">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="212933085593663" type="Menu_Cursor">
+                                                    <param id="0" name="Instance variable">Offset</param>
+                                                    <param id="1" name="Value">Self.Offset&lt;15?0:clamp(Self.Offset,0,size-(size%15)=size?size-15:size-(size%15))</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="977390010687838">
+                                            <conditions>
+                                                <condition id="-10" name="For" sid="578968589945066" type="System">
+                                                    <param id="0" name="Name">&quot;&quot;</param>
+                                                    <param id="1" name="Start index">Menu_Cursor.Offset</param>
+                                                    <param id="2" name="End index">Menu_Cursor.Offset+14</param>
+                                                </condition>
+                                                <condition id="60" inverted="1" name="Is undefined" sid="832625809753511" type="JSON_COMMON">
+                                                    <param id="0" name="Reference point">0</param>
+                                                    <param id="1" name="Key {n}">&quot;RoomOrderNodes&quot;{###}str(loopindex)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="708246179341193" type="System">
+                                                    <param id="0" name="Variable">room</param>
+                                                    <param id="1" name="Value">JSON_COMMON.Value(0,&quot;RoomOrderNodes&quot;,str(loopindex),&quot;roomId&quot;,&quot;name&quot;)</param>
+                                                </action>
+                                            </actions>
                                             <sub-events>
-                                                <event-block sid="963283114831984">
-                                                    <conditions>
-                                                        <condition id="-8" name="Compare two values" sid="446545579832588" type="System">
-                                                            <param id="0" name="First value">JSON_PERSIST.Value(0,&quot;Menus&quot;,Menu_Cursor.Menu,tokenat(Text_Regular.ID,1,&quot;_&quot;),&quot;Type&quot;)</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Second value">&quot;Disabled&quot;</param>
-                                                        </condition>
-                                                    </conditions>
+                                                <event-block sid="312324767155392">
+                                                    <conditions />
                                                     <actions>
-                                                        <action id="-27" name="Set effect enabled" sid="467145112861739" type="Text_Regular">
-                                                            <param id="0" name="Mode">1</param>
-                                                            <param id="1" name="Effect">&quot;SetColor&quot;</param>
+                                                        <action id="0" name="Set New Object" sid="259581497135685" type="JSON_PERSIST">
+                                                            <param id="0" name="Reference point">0</param>
+                                                            <param id="1" name="Key {n}">&quot;Menus&quot;{###}&quot;ImportRoom_GMS2&quot;{###}str(1+(loopindex-Menu_Cursor.Offset))</param>
+                                                        </action>
+                                                        <action id="20" name="Set Value" sid="891190209587010" type="JSON_PERSIST">
+                                                            <param id="0" name="Value">room</param>
+                                                            <param id="1" name="Reference point">0</param>
+                                                            <param id="2" name="Key {n}">&quot;Menus&quot;{###}&quot;ImportRoom_GMS2&quot;{###}str(1+(loopindex-Menu_Cursor.Offset)){###}&quot;Title&quot;</param>
+                                                        </action>
+                                                        <action id="20" name="Set Value" sid="323933080423091" type="JSON_PERSIST">
+                                                            <param id="0" name="Value">&quot;ImportRoom_GMS2&quot;</param>
+                                                            <param id="1" name="Reference point">0</param>
+                                                            <param id="2" name="Key {n}">&quot;Menus&quot;{###}&quot;ImportRoom_GMS2&quot;{###}str(1+(loopindex-Menu_Cursor.Offset)){###}&quot;Action&quot;</param>
                                                         </action>
                                                     </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="101225665701781">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-9" name="Destroy" sid="272286548773181" type="JSON_COMMON" />
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="997470009512676">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Set New Object" sid="369464028746870" type="JSON_PERSIST">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}">&quot;Menus&quot;{###}&quot;ImportRoom_GMS2&quot;{###}&quot;0&quot;</param>
+                                        </action>
+                                        <action id="20" name="Set Value" sid="653296880127093" type="JSON_PERSIST">
+                                            <param id="0" name="Value">&quot;PAGE &quot;&amp;ceil((Menu_Cursor.Offset/15)+1)&amp;&quot;/&quot;&amp;int(size%15=0?(size/15):(size/15)+1)</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;Menus&quot;{###}&quot;ImportRoom_GMS2&quot;{###}&quot;0&quot;{###}&quot;Title&quot;</param>
+                                        </action>
+                                        <action id="20" name="Set Value" sid="913170594364515" type="JSON_PERSIST">
+                                            <param id="0" name="Value">&quot;Page|Skip&quot;</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;Menus&quot;{###}&quot;ImportRoom_GMS2&quot;{###}&quot;0&quot;{###}&quot;Type&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="851456052846554">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="638095727765573" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;ImportRoom_GMS1&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="json" sid="254268293289569" static="1" type="text"></variable>
+                                <variable constant="0" name="room" sid="889405671533739" static="1" type="text"></variable>
+                                <variable constant="0" name="size" sid="452306376896862" static="1" type="number">0</variable>
+                                <event-block sid="331625365293740">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="734918674063009" type="System">
+                                            <param id="0" name="Variable">room</param>
+                                            <param id="1" name="Value">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="726531547435935" type="System">
+                                            <param id="0" name="Variable">size</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Set New Object" sid="210772128093829" type="JSON_PERSIST">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}">&quot;Menus&quot;{###}&quot;ImportRoom_GMS1&quot;</param>
+                                        </action>
+                                        <action id="20" name="Set Value" sid="925548076635949" type="JSON_PERSIST">
+                                            <param id="0" name="Value">&quot;Super Freaks 1 Remastered&quot;</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;Menus&quot;{###}&quot;ImportRoom_GMS1&quot;{###}&quot;Title&quot;</param>
+                                        </action>
+                                        <action id="20" name="Set Value" sid="677416460797481" type="JSON_PERSIST">
+                                            <param id="0" name="Value">&quot;ImportRoom&quot;</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;Menus&quot;{###}&quot;ImportRoom_GMS1&quot;{###}&quot;Previous&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="922530623427255">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="942720196756572" type="System">
+                                            <param id="0" name="Object to create">XML_COMMON</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="X">0</param>
+                                            <param id="3" name="Y">0</param>
+                                        </action>
+                                        <action id="0" name="Load" sid="454410445172916" type="XML_COMMON">
+                                            <param id="0" name="XML">NWjs.ReadFile(Var_CONSTANTS.Path_SourceCode1r&amp;&quot;\Super_Freaks_1.project.gmx&quot;)</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="732867379977947">
+                                            <conditions>
+                                                <condition id="-12" name="Repeat" sid="656084903322951" type="System">
+                                                    <param id="0" name="Count">XML_COMMON.NodeCount(&quot;/assets/rooms/room&quot;)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="121281455994357" type="System">
+                                                    <param id="0" name="Variable">size</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="331202028789685">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="414830607092768" type="Menu_Cursor">
+                                                    <param id="0" name="Instance variable">Offset</param>
+                                                    <param id="1" name="Value">Self.Offset&lt;15?0:clamp(Self.Offset,0,size-(size%15)=size?size-15:size-(size%15))</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="423974631356768">
+                                            <conditions>
+                                                <condition id="-10" name="For" sid="464930994220127" type="System">
+                                                    <param id="0" name="Name">&quot;&quot;</param>
+                                                    <param id="1" name="Start index">Menu_Cursor.Offset</param>
+                                                    <param id="2" name="End index">Menu_Cursor.Offset+14</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="901785175171121" type="System">
+                                                    <param id="0" name="Variable">room</param>
+                                                    <param id="1" name="Value">replace(XML_COMMON.StringValue(&quot;/assets/rooms/room[&quot;&amp;loopindex+1&amp;&quot;]&quot;),&quot;rooms\&quot;,&quot;&quot;)</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="721839113335540">
+                                                    <conditions />
+                                                    <actions>
+                                                        <action id="0" name="Set New Object" sid="626229416381020" type="JSON_PERSIST">
+                                                            <param id="0" name="Reference point">0</param>
+                                                            <param id="1" name="Key {n}">&quot;Menus&quot;{###}&quot;ImportRoom_GMS1&quot;{###}str(1+(loopindex-Menu_Cursor.Offset))</param>
+                                                        </action>
+                                                        <action id="20" name="Set Value" sid="588290328639901" type="JSON_PERSIST">
+                                                            <param id="0" name="Value">room</param>
+                                                            <param id="1" name="Reference point">0</param>
+                                                            <param id="2" name="Key {n}">&quot;Menus&quot;{###}&quot;ImportRoom_GMS1&quot;{###}str(1+(loopindex-Menu_Cursor.Offset)){###}&quot;Title&quot;</param>
+                                                        </action>
+                                                        <action id="20" name="Set Value" sid="455453534602079" type="JSON_PERSIST">
+                                                            <param id="0" name="Value">&quot;ImportRoom_GMS1&quot;</param>
+                                                            <param id="1" name="Reference point">0</param>
+                                                            <param id="2" name="Key {n}">&quot;Menus&quot;{###}&quot;ImportRoom_GMS1&quot;{###}str(1+(loopindex-Menu_Cursor.Offset)){###}&quot;Action&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="140071423086599">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-9" name="Destroy" sid="171498832759409" type="XML_COMMON" />
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="149980577414896">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Set New Object" sid="772035994697105" type="JSON_PERSIST">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}">&quot;Menus&quot;{###}&quot;ImportRoom_GMS1&quot;{###}&quot;0&quot;</param>
+                                        </action>
+                                        <action id="20" name="Set Value" sid="558153645388936" type="JSON_PERSIST">
+                                            <param id="0" name="Value">&quot;PAGE &quot;&amp;ceil((Menu_Cursor.Offset/15)+1)&amp;&quot;/&quot;&amp;int(size%15=0?(size/15):(size/15)+1)</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;Menus&quot;{###}&quot;ImportRoom_GMS1&quot;{###}&quot;0&quot;{###}&quot;Title&quot;</param>
+                                        </action>
+                                        <action id="20" name="Set Value" sid="856137975364149" type="JSON_PERSIST">
+                                            <param id="0" name="Value">&quot;Page|Skip&quot;</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;Menus&quot;{###}&quot;ImportRoom_GMS1&quot;{###}&quot;0&quot;{###}&quot;Type&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="131783346742369">
+                            <conditions>
+                                <condition id="60" inverted="1" name="Is undefined" sid="819385402401658" type="JSON_PERSIST">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}">&quot;Menus&quot;{###}Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="946913171009847">
+                                    <conditions>
+                                        <condition id="-33" name="Pick by comparison" sid="597424748723499" type="System">
+                                            <param id="0" name="Object">Text</param>
+                                            <param id="1" name="Expression">find(Text.ID,&quot;Option_&quot;)</param>
+                                            <param id="2" name="Comparison">1</param>
+                                            <param id="3" name="Value">-1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="112671957140306" type="Menu_Cursor">
+                                            <param id="0" name="Instance variable">Current</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="986480186411658" type="Menu_Cursor">
+                                            <param id="0" name="Instance variable">Direction</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="505734402851940" type="Menu_Cursor">
+                                            <param id="0" name="Instance variable">Menu</param>
+                                            <param id="1" name="Value">Function.Param(0)</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="200392218144242" type="Text" />
+                                        <action id="-9" name="Destroy" sid="865541475237036" type="Menu_Arrows" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="167765032777856">
+                                    <conditions>
+                                        <condition id="60" inverted="1" name="Is undefined" sid="942153211694590" type="JSON_PERSIST">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}">&quot;Menus&quot;{###}Menu_Cursor.Menu{###}&quot;Title&quot;</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="612286335532308" type="Text">
+                                            <param id="0" name="Instance variable">ID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Menu_Title&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="274337836880104" type="Text">
+                                            <param id="0" name="Text">JSON_PERSIST.Value(0,&quot;Menus&quot;,Menu_Cursor.Menu,&quot;Title&quot;)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="656990443465307">
+                                    <conditions>
+                                        <condition id="60" name="Is undefined" sid="686011679867286" type="JSON_PERSIST">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}">&quot;Menus&quot;{###}Menu_Cursor.Menu{###}&quot;Title&quot;</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="318528120158669" type="Text">
+                                            <param id="0" name="Instance variable">ID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Menu_Title&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="601260824048307" type="Text">
+                                            <param id="0" name="Text">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="385615666341548">
+                                    <conditions>
+                                        <condition id="60" inverted="1" name="Is undefined" sid="116745286128732" type="JSON_PERSIST">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}">&quot;Menus&quot;{###}Menu_Cursor.Menu{###}&quot;Description&quot;</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="114388463020078" type="Text">
+                                            <param id="0" name="Instance variable">ID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Menu_Description&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="938753023978700" type="Text">
+                                            <param id="0" name="Text">replace(JSON_PERSIST.Value(0,&quot;Menus&quot;,Menu_Cursor.Menu,&quot;Description&quot;),&quot;|&quot;,newline)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="297060461161817">
+                                    <conditions>
+                                        <condition id="100" name="For each property" sid="138839954217451" type="JSON_PERSIST">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}">&quot;Menus&quot;{###}Menu_Cursor.Menu</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Compare two values" sid="369624271019701" type="System">
+                                            <param id="0" name="First value">JSON_PERSIST.CurrentKey</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;Title&quot;</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Compare two values" sid="125396898426885" type="System">
+                                            <param id="0" name="First value">JSON_PERSIST.CurrentKey</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;Description&quot;</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Compare two values" sid="662939331553955" type="System">
+                                            <param id="0" name="First value">JSON_PERSIST.CurrentKey</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;Previous&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="214024066959663">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="374359079936646" type="System">
+                                                    <param id="0" name="Object to create">Text_Regular</param>
+                                                    <param id="1" name="Layer">&quot;Menu&quot;</param>
+                                                    <param id="2" name="X">24</param>
+                                                    <param id="3" name="Y">24+(20*int(JSON_PERSIST.CurrentKey))</param>
+                                                </action>
+                                                <action id="-7" name="Set size" sid="921936915449993" type="Text_Regular">
+                                                    <param id="0" name="Width">592</param>
+                                                    <param id="1" name="Height">20</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="915240741008702" type="Text_Regular">
+                                                    <param id="0" name="Instance variable">ID</param>
+                                                    <param id="1" name="Value">&quot;Option_&quot;&amp;JSON_PERSIST.CurrentKey</param>
+                                                </action>
+                                                <action id="0" name="Set text" sid="601946558692808" type="Text_Regular">
+                                                    <param id="0" name="Text">JSON_PERSIST.Value(0,&quot;Menus&quot;,Menu_Cursor.Menu,JSON_PERSIST.CurrentKey,&quot;Title&quot;)</param>
+                                                </action>
+                                                <action id="-27" name="Set effect enabled" sid="544240778062683" type="Text_Regular">
+                                                    <param id="0" name="Mode">0</param>
+                                                    <param id="1" name="Effect">&quot;SetColor&quot;</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="901920110435826">
+                                                    <conditions>
+                                                        <condition id="60" inverted="1" name="Is undefined" sid="127880527246552" type="JSON_PERSIST">
+                                                            <param id="0" name="Reference point">0</param>
+                                                            <param id="1" name="Key {n}">&quot;Menus&quot;{###}Menu_Cursor.Menu{###}tokenat(Text_Regular.ID,1,&quot;_&quot;){###}&quot;Type&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="963283114831984">
+                                                            <conditions>
+                                                                <condition id="-8" inverted="1" name="Compare two values" sid="951858605324400" type="System">
+                                                                    <param id="0" name="First value">find(JSON_PERSIST.Value(0,&quot;Menus&quot;,Menu_Cursor.Menu,str(Menu_Cursor.Current),&quot;Type&quot;),&quot;Disabled&quot;)</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Second value">-1</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-27" name="Set effect enabled" sid="467145112861739" type="Text_Regular">
+                                                                    <param id="0" name="Mode">1</param>
+                                                                    <param id="1" name="Effect">&quot;SetColor&quot;</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="138702596988986">
+                                                            <conditions>
+                                                                <condition id="-8" inverted="1" name="Compare two values" sid="501882958615542" type="System">
+                                                                    <param id="0" name="First value">find(JSON_PERSIST.Value(0,&quot;Menus&quot;,Menu_Cursor.Menu,str(Menu_Cursor.Current),&quot;Type&quot;),&quot;Page&quot;)</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Second value">-1</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="7" name="Set horizontal alignment" sid="705830445531167" type="Text_Regular">
+                                                                    <param id="0" name="Horizontal alignment">1</param>
+                                                                </action>
+                                                                <action id="-3" name="Create object" sid="667321017886656" type="System">
+                                                                    <param id="0" name="Object to create">Menu_Arrows</param>
+                                                                    <param id="1" name="Layer">&quot;Menu&quot;</param>
+                                                                    <param id="2" name="X">Text_Regular.X+192</param>
+                                                                    <param id="3" name="Y">Text_Regular.Y</param>
+                                                                </action>
+                                                                <action id="7" name="Set mirrored" sid="600162938273982" type="Menu_Arrows">
+                                                                    <param id="0" name="State">0</param>
+                                                                </action>
+                                                                <action id="-3" name="Create object" sid="151677596588079" type="System">
+                                                                    <param id="0" name="Object to create">Menu_Arrows</param>
+                                                                    <param id="1" name="Layer">&quot;Menu&quot;</param>
+                                                                    <param id="2" name="X">Text_Regular.X+400</param>
+                                                                    <param id="3" name="Y">Text_Regular.Y</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
@@ -1040,6 +1396,48 @@
                             </sub-events>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="292270610572726">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="395763075933100" type="Menu_Cursor">
+                            <param id="0" name="Instance variable">Current</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">-1</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="712687302491977" type="System">
+                            <param id="0" name="Object">Text</param>
+                            <param id="1" name="Expression">find(Text.ID,&quot;Option_&quot;)</param>
+                            <param id="2" name="Comparison">1</param>
+                            <param id="3" name="Value">-1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="706677652563979" type="Menu_Cursor">
+                            <param id="0" name="Instance variable">Current</param>
+                            <param id="1" name="Value">Text.PickedCount-1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="988914004502037">
+                    <conditions>
+                        <condition id="-33" name="Pick by comparison" sid="313789502952291" type="System">
+                            <param id="0" name="Object">Text</param>
+                            <param id="1" name="Expression">find(Text.ID,&quot;Option_&quot;)</param>
+                            <param id="2" name="Comparison">1</param>
+                            <param id="3" name="Value">-1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="315669191937653" type="Menu_Cursor">
+                            <param id="0" name="Instance variable">Current</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">Text.PickedCount</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="736085782335948" type="Menu_Cursor">
+                            <param id="0" name="Instance variable">Current</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="840427892885098">
                     <conditions>
@@ -1052,30 +1450,11 @@
                             <param id="0" name="Instance variable">Current</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="-10" name="Set value" sid="820614747819929" type="Menu_Cursor">
+                            <param id="0" name="Instance variable">Direction</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
                     </actions>
-                    <sub-events>
-                        <event-block sid="292270610572726">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="395763075933100" type="Menu_Cursor">
-                                    <param id="0" name="Instance variable">Current</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">-1</param>
-                                </condition>
-                                <condition id="-33" name="Pick by comparison" sid="712687302491977" type="System">
-                                    <param id="0" name="Object">Text</param>
-                                    <param id="1" name="Expression">find(Text.ID,&quot;Option_&quot;)</param>
-                                    <param id="2" name="Comparison">1</param>
-                                    <param id="3" name="Value">-1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="706677652563979" type="Menu_Cursor">
-                                    <param id="0" name="Instance variable">Current</param>
-                                    <param id="1" name="Value">Text.PickedCount-1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
                 <event-block sid="618080324866088">
                     <conditions>
@@ -1088,26 +1467,103 @@
                             <param id="0" name="Instance variable">Current</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="-10" name="Set value" sid="172745758265192" type="Menu_Cursor">
+                            <param id="0" name="Instance variable">Direction</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
+                </event-block>
+                <event-block disabled="1" sid="413854236680576">
+                    <conditions>
+                        <condition id="60" inverted="1" name="Is undefined" sid="146084880385302" type="JSON_PERSIST">
+                            <param id="0" name="Reference point">0</param>
+                            <param id="1" name="Key {n}">&quot;Menus&quot;{###}Menu_Cursor.Menu{###}str(Menu_Cursor.Current){###}&quot;Type&quot;</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Compare two values" sid="790185505247030" type="System">
+                            <param id="0" name="First value">find(JSON_PERSIST.Value(0,&quot;Menus&quot;,Menu_Cursor.Menu,str(Menu_Cursor.Current),&quot;Type&quot;),&quot;Skip&quot;)</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">-1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
                     <sub-events>
-                        <event-block sid="988914004502037">
+                        <event-block disabled="1" sid="914917034901709">
                             <conditions>
-                                <condition id="-33" name="Pick by comparison" sid="313789502952291" type="System">
-                                    <param id="0" name="Object">Text</param>
-                                    <param id="1" name="Expression">find(Text.ID,&quot;Option_&quot;)</param>
-                                    <param id="2" name="Comparison">1</param>
-                                    <param id="3" name="Value">-1</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="315669191937653" type="Menu_Cursor">
-                                    <param id="0" name="Instance variable">Current</param>
+                                <condition id="-7" name="Compare instance variable" sid="291718587699339" type="Menu_Cursor">
+                                    <param id="0" name="Instance variable">Direction</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">Text.PickedCount</param>
+                                    <param id="2" name="Value">-1</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" sid="736085782335948" type="Menu_Cursor">
+                                <action id="-12" name="Subtract from" sid="253812196680363" type="Menu_Cursor">
                                     <param id="0" name="Instance variable">Current</param>
-                                    <param id="1" name="Value">0</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="760284095673994">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="207421158068346" type="Menu_Cursor">
+                                    <param id="0" name="Instance variable">Direction</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="987637490627299" type="Menu_Cursor">
+                                    <param id="0" name="Instance variable">Current</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="553000284925962">
+                    <conditions>
+                        <condition id="60" inverted="1" name="Is undefined" sid="388536325338002" type="JSON_PERSIST">
+                            <param id="0" name="Reference point">0</param>
+                            <param id="1" name="Key {n}">&quot;Menus&quot;{###}Menu_Cursor.Menu{###}str(Menu_Cursor.Current){###}&quot;Type&quot;</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Compare two values" sid="299218904347929" type="System">
+                            <param id="0" name="First value">find(JSON_PERSIST.Value(0,&quot;Menus&quot;,Menu_Cursor.Menu,str(Menu_Cursor.Current),&quot;Type&quot;),&quot;Page&quot;)</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">-1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="101629325498636">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="825482975378640" type="Keyboard">
+                                    <param id="0" name="Key">37</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="353147289529870" type="Menu_Cursor">
+                                    <param id="0" name="Instance variable">Offset</param>
+                                    <param id="1" name="Value">15</param>
+                                </action>
+                                <action id="0" name="Call function" sid="634941093619196" type="Function">
+                                    <param id="0" name="Name">&quot;Menu_Create&quot;</param>
+                                    <param id="1" name="Parameter {n}">Menu_Cursor.Menu</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="889148650512634">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="909468356470104" type="Keyboard">
+                                    <param id="0" name="Key">39</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="849714863174544" type="Menu_Cursor">
+                                    <param id="0" name="Instance variable">Offset</param>
+                                    <param id="1" name="Value">15</param>
+                                </action>
+                                <action id="0" name="Call function" sid="899793283238949" type="Function">
+                                    <param id="0" name="Name">&quot;Menu_Create&quot;</param>
+                                    <param id="1" name="Parameter {n}">Menu_Cursor.Menu</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1121,6 +1577,46 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="202423201272374">
+                    <conditions>
+                        <condition id="60" inverted="1" name="Is undefined" sid="389069490746387" type="JSON_PERSIST">
+                            <param id="0" name="Reference point">0</param>
+                            <param id="1" name="Key {n}">&quot;Menus&quot;{###}Menu_Cursor.Menu{###}str(Menu_Cursor.Current){###}&quot;Description&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="317178673740253" type="Text">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Menu_Description&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="975821084179178" type="Text">
+                            <param id="0" name="Text">replace(JSON_PERSIST.Value(0,&quot;Menus&quot;,Menu_Cursor.Menu,str(Menu_Cursor.Current),&quot;Description&quot;),&quot;|&quot;,newline)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="577051198285241">
+                    <conditions>
+                        <condition id="60" name="Is undefined" sid="257189158323395" type="JSON_PERSIST">
+                            <param id="0" name="Reference point">0</param>
+                            <param id="1" name="Key {n}">&quot;Menus&quot;{###}Menu_Cursor.Menu{###}&quot;Description&quot;</param>
+                        </condition>
+                        <condition id="60" name="Is undefined" sid="446648574684217" type="JSON_PERSIST">
+                            <param id="0" name="Reference point">0</param>
+                            <param id="1" name="Key {n}">&quot;Menus&quot;{###}Menu_Cursor.Menu{###}str(Menu_Cursor.Current){###}&quot;Description&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="467507988213363" type="Text">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Menu_Description&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="465664402912246" type="Text">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="838231835111921">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="561504387311311" type="Keyboard">
@@ -1129,28 +1625,155 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="699114917925022">
+                        <event-block sid="869013934164071">
                             <conditions>
-                                <condition id="-33" name="Pick by comparison" sid="277006645100212" type="System">
-                                    <param id="0" name="Object">Text</param>
-                                    <param id="1" name="Expression">Text.ID</param>
-                                    <param id="2" name="Comparison">0</param>
-                                    <param id="3" name="Value">&quot;Option_&quot;&amp;Menu_Cursor.Current</param>
-                                </condition>
                                 <condition id="60" inverted="1" name="Is undefined" sid="566795353772428" type="JSON_PERSIST">
                                     <param id="0" name="Reference point">0</param>
                                     <param id="1" name="Key {n}">&quot;Menus&quot;{###}Menu_Cursor.Menu{###}str(Menu_Cursor.Current){###}&quot;Type&quot;</param>
                                 </condition>
-                                <condition id="-8" name="Compare two values" sid="464605332443797" type="System">
-                                    <param id="0" name="First value">JSON_PERSIST.Value(0,&quot;Menus&quot;,Menu_Cursor.Menu,str(Menu_Cursor.Current),&quot;Type&quot;)</param>
+                                <condition id="-8" inverted="1" name="Compare two values" sid="464605332443797" type="System">
+                                    <param id="0" name="First value">find(JSON_PERSIST.Value(0,&quot;Menus&quot;,Menu_Cursor.Menu,str(Menu_Cursor.Current),&quot;Type&quot;),&quot;Disabled&quot;)</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">&quot;Disabled&quot;</param>
+                                    <param id="2" name="Second value">-1</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="469788390664699" type="Function">
                                     <param id="0" name="Name">&quot;Audio_PlaySFX&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;honk&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="447290711899716">
+                            <conditions>
+                                <condition id="60" inverted="1" name="Is undefined" sid="168250207312983" type="JSON_PERSIST">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}">&quot;Menus&quot;{###}Menu_Cursor.Menu{###}str(Menu_Cursor.Current){###}&quot;Action&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="622348194533547">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="163065201747888" type="System">
+                                            <param id="0" name="First value">JSON_PERSIST.Value(0,&quot;Menus&quot;,Menu_Cursor.Menu,str(Menu_Cursor.Current),&quot;Action&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;Exit&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Close" sid="358069957134912" type="Browser" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="951710120076456">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="320737084147763" type="System">
+                                            <param id="0" name="First value">JSON_PERSIST.Value(0,&quot;Menus&quot;,Menu_Cursor.Menu,str(Menu_Cursor.Current),&quot;Action&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;ImportRoom_GMS2&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="33" name="Stop all" sid="366002706737366" type="BetterAudio" />
+                                        <action id="-4" name="Set layer visible" sid="593164656048196" type="System">
+                                            <param id="0" name="Layer">&quot;GLOBAL_Loading&quot;</param>
+                                            <param id="1" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-4" name="Set layer visible" sid="513655094932558" type="System">
+                                            <param id="0" name="Layer">&quot;GLOBAL_Overlay&quot;</param>
+                                            <param id="1" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="649245013969871" type="Var_Level">
+                                            <param id="0" name="Instance variable">RoomType</param>
+                                            <param id="1" name="Value">&quot;GMS2&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="524479190750791" type="Var_Level">
+                                            <param id="0" name="Instance variable">Room</param>
+                                            <param id="1" name="Value">JSON_PERSIST.Value(0,&quot;Menus&quot;,Menu_Cursor.Menu,str(Menu_Cursor.Current),&quot;Title&quot;)</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="527295514957936" type="System">
+                                            <param id="0" name="Seconds">0.1</param>
+                                        </action>
+                                        <action id="-2" name="Go to layout" sid="844241726218105" type="System">
+                                            <param id="0" name="Layout">Game</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="397844696483739">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="372626872350712" type="System">
+                                            <param id="0" name="First value">JSON_PERSIST.Value(0,&quot;Menus&quot;,Menu_Cursor.Menu,str(Menu_Cursor.Current),&quot;Action&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;ImportRoom_GMS1&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="33" name="Stop all" sid="856777482194731" type="BetterAudio" />
+                                        <action id="-4" name="Set layer visible" sid="834133483866366" type="System">
+                                            <param id="0" name="Layer">&quot;GLOBAL_Loading&quot;</param>
+                                            <param id="1" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-4" name="Set layer visible" sid="552319892554501" type="System">
+                                            <param id="0" name="Layer">&quot;GLOBAL_Overlay&quot;</param>
+                                            <param id="1" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="834879449761160" type="Var_Level">
+                                            <param id="0" name="Instance variable">RoomType</param>
+                                            <param id="1" name="Value">&quot;GMS1&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="542831488995413" type="Var_Level">
+                                            <param id="0" name="Instance variable">Room</param>
+                                            <param id="1" name="Value">JSON_PERSIST.Value(0,&quot;Menus&quot;,Menu_Cursor.Menu,str(Menu_Cursor.Current),&quot;Title&quot;)</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="636021132212031" type="System">
+                                            <param id="0" name="Seconds">0.1</param>
+                                        </action>
+                                        <action id="-2" name="Go to layout" sid="770918388494827" type="System">
+                                            <param id="0" name="Layout">Game</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="959678019848289">
+                            <conditions>
+                                <condition id="60" inverted="1" name="Is undefined" sid="375795351721672" type="JSON_PERSIST">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}">&quot;Menus&quot;{###}Menu_Cursor.Menu{###}str(Menu_Cursor.Current){###}&quot;Menu&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="666255961199682" type="Function">
+                                    <param id="0" name="Name">&quot;Menu_Create&quot;</param>
+                                    <param id="1" name="Parameter {n}">JSON_PERSIST.Value(0,&quot;Menus&quot;,Menu_Cursor.Menu,str(Menu_Cursor.Current),&quot;Menu&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="257499816693164">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="356093350253579" type="Keyboard">
+                            <param id="0" name="Key">88</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="277596329062058">
+                            <conditions>
+                                <condition id="60" inverted="1" name="Is undefined" sid="693722650811600" type="JSON_PERSIST">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}">&quot;Menus&quot;{###}Menu_Cursor.Menu{###}&quot;Previous&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="217078867492752" type="Function">
+                                    <param id="0" name="Name">&quot;Menu_Create&quot;</param>
+                                    <param id="1" name="Parameter {n}">JSON_PERSIST.Value(0,&quot;Menus&quot;,Menu_Cursor.Menu,&quot;Previous&quot;)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="986439535618465" type="Menu_Cursor">
+                                    <param id="0" name="Instance variable">Offset</param>
+                                    <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1173,9 +1796,7 @@
         </event-group>
         <event-block sid="703399494737796">
             <conditions>
-                <condition id="0" name="On key pressed" sid="935771817872893" type="Keyboard">
-                    <param id="0" name="Key">90</param>
-                </condition>
+                <condition id="-4" name="Trigger once while true" sid="763583376118378" type="System" />
             </conditions>
             <actions>
                 <action id="-12" name="Set group active" sid="799412640144226" type="System">

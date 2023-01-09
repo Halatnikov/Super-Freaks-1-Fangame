@@ -377,7 +377,35 @@
             <use-render-cells>1</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
-            <instances />
+            <instances>
+                <instance type="Tiles_GMS1" uid="113">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <offset-x>0</offset-x>
+                        <offset-y>0</offset-y>
+                        <sub-width>32</sub-width>
+                        <sub-height>32</sub-height>
+                    </properties>
+                    <instance-variables>
+                        <id></id>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
             <effects />
         </layer>
         <layer name="Objects" sid="290653157402882">
@@ -1133,7 +1161,7 @@
                         <Obj_ImportInstance></Obj_ImportInstance>
                         <Obj_Difficulty>Everything</Obj_Difficulty>
                         <path></path>
-                        <ID>0</ID>
+                        <ID>1</ID>
                         <InstanceCreationCode></InstanceCreationCode>
                         <TrophyID>0</TrophyID>
                     </instance-variables>
@@ -1179,7 +1207,7 @@
                         <Obj_ImportInstance></Obj_ImportInstance>
                         <Obj_Difficulty>Everything</Obj_Difficulty>
                         <path></path>
-                        <time>0</time>
+                        <time>1</time>
                         <InstanceCreationCode></InstanceCreationCode>
                         <TrophyID>0</TrophyID>
                     </instance-variables>
@@ -1221,7 +1249,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <ParentUID>0</ParentUID>
+                        <ParentUID>87</ParentUID>
                         <TrophyID>0</TrophyID>
                         <Speed>0</Speed>
                     </instance-variables>
@@ -1536,33 +1564,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tiles_GMS1" uid="113">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Top-left</hotspot>
-                        <offset-x>0</offset-x>
-                        <offset-y>0</offset-y>
-                        <sub-width>32</sub-width>
-                        <sub-height>32</sub-height>
-                    </properties>
-                    <instance-variables>
-                        <id></id>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>0</x>
-                        <y>0</y>
-                        <z>0</z>
-                        <width>32</width>
-                        <height>32</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="Obj_Yorb10" uid="114">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -1578,8 +1579,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>128</x>
-                        <y>539</y>
+                        <x>-33</x>
+                        <y>445</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -2913,7 +2914,7 @@
             <effects />
         </layer>
         <layer name="GLOBAL_Loading" sid="730632758866411">
-            <initially-visible>1</initially-visible>
+            <initially-visible>0</initially-visible>
             <background-color>0,0,0</background-color>
             <transparent>0</transparent>
             <parallax>
@@ -2923,7 +2924,7 @@
             <zoom-rate>0</zoom-rate>
             <opacity>1</opacity>
             <force-own-texture>0</force-own-texture>
-            <global>0</global>
+            <global>1</global>
             <use-render-cells>0</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
@@ -3084,7 +3085,7 @@
             <effects />
         </layer>
         <layer name="GLOBAL_Overlay" sid="571773510276796">
-            <initially-visible>1</initially-visible>
+            <initially-visible>0</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
             <parallax>
@@ -3179,7 +3180,8 @@
         </instance>
         <instance type="Var_Level" uid="59">
             <instance-variables>
-                <ImportRoom>rmToyTowers3</ImportRoom>
+                <RoomType>GMS2</RoomType>
+                <Room>rm_stadium_1</Room>
                 <Difficulty>Normal</Difficulty>
                 <ImportErrorAttempts>0</ImportErrorAttempts>
             </instance-variables>
@@ -3194,7 +3196,6 @@
                 <GimmickState></GimmickState>
             </instance-variables>
         </instance>
-        <instance type="Var_Main" uid="93" />
         <instance type="Var_Room" uid="105">
             <instance-variables>
                 <Water>0</Water>
