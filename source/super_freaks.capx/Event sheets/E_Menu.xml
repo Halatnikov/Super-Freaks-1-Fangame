@@ -11,8 +11,1180 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="33" name="Stop all" sid="367767532629114" type="BetterAudio" />
                 <action id="-2" name="Go to layout" sid="251488893465561" type="System">
                     <param id="0" name="Layout">Game</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" inactive="1" sid="537239106005520" title="Group">
+            <sub-events>
+                <event-block sid="665893973869933">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="550956988924796" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="983144542037555" type="Menu_BGAnimation" />
+                        <action id="-16" name="Wait" sid="775962335198971" type="System">
+                            <param id="0" name="Seconds">1.5</param>
+                        </action>
+                        <action id="0" name="Call function" sid="131835721193843" type="Function">
+                            <param id="0" name="Name">&quot;HUD_MenuChoose&quot;</param>
+                            <param id="1" name="Parameter {n}">1</param>
+                        </action>
+                        <action disabled="1" id="0" name="Call function" sid="559608977791562" type="Function">
+                            <param id="0" name="Name">&quot;HUD_MenuChoose&quot;</param>
+                            <param id="1" name="Parameter {n}">7</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="421153480628703">
+                    <conditions>
+                        <condition id="0" name="On function" sid="381870099328860" type="Function">
+                            <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="765994495957379" type="System">
+                            <param id="0" name="Object to create">Menu_BGAnimation</param>
+                            <param id="1" name="Layer">&quot;Menu&quot;</param>
+                            <param id="2" name="X">Function.Param(0)</param>
+                            <param id="3" name="Y">Function.Param(1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="887281075255348">
+                    <conditions>
+                        <condition id="0" name="On function" sid="114896507130156" type="Function">
+                            <param id="0" name="Name">&quot;HUD_MenuChoose&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="rand" sid="613854032826973" static="1" type="number">0</variable>
+                        <variable constant="0" name="interval" sid="825556746419592" static="1" type="number">0.175</variable>
+                        <variable constant="0" name="interval2" sid="813259320781375" static="1" type="number">1.5</variable>
+                        <event-block sid="877348404047033">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="555596748393875" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="914602988277417" type="System">
+                                    <param id="0" name="Variable">rand</param>
+                                    <param id="1" name="Value">choose(1,2,3,4,5,6,7)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="934390861831495">
+                            <conditions>
+                                <condition id="1" inverted="1" name="Compare parameter" sid="434289046304684" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="413843834631519" type="System">
+                                    <param id="0" name="Variable">rand</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>staircase up</comment>
+                        <event-block sid="394106362907880">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="238222929959585" type="System">
+                                    <param id="0" name="Variable">rand</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="771145627563640" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">0{###}244</param>
+                                </action>
+                                <action id="0" name="Call function" sid="688682416177165" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">128{###}308</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="994745280457209" type="System">
+                                    <param id="0" name="Seconds">interval</param>
+                                </action>
+                                <action id="0" name="Call function" sid="463899703882629" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">0{###}116</param>
+                                </action>
+                                <action id="0" name="Call function" sid="649700189846517" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">128{###}180</param>
+                                </action>
+                                <action id="0" name="Call function" sid="514123098755647" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">320{###}244</param>
+                                </action>
+                                <action id="0" name="Call function" sid="424206554372248" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">448{###}308</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="780495450261296" type="System">
+                                    <param id="0" name="Seconds">interval</param>
+                                </action>
+                                <action id="0" name="Call function" sid="319296838250869" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">0{###}-12</param>
+                                </action>
+                                <action id="0" name="Call function" sid="385453090233466" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">128{###}52</param>
+                                </action>
+                                <action id="0" name="Call function" sid="863606078613042" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">320{###}116</param>
+                                </action>
+                                <action id="0" name="Call function" sid="695844650566243" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">448{###}180</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="759182497030861" type="System">
+                                    <param id="0" name="Seconds">interval</param>
+                                </action>
+                                <action id="0" name="Call function" sid="494384059795394" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">320{###}-12</param>
+                                </action>
+                                <action id="0" name="Call function" sid="572760027363653" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">448{###}52</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="836082197280483" type="System">
+                                    <param id="0" name="Seconds">interval2</param>
+                                </action>
+                                <action id="0" name="Call function" sid="744647123975155" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuChoose&quot;</param>
+                                    <param id="1" name="Parameter {n}">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>staircase down</comment>
+                        <event-block sid="579336346140490">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="371111975953723" type="System">
+                                    <param id="0" name="Variable">rand</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="398912953347328" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">576{###}52</param>
+                                </action>
+                                <action id="0" name="Call function" sid="267323545269325" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">448{###}-12</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="763207946905506" type="System">
+                                    <param id="0" name="Seconds">interval</param>
+                                </action>
+                                <action id="0" name="Call function" sid="959743381964973" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">576{###}180</param>
+                                </action>
+                                <action id="0" name="Call function" sid="385142286523725" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">448{###}116</param>
+                                </action>
+                                <action id="0" name="Call function" sid="234469175353503" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">256{###}52</param>
+                                </action>
+                                <action id="0" name="Call function" sid="228009266697649" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">128{###}-12</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="257671135103561" type="System">
+                                    <param id="0" name="Seconds">interval</param>
+                                </action>
+                                <action id="0" name="Call function" sid="590538569180188" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">576{###}308</param>
+                                </action>
+                                <action id="0" name="Call function" sid="214660458114611" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">448{###}244</param>
+                                </action>
+                                <action id="0" name="Call function" sid="407384695390653" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">256{###}180</param>
+                                </action>
+                                <action id="0" name="Call function" sid="758035961065238" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">128{###}116</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="264804131052692" type="System">
+                                    <param id="0" name="Seconds">interval</param>
+                                </action>
+                                <action id="0" name="Call function" sid="210277621181214" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">256{###}308</param>
+                                </action>
+                                <action id="0" name="Call function" sid="751447451080575" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">128{###}244</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="626140307269113" type="System">
+                                    <param id="0" name="Seconds">interval2</param>
+                                </action>
+                                <action id="0" name="Call function" sid="909291636795351" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuChoose&quot;</param>
+                                    <param id="1" name="Parameter {n}">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>staircase both sides</comment>
+                        <event-block sid="465923204937585">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="558588827262150" type="System">
+                                    <param id="0" name="Variable">rand</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="945716491447224" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">256{###}244</param>
+                                </action>
+                                <action id="0" name="Call function" sid="731489556142273" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">128{###}308</param>
+                                </action>
+                                <action id="0" name="Call function" sid="194234550509597" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">320{###}52</param>
+                                </action>
+                                <action id="0" name="Call function" sid="563739854085440" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">448{###}-12</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="116720098240027" type="System">
+                                    <param id="0" name="Seconds">interval</param>
+                                </action>
+                                <action id="0" name="Call function" sid="162515477412627" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">256{###}180</param>
+                                </action>
+                                <action id="0" name="Call function" sid="548504540037438" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">128{###}244</param>
+                                </action>
+                                <action id="0" name="Call function" sid="433294572353452" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">0{###}308</param>
+                                </action>
+                                <action id="0" name="Call function" sid="680017711951728" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">320{###}116</param>
+                                </action>
+                                <action id="0" name="Call function" sid="127342276180322" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">448{###}52</param>
+                                </action>
+                                <action id="0" name="Call function" sid="746882365696892" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">576{###}-12</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="655956605102833" type="System">
+                                    <param id="0" name="Seconds">interval</param>
+                                </action>
+                                <action id="0" name="Call function" sid="899002545718299" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">256{###}116</param>
+                                </action>
+                                <action id="0" name="Call function" sid="733184575751225" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">128{###}180</param>
+                                </action>
+                                <action id="0" name="Call function" sid="338485403705486" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">0{###}244</param>
+                                </action>
+                                <action id="0" name="Call function" sid="566668559095327" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">320{###}180</param>
+                                </action>
+                                <action id="0" name="Call function" sid="195869991628351" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">448{###}116</param>
+                                </action>
+                                <action id="0" name="Call function" sid="315451069059390" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">576{###}52</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="269022126497664" type="System">
+                                    <param id="0" name="Seconds">interval</param>
+                                </action>
+                                <action id="0" name="Call function" sid="358727211495527" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">256{###}-12</param>
+                                </action>
+                                <action id="0" name="Call function" sid="892703855762614" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">128{###}52</param>
+                                </action>
+                                <action id="0" name="Call function" sid="731350396158434" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">0{###}116</param>
+                                </action>
+                                <action id="0" name="Call function" sid="717871049521137" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">320{###}244</param>
+                                </action>
+                                <action id="0" name="Call function" sid="274199662406295" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">448{###}180</param>
+                                </action>
+                                <action id="0" name="Call function" sid="278524348244612" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">576{###}116</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="894026115810169" type="System">
+                                    <param id="0" name="Seconds">interval</param>
+                                </action>
+                                <action id="0" name="Call function" sid="622575573591664" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">128{###}-12</param>
+                                </action>
+                                <action id="0" name="Call function" sid="195365696541495" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">0{###}52</param>
+                                </action>
+                                <action id="0" name="Call function" sid="295333997563254" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">448{###}308</param>
+                                </action>
+                                <action id="0" name="Call function" sid="689558506515634" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">576{###}244</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="540800380865354" type="System">
+                                    <param id="0" name="Seconds">interval2</param>
+                                </action>
+                                <action id="0" name="Call function" sid="697161789827460" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuChoose&quot;</param>
+                                    <param id="1" name="Parameter {n}">4</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>horizontal scroll right</comment>
+                        <event-block sid="865327964446536">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="569488440818426" type="System">
+                                    <param id="0" name="Variable">rand</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="451968149191082" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">0{###}116</param>
+                                </action>
+                                <action id="0" name="Call function" sid="826859253064915" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">0{###}308</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="744748582391002" type="System">
+                                    <param id="0" name="Seconds">interval</param>
+                                </action>
+                                <action id="0" name="Call function" sid="122530407204357" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">64{###}-12</param>
+                                </action>
+                                <action id="0" name="Call function" sid="662979640557875" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">64{###}180</param>
+                                </action>
+                                <action id="0" name="Call function" sid="561787652606333" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">128{###}116</param>
+                                </action>
+                                <action id="0" name="Call function" sid="749688149666501" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">128{###}308</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="650772080459345" type="System">
+                                    <param id="0" name="Seconds">interval</param>
+                                </action>
+                                <action id="0" name="Call function" sid="600736721646585" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">192{###}-12</param>
+                                </action>
+                                <action id="0" name="Call function" sid="522454204969317" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">192{###}180</param>
+                                </action>
+                                <action id="0" name="Call function" sid="736642035698375" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">256{###}116</param>
+                                </action>
+                                <action id="0" name="Call function" sid="717615957470005" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">256{###}308</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="959550175017030" type="System">
+                                    <param id="0" name="Seconds">interval</param>
+                                </action>
+                                <action id="0" name="Call function" sid="870316946980658" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">320{###}-12</param>
+                                </action>
+                                <action id="0" name="Call function" sid="758727532205851" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">320{###}180</param>
+                                </action>
+                                <action id="0" name="Call function" sid="601194666969094" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">384{###}116</param>
+                                </action>
+                                <action id="0" name="Call function" sid="689651021516385" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">384{###}308</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="874715562204097" type="System">
+                                    <param id="0" name="Seconds">interval</param>
+                                </action>
+                                <action id="0" name="Call function" sid="603529528057486" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">448{###}-12</param>
+                                </action>
+                                <action id="0" name="Call function" sid="608136556436014" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">448{###}180</param>
+                                </action>
+                                <action id="0" name="Call function" sid="854193318073712" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">512{###}116</param>
+                                </action>
+                                <action id="0" name="Call function" sid="115176797302062" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">512{###}308</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="628696887282398" type="System">
+                                    <param id="0" name="Seconds">interval</param>
+                                </action>
+                                <action id="0" name="Call function" sid="618509947081572" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">576{###}-12</param>
+                                </action>
+                                <action id="0" name="Call function" sid="251809296146789" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">576{###}180</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="701961119286211" type="System">
+                                    <param id="0" name="Seconds">interval2</param>
+                                </action>
+                                <action id="0" name="Call function" sid="121544606475253" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuChoose&quot;</param>
+                                    <param id="1" name="Parameter {n}">5</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>horizontal scroll left</comment>
+                        <event-block sid="731681291614415">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="313198849756106" type="System">
+                                    <param id="0" name="Variable">rand</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="778955270917974" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">576{###}116</param>
+                                </action>
+                                <action id="0" name="Call function" sid="824613953767114" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">576{###}308</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="733382990766794" type="System">
+                                    <param id="0" name="Seconds">interval</param>
+                                </action>
+                                <action id="0" name="Call function" sid="716956656787859" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">512{###}-12</param>
+                                </action>
+                                <action id="0" name="Call function" sid="199662806552394" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">512{###}180</param>
+                                </action>
+                                <action id="0" name="Call function" sid="675360040869892" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">448{###}116</param>
+                                </action>
+                                <action id="0" name="Call function" sid="894328473993049" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">448{###}308</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="742738018462547" type="System">
+                                    <param id="0" name="Seconds">interval</param>
+                                </action>
+                                <action id="0" name="Call function" sid="737659746035719" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">384{###}-12</param>
+                                </action>
+                                <action id="0" name="Call function" sid="271698223983127" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">384{###}180</param>
+                                </action>
+                                <action id="0" name="Call function" sid="278508157080498" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">320{###}116</param>
+                                </action>
+                                <action id="0" name="Call function" sid="895572866786295" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">320{###}308</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="518577470884923" type="System">
+                                    <param id="0" name="Seconds">interval</param>
+                                </action>
+                                <action id="0" name="Call function" sid="493389993051872" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">256{###}-12</param>
+                                </action>
+                                <action id="0" name="Call function" sid="991818070389085" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">256{###}180</param>
+                                </action>
+                                <action id="0" name="Call function" sid="225141957300807" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">192{###}116</param>
+                                </action>
+                                <action id="0" name="Call function" sid="677233937122904" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">192{###}308</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="100855996182959" type="System">
+                                    <param id="0" name="Seconds">interval</param>
+                                </action>
+                                <action id="0" name="Call function" sid="232267794861165" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">128{###}-12</param>
+                                </action>
+                                <action id="0" name="Call function" sid="879654873478921" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">128{###}180</param>
+                                </action>
+                                <action id="0" name="Call function" sid="124009268244890" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">64{###}116</param>
+                                </action>
+                                <action id="0" name="Call function" sid="339010043434428" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">64{###}308</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="163510073950133" type="System">
+                                    <param id="0" name="Seconds">interval</param>
+                                </action>
+                                <action id="0" name="Call function" sid="960577645809156" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">0{###}-12</param>
+                                </action>
+                                <action id="0" name="Call function" sid="212568207331318" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">0{###}180</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="596591035301109" type="System">
+                                    <param id="0" name="Seconds">interval2</param>
+                                </action>
+                                <action id="0" name="Call function" sid="625096809786638" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuChoose&quot;</param>
+                                    <param id="1" name="Parameter {n}">6</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>horizontal scroll both halves</comment>
+                        <event-block sid="106543623255229">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="437360956714729" type="System">
+                                    <param id="0" name="Variable">rand</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="361786911095980" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">0{###}-12</param>
+                                </action>
+                                <action id="0" name="Call function" sid="649693246029723" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">0{###}180</param>
+                                </action>
+                                <action id="0" name="Call function" sid="564587868528472" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">576{###}116</param>
+                                </action>
+                                <action id="0" name="Call function" sid="953952902808600" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">576{###}308</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="158947307291643" type="System">
+                                    <param id="0" name="Seconds">interval</param>
+                                </action>
+                                <action id="0" name="Call function" sid="576437455934194" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">64{###}-12</param>
+                                </action>
+                                <action id="0" name="Call function" sid="286703044109138" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">64{###}180</param>
+                                </action>
+                                <action id="0" name="Call function" sid="658248889559824" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">448{###}116</param>
+                                </action>
+                                <action id="0" name="Call function" sid="375952059483427" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">448{###}308</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="191552800951155" type="System">
+                                    <param id="0" name="Seconds">interval</param>
+                                </action>
+                                <action id="0" name="Call function" sid="120597004697134" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">192{###}-12</param>
+                                </action>
+                                <action id="0" name="Call function" sid="760016204394637" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">192{###}180</param>
+                                </action>
+                                <action id="0" name="Call function" sid="874898167726314" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">320{###}116</param>
+                                </action>
+                                <action id="0" name="Call function" sid="501288945811127" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">320{###}308</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="715990650497957" type="System">
+                                    <param id="0" name="Seconds">interval</param>
+                                </action>
+                                <action id="0" name="Call function" sid="847536598189251" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">320{###}-12</param>
+                                </action>
+                                <action id="0" name="Call function" sid="560054306233401" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">320{###}180</param>
+                                </action>
+                                <action id="0" name="Call function" sid="478365753556870" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">192{###}116</param>
+                                </action>
+                                <action id="0" name="Call function" sid="916112598613951" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">192{###}308</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="408366992209704" type="System">
+                                    <param id="0" name="Seconds">interval</param>
+                                </action>
+                                <action id="0" name="Call function" sid="520107087793714" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">448{###}-12</param>
+                                </action>
+                                <action id="0" name="Call function" sid="960336275525579" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">448{###}180</param>
+                                </action>
+                                <action id="0" name="Call function" sid="798908114747616" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">64{###}116</param>
+                                </action>
+                                <action id="0" name="Call function" sid="294312753284620" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">64{###}308</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="286974070097731" type="System">
+                                    <param id="0" name="Seconds">interval</param>
+                                </action>
+                                <action id="0" name="Call function" sid="397294388458847" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">576{###}-12</param>
+                                </action>
+                                <action id="0" name="Call function" sid="792266534948939" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">576{###}180</param>
+                                </action>
+                                <action id="0" name="Call function" sid="992404440058403" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">0{###}116</param>
+                                </action>
+                                <action id="0" name="Call function" sid="272385108618081" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                    <param id="1" name="Parameter {n}">0{###}308</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="383627593604728" type="System">
+                                    <param id="0" name="Seconds">interval2</param>
+                                </action>
+                                <action id="0" name="Call function" sid="899453637796615" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_MenuChoose&quot;</param>
+                                    <param id="1" name="Parameter {n}">7</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="824458666196052">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="730596598325205" type="System">
+                                    <param id="0" name="Variable">rand</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">7</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="575421539081943">
+                                    <conditions />
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="727961024547782">
+                                            <conditions>
+                                                <condition id="-12" name="Repeat" sid="850097230079579" type="System">
+                                                    <param id="0" name="Count">5</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="983074201494954" type="Function">
+                                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                                    <param id="1" name="Parameter {n}">128*loopindex{###}-12</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="633516914493039" type="Function">
+                                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                                    <param id="1" name="Parameter {n}">128*loopindex{###}116</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="792615770180625" type="Function">
+                                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                                    <param id="1" name="Parameter {n}">128*loopindex{###}244</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="654414571597873">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="318613998015327" type="System">
+                                            <param id="0" name="Seconds">interval*2</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="535169121080107">
+                                            <conditions>
+                                                <condition id="-12" name="Repeat" sid="401079885539803" type="System">
+                                                    <param id="0" name="Count">5</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="331627237595814" type="Function">
+                                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                                    <param id="1" name="Parameter {n}">128*loopindex{###}52</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="622644276307539" type="Function">
+                                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                                    <param id="1" name="Parameter {n}">128*loopindex{###}180</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="565196142819124" type="Function">
+                                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                                    <param id="1" name="Parameter {n}">128*loopindex{###}308</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="249176131590107">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="145458465433980" type="System">
+                                            <param id="0" name="Seconds">interval*4</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="705174473555193">
+                                            <conditions>
+                                                <condition id="-12" name="Repeat" sid="171210860207886" type="System">
+                                                    <param id="0" name="Count">5</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="353520059432429" type="Function">
+                                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                                    <param id="1" name="Parameter {n}">64+128*loopindex{###}-12</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="810506094203779" type="Function">
+                                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                                    <param id="1" name="Parameter {n}">64+128*loopindex{###}116</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="761852465145676" type="Function">
+                                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                                    <param id="1" name="Parameter {n}">64+128*loopindex{###}244</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="852046982235618">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="485486216607281" type="System">
+                                            <param id="0" name="Seconds">interval*6</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="491590729938620">
+                                            <conditions>
+                                                <condition id="-12" name="Repeat" sid="154170123404697" type="System">
+                                                    <param id="0" name="Count">5</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="405553584881306" type="Function">
+                                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                                    <param id="1" name="Parameter {n}">64+128*loopindex{###}52</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="814678402776312" type="Function">
+                                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                                    <param id="1" name="Parameter {n}">64+128*loopindex{###}180</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="885112645897486" type="Function">
+                                                    <param id="0" name="Name">&quot;HUD_MenuThingies&quot;</param>
+                                                    <param id="1" name="Parameter {n}">64+128*loopindex{###}308</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="633997418319970">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-16" name="Wait" sid="583478926432945" type="System">
+                                                    <param id="0" name="Seconds">interval2</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="308161519889996" type="Function">
+                                                    <param id="0" name="Name">&quot;HUD_MenuChoose&quot;</param>
+                                                    <param id="1" name="Parameter {n}">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="534613653105757">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="977762195013597" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="452436808810884" type="System">
+                            <param id="0" name="Seconds">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="799596220853565" type="Function">
+                            <param id="0" name="Name">&quot;Menu_Create&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Main&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="757652289732538">
+                    <conditions />
+                    <actions>
+                        <action id="-24" name="Move to top" sid="138976111362629" type="Text" />
+                        <action id="-24" name="Move to top" sid="984691055948131" type="Menu_Cursor" />
+                        <action id="-24" name="Move to top" sid="161910962941747" type="Menu_Controls" />
+                    </actions>
+                </event-block>
+                <event-block sid="753293260682045">
+                    <conditions>
+                        <condition id="0" name="On function" sid="467871692893417" type="Function">
+                            <param id="0" name="Name">&quot;Menu_Create&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="946913171009847">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="597424748723499" type="System">
+                                    <param id="0" name="Object">Text</param>
+                                    <param id="1" name="Expression">find(Text.ID,&quot;Option_&quot;)</param>
+                                    <param id="2" name="Comparison">1</param>
+                                    <param id="3" name="Value">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="112671957140306" type="Menu_Cursor">
+                                    <param id="0" name="Instance variable">Current</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="505734402851940" type="Menu_Cursor">
+                                    <param id="0" name="Instance variable">Menu</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="200392218144242" type="Text" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="167765032777856">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="612286335532308" type="Text">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Menu_Title&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="274337836880104" type="Text">
+                                    <param id="0" name="Text">JSON_PERSIST.Value(0,&quot;Menus&quot;,Menu_Cursor.Menu,&quot;Title&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="385615666341548">
+                            <conditions>
+                                <condition id="60" inverted="1" name="Is undefined" sid="116745286128732" type="JSON_PERSIST">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}">&quot;Menus&quot;{###}Menu_Cursor.Menu{###}&quot;Description&quot;</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="114388463020078" type="Text">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Menu_Description&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="938753023978700" type="Text">
+                                    <param id="0" name="Text">JSON_PERSIST.Value(0,&quot;Menus&quot;,Menu_Cursor.Menu,&quot;Description&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="297060461161817">
+                            <conditions>
+                                <condition id="100" name="For each property" sid="138839954217451" type="JSON_PERSIST">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}">&quot;Menus&quot;{###}Menu_Cursor.Menu</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Compare two values" sid="369624271019701" type="System">
+                                    <param id="0" name="First value">JSON_PERSIST.CurrentKey</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;Title&quot;</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Compare two values" sid="125396898426885" type="System">
+                                    <param id="0" name="First value">JSON_PERSIST.CurrentKey</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;Description&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="214024066959663">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="374359079936646" type="System">
+                                            <param id="0" name="Object to create">Text_Regular</param>
+                                            <param id="1" name="Layer">&quot;Menu&quot;</param>
+                                            <param id="2" name="X">24</param>
+                                            <param id="3" name="Y">24+(20*int(JSON_PERSIST.CurrentKey))</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="915240741008702" type="Text_Regular">
+                                            <param id="0" name="Instance variable">ID</param>
+                                            <param id="1" name="Value">&quot;Option_&quot;&amp;JSON_PERSIST.CurrentKey</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="601946558692808" type="Text_Regular">
+                                            <param id="0" name="Text">JSON_PERSIST.Value(0,&quot;Menus&quot;,Menu_Cursor.Menu,JSON_PERSIST.CurrentKey,&quot;Title&quot;)</param>
+                                        </action>
+                                        <action id="-27" name="Set effect enabled" sid="544240778062683" type="Text_Regular">
+                                            <param id="0" name="Mode">0</param>
+                                            <param id="1" name="Effect">&quot;SetColor&quot;</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="901920110435826">
+                                            <conditions>
+                                                <condition id="60" inverted="1" name="Is undefined" sid="127880527246552" type="JSON_PERSIST">
+                                                    <param id="0" name="Reference point">0</param>
+                                                    <param id="1" name="Key {n}">&quot;Menus&quot;{###}Menu_Cursor.Menu{###}tokenat(Text_Regular.ID,1,&quot;_&quot;){###}&quot;Type&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="963283114831984">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="446545579832588" type="System">
+                                                            <param id="0" name="First value">JSON_PERSIST.Value(0,&quot;Menus&quot;,Menu_Cursor.Menu,tokenat(Text_Regular.ID,1,&quot;_&quot;),&quot;Type&quot;)</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">&quot;Disabled&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-27" name="Set effect enabled" sid="467145112861739" type="Text_Regular">
+                                                            <param id="0" name="Mode">1</param>
+                                                            <param id="1" name="Effect">&quot;SetColor&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="840427892885098">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="615907394676508" type="Keyboard">
+                            <param id="0" name="Key">38</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="682922388480902" type="Menu_Cursor">
+                            <param id="0" name="Instance variable">Current</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="292270610572726">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="395763075933100" type="Menu_Cursor">
+                                    <param id="0" name="Instance variable">Current</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">-1</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="712687302491977" type="System">
+                                    <param id="0" name="Object">Text</param>
+                                    <param id="1" name="Expression">find(Text.ID,&quot;Option_&quot;)</param>
+                                    <param id="2" name="Comparison">1</param>
+                                    <param id="3" name="Value">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="706677652563979" type="Menu_Cursor">
+                                    <param id="0" name="Instance variable">Current</param>
+                                    <param id="1" name="Value">Text.PickedCount-1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="618080324866088">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="710000563735260" type="Keyboard">
+                            <param id="0" name="Key">40</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="330088481973613" type="Menu_Cursor">
+                            <param id="0" name="Instance variable">Current</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="988914004502037">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="313789502952291" type="System">
+                                    <param id="0" name="Object">Text</param>
+                                    <param id="1" name="Expression">find(Text.ID,&quot;Option_&quot;)</param>
+                                    <param id="2" name="Comparison">1</param>
+                                    <param id="3" name="Value">-1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="315669191937653" type="Menu_Cursor">
+                                    <param id="0" name="Instance variable">Current</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Text.PickedCount</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="736085782335948" type="Menu_Cursor">
+                                    <param id="0" name="Instance variable">Current</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="164086364163134">
+                    <conditions />
+                    <actions>
+                        <action id="-2" name="Set Y" sid="604212896426344" type="Menu_Cursor">
+                            <param id="0" name="Y">24+(20*Self.Current)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="838231835111921">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="561504387311311" type="Keyboard">
+                            <param id="0" name="Key">90</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="699114917925022">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="277006645100212" type="System">
+                                    <param id="0" name="Object">Text</param>
+                                    <param id="1" name="Expression">Text.ID</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">&quot;Option_&quot;&amp;Menu_Cursor.Current</param>
+                                </condition>
+                                <condition id="60" inverted="1" name="Is undefined" sid="566795353772428" type="JSON_PERSIST">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}">&quot;Menus&quot;{###}Menu_Cursor.Menu{###}str(Menu_Cursor.Current){###}&quot;Type&quot;</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="464605332443797" type="System">
+                                    <param id="0" name="First value">JSON_PERSIST.Value(0,&quot;Menus&quot;,Menu_Cursor.Menu,str(Menu_Cursor.Current),&quot;Type&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;Disabled&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="469788390664699" type="Function">
+                                    <param id="0" name="Name">&quot;Audio_PlaySFX&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;honk&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="404946230364966">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="598110308665274" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="99" name="Play at path" sid="643396379305312" type="BetterAudio">
+                            <param id="0" name="Path">Var_CONSTANTS.Path_Assets&amp;&quot;\assets\music\menu.ogg&quot;</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;music&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="703399494737796">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="935771817872893" type="Keyboard">
+                    <param id="0" name="Key">90</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="799412640144226" type="System">
+                    <param id="0" name="Group name">&quot;Group&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="367274435877682" type="System">
+                    <param id="0" name="Layer">&quot;Menu&quot;</param>
+                    <param id="1" name="Visibility">1</param>
                 </action>
             </actions>
         </event-block>

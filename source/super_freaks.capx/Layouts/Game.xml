@@ -1288,7 +1288,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite" uid="95">
+                <instance type="Special_PathPoint" uid="95">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1347,7 +1347,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TiledBackground" uid="98">
+                <instance type="Special_PathVisual" uid="98">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Left</hotspot>
@@ -1536,6 +1536,60 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Tiles_GMS1" uid="113">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <offset-x>0</offset-x>
+                        <offset-y>0</offset-y>
+                        <sub-width>32</sub-width>
+                        <sub-height>32</sub-height>
+                    </properties>
+                    <instance-variables>
+                        <id></id>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Obj_Yorb10" uid="114">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Obj_ImportID></Obj_ImportID>
+                        <Obj_ImportInstance></Obj_ImportInstance>
+                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>128</x>
+                        <y>539</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -1679,7 +1733,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TiledSprite" uid="103">
+                <instance type="Special_WaterTop" uid="103">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -1701,7 +1755,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TiledSprite2" uid="104">
+                <instance type="Special_Water" uid="104">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -1764,8 +1818,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>5</x>
-                        <y>-66</y>
+                        <x>1</x>
+                        <y>-65</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -2285,6 +2339,15 @@
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="SetColor">
+                            <parameters>
+                                <blue>0</blue>
+                                <green>0</green>
+                                <red>0</red>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -2332,6 +2395,15 @@
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="SetColor">
+                            <parameters>
+                                <blue>0</blue>
+                                <green>0</green>
+                                <red>0</red>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -2401,6 +2473,15 @@
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="SetColor">
+                            <parameters>
+                                <blue>0</blue>
+                                <green>0</green>
+                                <red>0</red>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -2435,7 +2516,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="HUD_Message" uid="90">
+                <instance type="Menu_Window" uid="90">
                     <properties>
                         <left-margin>16</left-margin>
                         <right-margin>16</right-margin>
@@ -2517,6 +2598,15 @@
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="SetColor">
+                            <parameters>
+                                <blue>0</blue>
+                                <green>0</green>
+                                <red>0</red>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -3041,13 +3131,22 @@
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="SetColor">
+                            <parameters>
+                                <blue>0</blue>
+                                <green>0</green>
+                                <red>0</red>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>426</x>
+                        <x>270</x>
                         <y>3</y>
                         <z>0</z>
-                        <width>210</width>
+                        <width>366</width>
                         <height>20</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -3074,12 +3173,13 @@
                 <ExecJS_Return>a</ExecJS_Return>
                 <Path_Assets></Path_Assets>
                 <Path_SourceCode1u></Path_SourceCode1u>
+                <Path_SourceCode1r></Path_SourceCode1r>
                 <LogVerbose>1</LogVerbose>
             </instance-variables>
         </instance>
         <instance type="Var_Level" uid="59">
             <instance-variables>
-                <ImportRoom>rm_fruit_1</ImportRoom>
+                <ImportRoom>rmToyTowers3</ImportRoom>
                 <Difficulty>Normal</Difficulty>
                 <ImportErrorAttempts>0</ImportErrorAttempts>
             </instance-variables>

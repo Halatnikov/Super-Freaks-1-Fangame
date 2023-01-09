@@ -622,36 +622,36 @@
                                     </conditions>
                                     <actions>
                                         <action id="-3" name="Create object" sid="996525818516992" type="System">
-                                            <param id="0" name="Object to create">Sprite</param>
+                                            <param id="0" name="Object to create">Special_PathPoint</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                             <param id="2" name="X">float(JSON_Common.Value(0,&quot;points&quot;,loopindex,&quot;x&quot;))</param>
                                             <param id="3" name="Y">float(JSON_Common.Value(0,&quot;points&quot;,loopindex,&quot;y&quot;))</param>
                                         </action>
-                                        <action id="-10" name="Set value" sid="639444314550092" type="Sprite">
+                                        <action id="-10" name="Set value" sid="639444314550092" type="Special_PathPoint">
                                             <param id="0" name="Instance variable">Path_ID</param>
                                             <param id="1" name="Value">Function.Param(0)</param>
                                         </action>
-                                        <action id="-10" name="Set value" sid="597133520000262" type="Sprite">
+                                        <action id="-10" name="Set value" sid="597133520000262" type="Special_PathPoint">
                                             <param id="0" name="Instance variable">path_curved</param>
                                             <param id="1" name="Value">int(JSON_COMMON.Value(0,&quot;kind&quot;))</param>
                                         </action>
-                                        <action id="-10" name="Set value" sid="293753502145824" type="Sprite">
+                                        <action id="-10" name="Set value" sid="293753502145824" type="Special_PathPoint">
                                             <param id="0" name="Instance variable">path_closed</param>
                                             <param id="1" name="Value">JSON_COMMON.Value(0,&quot;closed&quot;)</param>
                                         </action>
-                                        <action id="-10" name="Set value" sid="159370760687457" type="Sprite">
+                                        <action id="-10" name="Set value" sid="159370760687457" type="Special_PathPoint">
                                             <param id="0" name="Instance variable">Path_Points</param>
                                             <param id="1" name="Value">JSON_COMMON.Size(0,&quot;points&quot;)</param>
                                         </action>
-                                        <action id="-13" name="Set boolean" sid="453746176705824" type="Sprite">
+                                        <action id="-13" name="Set boolean" sid="453746176705824" type="Special_PathPoint">
                                             <param id="0" name="Instance variable">Path_Visible</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
-                                        <action id="-10" name="Set value" sid="616769316154785" type="Sprite">
+                                        <action id="-10" name="Set value" sid="616769316154785" type="Special_PathPoint">
                                             <param id="0" name="Instance variable">point_speed</param>
                                             <param id="1" name="Value">float(JSON_COMMON.Value(0,&quot;points&quot;,loopindex,&quot;speed&quot;))</param>
                                         </action>
-                                        <action id="-10" name="Set value" sid="851595632461175" type="Sprite">
+                                        <action id="-10" name="Set value" sid="851595632461175" type="Special_PathPoint">
                                             <param id="0" name="Instance variable">Point_ID</param>
                                             <param id="1" name="Value">loopindex</param>
                                         </action>
@@ -724,7 +724,7 @@
                                                     <param id="0" name="Variable">y2</param>
                                                     <param id="1" name="Value">float(JSON_Common.Value(0,&quot;points&quot;,loopindex+1,&quot;y&quot;))</param>
                                                 </action>
-                                                <action id="5" name="Set frame" sid="730107032729819" type="Sprite">
+                                                <action id="5" name="Set frame" sid="730107032729819" type="Special_PathPoint">
                                                     <param id="0" name="Frame number">1</param>
                                                 </action>
                                             </actions>
@@ -751,7 +751,7 @@
                                                     <param id="0" name="Variable">y2</param>
                                                     <param id="1" name="Value">float(JSON_Common.Value(0,&quot;points&quot;,0,&quot;y&quot;))</param>
                                                 </action>
-                                                <action id="5" name="Set frame" sid="467823646322981" type="Sprite">
+                                                <action id="5" name="Set frame" sid="467823646322981" type="Special_PathPoint">
                                                     <param id="0" name="Frame number">1</param>
                                                 </action>
                                             </actions>
@@ -771,20 +771,20 @@
                                             </conditions>
                                             <actions>
                                                 <action id="-3" name="Create object" sid="469286675803618" type="System">
-                                                    <param id="0" name="Object to create">TiledBackground</param>
+                                                    <param id="0" name="Object to create">Special_PathVisual</param>
                                                     <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                     <param id="2" name="X">x1</param>
                                                     <param id="3" name="Y">y1</param>
                                                 </action>
-                                                <action id="-8" name="Set angle" sid="338058861224370" type="TiledBackground">
+                                                <action id="-8" name="Set angle" sid="338058861224370" type="Special_PathVisual">
                                                     <param id="0" name="Angle">angle(x1,y1,x2,y2)</param>
                                                 </action>
-                                                <action id="-5" name="Set width" sid="725875100608575" type="TiledBackground">
+                                                <action id="-5" name="Set width" sid="725875100608575" type="Special_PathVisual">
                                                     <param id="0" name="Width">distance(x1,y1,x2,y2)</param>
                                                 </action>
-                                                <action id="-10" name="Set value" sid="274664466417781" type="TiledBackground">
+                                                <action id="-10" name="Set value" sid="274664466417781" type="Special_PathVisual">
                                                     <param id="0" name="Instance variable">ParentUID</param>
-                                                    <param id="1" name="Value">Sprite.UID</param>
+                                                    <param id="1" name="Value">Special_PathPoint.UID</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -803,7 +803,7 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="5" name="Set frame" sid="384194054066298" type="Sprite">
+                                                <action id="5" name="Set frame" sid="384194054066298" type="Special_PathPoint">
                                                     <param id="0" name="Frame number">0</param>
                                                 </action>
                                             </actions>
@@ -823,7 +823,7 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="5" name="Set frame" sid="699241375958510" type="Sprite">
+                                                <action id="5" name="Set frame" sid="699241375958510" type="Special_PathPoint">
                                                     <param id="0" name="Frame number">0</param>
                                                 </action>
                                             </actions>
@@ -831,7 +831,7 @@
                                         <event-block sid="262307261918786">
                                             <conditions />
                                             <actions>
-                                                <action id="-24" name="Move to top" sid="444338399504614" type="Sprite" />
+                                                <action id="-24" name="Move to top" sid="444338399504614" type="Special_PathPoint" />
                                             </actions>
                                         </event-block>
                                     </sub-events>
@@ -845,6 +845,269 @@
                             </sub-events>
                         </event-block>
                     </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="493685001664427" title="Importing GMS1 Room">
+            <sub-events>
+                <event-block sid="703214703206195">
+                    <conditions>
+                        <condition id="0" name="On function" sid="785119604633210" type="Function">
+                            <param id="0" name="Name">&quot;GMS1_RoomImport&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="550773678552093" type="Function">
+                            <param id="0" name="Name">&quot;Room_Unload&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>this is unrelated but thanks to https://github.com/cubeww/UndertaleModTool-ExportToProjectScript (utmt version 0.3.0) for decompiling this</comment>
+                        <event-block sid="566935092863443">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Load" sid="397265638055721" type="XML_GMS1Room">
+                                    <param id="0" name="XML">NWjs.ReadFile(Var_CONSTANTS.Path_SourceCode1r&amp;&quot;\rooms\&quot;&amp;Var_Level.ImportRoom&amp;&quot;.room.gmx&quot;)</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="976489996279235" type="Tiles_Main">
+                                    <param id="0" name="Width">XML_GMS1Room.NumberValue(&quot;/room/width&quot;)</param>
+                                    <param id="1" name="Height">XML_GMS1Room.NumberValue(&quot;/room/height&quot;)</param>
+                                </action>
+                                <action id="1" name="Load image from URL" sid="491631808257223" type="Tiles_GMS1">
+                                    <param id="0" name="URI">Var_CONSTANTS.Path_Assets&amp;&quot;\assets\tilesets\1r_tiles.png&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>&quot;tiles&quot;</comment>
+                        <event-block sid="781970514112423">
+                            <conditions>
+                                <condition id="-12" name="Repeat" sid="748330337872554" type="System">
+                                    <param id="0" name="Count">XML_GMS1Room.NodeCount(&quot;/room/tiles/tile&quot;)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="971799926679851" type="System">
+                                    <param id="0" name="Object to create">Tiles_GMS1</param>
+                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                    <param id="2" name="X">XML_GMS1Room.NumberValue(&quot;/room/tiles/tile[&quot;&amp;loopindex+1&amp;&quot;]/@x&quot;)</param>
+                                    <param id="3" name="Y">XML_GMS1Room.NumberValue(&quot;/room/tiles/tile[&quot;&amp;loopindex+1&amp;&quot;]/@y&quot;)</param>
+                                </action>
+                                <action id="2" name="Set sub-image offset and size" sid="497331747137661" type="Tiles_GMS1">
+                                    <param id="0" name="offset x">XML_GMS1Room.NumberValue(&quot;/room/tiles/tile[&quot;&amp;loopindex+1&amp;&quot;]/@xo&quot;)</param>
+                                    <param id="1" name="offset y">XML_GMS1Room.NumberValue(&quot;/room/tiles/tile[&quot;&amp;loopindex+1&amp;&quot;]/@yo&quot;)</param>
+                                    <param id="2" name="sub width">XML_GMS1Room.NumberValue(&quot;/room/tiles/tile[&quot;&amp;loopindex+1&amp;&quot;]/@w&quot;)</param>
+                                    <param id="3" name="sub height">XML_GMS1Room.NumberValue(&quot;/room/tiles/tile[&quot;&amp;loopindex+1&amp;&quot;]/@h&quot;)</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="433274401897584" type="Tiles_GMS1">
+                                    <param id="0" name="Width">XML_GMS1Room.NumberValue(&quot;/room/tiles/tile[&quot;&amp;loopindex+1&amp;&quot;]/@w&quot;)</param>
+                                    <param id="1" name="Height">XML_GMS1Room.NumberValue(&quot;/room/tiles/tile[&quot;&amp;loopindex+1&amp;&quot;]/@h&quot;)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="434718144372158" type="Tiles_GMS1">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Value">XML_GMS1Room.StringValue(&quot;/room/tiles/tile[&quot;&amp;loopindex+1&amp;&quot;]/@id&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>objects</comment>
+                        <event-block sid="407130027885296">
+                            <conditions>
+                                <condition id="-12" name="Repeat" sid="869371341016743" type="System">
+                                    <param id="0" name="Count">XML_GMS1Room.NodeCount(&quot;/room/instances/instance&quot;)</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="instance" sid="160245767517426" static="1" type="text"></variable>
+                                <event-block sid="755214138019614">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="985294151866039" type="System">
+                                            <param id="0" name="Variable">instance</param>
+                                            <param id="1" name="Value">XML_GMS1Room.StringValue(&quot;/room/instances/instance[&quot;&amp;loopindex&amp;&quot;]/@objName&quot;)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="318687410840665">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="158391424714917" type="System">
+                                            <param id="0" name="Variable">instance</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;objWall16&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="393380439747310" type="System">
+                                            <param id="0" name="Object to create">Col_Solid</param>
+                                            <param id="1" name="Layer">&quot;Collisions&quot;</param>
+                                            <param id="2" name="X">XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex&amp;&quot;]/@x&quot;)</param>
+                                            <param id="3" name="Y">XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex&amp;&quot;]/@y&quot;)</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="268668917927565" type="Col_Solid">
+                                            <param id="0" name="Width">int(16*float(XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex&amp;&quot;]/@scaleX&quot;)))</param>
+                                            <param id="1" name="Height">int(16*float(XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex&amp;&quot;]/@scaleY&quot;)))</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="382073482066125">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="876775170986402" type="System">
+                                            <param id="0" name="Variable">instance</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;objStartPos&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="109102572193093" type="System">
+                                            <param id="0" name="Object to create">Special_StartPos</param>
+                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                            <param id="2" name="X">XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex&amp;&quot;]/@x&quot;)</param>
+                                            <param id="3" name="Y">XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex&amp;&quot;]/@y&quot;)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="266098206860927">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="546375194845924" type="System">
+                                            <param id="0" name="Variable">instance</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;objBlueRay&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="211471917816597" type="System">
+                                            <param id="0" name="Object to create">Obj_Ray</param>
+                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                            <param id="2" name="X">XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex&amp;&quot;]/@x&quot;)+16</param>
+                                            <param id="3" name="Y">XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex&amp;&quot;]/@y&quot;)+32</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="976515028114213">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="824978634465078" type="System">
+                                            <param id="0" name="Variable">instance</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;objYorb&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="526911875867879" type="System">
+                                            <param id="0" name="Object to create">Obj_Yorb</param>
+                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                            <param id="2" name="X">XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex&amp;&quot;]/@x&quot;)+16</param>
+                                            <param id="3" name="Y">XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex&amp;&quot;]/@y&quot;)+16</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="565373099336819">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="439712402034172" type="System">
+                                            <param id="0" name="Variable">instance</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;objHeart&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="442900937322009" type="System">
+                                            <param id="0" name="Object to create">Obj_Heart</param>
+                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                            <param id="2" name="X">XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex&amp;&quot;]/@x&quot;)+16</param>
+                                            <param id="3" name="Y">XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex&amp;&quot;]/@y&quot;)+16</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="312839021882912">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="381782001448231" type="System">
+                                            <param id="0" name="Variable">instance</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;objBoneyM&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="623933434730329" type="System">
+                                            <param id="0" name="Object to create">Enemy_BoneyM</param>
+                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                            <param id="2" name="X">XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex&amp;&quot;]/@x&quot;)</param>
+                                            <param id="3" name="Y">XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex&amp;&quot;]/@y&quot;)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="294666640624607">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="563481550776188" type="System">
+                                            <param id="0" name="Variable">instance</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;objSkizzor&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="517363512612345" type="System">
+                                            <param id="0" name="Object to create">Enemy_Skizzor</param>
+                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                            <param id="2" name="X">XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex&amp;&quot;]/@x&quot;)+16</param>
+                                            <param id="3" name="Y">XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex&amp;&quot;]/@y&quot;)+16</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="279777139781470">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="223326732869789" type="System">
+                                            <param id="0" name="Variable">instance</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;objPinhead&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="798251913818774" type="System">
+                                            <param id="0" name="Object to create">Enemy_Pinhead</param>
+                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                            <param id="2" name="X">XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex&amp;&quot;]/@x&quot;)</param>
+                                            <param id="3" name="Y">XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex&amp;&quot;]/@y&quot;)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="996653216825573">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="260919245572652" type="System">
+                                            <param id="0" name="Variable">instance</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;obj_yorb_10&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="994597655228276" type="System">
+                                            <param id="0" name="Object to create">Obj_Yorb10</param>
+                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                            <param id="2" name="X">XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex&amp;&quot;]/@x&quot;)+16</param>
+                                            <param id="3" name="Y">XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex&amp;&quot;]/@y&quot;)+16</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="575729636085783">
+                            <conditions />
+                            <actions>
+                                <action id="-16" name="Wait" sid="245101227015077" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="826401176049534" type="Function">
+                                    <param id="0" name="Name">&quot;Room_Init&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="386301105023757" title="GMS2 Room Init">
+            <sub-events>
+                <event-block sid="680101580177639">
+                    <conditions />
+                    <actions />
                 </event-block>
             </sub-events>
         </event-group>
@@ -863,11 +1126,22 @@
                             <param id="0" name="Layer">&quot;GLOBAL_Loading&quot;</param>
                             <param id="1" name="Visibility">1</param>
                         </action>
-                        <action id="0" name="Call function" sid="662438919221416" type="Function">
+                        <action disabled="1" id="0" name="Call function" sid="662438919221416" type="Function">
                             <param id="0" name="Name">&quot;GMS2_RoomImport&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="260281030328202">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="509268341531310" type="Function">
+                                    <param id="0" name="Name">&quot;GMS1_RoomImport&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="266697309645426">
                     <conditions>
@@ -951,9 +1225,13 @@
                         <action id="-9" name="Destroy" sid="365192406075485" type="Special_TimedStarPie" />
                         <action id="-9" name="Destroy" sid="701085289011264" type="Special_StarArrowStars" />
                         <action id="-9" name="Destroy" sid="491016988973140" type="JSON_COMMON" />
-                        <action id="-9" name="Destroy" sid="990779449453444" type="Sprite" />
-                        <action id="-9" name="Destroy" sid="682621879700006" type="TiledBackground" />
+                        <action id="-9" name="Destroy" sid="990779449453444" type="Special_PathPoint" />
+                        <action id="-9" name="Destroy" sid="682621879700006" type="Special_PathVisual" />
                         <action id="-9" name="Destroy" sid="125116793515645" type="Special_EnemyGroundCollision" />
+                        <action id="0" name="Load" sid="723043322507202" type="XML_GMS1Room">
+                            <param id="0" name="XML">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="381358754147011" type="Tiles_GMS1" />
                     </actions>
                 </event-block>
                 <comment>after loading room</comment>
@@ -2553,6 +2831,37 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <event-block any="1" sid="570479445329954">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="505867419786710" type="System">
+                                            <param id="0" name="Object to create">Obj_Chain</param>
+                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                            <param id="2" name="X">Obj_FruitPlatform.X</param>
+                                            <param id="3" name="Y">Obj_FruitPlatform.Y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="933931332953432" type="Obj_Chain">
+                                            <param id="0" name="Instance variable">chain_segments</param>
+                                            <param id="1" name="Value">Function.Call(&quot;GMS2_InstanceProperty&quot;,Obj_FruitPlatform.Obj_ImportInstance,&quot;chain_segments&quot;,&quot;1&quot;)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="503746377831971" type="Obj_Chain">
+                                            <param id="0" name="Instance variable">starting_angle</param>
+                                            <param id="1" name="Value">int(Function.Call(&quot;GMS2_InstanceProperty&quot;,Obj_FruitPlatform.Obj_ImportInstance,&quot;starting_angle&quot;,&quot;0&quot;))</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="980709597370406" type="Obj_Chain">
+                                            <param id="0" name="Instance variable">swing_speed</param>
+                                            <param id="1" name="Value">Function.Call(&quot;GMS2_InstanceProperty&quot;,Obj_FruitPlatform.Obj_ImportInstance,&quot;swing_speed&quot;,&quot;1&quot;)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="624081242699871" type="Obj_Chain">
+                                            <param id="0" name="Instance variable">circle_angle</param>
+                                            <param id="1" name="Value">int(Function.Call(&quot;GMS2_InstanceProperty&quot;,Obj_FruitPlatform.Obj_ImportInstance,&quot;circle_angle&quot;,&quot;90&quot;))</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="405019543658417" type="Obj_Chain">
+                                            <param id="0" name="Instance variable">AttachedUID</param>
+                                            <param id="1" name="Value">Obj_FruitPlatform.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                             </sub-events>
                         </event-block>
                         <event-block sid="316485696103557">
@@ -2566,37 +2875,6 @@
                             <actions>
                                 <action id="5" name="Set frame" sid="173401062282480" type="Obj_FruitPlatform">
                                     <param id="0" name="Frame number">clamp(Self.Segments,1,8)-1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block any="1" sid="570479445329954">
-                            <conditions />
-                            <actions>
-                                <action id="-3" name="Create object" sid="505867419786710" type="System">
-                                    <param id="0" name="Object to create">Obj_Chain</param>
-                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                    <param id="2" name="X">Obj_FruitPlatform.X</param>
-                                    <param id="3" name="Y">Obj_FruitPlatform.Y</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="933931332953432" type="Obj_Chain">
-                                    <param id="0" name="Instance variable">chain_segments</param>
-                                    <param id="1" name="Value">Function.Call(&quot;GMS2_InstanceProperty&quot;,Obj_FruitPlatform.Obj_ImportInstance,&quot;chain_segments&quot;,&quot;1&quot;)</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="503746377831971" type="Obj_Chain">
-                                    <param id="0" name="Instance variable">starting_angle</param>
-                                    <param id="1" name="Value">int(Function.Call(&quot;GMS2_InstanceProperty&quot;,Obj_FruitPlatform.Obj_ImportInstance,&quot;starting_angle&quot;,&quot;0&quot;))</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="980709597370406" type="Obj_Chain">
-                                    <param id="0" name="Instance variable">swing_speed</param>
-                                    <param id="1" name="Value">Function.Call(&quot;GMS2_InstanceProperty&quot;,Obj_FruitPlatform.Obj_ImportInstance,&quot;swing_speed&quot;,&quot;1&quot;)</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="624081242699871" type="Obj_Chain">
-                                    <param id="0" name="Instance variable">circle_angle</param>
-                                    <param id="1" name="Value">int(Function.Call(&quot;GMS2_InstanceProperty&quot;,Obj_FruitPlatform.Obj_ImportInstance,&quot;circle_angle&quot;,&quot;90&quot;))</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="405019543658417" type="Obj_Chain">
-                                    <param id="0" name="Instance variable">AttachedUID</param>
-                                    <param id="1" name="Value">Obj_FruitPlatform.UID</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -2675,8 +2953,35 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="901946418971997">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="446375597517810" type="Player">
+                            <param id="0" name="Object">Obj_Yorb10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="158109298404573" type="Function">
+                            <param id="0" name="Name">&quot;Audio_PlaySFX&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;yorb&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="712790766673131" type="Function">
+                            <param id="0" name="Name">&quot;Audio_PlaySFX&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;powerup&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="381669099227335" type="Obj_Yorb10" />
+                        <action id="-11" name="Add to" sid="823873153933760" type="Var_Player">
+                            <param id="0" name="Instance variable">Yorbs</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="766459617355244">
                     <conditions>
+                        <condition id="-8" name="Compare two values" sid="753132507586827" type="System">
+                            <param id="0" name="First value">Var_Player.Yorbs</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">99</param>
+                        </condition>
                         <condition id="-8" name="Compare two values" sid="990960023123045" type="System">
                             <param id="0" name="First value">Var_Player.Yorbs%100</param>
                             <param id="1" name="Comparison">5</param>
@@ -2692,9 +2997,6 @@
                         <action id="-11" name="Add to" sid="639638088158540" type="Var_Player">
                             <param id="0" name="Instance variable">Hearts</param>
                             <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-6" name="Set height" sid="898567825718176" type="HUD_HPBar">
-                            <param id="0" name="Height">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -3091,20 +3393,6 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="987647593790407">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="646091535471115" type="Text">
-                            <param id="0" name="Instance variable">ID</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;fps&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="783122665655800" type="Text">
-                            <param id="0" name="Text">fps&amp;&quot;|&quot;&amp;round(ImageMemoryUsage)&amp;&quot;MB|&quot;&amp;round(cpuutilisation*100)&amp;&quot;%&quot;&amp;&quot;|&quot;&amp;objectcount</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <comment></comment>
                 <event-block sid="190208353425480">
                     <conditions>
@@ -3254,6 +3542,14 @@
                     <actions>
                         <action behavior="LiteTween" id="11" name="Reverse" sid="524104975402842" type="HUD_HP">
                             <param id="0" name="Reverse mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="126246345511409">
+                    <conditions />
+                    <actions>
+                        <action id="-6" name="Set height" sid="836472596540833" type="HUD_HPBar">
+                            <param id="0" name="Height">((Var_Player.Yorbs%100)/100)*32</param>
                         </action>
                     </actions>
                 </event-block>
@@ -4520,20 +4816,20 @@
                         <action id="-15" name="Set visible" sid="837753539026234" type="Text">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-3" name="Set position" sid="328097465571456" type="HUD_Message">
+                        <action id="-3" name="Set position" sid="328097465571456" type="Menu_Window">
                             <param id="0" name="X">OriginalWindowWidth/2</param>
                             <param id="1" name="Y">OriginalWindowHeight/2</param>
                         </action>
-                        <action id="-7" name="Set size" sid="861103798104303" type="HUD_Message">
+                        <action id="-7" name="Set size" sid="861103798104303" type="Menu_Window">
                             <param id="0" name="Width">32</param>
                             <param id="1" name="Height">32</param>
                         </action>
-                        <action behavior="LiteTween" id="3" name="Set target" sid="354976890423978" type="HUD_Message">
+                        <action behavior="LiteTween" id="3" name="Set target" sid="354976890423978" type="Menu_Window">
                             <param id="0" name="Target is">4</param>
                             <param id="1" name="Relativity">0</param>
                             <param id="2" name="Value">OriginalWindowWidth-64</param>
                         </action>
-                        <action behavior="LiteTween2" id="3" name="Set target" sid="703826009885117" type="HUD_Message">
+                        <action behavior="LiteTween2" id="3" name="Set target" sid="703826009885117" type="Menu_Window">
                             <param id="0" name="Target is">5</param>
                             <param id="1" name="Relativity">0</param>
                             <param id="2" name="Value">OriginalWindowHeight-64</param>
@@ -4563,11 +4859,11 @@
                         <action id="0" name="Set text" sid="727595470297881" type="Text">
                             <param id="0" name="Text">replace(Obj_WalkieTalkie.hint,&quot;&quot;&quot;&quot;,&quot;&quot;)</param>
                         </action>
-                        <action behavior="LiteTween" id="10" name="Start" sid="449760712670892" type="HUD_Message">
+                        <action behavior="LiteTween" id="10" name="Start" sid="449760712670892" type="Menu_Window">
                             <param id="0" name="Start Mode">0</param>
                             <param id="1" name="Force use current">0</param>
                         </action>
-                        <action behavior="LiteTween2" id="10" name="Start" sid="780690758289922" type="HUD_Message">
+                        <action behavior="LiteTween2" id="10" name="Start" sid="780690758289922" type="Menu_Window">
                             <param id="0" name="Start Mode">0</param>
                             <param id="1" name="Force use current">0</param>
                         </action>
@@ -4579,7 +4875,7 @@
                 </event-block>
                 <event-block sid="162593050390504">
                     <conditions>
-                        <condition behavior="LiteTween" id="4" name="On tween end" sid="612320527897341" type="HUD_Message" />
+                        <condition behavior="LiteTween" id="4" name="On tween end" sid="612320527897341" type="Menu_Window" />
                         <condition id="-7" name="Compare instance variable" sid="599044195844101" type="Text">
                             <param id="0" name="Instance variable">ID</param>
                             <param id="1" name="Comparison">0</param>
@@ -4612,10 +4908,10 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="LiteTween" id="11" name="Reverse" sid="823550059975909" type="HUD_Message">
+                                <action behavior="LiteTween" id="11" name="Reverse" sid="823550059975909" type="Menu_Window">
                                     <param id="0" name="Reverse mode">1</param>
                                 </action>
-                                <action behavior="LiteTween2" id="11" name="Reverse" sid="487250592685500" type="HUD_Message">
+                                <action behavior="LiteTween2" id="11" name="Reverse" sid="487250592685500" type="Menu_Window">
                                     <param id="0" name="Reverse mode">1</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="848485519684481" type="Text">
@@ -4629,7 +4925,7 @@
                         </event-block>
                         <event-block sid="567926941785461">
                             <conditions>
-                                <condition behavior="LiteTween" id="6" name="On tween reverse end" sid="118436302412966" type="HUD_Message" />
+                                <condition behavior="LiteTween" id="6" name="On tween reverse end" sid="118436302412966" type="Menu_Window" />
                             </conditions>
                             <actions>
                                 <action id="-4" name="Set layer visible" sid="771305195461563" type="System">
@@ -5246,14 +5542,14 @@
                     <param id="2" name="Second value">-1</param>
                 </condition>
                 <condition id="-33" name="Pick by comparison" sid="432963675095717" type="System">
-                    <param id="0" name="Object">Sprite</param>
+                    <param id="0" name="Object">Special_PathPoint</param>
                     <param id="1" name="Expression">ObjCompat_PathVisual.my_path</param>
                     <param id="2" name="Comparison">0</param>
-                    <param id="3" name="Value">Sprite.path_ID</param>
+                    <param id="3" name="Value">Special_PathPoint.path_ID</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="618270394635719" type="Sprite" />
+                <action id="-9" name="Destroy" sid="618270394635719" type="Special_PathPoint" />
             </actions>
         </event-block>
         <event-block sid="120304462864165">
@@ -5262,15 +5558,15 @@
                     <param id="0" name="Object">ObjCompat_PathVisual</param>
                 </condition>
                 <condition id="-33" name="Pick by comparison" sid="425548195846721" type="System">
-                    <param id="0" name="Object">Sprite</param>
+                    <param id="0" name="Object">Special_PathPoint</param>
                     <param id="1" name="Expression">ObjCompat_PathVisual.my_path</param>
                     <param id="2" name="Comparison">0</param>
-                    <param id="3" name="Value">Sprite.path_ID</param>
+                    <param id="3" name="Value">Special_PathPoint.path_ID</param>
                 </condition>
                 <condition id="-4" name="Trigger once while true" sid="244688294186812" type="System" />
             </conditions>
             <actions>
-                <action id="-13" name="Set boolean" sid="298912568571004" type="Sprite">
+                <action id="-13" name="Set boolean" sid="298912568571004" type="Special_PathPoint">
                     <param id="0" name="Instance variable">Path_Visible</param>
                     <param id="1" name="Value">0</param>
                 </action>
@@ -5279,64 +5575,64 @@
         </event-block>
         <event-block sid="621226516274319">
             <conditions>
-                <condition id="-19" name="On destroyed" sid="508754756138563" type="Sprite" />
+                <condition id="-19" name="On destroyed" sid="508754756138563" type="Special_PathPoint" />
                 <condition id="-11" name="For Each" sid="188024616624741" type="System">
-                    <param id="0" name="Object">TiledBackground</param>
+                    <param id="0" name="Object">Special_PathVisual</param>
                 </condition>
-                <condition id="-7" name="Compare instance variable" sid="745210767719912" type="TiledBackground">
+                <condition id="-7" name="Compare instance variable" sid="745210767719912" type="Special_PathVisual">
                     <param id="0" name="Instance variable">ParentUID</param>
                     <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">Sprite.UID</param>
+                    <param id="2" name="Value">Special_PathPoint.UID</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="763905522091699" type="TiledBackground" />
+                <action id="-9" name="Destroy" sid="763905522091699" type="Special_PathVisual" />
             </actions>
         </event-block>
         <event-block disabled="1" sid="612061978370557">
             <conditions>
-                <condition id="-8" name="Is boolean instance variable set" sid="704759108831966" type="Sprite">
+                <condition id="-8" name="Is boolean instance variable set" sid="704759108831966" type="Special_PathPoint">
                     <param id="0" name="Instance variable">Path_Visible</param>
                 </condition>
                 <condition id="-4" name="Trigger once while true" sid="839634168655044" type="System" />
                 <condition id="-11" name="For Each" sid="250138233793768" type="System">
-                    <param id="0" name="Object">TiledBackground</param>
+                    <param id="0" name="Object">Special_PathVisual</param>
                 </condition>
-                <condition id="-7" name="Compare instance variable" sid="208552713385188" type="TiledBackground">
+                <condition id="-7" name="Compare instance variable" sid="208552713385188" type="Special_PathVisual">
                     <param id="0" name="Instance variable">ParentUID</param>
                     <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">Sprite.UID</param>
+                    <param id="2" name="Value">Special_PathPoint.UID</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-15" name="Set visible" sid="284871308298764" type="TiledBackground">
+                <action id="-15" name="Set visible" sid="284871308298764" type="Special_PathVisual">
                     <param id="0" name="Visibility">1</param>
                 </action>
-                <action id="-15" name="Set visible" sid="794875361726377" type="Sprite">
+                <action id="-15" name="Set visible" sid="794875361726377" type="Special_PathPoint">
                     <param id="0" name="Visibility">1</param>
                 </action>
             </actions>
         </event-block>
         <event-block disabled="1" sid="216341132650357">
             <conditions>
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="912586901321987" type="Sprite">
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="912586901321987" type="Special_PathPoint">
                     <param id="0" name="Instance variable">Path_Visible</param>
                 </condition>
                 <condition id="-4" name="Trigger once while true" sid="632369098854920" type="System" />
                 <condition id="-11" name="For Each" sid="577813700594592" type="System">
-                    <param id="0" name="Object">TiledBackground</param>
+                    <param id="0" name="Object">Special_PathVisual</param>
                 </condition>
-                <condition id="-7" name="Compare instance variable" sid="584662379826238" type="TiledBackground">
+                <condition id="-7" name="Compare instance variable" sid="584662379826238" type="Special_PathVisual">
                     <param id="0" name="Instance variable">ParentUID</param>
                     <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">Sprite.UID</param>
+                    <param id="2" name="Value">Special_PathPoint.UID</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-15" name="Set visible" sid="905461292499852" type="TiledBackground">
+                <action id="-15" name="Set visible" sid="905461292499852" type="Special_PathVisual">
                     <param id="0" name="Visibility">0</param>
                 </action>
-                <action id="-15" name="Set visible" sid="760492749651957" type="Sprite">
+                <action id="-15" name="Set visible" sid="760492749651957" type="Special_PathPoint">
                     <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
@@ -5347,10 +5643,10 @@
                 <condition id="-2" name="On start of layout" sid="753694627565644" type="System" />
             </conditions>
             <actions>
-                <action id="-5" name="Set width" sid="826854009999311" type="TiledSprite">
+                <action id="-5" name="Set width" sid="826854009999311" type="Special_WaterTop">
                     <param id="0" name="Width">2000</param>
                 </action>
-                <action id="-7" name="Set size" sid="759633365185863" type="TiledSprite2">
+                <action id="-7" name="Set size" sid="759633365185863" type="Special_Water">
                     <param id="0" name="Width">2000</param>
                     <param id="1" name="Height">2000</param>
                 </action>
@@ -5391,7 +5687,7 @@
                             <param id="0" name="Layer">&quot;Water&quot;</param>
                             <param id="1" name="Visibility">1</param>
                         </action>
-                        <action id="-2" name="Set Y" sid="682394178112539" type="TiledSprite2">
+                        <action id="-2" name="Set Y" sid="682394178112539" type="Special_Water">
                             <param id="0" name="Y">Var_Room.Water</param>
                         </action>
                     </actions>
@@ -5399,8 +5695,8 @@
                 <event-block sid="672214558118690">
                     <conditions />
                     <actions>
-                        <action id="-2" name="Set Y" sid="425450828057155" type="TiledSprite">
-                            <param id="0" name="Y">TiledSprite2.Y</param>
+                        <action id="-2" name="Set Y" sid="425450828057155" type="Special_WaterTop">
+                            <param id="0" name="Y">Special_Water.Y</param>
                         </action>
                     </actions>
                 </event-block>
@@ -5419,11 +5715,11 @@
                                 <condition id="-4" name="Trigger once while true" sid="396835654684523" type="System" />
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="692752085916040" type="TiledSprite">
+                                <action id="4" name="Set animation" sid="692752085916040" type="Special_WaterTop">
                                     <param id="0" name="Animation">&quot;Lemonade&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action id="4" name="Set animation" sid="312767646670401" type="TiledSprite2">
+                                <action id="4" name="Set animation" sid="312767646670401" type="Special_Water">
                                     <param id="0" name="Animation">&quot;Lemonade&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
@@ -5432,7 +5728,7 @@
                         <event-block sid="790364037235996">
                             <conditions>
                                 <condition id="0" name="On collision with another object" sid="488338023716850" type="Player">
-                                    <param id="0" name="Object">TiledSprite2</param>
+                                    <param id="0" name="Object">Special_Water</param>
                                 </condition>
                             </conditions>
                             <actions>

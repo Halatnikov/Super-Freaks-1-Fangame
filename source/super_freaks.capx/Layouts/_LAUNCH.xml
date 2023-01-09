@@ -201,6 +201,8 @@
             </instance-variables>
         </instance>
         <instance type="InstanceBank2" uid="89" />
+        <instance type="JSON_PERSIST" uid="111" />
+        <instance type="XML_GMS1Room" uid="112" />
     </nonworld-instances>
     <effects />
 </c2layout>

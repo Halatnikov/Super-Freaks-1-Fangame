@@ -7,7 +7,7 @@
             <sub-events>
                 <event-block sid="285894410113596">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="295304382784672" type="System" />
+                        <condition id="-18" name="On created" sid="168071514699840" type="Text_Regular" />
                     </conditions>
                     <actions>
                         <action id="5" name="Set character width" sid="790426660344445" type="Text_Regular">
@@ -62,11 +62,14 @@
                             <param id="0" name="Character">&quot;#@MW &quot;</param>
                             <param id="1" name="Width">16</param>
                         </action>
+                        <action id="3" name="Set character spacing" sid="959380596297333" type="Text_Regular">
+                            <param id="0" name="Character spacing">2</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="191103132455313">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="213344721226304" type="System" />
+                        <condition id="-18" name="On created" sid="283664782883715" type="Text_Big" />
                     </conditions>
                     <actions>
                         <action id="5" name="Set character width" sid="396615184897669" type="Text_Big">
@@ -129,6 +132,20 @@
                             <param id="0" name="Character">&quot;W &quot;</param>
                             <param id="1" name="Width">30</param>
                         </action>
+                        <action id="3" name="Set character spacing" sid="356883191721455" type="Text_Big">
+                            <param id="0" name="Character spacing">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="394457305583358">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="677247516815162" type="Text" />
+                    </conditions>
+                    <actions>
+                        <action id="-27" name="Set effect enabled" sid="838397810260232" type="Text_Regular">
+                            <param id="0" name="Mode">0</param>
+                            <param id="1" name="Effect">&quot;SetColor&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -167,6 +184,10 @@
                     <param id="0" name="Instance variable">Path_SourceCode1u</param>
                     <param id="1" name="Value">&quot;D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1u_github&quot;</param>
                 </action>
+                <action id="-10" name="Set value" sid="199312808456648" type="Var_CONSTANTS">
+                    <param id="0" name="Instance variable">Path_SourceCode1r</param>
+                    <param id="1" name="Value">&quot;D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="948483132842872">
@@ -181,6 +202,100 @@
                 </condition>
             </conditions>
             <actions />
+        </event-block>
+        <event-block sid="958348352765822">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="220482823430742" type="Text">
+                    <param id="0" name="Instance variable">ID</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;fps&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="348131112021684" type="Text">
+                    <param id="0" name="Text">fps&amp;&quot;|&quot;&amp;round(ImageMemoryUsage)&amp;&quot;MB|&quot;&amp;round(cpuutilisation*100)&amp;&quot;%&quot;&amp;&quot;|&quot;&amp;objectcount</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="201961521312859">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="657412590001810" type="Text">
+                    <param id="0" name="Instance variable">ID</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;version&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="638475606520307" type="Text">
+                    <param id="0" name="Text">&quot;v&quot;&amp;projectversion</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="397078820303840">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="317777674446218" type="System">
+                    <param id="0" name="Interval (seconds)">0.1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="338417650151547" type="Menu_Controls">
+                    <param id="0" name="Frame number">Menu_Controls.KeyboardKey</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="309367296922361">
+            <conditions>
+                <condition id="2" name="Is playing" sid="773832032956689" type="Menu_Controls">
+                    <param id="0" name="Animation">Var_Input.InputType&amp;&quot;0&quot;</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="541246759377144" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="372039042030450" type="System">
+                    <param id="0" name="Seconds">0.25</param>
+                </action>
+                <action id="4" name="Set animation" sid="393875728910981" type="Menu_Controls">
+                    <param id="0" name="Animation">Var_Input.InputType&amp;&quot;1&quot;</param>
+                    <param id="1" name="From">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="271389811289875">
+            <conditions>
+                <condition id="2" name="Is playing" sid="801559696561652" type="Menu_Controls">
+                    <param id="0" name="Animation">Var_Input.InputType&amp;&quot;1&quot;</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="995307897823460" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="815513159446069" type="System">
+                    <param id="0" name="Seconds">0.25</param>
+                </action>
+                <action id="4" name="Set animation" sid="270061847852357" type="Menu_Controls">
+                    <param id="0" name="Animation">Var_Input.InputType&amp;&quot;0&quot;</param>
+                    <param id="1" name="From">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="970576620972701">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="919558134390147" type="System" />
+            </conditions>
+            <actions>
+                <action id="55" name="Clear" sid="630927784394895" type="JSON_PERSIST">
+                    <param id="0" name="Reference point">0</param>
+                    <param id="1" name="Key {n}"></param>
+                </action>
+                <action id="0" name="Set New Object" sid="508952698471762" type="JSON_PERSIST">
+                    <param id="0" name="Reference point">0</param>
+                    <param id="1" name="Key {n}"></param>
+                </action>
+                <action id="60" name="LoadJSON" sid="715695857292758" type="JSON_PERSIST">
+                    <param id="0" name="JSON">INI.INI2JSON(NWjs.ReadFile(Var_CONSTANTS.Path_Assets&amp;&quot;\assets\menus.ini&quot;))</param>
+                    <param id="1" name="Reference point">0</param>
+                    <param id="2" name="Key {n}">&quot;Menus&quot;</param>
+                </action>
+            </actions>
         </event-block>
         <event-block sid="515134027227376">
             <conditions>
