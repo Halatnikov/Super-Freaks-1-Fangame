@@ -2,7 +2,7 @@
 <c2project>
     <name>Super Freaks 1 Fangame</name>
     <description></description>
-    <version>0.1.0-13</version>
+    <version>0.1.0-14</version>
     <author>Halatnikov</author>
     <author-email></author-email>
     <author-website>https://halatnikov.github.io</author-website>
@@ -159,7 +159,7 @@
             <object-type global="1" name="Var_Level" sid="285604653832218">
                 <plugin id="Globals" />
                 <instance-variables>
-                    <instance-variable name="RoomType" sid="914055926013925" type="string" />
+                    <instance-variable name="RoomEngine" sid="914055926013925" type="string" />
                     <instance-variable name="Room" sid="660012425076251" type="string" />
                     <instance-variable name="Difficulty" sid="410674055749417" type="string" />
                     <instance-variable name="ImportErrorAttempts" sid="628603414726465" type="number" />
@@ -181,6 +181,8 @@
                 <instance-variables>
                     <instance-variable name="Water" sid="846440047345651" type="number" />
                     <instance-variable name="Water_Type" sid="527170937054919" type="string" />
+                    <instance-variable name="Width" sid="123579468929321" type="number" />
+                    <instance-variable name="Height" sid="739278067000882" type="number" />
                 </instance-variables>
             </object-type>
             <object-type global="1" name="Var_Input" sid="455681516227815">
@@ -1658,6 +1660,16 @@
                 <texture />
             </object-type>
         </object-folder>
+        <object-type name="Sprite" sid="683900082749609">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="711228556533951" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Text" plugin-id="Spritefont2" sid="193627768008748">
@@ -1728,6 +1740,7 @@
                 <member>ObjCompat_Zone</member>
                 <member>Special_ChainController</member>
                 <member>Special_StartPos</member>
+                <member>Sprite</member>
             </members>
             <instance-variables>
                 <instance-variable name="Obj_ImportID" sid="355071632191646" type="string" />

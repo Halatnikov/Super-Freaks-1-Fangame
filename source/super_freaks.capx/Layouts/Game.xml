@@ -1591,6 +1591,33 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Sprite" uid="120">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Obj_ImportID>obj_worldmap_icon</Obj_ImportID>
+                        <Obj_ImportInstance></Obj_ImportInstance>
+                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-97</x>
+                        <y>310</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -3263,7 +3290,7 @@
         </instance>
         <instance type="Var_Level" uid="59">
             <instance-variables>
-                <RoomType>GMS2</RoomType>
+                <RoomEngine>GMS2</RoomEngine>
                 <Room>rm_stadium_1</Room>
                 <Difficulty>Normal</Difficulty>
                 <ImportErrorAttempts>0</ImportErrorAttempts>
@@ -3283,6 +3310,8 @@
             <instance-variables>
                 <Water>0</Water>
                 <Water_Type>Lemonade</Water_Type>
+                <Width>0</Width>
+                <Height>0</Height>
             </instance-variables>
         </instance>
     </nonworld-instances>

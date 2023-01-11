@@ -873,9 +873,6 @@
                         <condition id="-4" name="Trigger once while true" sid="977762195013597" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-16" name="Wait" sid="452436808810884" type="System">
-                            <param id="0" name="Seconds">0</param>
-                        </action>
                         <action id="0" name="Call function" sid="799596220853565" type="Function">
                             <param id="0" name="Name">&quot;Menu_Create&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;Main&quot;</param>
@@ -926,11 +923,6 @@
                                             <param id="0" name="Variable">counter_menu</param>
                                             <param id="1" name="Value">-1</param>
                                         </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="737906142583790">
-                                    <conditions />
-                                    <actions>
                                         <action id="0" name="Set New Object" sid="904837521957036" type="JSON_PERSIST">
                                             <param id="0" name="Reference point">0</param>
                                             <param id="1" name="Key {n}">&quot;Menus&quot;{###}&quot;ImportRoom_GMS2&quot;</param>
@@ -944,6 +936,31 @@
                                             <param id="0" name="Value">&quot;ImportRoom&quot;</param>
                                             <param id="1" name="Reference point">0</param>
                                             <param id="2" name="Key {n}">&quot;Menus&quot;{###}&quot;ImportRoom_GMS2&quot;{###}&quot;Previous&quot;</param>
+                                        </action>
+                                        <action id="20" name="Set Value" sid="619738380681278" type="JSON_PERSIST">
+                                            <param id="0" name="Value">&quot;&quot;</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;Menus&quot;{###}&quot;ImportRoom_GMS2&quot;{###}&quot;Description&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="370147036908543">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="544097806892530" type="System">
+                                            <param id="0" name="First value">JSON_PERSIST.Size(0,&quot;ImportRoom_GMS2&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="20" name="Set Value" sid="876413177407633" type="JSON_PERSIST">
+                                            <param id="0" name="Value">&quot;No room files found!|Make sure you placed the source code|in the path you put in config.ini&quot;</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;Menus&quot;{###}&quot;ImportRoom_GMS2&quot;{###}&quot;Description&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="696930321605611" type="Menu_Cursor">
+                                            <param id="0" name="Instance variable">Offset</param>
+                                            <param id="1" name="Value">0</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -979,6 +996,11 @@
                                 </event-block>
                                 <event-block sid="977390010687838">
                                     <conditions>
+                                        <condition id="-8" inverted="1" name="Compare two values" sid="810883063250452" type="System">
+                                            <param id="0" name="First value">JSON_PERSIST.Size(0,&quot;ImportRoom_GMS2&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
                                         <condition id="100" name="For each property" sid="832625809753511" type="JSON_PERSIST">
                                             <param id="0" name="Reference point">0</param>
                                             <param id="1" name="Key {n}">&quot;ImportRoom_GMS2&quot;</param>
@@ -1035,7 +1057,7 @@
                                             <param id="2" name="Key {n}">&quot;Menus&quot;{###}&quot;ImportRoom_GMS2&quot;{###}&quot;0&quot;{###}&quot;Title&quot;</param>
                                         </action>
                                         <action id="20" name="Set Value" sid="913170594364515" type="JSON_PERSIST">
-                                            <param id="0" name="Value">&quot;Page|Skip&quot;</param>
+                                            <param id="0" name="Value">&quot;Page&quot;</param>
                                             <param id="1" name="Reference point">0</param>
                                             <param id="2" name="Key {n}">&quot;Menus&quot;{###}&quot;ImportRoom_GMS2&quot;{###}&quot;0&quot;{###}&quot;Type&quot;</param>
                                         </action>
@@ -1081,6 +1103,11 @@
                                             <param id="1" name="Reference point">0</param>
                                             <param id="2" name="Key {n}">&quot;Menus&quot;{###}&quot;ImportRoom_GMS1&quot;{###}&quot;Previous&quot;</param>
                                         </action>
+                                        <action id="20" name="Set Value" sid="416023101847979" type="JSON_PERSIST">
+                                            <param id="0" name="Value">&quot;&quot;</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;Menus&quot;{###}&quot;ImportRoom_GMS1&quot;{###}&quot;Description&quot;</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="922530623427255">
@@ -1107,6 +1134,26 @@
                                                 <action id="-10" name="Add to" sid="121281455994357" type="System">
                                                     <param id="0" name="Variable">size</param>
                                                     <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="564391082598248">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="233458595473030" type="System">
+                                                    <param id="0" name="Variable">size</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="20" name="Set Value" sid="776316220090636" type="JSON_PERSIST">
+                                                    <param id="0" name="Value">&quot;No room files found!|Make sure you placed the source code|in the path you put in config.ini&quot;</param>
+                                                    <param id="1" name="Reference point">0</param>
+                                                    <param id="2" name="Key {n}">&quot;Menus&quot;{###}&quot;ImportRoom_GMS1&quot;{###}&quot;Description&quot;</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="124497635121528" type="Menu_Cursor">
+                                                    <param id="0" name="Instance variable">Offset</param>
+                                                    <param id="1" name="Value">0</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -1142,6 +1189,11 @@
                                         </event-block>
                                         <event-block sid="423974631356768">
                                             <conditions>
+                                                <condition id="-14" inverted="1" name="Compare variable" sid="333528047887944" type="System">
+                                                    <param id="0" name="Variable">size</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
                                                 <condition id="-10" name="For" sid="464930994220127" type="System">
                                                     <param id="0" name="Name">&quot;&quot;</param>
                                                     <param id="1" name="Start index">Menu_Cursor.Offset*15</param>
@@ -1197,7 +1249,7 @@
                                             <param id="2" name="Key {n}">&quot;Menus&quot;{###}&quot;ImportRoom_GMS1&quot;{###}&quot;0&quot;{###}&quot;Title&quot;</param>
                                         </action>
                                         <action id="20" name="Set Value" sid="856137975364149" type="JSON_PERSIST">
-                                            <param id="0" name="Value">&quot;Page|Skip&quot;</param>
+                                            <param id="0" name="Value">&quot;Page&quot;</param>
                                             <param id="1" name="Reference point">0</param>
                                             <param id="2" name="Key {n}">&quot;Menus&quot;{###}&quot;ImportRoom_GMS1&quot;{###}&quot;0&quot;{###}&quot;Type&quot;</param>
                                         </action>
@@ -1465,7 +1517,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block disabled="1" sid="413854236680576">
+                <event-block sid="413854236680576">
                     <conditions>
                         <condition id="60" inverted="1" name="Is undefined" sid="146084880385302" type="JSON_PERSIST">
                             <param id="0" name="Reference point">0</param>
@@ -1479,7 +1531,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block disabled="1" sid="914917034901709">
+                        <event-block sid="914917034901709">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="291718587699339" type="Menu_Cursor">
                                     <param id="0" name="Instance variable">Direction</param>
@@ -1494,7 +1546,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block disabled="1" sid="760284095673994">
+                        <event-block sid="760284095673994">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="207421158068346" type="Menu_Cursor">
                                     <param id="0" name="Instance variable">Direction</param>
@@ -1690,7 +1742,7 @@
                                     <actions>
                                         <action id="33" name="Stop all" sid="366002706737366" type="BetterAudio" />
                                         <action id="-10" name="Set value" sid="649245013969871" type="Var_Level">
-                                            <param id="0" name="Instance variable">RoomType</param>
+                                            <param id="0" name="Instance variable">RoomEngine</param>
                                             <param id="1" name="Value">&quot;GMS2&quot;</param>
                                         </action>
                                         <action id="-10" name="Set value" sid="524479190750791" type="Var_Level">
@@ -1731,7 +1783,7 @@
                                     <actions>
                                         <action id="33" name="Stop all" sid="856777482194731" type="BetterAudio" />
                                         <action id="-10" name="Set value" sid="834879449761160" type="Var_Level">
-                                            <param id="0" name="Instance variable">RoomType</param>
+                                            <param id="0" name="Instance variable">RoomEngine</param>
                                             <param id="1" name="Value">&quot;GMS1&quot;</param>
                                         </action>
                                         <action id="-10" name="Set value" sid="542831488995413" type="Var_Level">
@@ -1807,18 +1859,67 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="404946230364966">
+                <event-block any="1" sid="404946230364966">
                     <conditions>
-                        <condition id="-4" name="Trigger once while true" sid="598110308665274" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="519372010449422" type="Menu_Cursor">
+                            <param id="0" name="Instance variable">Menu</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Main&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="262970162336049" type="Menu_Cursor">
+                            <param id="0" name="Instance variable">Menu</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;ImportRoom&quot;</param>
+                        </condition>
                     </conditions>
-                    <actions>
-                        <action id="99" name="Play at path" sid="643396379305312" type="BetterAudio">
-                            <param id="0" name="Path">Var_CONSTANTS.Path_Assets&amp;&quot;\assets\music\menu.ogg&quot;</param>
-                            <param id="2" name="Loop">1</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;music&quot;</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="207424624693666">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="598110308665274" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="33" name="Stop all" sid="671837085384751" type="BetterAudio" />
+                                <action id="99" name="Play at path" sid="643396379305312" type="BetterAudio">
+                                    <param id="0" name="Path">Var_CONSTANTS.Path_Assets&amp;&quot;\assets\music\menu.ogg&quot;</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;music&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block any="1" sid="814091120658372">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="653672509647064" type="Menu_Cursor">
+                            <param id="0" name="Instance variable">Menu</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;ImportRoom_GMS2&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="597976935962853" type="Menu_Cursor">
+                            <param id="0" name="Instance variable">Menu</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;ImportRoom_GMS1&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="517285001319655">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="261743648653137" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="33" name="Stop all" sid="711891790711101" type="BetterAudio" />
+                                <action id="99" name="Play at path" sid="906099729522442" type="BetterAudio">
+                                    <param id="0" name="Path">Var_CONSTANTS.Path_Assets&amp;&quot;\assets\music\levelselect.ogg&quot;</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;music&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
