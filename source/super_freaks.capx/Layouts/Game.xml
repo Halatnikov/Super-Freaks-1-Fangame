@@ -595,7 +595,7 @@
                         <Obj_ImportID>obj_walkietalkie</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
                         <Obj_Difficulty>Everything</Obj_Difficulty>
-                        <hint></hint>
+                        <hint>What&apos;s up gamers</hint>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1161,7 +1161,7 @@
                         <Obj_ImportInstance></Obj_ImportInstance>
                         <Obj_Difficulty>Everything</Obj_Difficulty>
                         <path></path>
-                        <ID>1</ID>
+                        <ID>0</ID>
                         <InstanceCreationCode></InstanceCreationCode>
                         <TrophyID>0</TrophyID>
                     </instance-variables>
@@ -1677,7 +1677,7 @@
                         <x>275</x>
                         <y>99</y>
                         <z>0</z>
-                        <width>30</width>
+                        <width>28</width>
                         <height>36</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -2557,7 +2557,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>320</x>
-                        <y>180</y>
+                        <y>182</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -2619,6 +2619,88 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Menu_Controls" uid="93">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <ID>Confirm</ID>
+                        <KeyboardKey>90</KeyboardKey>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>632</x>
+                        <y>352</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Text_Regular" uid="118">
+                    <properties>
+                        <character-width>16</character-width>
+                        <character-height>20</character-height>
+                        <character-set>!&quot;#$%&amp;&apos;()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~</character-set>
+                        <text>Confirm</text>
+                        <scale>1</scale>
+                        <initial-visibility>Visible</initial-visibility>
+                        <horizontal-alignment>Right</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Character</wrapping>
+                        <character-spacing>2</character-spacing>
+                        <line-height>0</line-height>
+                    </properties>
+                    <instance-variables>
+                        <ID>Button_Confirm</ID>
+                        <ParentUID>0</ParentUID>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="LiteTween">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <tweened-property>Position</tweened-property>
+                                <function>Linear</function>
+                                <target>0</target>
+                                <target-mode>Absolute</target-mode>
+                                <duration>0</duration>
+                                <enforce-mode>Enforce</enforce-mode>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="SetColor">
+                            <parameters>
+                                <blue>0</blue>
+                                <green>0</green>
+                                <red>0</red>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>430</x>
+                        <y>342</y>
+                        <z>0</z>
+                        <width>192</width>
+                        <height>20</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -2803,7 +2885,7 @@
                         <character-width>32</character-width>
                         <character-height>32</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!?,:</character-set>
-                        <text>MYSTIC ISLAND</text>
+                        <text>UNDEFINED</text>
                         <scale>1</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Center</horizontal-alignment>
@@ -2850,7 +2932,7 @@
                         <character-width>32</character-width>
                         <character-height>32</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!?,:</character-set>
-                        <text>SUPER FREAKS STADIUM</text>
+                        <text>UNDEFINED</text>
                         <scale>1</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Center</horizontal-alignment>
@@ -3176,6 +3258,7 @@
                 <Path_SourceCode1u></Path_SourceCode1u>
                 <Path_SourceCode1r></Path_SourceCode1r>
                 <LogVerbose>1</LogVerbose>
+                <GMS2_LevelsArray></GMS2_LevelsArray>
             </instance-variables>
         </instance>
         <instance type="Var_Level" uid="59">

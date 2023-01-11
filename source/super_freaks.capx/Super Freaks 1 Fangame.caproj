@@ -2,7 +2,7 @@
 <c2project>
     <name>Super Freaks 1 Fangame</name>
     <description></description>
-    <version>0.1.0-12</version>
+    <version>0.1.0-13</version>
     <author>Halatnikov</author>
     <author-email></author-email>
     <author-website>https://halatnikov.github.io</author-website>
@@ -153,6 +153,7 @@
                     <instance-variable name="Path_SourceCode1u" sid="885943548537521" type="string" />
                     <instance-variable name="Path_SourceCode1r" sid="921199061794404" type="string" />
                     <instance-variable name="LogVerbose" sid="819295291835664" type="number" />
+                    <instance-variable name="GMS2_LevelsArray" sid="270813940939173" type="string" />
                 </instance-variables>
             </object-type>
             <object-type global="1" name="Var_Level" sid="285604653832218">
@@ -1815,14 +1816,12 @@
         <layout>_LAUNCH.xml</layout>
         <layout>Menu.xml</layout>
         <layout>Game.xml</layout>
-        <layout>Layout 1.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>E_Launch.xml</event-sheet>
         <event-sheet>E_Menu.xml</event-sheet>
         <event-sheet>E_Game.xml</event-sheet>
         <event-sheet>E_GLOBAL.xml</event-sheet>
-        <event-sheet>Event sheet 1.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="2" />

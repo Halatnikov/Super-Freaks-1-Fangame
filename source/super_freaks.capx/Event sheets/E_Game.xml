@@ -1304,6 +1304,23 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="818046762911483">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="700957006920439" type="Keyboard">
+                            <param id="0" name="Key">115</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="33" name="Stop all" sid="599910385701127" type="BetterAudio" />
+                        <action id="-2" name="Go to layout" sid="172302103618940" type="System">
+                            <param id="0" name="Layout">Menu</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="969611077927738" type="Var_Gameplay">
+                            <param id="0" name="Instance variable">TitlecardSeen</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="319075703561400">
                     <conditions>
                         <condition id="200" name="On JSON Parse Error" sid="431246790778651" type="JSON_GMS2Room" />
@@ -2413,17 +2430,16 @@
                 <comment>code by Federico Calchera</comment>
                 <event-block sid="540379002844600">
                     <conditions>
-                        <condition behavior="Platform" id="6" name="On fall" sid="851131983877250" type="Player" />
+                        <condition behavior="Platform" id="4" name="Is falling" sid="851131983877250" type="Player" />
                         <condition id="1" name="Is overlapping another object" sid="970357775893975" type="Player">
-                            <param id="0" name="Object">LevelCollisions</param>
+                            <param id="0" name="Object">Col_Platform</param>
                         </condition>
-                        <condition behavior="Jumpthru" id="0" name="Is enabled" sid="209122945907968" type="LevelCollisions" />
                         <condition id="9" inverted="1" name="Is overlapping at offset" sid="391278147685562" type="Player">
-                            <param id="0" name="Object">LevelCollisions</param>
+                            <param id="0" name="Object">Col_Platform</param>
                             <param id="1" name="Offset X">0</param>
-                            <param id="2" name="Offset Y">-(LevelCollisions.Height/1.2)</param>
+                            <param id="2" name="Offset Y">-(Col_Platform.Height/1.75)</param>
                         </condition>
-                        <condition id="-15" name="Pick nearest/furthest" sid="987692236411263" type="LevelCollisions">
+                        <condition id="-15" name="Pick nearest/furthest" sid="987692236411263" type="Col_Platform">
                             <param id="0" name="Which">0</param>
                             <param id="1" name="X">Self.X</param>
                             <param id="2" name="Y">Player.Y</param>
@@ -2431,7 +2447,10 @@
                     </conditions>
                     <actions>
                         <action id="-2" name="Set Y" sid="795735531775443" type="Player">
-                            <param id="0" name="Y">LevelCollisions.BBoxTop-1-24</param>
+                            <param id="0" name="Y">Col_Platform.BBoxTop-24</param>
+                        </action>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="777870698318482" type="Player">
+                            <param id="0" name="Vector Y">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2484,7 +2503,7 @@
                 </event-block>
                 <event-block sid="251262508776576">
                     <conditions>
-                        <condition id="0" name="On key pressed" sid="302045189981325" type="Keyboard">
+                        <condition id="2" name="Key is down" sid="302045189981325" type="Keyboard">
                             <param id="0" name="Key">90</param>
                         </condition>
                     </conditions>
@@ -3399,10 +3418,6 @@
                             <param id="0" name="Instance variable">TimerActive</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action id="-10" name="Set value" sid="197383891270297" type="Var_Gameplay">
-                            <param id="0" name="Instance variable">Pause</param>
-                            <param id="1" name="Value">&quot;Finish&quot;</param>
-                        </action>
                         <action id="0" name="Call function" sid="336577351668276" type="Function">
                             <param id="0" name="Name">&quot;Audio_PlaySFX&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;explode&quot;</param>
@@ -3428,6 +3443,10 @@
                         </action>
                         <action id="9" name="Set scale" sid="948934397832490" type="HUD_FinishExplosion">
                             <param id="0" name="Scale">4</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="197383891270297" type="Var_Gameplay">
+                            <param id="0" name="Instance variable">Pause</param>
+                            <param id="1" name="Value">&quot;Finish&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -5007,16 +5026,6 @@
                             <param id="0" name="Width">32</param>
                             <param id="1" name="Height">32</param>
                         </action>
-                        <action behavior="LiteTween" id="3" name="Set target" sid="354976890423978" type="Menu_Window">
-                            <param id="0" name="Target is">4</param>
-                            <param id="1" name="Relativity">0</param>
-                            <param id="2" name="Value">OriginalWindowWidth-64</param>
-                        </action>
-                        <action behavior="LiteTween2" id="3" name="Set target" sid="703826009885117" type="Menu_Window">
-                            <param id="0" name="Target is">5</param>
-                            <param id="1" name="Relativity">0</param>
-                            <param id="2" name="Value">OriginalWindowHeight-64</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="709269329627903">
@@ -5024,6 +5033,7 @@
                         <condition id="0" name="On collision with another object" sid="612792085300185" type="Player">
                             <param id="0" name="Object">Obj_WalkieTalkie</param>
                         </condition>
+                        <condition behavior="Platform" id="3" name="Is jumping" sid="989829690183317" type="Player" />
                         <condition id="-7" name="Compare instance variable" sid="826866524108128" type="Text">
                             <param id="0" name="Instance variable">ID</param>
                             <param id="1" name="Comparison">0</param>
@@ -5041,6 +5051,16 @@
                         </action>
                         <action id="0" name="Set text" sid="727595470297881" type="Text">
                             <param id="0" name="Text">replace(Obj_WalkieTalkie.hint,&quot;&quot;&quot;&quot;,&quot;&quot;)</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="354976890423978" type="Menu_Window">
+                            <param id="0" name="Target is">4</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">Text.TextWidth+32</param>
+                        </action>
+                        <action behavior="LiteTween2" id="3" name="Set target" sid="703826009885117" type="Menu_Window">
+                            <param id="0" name="Target is">5</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">Text.TextHeight+32</param>
                         </action>
                         <action behavior="LiteTween" id="10" name="Start" sid="449760712670892" type="Menu_Window">
                             <param id="0" name="Start Mode">0</param>
@@ -5344,6 +5364,12 @@
                         <condition id="0" name="On collision with another object" sid="888717037076536" type="Player">
                             <param id="0" name="Object">Obj_StarArrow</param>
                         </condition>
+                        <condition id="-7" inverted="1" name="Compare instance variable" sid="978388919791999" type="Var_Player">
+                            <param id="0" name="Instance variable">GimmickState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;StarArrow_Launch&quot;</param>
+                        </condition>
+                        <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="736716235498637" type="Player" />
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="898811914640440" type="Function">
@@ -5605,6 +5631,7 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;StarArrow_Launch&quot;</param>
                         </condition>
+                        <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="379588458852601" type="Player" />
                     </conditions>
                     <actions>
                         <action id="-10" name="Set value" sid="908356009165005" type="Var_Player">
@@ -5888,7 +5915,7 @@
                         <condition id="-7" name="Compare instance variable" sid="306937799226235" type="Var_Room">
                             <param id="0" name="Instance variable">Water_Type</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;Lemonade&quot;</param>
+                            <param id="2" name="Value">&quot;lemonade&quot;</param>
                         </condition>
                     </conditions>
                     <actions />
