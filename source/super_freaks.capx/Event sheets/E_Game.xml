@@ -1337,9 +1337,9 @@
                         <action id="-2" name="Go to layout" sid="172302103618940" type="System">
                             <param id="0" name="Layout">Menu</param>
                         </action>
-                        <action id="-13" name="Set boolean" sid="969611077927738" type="Var_Gameplay">
-                            <param id="0" name="Instance variable">TitlecardSeen</param>
-                            <param id="1" name="Value">0</param>
+                        <action id="-10" name="Set value" sid="822999002840635" type="Var_Main">
+                            <param id="0" name="Instance variable">Music</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1460,6 +1460,82 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="643798429362043">
+                            <conditions>
+                                <condition id="60" inverted="1" name="Is undefined" sid="756251505140984" type="JSON_PERSIST">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}">&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine{###}Var_Level.Room{###}&quot;Title&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="392735245885055" type="Var_Gameplay">
+                                    <param id="0" name="Instance variable">TitlecardSeen</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="574069279303815">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="949334732119698" type="Text">
+                                            <param id="0" name="Instance variable">ID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;HUD_TitleCard1&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="608944176200376" type="Text">
+                                            <param id="0" name="Text">uppercase(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine,Var_Level.Room,&quot;TitleWorld&quot;))</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="990384115993055">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="968707692969552" type="Text">
+                                            <param id="0" name="Instance variable">ID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;HUD_TitleCard2&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="567558742813135" type="Text">
+                                            <param id="0" name="Text">uppercase(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine,Var_Level.Room,&quot;Title&quot;))</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="928518184928964">
+                            <conditions>
+                                <condition id="60" name="Is undefined" sid="590537932089977" type="JSON_PERSIST">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}">&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine{###}Var_Level.Room{###}&quot;Title&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="306136190396130" type="Var_Gameplay">
+                                    <param id="0" name="Instance variable">TitlecardSeen</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="296018079476419">
+                            <conditions>
+                                <condition id="60" inverted="1" name="Is undefined" sid="141594810837350" type="JSON_PERSIST">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}">&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine{###}Var_Level.Room{###}&quot;WaterLevel&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="661300764530576" type="Var_Room">
+                                    <param id="0" name="Instance variable">Water</param>
+                                    <param id="1" name="Value">int(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine,Var_Level.Room,&quot;WaterLevel&quot;))</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="325587312976779" type="Var_Room">
+                                    <param id="0" name="Instance variable">Water_Type</param>
+                                    <param id="1" name="Value">JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine,Var_Level.Room,&quot;WaterType&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="779927662793972">
                             <conditions />
                             <actions>
@@ -1518,6 +1594,15 @@
                                 </action>
                                 <action behavior="Platform" id="11" name="Set enabled" sid="775047683458753" type="Player">
                                     <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="244707941766430">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="735010552991212" type="Function">
+                                    <param id="0" name="Name">&quot;Audio_PlayMusic&quot;</param>
+                                    <param id="1" name="Parameter {n}">replace(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine,Var_Level.Room,&quot;Music&quot;),&quot;msc_&quot;,&quot;1u_&quot;)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -3485,6 +3570,21 @@
                         <action id="-10" name="Set value" sid="197383891270297" type="Var_Gameplay">
                             <param id="0" name="Instance variable">Pause</param>
                             <param id="1" name="Value">&quot;Finish&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="364680660917098" type="Function">
+                            <param id="0" name="Name">&quot;Audio_PlayMusic&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="217843991367321">
+                    <conditions>
+                        <condition id="5" name="On any finished" sid="892443030123622" type="HUD_FinishExplosion" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="747570171426062" type="Function">
+                            <param id="0" name="Name">&quot;Audio_PlayMusic&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;1u_victory&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -5886,111 +5986,189 @@
             </actions>
         </event-block>
         <comment></comment>
-        <event-block sid="257218143377570">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="753694627565644" type="System" />
-            </conditions>
-            <actions>
-                <action id="-5" name="Set width" sid="826854009999311" type="Special_WaterTop">
-                    <param id="0" name="Width">2000</param>
-                </action>
-                <action id="-7" name="Set size" sid="759633365185863" type="Special_Water">
-                    <param id="0" name="Width">2000</param>
-                    <param id="1" name="Height">2000</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="657016538646426">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="594605573461623" type="Var_Room">
-                    <param id="0" name="Instance variable">Water</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-                <condition id="-4" name="Trigger once while true" sid="212458590547433" type="System" />
-            </conditions>
-            <actions>
-                <action id="-4" name="Set layer visible" sid="509281034969231" type="System">
-                    <param id="0" name="Layer">&quot;Water&quot;</param>
-                    <param id="1" name="Visibility">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="331279165097307">
-            <conditions>
-                <condition id="-7" inverted="1" name="Compare instance variable" sid="758954348611797" type="Var_Room">
-                    <param id="0" name="Instance variable">Water</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-            </conditions>
-            <actions />
+        <event-group description="" sid="102669881142731" title="Water">
             <sub-events>
-                <event-block sid="723079160106618">
+                <event-block sid="657016538646426">
                     <conditions>
-                        <condition id="-4" name="Trigger once while true" sid="895083644971740" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="594605573461623" type="Var_Room">
+                            <param id="0" name="Instance variable">Water</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="212458590547433" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-4" name="Set layer visible" sid="191086156236416" type="System">
+                        <action id="-4" name="Set layer visible" sid="509281034969231" type="System">
                             <param id="0" name="Layer">&quot;Water&quot;</param>
-                            <param id="1" name="Visibility">1</param>
-                        </action>
-                        <action id="-2" name="Set Y" sid="682394178112539" type="Special_Water">
-                            <param id="0" name="Y">Var_Room.Water</param>
+                            <param id="1" name="Visibility">0</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="672214558118690">
-                    <conditions />
-                    <actions>
-                        <action id="-2" name="Set Y" sid="425450828057155" type="Special_WaterTop">
-                            <param id="0" name="Y">Special_Water.Y</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="690437393175604">
+                <event-block sid="331279165097307">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="306937799226235" type="Var_Room">
-                            <param id="0" name="Instance variable">Water_Type</param>
+                        <condition id="-7" inverted="1" name="Compare instance variable" sid="758954348611797" type="Var_Room">
+                            <param id="0" name="Instance variable">Water</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;lemonade&quot;</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="678875293823341">
+                        <event-block sid="723079160106618">
                             <conditions>
-                                <condition id="-4" name="Trigger once while true" sid="396835654684523" type="System" />
+                                <condition id="-4" name="Trigger once while true" sid="895083644971740" type="System" />
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="692752085916040" type="Special_WaterTop">
-                                    <param id="0" name="Animation">&quot;Lemonade&quot;</param>
-                                    <param id="1" name="From">1</param>
+                                <action id="-4" name="Set layer visible" sid="191086156236416" type="System">
+                                    <param id="0" name="Layer">&quot;Water&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
                                 </action>
-                                <action id="4" name="Set animation" sid="312767646670401" type="Special_Water">
-                                    <param id="0" name="Animation">&quot;Lemonade&quot;</param>
-                                    <param id="1" name="From">1</param>
+                                <action id="-2" name="Set Y" sid="682394178112539" type="Special_Water">
+                                    <param id="0" name="Y">Var_Room.Water</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="409306687102190" type="Special_WaterTop">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="898356700420139" type="Special_Water">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="826854009999311" type="Special_WaterTop">
+                                    <param id="0" name="Width">2000</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="759633365185863" type="Special_Water">
+                                    <param id="0" name="Width">2000</param>
+                                    <param id="1" name="Height">Var_Room.Height</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="790364037235996">
-                            <conditions>
-                                <condition id="0" name="On collision with another object" sid="488338023716850" type="Player">
-                                    <param id="0" name="Object">Special_Water</param>
-                                </condition>
-                            </conditions>
+                        <event-block sid="672214558118690">
+                            <conditions />
                             <actions>
-                                <action behavior="Platform" id="9" name="Set vector Y" sid="677781099843961" type="Player">
-                                    <param id="0" name="Vector Y">-465</param>
-                                </action>
-                                <action behavior="Platform" id="8" name="Set vector X" sid="928177423230725" type="Player">
-                                    <param id="0" name="Vector X">0</param>
+                                <action id="-2" name="Set Y" sid="425450828057155" type="Special_WaterTop">
+                                    <param id="0" name="Y">Special_Water.Y</param>
                                 </action>
                             </actions>
+                        </event-block>
+                        <event-block sid="690437393175604">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="306937799226235" type="Var_Room">
+                                    <param id="0" name="Instance variable">Water_Type</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;lemonade&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="678875293823341">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="396835654684523" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="692752085916040" type="Special_WaterTop">
+                                            <param id="0" name="Animation">&quot;Lemonade&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="312767646670401" type="Special_Water">
+                                            <param id="0" name="Animation">&quot;Lemonade&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="790364037235996">
+                                    <conditions>
+                                        <condition id="0" name="On collision with another object" sid="488338023716850" type="Player">
+                                            <param id="0" name="Object">Special_Water</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="9" name="Set vector Y" sid="677781099843961" type="Player">
+                                            <param id="0" name="Vector Y">-465</param>
+                                        </action>
+                                        <action behavior="Platform" id="8" name="Set vector X" sid="928177423230725" type="Player">
+                                            <param id="0" name="Vector X">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="675126217515297">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="809492777878017" type="Var_Room">
+                                    <param id="0" name="Instance variable">Water_Type</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;water&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="161679690912247">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="198039825902555" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="874686065218412" type="Special_WaterTop">
+                                            <param id="0" name="Animation">&quot;Water&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="803026618292156" type="Special_Water">
+                                            <param id="0" name="Animation">&quot;Water&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="550287608247448" type="Special_WaterTop">
+                                            <param id="0" name="Opacity">50</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="971531861650817" type="Special_Water">
+                                            <param id="0" name="Opacity">50</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="265682339262501">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="693966168569410" type="Var_Room">
+                                    <param id="0" name="Instance variable">Water_Type</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;lava&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="742152176235406">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="683448060580244" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="461266794806112" type="Special_WaterTop">
+                                            <param id="0" name="Animation">&quot;Lava&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="402529790775192" type="Special_Water">
+                                            <param id="0" name="Animation">&quot;Lava&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="497715094381186">
+                                    <conditions>
+                                        <condition id="0" name="On collision with another object" sid="930335575627087" type="Player">
+                                            <param id="0" name="Object">Special_Water</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="9" name="Set vector Y" sid="977794629133868" type="Player">
+                                            <param id="0" name="Vector Y">-465</param>
+                                        </action>
+                                        <action behavior="Platform" id="8" name="Set vector X" sid="665033810833317" type="Player">
+                                            <param id="0" name="Vector X">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
-        </event-block>
+        </event-group>
     </events>
 </c2eventsheet>

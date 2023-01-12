@@ -152,25 +152,6 @@
         </event-group>
         <event-group description="" sid="647517582168789" title="Initializing">
             <sub-events>
-                <event-block sid="858408243768774">
-                    <conditions>
-                        <condition id="-2" name="On start of layout" sid="470259389840237" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="322133388154988" type="Var_CONSTANTS">
-                            <param id="0" name="Instance variable">Path_Assets</param>
-                            <param id="1" name="Value">&quot;D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\github\SuperFreaks&quot;</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="824470504421707" type="Var_CONSTANTS">
-                            <param id="0" name="Instance variable">Path_SourceCode1u</param>
-                            <param id="1" name="Value">&quot;D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1u_github&quot;</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="199312808456648" type="Var_CONSTANTS">
-                            <param id="0" name="Instance variable">Path_SourceCode1r</param>
-                            <param id="1" name="Value">&quot;D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="970576620972701">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="919558134390147" type="System" />
@@ -184,13 +165,58 @@
                             <param id="0" name="Reference point">0</param>
                             <param id="1" name="Key {n}"></param>
                         </action>
-                        <action id="60" name="LoadJSON" sid="715695857292758" type="JSON_PERSIST">
-                            <param id="0" name="JSON">INI.INI2JSON(NWjs.ReadFile(Var_CONSTANTS.Path_Assets&amp;&quot;\assets\menus.ini&quot;))</param>
-                            <param id="1" name="Reference point">0</param>
-                            <param id="2" name="Key {n}">&quot;Menus&quot;</param>
-                        </action>
                     </actions>
                     <sub-events>
+                        <event-block sid="858408243768774">
+                            <conditions>
+                                <condition id="-18" name="Is in preview" sid="237058988450129" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="322133388154988" type="Var_CONSTANTS">
+                                    <param id="0" name="Instance variable">Path_Assets</param>
+                                    <param id="1" name="Value">&quot;D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\github\SuperFreaks&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="751598963746137">
+                            <conditions>
+                                <condition id="-18" inverted="1" name="Is in preview" sid="248103200058953" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="908149330012944" type="Var_CONSTANTS">
+                                    <param id="0" name="Instance variable">Path_Assets</param>
+                                    <param id="1" name="Value">NWjs.AppFolder&amp;&quot;SuperFreaks&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="469344397839003">
+                            <conditions />
+                            <actions>
+                                <action id="60" name="LoadJSON" sid="715695857292758" type="JSON_PERSIST">
+                                    <param id="0" name="JSON">INI.INI2JSON(NWjs.ReadFile(Var_CONSTANTS.Path_Assets&amp;&quot;\assets\menus.ini&quot;))</param>
+                                    <param id="1" name="Reference point">0</param>
+                                    <param id="2" name="Key {n}">&quot;Menus&quot;</param>
+                                </action>
+                                <action id="60" name="LoadJSON" sid="101915905538555" type="JSON_PERSIST">
+                                    <param id="0" name="JSON">INI.INI2JSON(NWjs.ReadFile(Var_CONSTANTS.Path_Assets&amp;&quot;\config.ini&quot;))</param>
+                                    <param id="1" name="Reference point">0</param>
+                                    <param id="2" name="Key {n}">&quot;Config&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="244078225517017">
+                            <conditions />
+                            <actions>
+                                <action id="-10" name="Set value" sid="384475299287172" type="Var_CONSTANTS">
+                                    <param id="0" name="Instance variable">Path_SourceCode1u</param>
+                                    <param id="1" name="Value">JSON_PERSIST.Value(0,&quot;Config&quot;,&quot;Paths&quot;,&quot;SourceCode_1Ultimate&quot;)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="159024788367585" type="Var_CONSTANTS">
+                                    <param id="0" name="Instance variable">Path_SourceCode1r</param>
+                                    <param id="1" name="Value">JSON_PERSIST.Value(0,&quot;Config&quot;,&quot;Paths&quot;,&quot;SourceCode_1Remastered&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="903868407546747">
                             <conditions />
                             <actions>
@@ -198,6 +224,11 @@
                                     <param id="0" name="JSON">INI.INI2JSON(NWjs.ReadFile(Var_CONSTANTS.Path_Assets&amp;&quot;\assets\import\1u.ini&quot;))</param>
                                     <param id="1" name="Reference point">0</param>
                                     <param id="2" name="Key {n}">&quot;Info_GMS2&quot;</param>
+                                </action>
+                                <action id="60" name="LoadJSON" sid="647102063905498" type="JSON_PERSIST">
+                                    <param id="0" name="JSON">INI.INI2JSON(NWjs.ReadFile(Var_CONSTANTS.Path_Assets&amp;&quot;\assets\import\1r.ini&quot;))</param>
+                                    <param id="1" name="Reference point">0</param>
+                                    <param id="2" name="Key {n}">&quot;ImportRoom_GMS1&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -455,6 +486,40 @@
                             <param id="2" name="Loop">1</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;SFX_&quot;&amp;Function.Param(0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="952288593087784">
+            <conditions>
+                <condition id="0" name="On function" sid="344792126753735" type="Function">
+                    <param id="0" name="Name">&quot;Audio_PlayMusic&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="136700779598023">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Compare parameter" sid="244902393022637" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Var_Main.Music</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="692672093651111" type="BetterAudio">
+                            <param id="0" name="Tag">&quot;music&quot;</param>
+                        </action>
+                        <action id="99" name="Play at path" sid="719595663016497" type="BetterAudio">
+                            <param id="0" name="Path">Var_CONSTANTS.Path_Assets&amp;&quot;\assets\music\&quot;&amp;Function.Param(0)&amp;&quot;.ogg&quot;</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;music&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="805796882279497" type="Var_Main">
+                            <param id="0" name="Instance variable">Music</param>
+                            <param id="1" name="Value">Function.Param(0)</param>
                         </action>
                     </actions>
                 </event-block>

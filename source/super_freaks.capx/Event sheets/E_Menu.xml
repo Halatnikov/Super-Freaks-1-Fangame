@@ -1352,6 +1352,7 @@
                                     </conditions>
                                     <actions />
                                     <sub-events>
+                                        <variable constant="0" name="id" sid="831438209908971" static="1" type="text"></variable>
                                         <event-block sid="214024066959663">
                                             <conditions />
                                             <actions>
@@ -1376,13 +1377,17 @@
                                                     <param id="0" name="Mode">0</param>
                                                     <param id="1" name="Effect">&quot;SetColor&quot;</param>
                                                 </action>
+                                                <action id="-9" name="Set value" sid="508062149741397" type="System">
+                                                    <param id="0" name="Variable">id</param>
+                                                    <param id="1" name="Value">JSON_PERSIST.CurrentKey</param>
+                                                </action>
                                             </actions>
                                             <sub-events>
                                                 <event-block sid="901920110435826">
                                                     <conditions>
                                                         <condition id="60" inverted="1" name="Is undefined" sid="127880527246552" type="JSON_PERSIST">
                                                             <param id="0" name="Reference point">0</param>
-                                                            <param id="1" name="Key {n}">&quot;Menus&quot;{###}Menu_Cursor.Menu{###}tokenat(Text_Regular.ID,1,&quot;_&quot;){###}&quot;Type&quot;</param>
+                                                            <param id="1" name="Key {n}">&quot;Menus&quot;{###}Menu_Cursor.Menu{###}id{###}&quot;Type&quot;</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions />
@@ -1390,7 +1395,7 @@
                                                         <event-block sid="963283114831984">
                                                             <conditions>
                                                                 <condition id="-8" inverted="1" name="Compare two values" sid="951858605324400" type="System">
-                                                                    <param id="0" name="First value">find(JSON_PERSIST.Value(0,&quot;Menus&quot;,Menu_Cursor.Menu,str(Menu_Cursor.Current),&quot;Type&quot;),&quot;Disabled&quot;)</param>
+                                                                    <param id="0" name="First value">find(JSON_PERSIST.Value(0,&quot;Menus&quot;,Menu_Cursor.Menu,id,&quot;Type&quot;),&quot;Disabled&quot;)</param>
                                                                     <param id="1" name="Comparison">0</param>
                                                                     <param id="2" name="Second value">-1</param>
                                                                 </condition>
@@ -1405,7 +1410,7 @@
                                                         <event-block sid="138702596988986">
                                                             <conditions>
                                                                 <condition id="-8" inverted="1" name="Compare two values" sid="501882958615542" type="System">
-                                                                    <param id="0" name="First value">find(JSON_PERSIST.Value(0,&quot;Menus&quot;,Menu_Cursor.Menu,str(Menu_Cursor.Current),&quot;Type&quot;),&quot;Page&quot;)</param>
+                                                                    <param id="0" name="First value">find(JSON_PERSIST.Value(0,&quot;Menus&quot;,Menu_Cursor.Menu,id,&quot;Type&quot;),&quot;Page&quot;)</param>
                                                                     <param id="1" name="Comparison">0</param>
                                                                     <param id="2" name="Second value">-1</param>
                                                                 </condition>
@@ -1749,28 +1754,35 @@
                                             <param id="0" name="Instance variable">Room</param>
                                             <param id="1" name="Value">JSON_PERSIST.Value(0,&quot;Menus&quot;,Menu_Cursor.Menu,str(Menu_Cursor.Current),&quot;Title&quot;)</param>
                                         </action>
-                                        <action id="0" name="Call function" sid="379979156500166" type="Function">
-                                            <param id="0" name="Name">&quot;HUD_Fade&quot;</param>
-                                            <param id="1" name="Parameter {n}">&quot;in&quot;{###}&quot;black&quot;{###}&quot;0.25&quot;</param>
-                                        </action>
-                                        <action id="-16" name="Wait" sid="191426567883972" type="System">
-                                            <param id="0" name="Seconds">0.25</param>
-                                        </action>
-                                        <action id="-4" name="Set layer visible" sid="593164656048196" type="System">
-                                            <param id="0" name="Layer">&quot;GLOBAL_Loading&quot;</param>
-                                            <param id="1" name="Visibility">1</param>
-                                        </action>
-                                        <action id="-4" name="Set layer visible" sid="513655094932558" type="System">
-                                            <param id="0" name="Layer">&quot;GLOBAL_Overlay&quot;</param>
-                                            <param id="1" name="Visibility">1</param>
-                                        </action>
-                                        <action id="-16" name="Wait" sid="858102628115894" type="System">
-                                            <param id="0" name="Seconds">0.1</param>
-                                        </action>
-                                        <action id="-2" name="Go to layout" sid="844241726218105" type="System">
-                                            <param id="0" name="Layout">Game</param>
-                                        </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="920317202666133">
+                                            <conditions />
+                                            <actions>
+                                                <action id="0" name="Call function" sid="379979156500166" type="Function">
+                                                    <param id="0" name="Name">&quot;HUD_Fade&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;in&quot;{###}&quot;black&quot;{###}&quot;0.25&quot;</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="191426567883972" type="System">
+                                                    <param id="0" name="Seconds">0.25</param>
+                                                </action>
+                                                <action id="-4" name="Set layer visible" sid="593164656048196" type="System">
+                                                    <param id="0" name="Layer">&quot;GLOBAL_Loading&quot;</param>
+                                                    <param id="1" name="Visibility">1</param>
+                                                </action>
+                                                <action id="-4" name="Set layer visible" sid="513655094932558" type="System">
+                                                    <param id="0" name="Layer">&quot;GLOBAL_Overlay&quot;</param>
+                                                    <param id="1" name="Visibility">1</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="858102628115894" type="System">
+                                                    <param id="0" name="Seconds">0.1</param>
+                                                </action>
+                                                <action id="-2" name="Go to layout" sid="844241726218105" type="System">
+                                                    <param id="0" name="Layout">Game</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <event-block sid="397844696483739">
                                     <conditions>

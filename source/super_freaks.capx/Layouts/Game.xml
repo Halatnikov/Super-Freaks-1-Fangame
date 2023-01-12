@@ -1765,7 +1765,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
-                        <initial-animation>Default</initial-animation>
+                        <initial-animation>Water</initial-animation>
                         <hotspot>Bottom-left</hotspot>
                     </properties>
                     <blend-mode>0</blend-mode>
@@ -1775,7 +1775,7 @@
                         <y>328</y>
                         <z>0</z>
                         <width>640</width>
-                        <height>32</height>
+                        <height>16</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>1</hotspotY>

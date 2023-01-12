@@ -2,7 +2,7 @@
 <c2project>
     <name>Super Freaks 1 Fangame</name>
     <description></description>
-    <version>0.1.0-14</version>
+    <version>0.1.0</version>
     <author>Halatnikov</author>
     <author-email></author-email>
     <author-website>https://halatnikov.github.io</author-website>
@@ -189,6 +189,12 @@
                 <plugin id="Globals" />
                 <instance-variables>
                     <instance-variable name="InputType" sid="141955222895194" type="string" />
+                </instance-variables>
+            </object-type>
+            <object-type global="1" name="Var_Main" sid="812996272456133">
+                <plugin id="Globals" />
+                <instance-variables>
+                    <instance-variable name="Music" sid="341867745078352" type="string" />
                 </instance-variables>
             </object-type>
         </object-folder>
@@ -1034,7 +1040,13 @@
             <object-type name="Special_Water" sid="902501552467994">
                 <plugin id="TiledSprite" />
                 <animation-folder>
+                    <animation framecount="1" loop="0" name="Water" pingpong="0" repeatcount="1" repeatto="0" sid="966609394474916" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
                     <animation framecount="1" loop="0" name="Lemonade" pingpong="0" repeatcount="1" repeatto="0" sid="739236435527054" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Lava" pingpong="0" repeatcount="1" repeatto="0" sid="480172887440470" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
@@ -1042,7 +1054,47 @@
             <object-type name="Special_WaterTop" sid="239958837396251">
                 <plugin id="TiledSprite" />
                 <animation-folder>
+                    <animation framecount="4" loop="1" name="Water" pingpong="0" repeatcount="1" repeatto="0" sid="273850250494373" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.25">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.5" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.25">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.5" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.25">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.5" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.25">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.5" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
                     <animation framecount="4" loop="1" name="Lemonade" pingpong="0" repeatcount="1" repeatto="0" sid="721918307087153" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="4" loop="1" name="Lava" pingpong="0" repeatcount="1" repeatto="0" sid="703871576309214" speed="10">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
