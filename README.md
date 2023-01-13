@@ -8,4 +8,6 @@ credits:
 
 SuperFreaksDev
 
+https://github.com/stars/Halatnikov/lists/used-for-super-freaks-1-fangame
+
 https://github.com/JorJoe05/Super-Freaks-1-Ultimate-Godot

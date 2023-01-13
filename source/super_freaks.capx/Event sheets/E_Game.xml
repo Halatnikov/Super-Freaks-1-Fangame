@@ -852,7 +852,7 @@
                             <actions>
                                 <action id="-9" name="Set value" sid="789475477874393" type="System">
                                     <param id="0" name="Variable">instance</param>
-                                    <param id="1" name="Value">0</param>
+                                    <param id="1" name="Value">&quot;&quot;</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="424936723237848" type="System">
                                     <param id="0" name="Variable">next_room</param>
@@ -861,119 +861,104 @@
                             </actions>
                         </event-block>
                         <comment>determine what the next room in order is (to spawn the exit)</comment>
-                        <event-block sid="456271785461507">
-                            <conditions />
-                            <actions>
-                                <action id="-3" name="Create object" sid="354928925747340" type="System">
-                                    <param id="0" name="Object to create">XML_COMMON</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="X">0</param>
-                                    <param id="3" name="Y">0</param>
-                                </action>
-                                <action id="0" name="Load" sid="421574422577616" type="XML_COMMON">
-                                    <param id="0" name="XML">NWjs.ReadFile(Var_CONSTANTS.Path_SourceCode1r&amp;&quot;\Super_Freaks_1.project.gmx&quot;)</param>
-                                </action>
-                            </actions>
+                        <event-block sid="171020535886602">
+                            <conditions>
+                                <condition id="100" name="For each property" sid="846888883251572" type="JSON_PERSIST">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}">&quot;ImportRoom_GMS1&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
                             <sub-events>
-                                <event-block sid="171020535886602">
+                                <event-block sid="998925005237443">
                                     <conditions>
-                                        <condition id="-12" name="Repeat" sid="202974422816337" type="System">
-                                            <param id="0" name="Count">XML_COMMON.NodeCount(&quot;/assets/rooms/room&quot;)</param>
-                                        </condition>
-                                        <condition id="-8" name="Compare two values" sid="696401181919517" type="System">
-                                            <param id="0" name="First value">XML_COMMON.StringValue(&quot;/assets/rooms/room[&quot;&amp;loopindex+1&amp;&quot;]&quot;)</param>
+                                        <condition id="-8" name="Compare two values" sid="169351812958320" type="System">
+                                            <param id="0" name="First value">find(JSON_PERSIST.CurrentKey,&quot;Story&quot;)</param>
                                             <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Second value">&quot;rooms\&quot;&amp;Function.Param(0)</param>
+                                            <param id="2" name="Second value">-1</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="530486886527258" type="System">
+                                            <param id="0" name="First value">find(JSON_PERSIST.CurrentKey,&quot;Boss&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">-1</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="704965713412143" type="System">
+                                            <param id="0" name="First value">find(JSON_PERSIST.CurrentKey,&quot;p1&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">-1</param>
                                         </condition>
                                     </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block sid="998925005237443">
-                                            <conditions>
-                                                <condition id="-8" name="Compare two values" sid="169351812958320" type="System">
-                                                    <param id="0" name="First value">find(XML_COMMON.StringValue(&quot;/assets/rooms/room[&quot;&amp;loopindex+2&amp;&quot;]&quot;),&quot;Story&quot;)</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Second value">-1</param>
-                                                </condition>
-                                                <condition id="-8" name="Compare two values" sid="530486886527258" type="System">
-                                                    <param id="0" name="First value">find(XML_COMMON.StringValue(&quot;/assets/rooms/room[&quot;&amp;loopindex+2&amp;&quot;]&quot;),&quot;Boss&quot;)</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Second value">-1</param>
-                                                </condition>
-                                                <condition id="-8" name="Compare two values" sid="704965713412143" type="System">
-                                                    <param id="0" name="First value">find(XML_COMMON.StringValue(&quot;/assets/rooms/room[&quot;&amp;loopindex+2&amp;&quot;]&quot;),&quot;p1&quot;)</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Second value">-1</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-9" name="Set value" sid="435862619973927" type="System">
-                                                    <param id="0" name="Variable">next_room</param>
-                                                    <param id="1" name="Value">replace(XML_COMMON.StringValue(&quot;/assets/rooms/room[&quot;&amp;loopindex+2&amp;&quot;]&quot;),&quot;rooms\&quot;,&quot;&quot;)</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block any="1" sid="975641349594257">
-                                            <conditions>
-                                                <condition id="-8" inverted="1" name="Compare two values" sid="477562387125874" type="System">
-                                                    <param id="0" name="First value">find(XML_COMMON.StringValue(&quot;/assets/rooms/room[&quot;&amp;loopindex+2&amp;&quot;]&quot;),&quot;Story&quot;)</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Second value">-1</param>
-                                                </condition>
-                                                <condition id="-8" inverted="1" name="Compare two values" sid="111986449493748" type="System">
-                                                    <param id="0" name="First value">find(XML_COMMON.StringValue(&quot;/assets/rooms/room[&quot;&amp;loopindex+2&amp;&quot;]&quot;),&quot;Boss&quot;)</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Second value">-1</param>
-                                                </condition>
-                                                <condition id="-8" inverted="1" name="Compare two values" sid="784561128376472" type="System">
-                                                    <param id="0" name="First value">find(XML_COMMON.StringValue(&quot;/assets/rooms/room[&quot;&amp;loopindex+2&amp;&quot;]&quot;),&quot;p1&quot;)</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Second value">-1</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-9" name="Set value" sid="189392211777375" type="System">
-                                                    <param id="0" name="Variable">next_room</param>
-                                                    <param id="1" name="Value">&quot;&quot;</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                                <event-block sid="972037147032594">
-                                    <conditions />
                                     <actions>
-                                        <action id="-9" name="Destroy" sid="675917197793248" type="XML_COMMON" />
+                                        <action id="-9" name="Set value" sid="435862619973927" type="System">
+                                            <param id="0" name="Variable">next_room</param>
+                                            <param id="1" name="Value">JSON_PERSIST.CurrentKey</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="975641349594257">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Compare two values" sid="526517100093404" type="System">
+                                            <param id="0" name="First value">find(JSON_PERSIST.CurrentKey,&quot;Story&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">-1</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Compare two values" sid="482729183653881" type="System">
+                                            <param id="0" name="First value">find(JSON_PERSIST.CurrentKey,&quot;Boss&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">-1</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Compare two values" sid="198725098085805" type="System">
+                                            <param id="0" name="First value">find(JSON_PERSIST.CurrentKey,&quot;p1&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">-1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="189392211777375" type="System">
+                                            <param id="0" name="Variable">next_room</param>
+                                            <param id="1" name="Value">&quot;&quot;</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
                         </event-block>
                         <comment>this is unrelated but thanks to https://github.com/cubeww/UndertaleModTool-ExportToProjectScript (utmt version 0.3.0) for decompiling this</comment>
-                        <comment>load the room file</comment>
+                        <comment>convert the room file from xml to json (taken from https://goessner.net/download/prj/jsonxml/)</comment>
                         <event-block sid="121918501690048">
                             <conditions />
                             <actions>
-                                <action id="0" name="Load" sid="972023351666774" type="XML_GMS1Room">
-                                    <param id="0" name="XML">NWjs.ReadFile(Var_CONSTANTS.Path_SourceCode1r&amp;&quot;\rooms\&quot;&amp;Function.Param(0)&amp;&quot;.room.gmx&quot;)</param>
+                                <action id="17" name="Execute Javascript" sid="127670149317340" type="Browser">
+                                    <param id="0" name="Javascript">&quot;var xml = &apos;&quot;&amp;RegexReplace(NWjs.ReadFile(Var_CONSTANTS.Path_SourceCode1r&amp;&quot;\rooms\&quot;&amp;Function.Param(0)&amp;&quot;.room.gmx&quot;),&quot;\r\n|\n|\r&quot;,&quot;gm&quot;,&quot;&quot;)&amp;&quot;&apos;;&#x0D;&#x0A;var json = xml2json(parseXml(xml));&#x0D;&#x0A;c2_callFunction(&apos;Util_ExecJS&apos;,[json.toString()]);&quot;</param>
                                 </action>
-                                <action id="1" name="Load image from URL" sid="531360361548766" type="Tiles_GMS1">
+                                <action id="60" name="LoadJSON" sid="956026548378421" type="JSON_GMS1Room">
+                                    <param id="0" name="JSON">replace(replace(Var_CONSTANTS.ExecJS_Return,&quot;undefined&quot;&quot;&quot;,&quot;&quot;&quot;&quot;),&quot;@&quot;,&quot;&quot;)</param>
+                                    <param id="1" name="Reference point">0</param>
+                                    <param id="2" name="Key {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="547327225493732">
+                            <conditions />
+                            <actions>
+                                <action id="1" name="Load image from URL" sid="260828234938814" type="Tiles_GMS1">
                                     <param id="0" name="URI">Var_CONSTANTS.Path_Assets&amp;&quot;\assets\tilesets\1r_tiles.png&quot;</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="123803001153554" type="Var_Room">
+                                <action id="-10" name="Set value" sid="467102853640610" type="Var_Room">
                                     <param id="0" name="Instance variable">Width</param>
-                                    <param id="1" name="Value">XML_GMS1Room.NumberValue(&quot;/room/width&quot;)</param>
+                                    <param id="1" name="Value">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;width&quot;))</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="889666954414756" type="Var_Room">
+                                <action id="-10" name="Set value" sid="339106464067612" type="Var_Room">
                                     <param id="0" name="Instance variable">Height</param>
-                                    <param id="1" name="Value">XML_GMS1Room.NumberValue(&quot;/room/height&quot;)</param>
+                                    <param id="1" name="Value">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;height&quot;))</param>
                                 </action>
                             </actions>
                         </event-block>
                         <comment>&quot;tiles&quot;</comment>
                         <event-block sid="419590774391719">
                             <conditions>
-                                <condition id="-12" name="Repeat" sid="960639629242468" type="System">
-                                    <param id="0" name="Count">XML_GMS1Room.NodeCount(&quot;/room/tiles/tile&quot;)</param>
+                                <condition id="100" name="For each property" sid="500679677054784" type="JSON_GMS1Room">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}">&quot;room&quot;{###}&quot;tiles&quot;{###}&quot;tile&quot;</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -984,22 +969,18 @@
                                         <action id="-3" name="Create object" sid="291683438740367" type="System">
                                             <param id="0" name="Object to create">Tiles_GMS1</param>
                                             <param id="1" name="Layer">&quot;Scenery&quot;</param>
-                                            <param id="2" name="X">XML_GMS1Room.NumberValue(&quot;/room/tiles/tile[&quot;&amp;loopindex+1&amp;&quot;]/@x&quot;)</param>
-                                            <param id="3" name="Y">XML_GMS1Room.NumberValue(&quot;/room/tiles/tile[&quot;&amp;loopindex+1&amp;&quot;]/@y&quot;)</param>
+                                            <param id="2" name="X">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_GMS1Room.CurrentKey,&quot;x&quot;))</param>
+                                            <param id="3" name="Y">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_GMS1Room.CurrentKey,&quot;y&quot;))</param>
                                         </action>
                                         <action id="2" name="Set sub-image offset and size" sid="902049749701534" type="Tiles_GMS1">
-                                            <param id="0" name="offset x">XML_GMS1Room.NumberValue(&quot;/room/tiles/tile[&quot;&amp;loopindex+1&amp;&quot;]/@xo&quot;)</param>
-                                            <param id="1" name="offset y">XML_GMS1Room.NumberValue(&quot;/room/tiles/tile[&quot;&amp;loopindex+1&amp;&quot;]/@yo&quot;)</param>
-                                            <param id="2" name="sub width">XML_GMS1Room.NumberValue(&quot;/room/tiles/tile[&quot;&amp;loopindex+1&amp;&quot;]/@w&quot;)</param>
-                                            <param id="3" name="sub height">XML_GMS1Room.NumberValue(&quot;/room/tiles/tile[&quot;&amp;loopindex+1&amp;&quot;]/@h&quot;)</param>
+                                            <param id="0" name="offset x">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_GMS1Room.CurrentKey,&quot;xo&quot;))</param>
+                                            <param id="1" name="offset y">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_GMS1Room.CurrentKey,&quot;yo&quot;))</param>
+                                            <param id="2" name="sub width">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_GMS1Room.CurrentKey,&quot;w&quot;))</param>
+                                            <param id="3" name="sub height">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_GMS1Room.CurrentKey,&quot;h&quot;))</param>
                                         </action>
                                         <action id="-7" name="Set size" sid="881264661845233" type="Tiles_GMS1">
-                                            <param id="0" name="Width">XML_GMS1Room.NumberValue(&quot;/room/tiles/tile[&quot;&amp;loopindex+1&amp;&quot;]/@w&quot;)</param>
-                                            <param id="1" name="Height">XML_GMS1Room.NumberValue(&quot;/room/tiles/tile[&quot;&amp;loopindex+1&amp;&quot;]/@h&quot;)</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="603937248196880" type="Tiles_GMS1">
-                                            <param id="0" name="Instance variable">id</param>
-                                            <param id="1" name="Value">XML_GMS1Room.StringValue(&quot;/room/tiles/tile[&quot;&amp;loopindex+1&amp;&quot;]/@id&quot;)</param>
+                                            <param id="0" name="Width">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_GMS1Room.CurrentKey,&quot;w&quot;))</param>
+                                            <param id="1" name="Height">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_GMS1Room.CurrentKey,&quot;h&quot;))</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1008,8 +989,9 @@
                         <comment>objects</comment>
                         <event-block sid="821869036918095">
                             <conditions>
-                                <condition id="-12" name="Repeat" sid="477190689167644" type="System">
-                                    <param id="0" name="Count">XML_GMS1Room.NodeCount(&quot;/room/instances/instance&quot;)</param>
+                                <condition id="100" name="For each property" sid="907064174376571" type="JSON_GMS1Room">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}">&quot;room&quot;{###}&quot;instances&quot;{###}&quot;instance&quot;</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -1019,7 +1001,7 @@
                                     <actions>
                                         <action id="-9" name="Set value" sid="854288076452068" type="System">
                                             <param id="0" name="Variable">instance</param>
-                                            <param id="1" name="Value">XML_GMS1Room.StringValue(&quot;/room/instances/instance[&quot;&amp;loopindex+1&amp;&quot;]/@objName&quot;)</param>
+                                            <param id="1" name="Value">JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;objName&quot;)</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1045,8 +1027,8 @@
                                                 <action id="-3" name="Create object" sid="703540869528415" type="System">
                                                     <param id="0" name="Object to create">Obj_Portal</param>
                                                     <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                                    <param id="2" name="X">XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex+1&amp;&quot;]/@x&quot;)+16</param>
-                                                    <param id="3" name="Y">XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex+1&amp;&quot;]/@y&quot;)+32</param>
+                                                    <param id="2" name="X">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;x&quot;))+16</param>
+                                                    <param id="3" name="Y">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;y&quot;))+32</param>
                                                 </action>
                                                 <action id="-16" name="Wait" sid="849850340182606" type="System">
                                                     <param id="0" name="Seconds">0.2</param>
@@ -1069,8 +1051,8 @@
                                                 <action id="-3" name="Create object" sid="942522529996859" type="System">
                                                     <param id="0" name="Object to create">Obj_SkullJar</param>
                                                     <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                                    <param id="2" name="X">XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex+1&amp;&quot;]/@x&quot;)</param>
-                                                    <param id="3" name="Y">XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex+1&amp;&quot;]/@y&quot;)+32</param>
+                                                    <param id="2" name="X">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;x&quot;))</param>
+                                                    <param id="3" name="Y">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;y&quot;))+32</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -1088,12 +1070,12 @@
                                         <action id="-3" name="Create object" sid="733692821428149" type="System">
                                             <param id="0" name="Object to create">Col_Solid</param>
                                             <param id="1" name="Layer">&quot;Collisions&quot;</param>
-                                            <param id="2" name="X">XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex+1&amp;&quot;]/@x&quot;)</param>
-                                            <param id="3" name="Y">XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex+1&amp;&quot;]/@y&quot;)</param>
+                                            <param id="2" name="X">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;x&quot;))</param>
+                                            <param id="3" name="Y">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;y&quot;))</param>
                                         </action>
                                         <action id="-7" name="Set size" sid="922717048622039" type="Col_Solid">
-                                            <param id="0" name="Width">int(16*float(XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex+1&amp;&quot;]/@scaleX&quot;)))</param>
-                                            <param id="1" name="Height">int(16*float(XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex+1&amp;&quot;]/@scaleY&quot;)))</param>
+                                            <param id="0" name="Width">int(16*float(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;scaleX&quot;)))</param>
+                                            <param id="1" name="Height">int(16*float(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;scaleY&quot;)))</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1109,8 +1091,8 @@
                                         <action id="-3" name="Create object" sid="661785730989875" type="System">
                                             <param id="0" name="Object to create">Obj_Yorb10</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex+1&amp;&quot;]/@x&quot;)+16</param>
-                                            <param id="3" name="Y">XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex+1&amp;&quot;]/@y&quot;)+16</param>
+                                            <param id="2" name="X">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;x&quot;))+16</param>
+                                            <param id="3" name="Y">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;y&quot;))+16</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1127,8 +1109,8 @@
                                         <action id="-3" name="Create object" sid="604891925911023" type="System">
                                             <param id="0" name="Object to create">Special_StartPos</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex+1&amp;&quot;]/@x&quot;)</param>
-                                            <param id="3" name="Y">XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex+1&amp;&quot;]/@y&quot;)</param>
+                                            <param id="2" name="X">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;x&quot;))+16</param>
+                                            <param id="3" name="Y">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;y&quot;))+16</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1144,8 +1126,8 @@
                                         <action id="-3" name="Create object" sid="559293581913695" type="System">
                                             <param id="0" name="Object to create">Obj_Ray</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex+1&amp;&quot;]/@x&quot;)+16</param>
-                                            <param id="3" name="Y">XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex+1&amp;&quot;]/@y&quot;)+32</param>
+                                            <param id="2" name="X">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;x&quot;))+16</param>
+                                            <param id="3" name="Y">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;y&quot;))+32</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1161,8 +1143,8 @@
                                         <action id="-3" name="Create object" sid="709282932749991" type="System">
                                             <param id="0" name="Object to create">Obj_Yorb</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex+1&amp;&quot;]/@x&quot;)+16</param>
-                                            <param id="3" name="Y">XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex+1&amp;&quot;]/@y&quot;)+16</param>
+                                            <param id="2" name="X">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;x&quot;))+16</param>
+                                            <param id="3" name="Y">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;y&quot;))+16</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1178,8 +1160,8 @@
                                         <action id="-3" name="Create object" sid="206327361029663" type="System">
                                             <param id="0" name="Object to create">Obj_Heart</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex+1&amp;&quot;]/@x&quot;)+16</param>
-                                            <param id="3" name="Y">XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex+1&amp;&quot;]/@y&quot;)+16</param>
+                                            <param id="2" name="X">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;x&quot;))+16</param>
+                                            <param id="3" name="Y">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;y&quot;))+16</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1195,8 +1177,8 @@
                                         <action id="-3" name="Create object" sid="599706530739418" type="System">
                                             <param id="0" name="Object to create">Enemy_BoneyM</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex+1&amp;&quot;]/@x&quot;)</param>
-                                            <param id="3" name="Y">XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex+1&amp;&quot;]/@y&quot;)</param>
+                                            <param id="2" name="X">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;x&quot;))</param>
+                                            <param id="3" name="Y">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;y&quot;))</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1212,8 +1194,8 @@
                                         <action id="-3" name="Create object" sid="744940982360563" type="System">
                                             <param id="0" name="Object to create">Enemy_Skizzor</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex+1&amp;&quot;]/@x&quot;)+16</param>
-                                            <param id="3" name="Y">XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex+1&amp;&quot;]/@y&quot;)+16</param>
+                                            <param id="2" name="X">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;x&quot;))+16</param>
+                                            <param id="3" name="Y">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;y&quot;))+16</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1229,8 +1211,8 @@
                                         <action id="-3" name="Create object" sid="978075903658432" type="System">
                                             <param id="0" name="Object to create">Enemy_Pinhead</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex+1&amp;&quot;]/@x&quot;)</param>
-                                            <param id="3" name="Y">XML_GMS1Room.NumberValue(&quot;/room/instances/instance[&quot;&amp;loopindex+1&amp;&quot;]/@y&quot;)</param>
+                                            <param id="2" name="X">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;x&quot;))</param>
+                                            <param id="3" name="Y">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;y&quot;))</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1408,6 +1390,14 @@
                             <param id="0" name="Reference point">0</param>
                             <param id="1" name="Key {n}"></param>
                         </action>
+                        <action id="55" name="Clear" sid="224027325102229" type="JSON_GMS1Room">
+                            <param id="0" name="Reference point">0</param>
+                            <param id="1" name="Key {n}"></param>
+                        </action>
+                        <action id="0" name="Set New Object" sid="667018158169482" type="JSON_GMS1Room">
+                            <param id="0" name="Reference point">0</param>
+                            <param id="1" name="Key {n}"></param>
+                        </action>
                         <action id="-9" name="Destroy" sid="416441269446760" type="HUD_FinishExplosion" />
                         <action id="-9" name="Destroy" sid="365192406075485" type="Special_TimedStarPie" />
                         <action id="-9" name="Destroy" sid="701085289011264" type="Special_StarArrowStars" />
@@ -1416,9 +1406,6 @@
                         <action id="-9" name="Destroy" sid="682621879700006" type="Special_PathVisual" />
                         <action id="-9" name="Destroy" sid="125116793515645" type="Special_EnemyGroundCollision" />
                         <action id="-9" name="Destroy" sid="381358754147011" type="Tiles_GMS1" />
-                        <action id="0" name="Load" sid="723043322507202" type="XML_GMS1Room">
-                            <param id="0" name="XML">NWjs.ReadFile(Var_CONSTANTS.Path_Assets&amp;&quot;\assets\.empty&quot;)</param>
-                        </action>
                         <action id="-9" name="Destroy" sid="499659319212526" type="XML_COMMON" />
                         <action id="-10" name="Set value" sid="266399878481429" type="Var_Room">
                             <param id="0" name="Instance variable">Water</param>

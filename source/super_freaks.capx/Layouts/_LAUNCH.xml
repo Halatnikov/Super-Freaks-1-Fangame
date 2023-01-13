@@ -202,13 +202,13 @@
         </instance>
         <instance type="InstanceBank2" uid="89" />
         <instance type="JSON_PERSIST" uid="111" />
-        <instance type="XML_GMS1Room" uid="112" />
         <instance type="XML_COMMON" uid="115" />
         <instance type="Var_Main" uid="119">
             <instance-variables>
                 <Music></Music>
             </instance-variables>
         </instance>
+        <instance type="JSON_GMS1Room" uid="121" />
     </nonworld-instances>
     <effects />
 </c2layout>

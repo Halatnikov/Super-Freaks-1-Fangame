@@ -2,7 +2,7 @@
 <c2project>
     <name>Super Freaks 1 Fangame</name>
     <description></description>
-    <version>0.1.0</version>
+    <version>0.2.0-1</version>
     <author>Halatnikov</author>
     <author-email></author-email>
     <author-website>https://halatnikov.github.io</author-website>
@@ -31,6 +31,7 @@
         <plugin author="Valera Popov" id="ValerypopoffEase" version="1">Valerypopoff Ease</plugin>
         <plugin author="Scirra" id="XML" version="1">XML</plugin>
         <plugin author="R0J0hound" id="rojo_spritesheet" version="1">Sprite sheet</plugin>
+        <plugin author="&lt;your name/organisation&gt;" id="xml2json" version="1">xml2json</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
@@ -128,11 +129,14 @@
             <object-type global="1" name="JSON_PERSIST" sid="952044048135308">
                 <plugin id="JSON" />
             </object-type>
-            <object-type global="1" name="XML_GMS1Room" sid="152492816255068">
-                <plugin id="XML" />
-            </object-type>
             <object-type global="1" name="XML_COMMON" sid="662976903456579">
                 <plugin id="XML" />
+            </object-type>
+            <object-type global="1" name="JSON_GMS1Room" sid="396414264618039">
+                <plugin id="JSON" />
+            </object-type>
+            <object-type name="xml2json" sid="523087149813019">
+                <plugin id="xml2json" />
             </object-type>
         </object-folder>
         <object-folder name=".Variables">
@@ -1706,9 +1710,6 @@
             </object-type>
             <object-type name="Tiles_GMS1" sid="841165400702499">
                 <plugin id="rojo_spritesheet" />
-                <instance-variables>
-                    <instance-variable name="id" sid="611241243394209" type="string" />
-                </instance-variables>
                 <texture />
             </object-type>
         </object-folder>
@@ -1915,6 +1916,7 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
+        <global-instance type="xml2json" uid="122" />
     </global-instances>
     <sounds-folder />
     <music-folder />
