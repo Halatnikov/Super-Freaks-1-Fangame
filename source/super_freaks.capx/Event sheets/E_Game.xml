@@ -56,7 +56,6 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <variable constant="0" name="json" sid="408123348399489" static="1" type="text"></variable>
                         <variable constant="0" name="tile" sid="611909002877046" static="1" type="number">0</variable>
                         <variable constant="0" name="x" sid="676297806608836" static="1" type="number">-1</variable>
                         <variable constant="0" name="y" sid="460911820012450" static="1" type="number">0</variable>
@@ -64,10 +63,6 @@
                         <event-block sid="236932019710636">
                             <conditions />
                             <actions>
-                                <action id="-9" name="Set value" sid="767134884129203" type="System">
-                                    <param id="0" name="Variable">json</param>
-                                    <param id="1" name="Value">&quot;&quot;</param>
-                                </action>
                                 <action id="-9" name="Set value" sid="808441279316660" type="System">
                                     <param id="0" name="Variable">tile</param>
                                     <param id="1" name="Value">0</param>
@@ -91,33 +86,25 @@
                         <event-block sid="697598897750678">
                             <conditions />
                             <actions>
-                                <action id="-9" name="Set value" sid="298715535599327" type="System">
-                                    <param id="0" name="Variable">json</param>
-                                    <param id="1" name="Value">NWjs.ReadFile(Var_CONSTANTS.Path_SourceCode1u&amp;&quot;\rooms\&quot;&amp;Function.Param(0)&amp;&quot;\&quot;&amp;Function.Param(0)&amp;&quot;.yy&quot;)</param>
-                                </action>
-                                <action id="60" name="LoadJSON" sid="127193585864713" type="JSON_GMS2Room">
-                                    <param id="0" name="JSON">Function.Call(&quot;GMS2_FixJSON&quot;,json)</param>
+                                <action id="60" name="LoadJSON" sid="127193585864713" type="JSON_Room">
+                                    <param id="0" name="JSON">Function.Call(&quot;Util_FixJSON&quot;,NWjs.ReadFile(Var_CONSTANTS.Path_SourceCode1u&amp;&quot;\rooms\&quot;&amp;Function.Param(0)&amp;&quot;\&quot;&amp;Function.Param(0)&amp;&quot;.yy&quot;))</param>
                                     <param id="1" name="Reference point">0</param>
                                     <param id="2" name="Key {n}"></param>
                                 </action>
-                                <action id="-9" name="Set value" sid="420824700941650" type="System">
-                                    <param id="0" name="Variable">json</param>
-                                    <param id="1" name="Value">&quot;&quot;</param>
-                                </action>
                                 <action id="-10" name="Set value" sid="164789464288898" type="Var_Room">
                                     <param id="0" name="Instance variable">Width</param>
-                                    <param id="1" name="Value">int(JSON_GMS2Room.Value(0,&quot;roomSettings&quot;,&quot;Width&quot;))</param>
+                                    <param id="1" name="Value">int(JSON_Room.Value(0,&quot;roomSettings&quot;,&quot;Width&quot;))</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="119768636988458" type="Var_Room">
                                     <param id="0" name="Instance variable">Height</param>
-                                    <param id="1" name="Value">int(JSON_GMS2Room.Value(0,&quot;roomSettings&quot;,&quot;Height&quot;))</param>
+                                    <param id="1" name="Value">int(JSON_Room.Value(0,&quot;roomSettings&quot;,&quot;Height&quot;))</param>
                                 </action>
                             </actions>
                         </event-block>
                         <comment>iterate through layers</comment>
                         <event-block sid="398492417009303">
                             <conditions>
-                                <condition id="100" name="For each property" sid="836455598885406" type="JSON_GMS2Room">
+                                <condition id="100" name="For each property" sid="836455598885406" type="JSON_Room">
                                     <param id="0" name="Reference point">0</param>
                                     <param id="1" name="Key {n}">&quot;layers&quot;</param>
                                 </condition>
@@ -128,7 +115,7 @@
                                 <event-block sid="195841095624601">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="326553241107194" type="System">
-                                            <param id="0" name="First value">JSON_GMS2Room.Value(0,&quot;layers&quot;,JSON_GMS2Room.CurrentKey,&quot;resourceType&quot;)</param>
+                                            <param id="0" name="First value">JSON_Room.Value(0,&quot;layers&quot;,JSON_Room.CurrentKey,&quot;resourceType&quot;)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">&quot;GMRPathLayer&quot;</param>
                                         </condition>
@@ -138,12 +125,12 @@
                                         <event-block sid="981768489558951">
                                             <conditions>
                                                 <condition id="-8" name="Compare two values" sid="507733013148641" type="System">
-                                                    <param id="0" name="First value">find(JSON_GMS2Room.Value(0,&quot;layers&quot;,JSON_GMS2Room.CurrentKey,&quot;pathId&quot;,&quot;name&quot;),&quot;time_star&quot;)</param>
+                                                    <param id="0" name="First value">find(JSON_Room.Value(0,&quot;layers&quot;,JSON_Room.CurrentKey,&quot;pathId&quot;,&quot;name&quot;),&quot;time_star&quot;)</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Second value">-1</param>
                                                 </condition>
                                                 <condition id="-8" name="Compare two values" sid="773589723877849" type="System">
-                                                    <param id="0" name="First value">find(JSON_GMS2Room.Value(0,&quot;layers&quot;,JSON_GMS2Room.CurrentKey,&quot;pathId&quot;,&quot;name&quot;),&quot;number_star&quot;)</param>
+                                                    <param id="0" name="First value">find(JSON_Room.Value(0,&quot;layers&quot;,JSON_Room.CurrentKey,&quot;pathId&quot;,&quot;name&quot;),&quot;number_star&quot;)</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Second value">-1</param>
                                                 </condition>
@@ -151,7 +138,7 @@
                                             <actions>
                                                 <action id="0" name="Call function" sid="728211473500691" type="Function">
                                                     <param id="0" name="Name">&quot;GMS2_PathImport&quot;</param>
-                                                    <param id="1" name="Parameter {n}">JSON_GMS2Room.Value(0,&quot;layers&quot;,JSON_GMS2Room.CurrentKey,&quot;pathId&quot;,&quot;name&quot;)</param>
+                                                    <param id="1" name="Parameter {n}">JSON_Room.Value(0,&quot;layers&quot;,JSON_Room.CurrentKey,&quot;pathId&quot;,&quot;name&quot;)</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -161,15 +148,15 @@
                                 <event-block sid="629674640092120">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="948093730544461" type="System">
-                                            <param id="0" name="First value">JSON_GMS2Room.Value(0,&quot;layers&quot;,JSON_GMS2Room.CurrentKey,&quot;name&quot;)</param>
+                                            <param id="0" name="First value">JSON_Room.Value(0,&quot;layers&quot;,JSON_Room.CurrentKey,&quot;name&quot;)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">&quot;layer_instances&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-10" name="Set value" sid="552411146197407" type="JSON_GMS2Room">
+                                        <action id="-10" name="Set value" sid="552411146197407" type="JSON_Room">
                                             <param id="0" name="Instance variable">Layer_Instances</param>
-                                            <param id="1" name="Value">JSON_GMS2Room.CurrentKey</param>
+                                            <param id="1" name="Value">JSON_Room.CurrentKey</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -177,15 +164,15 @@
                                 <event-block sid="391385196276133">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="379118389971061" type="System">
-                                            <param id="0" name="First value">JSON_GMS2Room.Value(0,&quot;layers&quot;,JSON_GMS2Room.CurrentKey,&quot;name&quot;)</param>
+                                            <param id="0" name="First value">JSON_Room.Value(0,&quot;layers&quot;,JSON_Room.CurrentKey,&quot;name&quot;)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">&quot;layer_tiles_normal&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-10" name="Set value" sid="696975037500400" type="JSON_GMS2Room">
+                                        <action id="-10" name="Set value" sid="696975037500400" type="JSON_Room">
                                             <param id="0" name="Instance variable">Layer_Tiles</param>
-                                            <param id="1" name="Value">JSON_GMS2Room.CurrentKey</param>
+                                            <param id="1" name="Value">JSON_Room.CurrentKey</param>
                                         </action>
                                     </actions>
                                     <sub-events>
@@ -195,12 +182,12 @@
                                             <conditions />
                                             <actions>
                                                 <action id="17" name="Execute Javascript" sid="693536528765694" type="Browser">
-                                                    <param id="0" name="Javascript">&quot;&#x0D;&#x0A;var arr = &quot;&amp;replace(JSON_GMS2Room.AsJson(0,&quot;layers&quot;,JSON_GMS2Room.Layer_Tiles,&quot;tiles&quot;,&quot;TileCompressedData&quot;),&quot;-2147483648&quot;,&quot;0&quot;)&amp;&quot;;&#x0D;&#x0A;var test = uncompressTiles(arr);&#x0D;&#x0A;function uncompressTiles(arr) {  &#x0D;&#x0A;  var newArr = [];&#x0D;&#x0A;  var i=0;&#x0D;&#x0A;  while (i&lt;arr.length)&#x0D;&#x0A;  {&#x0D;&#x0A;    if (arr[i] &lt; 0)&#x0D;&#x0A;    {&#x0D;&#x0A;      var num = Math.abs(arr[i]);&#x0D;&#x0A;      var data = arr[i + 1];&#x0D;&#x0A;      for (var j=0; j&lt;num; j++)&#x0D;&#x0A;      {&#x0D;&#x0A;        newArr.push(data);&#x0D;&#x0A;      }&#x0D;&#x0A;      i += 2;&#x0D;&#x0A;    }&#x0D;&#x0A;    else&#x0D;&#x0A;    {&#x0D;&#x0A;      var num = arr[i];&#x0D;&#x0A;      for (var j=0; j&lt;num; j++)&#x0D;&#x0A;      {&#x0D;&#x0A;        i++;&#x0D;&#x0A;        newArr.push(arr[i]);&#x0D;&#x0A;      }&#x0D;&#x0A;      i++;&#x0D;&#x0A;    }&#x0D;&#x0A;  }&#x0D;&#x0A;  return newArr;&#x0D;&#x0A;};&#x0D;&#x0A;c2_callFunction(&apos;Util_ExecJS&apos;,[test.toString()]);&#x0D;&#x0A;&quot;</param>
+                                                    <param id="0" name="Javascript">&quot;&#x0D;&#x0A;var arr = &quot;&amp;replace(JSON_Room.AsJson(0,&quot;layers&quot;,JSON_Room.Layer_Tiles,&quot;tiles&quot;,&quot;TileCompressedData&quot;),&quot;-2147483648&quot;,&quot;0&quot;)&amp;&quot;;&#x0D;&#x0A;var test = uncompressTiles(arr);&#x0D;&#x0A;function uncompressTiles(arr) {  &#x0D;&#x0A;  var newArr = [];&#x0D;&#x0A;  var i=0;&#x0D;&#x0A;  while (i&lt;arr.length)&#x0D;&#x0A;  {&#x0D;&#x0A;    if (arr[i] &lt; 0)&#x0D;&#x0A;    {&#x0D;&#x0A;      var num = Math.abs(arr[i]);&#x0D;&#x0A;      var data = arr[i + 1];&#x0D;&#x0A;      for (var j=0; j&lt;num; j++)&#x0D;&#x0A;      {&#x0D;&#x0A;        newArr.push(data);&#x0D;&#x0A;      }&#x0D;&#x0A;      i += 2;&#x0D;&#x0A;    }&#x0D;&#x0A;    else&#x0D;&#x0A;    {&#x0D;&#x0A;      var num = arr[i];&#x0D;&#x0A;      for (var j=0; j&lt;num; j++)&#x0D;&#x0A;      {&#x0D;&#x0A;        i++;&#x0D;&#x0A;        newArr.push(arr[i]);&#x0D;&#x0A;      }&#x0D;&#x0A;      i++;&#x0D;&#x0A;    }&#x0D;&#x0A;  }&#x0D;&#x0A;  return newArr;&#x0D;&#x0A;};&#x0D;&#x0A;c2_callFunction(&apos;Util_ExecJS&apos;,[test.toString()]);&#x0D;&#x0A;&quot;</param>
                                                 </action>
-                                                <action id="60" name="LoadJSON" sid="342223337860077" type="JSON_GMS2Room">
+                                                <action id="60" name="LoadJSON" sid="342223337860077" type="JSON_Room">
                                                     <param id="0" name="JSON">&quot;[&quot;&amp;Var_CONSTANTS.ExecJS_Return&amp;&quot;]&quot;</param>
                                                     <param id="1" name="Reference point">0</param>
-                                                    <param id="2" name="Key {n}">&quot;layers&quot;{###}JSON_GMS2Room.Layer_Tiles{###}&quot;tiles&quot;{###}&quot;TileCompressedData&quot;</param>
+                                                    <param id="2" name="Key {n}">&quot;layers&quot;{###}JSON_Room.Layer_Tiles{###}&quot;tiles&quot;{###}&quot;TileCompressedData&quot;</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -213,7 +200,7 @@
                                                     <param id="1" name="Height">Var_Room.Height</param>
                                                 </action>
                                                 <action id="8" name="Load image from URL" sid="480224156112106" type="Tiles_Main">
-                                                    <param id="0" name="URI">Var_CONSTANTS.Path_Assets&amp;&quot;\assets\tilesets\1u_&quot;&amp;replace(JSON_GMS2Room.Value(0,&quot;layers&quot;,JSON_GMS2Room.Layer_Tiles,&quot;tilesetId&quot;,&quot;name&quot;),&quot;tileset_&quot;,&quot;&quot;)&amp;&quot;.png&quot;</param>
+                                                    <param id="0" name="URI">Var_CONSTANTS.Path_Assets&amp;&quot;\assets\tilesets\1u_&quot;&amp;replace(JSON_Room.Value(0,&quot;layers&quot;,JSON_Room.Layer_Tiles,&quot;tilesetId&quot;,&quot;name&quot;),&quot;tileset_&quot;,&quot;&quot;)&amp;&quot;.png&quot;</param>
                                                     <param id="1" name="Cross-origin">0</param>
                                                 </action>
                                             </actions>
@@ -222,7 +209,7 @@
                                         <event-block sid="112492366491517">
                                             <conditions>
                                                 <condition id="0" name="Path exists" sid="304584712610360" type="NWjs">
-                                                    <param id="0" name="Path">Var_CONSTANTS.Path_Assets&amp;&quot;\assets\tilesets\1u_&quot;&amp;replace(JSON_GMS2Room.Value(0,&quot;layers&quot;,JSON_GMS2Room.CurrentKey,&quot;tilesetId&quot;,&quot;name&quot;),&quot;tileset_&quot;,&quot;&quot;)&amp;&quot;.ini&quot;</param>
+                                                    <param id="0" name="Path">Var_CONSTANTS.Path_Assets&amp;&quot;\assets\tilesets\1u_&quot;&amp;replace(JSON_Room.Value(0,&quot;layers&quot;,JSON_Room.CurrentKey,&quot;tilesetId&quot;,&quot;name&quot;),&quot;tileset_&quot;,&quot;&quot;)&amp;&quot;.ini&quot;</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
@@ -235,7 +222,7 @@
                                                     <param id="1" name="Key {n}"></param>
                                                 </action>
                                                 <action id="60" name="LoadJSON" sid="353817688490014" type="JSON_Collisions">
-                                                    <param id="0" name="JSON">INI.INI2JSON(NWjs.ReadFile(Var_CONSTANTS.Path_Assets&amp;&quot;\assets\tilesets\1u_&quot;&amp;replace(JSON_GMS2Room.Value(0,&quot;layers&quot;,JSON_GMS2Room.CurrentKey,&quot;tilesetId&quot;,&quot;name&quot;),&quot;tileset_&quot;,&quot;&quot;)&amp;&quot;.ini&quot;))</param>
+                                                    <param id="0" name="JSON">INI.INI2JSON(NWjs.ReadFile(Var_CONSTANTS.Path_Assets&amp;&quot;\assets\tilesets\1u_&quot;&amp;replace(JSON_Room.Value(0,&quot;layers&quot;,JSON_Room.CurrentKey,&quot;tilesetId&quot;,&quot;name&quot;),&quot;tileset_&quot;,&quot;&quot;)&amp;&quot;.ini&quot;))</param>
                                                     <param id="1" name="Reference point">0</param>
                                                     <param id="2" name="Key {n}"></param>
                                                 </action>
@@ -245,7 +232,7 @@
                                         <event-block sid="338067635581963">
                                             <conditions>
                                                 <condition id="0" inverted="1" name="Path exists" sid="311951244455581" type="NWjs">
-                                                    <param id="0" name="Path">Var_CONSTANTS.Path_Assets&amp;&quot;\assets\tilesets\1u_&quot;&amp;replace(JSON_GMS2Room.Value(0,&quot;layers&quot;,JSON_GMS2Room.CurrentKey,&quot;tilesetId&quot;,&quot;name&quot;),&quot;tileset_&quot;,&quot;&quot;)&amp;&quot;.ini&quot;</param>
+                                                    <param id="0" name="Path">Var_CONSTANTS.Path_Assets&amp;&quot;\assets\tilesets\1u_&quot;&amp;replace(JSON_Room.Value(0,&quot;layers&quot;,JSON_Room.CurrentKey,&quot;tilesetId&quot;,&quot;name&quot;),&quot;tileset_&quot;,&quot;&quot;)&amp;&quot;.ini&quot;</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
@@ -271,9 +258,9 @@
                         <comment>creating tiles</comment>
                         <event-block sid="691092749932932">
                             <conditions>
-                                <condition id="100" name="For each property" sid="842116402524076" type="JSON_GMS2Room">
+                                <condition id="100" name="For each property" sid="842116402524076" type="JSON_Room">
                                     <param id="0" name="Reference point">0</param>
-                                    <param id="1" name="Key {n}">&quot;layers&quot;{###}JSON_GMS2Room.Layer_Tiles{###}&quot;tiles&quot;{###}&quot;TileCompressedData&quot;</param>
+                                    <param id="1" name="Key {n}">&quot;layers&quot;{###}JSON_Room.Layer_Tiles{###}&quot;tiles&quot;{###}&quot;TileCompressedData&quot;</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -284,7 +271,7 @@
                                     <actions>
                                         <action id="-9" name="Set value" sid="799281044425068" type="System">
                                             <param id="0" name="Variable">tile</param>
-                                            <param id="1" name="Value">int(JSON_GMS2Room.Value(0,&quot;layers&quot;,JSON_GMS2Room.Layer_Tiles,&quot;tiles&quot;,&quot;TileCompressedData&quot;,JSON_GMS2Room.CurrentKey))</param>
+                                            <param id="1" name="Value">int(JSON_Room.Value(0,&quot;layers&quot;,JSON_Room.Layer_Tiles,&quot;tiles&quot;,&quot;TileCompressedData&quot;,JSON_Room.CurrentKey))</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -302,7 +289,7 @@
                                         <condition id="-14" name="Compare variable" sid="653021011995978" type="System">
                                             <param id="0" name="Variable">x</param>
                                             <param id="1" name="Comparison">5</param>
-                                            <param id="2" name="Value">int(JSON_GMS2Room.Value(0,&quot;layers&quot;,JSON_GMS2Room.Layer_Tiles,&quot;tiles&quot;,&quot;SerialiseWidth&quot;))</param>
+                                            <param id="2" name="Value">int(JSON_Room.Value(0,&quot;layers&quot;,JSON_Room.Layer_Tiles,&quot;tiles&quot;,&quot;SerialiseWidth&quot;))</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -496,9 +483,9 @@
                         <comment>create objects</comment>
                         <event-block sid="656761440262422">
                             <conditions>
-                                <condition id="100" name="For each property" sid="401845027334466" type="JSON_GMS2Room">
+                                <condition id="100" name="For each property" sid="401845027334466" type="JSON_Room">
                                     <param id="0" name="Reference point">0</param>
-                                    <param id="1" name="Key {n}">&quot;layers&quot;{###}JSON_GMS2Room.Layer_Instances{###}&quot;instances&quot;</param>
+                                    <param id="1" name="Key {n}">&quot;layers&quot;{###}JSON_Room.Layer_Instances{###}&quot;instances&quot;</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -508,28 +495,28 @@
                                     <actions>
                                         <action id="-9" name="Set value" sid="634023518632448" type="System">
                                             <param id="0" name="Variable">instance</param>
-                                            <param id="1" name="Value">JSON_GMS2Room.CurrentKey</param>
+                                            <param id="1" name="Value">JSON_Room.CurrentKey</param>
                                         </action>
                                         <action id="0" name="Create family object" sid="117993136384272" type="CreateObjectByVal">
                                             <param id="0" name="Family object">LevelObjects</param>
                                             <param id="1" name="Variable ID">0</param>
                                             <param id="2" name="Comparison">0</param>
-                                            <param id="3" name="Value">JSON_GMS2Room.Value(0,&quot;layers&quot;,JSON_GMS2Room.Layer_Instances,&quot;instances&quot;,instance,&quot;objectId&quot;,&quot;name&quot;)</param>
+                                            <param id="3" name="Value">JSON_Room.Value(0,&quot;layers&quot;,JSON_Room.Layer_Instances,&quot;instances&quot;,instance,&quot;objectId&quot;,&quot;name&quot;)</param>
                                             <param id="4" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="5" name="X">float(JSON_GMS2Room.Value(0,&quot;layers&quot;,JSON_GMS2Room.Layer_Instances,&quot;instances&quot;,instance,&quot;x&quot;))</param>
-                                            <param id="6" name="Y">float(JSON_GMS2Room.Value(0,&quot;layers&quot;,JSON_GMS2Room.Layer_Instances,&quot;instances&quot;,instance,&quot;y&quot;))</param>
-                                            <param id="7" name="Tag">JSON_GMS2Room.Value(0,&quot;layers&quot;,JSON_GMS2Room.Layer_Instances,&quot;instances&quot;,instance,&quot;objectId&quot;,&quot;name&quot;)</param>
+                                            <param id="5" name="X">float(JSON_Room.Value(0,&quot;layers&quot;,JSON_Room.Layer_Instances,&quot;instances&quot;,instance,&quot;x&quot;))</param>
+                                            <param id="6" name="Y">float(JSON_Room.Value(0,&quot;layers&quot;,JSON_Room.Layer_Instances,&quot;instances&quot;,instance,&quot;y&quot;))</param>
+                                            <param id="7" name="Tag">JSON_Room.Value(0,&quot;layers&quot;,JSON_Room.Layer_Instances,&quot;instances&quot;,instance,&quot;objectId&quot;,&quot;name&quot;)</param>
                                         </action>
                                         <action id="-10" name="Set value" sid="238562653050586" type="LevelObjects">
                                             <param id="0" name="Instance variable">Obj_ImportInstance</param>
-                                            <param id="1" name="Value">JSON_GMS2Room.Value(0,&quot;layers&quot;,JSON_GMS2Room.Layer_Instances,&quot;instances&quot;,instance,&quot;name&quot;)</param>
+                                            <param id="1" name="Value">JSON_Room.Value(0,&quot;layers&quot;,JSON_Room.Layer_Instances,&quot;instances&quot;,instance,&quot;name&quot;)</param>
                                         </action>
                                         <action id="-7" name="Set size" sid="240819159127774" type="LevelObjects">
-                                            <param id="0" name="Width">int(Self.Width*float(JSON_GMS2Room.Value(0,&quot;layers&quot;,JSON_GMS2Room.Layer_Instances,&quot;instances&quot;,instance,&quot;scaleX&quot;)))</param>
-                                            <param id="1" name="Height">int(Self.Height*float(JSON_GMS2Room.Value(0,&quot;layers&quot;,JSON_GMS2Room.Layer_Instances,&quot;instances&quot;,instance,&quot;scaleY&quot;)))</param>
+                                            <param id="0" name="Width">int(Self.Width*float(JSON_Room.Value(0,&quot;layers&quot;,JSON_Room.Layer_Instances,&quot;instances&quot;,instance,&quot;scaleX&quot;)))</param>
+                                            <param id="1" name="Height">int(Self.Height*float(JSON_Room.Value(0,&quot;layers&quot;,JSON_Room.Layer_Instances,&quot;instances&quot;,instance,&quot;scaleY&quot;)))</param>
                                         </action>
                                         <action id="-8" name="Set angle" sid="156597087077215" type="LevelObjects">
-                                            <param id="0" name="Angle">360-float(JSON_GMS2Room.Value(0,&quot;layers&quot;,JSON_GMS2Room.Layer_Instances,&quot;instances&quot;,instance,&quot;rotation&quot;))</param>
+                                            <param id="0" name="Angle">360-float(JSON_Room.Value(0,&quot;layers&quot;,JSON_Room.Layer_Instances,&quot;instances&quot;,instance,&quot;rotation&quot;))</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -586,7 +573,7 @@
                                     <param id="1" name="Value">NWjs.ReadFile(Var_CONSTANTS.Path_SourceCode1u&amp;&quot;\paths\&quot;&amp;Function.Param(0)&amp;&quot;\&quot;&amp;Function.Param(0)&amp;&quot;.yy&quot;)</param>
                                 </action>
                                 <action id="60" name="LoadJSON" sid="855312980304673" type="JSON_COMMON">
-                                    <param id="0" name="JSON">Function.Call(&quot;GMS2_FixJSON&quot;,json)</param>
+                                    <param id="0" name="JSON">Function.Call(&quot;Util_FixJSON&quot;,json)</param>
                                     <param id="1" name="Reference point">0</param>
                                     <param id="2" name="Key {n}"></param>
                                 </action>
@@ -865,73 +852,81 @@
                             <conditions>
                                 <condition id="100" name="For each property" sid="846888883251572" type="JSON_PERSIST">
                                     <param id="0" name="Reference point">0</param>
-                                    <param id="1" name="Key {n}">&quot;ImportRoom_GMS1&quot;</param>
+                                    <param id="1" name="Key {n}">&quot;ImportRoom_GMS1&quot;{###}&quot;Array&quot;</param>
                                 </condition>
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="998925005237443">
+                                <event-block sid="233281226604470">
                                     <conditions>
-                                        <condition id="-8" name="Compare two values" sid="169351812958320" type="System">
-                                            <param id="0" name="First value">find(JSON_PERSIST.CurrentKey,&quot;Story&quot;)</param>
+                                        <condition id="-8" name="Compare two values" sid="640086920984863" type="System">
+                                            <param id="0" name="First value">JSON_PERSIST.CurrentValue</param>
                                             <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Second value">-1</param>
-                                        </condition>
-                                        <condition id="-8" name="Compare two values" sid="530486886527258" type="System">
-                                            <param id="0" name="First value">find(JSON_PERSIST.CurrentKey,&quot;Boss&quot;)</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Second value">-1</param>
-                                        </condition>
-                                        <condition id="-8" name="Compare two values" sid="704965713412143" type="System">
-                                            <param id="0" name="First value">find(JSON_PERSIST.CurrentKey,&quot;p1&quot;)</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Second value">-1</param>
+                                            <param id="2" name="Second value">Function.Param(0)</param>
                                         </condition>
                                     </conditions>
-                                    <actions>
-                                        <action id="-9" name="Set value" sid="435862619973927" type="System">
-                                            <param id="0" name="Variable">next_room</param>
-                                            <param id="1" name="Value">JSON_PERSIST.CurrentKey</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block any="1" sid="975641349594257">
-                                    <conditions>
-                                        <condition id="-8" inverted="1" name="Compare two values" sid="526517100093404" type="System">
-                                            <param id="0" name="First value">find(JSON_PERSIST.CurrentKey,&quot;Story&quot;)</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Second value">-1</param>
-                                        </condition>
-                                        <condition id="-8" inverted="1" name="Compare two values" sid="482729183653881" type="System">
-                                            <param id="0" name="First value">find(JSON_PERSIST.CurrentKey,&quot;Boss&quot;)</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Second value">-1</param>
-                                        </condition>
-                                        <condition id="-8" inverted="1" name="Compare two values" sid="198725098085805" type="System">
-                                            <param id="0" name="First value">find(JSON_PERSIST.CurrentKey,&quot;p1&quot;)</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Second value">-1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-9" name="Set value" sid="189392211777375" type="System">
-                                            <param id="0" name="Variable">next_room</param>
-                                            <param id="1" name="Value">&quot;&quot;</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="998925005237443">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="169351812958320" type="System">
+                                                    <param id="0" name="First value">find(JSON_PERSIST.Value(0,&quot;ImportRoom_GMS1&quot;,&quot;Array&quot;,str(int(JSON_PERSIST.CurrentKey)+1)),&quot;Story&quot;)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">-1</param>
+                                                </condition>
+                                                <condition id="-8" name="Compare two values" sid="530486886527258" type="System">
+                                                    <param id="0" name="First value">find(JSON_PERSIST.Value(0,&quot;ImportRoom_GMS1&quot;,&quot;Array&quot;,str(int(JSON_PERSIST.CurrentKey)+1)),&quot;Boss&quot;)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">-1</param>
+                                                </condition>
+                                                <condition id="-8" name="Compare two values" sid="704965713412143" type="System">
+                                                    <param id="0" name="First value">find(JSON_PERSIST.Value(0,&quot;ImportRoom_GMS1&quot;,&quot;Array&quot;,str(int(JSON_PERSIST.CurrentKey)+1)),&quot;p1&quot;)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">-1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="435862619973927" type="System">
+                                                    <param id="0" name="Variable">next_room</param>
+                                                    <param id="1" name="Value">JSON_PERSIST.Value(0,&quot;ImportRoom_GMS1&quot;,&quot;Array&quot;,str(int(JSON_PERSIST.CurrentKey)+1))</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block any="1" sid="146749225185185">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Compare two values" sid="994286826743189" type="System">
+                                                    <param id="0" name="First value">find(JSON_PERSIST.Value(0,&quot;ImportRoom_GMS1&quot;,&quot;Array&quot;,str(int(JSON_PERSIST.CurrentKey)+1)),&quot;Story&quot;)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">-1</param>
+                                                </condition>
+                                                <condition id="-8" inverted="1" name="Compare two values" sid="486824059529891" type="System">
+                                                    <param id="0" name="First value">find(JSON_PERSIST.Value(0,&quot;ImportRoom_GMS1&quot;,&quot;Array&quot;,str(int(JSON_PERSIST.CurrentKey)+1)),&quot;Boss&quot;)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">-1</param>
+                                                </condition>
+                                                <condition id="-8" inverted="1" name="Compare two values" sid="388003692116514" type="System">
+                                                    <param id="0" name="First value">find(JSON_PERSIST.Value(0,&quot;ImportRoom_GMS1&quot;,&quot;Array&quot;,str(int(JSON_PERSIST.CurrentKey)+1)),&quot;p1&quot;)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">-1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="188226733187087" type="System">
+                                                    <param id="0" name="Variable">next_room</param>
+                                                    <param id="1" name="Value">&quot;&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
                         <comment>this is unrelated but thanks to https://github.com/cubeww/UndertaleModTool-ExportToProjectScript (utmt version 0.3.0) for decompiling this</comment>
-                        <comment>convert the room file from xml to json (taken from https://goessner.net/download/prj/jsonxml/)</comment>
-                        <event-block sid="121918501690048">
+                        <event-block sid="990375621396649">
                             <conditions />
                             <actions>
-                                <action id="17" name="Execute Javascript" sid="127670149317340" type="Browser">
-                                    <param id="0" name="Javascript">&quot;var xml = &apos;&quot;&amp;RegexReplace(NWjs.ReadFile(Var_CONSTANTS.Path_SourceCode1r&amp;&quot;\rooms\&quot;&amp;Function.Param(0)&amp;&quot;.room.gmx&quot;),&quot;\r\n|\n|\r&quot;,&quot;gm&quot;,&quot;&quot;)&amp;&quot;&apos;;&#x0D;&#x0A;var json = xml2json(parseXml(xml));&#x0D;&#x0A;c2_callFunction(&apos;Util_ExecJS&apos;,[json.toString()]);&quot;</param>
-                                </action>
-                                <action id="60" name="LoadJSON" sid="956026548378421" type="JSON_GMS1Room">
-                                    <param id="0" name="JSON">replace(replace(Var_CONSTANTS.ExecJS_Return,&quot;undefined&quot;&quot;&quot;,&quot;&quot;&quot;&quot;),&quot;@&quot;,&quot;&quot;)</param>
+                                <action id="60" name="LoadJSON" sid="956026548378421" type="JSON_Room">
+                                    <param id="0" name="JSON">Function.Call(&quot;Util_ConvertXML&quot;,NWjs.ReadFile(Var_CONSTANTS.Path_SourceCode1r&amp;&quot;\rooms\&quot;&amp;Function.Param(0)&amp;&quot;.room.gmx&quot;))</param>
                                     <param id="1" name="Reference point">0</param>
                                     <param id="2" name="Key {n}"></param>
                                 </action>
@@ -945,18 +940,18 @@
                                 </action>
                                 <action id="-10" name="Set value" sid="467102853640610" type="Var_Room">
                                     <param id="0" name="Instance variable">Width</param>
-                                    <param id="1" name="Value">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;width&quot;))</param>
+                                    <param id="1" name="Value">int(JSON_Room.Value(0,&quot;room&quot;,&quot;width&quot;))</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="339106464067612" type="Var_Room">
                                     <param id="0" name="Instance variable">Height</param>
-                                    <param id="1" name="Value">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;height&quot;))</param>
+                                    <param id="1" name="Value">int(JSON_Room.Value(0,&quot;room&quot;,&quot;height&quot;))</param>
                                 </action>
                             </actions>
                         </event-block>
                         <comment>&quot;tiles&quot;</comment>
                         <event-block sid="419590774391719">
                             <conditions>
-                                <condition id="100" name="For each property" sid="500679677054784" type="JSON_GMS1Room">
+                                <condition id="100" name="For each property" sid="500679677054784" type="JSON_Room">
                                     <param id="0" name="Reference point">0</param>
                                     <param id="1" name="Key {n}">&quot;room&quot;{###}&quot;tiles&quot;{###}&quot;tile&quot;</param>
                                 </condition>
@@ -969,18 +964,18 @@
                                         <action id="-3" name="Create object" sid="291683438740367" type="System">
                                             <param id="0" name="Object to create">Tiles_GMS1</param>
                                             <param id="1" name="Layer">&quot;Scenery&quot;</param>
-                                            <param id="2" name="X">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_GMS1Room.CurrentKey,&quot;x&quot;))</param>
-                                            <param id="3" name="Y">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_GMS1Room.CurrentKey,&quot;y&quot;))</param>
+                                            <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_Room.CurrentKey,&quot;x&quot;))</param>
+                                            <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_Room.CurrentKey,&quot;y&quot;))</param>
                                         </action>
                                         <action id="2" name="Set sub-image offset and size" sid="902049749701534" type="Tiles_GMS1">
-                                            <param id="0" name="offset x">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_GMS1Room.CurrentKey,&quot;xo&quot;))</param>
-                                            <param id="1" name="offset y">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_GMS1Room.CurrentKey,&quot;yo&quot;))</param>
-                                            <param id="2" name="sub width">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_GMS1Room.CurrentKey,&quot;w&quot;))</param>
-                                            <param id="3" name="sub height">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_GMS1Room.CurrentKey,&quot;h&quot;))</param>
+                                            <param id="0" name="offset x">int(JSON_Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_Room.CurrentKey,&quot;xo&quot;))</param>
+                                            <param id="1" name="offset y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_Room.CurrentKey,&quot;yo&quot;))</param>
+                                            <param id="2" name="sub width">int(JSON_Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_Room.CurrentKey,&quot;w&quot;))</param>
+                                            <param id="3" name="sub height">int(JSON_Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_Room.CurrentKey,&quot;h&quot;))</param>
                                         </action>
                                         <action id="-7" name="Set size" sid="881264661845233" type="Tiles_GMS1">
-                                            <param id="0" name="Width">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_GMS1Room.CurrentKey,&quot;w&quot;))</param>
-                                            <param id="1" name="Height">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_GMS1Room.CurrentKey,&quot;h&quot;))</param>
+                                            <param id="0" name="Width">int(JSON_Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_Room.CurrentKey,&quot;w&quot;))</param>
+                                            <param id="1" name="Height">int(JSON_Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_Room.CurrentKey,&quot;h&quot;))</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -989,7 +984,7 @@
                         <comment>objects</comment>
                         <event-block sid="821869036918095">
                             <conditions>
-                                <condition id="100" name="For each property" sid="907064174376571" type="JSON_GMS1Room">
+                                <condition id="100" name="For each property" sid="907064174376571" type="JSON_Room">
                                     <param id="0" name="Reference point">0</param>
                                     <param id="1" name="Key {n}">&quot;room&quot;{###}&quot;instances&quot;{###}&quot;instance&quot;</param>
                                 </condition>
@@ -1001,7 +996,7 @@
                                     <actions>
                                         <action id="-9" name="Set value" sid="854288076452068" type="System">
                                             <param id="0" name="Variable">instance</param>
-                                            <param id="1" name="Value">JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;objName&quot;)</param>
+                                            <param id="1" name="Value">JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;objName&quot;)</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1027,8 +1022,8 @@
                                                 <action id="-3" name="Create object" sid="703540869528415" type="System">
                                                     <param id="0" name="Object to create">Obj_Portal</param>
                                                     <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                                    <param id="2" name="X">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;x&quot;))+16</param>
-                                                    <param id="3" name="Y">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;y&quot;))+32</param>
+                                                    <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;x&quot;))+16</param>
+                                                    <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;y&quot;))+32</param>
                                                 </action>
                                                 <action id="-16" name="Wait" sid="849850340182606" type="System">
                                                     <param id="0" name="Seconds">0.2</param>
@@ -1051,8 +1046,8 @@
                                                 <action id="-3" name="Create object" sid="942522529996859" type="System">
                                                     <param id="0" name="Object to create">Obj_SkullJar</param>
                                                     <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                                    <param id="2" name="X">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;x&quot;))</param>
-                                                    <param id="3" name="Y">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;y&quot;))+32</param>
+                                                    <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;x&quot;))</param>
+                                                    <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;y&quot;))+32</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -1070,12 +1065,12 @@
                                         <action id="-3" name="Create object" sid="733692821428149" type="System">
                                             <param id="0" name="Object to create">Col_Solid</param>
                                             <param id="1" name="Layer">&quot;Collisions&quot;</param>
-                                            <param id="2" name="X">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;x&quot;))</param>
-                                            <param id="3" name="Y">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;y&quot;))</param>
+                                            <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;x&quot;))</param>
+                                            <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;y&quot;))</param>
                                         </action>
                                         <action id="-7" name="Set size" sid="922717048622039" type="Col_Solid">
-                                            <param id="0" name="Width">int(16*float(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;scaleX&quot;)))</param>
-                                            <param id="1" name="Height">int(16*float(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;scaleY&quot;)))</param>
+                                            <param id="0" name="Width">int(16*float(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;scaleX&quot;)))</param>
+                                            <param id="1" name="Height">int(16*float(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;scaleY&quot;)))</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1091,26 +1086,31 @@
                                         <action id="-3" name="Create object" sid="661785730989875" type="System">
                                             <param id="0" name="Object to create">Obj_Yorb10</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;x&quot;))+16</param>
-                                            <param id="3" name="Y">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;y&quot;))+16</param>
+                                            <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;x&quot;))+16</param>
+                                            <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;y&quot;))+16</param>
                                         </action>
                                     </actions>
                                 </event-block>
                                 <comment></comment>
-                                <event-block sid="273299456891872">
+                                <event-block any="1" sid="273299456891872">
                                     <conditions>
                                         <condition id="-14" name="Compare variable" sid="359939003683533" type="System">
                                             <param id="0" name="Variable">instance</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;objStartPos&quot;</param>
                                         </condition>
+                                        <condition id="-14" name="Compare variable" sid="671952595481256" type="System">
+                                            <param id="0" name="Variable">instance</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;objScruffy&quot;</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-3" name="Create object" sid="604891925911023" type="System">
                                             <param id="0" name="Object to create">Special_StartPos</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;x&quot;))+16</param>
-                                            <param id="3" name="Y">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;y&quot;))+16</param>
+                                            <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;x&quot;))+16</param>
+                                            <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;y&quot;))+16</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1126,8 +1126,8 @@
                                         <action id="-3" name="Create object" sid="559293581913695" type="System">
                                             <param id="0" name="Object to create">Obj_Ray</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;x&quot;))+16</param>
-                                            <param id="3" name="Y">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;y&quot;))+32</param>
+                                            <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;x&quot;))+16</param>
+                                            <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;y&quot;))+32</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1143,8 +1143,8 @@
                                         <action id="-3" name="Create object" sid="709282932749991" type="System">
                                             <param id="0" name="Object to create">Obj_Yorb</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;x&quot;))+16</param>
-                                            <param id="3" name="Y">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;y&quot;))+16</param>
+                                            <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;x&quot;))+16</param>
+                                            <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;y&quot;))+16</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1160,8 +1160,8 @@
                                         <action id="-3" name="Create object" sid="206327361029663" type="System">
                                             <param id="0" name="Object to create">Obj_Heart</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;x&quot;))+16</param>
-                                            <param id="3" name="Y">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;y&quot;))+16</param>
+                                            <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;x&quot;))+16</param>
+                                            <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;y&quot;))+16</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1177,8 +1177,8 @@
                                         <action id="-3" name="Create object" sid="599706530739418" type="System">
                                             <param id="0" name="Object to create">Enemy_BoneyM</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;x&quot;))</param>
-                                            <param id="3" name="Y">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;y&quot;))</param>
+                                            <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;x&quot;))</param>
+                                            <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;y&quot;))</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1194,8 +1194,8 @@
                                         <action id="-3" name="Create object" sid="744940982360563" type="System">
                                             <param id="0" name="Object to create">Enemy_Skizzor</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;x&quot;))+16</param>
-                                            <param id="3" name="Y">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;y&quot;))+16</param>
+                                            <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;x&quot;))+16</param>
+                                            <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;y&quot;))+16</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1211,8 +1211,8 @@
                                         <action id="-3" name="Create object" sid="978075903658432" type="System">
                                             <param id="0" name="Object to create">Enemy_Pinhead</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;x&quot;))</param>
-                                            <param id="3" name="Y">int(JSON_GMS1Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_GMS1Room.CurrentKey,&quot;y&quot;))</param>
+                                            <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;x&quot;))</param>
+                                            <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;y&quot;))</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1239,6 +1239,368 @@
                 <event-block sid="680101580177639">
                     <conditions />
                     <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="812026705678583" title="Skin">
+            <sub-events>
+                <event-block sid="105009351305497">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="866829349845806" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="489672730033546">
+                            <conditions />
+                            <actions>
+                                <action id="-3" name="Set position" sid="200413690673734" type="Player_Skin">
+                                    <param id="0" name="X">Player.X</param>
+                                    <param id="1" name="Y">Player.Y+24</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="760985802999378" type="Player_Skin">
+                                    <param id="0" name="Pin to">Player</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="118699031958646" type="Player_Skin">
+                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="215567709649712" type="Player_Skin">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="701676930202711">
+                            <conditions />
+                            <actions>
+                                <action id="55" name="Clear" sid="809237876646317" type="JSON_Skin">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}"></param>
+                                </action>
+                                <action id="0" name="Set New Object" sid="423241355390872" type="JSON_Skin">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}"></param>
+                                </action>
+                                <action id="60" name="LoadJSON" sid="405994501766239" type="JSON_Skin">
+                                    <param id="0" name="JSON">INI.INI2JSON(NWjs.ReadFile(Var_CONSTANTS.Path_Assets&amp;&quot;\skins\&quot;&amp;Var_Main.Skin&amp;&quot;\skin.ini&quot;))</param>
+                                    <param id="1" name="Reference point">0</param>
+                                    <param id="2" name="Key {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>ported from linum framework</comment>
+                        <event-block sid="885564016211747">
+                            <conditions />
+                            <actions>
+                                <action id="5" name="List files" sid="317823390073170" type="NWjs">
+                                    <param id="0" name="Path">Var_CONSTANTS.Path_Assets&amp;&quot;\skins\&quot;&amp;Var_Main.Skin&amp;&quot;\sprites&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <variable constant="0" name="frames" sid="988626175325026" static="1" type="number">-1</variable>
+                                <event-block sid="883184782403854">
+                                    <conditions>
+                                        <condition id="100" name="For each property" sid="391518371133244" type="JSON_Skin">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}"></param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Compare two values" sid="558980113988839" type="System">
+                                            <param id="0" name="First value">JSON_Skin.CurrentKey</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;SuperFreaksSkin&quot;</param>
+                                        </condition>
+                                        <condition id="60" name="Is undefined" sid="727702023297217" type="JSON_Skin">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}">JSON_Skin.CurrentKey{###}&quot;Reuse&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="344223860829584" type="System">
+                                            <param id="0" name="Variable">frames</param>
+                                            <param id="1" name="Value">-1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="956829575442871">
+                                            <conditions>
+                                                <condition id="60" name="Is undefined" sid="532027437626231" type="JSON_Skin">
+                                                    <param id="0" name="Reference point">0</param>
+                                                    <param id="1" name="Key {n}">JSON_Skin.CurrentKey{###}&quot;EndFrame&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="992768749142182">
+                                                    <conditions>
+                                                        <condition id="-12" name="Repeat" sid="838373487706542" type="System">
+                                                            <param id="0" name="Count">NWjs.ListCount</param>
+                                                        </condition>
+                                                        <condition id="-8" inverted="1" name="Compare two values" sid="881409834815326" type="System">
+                                                            <param id="0" name="First value">find(NWjs.ListAt(loopindex),lowercase(JSON_Skin.CurrentKey)&amp;&quot;_&quot;)</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">-1</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Add to" sid="527849993090636" type="System">
+                                                            <param id="0" name="Variable">frames</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                        <action id="20" name="Set Value" sid="625187961129201" type="JSON_Skin">
+                                                            <param id="0" name="Value">frames</param>
+                                                            <param id="1" name="Reference point">0</param>
+                                                            <param id="2" name="Key {n}">JSON_Skin.CurrentKey{###}&quot;EndFrame&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="139395038895206">
+                                            <conditions>
+                                                <condition id="60" name="Is undefined" sid="905515555180953" type="JSON_Skin">
+                                                    <param id="0" name="Reference point">0</param>
+                                                    <param id="1" name="Key {n}">JSON_Skin.CurrentKey{###}&quot;Speed&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="120330800598217">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="762681734750133" type="System">
+                                                            <param id="0" name="First value">JSON_Skin.Value(0,JSON_Skin.CurrentKey,&quot;EndFrame&quot;)</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="20" name="Set Value" sid="394827243620874" type="JSON_Skin">
+                                                            <param id="0" name="Value">0</param>
+                                                            <param id="1" name="Reference point">0</param>
+                                                            <param id="2" name="Key {n}">JSON_Skin.CurrentKey{###}&quot;Speed&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="237634496718723">
+                                                    <conditions>
+                                                        <condition id="-8" inverted="1" name="Compare two values" sid="701003546132490" type="System">
+                                                            <param id="0" name="First value">JSON_Skin.Value(0,JSON_Skin.CurrentKey,&quot;EndFrame&quot;)</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="20" name="Set Value" sid="664964796736146" type="JSON_Skin">
+                                                            <param id="0" name="Value">10</param>
+                                                            <param id="1" name="Reference point">0</param>
+                                                            <param id="2" name="Key {n}">JSON_Skin.CurrentKey{###}&quot;Speed&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="186508280744075">
+                                    <conditions>
+                                        <condition id="100" name="For each property" sid="626165493276948" type="JSON_Skin">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}"></param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Compare two values" sid="225167090680718" type="System">
+                                            <param id="0" name="First value">JSON_Skin.CurrentKey</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;SuperFreaksSkin&quot;</param>
+                                        </condition>
+                                        <condition id="60" inverted="1" name="Is undefined" sid="590596015557339" type="JSON_Skin">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}">JSON_Skin.CurrentKey{###}&quot;Reuse&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="325116393361448">
+                                            <conditions>
+                                                <condition id="60" name="Is undefined" sid="315319418475493" type="JSON_Skin">
+                                                    <param id="0" name="Reference point">0</param>
+                                                    <param id="1" name="Key {n}">JSON_Skin.CurrentKey{###}&quot;EndFrame&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="20" name="Set Value" sid="949822677378984" type="JSON_Skin">
+                                                    <param id="0" name="Value">int(JSON_Skin.Value(0,JSON_Skin.Value(0,JSON_Skin.CurrentKey,&quot;Reuse&quot;),&quot;EndFrame&quot;))</param>
+                                                    <param id="1" name="Reference point">0</param>
+                                                    <param id="2" name="Key {n}">JSON_Skin.CurrentKey{###}&quot;EndFrame&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="924915432698037">
+                                            <conditions>
+                                                <condition id="60" name="Is undefined" sid="549763300492453" type="JSON_Skin">
+                                                    <param id="0" name="Reference point">0</param>
+                                                    <param id="1" name="Key {n}">JSON_Skin.CurrentKey{###}&quot;Speed&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="20" name="Set Value" sid="715149519038927" type="JSON_Skin">
+                                                    <param id="0" name="Value">int(JSON_Skin.Value(0,JSON_Skin.Value(0,JSON_Skin.CurrentKey,&quot;Reuse&quot;),&quot;Speed&quot;))</param>
+                                                    <param id="1" name="Reference point">0</param>
+                                                    <param id="2" name="Key {n}">JSON_Skin.CurrentKey{###}&quot;Speed&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="736815665016267">
+                            <conditions />
+                            <actions>
+                                <action behavior="AnimationLoader" id="2" name="Load all animations" sid="323756907265045" type="Player_Skin">
+                                    <param id="0" name="Size">0</param>
+                                </action>
+                                <action behavior="AnimationLoader" id="2" name="Load all animations" sid="383854111156507" type="HUD_PlayerIcon">
+                                    <param id="0" name="Size">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment></comment>
+                <event-block sid="286346238324749">
+                    <conditions>
+                        <condition behavior="AnimationLoader" id="1" name="On get URL" sid="516100633974868" type="Player_Skin" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="430246444801007">
+                            <conditions>
+                                <condition id="0" name="Path exists" sid="572976409425534" type="NWjs">
+                                    <param id="0" name="Path">Var_CONSTANTS.Path_Assets&amp;&quot;\skins\&quot;&amp;Var_Main.Skin&amp;&quot;\sprites\&quot;&amp;Player_Skin.AnimationLoader.AnimationName&amp;&quot;_&quot;&amp;Player_Skin.AnimationLoader.FrameIndex&amp;&quot;.png&quot;</param>
+                                </condition>
+                                <condition id="60" name="Is undefined" sid="639193568715033" type="JSON_Skin">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}">Player_Skin.AnimationLoader.AnimationName{###}&quot;Reuse&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="AnimationLoader" id="1" name="Set URL" sid="198229792015744" type="Player_Skin">
+                                    <param id="0" name="URL">Var_CONSTANTS.Path_Assets&amp;&quot;\skins\&quot;&amp;Var_Main.Skin&amp;&quot;\sprites\&quot;&amp;Self.AnimationLoader.AnimationName&amp;&quot;_&quot;&amp;Self.AnimationLoader.FrameIndex&amp;&quot;.png&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="663646513929198">
+                            <conditions>
+                                <condition id="60" inverted="1" name="Is undefined" sid="475631996209992" type="JSON_Skin">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}">Player_Skin.AnimationLoader.AnimationName{###}&quot;Reuse&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="AnimationLoader" id="1" name="Set URL" sid="483467894614485" type="Player_Skin">
+                                    <param id="0" name="URL">Var_CONSTANTS.Path_Assets&amp;&quot;\skins\&quot;&amp;Var_Main.Skin&amp;&quot;\sprites\&quot;&amp;JSON_Skin.Value(0,Self.AnimationLoader.AnimationName,&quot;Reuse&quot;)&amp;&quot;_&quot;&amp;Self.AnimationLoader.FrameIndex&amp;&quot;.png&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="423538839957640">
+                            <conditions>
+                                <condition id="0" inverted="1" name="Path exists" sid="526944487783514" type="NWjs">
+                                    <param id="0" name="Path">Var_CONSTANTS.Path_Assets&amp;&quot;\skins\&quot;&amp;Var_Main.Skin&amp;&quot;\sprites\&quot;&amp;Player_Skin.AnimationLoader.AnimationName&amp;&quot;_&quot;&amp;Player_Skin.AnimationLoader.FrameIndex&amp;&quot;.png&quot;</param>
+                                </condition>
+                                <condition id="60" name="Is undefined" sid="664597524307076" type="JSON_Skin">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}">Player_Skin.AnimationLoader.AnimationName{###}&quot;Reuse&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="AnimationLoader" id="1" name="Set URL" sid="998360065927041" type="Player_Skin">
+                                    <param id="0" name="URL">Var_CONSTANTS.Path_Assets&amp;&quot;\assets\empty.png&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="788410195970505">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="916482395716724" type="Player_Skin">
+                            <param id="0" name="Animation">Var_Player.Animation</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="717186858347867">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="453745598033341" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="779911841450596" type="Player_Skin">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="823651265696602" type="Player_Skin">
+                                    <param id="0" name="Width">Self.ImageWidth</param>
+                                    <param id="1" name="Height">Self.ImageHeight</param>
+                                </action>
+                                <action id="6" name="Set speed" sid="919036814388758" type="Player_Skin">
+                                    <param id="0" name="Speed">int(JSON_Skin.Value(0,Var_Player.Animation,&quot;Speed&quot;))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="967084400927587">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="258802011087563" type="Player_Skin">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Number">int(JSON_Skin.Value(0,Var_Player.Animation,&quot;EndFrame&quot;))</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="360126994612409">
+                                    <conditions>
+                                        <condition id="60" name="Is undefined" sid="319878274921396" type="JSON_Skin">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}">Var_Player.Animation{###}&quot;RepeatTo&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="237050570465727" type="Player_Skin">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="952358273809440">
+                                    <conditions>
+                                        <condition id="60" inverted="1" name="Is undefined" sid="439951376572993" type="JSON_Skin">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}">Var_Player.Animation{###}&quot;RepeatTo&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="738478533740905" type="Player_Skin">
+                                            <param id="0" name="Frame number">int(JSON_Skin.Value(0,Var_Player.Animation,&quot;RepeatTo&quot;))</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="940593712494169">
+                    <conditions>
+                        <condition behavior="AnimationLoader" id="1" name="On get URL" sid="849601800872757" type="HUD_PlayerIcon" />
+                    </conditions>
+                    <actions>
+                        <action behavior="AnimationLoader" id="1" name="Set URL" sid="106243756352872" type="HUD_PlayerIcon">
+                            <param id="0" name="URL">Var_CONSTANTS.Path_Assets&amp;&quot;\skins\&quot;&amp;Var_Main.Skin&amp;&quot;\icon_&quot;&amp;Self.AnimationLoader.FrameIndex&amp;&quot;.png&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="198629581485371">
+                    <conditions />
+                    <actions>
+                        <action id="4" name="Set animation" sid="591737324644989" type="Player_Skin">
+                            <param id="0" name="Animation">Var_Player.Animation</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
@@ -1295,19 +1657,6 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="266697309645426">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="140111102294446" type="Keyboard">
-                            <param id="0" name="Key">49</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="688027936507688" type="Function">
-                            <param id="0" name="Name">&quot;GMS2_RoomImport&quot;</param>
-                            <param id="1" name="Parameter {n}">Var_Level.Room</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="818046762911483">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="700957006920439" type="Keyboard">
@@ -1323,11 +1672,15 @@
                             <param id="0" name="Instance variable">Music</param>
                             <param id="1" name="Value">&quot;&quot;</param>
                         </action>
+                        <action id="-10" name="Set value" sid="540263338152082" type="Var_Gameplay">
+                            <param id="0" name="Instance variable">LevelTimer</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="319075703561400">
                     <conditions>
-                        <condition id="200" name="On JSON Parse Error" sid="431246790778651" type="JSON_GMS2Room" />
+                        <condition id="200" name="On JSON Parse Error" sid="431246790778651" type="JSON_Room" />
                         <condition id="-7" name="Compare instance variable" sid="691300799214451" type="Var_Level">
                             <param id="0" name="Instance variable">ImportErrorAttempts</param>
                             <param id="1" name="Comparison">3</param>
@@ -1366,19 +1719,19 @@
                         <action id="-9" name="Destroy" sid="486572255626404" type="LevelObjects" />
                         <action id="-9" name="Destroy" sid="600067926547933" type="LevelCollisions" />
                         <action id="-9" name="Destroy" sid="180751184684975" type="Objects9patch_Child" />
-                        <action id="-10" name="Set value" sid="472892655036420" type="JSON_GMS2Room">
+                        <action id="-10" name="Set value" sid="472892655036420" type="JSON_Room">
                             <param id="0" name="Instance variable">Layer_Tiles</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action id="-10" name="Set value" sid="420035114303212" type="JSON_GMS2Room">
+                        <action id="-10" name="Set value" sid="420035114303212" type="JSON_Room">
                             <param id="0" name="Instance variable">Layer_Instances</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action id="55" name="Clear" sid="303758012880948" type="JSON_GMS2Room">
+                        <action id="55" name="Clear" sid="303758012880948" type="JSON_Room">
                             <param id="0" name="Reference point">0</param>
                             <param id="1" name="Key {n}"></param>
                         </action>
-                        <action id="0" name="Set New Object" sid="212432264159642" type="JSON_GMS2Room">
+                        <action id="0" name="Set New Object" sid="212432264159642" type="JSON_Room">
                             <param id="0" name="Reference point">0</param>
                             <param id="1" name="Key {n}"></param>
                         </action>
@@ -1387,14 +1740,6 @@
                             <param id="1" name="Key {n}"></param>
                         </action>
                         <action id="0" name="Set New Object" sid="676513820427052" type="JSON_Collisions">
-                            <param id="0" name="Reference point">0</param>
-                            <param id="1" name="Key {n}"></param>
-                        </action>
-                        <action id="55" name="Clear" sid="224027325102229" type="JSON_GMS1Room">
-                            <param id="0" name="Reference point">0</param>
-                            <param id="1" name="Key {n}"></param>
-                        </action>
-                        <action id="0" name="Set New Object" sid="667018158169482" type="JSON_GMS1Room">
                             <param id="0" name="Reference point">0</param>
                             <param id="1" name="Key {n}"></param>
                         </action>
@@ -1422,6 +1767,10 @@
                         <action id="-10" name="Set value" sid="457212949827653" type="Var_Room">
                             <param id="0" name="Instance variable">Height</param>
                             <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="546316303021946" type="Var_Room">
+                            <param id="0" name="Instance variable">ScreenWrap</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1520,6 +1869,34 @@
                                 <action id="-10" name="Set value" sid="325587312976779" type="Var_Room">
                                     <param id="0" name="Instance variable">Water_Type</param>
                                     <param id="1" name="Value">JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine,Var_Level.Room,&quot;WaterType&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="794780422505590">
+                            <conditions>
+                                <condition id="60" inverted="1" name="Is undefined" sid="668381444201092" type="JSON_PERSIST">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}">&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine{###}Var_Level.Room{###}&quot;WaterLevel&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="379121736202199" type="Var_Room">
+                                    <param id="0" name="Instance variable">Water</param>
+                                    <param id="1" name="Value">int(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine,Var_Level.Room,&quot;WaterLevel&quot;))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="254464851619941">
+                            <conditions>
+                                <condition id="60" inverted="1" name="Is undefined" sid="705171975288366" type="JSON_PERSIST">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}">&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine{###}Var_Level.Room{###}&quot;ScreenWrap&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="758649419916694" type="Var_Room">
+                                    <param id="0" name="Instance variable">ScreenWrap</param>
+                                    <param id="1" name="Value">JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine,Var_Level.Room,&quot;ScreenWrap&quot;)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -2601,15 +2978,128 @@
             <sub-events>
                 <comment>limiting the player inside the level</comment>
                 <event-block sid="713972502136706">
-                    <conditions />
+                    <conditions>
+                        <condition id="-7" inverted="1" name="Compare instance variable" sid="707400080777854" type="Var_Room">
+                            <param id="0" name="Instance variable">ScreenWrap</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;X&quot;</param>
+                        </condition>
+                        <condition id="-7" inverted="1" name="Compare instance variable" sid="692430474719589" type="Var_Room">
+                            <param id="0" name="Instance variable">ScreenWrap</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;XY&quot;</param>
+                        </condition>
+                    </conditions>
                     <actions>
                         <action id="-1" name="Set X" sid="494008427389079" type="Player">
                             <param id="0" name="X">clamp(Self.X,Self.Width/2,Var_Room.Width-(Self.Width/2))</param>
                         </action>
-                        <action id="-2" name="Set Y" sid="816713990518230" type="Player">
-                            <param id="0" name="Y">clamp(Self.Y,Self.Height/2,Var_Room.Height-(Self.Height/2))</param>
+                    </actions>
+                </event-block>
+                <event-block sid="308133789472001">
+                    <conditions>
+                        <condition id="-7" inverted="1" name="Compare instance variable" sid="387779821427327" type="Var_Room">
+                            <param id="0" name="Instance variable">ScreenWrap</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Y&quot;</param>
+                        </condition>
+                        <condition id="-7" inverted="1" name="Compare instance variable" sid="464717804953404" type="Var_Room">
+                            <param id="0" name="Instance variable">ScreenWrap</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;XY&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="845543142418758" type="Player">
+                            <param id="0" name="Y">clamp(Self.Y,12,Var_Room.Height-24)</param>
                         </action>
                     </actions>
+                </event-block>
+                <event-block any="1" sid="685287075588288">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="152909730708260" type="Var_Room">
+                            <param id="0" name="Instance variable">ScreenWrap</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;X&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="722930661776240" type="Var_Room">
+                            <param id="0" name="Instance variable">ScreenWrap</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;XY&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="990679647911947">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="316054636529244" type="Player">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="X co-ordinate">Var_Room.Width+Self.Width</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="356607548906380" type="Player">
+                                    <param id="0" name="X">0-Self.Width</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="966286393601821">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="771207773544082" type="Player">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="X co-ordinate">0-Self.Width</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="933531077514239" type="Player">
+                                    <param id="0" name="X">Var_Room.Width+Self.Width</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block any="1" sid="839891272823936">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="981690326764084" type="Var_Room">
+                            <param id="0" name="Instance variable">ScreenWrap</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Y&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="482043458964625" type="Var_Room">
+                            <param id="0" name="Instance variable">ScreenWrap</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;XY&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="171712171319461">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="127108750806663" type="Player">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">Var_Room.Height+12</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="822432499322298" type="Player">
+                                    <param id="0" name="Y">0-12</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="104559658696039">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="179569898332366" type="Player">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Y co-ordinate">0-12</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="704313375244959" type="Player">
+                                    <param id="0" name="Y">Var_Room.Height+12</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="251262508776576">
                     <conditions>
@@ -2620,6 +3110,21 @@
                     <actions>
                         <action behavior="Platform" id="7" name="Simulate control" sid="853452460905927" type="Player">
                             <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="121004488799828">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="507127247845837" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="262704258187068" type="Player_Hitbox">
+                            <param id="0" name="Object">Player</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="602714750993296" type="Player_Hitbox">
+                            <param id="0" name="Pin to">Player</param>
+                            <param id="1" name="Mode">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -3227,7 +3732,7 @@
                 <comment></comment>
                 <event-block sid="561944467901855">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="291426941184023" type="Player">
+                        <condition id="0" name="On collision with another object" sid="291426941184023" type="Player_Hitbox">
                             <param id="0" name="Object">Obj_Yorb</param>
                         </condition>
                     </conditions>
@@ -3245,7 +3750,7 @@
                 </event-block>
                 <event-block sid="901946418971997">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="446375597517810" type="Player">
+                        <condition id="0" name="On collision with another object" sid="446375597517810" type="Player_Hitbox">
                             <param id="0" name="Object">Obj_Yorb10</param>
                         </condition>
                     </conditions>
@@ -3292,7 +3797,7 @@
                 </event-block>
                 <event-block sid="236600138199093">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="815848500895511" type="Player">
+                        <condition id="0" name="On collision with another object" sid="815848500895511" type="Player_Hitbox">
                             <param id="0" name="Object">Obj_Heart</param>
                         </condition>
                     </conditions>
@@ -3310,7 +3815,7 @@
                 </event-block>
                 <event-block sid="562066492587016">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="493327674606205" type="Player">
+                        <condition id="0" name="On collision with another object" sid="493327674606205" type="Player_Hitbox">
                             <param id="0" name="Object">Obj_YorbStar</param>
                         </condition>
                         <condition id="-9" name="Is visible" sid="836055917048185" type="Obj_YorbStar" />
@@ -3342,7 +3847,7 @@
                 </event-block>
                 <event-block sid="466847053875891">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="815603406884882" type="Player">
+                        <condition id="0" name="On collision with another object" sid="815603406884882" type="Player_Hitbox">
                             <param id="0" name="Object">Obj_Ray</param>
                         </condition>
                         <condition id="2" name="Is playing" sid="509730532437942" type="Obj_Ray">
@@ -3441,7 +3946,7 @@
                 <comment></comment>
                 <event-block sid="970402447624699">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="958346882100942" type="Player">
+                        <condition id="0" name="On collision with another object" sid="958346882100942" type="Player_Hitbox">
                             <param id="0" name="Object">Obj_Portal</param>
                         </condition>
                     </conditions>
@@ -3519,7 +4024,7 @@
                 </event-block>
                 <event-block sid="560354508093329">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="458544528111415" type="Player">
+                        <condition id="0" name="On collision with another object" sid="458544528111415" type="Player_Hitbox">
                             <param id="0" name="Object">Obj_SkullJar</param>
                         </condition>
                     </conditions>
@@ -3761,7 +4266,7 @@
                 </event-block>
                 <event-block sid="119450451689371">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="976517575386253" type="Player">
+                        <condition id="0" name="On collision with another object" sid="976517575386253" type="Player_Hitbox">
                             <param id="0" name="Object">Obj_Trophy</param>
                         </condition>
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="223015818833652" type="Obj_Trophy">
@@ -3926,7 +4431,7 @@
                 </event-block>
                 <event-block sid="345231699239222">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="333529664459258" type="Player">
+                        <condition id="0" name="On collision with another object" sid="333529664459258" type="Player_Hitbox">
                             <param id="0" name="Object">Obj_Trophy</param>
                         </condition>
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="268031952600019" type="Obj_Trophy">
@@ -4290,7 +4795,7 @@
                         </event-block>
                         <event-block sid="313833476970485">
                             <conditions>
-                                <condition id="0" name="On collision with another object" sid="909624673600798" type="Player">
+                                <condition id="0" name="On collision with another object" sid="909624673600798" type="Player_Hitbox">
                                     <param id="0" name="Object">Obj_NumberStar</param>
                                 </condition>
                             </conditions>
@@ -4733,7 +5238,7 @@
                         </event-block>
                         <event-block sid="985743362316082">
                             <conditions>
-                                <condition id="0" name="On collision with another object" sid="329836880605237" type="Player">
+                                <condition id="0" name="On collision with another object" sid="329836880605237" type="Player_Hitbox">
                                     <param id="0" name="Object">Obj_TimeStar</param>
                                 </condition>
                             </conditions>
@@ -4901,20 +5406,20 @@
                     </actions>
                 </event-block>
                 <comment>moving enemies on the ground </comment>
-                <event-block sid="937654994661003">
+                <event-block sid="485814165101877">
                     <conditions>
-                        <condition id="7" name="Is mirrored" sid="798118652479072" type="Enemies" />
-                        <condition id="-7" name="Compare instance variable" sid="605485417756745" type="Var_Gameplay">
+                        <condition id="7" name="Is mirrored" sid="974187191443292" type="Enemies" />
+                        <condition id="-7" name="Compare instance variable" sid="723748942796597" type="Var_Gameplay">
                             <param id="0" name="Instance variable">Pause</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;False&quot;</param>
                         </condition>
-                        <condition id="1" name="Is overlapping another object" sid="395040317938045" type="Enemies">
+                        <condition id="1" name="Is overlapping another object" sid="189300384726832" type="Enemies">
                             <param id="0" name="Object">Player_CameraLoadingZone</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="150983656348645" type="Enemies">
+                        <action behavior="Platform" id="7" name="Simulate control" sid="458149261078761" type="Enemies">
                             <param id="0" name="Control">0</param>
                         </action>
                     </actions>
@@ -5112,6 +5617,32 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="763425611976061">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="998025869853192" type="Enemies">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="X co-ordinate">Self.Width/2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="346629755194022" type="Enemies">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="646033695295491">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="646083965060951" type="Enemies">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="X co-ordinate">Var_Room.Width-(Self.Width/2)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="290689024249840" type="Enemies">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
@@ -5155,7 +5686,7 @@
                 </event-block>
                 <event-block sid="709269329627903">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="612792085300185" type="Player">
+                        <condition id="0" name="On collision with another object" sid="612792085300185" type="Player_Hitbox">
                             <param id="0" name="Object">Obj_WalkieTalkie</param>
                         </condition>
                         <condition behavior="Platform" id="3" name="Is jumping" sid="989829690183317" type="Player" />
@@ -5486,7 +6017,7 @@
                 <comment>the lil&apos; whoosh effect when you touch</comment>
                 <event-block sid="246869861497409">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="888717037076536" type="Player">
+                        <condition id="0" name="On collision with another object" sid="888717037076536" type="Player_Hitbox">
                             <param id="0" name="Object">Obj_StarArrow</param>
                         </condition>
                         <condition id="-7" inverted="1" name="Compare instance variable" sid="978388919791999" type="Var_Player">
@@ -5748,7 +6279,7 @@
                 </event-block>
                 <event-block sid="338210054428594">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="184179296469841" type="Player">
+                        <condition id="0" name="On collision with another object" sid="184179296469841" type="Player_Hitbox">
                             <param id="0" name="Object">Obj_StarArrow</param>
                         </condition>
                         <condition id="-7" inverted="1" name="Compare instance variable" sid="249585921685251" type="Var_Player">
@@ -6063,7 +6594,7 @@
                                 </event-block>
                                 <event-block sid="790364037235996">
                                     <conditions>
-                                        <condition id="0" name="On collision with another object" sid="488338023716850" type="Player">
+                                        <condition id="0" name="On collision with another object" sid="488338023716850" type="Player_Hitbox">
                                             <param id="0" name="Object">Special_Water</param>
                                         </condition>
                                     </conditions>
@@ -6138,7 +6669,7 @@
                                 </event-block>
                                 <event-block sid="497715094381186">
                                     <conditions>
-                                        <condition id="0" name="On collision with another object" sid="930335575627087" type="Player">
+                                        <condition id="0" name="On collision with another object" sid="930335575627087" type="Player_Hitbox">
                                             <param id="0" name="Object">Special_Water</param>
                                         </condition>
                                     </conditions>

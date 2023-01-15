@@ -220,49 +220,22 @@
                         <event-block sid="903868407546747">
                             <conditions />
                             <actions>
-                                <action id="60" name="LoadJSON" sid="442722066006095" type="JSON_PERSIST">
+                                <action id="60" name="LoadJSON" sid="490245019823270" type="JSON_PERSIST">
                                     <param id="0" name="JSON">INI.INI2JSON(NWjs.ReadFile(Var_CONSTANTS.Path_Assets&amp;&quot;\assets\import\1u.ini&quot;))</param>
                                     <param id="1" name="Reference point">0</param>
-                                    <param id="2" name="Key {n}">&quot;Info_GMS2&quot;</param>
+                                    <param id="2" name="Key {n}">&quot;ImportRoom_GMS2&quot;</param>
                                 </action>
                                 <action id="60" name="LoadJSON" sid="647102063905498" type="JSON_PERSIST">
                                     <param id="0" name="JSON">INI.INI2JSON(NWjs.ReadFile(Var_CONSTANTS.Path_Assets&amp;&quot;\assets\import\1r.ini&quot;))</param>
                                     <param id="1" name="Reference point">0</param>
                                     <param id="2" name="Key {n}">&quot;ImportRoom_GMS1&quot;</param>
                                 </action>
-                            </actions>
-                        </event-block>
-                        <variable constant="0" name="json" sid="612049535882819" static="1" type="text"></variable>
-                        <event-block sid="850432549702064">
-                            <conditions />
-                            <actions>
-                                <action id="-9" name="Set value" sid="227589370739578" type="System">
-                                    <param id="0" name="Variable">json</param>
-                                    <param id="1" name="Value">NWjs.ReadFile(Var_CONSTANTS.Path_Assets&amp;&quot;\assets\import\1u_levels.txt&quot;)</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="482031010397890" type="System">
-                                    <param id="0" name="Variable">json</param>
-                                    <param id="1" name="Value">replace(json,newline,&quot;&quot;)</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="898475110148924" type="System">
-                                    <param id="0" name="Variable">json</param>
-                                    <param id="1" name="Value">replace(json,&quot;function&quot;,&quot;&quot;&quot;function&quot;)</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="616822044155580" type="System">
-                                    <param id="0" name="Variable">json</param>
-                                    <param id="1" name="Value">replace(json,&quot;_15974&quot;,&quot;_15974&quot;&quot;&quot;)</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="530964258000710" type="System">
-                                    <param id="0" name="Variable">json</param>
-                                    <param id="1" name="Value">replace(json,&quot;_levels,&quot;,&quot;_levels&quot;&quot;,&quot;)</param>
-                                </action>
-                                <action id="60" name="LoadJSON" sid="265246282189371" type="JSON_PERSIST">
-                                    <param id="0" name="JSON">json</param>
-                                    <param id="1" name="Reference point">0</param>
-                                    <param id="2" name="Key {n}">&quot;GMS2_LevelsArray&quot;</param>
-                                </action>
                                 <action id="0" name="Call function" sid="457534062545454" type="Function">
-                                    <param id="0" name="Name">&quot;GMS2_RoomProperties&quot;</param>
+                                    <param id="0" name="Name">&quot;GMS2_ListRooms&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="827528171446596" type="Function">
+                                    <param id="0" name="Name">&quot;GMS1_ListRooms&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
@@ -438,6 +411,93 @@
                             <param id="2" name="Key {n}">Function.Param(1){###}Function.Param(2)</param>
                         </action>
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="906733987117344">
+            <conditions>
+                <condition id="0" name="On function" sid="239195939990939" type="Function">
+                    <param id="0" name="Name">&quot;Util_FixJSON&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <comment>fix trailing commas in the room json</comment>
+                <comment>(taken from https://github.com/nokazn/strip-json-trailing-commas/blob/main/src/index.ts)</comment>
+                <event-block sid="722567303739453">
+                    <conditions />
+                    <actions>
+                        <action id="1" name="Set return value" sid="994799791968799" type="Function">
+                            <param id="0" name="Value">RegexReplace(Function.Param(0),&quot;(?&lt;=(true|false|null|[&quot;&quot;\d}\]])\s*),(?=\s*[}\]])&quot;,&quot;g&quot;,&quot;&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="295280021116486">
+            <conditions>
+                <condition id="0" name="On function" sid="469318170104877" type="Function">
+                    <param id="0" name="Name">&quot;Util_ConvertXML&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <comment>convert the xml to json (taken from https://goessner.net/download/prj/jsonxml/)</comment>
+                <event-block sid="898243508718685">
+                    <conditions />
+                    <actions>
+                        <action id="-3" name="Create object" sid="443905267880011" type="System">
+                            <param id="0" name="Object to create">JSON_COMMON</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="17" name="Execute Javascript" sid="883954673530122" type="Browser">
+                            <param id="0" name="Javascript">&quot;var xml = &apos;&quot;&amp;replace(RegexReplace(Function.Param(0),&quot;\r\n|\n|\r&quot;,&quot;gm&quot;,&quot;&quot;),&quot;\&quot;,&quot;/&quot;)&amp;&quot;&apos;;&#x0D;&#x0A;var json = xml2json(parseXml(xml));&#x0D;&#x0A;c2_callFunction(&apos;Util_ExecJS&apos;,[json.toString()]);&quot;</param>
+                        </action>
+                        <action id="60" name="LoadJSON" sid="558102387719552" type="JSON_COMMON">
+                            <param id="0" name="JSON">replace(replace(Var_CONSTANTS.ExecJS_Return,&quot;undefined&quot;&quot;&quot;,&quot;&quot;&quot;&quot;),&quot;@&quot;,&quot;&quot;)</param>
+                            <param id="1" name="Reference point">0</param>
+                            <param id="2" name="Key {n}"></param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="229425565752775">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Compare two values" sid="610630411165212" type="System">
+                                    <param id="0" name="First value">find(Function.Param(0),&quot;.room.gmx&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="944435007453454" type="System">
+                                    <param id="0" name="Object to create">XML_COMMON</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">0</param>
+                                    <param id="3" name="Y">0</param>
+                                </action>
+                                <action id="0" name="Load" sid="491117438680637" type="XML_COMMON">
+                                    <param id="0" name="XML">Function.Param(0)</param>
+                                </action>
+                                <action id="20" name="Set Value" sid="339346796526371" type="JSON_COMMON">
+                                    <param id="0" name="Value">replace(XML_COMMON.StringValue(&quot;/room/code&quot;),newline,&quot;|&quot;)</param>
+                                    <param id="1" name="Reference point">0</param>
+                                    <param id="2" name="Key {n}">&quot;room&quot;{###}&quot;code&quot;</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="228559077211447" type="XML_COMMON" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="213411292484889">
+                            <conditions />
+                            <actions>
+                                <action id="1" name="Set return value" sid="336801130877340" type="Function">
+                                    <param id="0" name="Value">JSON_COMMON.AsJson(0)</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="200909549839693" type="JSON_COMMON" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>
@@ -787,12 +847,12 @@
                 </event-block>
                 <event-block sid="105730973113728">
                     <conditions>
-                        <condition id="100" name="For each property" sid="101218525522095" type="JSON_GMS2Room">
+                        <condition id="100" name="For each property" sid="101218525522095" type="JSON_Room">
                             <param id="0" name="Reference point">0</param>
-                            <param id="1" name="Key {n}">&quot;layers&quot;{###}JSON_GMS2Room.Layer_Instances{###}&quot;instances&quot;</param>
+                            <param id="1" name="Key {n}">&quot;layers&quot;{###}JSON_Room.Layer_Instances{###}&quot;instances&quot;</param>
                         </condition>
                         <condition id="-8" name="Compare two values" sid="243761896687063" type="System">
-                            <param id="0" name="First value">JSON_GMS2Room.Value(0,&quot;layers&quot;,JSON_GMS2Room.Layer_Instances,&quot;instances&quot;,JSON_GMS2Room.CurrentKey,&quot;name&quot;)</param>
+                            <param id="0" name="First value">JSON_Room.Value(0,&quot;layers&quot;,JSON_Room.Layer_Instances,&quot;instances&quot;,JSON_Room.CurrentKey,&quot;name&quot;)</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Second value">Function.Param(0)</param>
                         </condition>
@@ -800,34 +860,34 @@
                     <actions>
                         <action id="-9" name="Set value" sid="501496453782951" type="System">
                             <param id="0" name="Variable">instance</param>
-                            <param id="1" name="Value">JSON_GMS2Room.CurrentKey</param>
+                            <param id="1" name="Value">JSON_Room.CurrentKey</param>
                         </action>
                     </actions>
                     <sub-events>
                         <event-block sid="102948153274938">
                             <conditions>
-                                <condition id="100" name="For each property" sid="193746305866570" type="JSON_GMS2Room">
+                                <condition id="100" name="For each property" sid="193746305866570" type="JSON_Room">
                                     <param id="0" name="Reference point">0</param>
-                                    <param id="1" name="Key {n}">&quot;layers&quot;{###}JSON_GMS2Room.Layer_Instances{###}&quot;instances&quot;{###}instance{###}&quot;properties&quot;</param>
+                                    <param id="1" name="Key {n}">&quot;layers&quot;{###}JSON_Room.Layer_Instances{###}&quot;instances&quot;{###}instance{###}&quot;properties&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="-9" name="Set value" sid="668466102664068" type="System">
                                     <param id="0" name="Variable">instance_property</param>
-                                    <param id="1" name="Value">JSON_GMS2Room.CurrentKey</param>
+                                    <param id="1" name="Value">JSON_Room.CurrentKey</param>
                                 </action>
                             </actions>
                             <sub-events>
                                 <event-block sid="719668147563316">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="638900294437126" type="System">
-                                            <param id="0" name="First value">JSON_GMS2Room.Value(0,&quot;layers&quot;,JSON_GMS2Room.Layer_Instances,&quot;instances&quot;,instance,&quot;properties&quot;,instance_property,&quot;resourceType&quot;)</param>
+                                            <param id="0" name="First value">JSON_Room.Value(0,&quot;layers&quot;,JSON_Room.Layer_Instances,&quot;instances&quot;,instance,&quot;properties&quot;,instance_property,&quot;resourceType&quot;)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">&quot;GMOverriddenProperty&quot;</param>
                                         </condition>
-                                        <condition id="100" name="For each property" sid="211508741510749" type="JSON_GMS2Room">
+                                        <condition id="100" name="For each property" sid="211508741510749" type="JSON_Room">
                                             <param id="0" name="Reference point">0</param>
-                                            <param id="1" name="Key {n}">&quot;layers&quot;{###}JSON_GMS2Room.Layer_Instances{###}&quot;instances&quot;{###}instance{###}&quot;properties&quot;{###}instance_property</param>
+                                            <param id="1" name="Key {n}">&quot;layers&quot;{###}JSON_Room.Layer_Instances{###}&quot;instances&quot;{###}instance{###}&quot;properties&quot;{###}instance_property</param>
                                         </condition>
                                     </conditions>
                                     <actions />
@@ -835,7 +895,7 @@
                                         <event-block sid="413236780573123">
                                             <conditions>
                                                 <condition id="-8" name="Compare two values" sid="200110309637356" type="System">
-                                                    <param id="0" name="First value">JSON_GMS2Room.Value(0,&quot;layers&quot;,JSON_GMS2Room.Layer_Instances,&quot;instances&quot;,instance,&quot;properties&quot;,instance_property,&quot;propertyId&quot;,&quot;name&quot;)</param>
+                                                    <param id="0" name="First value">JSON_Room.Value(0,&quot;layers&quot;,JSON_Room.Layer_Instances,&quot;instances&quot;,instance,&quot;properties&quot;,instance_property,&quot;propertyId&quot;,&quot;name&quot;)</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Second value">Function.Param(1)</param>
                                                 </condition>
@@ -843,7 +903,7 @@
                                             <actions>
                                                 <action id="-9" name="Set value" sid="966633749234764" type="System">
                                                     <param id="0" name="Variable">return</param>
-                                                    <param id="1" name="Value">JSON_GMS2Room.Value(0,&quot;layers&quot;,JSON_GMS2Room.Layer_Instances,&quot;instances&quot;,instance,&quot;properties&quot;,instance_property,&quot;value&quot;)</param>
+                                                    <param id="1" name="Value">JSON_Room.Value(0,&quot;layers&quot;,JSON_Room.Layer_Instances,&quot;instances&quot;,instance,&quot;properties&quot;,instance_property,&quot;value&quot;)</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -863,46 +923,24 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="906733987117344">
-            <conditions>
-                <condition id="0" name="On function" sid="239195939990939" type="Function">
-                    <param id="0" name="Name">&quot;GMS2_FixJSON&quot;</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <comment>fix trailing commas in the room json</comment>
-                <comment>(taken from https://github.com/nokazn/strip-json-trailing-commas/blob/main/src/index.ts)</comment>
-                <event-block sid="722567303739453">
-                    <conditions />
-                    <actions>
-                        <action id="1" name="Set return value" sid="994799791968799" type="Function">
-                            <param id="0" name="Value">RegexReplace(Function.Param(0),&quot;(?&lt;=(true|false|null|[&quot;&quot;\d}\]])\s*),(?=\s*[}\]])&quot;,&quot;g&quot;,&quot;&quot;)</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
         <event-block sid="226587519296571">
             <conditions>
                 <condition id="0" name="On function" sid="391086360309792" type="Function">
-                    <param id="0" name="Name">&quot;GMS2_RoomProperties&quot;</param>
+                    <param id="0" name="Name">&quot;GMS2_ListRooms&quot;</param>
                 </condition>
             </conditions>
             <actions />
             <sub-events>
-                <variable constant="0" name="json" sid="610799307587621" static="1" type="text"></variable>
                 <variable constant="0" name="blacklist" sid="924684681798860" static="1" type="text"></variable>
                 <variable constant="0" name="room" sid="259969928255560" static="1" type="text"></variable>
                 <variable constant="0" name="room_number" sid="737169717581118" static="1" type="number">-1</variable>
                 <variable constant="0" name="room_creation_code" sid="804341007332557" static="1" type="text"></variable>
+                <variable constant="0" name="array_counter" sid="904695181060381" static="1" type="number">-1</variable>
+                <variable constant="0" name="levels_array" sid="547667891747438" static="1" type="text"></variable>
+                <variable constant="0" name="project_file" sid="489208242031749" static="1" type="text"></variable>
                 <event-block sid="557415743037459">
                     <conditions />
                     <actions>
-                        <action id="-9" name="Set value" sid="592144310473827" type="System">
-                            <param id="0" name="Variable">json</param>
-                            <param id="1" name="Value">&quot;&quot;</param>
-                        </action>
                         <action id="-9" name="Set value" sid="740323101398109" type="System">
                             <param id="0" name="Variable">blacklist</param>
                             <param id="1" name="Value">&quot;&quot;</param>
@@ -919,10 +957,55 @@
                             <param id="0" name="Variable">room_creation_code</param>
                             <param id="1" name="Value">&quot;&quot;</param>
                         </action>
+                        <action id="-9" name="Set value" sid="961895935244426" type="System">
+                            <param id="0" name="Variable">array_counter</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="567931453019952" type="System">
+                            <param id="0" name="Variable">levels_array</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="704884505608946" type="System">
+                            <param id="0" name="Variable">project_file</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
-                <event-block sid="157679074359109">
+                <event-block sid="607490225757348">
                     <conditions />
+                    <actions>
+                        <action id="5" name="List files" sid="319168932297440" type="NWjs">
+                            <param id="0" name="Path">Var_CONSTANTS.Path_SourceCode1u</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="354560808706594">
+                            <conditions>
+                                <condition id="-12" name="Repeat" sid="888387825697403" type="System">
+                                    <param id="0" name="Count">NWjs.ListCount</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Compare two values" sid="409458569253511" type="System">
+                                    <param id="0" name="First value">find(NWjs.ListAt(loopindex),&quot;.yyp&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="185791624593057" type="System">
+                                    <param id="0" name="Variable">project_file</param>
+                                    <param id="1" name="Value">NWjs.ListAt(loopindex)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="157679074359109">
+                    <conditions>
+                        <condition id="60" name="Is undefined" sid="520629804033533" type="JSON_PERSIST">
+                            <param id="0" name="Reference point">0</param>
+                            <param id="1" name="Key {n}">&quot;ImportRoom_GMS2&quot;</param>
+                        </condition>
+                    </conditions>
                     <actions>
                         <action id="0" name="Set New Object" sid="137390386994794" type="JSON_PERSIST">
                             <param id="0" name="Reference point">0</param>
@@ -930,11 +1013,45 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="440329130465601">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="126991014274070" type="System">
+                            <param id="0" name="Variable">levels_array</param>
+                            <param id="1" name="Value">NWjs.ReadFile(Var_CONSTANTS.Path_Assets&amp;&quot;\assets\import\1u_levels.txt&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="277544439813210" type="System">
+                            <param id="0" name="Variable">levels_array</param>
+                            <param id="1" name="Value">replace(levels_array,&quot;function&quot;,&quot;&quot;&quot;function&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="535917906035232" type="System">
+                            <param id="0" name="Variable">levels_array</param>
+                            <param id="1" name="Value">replace(levels_array,&quot;_15974&quot;,&quot;_15974&quot;&quot;&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="186928271948103" type="System">
+                            <param id="0" name="Variable">levels_array</param>
+                            <param id="1" name="Value">replace(levels_array,&quot;_levels,&quot;,&quot;_levels&quot;&quot;,&quot;)</param>
+                        </action>
+                        <action id="60" name="LoadJSON" sid="250738251402047" type="JSON_PERSIST">
+                            <param id="0" name="JSON">levels_array</param>
+                            <param id="1" name="Reference point">0</param>
+                            <param id="2" name="Key {n}">&quot;GMS2_LevelsArray&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="759813490287917" type="System">
+                            <param id="0" name="Variable">levels_array</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="253091511840998">
                     <conditions>
+                        <condition id="60" inverted="1" name="Is undefined" sid="618729491504042" type="JSON_PERSIST">
+                            <param id="0" name="Reference point">0</param>
+                            <param id="1" name="Key {n}">&quot;ImportRoom_GMS2&quot;{###}&quot;Blacklist&quot;</param>
+                        </condition>
                         <condition id="100" name="For each property" sid="529138875825795" type="JSON_PERSIST">
                             <param id="0" name="Reference point">0</param>
-                            <param id="1" name="Key {n}">&quot;Info_GMS2&quot;{###}&quot;Blacklist&quot;</param>
+                            <param id="1" name="Key {n}">&quot;ImportRoom_GMS2&quot;{###}&quot;Blacklist&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -953,21 +1070,22 @@
                             <param id="2" name="X">0</param>
                             <param id="3" name="Y">0</param>
                         </action>
-                        <action id="-9" name="Set value" sid="327583402169447" type="System">
-                            <param id="0" name="Variable">json</param>
-                            <param id="1" name="Value">NWjs.ReadFile(Var_CONSTANTS.Path_SourceCode1u&amp;&quot;\Super Freaks 1 Ultimate Edition.yyp&quot;)</param>
-                        </action>
                         <action id="60" name="LoadJSON" sid="936665551770255" type="JSON_COMMON">
-                            <param id="0" name="JSON">Function.Call(&quot;GMS2_FixJSON&quot;,json)</param>
+                            <param id="0" name="JSON">Function.Call(&quot;Util_FixJSON&quot;,NWjs.ReadFile(Var_CONSTANTS.Path_SourceCode1u&amp;&quot;\&quot;&amp;project_file))</param>
                             <param id="1" name="Reference point">0</param>
                             <param id="2" name="Key {n}"></param>
                         </action>
-                        <action id="-9" name="Set value" sid="141842307294035" type="System">
-                            <param id="0" name="Variable">json</param>
-                            <param id="1" name="Value">&quot;&quot;</param>
-                        </action>
                     </actions>
                     <sub-events>
+                        <event-block sid="823208540786391">
+                            <conditions />
+                            <actions>
+                                <action id="10" name="Set New Array" sid="621729307611297" type="JSON_PERSIST">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}">&quot;ImportRoom_GMS2&quot;{###}&quot;Array&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="599269991487724">
                             <conditions>
                                 <condition id="100" name="For each property" sid="161123407629097" type="JSON_COMMON">
@@ -996,8 +1114,27 @@
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="927009189192089">
+                                        <event-block sid="915855101590213">
                                             <conditions />
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="509425523232930" type="System">
+                                                    <param id="0" name="Variable">array_counter</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="20" name="Set Value" sid="261624448226441" type="JSON_PERSIST">
+                                                    <param id="0" name="Value">room</param>
+                                                    <param id="1" name="Reference point">0</param>
+                                                    <param id="2" name="Key {n}">&quot;ImportRoom_GMS2&quot;{###}&quot;Array&quot;{###}array_counter</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="927009189192089">
+                                            <conditions>
+                                                <condition id="60" name="Is undefined" sid="856262628194790" type="JSON_PERSIST">
+                                                    <param id="0" name="Reference point">0</param>
+                                                    <param id="1" name="Key {n}">&quot;ImportRoom_GMS2&quot;{###}room</param>
+                                                </condition>
+                                            </conditions>
                                             <actions>
                                                 <action id="0" name="Set New Object" sid="680185799333544" type="JSON_PERSIST">
                                                     <param id="0" name="Reference point">0</param>
@@ -1006,46 +1143,57 @@
                                             </actions>
                                         </event-block>
                                         <event-block sid="319158447420645">
-                                            <conditions />
-                                            <actions>
-                                                <action id="20" name="Set Value" sid="738291409112833" type="JSON_PERSIST">
-                                                    <param id="0" name="Value">&quot;Level&quot;</param>
-                                                    <param id="1" name="Reference point">0</param>
-                                                    <param id="2" name="Key {n}">&quot;ImportRoom_GMS2&quot;{###}room{###}&quot;Type&quot;</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block any="1" sid="220313236457458">
                                             <conditions>
-                                                <condition id="-8" inverted="1" name="Compare two values" sid="305787422269464" type="System">
-                                                    <param id="0" name="First value">find(room,&quot;_cutscene&quot;)</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Second value">-1</param>
+                                                <condition id="60" name="Is undefined" sid="158759764012465" type="JSON_PERSIST">
+                                                    <param id="0" name="Reference point">0</param>
+                                                    <param id="1" name="Key {n}">&quot;ImportRoom_GMS2&quot;{###}room{###}&quot;Type&quot;</param>
                                                 </condition>
                                             </conditions>
-                                            <actions>
-                                                <action id="20" name="Set Value" sid="191345624812474" type="JSON_PERSIST">
-                                                    <param id="0" name="Value">&quot;Cutscene&quot;</param>
-                                                    <param id="1" name="Reference point">0</param>
-                                                    <param id="2" name="Key {n}">&quot;ImportRoom_GMS2&quot;{###}room{###}&quot;Type&quot;</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="180143883655449">
-                                            <conditions>
-                                                <condition id="-8" inverted="1" name="Compare two values" sid="519972821257572" type="System">
-                                                    <param id="0" name="First value">find(room,&quot;_worldmap&quot;)</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Second value">-1</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="20" name="Set Value" sid="896418047552672" type="JSON_PERSIST">
-                                                    <param id="0" name="Value">&quot;WorldMap&quot;</param>
-                                                    <param id="1" name="Reference point">0</param>
-                                                    <param id="2" name="Key {n}">&quot;ImportRoom_GMS2&quot;{###}room{###}&quot;Type&quot;</param>
-                                                </action>
-                                            </actions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="775589732499431">
+                                                    <conditions />
+                                                    <actions>
+                                                        <action id="20" name="Set Value" sid="738291409112833" type="JSON_PERSIST">
+                                                            <param id="0" name="Value">&quot;Level&quot;</param>
+                                                            <param id="1" name="Reference point">0</param>
+                                                            <param id="2" name="Key {n}">&quot;ImportRoom_GMS2&quot;{###}room{###}&quot;Type&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block any="1" sid="220313236457458">
+                                                    <conditions>
+                                                        <condition id="-8" inverted="1" name="Compare two values" sid="305787422269464" type="System">
+                                                            <param id="0" name="First value">find(room,&quot;_cutscene&quot;)</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">-1</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="20" name="Set Value" sid="191345624812474" type="JSON_PERSIST">
+                                                            <param id="0" name="Value">&quot;Cutscene&quot;</param>
+                                                            <param id="1" name="Reference point">0</param>
+                                                            <param id="2" name="Key {n}">&quot;ImportRoom_GMS2&quot;{###}room{###}&quot;Type&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="180143883655449">
+                                                    <conditions>
+                                                        <condition id="-8" inverted="1" name="Compare two values" sid="519972821257572" type="System">
+                                                            <param id="0" name="First value">find(room,&quot;_worldmap&quot;)</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">-1</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="20" name="Set Value" sid="896418047552672" type="JSON_PERSIST">
+                                                            <param id="0" name="Value">&quot;WorldMap&quot;</param>
+                                                            <param id="1" name="Reference point">0</param>
+                                                            <param id="2" name="Key {n}">&quot;ImportRoom_GMS2&quot;{###}room{###}&quot;Type&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                         <comment>look for &quot;enum level_data&quot; and global.levels</comment>
                                         <event-block sid="176427475836858">
@@ -1060,28 +1208,69 @@
                                                     <param id="2" name="Second value">room_number</param>
                                                 </condition>
                                             </conditions>
-                                            <actions>
-                                                <action id="20" name="Set Value" sid="795073782443599" type="JSON_PERSIST">
-                                                    <param id="0" name="Value">JSON_PERSIST.CurrentKey</param>
-                                                    <param id="1" name="Reference point">0</param>
-                                                    <param id="2" name="Key {n}">&quot;ImportRoom_GMS2&quot;{###}room{###}&quot;LevelID&quot;</param>
-                                                </action>
-                                                <action id="20" name="Set Value" sid="643882358437629" type="JSON_PERSIST">
-                                                    <param id="0" name="Value">JSON_PERSIST.Value(0,&quot;GMS2_LevelsArray&quot;,JSON_PERSIST.CurrentKey,5)</param>
-                                                    <param id="1" name="Reference point">0</param>
-                                                    <param id="2" name="Key {n}">&quot;ImportRoom_GMS2&quot;{###}room{###}&quot;Title&quot;</param>
-                                                </action>
-                                                <action id="20" name="Set Value" sid="771517009885714" type="JSON_PERSIST">
-                                                    <param id="0" name="Value">JSON_PERSIST.Value(0,&quot;GMS2_LevelsArray&quot;,JSON_PERSIST.CurrentKey,4)</param>
-                                                    <param id="1" name="Reference point">0</param>
-                                                    <param id="2" name="Key {n}">&quot;ImportRoom_GMS2&quot;{###}room{###}&quot;TitleWorld&quot;</param>
-                                                </action>
-                                                <action id="20" name="Set Value" sid="154390182720355" type="JSON_PERSIST">
-                                                    <param id="0" name="Value">JSON_PERSIST.Value(0,&quot;GMS2_LevelsArray&quot;,JSON_PERSIST.CurrentKey,2)</param>
-                                                    <param id="1" name="Reference point">0</param>
-                                                    <param id="2" name="Key {n}">&quot;ImportRoom_GMS2&quot;{###}room{###}&quot;Trophies&quot;</param>
-                                                </action>
-                                            </actions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="604200718135702">
+                                                    <conditions>
+                                                        <condition id="60" name="Is undefined" sid="249934541405318" type="JSON_PERSIST">
+                                                            <param id="0" name="Reference point">0</param>
+                                                            <param id="1" name="Key {n}">&quot;ImportRoom_GMS2&quot;{###}room{###}&quot;LevelID&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="20" name="Set Value" sid="795073782443599" type="JSON_PERSIST">
+                                                            <param id="0" name="Value">JSON_PERSIST.CurrentKey</param>
+                                                            <param id="1" name="Reference point">0</param>
+                                                            <param id="2" name="Key {n}">&quot;ImportRoom_GMS2&quot;{###}room{###}&quot;LevelID&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="101841641634609">
+                                                    <conditions>
+                                                        <condition id="60" name="Is undefined" sid="700164798608664" type="JSON_PERSIST">
+                                                            <param id="0" name="Reference point">0</param>
+                                                            <param id="1" name="Key {n}">&quot;ImportRoom_GMS2&quot;{###}room{###}&quot;Title&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="20" name="Set Value" sid="643882358437629" type="JSON_PERSIST">
+                                                            <param id="0" name="Value">JSON_PERSIST.Value(0,&quot;GMS2_LevelsArray&quot;,JSON_PERSIST.CurrentKey,5)</param>
+                                                            <param id="1" name="Reference point">0</param>
+                                                            <param id="2" name="Key {n}">&quot;ImportRoom_GMS2&quot;{###}room{###}&quot;Title&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="246652764833043">
+                                                    <conditions>
+                                                        <condition id="60" name="Is undefined" sid="313837497786185" type="JSON_PERSIST">
+                                                            <param id="0" name="Reference point">0</param>
+                                                            <param id="1" name="Key {n}">&quot;ImportRoom_GMS2&quot;{###}room{###}&quot;TitleWorld&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="20" name="Set Value" sid="771517009885714" type="JSON_PERSIST">
+                                                            <param id="0" name="Value">JSON_PERSIST.Value(0,&quot;GMS2_LevelsArray&quot;,JSON_PERSIST.CurrentKey,4)</param>
+                                                            <param id="1" name="Reference point">0</param>
+                                                            <param id="2" name="Key {n}">&quot;ImportRoom_GMS2&quot;{###}room{###}&quot;TitleWorld&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="761224855881907">
+                                                    <conditions>
+                                                        <condition id="60" name="Is undefined" sid="706176426165422" type="JSON_PERSIST">
+                                                            <param id="0" name="Reference point">0</param>
+                                                            <param id="1" name="Key {n}">&quot;ImportRoom_GMS2&quot;{###}room{###}&quot;Trophies&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="20" name="Set Value" sid="154390182720355" type="JSON_PERSIST">
+                                                            <param id="0" name="Value">JSON_PERSIST.Value(0,&quot;GMS2_LevelsArray&quot;,JSON_PERSIST.CurrentKey,2)</param>
+                                                            <param id="1" name="Reference point">0</param>
+                                                            <param id="2" name="Key {n}">&quot;ImportRoom_GMS2&quot;{###}room{###}&quot;Trophies&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                         <event-block sid="491861459250970">
                                             <conditions />
@@ -1094,7 +1283,12 @@
                                             <sub-events>
                                                 <variable constant="0" name="music" sid="215425967294860" static="1" type="text"></variable>
                                                 <event-block sid="918153980802229">
-                                                    <conditions />
+                                                    <conditions>
+                                                        <condition id="60" name="Is undefined" sid="920075108922751" type="JSON_PERSIST">
+                                                            <param id="0" name="Reference point">0</param>
+                                                            <param id="1" name="Key {n}">&quot;ImportRoom_GMS2&quot;{###}room{###}&quot;Music&quot;</param>
+                                                        </condition>
+                                                    </conditions>
                                                     <actions>
                                                         <action id="-9" name="Set value" sid="436589661593800" type="System">
                                                             <param id="0" name="Variable">music</param>
@@ -1148,6 +1342,10 @@
                                                                     <param id="1" name="Comparison">0</param>
                                                                     <param id="2" name="Second value">-1</param>
                                                                 </condition>
+                                                                <condition id="60" name="Is undefined" sid="374649639318040" type="JSON_PERSIST">
+                                                                    <param id="0" name="Reference point">0</param>
+                                                                    <param id="1" name="Key {n}">&quot;ImportRoom_GMS2&quot;{###}room{###}&quot;WaterLevel&quot;</param>
+                                                                </condition>
                                                             </conditions>
                                                             <actions>
                                                                 <action id="20" name="Set Value" sid="803176193317189" type="JSON_PERSIST">
@@ -1163,6 +1361,10 @@
                                                                     <param id="0" name="First value">find(tokenat(room_creation_code,loopindex,&quot;;&quot;),&quot;water_type&quot;)</param>
                                                                     <param id="1" name="Comparison">0</param>
                                                                     <param id="2" name="Second value">-1</param>
+                                                                </condition>
+                                                                <condition id="60" name="Is undefined" sid="324679748605598" type="JSON_PERSIST">
+                                                                    <param id="0" name="Reference point">0</param>
+                                                                    <param id="1" name="Key {n}">&quot;ImportRoom_GMS2&quot;{###}room{###}&quot;WaterType&quot;</param>
                                                                 </condition>
                                                             </conditions>
                                                             <actions>
@@ -1185,6 +1387,228 @@
                             <conditions />
                             <actions>
                                 <action id="-9" name="Destroy" sid="943454334695422" type="JSON_COMMON" />
+                                <action id="50" name="Delete" sid="788257326490070" type="JSON_PERSIST">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}">&quot;GMS2_LevelsArray&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="759843673914828">
+            <conditions>
+                <condition id="0" name="On function" sid="231089303772871" type="Function">
+                    <param id="0" name="Name">&quot;GMS1_ListRooms&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="blacklist" sid="933057462336795" static="1" type="text"></variable>
+                <variable constant="0" name="room" sid="521137700184003" static="1" type="text"></variable>
+                <variable constant="0" name="room_number" sid="714208451841100" static="1" type="number">-1</variable>
+                <variable constant="0" name="array_counter" sid="627587843692308" static="1" type="number">-1</variable>
+                <variable constant="0" name="project_file" sid="886864927629192" static="1" type="text"></variable>
+                <event-block sid="587463469453681">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="151453680440261" type="System">
+                            <param id="0" name="Variable">blacklist</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="416276804408197" type="System">
+                            <param id="0" name="Variable">room</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="713127229295866" type="System">
+                            <param id="0" name="Variable">room_number</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="555215879765952" type="System">
+                            <param id="0" name="Variable">array_counter</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="301396479020297" type="System">
+                            <param id="0" name="Variable">project_file</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="674387543553406">
+                    <conditions />
+                    <actions>
+                        <action id="5" name="List files" sid="984720620242613" type="NWjs">
+                            <param id="0" name="Path">Var_CONSTANTS.Path_SourceCode1r</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="431596772026014">
+                            <conditions>
+                                <condition id="-12" name="Repeat" sid="581235380878368" type="System">
+                                    <param id="0" name="Count">NWjs.ListCount</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Compare two values" sid="799324917551628" type="System">
+                                    <param id="0" name="First value">find(NWjs.ListAt(loopindex),&quot;.project.gmx&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="173643797440869" type="System">
+                                    <param id="0" name="Variable">project_file</param>
+                                    <param id="1" name="Value">NWjs.ListAt(loopindex)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="531891989567036">
+                    <conditions>
+                        <condition id="60" name="Is undefined" sid="660773818590205" type="JSON_PERSIST">
+                            <param id="0" name="Reference point">0</param>
+                            <param id="1" name="Key {n}">&quot;ImportRoom_GMS1&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set New Object" sid="612921267363332" type="JSON_PERSIST">
+                            <param id="0" name="Reference point">0</param>
+                            <param id="1" name="Key {n}">&quot;ImportRoom_GMS1&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="322237502370186">
+                    <conditions>
+                        <condition id="60" inverted="1" name="Is undefined" sid="476466165691130" type="JSON_PERSIST">
+                            <param id="0" name="Reference point">0</param>
+                            <param id="1" name="Key {n}">&quot;ImportRoom_GMS1&quot;{###}&quot;Blacklist&quot;</param>
+                        </condition>
+                        <condition id="100" name="For each property" sid="525508855565957" type="JSON_PERSIST">
+                            <param id="0" name="Reference point">0</param>
+                            <param id="1" name="Key {n}">&quot;ImportRoom_GMS1&quot;{###}&quot;Blacklist&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="897722559834905" type="System">
+                            <param id="0" name="Variable">blacklist</param>
+                            <param id="1" name="Value">blacklist&amp;&quot;,&quot;&amp;JSON_PERSIST.CurrentKey</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="248404290029869">
+                    <conditions />
+                    <actions>
+                        <action id="-3" name="Create object" sid="483400517863247" type="System">
+                            <param id="0" name="Object to create">JSON_COMMON</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="60" name="LoadJSON" sid="795289141188395" type="JSON_COMMON">
+                            <param id="0" name="JSON">Function.Call(&quot;Util_ConvertXML&quot;,NWjs.ReadFile(Var_CONSTANTS.Path_SourceCode1r&amp;&quot;\&quot;&amp;project_file))</param>
+                            <param id="1" name="Reference point">0</param>
+                            <param id="2" name="Key {n}"></param>
+                        </action>
+                        <action id="14" name="Log" sid="343899223090816" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="810894248096743">
+                            <conditions />
+                            <actions>
+                                <action id="10" name="Set New Array" sid="723503381585203" type="JSON_PERSIST">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}">&quot;ImportRoom_GMS1&quot;{###}&quot;Array&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="942183176076854">
+                            <conditions>
+                                <condition id="100" name="For each property" sid="207112180222419" type="JSON_COMMON">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}">&quot;assets&quot;{###}&quot;rooms&quot;{###}&quot;room&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="194220590615898" type="System">
+                                    <param id="0" name="Variable">room</param>
+                                    <param id="1" name="Value">replace(JSON_COMMON.CurrentValue,&quot;rooms/&quot;,&quot;&quot;)</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="620513604164390" type="System">
+                                    <param id="0" name="Variable">room_number</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="870416107142830">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="697624746041575" type="System">
+                                            <param id="0" name="First value">find(blacklist,room)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">-1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="916301834416926">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="443624701964743" type="System">
+                                                    <param id="0" name="Variable">array_counter</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="20" name="Set Value" sid="574185018222036" type="JSON_PERSIST">
+                                                    <param id="0" name="Value">room</param>
+                                                    <param id="1" name="Reference point">0</param>
+                                                    <param id="2" name="Key {n}">&quot;ImportRoom_GMS1&quot;{###}&quot;Array&quot;{###}array_counter</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="722795285054890">
+                                            <conditions>
+                                                <condition id="60" name="Is undefined" sid="313337889045529" type="JSON_PERSIST">
+                                                    <param id="0" name="Reference point">0</param>
+                                                    <param id="1" name="Key {n}">&quot;ImportRoom_GMS1&quot;{###}room</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set New Object" sid="129349639807353" type="JSON_PERSIST">
+                                                    <param id="0" name="Reference point">0</param>
+                                                    <param id="1" name="Key {n}">&quot;ImportRoom_GMS1&quot;{###}room</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="164508655497421">
+                                            <conditions>
+                                                <condition id="60" name="Is undefined" sid="382830152786743" type="JSON_PERSIST">
+                                                    <param id="0" name="Reference point">0</param>
+                                                    <param id="1" name="Key {n}">&quot;ImportRoom_GMS1&quot;{###}room{###}&quot;Type&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="496535092790388">
+                                                    <conditions />
+                                                    <actions>
+                                                        <action id="20" name="Set Value" sid="426588741699564" type="JSON_PERSIST">
+                                                            <param id="0" name="Value">&quot;Level&quot;</param>
+                                                            <param id="1" name="Reference point">0</param>
+                                                            <param id="2" name="Key {n}">&quot;ImportRoom_GMS1&quot;{###}room{###}&quot;Type&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="796293197986179">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Destroy" sid="952908849142578" type="JSON_COMMON" />
                             </actions>
                         </event-block>
                     </sub-events>
