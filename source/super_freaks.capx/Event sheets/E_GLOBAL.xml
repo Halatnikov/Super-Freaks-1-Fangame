@@ -139,7 +139,7 @@
                 </event-block>
                 <event-block sid="394457305583358">
                     <conditions>
-                        <condition id="-18" name="On created" sid="677247516815162" type="Text" />
+                        <condition id="-18" name="On created" sid="677247516815162" type="Text_Regular" />
                     </conditions>
                     <actions>
                         <action id="-27" name="Set effect enabled" sid="838397810260232" type="Text_Regular">

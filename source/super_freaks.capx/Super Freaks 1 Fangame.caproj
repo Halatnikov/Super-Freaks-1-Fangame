@@ -2,7 +2,7 @@
 <c2project>
     <name>Super Freaks 1 Fangame</name>
     <description></description>
-    <version>0.2.0-2</version>
+    <version>0.2.0-3</version>
     <author>Halatnikov</author>
     <author-email></author-email>
     <author-website>https://halatnikov.github.io</author-website>
@@ -2203,6 +2203,15 @@
         </object-type>
         <object-type name="Sprite2" sid="322090084206899">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Current" sid="688100094104454" type="number" />
+                <instance-variable name="Offset" sid="254736526855351" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pin" sid="145551965582843">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="342311789087153" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -2211,6 +2220,11 @@
         </object-type>
         <object-type name="Sprite3" sid="179370245230130">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="863495081360638">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="472027466549288" speed="4">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
@@ -2234,18 +2248,70 @@
         </object-type>
         <object-type name="9patch" sid="169503561492449">
             <plugin id="NinePatch" />
+            <instance-variables>
+                <instance-variable name="ID" sid="592620446016885" type="number" />
+            </instance-variables>
             <texture />
         </object-type>
         <object-type name="Sprite4" sid="856485469379616">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="ID" sid="218710809961465" type="number" />
+                <instance-variable name="skin" sid="672584639098946" type="string" />
+                <instance-variable name="name" sid="219194521487731" type="string" />
+                <instance-variable name="displayname" sid="705662677685710" type="string" />
+            </instance-variables>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="248846583565867" speed="5">
+                <animation framecount="32" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="248846583565867" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
         <object-type name="9patch2" sid="326473604919609">
             <plugin id="NinePatch" />
+            <behaviors>
+                <behavior-type name="Pin" sid="474671400646190">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
             <texture />
         </object-type>
     </object-folder>
@@ -2262,6 +2328,9 @@
             <behaviors>
                 <behavior-type name="LiteTween" sid="344124223762186">
                     <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="407455443668794">
+                    <behavior id="Pin" />
                 </behavior-type>
             </behaviors>
         </family>

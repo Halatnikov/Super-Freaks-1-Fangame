@@ -1926,5 +1926,431 @@
                 </action>
             </actions>
         </event-block>
+        <event-group description="" sid="411297813241979" title="Group2">
+            <sub-events>
+                <event-block sid="533831162125014">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="414712690072261" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="672179745489287" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="920464626579680">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="691300332458383" type="System">
+                                    <param id="0" name="Object">Text</param>
+                                    <param id="1" name="Expression">find(Text.ID,&quot;Skin_&quot;)</param>
+                                    <param id="2" name="Comparison">1</param>
+                                    <param id="3" name="Value">-1</param>
+                                </condition>
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="124336340110321" type="Text">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Skin_Name&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="814501191562886" type="Sprite4" />
+                                <action id="-9" name="Destroy" sid="399827448491854" type="9patch" />
+                                <action id="-9" name="Destroy" sid="525384427773428" type="Text" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="179963416773038">
+                            <conditions />
+                            <actions>
+                                <action id="5" name="List files" sid="362636940081792" type="NWjs">
+                                    <param id="0" name="Path">Var_CONSTANTS.Path_Assets&amp;&quot;\skins\&quot;</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="460007996365793" type="System">
+                                    <param id="0" name="Object to create">JSON_COMMON</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">0</param>
+                                    <param id="3" name="Y">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="344070870776483">
+                                    <conditions>
+                                        <condition id="-12" name="Repeat" sid="139998560944995" type="System">
+                                            <param id="0" name="Count">NWjs.ListCount</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="60" name="LoadJSON" sid="113044791358285" type="JSON_COMMON">
+                                            <param id="0" name="JSON">INI.INI2JSON(NWjs.ReadFile(Var_CONSTANTS.Path_Assets&amp;&quot;\skins\&quot;&amp;NWjs.ListAt(loopindex)&amp;&quot;\skin.ini&quot;))</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}"></param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="671131473436156" type="System">
+                                            <param id="0" name="Object to create">9patch</param>
+                                            <param id="1" name="Layer">&quot;SkinSelect&quot;</param>
+                                            <param id="2" name="X">304</param>
+                                            <param id="3" name="Y">168+(32*loopindex)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="884278526138964" type="9patch">
+                                            <param id="0" name="Instance variable">ID</param>
+                                            <param id="1" name="Value">loopindex</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="673695183324168" type="System">
+                                            <param id="0" name="Object to create">Text_Regular</param>
+                                            <param id="1" name="Layer">&quot;SkinSelect&quot;</param>
+                                            <param id="2" name="X">312</param>
+                                            <param id="3" name="Y">170+(32*loopindex)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="982247151319349" type="Text_Regular">
+                                            <param id="0" name="Instance variable">ID</param>
+                                            <param id="1" name="Value">&quot;Skin_&quot;&amp;loopindex</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="563486798138943" type="Text_Regular">
+                                            <param id="0" name="Text">NWjs.ListAt(loopindex)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="947296020143464" type="Text_Regular">
+                                            <param id="0" name="Text">JSON_COMMON.Value(0,&quot;SuperFreaksSkin&quot;,&quot;Name&quot;)</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="937342828691968" type="9patch2" />
+                                        <action id="-24" name="Move to top" sid="928825475731041" type="Text_Regular" />
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="154932470219310">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="784383002716061" type="System">
+                                                    <param id="0" name="Object to create">Sprite4</param>
+                                                    <param id="1" name="Layer">&quot;SkinSelect&quot;</param>
+                                                    <param id="2" name="X">288</param>
+                                                    <param id="3" name="Y">180+(32*loopindex)</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="189971941301452" type="Sprite4">
+                                                    <param id="0" name="Instance variable">ID</param>
+                                                    <param id="1" name="Value">loopindex</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="144394932490794" type="Sprite4">
+                                                    <param id="0" name="Instance variable">skin</param>
+                                                    <param id="1" name="Value">NWjs.ListAt(loopindex)</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="644868191964915" type="Sprite4">
+                                                    <param id="0" name="Instance variable">name</param>
+                                                    <param id="1" name="Value">JSON_COMMON.Value(0,&quot;SuperFreaksSkin&quot;,&quot;Name&quot;)</param>
+                                                </action>
+                                                <action id="5" name="Set frame" sid="277495833448163" type="Sprite4">
+                                                    <param id="0" name="Frame number">loopindex</param>
+                                                </action>
+                                                <action id="10" name="Load image from URL" sid="142372422961757" type="Sprite4">
+                                                    <param id="0" name="URI">Var_CONSTANTS.Path_Assets&amp;&quot;\skins\&quot;&amp;NWjs.ListAt(loopindex)&amp;&quot;\icon_0.png&quot;</param>
+                                                    <param id="1" name="Size">0</param>
+                                                    <param id="2" name="Cross-origin">0</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="221228140205381">
+                                                    <conditions>
+                                                        <condition id="60" inverted="1" name="Is undefined" sid="141737787558252" type="JSON_COMMON">
+                                                            <param id="0" name="Reference point">0</param>
+                                                            <param id="1" name="Key {n}">&quot;SuperFreaksSkin&quot;{###}&quot;DisplayName&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Set value" sid="832269825503595" type="Sprite4">
+                                                            <param id="0" name="Instance variable">displayname</param>
+                                                            <param id="1" name="Value">JSON_COMMON.Value(0,&quot;SuperFreaksSkin&quot;,&quot;DisplayName&quot;)</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="337346210285939">
+                                                    <conditions>
+                                                        <condition id="60" name="Is undefined" sid="651185683398212" type="JSON_COMMON">
+                                                            <param id="0" name="Reference point">0</param>
+                                                            <param id="1" name="Key {n}">&quot;SuperFreaksSkin&quot;{###}&quot;DisplayName&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Set value" sid="209167780344141" type="Sprite4">
+                                                            <param id="0" name="Instance variable">displayname</param>
+                                                            <param id="1" name="Value">JSON_COMMON.Value(0,&quot;SuperFreaksSkin&quot;,&quot;Name&quot;)</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="699761094586644">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="670449543290936" type="JSON_COMMON" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="346996481806334">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="192203654949053" type="Text">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Skin_Name&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="574564512953686" type="Sprite3">
+                                    <param id="0" name="Pin to">Menu_Window</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="997371718717247" type="Sprite2">
+                                    <param id="0" name="Pin to">Menu_Window</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="866204098168095" type="Text">
+                                    <param id="0" name="Pin to">Menu_Window</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="402611652933842">
+                            <conditions />
+                            <actions>
+                                <action id="-2" name="Set Y" sid="268003246495300" type="Menu_Window">
+                                    <param id="0" name="Y">480</param>
+                                </action>
+                                <action behavior="LiteTween" id="10" name="Start" sid="354493785480197" type="Menu_Window">
+                                    <param id="0" name="Start Mode">0</param>
+                                    <param id="1" name="Force use current">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="192711620895249">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="939898003015616" type="Sprite4">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Sprite2.Current</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="260335622227553" type="Text">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Skin_Name&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="10" name="Load image from URL" sid="922369814725517" type="Sprite2">
+                            <param id="0" name="URI">Var_CONSTANTS.Path_Assets&amp;&quot;\skins\&quot;&amp;Sprite4.skin&amp;&quot;\art.png&quot;</param>
+                            <param id="1" name="Size">0</param>
+                            <param id="2" name="Cross-origin">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="232291980967109" type="Text">
+                            <param id="0" name="Text">Sprite4.displayname</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="737676461008468">
+                    <conditions>
+                        <condition id="-33" name="Pick by comparison" sid="103713676309652" type="System">
+                            <param id="0" name="Object">Text</param>
+                            <param id="1" name="Expression">find(Text.ID,&quot;Skin_&quot;)</param>
+                            <param id="2" name="Comparison">1</param>
+                            <param id="3" name="Value">-1</param>
+                        </condition>
+                        <condition id="-7" inverted="1" name="Compare instance variable" sid="260848155827435" type="Text">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Skin_Name&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="295508083906687">
+                            <conditions />
+                            <actions>
+                                <action id="-15" name="Set visible" sid="879394846956682" type="9patch2">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="238766791034372" type="9patch">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="252949740874845" type="Text">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="864909050088742" type="Sprite4">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="656186862988402">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="260064417526138" type="System">
+                                    <param id="0" name="First value">Menu_Window.LiteTween.Progress</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="112433319578378" type="9patch2">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="274268371977297" type="9patch">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="444280584039704" type="Text">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="782538198480675" type="Sprite4">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="302380742024998">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="316507577151164" type="9patch">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Y co-ordinate">72</param>
+                                </condition>
+                                <condition id="-2" name="Compare Y" sid="140952257473890" type="Text">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Y co-ordinate">74</param>
+                                </condition>
+                                <condition id="-2" name="Compare Y" sid="605140195200675" type="Sprite4">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Y co-ordinate">84</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="891187205954466" type="9patch">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="928124499056240" type="Text">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="628191045801088" type="Sprite4">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="104573102905953">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="695000142795279" type="9patch">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Y co-ordinate">264</param>
+                                </condition>
+                                <condition id="-2" name="Compare Y" sid="884654797155804" type="Text">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Y co-ordinate">266</param>
+                                </condition>
+                                <condition id="-2" name="Compare Y" sid="749597485393995" type="Sprite4">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Y co-ordinate">276</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="998693519798309" type="9patch">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="291273200021501" type="Text">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="698586739337088" type="Sprite4">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="576387288426332">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="321670842358731" type="Keyboard">
+                                    <param id="0" name="Key">38</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="677489070930120" type="Sprite2">
+                                    <param id="0" name="Instance variable">Current</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="759801617799144" type="9patch">
+                                    <param id="0" name="Y">Self.Y+32</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="730023207767084" type="Text">
+                                    <param id="0" name="Y">Self.Y+32</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="569951935077917" type="Sprite4">
+                                    <param id="0" name="Y">Self.Y+32</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="921618597864699">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="316445908536914" type="Sprite2">
+                                    <param id="0" name="Instance variable">Current</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="703912537457876" type="9patch">
+                                    <param id="0" name="Y">Self.Y-(32*9patch.Count)</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="104994664901642" type="Text">
+                                    <param id="0" name="Y">Self.Y-(32*9patch.Count)</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="757033163757434" type="Sprite4">
+                                    <param id="0" name="Y">Self.Y-(32*9patch.Count)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="408533183208481" type="Sprite2">
+                                    <param id="0" name="Instance variable">Current</param>
+                                    <param id="1" name="Value">9patch.Count-1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="182734460424982">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="410601050327438" type="Keyboard">
+                                    <param id="0" name="Key">40</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="418018520154479" type="Sprite2">
+                                    <param id="0" name="Instance variable">Current</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="295132782980190" type="9patch">
+                                    <param id="0" name="Y">Self.Y-32</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="898716582712417" type="Text">
+                                    <param id="0" name="Y">Self.Y-32</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="804715484266937" type="Sprite4">
+                                    <param id="0" name="Y">Self.Y-32</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="623692049811657">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="554366714876632" type="Sprite2">
+                                    <param id="0" name="Instance variable">Current</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">9patch.Count-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="289846175984311" type="9patch">
+                                    <param id="0" name="Y">168+(32*Self.ID)</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="213744718570466" type="Text">
+                                    <param id="0" name="Y">170+(32*int(replace(Self.ID,&quot;Skin_&quot;,&quot;&quot;)))</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="503514243370682" type="Sprite4">
+                                    <param id="0" name="Y">180+(32*Self.ID)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="462138306500477" type="Sprite2">
+                                    <param id="0" name="Instance variable">Current</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

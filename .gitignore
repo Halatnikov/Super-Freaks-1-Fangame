@@ -6,6 +6,7 @@
 #*.autosave
 *.backup1
 *.uistate.xml
+backup/
 
 # Nw.js files
 /*.dll
