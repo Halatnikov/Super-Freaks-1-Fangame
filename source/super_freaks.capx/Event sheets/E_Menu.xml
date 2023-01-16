@@ -2039,6 +2039,16 @@
                                         <action id="0" name="Set text" sid="947296020143464" type="Text_Regular">
                                             <param id="0" name="Text">JSON_COMMON.Value(0,&quot;SuperFreaksSkin&quot;,&quot;Name&quot;)</param>
                                         </action>
+                                        <action id="-7" name="Set size" sid="130692279340725" type="Text_Regular">
+                                            <param id="0" name="Width">196</param>
+                                            <param id="1" name="Height">20</param>
+                                        </action>
+                                        <action id="7" name="Set horizontal alignment" sid="673611905282201" type="Text_Regular">
+                                            <param id="0" name="Horizontal alignment">0</param>
+                                        </action>
+                                        <action id="8" name="Set vertical alignment" sid="182347410244023" type="Text_Regular">
+                                            <param id="0" name="Vertical alignment">1</param>
+                                        </action>
                                         <action id="-24" name="Move to top" sid="937342828691968" type="9patch2" />
                                         <action id="-24" name="Move to top" sid="928825475731041" type="Text_Regular" />
                                     </actions>

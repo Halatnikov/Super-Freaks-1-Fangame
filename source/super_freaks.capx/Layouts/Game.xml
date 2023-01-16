@@ -294,13 +294,13 @@
                         <Obj_ImportID>obj_pinhead</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
                         <Obj_Difficulty>Everything</Obj_Difficulty>
-                        <Platformer>true</Platformer>
+                        <walk_speed>1</walk_speed>
                         <HP>-1</HP>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
                             <properties>
-                                <max-speed>60</max-speed>
+                                <max-speed>0</max-speed>
                                 <acceleration>1500</acceleration>
                                 <deceleration>1500</deceleration>
                                 <jump-strength>0</jump-strength>
@@ -339,13 +339,13 @@
                         <Obj_ImportID>obj_boneym_giant</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
                         <Obj_Difficulty>Everything</Obj_Difficulty>
-                        <Platformer>true</Platformer>
+                        <walk_speed>0.5</walk_speed>
                         <HP>2</HP>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
                             <properties>
-                                <max-speed>30</max-speed>
+                                <max-speed>0</max-speed>
                                 <acceleration>1500</acceleration>
                                 <deceleration>1500</deceleration>
                                 <jump-strength>0</jump-strength>
@@ -414,7 +414,7 @@
                         <Obj_Difficulty>Everything</Obj_Difficulty>
                         <Obj9pParent_Child>Obj9p_Platform</Obj9pParent_Child>
                         <my_path>-1</my_path>
-                        <speed_move>0</speed_move>
+                        <speed_move>1</speed_move>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -613,13 +613,13 @@
                         <Obj_ImportID>obj_propello</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
                         <Obj_Difficulty>Everything</Obj_Difficulty>
-                        <Platformer>false</Platformer>
+                        <walk_speed>-1</walk_speed>
                         <HP>1</HP>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
                             <properties>
-                                <max-speed>60</max-speed>
+                                <max-speed>0</max-speed>
                                 <acceleration>1500</acceleration>
                                 <deceleration>1500</deceleration>
                                 <jump-strength>0</jump-strength>
@@ -904,7 +904,7 @@
                         <Obj_ImportID>obj_skizzor</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
                         <Obj_Difficulty>Everything</Obj_Difficulty>
-                        <Platformer>false</Platformer>
+                        <walk_speed>-1</walk_speed>
                         <HP>-1</HP>
                     </instance-variables>
                     <behavior-instances>
@@ -1448,7 +1448,7 @@
                         <Attach_Allowed>true</Attach_Allowed>
                         <Attach_True>false</Attach_True>
                         <Compat_Chain>true</Compat_Chain>
-                        <Segments>0</Segments>
+                        <Segments>3</Segments>
                         <chain_segments>0</chain_segments>
                         <starting_angle>0</starting_angle>
                         <swing_speed>0</swing_speed>
@@ -1580,13 +1580,13 @@
                         <Obj_ImportID>obj_boneym</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
                         <Obj_Difficulty>Everything</Obj_Difficulty>
-                        <Platformer>true</Platformer>
+                        <walk_speed>1</walk_speed>
                         <HP>1</HP>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
                             <properties>
-                                <max-speed>60</max-speed>
+                                <max-speed>0</max-speed>
                                 <acceleration>1500</acceleration>
                                 <deceleration>1500</deceleration>
                                 <jump-strength>0</jump-strength>
