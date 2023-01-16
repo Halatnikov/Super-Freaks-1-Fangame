@@ -1673,7 +1673,7 @@
                                 <max-speed>180</max-speed>
                                 <acceleration>1080</acceleration>
                                 <deceleration>900</deceleration>
-                                <jump-strength>340</jump-strength>
+                                <jump-strength>343.25</jump-strength>
                                 <gravity>900</gravity>
                                 <max-fall-speed>360</max-fall-speed>
                                 <double-jump>Disabled</double-jump>
@@ -3361,8 +3361,11 @@
                 <ActiveStarTrophy>0</ActiveStarTrophy>
                 <NumberStarStreak>0</NumberStarStreak>
                 <TimedStarStreak>0</TimedStarStreak>
+                <State>Idle</State>
                 <GimmickState></GimmickState>
                 <Animation>Idle</Animation>
+                <AllowTurn>true</AllowTurn>
+                <Direction>&quot;Right&quot;</Direction>
             </instance-variables>
         </instance>
         <instance type="Var_Room" uid="105">

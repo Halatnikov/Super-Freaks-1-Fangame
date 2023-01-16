@@ -1261,13 +1261,6 @@
                                     <param id="0" name="Pin to">Player</param>
                                     <param id="1" name="Mode">1</param>
                                 </action>
-                                <action id="4" name="Set animation" sid="118699031958646" type="Player_Skin">
-                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="5" name="Set frame" sid="215567709649712" type="Player_Skin">
-                                    <param id="0" name="Frame number">0</param>
-                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="701676930202711">
@@ -1398,6 +1391,21 @@
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
+                                        <event-block sid="361985219905855">
+                                            <conditions>
+                                                <condition id="60" name="Is undefined" sid="801966373421044" type="JSON_Skin">
+                                                    <param id="0" name="Reference point">0</param>
+                                                    <param id="1" name="Key {n}">JSON_Skin.CurrentKey{###}&quot;RepeatTo&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="20" name="Set Value" sid="177077772762615" type="JSON_Skin">
+                                                    <param id="0" name="Value">0</param>
+                                                    <param id="1" name="Reference point">0</param>
+                                                    <param id="2" name="Key {n}">JSON_Skin.CurrentKey{###}&quot;RepeatTo&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
                                     </sub-events>
                                 </event-block>
                                 <event-block sid="186508280744075">
@@ -1448,6 +1456,21 @@
                                                 </action>
                                             </actions>
                                         </event-block>
+                                        <event-block sid="543411240509256">
+                                            <conditions>
+                                                <condition id="60" name="Is undefined" sid="950005322619238" type="JSON_Skin">
+                                                    <param id="0" name="Reference point">0</param>
+                                                    <param id="1" name="Key {n}">JSON_Skin.CurrentKey{###}&quot;RepeatTo&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="20" name="Set Value" sid="209528895507841" type="JSON_Skin">
+                                                    <param id="0" name="Value">int(JSON_Skin.Value(0,JSON_Skin.Value(0,JSON_Skin.CurrentKey,&quot;Reuse&quot;),&quot;RepeatTo&quot;))</param>
+                                                    <param id="1" name="Reference point">0</param>
+                                                    <param id="2" name="Key {n}">JSON_Skin.CurrentKey{###}&quot;RepeatTo&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
                                     </sub-events>
                                 </event-block>
                             </sub-events>
@@ -1455,11 +1478,33 @@
                         <event-block sid="736815665016267">
                             <conditions />
                             <actions>
+                                <action id="-16" name="Wait" sid="761822995012664" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
                                 <action behavior="AnimationLoader" id="2" name="Load all animations" sid="323756907265045" type="Player_Skin">
                                     <param id="0" name="Size">0</param>
                                 </action>
                                 <action behavior="AnimationLoader" id="2" name="Load all animations" sid="383854111156507" type="HUD_PlayerIcon">
                                     <param id="0" name="Size">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="576057620809034">
+                            <conditions />
+                            <actions>
+                                <action id="-16" name="Wait" sid="821499338138155" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="571726320682657" type="Player_Skin">
+                                    <param id="0" name="Width">Self.ImageWidth</param>
+                                    <param id="1" name="Height">Self.ImageHeight</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="380449901786839" type="Player_Skin">
+                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="579836307515316" type="Player_Skin">
+                                    <param id="0" name="Frame number">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1474,19 +1519,38 @@
                     <sub-events>
                         <event-block sid="430246444801007">
                             <conditions>
-                                <condition id="0" name="Path exists" sid="572976409425534" type="NWjs">
-                                    <param id="0" name="Path">Var_CONSTANTS.Path_Assets&amp;&quot;\skins\&quot;&amp;Var_Main.Skin&amp;&quot;\sprites\&quot;&amp;Player_Skin.AnimationLoader.AnimationName&amp;&quot;_&quot;&amp;Player_Skin.AnimationLoader.FrameIndex&amp;&quot;.png&quot;</param>
-                                </condition>
                                 <condition id="60" name="Is undefined" sid="639193568715033" type="JSON_Skin">
                                     <param id="0" name="Reference point">0</param>
                                     <param id="1" name="Key {n}">Player_Skin.AnimationLoader.AnimationName{###}&quot;Reuse&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action behavior="AnimationLoader" id="1" name="Set URL" sid="198229792015744" type="Player_Skin">
-                                    <param id="0" name="URL">Var_CONSTANTS.Path_Assets&amp;&quot;\skins\&quot;&amp;Var_Main.Skin&amp;&quot;\sprites\&quot;&amp;Self.AnimationLoader.AnimationName&amp;&quot;_&quot;&amp;Self.AnimationLoader.FrameIndex&amp;&quot;.png&quot;</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="599484535117368">
+                                    <conditions>
+                                        <condition id="0" name="Path exists" sid="572976409425534" type="NWjs">
+                                            <param id="0" name="Path">Var_CONSTANTS.Path_Assets&amp;&quot;\skins\&quot;&amp;Var_Main.Skin&amp;&quot;\sprites\&quot;&amp;Player_Skin.AnimationLoader.AnimationName&amp;&quot;_&quot;&amp;Player_Skin.AnimationLoader.FrameIndex&amp;&quot;.png&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="AnimationLoader" id="1" name="Set URL" sid="198229792015744" type="Player_Skin">
+                                            <param id="0" name="URL">Var_CONSTANTS.Path_Assets&amp;&quot;\skins\&quot;&amp;Var_Main.Skin&amp;&quot;\sprites\&quot;&amp;Self.AnimationLoader.AnimationName&amp;&quot;_&quot;&amp;Self.AnimationLoader.FrameIndex&amp;&quot;.png&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="848672969698348">
+                                    <conditions>
+                                        <condition id="0" inverted="1" name="Path exists" sid="645104459756843" type="NWjs">
+                                            <param id="0" name="Path">Var_CONSTANTS.Path_Assets&amp;&quot;\skins\&quot;&amp;Var_Main.Skin&amp;&quot;\sprites\&quot;&amp;Player_Skin.AnimationLoader.AnimationName&amp;&quot;_&quot;&amp;Player_Skin.AnimationLoader.FrameIndex&amp;&quot;.png&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="AnimationLoader" id="1" name="Set URL" sid="385547115680866" type="Player_Skin">
+                                            <param id="0" name="URL">Var_CONSTANTS.Path_Assets&amp;&quot;\assets\empty.png&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="663646513929198">
                             <conditions>
@@ -1495,27 +1559,33 @@
                                     <param id="1" name="Key {n}">Player_Skin.AnimationLoader.AnimationName{###}&quot;Reuse&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action behavior="AnimationLoader" id="1" name="Set URL" sid="483467894614485" type="Player_Skin">
-                                    <param id="0" name="URL">Var_CONSTANTS.Path_Assets&amp;&quot;\skins\&quot;&amp;Var_Main.Skin&amp;&quot;\sprites\&quot;&amp;JSON_Skin.Value(0,Self.AnimationLoader.AnimationName,&quot;Reuse&quot;)&amp;&quot;_&quot;&amp;Self.AnimationLoader.FrameIndex&amp;&quot;.png&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="423538839957640">
-                            <conditions>
-                                <condition id="0" inverted="1" name="Path exists" sid="526944487783514" type="NWjs">
-                                    <param id="0" name="Path">Var_CONSTANTS.Path_Assets&amp;&quot;\skins\&quot;&amp;Var_Main.Skin&amp;&quot;\sprites\&quot;&amp;Player_Skin.AnimationLoader.AnimationName&amp;&quot;_&quot;&amp;Player_Skin.AnimationLoader.FrameIndex&amp;&quot;.png&quot;</param>
-                                </condition>
-                                <condition id="60" name="Is undefined" sid="664597524307076" type="JSON_Skin">
-                                    <param id="0" name="Reference point">0</param>
-                                    <param id="1" name="Key {n}">Player_Skin.AnimationLoader.AnimationName{###}&quot;Reuse&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="AnimationLoader" id="1" name="Set URL" sid="998360065927041" type="Player_Skin">
-                                    <param id="0" name="URL">Var_CONSTANTS.Path_Assets&amp;&quot;\assets\empty.png&quot;</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="716479375526522">
+                                    <conditions>
+                                        <condition id="0" name="Path exists" sid="188095386338611" type="NWjs">
+                                            <param id="0" name="Path">Var_CONSTANTS.Path_Assets&amp;&quot;\skins\&quot;&amp;Var_Main.Skin&amp;&quot;\sprites\&quot;&amp;JSON_Skin.Value(0,Player_Skin.AnimationLoader.AnimationName,&quot;Reuse&quot;)&amp;&quot;_&quot;&amp;Player_Skin.AnimationLoader.FrameIndex&amp;&quot;.png&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="AnimationLoader" id="1" name="Set URL" sid="483467894614485" type="Player_Skin">
+                                            <param id="0" name="URL">Var_CONSTANTS.Path_Assets&amp;&quot;\skins\&quot;&amp;Var_Main.Skin&amp;&quot;\sprites\&quot;&amp;JSON_Skin.Value(0,Self.AnimationLoader.AnimationName,&quot;Reuse&quot;)&amp;&quot;_&quot;&amp;Self.AnimationLoader.FrameIndex&amp;&quot;.png&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="760644694280539">
+                                    <conditions>
+                                        <condition id="0" inverted="1" name="Path exists" sid="596496094785144" type="NWjs">
+                                            <param id="0" name="Path">Var_CONSTANTS.Path_Assets&amp;&quot;\skins\&quot;&amp;Var_Main.Skin&amp;&quot;\sprites\&quot;&amp;JSON_Skin.Value(0,Player_Skin.AnimationLoader.AnimationName,&quot;Reuse&quot;)&amp;&quot;_&quot;&amp;Player_Skin.AnimationLoader.FrameIndex&amp;&quot;.png&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="AnimationLoader" id="1" name="Set URL" sid="186331717790038" type="Player_Skin">
+                                            <param id="0" name="URL">Var_CONSTANTS.Path_Assets&amp;&quot;\assets\empty.png&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -1551,35 +1621,11 @@
                                     <param id="1" name="Number">int(JSON_Skin.Value(0,Var_Player.Animation,&quot;EndFrame&quot;))</param>
                                 </condition>
                             </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="360126994612409">
-                                    <conditions>
-                                        <condition id="60" name="Is undefined" sid="319878274921396" type="JSON_Skin">
-                                            <param id="0" name="Reference point">0</param>
-                                            <param id="1" name="Key {n}">Var_Player.Animation{###}&quot;RepeatTo&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="5" name="Set frame" sid="237050570465727" type="Player_Skin">
-                                            <param id="0" name="Frame number">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="952358273809440">
-                                    <conditions>
-                                        <condition id="60" inverted="1" name="Is undefined" sid="439951376572993" type="JSON_Skin">
-                                            <param id="0" name="Reference point">0</param>
-                                            <param id="1" name="Key {n}">Var_Player.Animation{###}&quot;RepeatTo&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="5" name="Set frame" sid="738478533740905" type="Player_Skin">
-                                            <param id="0" name="Frame number">int(JSON_Skin.Value(0,Var_Player.Animation,&quot;RepeatTo&quot;))</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
+                            <actions>
+                                <action id="5" name="Set frame" sid="738478533740905" type="Player_Skin">
+                                    <param id="0" name="Frame number">int(JSON_Skin.Value(0,Var_Player.Animation,&quot;RepeatTo&quot;))</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -1592,6 +1638,20 @@
                             <param id="0" name="URL">Var_CONSTANTS.Path_Assets&amp;&quot;\skins\&quot;&amp;Var_Main.Skin&amp;&quot;\icon_&quot;&amp;Self.AnimationLoader.FrameIndex&amp;&quot;.png&quot;</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="452802317932948">
+                            <conditions>
+                                <condition id="0" inverted="1" name="Path exists" sid="934752207418514" type="NWjs">
+                                    <param id="0" name="Path">Var_CONSTANTS.Path_Assets&amp;&quot;\skins\&quot;&amp;Var_Main.Skin&amp;&quot;\icon_1.png&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="AnimationLoader" id="1" name="Set URL" sid="197196161081094" type="HUD_PlayerIcon">
+                                    <param id="0" name="URL">Var_CONSTANTS.Path_Assets&amp;&quot;\skins\&quot;&amp;Var_Main.Skin&amp;&quot;\icon_0.png&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="198629581485371">
                     <conditions />
@@ -2807,6 +2867,18 @@
                             <param id="0" name="Instance variable">Pause</param>
                             <param id="1" name="Value">&quot;False&quot;</param>
                         </action>
+                        <action id="-10" name="Set value" sid="170301871275079" type="Var_Player">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Value">&quot;Idle&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="502374049729797" type="Var_Player">
+                            <param id="0" name="Instance variable">GimmickState</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="410180428001979" type="Var_Player">
+                            <param id="0" name="Instance variable">Direction</param>
+                            <param id="1" name="Value">&quot;Right&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="762649622855883">
@@ -2850,69 +2922,6 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="885430365972626">
-                    <conditions>
-                        <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="166072457307123" type="Player" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="601060694023034">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="215023422660512" type="Keyboard">
-                                    <param id="0" name="Key">39</param>
-                                </condition>
-                                <condition behavior="Platform" id="10" name="Is by wall" sid="496922291054212" type="Player">
-                                    <param id="0" name="Side">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Platform" id="8" name="Set vector X" sid="158469466553354" type="Player">
-                                    <param id="0" name="Vector X">(Self.Platform.JumpStrength)</param>
-                                </action>
-                                <action behavior="Platform" id="9" name="Set vector Y" sid="128713459340907" type="Player">
-                                    <param id="0" name="Vector Y">-(430)</param>
-                                </action>
-                                <action id="0" name="Call function" sid="254593973627225" type="Function">
-                                    <param id="0" name="Name">&quot;Audio_PlaySFX&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;jump&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="545568841355081">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="556839120307419" type="Keyboard">
-                                    <param id="0" name="Key">37</param>
-                                </condition>
-                                <condition behavior="Platform" id="10" name="Is by wall" sid="655006449830457" type="Player">
-                                    <param id="0" name="Side">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Platform" id="8" name="Set vector X" sid="908469433083362" type="Player">
-                                    <param id="0" name="Vector X">-(Self.Platform.JumpStrength)</param>
-                                </action>
-                                <action behavior="Platform" id="9" name="Set vector Y" sid="703191407953254" type="Player">
-                                    <param id="0" name="Vector Y">-(430)</param>
-                                </action>
-                                <action id="0" name="Call function" sid="119682158156936" type="Function">
-                                    <param id="0" name="Name">&quot;Audio_PlaySFX&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;jump&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="824553571379326">
-                    <conditions>
-                        <condition behavior="Platform" id="5" name="On jump" sid="844311042221098" type="Player" />
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="218630168383052" type="Function">
-                            <param id="0" name="Name">&quot;Audio_PlaySFX&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;jump&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <comment></comment>
                 <comment>code by Federico Calchera</comment>
                 <event-block sid="540379002844600">
@@ -2937,6 +2946,32 @@
                             <param id="0" name="Y">Col_Platform.BBoxTop-24</param>
                         </action>
                         <action behavior="Platform" id="9" name="Set vector Y" sid="777870698318482" type="Player">
+                            <param id="0" name="Vector Y">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="719460975924132">
+                    <conditions>
+                        <condition behavior="Platform" id="4" name="Is falling" sid="434283039885047" type="Player" />
+                        <condition id="1" name="Is overlapping another object" sid="440494347410820" type="Player">
+                            <param id="0" name="Object">Obj_Platform</param>
+                        </condition>
+                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="450618329101458" type="Player">
+                            <param id="0" name="Object">Obj_Platform</param>
+                            <param id="1" name="Offset X">0</param>
+                            <param id="2" name="Offset Y">-(Obj_Platform.Height/1.125)</param>
+                        </condition>
+                        <condition id="-15" name="Pick nearest/furthest" sid="195722554550997" type="Obj_Platform">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="X">Self.X</param>
+                            <param id="2" name="Y">Player.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="914917641745110" type="Player">
+                            <param id="0" name="Y">Obj_Platform.BBoxTop-24</param>
+                        </action>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="661750516823057" type="Player">
                             <param id="0" name="Vector Y">0</param>
                         </action>
                     </actions>
@@ -2969,6 +3004,33 @@
                     <actions>
                         <action behavior="Platform" id="11" name="Set enabled" sid="938049503729836" type="Player">
                             <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="251262508776576">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="302045189981325" type="Keyboard">
+                            <param id="0" name="Key">90</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="853452460905927" type="Player">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="121004488799828">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="507127247845837" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="262704258187068" type="Player_Hitbox">
+                            <param id="0" name="Object">Player</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="602714750993296" type="Player_Hitbox">
+                            <param id="0" name="Pin to">Player</param>
+                            <param id="1" name="Mode">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -3101,30 +3163,474 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="251262508776576">
+                <comment></comment>
+                <event-block sid="281234756690349">
                     <conditions>
-                        <condition id="2" name="Key is down" sid="302045189981325" type="Keyboard">
-                            <param id="0" name="Key">90</param>
-                        </condition>
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="182446630788710" type="Player" />
+                        <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="347689600211021" type="Player" />
                     </conditions>
                     <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="853452460905927" type="Player">
-                            <param id="0" name="Control">2</param>
+                        <action id="-10" name="Set value" sid="588616713129484" type="Var_Player">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Value">&quot;Idle&quot;</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="121004488799828">
+                <event-block sid="682293275381111">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="507127247845837" type="System" />
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="610010449251645" type="Player" />
+                        <condition behavior="Platform" id="0" name="Is moving" sid="342939768822837" type="Player" />
                     </conditions>
                     <actions>
-                        <action id="-4" name="Set position to another object" sid="262704258187068" type="Player_Hitbox">
-                            <param id="0" name="Object">Player</param>
-                            <param id="1" name="Image point (optional)">0</param>
+                        <action id="-10" name="Set value" sid="782913790536482" type="Var_Player">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Value">&quot;Walk&quot;</param>
                         </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="602714750993296" type="Player_Hitbox">
-                            <param id="0" name="Pin to">Player</param>
-                            <param id="1" name="Mode">1</param>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="356261954805194">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="401604808481874" type="Keyboard">
+                                    <param id="0" name="Key">37</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="877000164635737" type="System">
+                                    <param id="0" name="First value">Player.Platform.VectorX</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="563049695347822" type="Var_Player">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Value">&quot;Skid&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="181777663504363" type="Var_Player">
+                                    <param id="0" name="Instance variable">Direction</param>
+                                    <param id="1" name="Value">&quot;Right&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="865715649618841">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="609423102535040" type="Keyboard">
+                                    <param id="0" name="Key">39</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="438897654196485" type="System">
+                                    <param id="0" name="First value">Player.Platform.VectorX</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="687311979941263" type="Var_Player">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Value">&quot;Skid&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="396078516301162" type="Var_Player">
+                                    <param id="0" name="Instance variable">Direction</param>
+                                    <param id="1" name="Value">&quot;Left&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="857449671062044">
+                    <conditions>
+                        <condition behavior="Platform" id="5" name="On jump" sid="510169907488875" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="907701712288798" type="Var_Player">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Value">&quot;Jump&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="262626593173936" type="Function">
+                            <param id="0" name="Name">&quot;Audio_PlaySFX&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;jump&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="811686911996059">
+                    <conditions>
+                        <condition id="-7" inverted="1" name="Compare instance variable" sid="818985613305505" type="Var_Player">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Jump&quot;</param>
+                        </condition>
+                        <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="793303442621455" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="396594211175951" type="Var_Player">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Value">&quot;Fall&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="200715845769164">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="694926077180816" type="Keyboard">
+                                    <param id="0" name="Key">90</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="835963383681738" type="Var_Player">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Value">&quot;Jump&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="200659150085566">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="367460046409806" type="Keyboard">
+                                    <param id="0" name="Key">38</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="902017513332173" type="Var_Player">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Value">&quot;Jump&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="885430365972626">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="166072457307123" type="System">
+                            <param id="0" name="First value">Player.Platform.VectorY</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">-135</param>
+                        </condition>
+                        <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="676027640405784" type="Player" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="601060694023034">
+                            <conditions>
+                                <condition behavior="Platform" id="10" name="Is by wall" sid="496922291054212" type="Player">
+                                    <param id="0" name="Side">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="138450527254501">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="215023422660512" type="Keyboard">
+                                            <param id="0" name="Key">39</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="971044481617193" type="Var_Player">
+                                            <param id="0" name="Instance variable">State</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;WallJump&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="8" name="Set vector X" sid="158469466553354" type="Player">
+                                            <param id="0" name="Vector X">(Self.Platform.JumpStrength)</param>
+                                        </action>
+                                        <action behavior="Platform" id="9" name="Set vector Y" sid="128713459340907" type="Player">
+                                            <param id="0" name="Vector Y">-(430)</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="254593973627225" type="Function">
+                                            <param id="0" name="Name">&quot;Audio_PlaySFX&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;jump&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="328509053841798" type="Var_Player">
+                                            <param id="0" name="Instance variable">State</param>
+                                            <param id="1" name="Value">&quot;Jump&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="456847036955673">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="659350729611364" type="Keyboard">
+                                            <param id="0" name="Key">37</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="955995900618775" type="Var_Player">
+                                            <param id="0" name="Instance variable">State</param>
+                                            <param id="1" name="Value">&quot;WallJump&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="225797269559155" type="Var_Player">
+                                            <param id="0" name="Instance variable">Direction</param>
+                                            <param id="1" name="Value">&quot;Left&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="545568841355081">
+                            <conditions>
+                                <condition behavior="Platform" id="10" name="Is by wall" sid="655006449830457" type="Player">
+                                    <param id="0" name="Side">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="531390189983318">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="556839120307419" type="Keyboard">
+                                            <param id="0" name="Key">37</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="167217115779268" type="Var_Player">
+                                            <param id="0" name="Instance variable">State</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;WallJump&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="8" name="Set vector X" sid="908469433083362" type="Player">
+                                            <param id="0" name="Vector X">-(Self.Platform.JumpStrength)</param>
+                                        </action>
+                                        <action behavior="Platform" id="9" name="Set vector Y" sid="703191407953254" type="Player">
+                                            <param id="0" name="Vector Y">-(430)</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="119682158156936" type="Function">
+                                            <param id="0" name="Name">&quot;Audio_PlaySFX&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;jump&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="429411691066451" type="Var_Player">
+                                            <param id="0" name="Instance variable">State</param>
+                                            <param id="1" name="Value">&quot;Jump&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="281672671298384">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="151543455525573" type="Keyboard">
+                                            <param id="0" name="Key">39</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="380589417205391" type="Var_Player">
+                                            <param id="0" name="Instance variable">State</param>
+                                            <param id="1" name="Value">&quot;WallJump&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="263248793781648" type="Var_Player">
+                                            <param id="0" name="Instance variable">Direction</param>
+                                            <param id="1" name="Value">&quot;Right&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment></comment>
+                <event-block sid="965624127012732">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="382706947298808" type="Var_Player">
+                            <param id="0" name="Instance variable">AllowTurn</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="506825208424572">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="123705215814345" type="Keyboard">
+                                    <param id="0" name="Key">37</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="393021836799440" type="Var_Player">
+                                    <param id="0" name="Instance variable">Direction</param>
+                                    <param id="1" name="Value">&quot;Left&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="946895183596163">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="282966468193199" type="Keyboard">
+                                    <param id="0" name="Key">39</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="726817360599682" type="Var_Player">
+                                    <param id="0" name="Instance variable">Direction</param>
+                                    <param id="1" name="Value">&quot;Right&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="430706144453688">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="747564656498448" type="Var_Player">
+                            <param id="0" name="Instance variable">Direction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Right&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="376129734283434" type="Player_Skin">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="450054470843094">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="696467338803355" type="Var_Player">
+                            <param id="0" name="Instance variable">Direction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Left&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="554785179757197" type="Player_Skin">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment></comment>
+                <event-block sid="259440389540254">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="771731970822558" type="Var_Player">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Idle&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="508783895547351" type="Var_Player">
+                            <param id="0" name="Instance variable">Animation</param>
+                            <param id="1" name="Value">Self.State</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="679245322519347" type="Var_Player">
+                            <param id="0" name="Instance variable">AllowTurn</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="584339755995900">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="390144591569542" type="Var_Player">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Walk&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="151940738677562" type="Var_Player">
+                            <param id="0" name="Instance variable">Animation</param>
+                            <param id="1" name="Value">Self.State</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="834440285909644" type="Var_Player">
+                            <param id="0" name="Instance variable">AllowTurn</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="452422246869207">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="394832179566842" type="Var_Player">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Skid&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="728059711407518" type="Var_Player">
+                            <param id="0" name="Instance variable">Animation</param>
+                            <param id="1" name="Value">Self.State</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="730401692662182" type="Var_Player">
+                            <param id="0" name="Instance variable">AllowTurn</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="520646460848069">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="269081392424514" type="Var_Player">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Jump&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="763828602262677" type="Var_Player">
+                            <param id="0" name="Instance variable">Animation</param>
+                            <param id="1" name="Value">Self.State</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="251974430261489" type="Var_Player">
+                            <param id="0" name="Instance variable">AllowTurn</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="889459970317217">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="853639836051851" type="Var_Player">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Fall&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="323494772108500" type="Var_Player">
+                            <param id="0" name="Instance variable">Animation</param>
+                            <param id="1" name="Value">Self.State</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="360397078440573" type="Var_Player">
+                            <param id="0" name="Instance variable">AllowTurn</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="829110228684494">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="889859499650926" type="Var_Player">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;WallJump&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="201111958154565" type="Var_Player">
+                            <param id="0" name="Instance variable">Animation</param>
+                            <param id="1" name="Value">Self.State</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="325628942163962" type="Var_Player">
+                            <param id="0" name="Instance variable">AllowTurn</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="473024472684370">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="403744874990804" type="Var_Player">
+                            <param id="0" name="Instance variable">GimmickState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;StarArrow_Launch&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="596133299106984" type="Var_Player">
+                            <param id="0" name="Instance variable">Animation</param>
+                            <param id="1" name="Value">&quot;Jump&quot;</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="869796115811737" type="Var_Player">
+                            <param id="0" name="Instance variable">AllowTurn</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="107547847840007">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="294097388031660" type="Var_Player">
+                            <param id="0" name="Instance variable">GimmickState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;StarArrow_Land&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="100781525485954" type="Var_Player">
+                            <param id="0" name="Instance variable">Animation</param>
+                            <param id="1" name="Value">&quot;Jump&quot;</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="927796436497436" type="Var_Player">
+                            <param id="0" name="Instance variable">AllowTurn</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -4063,9 +4569,8 @@
                             <param id="0" name="Instance variable">Pause</param>
                             <param id="1" name="Value">&quot;Finish&quot;</param>
                         </action>
-                        <action id="0" name="Call function" sid="364680660917098" type="Function">
-                            <param id="0" name="Name">&quot;Audio_PlayMusic&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;&quot;</param>
+                        <action id="6" name="Stop" sid="564370859876092" type="BetterAudio">
+                            <param id="0" name="Tag">&quot;music&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -4638,7 +5143,7 @@
                                                     <param id="1" name="Value">NWjs.ReadFile(Var_CONSTANTS.Path_SourceCode1u&amp;&quot;\paths\&quot;&amp;Obj_NumberStar.path&amp;&quot;\&quot;&amp;Obj_NumberStar.path&amp;&quot;.yy&quot;)</param>
                                                 </action>
                                                 <action id="60" name="LoadJSON" sid="152589376010102" type="JSON_COMMON">
-                                                    <param id="0" name="JSON">Function.Call(&quot;GMS2_FixJSON&quot;,json)</param>
+                                                    <param id="0" name="JSON">Function.Call(&quot;Util_FixJSON&quot;,json)</param>
                                                     <param id="1" name="Reference point">0</param>
                                                     <param id="2" name="Key {n}"></param>
                                                 </action>
@@ -5062,7 +5567,7 @@
                                                     <param id="1" name="Value">NWjs.ReadFile(Var_CONSTANTS.Path_SourceCode1u&amp;&quot;\paths\&quot;&amp;Obj_TimeStar.path&amp;&quot;\&quot;&amp;Obj_TimeStar.path&amp;&quot;.yy&quot;)</param>
                                                 </action>
                                                 <action id="60" name="LoadJSON" sid="301258127087656" type="JSON_COMMON">
-                                                    <param id="0" name="JSON">Function.Call(&quot;GMS2_FixJSON&quot;,json)</param>
+                                                    <param id="0" name="JSON">Function.Call(&quot;Util_FixJSON&quot;,json)</param>
                                                     <param id="1" name="Reference point">0</param>
                                                     <param id="2" name="Key {n}"></param>
                                                 </action>
@@ -5689,11 +6194,15 @@
                         <condition id="0" name="On collision with another object" sid="612792085300185" type="Player_Hitbox">
                             <param id="0" name="Object">Obj_WalkieTalkie</param>
                         </condition>
-                        <condition behavior="Platform" id="3" name="Is jumping" sid="989829690183317" type="Player" />
                         <condition id="-7" name="Compare instance variable" sid="826866524108128" type="Text">
                             <param id="0" name="Instance variable">ID</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;HUD_Message&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="364303183424935" type="Var_Player">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Jump&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -6025,7 +6534,6 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;StarArrow_Launch&quot;</param>
                         </condition>
-                        <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="736716235498637" type="Player" />
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="898811914640440" type="Function">
@@ -6211,8 +6719,12 @@
                                     <param id="0" name="Input">0</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="442949250203260" type="Var_Player">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Value">&quot;Jump&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="185784932557801" type="Var_Player">
                                     <param id="0" name="Instance variable">GimmickState</param>
-                                    <param id="1" name="Value">&quot;null&quot;</param>
+                                    <param id="1" name="Value">&quot;&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -6221,9 +6733,13 @@
                                 <condition behavior="Platform" id="2" name="Is on floor" sid="888262110544002" type="Player" />
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" sid="261516566557401" type="Var_Player">
+                                <action id="-10" name="Set value" sid="527296304887186" type="Var_Player">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Value">&quot;Idle&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="561152086580060" type="Var_Player">
                                     <param id="0" name="Instance variable">GimmickState</param>
-                                    <param id="1" name="Value">&quot;null&quot;</param>
+                                    <param id="1" name="Value">&quot;&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -6234,9 +6750,13 @@
                         <condition behavior="MoveTo" id="5" name="On stopped by solid" sid="108438168185197" type="Player" />
                     </conditions>
                     <actions>
-                        <action id="-10" name="Set value" sid="633897569561871" type="Var_Player">
+                        <action id="-10" name="Set value" sid="963537543112402" type="Var_Player">
                             <param id="0" name="Instance variable">GimmickState</param>
-                            <param id="1" name="Value">&quot;null&quot;</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="633897569561871" type="Var_Player">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Value">&quot;Jump&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="690863892501240" type="System">
                             <param id="0" name="Variable">vectory</param>
@@ -6287,7 +6807,6 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;StarArrow_Launch&quot;</param>
                         </condition>
-                        <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="379588458852601" type="Player" />
                     </conditions>
                     <actions>
                         <action id="-10" name="Set value" sid="908356009165005" type="Var_Player">

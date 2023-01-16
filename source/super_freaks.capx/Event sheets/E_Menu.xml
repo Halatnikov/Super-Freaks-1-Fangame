@@ -4,7 +4,7 @@
     <name>E_Menu</name>
     <events>
         <include>E_GLOBAL</include>
-        <event-group description="" inactive="1" sid="537239106005520" title="Group">
+        <event-group description="" sid="537239106005520" title="Menus">
             <sub-events>
                 <event-block sid="665893973869933">
                     <conditions>
@@ -1461,6 +1461,15 @@
                         <condition id="0" name="On key pressed" sid="615907394676508" type="Keyboard">
                             <param id="0" name="Key">38</param>
                         </condition>
+                        <condition id="-7" name="Compare instance variable" sid="653782343412245" type="Var_Main">
+                            <param id="0" name="Instance variable">GameState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Menu&quot;</param>
+                        </condition>
+                        <condition id="0" inverted="1" name="In Progress" sid="968149307759911" type="Ease">
+                            <param id="0" name="Ease tag">&quot;HUD_Fade&quot;</param>
+                            <param id="1" name="Ease parameter {n}"></param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-12" name="Subtract from" sid="682922388480902" type="Menu_Cursor">
@@ -1477,6 +1486,15 @@
                     <conditions>
                         <condition id="0" name="On key pressed" sid="710000563735260" type="Keyboard">
                             <param id="0" name="Key">40</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="805828822341917" type="Var_Main">
+                            <param id="0" name="Instance variable">GameState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Menu&quot;</param>
+                        </condition>
+                        <condition id="0" inverted="1" name="In Progress" sid="882223824444519" type="Ease">
+                            <param id="0" name="Ease tag">&quot;HUD_Fade&quot;</param>
+                            <param id="1" name="Ease parameter {n}"></param>
                         </condition>
                     </conditions>
                     <actions>
@@ -1555,6 +1573,15 @@
                                 <condition id="0" name="On key pressed" sid="825482975378640" type="Keyboard">
                                     <param id="0" name="Key">37</param>
                                 </condition>
+                                <condition id="-7" name="Compare instance variable" sid="979692818192774" type="Var_Main">
+                                    <param id="0" name="Instance variable">GameState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Menu&quot;</param>
+                                </condition>
+                                <condition id="0" inverted="1" name="In Progress" sid="470552755497012" type="Ease">
+                                    <param id="0" name="Ease tag">&quot;HUD_Fade&quot;</param>
+                                    <param id="1" name="Ease parameter {n}"></param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-12" name="Subtract from" sid="353147289529870" type="Menu_Cursor">
@@ -1571,6 +1598,15 @@
                             <conditions>
                                 <condition id="0" name="On key pressed" sid="909468356470104" type="Keyboard">
                                     <param id="0" name="Key">39</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="728111576178711" type="Var_Main">
+                                    <param id="0" name="Instance variable">GameState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Menu&quot;</param>
+                                </condition>
+                                <condition id="0" inverted="1" name="In Progress" sid="454002930233155" type="Ease">
+                                    <param id="0" name="Ease tag">&quot;HUD_Fade&quot;</param>
+                                    <param id="1" name="Ease parameter {n}"></param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -1661,6 +1697,15 @@
                         <condition id="0" name="On key pressed" sid="561504387311311" type="Keyboard">
                             <param id="0" name="Key">90</param>
                         </condition>
+                        <condition id="-7" name="Compare instance variable" sid="233813009851118" type="Var_Main">
+                            <param id="0" name="Instance variable">GameState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Menu&quot;</param>
+                        </condition>
+                        <condition id="0" inverted="1" name="In Progress" sid="743213388217581" type="Ease">
+                            <param id="0" name="Ease tag">&quot;HUD_Fade&quot;</param>
+                            <param id="1" name="Ease parameter {n}"></param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
@@ -1713,7 +1758,6 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="33" name="Stop all" sid="366002706737366" type="BetterAudio" />
                                         <action id="-10" name="Set value" sid="649245013969871" type="Var_Level">
                                             <param id="0" name="Instance variable">RoomEngine</param>
                                             <param id="1" name="Value">&quot;GMS2&quot;</param>
@@ -1722,35 +1766,18 @@
                                             <param id="0" name="Instance variable">Room</param>
                                             <param id="1" name="Value">JSON_PERSIST.Value(0,&quot;Menus&quot;,Menu_Cursor.Menu,str(Menu_Cursor.Current),&quot;Title&quot;)</param>
                                         </action>
+                                        <action id="-16" name="Wait" sid="350702259737784" type="System">
+                                            <param id="0" name="Seconds">0.1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="643161193322628" type="Var_Main">
+                                            <param id="0" name="Instance variable">GameMode</param>
+                                            <param id="1" name="Value">&quot;ImportRoom&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="960421705219824" type="Var_Main">
+                                            <param id="0" name="Instance variable">GameState</param>
+                                            <param id="1" name="Value">&quot;SkinSelect&quot;</param>
+                                        </action>
                                     </actions>
-                                    <sub-events>
-                                        <event-block sid="920317202666133">
-                                            <conditions />
-                                            <actions>
-                                                <action id="0" name="Call function" sid="379979156500166" type="Function">
-                                                    <param id="0" name="Name">&quot;HUD_Fade&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;in&quot;{###}&quot;black&quot;{###}&quot;0.25&quot;</param>
-                                                </action>
-                                                <action id="-16" name="Wait" sid="191426567883972" type="System">
-                                                    <param id="0" name="Seconds">0.25</param>
-                                                </action>
-                                                <action id="-4" name="Set layer visible" sid="593164656048196" type="System">
-                                                    <param id="0" name="Layer">&quot;GLOBAL_Loading&quot;</param>
-                                                    <param id="1" name="Visibility">1</param>
-                                                </action>
-                                                <action id="-4" name="Set layer visible" sid="513655094932558" type="System">
-                                                    <param id="0" name="Layer">&quot;GLOBAL_Overlay&quot;</param>
-                                                    <param id="1" name="Visibility">1</param>
-                                                </action>
-                                                <action id="-16" name="Wait" sid="858102628115894" type="System">
-                                                    <param id="0" name="Seconds">0.1</param>
-                                                </action>
-                                                <action id="-2" name="Go to layout" sid="844241726218105" type="System">
-                                                    <param id="0" name="Layout">Game</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
                                 </event-block>
                                 <event-block sid="397844696483739">
                                     <conditions>
@@ -1761,7 +1788,6 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="33" name="Stop all" sid="856777482194731" type="BetterAudio" />
                                         <action id="-10" name="Set value" sid="834879449761160" type="Var_Level">
                                             <param id="0" name="Instance variable">RoomEngine</param>
                                             <param id="1" name="Value">&quot;GMS1&quot;</param>
@@ -1770,26 +1796,16 @@
                                             <param id="0" name="Instance variable">Room</param>
                                             <param id="1" name="Value">JSON_PERSIST.Value(0,&quot;Menus&quot;,Menu_Cursor.Menu,str(Menu_Cursor.Current),&quot;Title&quot;)</param>
                                         </action>
-                                        <action id="0" name="Call function" sid="817456737626258" type="Function">
-                                            <param id="0" name="Name">&quot;HUD_Fade&quot;</param>
-                                            <param id="1" name="Parameter {n}">&quot;in&quot;{###}&quot;black&quot;{###}&quot;0.25&quot;</param>
-                                        </action>
-                                        <action id="-16" name="Wait" sid="100539690514763" type="System">
-                                            <param id="0" name="Seconds">0.25</param>
-                                        </action>
-                                        <action id="-4" name="Set layer visible" sid="834133483866366" type="System">
-                                            <param id="0" name="Layer">&quot;GLOBAL_Loading&quot;</param>
-                                            <param id="1" name="Visibility">1</param>
-                                        </action>
-                                        <action id="-4" name="Set layer visible" sid="552319892554501" type="System">
-                                            <param id="0" name="Layer">&quot;GLOBAL_Overlay&quot;</param>
-                                            <param id="1" name="Visibility">1</param>
-                                        </action>
-                                        <action id="-16" name="Wait" sid="768809135599122" type="System">
+                                        <action id="-16" name="Wait" sid="355980663514564" type="System">
                                             <param id="0" name="Seconds">0.1</param>
                                         </action>
-                                        <action id="-2" name="Go to layout" sid="770918388494827" type="System">
-                                            <param id="0" name="Layout">Game</param>
+                                        <action id="-10" name="Set value" sid="956310854533029" type="Var_Main">
+                                            <param id="0" name="Instance variable">GameMode</param>
+                                            <param id="1" name="Value">&quot;ImportRoom&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="767974867187134" type="Var_Main">
+                                            <param id="0" name="Instance variable">GameState</param>
+                                            <param id="1" name="Value">&quot;SkinSelect&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1815,6 +1831,15 @@
                     <conditions>
                         <condition id="0" name="On key pressed" sid="356093350253579" type="Keyboard">
                             <param id="0" name="Key">88</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="234804711618513" type="Var_Main">
+                            <param id="0" name="Instance variable">GameState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Menu&quot;</param>
+                        </condition>
+                        <condition id="0" inverted="1" name="In Progress" sid="499144392427507" type="Ease">
+                            <param id="0" name="Ease tag">&quot;HUD_Fade&quot;</param>
+                            <param id="1" name="Ease parameter {n}"></param>
                         </condition>
                     </conditions>
                     <actions />
@@ -1908,10 +1933,6 @@
                 <condition id="-4" name="Trigger once while true" sid="763583376118378" type="System" />
             </conditions>
             <actions>
-                <action id="-12" name="Set group active" sid="799412640144226" type="System">
-                    <param id="0" name="Group name">&quot;Group&quot;</param>
-                    <param id="1" name="State">1</param>
-                </action>
                 <action id="-4" name="Set layer visible" sid="367274435877682" type="System">
                     <param id="0" name="Layer">&quot;Menu&quot;</param>
                     <param id="1" name="Visibility">1</param>
@@ -1924,19 +1945,27 @@
                     <param id="0" name="Layer">&quot;GLOBAL_Overlay&quot;</param>
                     <param id="1" name="Visibility">0</param>
                 </action>
+                <action id="-4" name="Set layer visible" sid="578443119980071" type="System">
+                    <param id="0" name="Layer">&quot;SkinSelect&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="947802630826893" type="Var_Main">
+                    <param id="0" name="Instance variable">GameMode</param>
+                    <param id="1" name="Value">&quot;null&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="797821914590170" type="Var_Main">
+                    <param id="0" name="Instance variable">GameState</param>
+                    <param id="1" name="Value">&quot;Menu&quot;</param>
+                </action>
             </actions>
         </event-block>
-        <event-group description="" sid="411297813241979" title="Group2">
+        <event-group description="" sid="411297813241979" title="Skin Select">
             <sub-events>
                 <event-block sid="533831162125014">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="414712690072261" type="System" />
+                        <condition id="-2" name="On start of layout" sid="903109838769602" type="System" />
                     </conditions>
-                    <actions>
-                        <action id="-16" name="Wait" sid="672179745489287" type="System">
-                            <param id="0" name="Seconds">0.1</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
                         <event-block sid="920464626579680">
                             <conditions>
@@ -2106,17 +2135,8 @@
                                     <param id="0" name="Pin to">Menu_Window</param>
                                     <param id="1" name="Mode">0</param>
                                 </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="402611652933842">
-                            <conditions />
-                            <actions>
                                 <action id="-2" name="Set Y" sid="268003246495300" type="Menu_Window">
                                     <param id="0" name="Y">480</param>
-                                </action>
-                                <action behavior="LiteTween" id="10" name="Start" sid="354493785480197" type="Menu_Window">
-                                    <param id="0" name="Start Mode">0</param>
-                                    <param id="1" name="Force use current">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -2146,8 +2166,47 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="897367021565965">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="354996678713706" type="Var_Main">
+                            <param id="0" name="Instance variable">GameState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;SkinSelect&quot;</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="202728104092014" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="786514142302205" type="Menu_Window">
+                            <param id="0" name="Y">480</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="190093536109416" type="Menu_Window">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="573168657778615" type="System">
+                            <param id="0" name="Layer">&quot;SkinSelect&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="527498178462132">
+                    <conditions>
+                        <condition behavior="LiteTween" id="6" name="On tween reverse end" sid="369602948749486" type="Menu_Window" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="317244135891206" type="System">
+                            <param id="0" name="Layer">&quot;SkinSelect&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="737676461008468">
                     <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="653950432120468" type="Var_Main">
+                            <param id="0" name="Instance variable">GameState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;SkinSelect&quot;</param>
+                        </condition>
                         <condition id="-33" name="Pick by comparison" sid="103713676309652" type="System">
                             <param id="0" name="Object">Text</param>
                             <param id="1" name="Expression">find(Text.ID,&quot;Skin_&quot;)</param>
@@ -2256,10 +2315,59 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="848538909276804">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="536586768023218" type="System" />
+                                <condition id="-33" name="Pick by comparison" sid="329259779908471" type="System">
+                                    <param id="0" name="Object">Sprite4</param>
+                                    <param id="1" name="Expression">Sprite4.skin</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">Var_Main.Skin</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="526230397561882" type="Sprite2">
+                                    <param id="0" name="Instance variable">Current</param>
+                                    <param id="1" name="Value">Sprite4.ID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="851583364928110">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="132854999180340" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="489347872846130" type="9patch">
+                                    <param id="0" name="Y">168+(32*Self.ID)</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="235778390334356" type="Text">
+                                    <param id="0" name="Y">170+(32*int(replace(Self.ID,&quot;Skin_&quot;,&quot;&quot;)))</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="831139540139209" type="Sprite4">
+                                    <param id="0" name="Y">180+(32*Self.ID)</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="180362076399503" type="System">
+                                    <param id="0" name="Seconds">0</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="404741574999563" type="9patch">
+                                    <param id="0" name="Y">Self.Y-(32*Sprite2.Current)</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="414361924145103" type="Text">
+                                    <param id="0" name="Y">Self.Y-(32*Sprite2.Current)</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="121396413497276" type="Sprite4">
+                                    <param id="0" name="Y">Self.Y-(32*Sprite2.Current)</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="576387288426332">
                             <conditions>
                                 <condition id="0" name="On key pressed" sid="321670842358731" type="Keyboard">
                                     <param id="0" name="Key">38</param>
+                                </condition>
+                                <condition id="0" inverted="1" name="In Progress" sid="290940196300818" type="Ease">
+                                    <param id="0" name="Ease tag">&quot;HUD_Fade&quot;</param>
+                                    <param id="1" name="Ease parameter {n}"></param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -2307,6 +2415,10 @@
                                 <condition id="0" name="On key pressed" sid="410601050327438" type="Keyboard">
                                     <param id="0" name="Key">40</param>
                                 </condition>
+                                <condition id="0" inverted="1" name="In Progress" sid="743918058244690" type="Ease">
+                                    <param id="0" name="Ease tag">&quot;HUD_Fade&quot;</param>
+                                    <param id="1" name="Ease parameter {n}"></param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-11" name="Add to" sid="418018520154479" type="Sprite2">
@@ -2345,6 +2457,87 @@
                                 <action id="-10" name="Set value" sid="462138306500477" type="Sprite2">
                                     <param id="0" name="Instance variable">Current</param>
                                     <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="501148439269248">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="902903045622863" type="Keyboard">
+                                    <param id="0" name="Key">90</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="276983480071979" type="System">
+                                    <param id="0" name="Object">Sprite4</param>
+                                    <param id="1" name="Expression">Sprite4.ID</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">Sprite2.Current</param>
+                                </condition>
+                                <condition id="0" inverted="1" name="In Progress" sid="400113621860101" type="Ease">
+                                    <param id="0" name="Ease tag">&quot;HUD_Fade&quot;</param>
+                                    <param id="1" name="Ease parameter {n}"></param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="848652362650712" type="Var_Main">
+                                    <param id="0" name="Instance variable">Skin</param>
+                                    <param id="1" name="Value">Sprite4.skin</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="728256644914547">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="668400511277685" type="Var_Main">
+                                            <param id="0" name="Instance variable">GameMode</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;ImportRoom&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="33" name="Stop all" sid="949372602142712" type="BetterAudio" />
+                                        <action id="0" name="Call function" sid="939241802162939" type="Function">
+                                            <param id="0" name="Name">&quot;HUD_Fade&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;in&quot;{###}&quot;black&quot;{###}&quot;0.25&quot;</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="738994629105736" type="System">
+                                            <param id="0" name="Seconds">0.25</param>
+                                        </action>
+                                        <action id="-4" name="Set layer visible" sid="961756224204591" type="System">
+                                            <param id="0" name="Layer">&quot;GLOBAL_Loading&quot;</param>
+                                            <param id="1" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-4" name="Set layer visible" sid="126188684512607" type="System">
+                                            <param id="0" name="Layer">&quot;GLOBAL_Overlay&quot;</param>
+                                            <param id="1" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="178130317720606" type="System">
+                                            <param id="0" name="Seconds">0.1</param>
+                                        </action>
+                                        <action id="-2" name="Go to layout" sid="961190238996555" type="System">
+                                            <param id="0" name="Layout">Game</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="641894929058305">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="794201283206632" type="Keyboard">
+                                    <param id="0" name="Key">88</param>
+                                </condition>
+                                <condition id="0" inverted="1" name="In Progress" sid="445417776976854" type="Ease">
+                                    <param id="0" name="Ease tag">&quot;HUD_Fade&quot;</param>
+                                    <param id="1" name="Ease parameter {n}"></param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="LiteTween" id="11" name="Reverse" sid="975841248744438" type="Menu_Window">
+                                    <param id="0" name="Reverse mode">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="224161477955108" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="752296602131333" type="Var_Main">
+                                    <param id="0" name="Instance variable">GameState</param>
+                                    <param id="1" name="Value">&quot;Menu&quot;</param>
                                 </action>
                             </actions>
                         </event-block>

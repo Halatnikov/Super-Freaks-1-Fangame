@@ -552,7 +552,7 @@
             <effects />
         </layer>
         <layer name="SkinSelect" sid="886799629670485">
-            <initially-visible>1</initially-visible>
+            <initially-visible>0</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
             <parallax>
@@ -626,7 +626,6 @@
                     </properties>
                     <instance-variables>
                         <Current>0</Current>
-                        <Offset>0</Offset>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />

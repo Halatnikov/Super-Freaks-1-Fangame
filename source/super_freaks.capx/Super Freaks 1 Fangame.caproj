@@ -2,7 +2,7 @@
 <c2project>
     <name>Super Freaks 1 Fangame</name>
     <description></description>
-    <version>0.2.0-3</version>
+    <version>0.2.0-4</version>
     <author>Halatnikov</author>
     <author-email></author-email>
     <author-website>https://halatnikov.github.io</author-website>
@@ -178,8 +178,11 @@
                     <instance-variable name="ActiveStarTrophy" sid="859313321983173" type="number" />
                     <instance-variable name="NumberStarStreak" sid="343928028724910" type="number" />
                     <instance-variable name="TimedStarStreak" sid="903789600284950" type="number" />
+                    <instance-variable name="State" sid="692494682635932" type="string" />
                     <instance-variable name="GimmickState" sid="493211812958846" type="string" />
                     <instance-variable name="Animation" sid="445687233624146" type="string" />
+                    <instance-variable name="AllowTurn" sid="894912853118803" type="boolean" />
+                    <instance-variable name="Direction" sid="246481464479356" type="string" />
                 </instance-variables>
             </object-type>
             <object-type global="1" name="Var_Room" sid="803519937269875">
@@ -203,6 +206,8 @@
                 <instance-variables>
                     <instance-variable name="Music" sid="341867745078352" type="string" />
                     <instance-variable name="Skin" sid="681194777325132" type="string" />
+                    <instance-variable name="GameMode" sid="934990862265436" type="string" />
+                    <instance-variable name="GameState" sid="678106201701660" type="string" />
                 </instance-variables>
             </object-type>
         </object-folder>
@@ -2205,7 +2210,6 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="Current" sid="688100094104454" type="number" />
-                <instance-variable name="Offset" sid="254736526855351" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Pin" sid="145551965582843">

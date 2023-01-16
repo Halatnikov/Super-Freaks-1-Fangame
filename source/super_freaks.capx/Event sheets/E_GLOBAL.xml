@@ -1509,10 +1509,6 @@
                             <param id="1" name="Reference point">0</param>
                             <param id="2" name="Key {n}"></param>
                         </action>
-                        <action id="14" name="Log" sid="343899223090816" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">0</param>
-                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="810894248096743">

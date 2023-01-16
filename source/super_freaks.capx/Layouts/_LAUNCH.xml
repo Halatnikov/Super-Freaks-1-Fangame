@@ -206,7 +206,9 @@
         <instance type="Var_Main" uid="119">
             <instance-variables>
                 <Music></Music>
-                <Skin>srb1_earless</Skin>
+                <Skin>1u_scruffy</Skin>
+                <GameMode></GameMode>
+                <GameState></GameState>
             </instance-variables>
         </instance>
     </nonworld-instances>
