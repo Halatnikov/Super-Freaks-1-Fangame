@@ -718,13 +718,6 @@
                         <Obj_ImportInstance></Obj_ImportInstance>
                         <Obj_Difficulty>Everything</Obj_Difficulty>
                     </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Jumpthru">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -780,13 +773,6 @@
                         <Obj_ImportInstance></Obj_ImportInstance>
                         <Obj_Difficulty>Everything</Obj_Difficulty>
                     </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Jumpthru">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1035,7 +1021,7 @@
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <collisions>Disabled</collisions>
                     </properties>
                     <instance-variables>
                         <ParentUID>87</ParentUID>
@@ -1062,7 +1048,7 @@
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>6</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <collisions>Disabled</collisions>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1667,18 +1653,27 @@
                         <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Gravity>900</Gravity>
+                        <Acceleration>1080</Acceleration>
+                        <AirAcceleration>1080</AirAcceleration>
+                        <Deceleration>900</Deceleration>
+                        <AirDeceleration>900</AirDeceleration>
+                        <Friction>0.3</Friction>
+                        <AirFriction>0.96875</AirFriction>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
                             <properties>
                                 <max-speed>180</max-speed>
                                 <acceleration>1080</acceleration>
                                 <deceleration>900</deceleration>
-                                <jump-strength>343.25</jump-strength>
+                                <jump-strength>429</jump-strength>
                                 <gravity>900</gravity>
                                 <max-fall-speed>360</max-fall-speed>
                                 <double-jump>Disabled</double-jump>
-                                <jump-sustain>125</jump-sustain>
-                                <default-controls>Yes</default-controls>
+                                <jump-sustain>0</jump-sustain>
+                                <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -1741,6 +1736,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Disabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Me>true</Me>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                         <behavior-instance type="AnimationLoader" />
@@ -2135,7 +2133,7 @@
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <collisions>Disabled</collisions>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2157,7 +2155,7 @@
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <collisions>Disabled</collisions>
                     </properties>
                     <behavior-instances>
                         <behavior-instance type="AnimationLoader" />
@@ -2182,7 +2180,7 @@
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <collisions>Disabled</collisions>
                     </properties>
                     <behavior-instances>
                         <behavior-instance type="LiteTween">
@@ -2237,7 +2235,7 @@
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <collisions>Disabled</collisions>
                     </properties>
                     <instance-variables>
                         <ID>1</ID>
@@ -2288,7 +2286,7 @@
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <collisions>Disabled</collisions>
                     </properties>
                     <instance-variables>
                         <ID>2</ID>
@@ -2339,7 +2337,7 @@
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <collisions>Disabled</collisions>
                     </properties>
                     <instance-variables>
                         <ID>3</ID>
@@ -2504,7 +2502,7 @@
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <collisions>Disabled</collisions>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2811,7 +2809,7 @@
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <collisions>Disabled</collisions>
                     </properties>
                     <instance-variables>
                         <InititalY>0</InititalY>
@@ -2850,7 +2848,7 @@
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>1</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <collisions>Disabled</collisions>
                     </properties>
                     <instance-variables>
                         <InititalY>0</InititalY>
@@ -2889,7 +2887,7 @@
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>2</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <collisions>Disabled</collisions>
                     </properties>
                     <instance-variables>
                         <InititalY>0</InititalY>
@@ -2928,7 +2926,7 @@
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>3</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <collisions>Disabled</collisions>
                     </properties>
                     <instance-variables>
                         <InititalY>0</InititalY>
@@ -3365,7 +3363,10 @@
                 <GimmickState></GimmickState>
                 <Animation>Idle</Animation>
                 <AllowTurn>true</AllowTurn>
-                <Direction>&quot;Right&quot;</Direction>
+                <Direction>Right</Direction>
+                <LockHorizontal>0</LockHorizontal>
+                <LockVertical>0</LockVertical>
+                <WalljumpAuto>0</WalljumpAuto>
             </instance-variables>
         </instance>
         <instance type="Var_Room" uid="105">
