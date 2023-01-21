@@ -2,7 +2,7 @@
 <c2project>
     <name>Super Freaks 1 Fangame</name>
     <description></description>
-    <version>0.2.0-7</version>
+    <version>0.2.0-8</version>
     <author>Halatnikov</author>
     <author-email></author-email>
     <author-website>https://halatnikov.github.io</author-website>
@@ -460,7 +460,7 @@
                         <instance-variable name="timer_delay" sid="468075418265124" type="number" />
                         <instance-variable name="timer_frequency" sid="270620327134145" type="number" />
                         <instance-variable name="drop_speed" sid="249124412283056" type="number" />
-                        <instance-variable name="SpawnExplosions" sid="536257026725085" type="string" />
+                        <instance-variable name="ExplosionsHurt" sid="536257026725085" type="string" />
                     </instance-variables>
                     <behaviors>
                         <behavior-type name="Timer" sid="321204588091616">
@@ -469,35 +469,121 @@
                     </behaviors>
                     <animation-folder>
                         <animation framecount="2" loop="1" name="Barrel" pingpong="0" repeatcount="1" repeatto="0" sid="469735642018311" speed="7">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.59375">
-                                <image-point name="Imagepoint 1" x="0.5" y="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0.0625" y="0.0625" />
+                                    <point x="0.9375" y="0.0625" />
+                                    <point x="0.9375" y="0.9375" />
+                                    <point x="0.0625" y="0.9375" />
+                                </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.59375">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                                 <image-point name="Imagepoint 1" x="0.5" y="1" />
+                                <collision-poly>
+                                    <point x="0.0625" y="0.0625" />
+                                    <point x="0.9375" y="0.0625" />
+                                    <point x="0.9375" y="0.9375" />
+                                    <point x="0.0625" y="0.9375" />
+                                </collision-poly>
                             </frame>
                         </animation>
                         <animation framecount="2" loop="1" name="Ball" pingpong="0" repeatcount="1" repeatto="0" sid="845368892053058" speed="7">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.59375">
-                                <image-point name="Imagepoint 1" x="0.5" y="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0.0625" y="0.0625" />
+                                    <point x="0.9375" y="0.0625" />
+                                    <point x="0.9375" y="0.9375" />
+                                    <point x="0.0625" y="0.9375" />
+                                </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.59375">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                                 <image-point name="Imagepoint 1" x="0.5" y="1" />
+                                <collision-poly>
+                                    <point x="0.0625" y="0.0625" />
+                                    <point x="0.9375" y="0.0625" />
+                                    <point x="0.9375" y="0.9375" />
+                                    <point x="0.0625" y="0.9375" />
+                                </collision-poly>
                             </frame>
                         </animation>
                         <animation framecount="2" loop="1" name="Barrel_Bounce" pingpong="0" repeatcount="1" repeatto="0" sid="919247579032913" speed="7">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\sprFusedropperPink_0.png">
-                                <image-point name="Imagepoint 1" x="0.5" y="1" />
+                                <collision-poly>
+                                    <point x="0.0625" y="0.0625" />
+                                    <point x="0.9375" y="0.0625" />
+                                    <point x="0.9375" y="0.9375" />
+                                    <point x="0.0625" y="0.9375" />
+                                </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\sprFusedropperPink_1.png">
                                 <image-point name="Imagepoint 1" x="0.5" y="1" />
+                                <collision-poly>
+                                    <point x="0.0625" y="0.0625" />
+                                    <point x="0.9375" y="0.0625" />
+                                    <point x="0.9375" y="0.9375" />
+                                    <point x="0.0625" y="0.9375" />
+                                </collision-poly>
                             </frame>
                         </animation>
                         <animation framecount="2" loop="1" name="Bomb" pingpong="0" repeatcount="1" repeatto="0" sid="757150755224039" speed="7">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\sprFusedropperGrey_0.png">
-                                <image-point name="Imagepoint 1" x="0.5" y="1" />
+                                <collision-poly>
+                                    <point x="0.0625" y="0.0625" />
+                                    <point x="0.9375" y="0.0625" />
+                                    <point x="0.9375" y="0.9375" />
+                                    <point x="0.0625" y="0.9375" />
+                                </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\sprFusedropperGrey_1.png">
                                 <image-point name="Imagepoint 1" x="0.5" y="1" />
+                                <collision-poly>
+                                    <point x="0.0625" y="0.0625" />
+                                    <point x="0.9375" y="0.0625" />
+                                    <point x="0.9375" y="0.9375" />
+                                    <point x="0.0625" y="0.9375" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Obj_EnemyBlocker" sid="664445691641907">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="436886619614684" speed="7">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Special_Bomb" sid="875461137035269">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="YSpeed" sid="895574439584052" type="number" />
+                        <instance-variable name="ExplosionsHurt" sid="169892273787568" type="string" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="783970738786002" speed="4">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\spr_bomb_0.png">
+                                <collision-poly>
+                                    <point x="0.25" y="0.5" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.75" y="0.5" />
+                                    <point x="0.5" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\spr_bomb_1.png">
+                                <collision-poly>
+                                    <point x="0.25" y="0.5" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.75" y="0.5" />
+                                    <point x="0.5" y="1" />
+                                </collision-poly>
                             </frame>
                         </animation>
                     </animation-folder>
@@ -805,74 +891,6 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="Obj_Yorb10" sid="867221145516885">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="6" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="244457449726377" speed="7">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\spr_yorb_10_0.png" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\spr_yorb_10_1.png" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\spr_yorb_10_2.png" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\spr_yorb_10_3.png" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\spr_yorb_10_4.png" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\spr_yorb_10_5.png" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="Obj_YorbX2" sid="518035296433824">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="6" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="822376285401617" speed="7">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\sprMultiplier_0.png" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\sprMultiplier_1.png" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\sprMultiplier_2.png" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\sprMultiplier_3.png" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\sprMultiplier_4.png" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\sprMultiplier_5.png" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="Obj_EnemyBlocker" sid="664445691641907">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="436886619614684" speed="7">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                                <collision-poly>
-                                    <point x="1" y="1" />
-                                    <point x="0" y="1" />
-                                    <point x="0" y="0" />
-                                    <point x="1" y="0" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="Object_Bomb" sid="875461137035269">
-                    <plugin id="Sprite" />
-                    <instance-variables>
-                        <instance-variable name="YSpeed" sid="895574439584052" type="number" />
-                        <instance-variable name="SpawnExplosions" sid="169892273787568" type="string" />
-                    </instance-variables>
-                    <animation-folder>
-                        <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="783970738786002" speed="4">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\spr_bomb_0.png">
-                                <collision-poly>
-                                    <point x="0.25" y="0.5" />
-                                    <point x="0.5" y="0" />
-                                    <point x="0.75" y="0.5" />
-                                    <point x="0.5" y="1" />
-                                </collision-poly>
-                            </frame>
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\spr_bomb_1.png">
-                                <collision-poly>
-                                    <point x="0.25" y="0.5" />
-                                    <point x="0.5" y="0" />
-                                    <point x="0.75" y="0.5" />
-                                    <point x="0.5" y="1" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
             </object-folder>
             <object-folder name="Compatibility">
                 <object-type name="ObjCompat_ClimbMesh_Fall" sid="963949033969487">
@@ -939,14 +957,68 @@
                     </animation-folder>
                 </object-type>
             </object-folder>
-            <object-type name="Obj9p_ClimbMesh" sid="351436448688202">
-                <plugin id="NinePatch" />
-                <texture />
-            </object-type>
-            <object-type name="Obj9p_Platform" sid="459288986699147">
-                <plugin id="NinePatch" />
-                <texture />
-            </object-type>
+            <object-folder name="9patchChild">
+                <object-type name="Obj9p_ClimbMesh" sid="351436448688202">
+                    <plugin id="NinePatch" />
+                    <texture />
+                </object-type>
+                <object-type name="Obj9p_GravityHigh_0" sid="204325198435792">
+                    <plugin id="NinePatch" />
+                    <texture original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\sprHighGravity_0.png" />
+                </object-type>
+                <object-type name="Obj9p_Platform" sid="459288986699147">
+                    <plugin id="NinePatch" />
+                    <texture />
+                </object-type>
+                <object-type name="Obj9p_GravityHigh_1" sid="228243581772854">
+                    <plugin id="NinePatch" />
+                    <texture original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\sprHighGravity_1.png" />
+                </object-type>
+                <object-type name="Obj9p_GravityHigh_2" sid="850032570070200">
+                    <plugin id="NinePatch" />
+                    <texture original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\sprHighGravity_2.png" />
+                </object-type>
+                <object-type name="Obj9p_GravityHigh_3" sid="273599157719017">
+                    <plugin id="NinePatch" />
+                    <texture original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\sprHighGravity_3.png" />
+                </object-type>
+                <object-type name="Obj9p_GravityLow_0" sid="515517938329898">
+                    <plugin id="NinePatch" />
+                    <texture original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\sprLowGravity_0.png" />
+                </object-type>
+                <object-type name="Obj9p_GravityLow_1" sid="168797425256958">
+                    <plugin id="NinePatch" />
+                    <texture original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\sprLowGravity_1.png" />
+                </object-type>
+                <object-type name="Obj9p_GravityLow_2" sid="544266332057151">
+                    <plugin id="NinePatch" />
+                    <texture original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\sprLowGravity_2.png" />
+                </object-type>
+                <object-type name="Obj9p_GravityLow_3" sid="651347474695649">
+                    <plugin id="NinePatch" />
+                    <texture original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\sprLowGravity_3.png" />
+                </object-type>
+                <object-type name="Obj9p_RocketApplePlatform_0" sid="562780069502132">
+                    <plugin id="NinePatch" />
+                    <texture />
+                </object-type>
+                <object-type name="Obj9p_RocketApplePlatform_1" sid="764610887903176">
+                    <plugin id="NinePatch" />
+                    <texture original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\rocket_2.png" />
+                </object-type>
+                <object-type name="Obj9p_Spring_0" sid="856757404888328">
+                    <plugin id="NinePatch" />
+                    <texture />
+                </object-type>
+                <object-type name="Obj9p_Spring_1" sid="378864204488946">
+                    <plugin id="NinePatch" />
+                    <texture />
+                </object-type>
+                <object-type name="Obj9p_Spring_2" sid="490546753425460">
+                    <plugin id="NinePatch" />
+                    <texture />
+                </object-type>
+            </object-folder>
             <object-type name="Obj_Chain" sid="376113381833434">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -1220,14 +1292,6 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="Obj9p_RocketApplePlatform_0" sid="562780069502132">
-                <plugin id="NinePatch" />
-                <texture />
-            </object-type>
-            <object-type name="Obj9p_RocketApplePlatform_1" sid="764610887903176">
-                <plugin id="NinePatch" />
-                <texture original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\rocket_2.png" />
-            </object-type>
             <object-type name="Special_PathPoint" sid="696741111660129">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -1280,18 +1344,6 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="Obj9p_Spring_2" sid="490546753425460">
-                <plugin id="NinePatch" />
-                <texture />
-            </object-type>
-            <object-type name="Obj9p_Spring_0" sid="856757404888328">
-                <plugin id="NinePatch" />
-                <texture />
-            </object-type>
-            <object-type name="Obj9p_Spring_1" sid="378864204488946">
-                <plugin id="NinePatch" />
-                <texture />
-            </object-type>
             <object-type name="Obj_SwingingPineapple" sid="363163171523161">
                 <plugin id="Sprite" />
                 <animation-folder>
@@ -1318,6 +1370,123 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Special_Explosion" sid="215455128531152">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Hurt" sid="786168374608177" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="169463438726379" speed="7">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.125" y="0.125" />
+                                <point x="0.875" y="0.125" />
+                                <point x="0.875" y="0.875" />
+                                <point x="0.125" y="0.875" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.125" y="0.125" />
+                                <point x="0.875" y="0.125" />
+                                <point x="0.875" y="0.875" />
+                                <point x="0.125" y="0.875" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.125" y="0.125" />
+                                <point x="0.875" y="0.125" />
+                                <point x="0.875" y="0.875" />
+                                <point x="0.125" y="0.875" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.125" y="0.125" />
+                                <point x="0.875" y="0.125" />
+                                <point x="0.875" y="0.875" />
+                                <point x="0.125" y="0.875" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.125" y="0.125" />
+                                <point x="0.875" y="0.125" />
+                                <point x="0.875" y="0.875" />
+                                <point x="0.125" y="0.875" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Special_YorbX2" sid="651416833863599">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="LiteTween" sid="318035199433423">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="7" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="355117225852084" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Obj_YorbX2" sid="518035296433824">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="6" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="822376285401617" speed="7">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\sprMultiplier_0.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\sprMultiplier_1.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\sprMultiplier_2.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\sprMultiplier_3.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\sprMultiplier_4.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\sprMultiplier_5.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Obj_Yorb10" sid="867221145516885">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="6" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="244457449726377" speed="7">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\spr_yorb_10_0.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\spr_yorb_10_1.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\spr_yorb_10_2.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\spr_yorb_10_3.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\spr_yorb_10_4.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\spr_yorb_10_5.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Obj_GravityLow" sid="905486679201855">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="788580406896301" speed="7">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\sprLowGravity_0.png" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\sprLowGravity_1.png" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\sprLowGravity_2.png" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\sprLowGravity_3.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Obj_GravityHigh" sid="839921956951305">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="206625869101427" speed="7">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\sprHighGravity_0.png" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\sprHighGravity_1.png" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\sprHighGravity_2.png" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\sprHighGravity_3.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -2004,6 +2173,7 @@
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="Gravity" sid="949659406704068" type="number" />
+                    <instance-variable name="MaxFallSpeed" sid="288829483578963" type="number" />
                     <instance-variable name="Acceleration" sid="613209372220972" type="number" />
                     <instance-variable name="AirAcceleration" sid="891618369208579" type="number" />
                     <instance-variable name="Deceleration" sid="722101574733280" type="number" />
@@ -2592,72 +2762,6 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-type name="Sprite" sid="651416833863599">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="LiteTween" sid="318035199433423">
-                    <behavior id="lunarray_LiteTween" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="7" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="355117225852084" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite2" sid="215455128531152">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="169463438726379" speed="7">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.125" y="0.125" />
-                            <point x="0.875" y="0.125" />
-                            <point x="0.875" y="0.875" />
-                            <point x="0.125" y="0.875" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.125" y="0.125" />
-                            <point x="0.875" y="0.125" />
-                            <point x="0.875" y="0.875" />
-                            <point x="0.125" y="0.875" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.125" y="0.125" />
-                            <point x="0.875" y="0.125" />
-                            <point x="0.875" y="0.875" />
-                            <point x="0.125" y="0.875" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.125" y="0.125" />
-                            <point x="0.875" y="0.125" />
-                            <point x="0.875" y="0.875" />
-                            <point x="0.125" y="0.875" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.125" y="0.125" />
-                            <point x="0.875" y="0.125" />
-                            <point x="0.875" y="0.875" />
-                            <point x="0.125" y="0.875" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
     </object-folder>
     <families>
         <family name="Text" plugin-id="Spritefont2" sid="193627768008748">
@@ -2710,6 +2814,8 @@
                 <member>Obj_ClimbMesh</member>
                 <member>Obj_EnemyBlocker</member>
                 <member>Obj_FruitPlatform</member>
+                <member>Obj_GravityHigh</member>
+                <member>Obj_GravityLow</member>
                 <member>Obj_Heart</member>
                 <member>Obj_NumberStar</member>
                 <member>Obj_Platform</member>
@@ -2746,6 +2852,8 @@
         <family name="Objects9patch_Parent" plugin-id="Sprite" sid="215779624238270">
             <members>
                 <member>Obj_ClimbMesh</member>
+                <member>Obj_GravityHigh</member>
+                <member>Obj_GravityLow</member>
                 <member>Obj_Platform</member>
                 <member>Obj_RocketApplePlatform</member>
                 <member>Obj_Spring</member>
@@ -2757,6 +2865,14 @@
         <family name="Objects9patch_Child" plugin-id="NinePatch" sid="665040913581995">
             <members>
                 <member>Obj9p_ClimbMesh</member>
+                <member>Obj9p_GravityHigh_0</member>
+                <member>Obj9p_GravityHigh_1</member>
+                <member>Obj9p_GravityHigh_2</member>
+                <member>Obj9p_GravityHigh_3</member>
+                <member>Obj9p_GravityLow_0</member>
+                <member>Obj9p_GravityLow_1</member>
+                <member>Obj9p_GravityLow_2</member>
+                <member>Obj9p_GravityLow_3</member>
                 <member>Obj9p_Platform</member>
                 <member>Obj9p_RocketApplePlatform_0</member>
                 <member>Obj9p_RocketApplePlatform_1</member>
