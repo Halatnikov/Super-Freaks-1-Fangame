@@ -457,7 +457,6 @@
                     </properties>
                     <instance-variables>
                         <Obj9pChild_ID>Obj9p_Platform</Obj9pChild_ID>
-                        <Obj9pChild_Parent>Obj_Platform</Obj9pChild_Parent>
                         <Obj9pChild_AnimFrame>0</Obj9pChild_AnimFrame>
                     </instance-variables>
                     <behavior-instances>
@@ -802,7 +801,6 @@
                     </properties>
                     <instance-variables>
                         <Obj9pChild_ID>Obj9p_ClimbMesh</Obj9pChild_ID>
-                        <Obj9pChild_Parent>Obj_ClimbMesh</Obj9pChild_Parent>
                         <Obj9pChild_AnimFrame>0</Obj9pChild_AnimFrame>
                     </instance-variables>
                     <behavior-instances>
@@ -1271,7 +1269,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Obj9p_Platform2" uid="99">
+                <instance type="Obj9p_RocketApplePlatform_0" uid="99">
                     <properties>
                         <left-margin>12</left-margin>
                         <right-margin>12</right-margin>
@@ -1285,7 +1283,6 @@
                     </properties>
                     <instance-variables>
                         <Obj9pChild_ID>Obj9p_RocketApplePlatform</Obj9pChild_ID>
-                        <Obj9pChild_Parent>Obj_RocketApplePlatform</Obj9pChild_Parent>
                         <Obj9pChild_AnimFrame>0</Obj9pChild_AnimFrame>
                     </instance-variables>
                     <behavior-instances>
@@ -1305,7 +1302,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Obj9p_Platform3" uid="101">
+                <instance type="Obj9p_RocketApplePlatform_1" uid="101">
                     <properties>
                         <left-margin>12</left-margin>
                         <right-margin>12</right-margin>
@@ -1319,7 +1316,6 @@
                     </properties>
                     <instance-variables>
                         <Obj9pChild_ID>Obj9p_RocketApplePlatform</Obj9pChild_ID>
-                        <Obj9pChild_Parent>Obj_RocketApplePlatform</Obj9pChild_Parent>
                         <Obj9pChild_AnimFrame>1</Obj9pChild_AnimFrame>
                     </instance-variables>
                     <behavior-instances>
@@ -1366,7 +1362,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite" uid="120">
+                <instance type="Obj_WorldMapIcon" uid="120">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1600,6 +1596,321 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Obj_Spring" uid="129">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>2</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Obj_ImportID>obj_spring</Obj_ImportID>
+                        <Obj_ImportInstance></Obj_ImportInstance>
+                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj9pParent_Child>Obj9p_Spring</Obj9pParent_Child>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-122</x>
+                        <y>61</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Obj9p_Spring_2" uid="130">
+                    <properties>
+                        <left-margin>15</left-margin>
+                        <right-margin>15</right-margin>
+                        <top-margin>0</top-margin>
+                        <bottom-margin>0</bottom-margin>
+                        <edges>Tile</edges>
+                        <fill>Tile</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Bottom</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <instance-variables>
+                        <Obj9pChild_ID>Obj9p_Spring</Obj9pChild_ID>
+                        <Obj9pChild_AnimFrame>2</Obj9pChild_AnimFrame>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-67</x>
+                        <y>47</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Obj9p_Spring_0" uid="131">
+                    <properties>
+                        <left-margin>15</left-margin>
+                        <right-margin>15</right-margin>
+                        <top-margin>0</top-margin>
+                        <bottom-margin>0</bottom-margin>
+                        <edges>Tile</edges>
+                        <fill>Tile</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Bottom</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <instance-variables>
+                        <Obj9pChild_ID>Obj9p_Spring</Obj9pChild_ID>
+                        <Obj9pChild_AnimFrame>0</Obj9pChild_AnimFrame>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-67</x>
+                        <y>78</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Obj9p_Spring_1" uid="132">
+                    <properties>
+                        <left-margin>15</left-margin>
+                        <right-margin>15</right-margin>
+                        <top-margin>0</top-margin>
+                        <bottom-margin>0</bottom-margin>
+                        <edges>Tile</edges>
+                        <fill>Tile</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Bottom</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <instance-variables>
+                        <Obj9pChild_ID>Obj9p_Spring</Obj9pChild_ID>
+                        <Obj9pChild_AnimFrame>1</Obj9pChild_AnimFrame>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-66</x>
+                        <y>112</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Obj_YorbX2" uid="161">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Obj_ImportID></Obj_ImportID>
+                        <Obj_ImportInstance></Obj_ImportInstance>
+                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-70</x>
+                        <y>445</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Sprite" uid="162">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="LiteTween">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <tweened-property>Scale</tweened-property>
+                                <function>Linear</function>
+                                <target>0</target>
+                                <target-mode>Absolute</target-mode>
+                                <duration>0.75</duration>
+                                <enforce-mode>Enforce</enforce-mode>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-78</x>
+                        <y>421</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.75</opacity>
+                    </world>
+                </instance>
+                <instance type="Enemy_Fusedropper" uid="163">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Obj_ImportID>obj_fusedropper</Obj_ImportID>
+                        <Obj_ImportInstance></Obj_ImportInstance>
+                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <walk_speed>-1</walk_speed>
+                        <HP>1</HP>
+                        <speed_move>0</speed_move>
+                        <timer_delay>0</timer_delay>
+                        <timer_frequency>1</timer_frequency>
+                        <drop_speed>2</drop_speed>
+                        <SpawnExplosions>True</SpawnExplosions>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>0</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>0</jump-strength>
+                                <gravity>1500</gravity>
+                                <max-fall-speed>200</max-fall-speed>
+                                <double-jump>Disabled</double-jump>
+                                <jump-sustain>0</jump-sustain>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Timer" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>926</x>
+                        <y>106</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.59375</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Obj_EnemyBlocker" uid="164">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Obj_ImportID></Obj_ImportID>
+                        <Obj_ImportInstance></Obj_ImportInstance>
+                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>668</x>
+                        <y>56</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.150000006</opacity>
+                    </world>
+                </instance>
+                <instance type="Object_Bomb" uid="165">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <YSpeed>1</YSpeed>
+                        <SpawnExplosions>&quot;True&quot;</SpawnExplosions>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>973</x>
+                        <y>34</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Sprite2" uid="166">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1030</x>
+                        <y>42</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -1806,7 +2117,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Special_WaterTop" uid="103">
+                <instance type="Level_WaterTop" uid="103">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -1828,7 +2139,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Special_Water" uid="104">
+                <instance type="Level_Water" uid="104">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -3367,6 +3678,7 @@
                 <LockHorizontal>0</LockHorizontal>
                 <LockVertical>0</LockVertical>
                 <WalljumpAuto>0</WalljumpAuto>
+                <YorbMultiplier>0</YorbMultiplier>
             </instance-variables>
         </instance>
         <instance type="Var_Room" uid="105">

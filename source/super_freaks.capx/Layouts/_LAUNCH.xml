@@ -190,6 +190,7 @@
             <instance-variables>
                 <Layer_Tiles>0</Layer_Tiles>
                 <Layer_Instances>0</Layer_Instances>
+                <InstanceArray></InstanceArray>
             </instance-variables>
         </instance>
         <instance type="INI" uid="56" />

@@ -1257,7 +1257,7 @@
                                             <param id="1" name="Value">Function.Param(0)</param>
                                         </action>
                                         <action id="-9" name="Destroy" sid="200392218144242" type="Text" />
-                                        <action id="-9" name="Destroy" sid="865541475237036" type="Menu_Arrows" />
+                                        <action id="-9" name="Destroy" sid="865541475237036" type="Menu_Arrow" />
                                     </actions>
                                 </event-block>
                                 <event-block sid="167765032777856">
@@ -1388,16 +1388,16 @@
                                                                     <param id="0" name="Horizontal alignment">1</param>
                                                                 </action>
                                                                 <action id="-3" name="Create object" sid="667321017886656" type="System">
-                                                                    <param id="0" name="Object to create">Menu_Arrows</param>
+                                                                    <param id="0" name="Object to create">Menu_Arrow</param>
                                                                     <param id="1" name="Layer">&quot;Menu&quot;</param>
                                                                     <param id="2" name="X">Text_Regular.X+192</param>
                                                                     <param id="3" name="Y">Text_Regular.Y</param>
                                                                 </action>
-                                                                <action id="7" name="Set mirrored" sid="600162938273982" type="Menu_Arrows">
+                                                                <action id="7" name="Set mirrored" sid="600162938273982" type="Menu_Arrow">
                                                                     <param id="0" name="State">0</param>
                                                                 </action>
                                                                 <action id="-3" name="Create object" sid="151677596588079" type="System">
-                                                                    <param id="0" name="Object to create">Menu_Arrows</param>
+                                                                    <param id="0" name="Object to create">Menu_Arrow</param>
                                                                     <param id="1" name="Layer">&quot;Menu&quot;</param>
                                                                     <param id="2" name="X">Text_Regular.X+400</param>
                                                                     <param id="3" name="Y">Text_Regular.Y</param>
@@ -1458,9 +1458,6 @@
                 </event-block>
                 <event-block sid="840427892885098">
                     <conditions>
-                        <condition id="0" name="On key pressed" sid="615907394676508" type="Keyboard">
-                            <param id="0" name="Key">38</param>
-                        </condition>
                         <condition id="-7" name="Compare instance variable" sid="653782343412245" type="Var_Main">
                             <param id="0" name="Instance variable">GameState</param>
                             <param id="1" name="Comparison">0</param>
@@ -1469,6 +1466,9 @@
                         <condition id="0" inverted="1" name="In Progress" sid="968149307759911" type="Ease">
                             <param id="0" name="Ease tag">&quot;HUD_Fade&quot;</param>
                             <param id="1" name="Ease parameter {n}"></param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="772558004305437" type="Var_Input">
+                            <param id="0" name="Instance variable">Pressed_Up</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -1484,9 +1484,6 @@
                 </event-block>
                 <event-block sid="618080324866088">
                     <conditions>
-                        <condition id="0" name="On key pressed" sid="710000563735260" type="Keyboard">
-                            <param id="0" name="Key">40</param>
-                        </condition>
                         <condition id="-7" name="Compare instance variable" sid="805828822341917" type="Var_Main">
                             <param id="0" name="Instance variable">GameState</param>
                             <param id="1" name="Comparison">0</param>
@@ -1495,6 +1492,9 @@
                         <condition id="0" inverted="1" name="In Progress" sid="882223824444519" type="Ease">
                             <param id="0" name="Ease tag">&quot;HUD_Fade&quot;</param>
                             <param id="1" name="Ease parameter {n}"></param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="635545786910527" type="Var_Input">
+                            <param id="0" name="Instance variable">Pressed_Down</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -1570,9 +1570,6 @@
                     <sub-events>
                         <event-block sid="101629325498636">
                             <conditions>
-                                <condition id="0" name="On key pressed" sid="825482975378640" type="Keyboard">
-                                    <param id="0" name="Key">37</param>
-                                </condition>
                                 <condition id="-7" name="Compare instance variable" sid="979692818192774" type="Var_Main">
                                     <param id="0" name="Instance variable">GameState</param>
                                     <param id="1" name="Comparison">0</param>
@@ -1581,6 +1578,9 @@
                                 <condition id="0" inverted="1" name="In Progress" sid="470552755497012" type="Ease">
                                     <param id="0" name="Ease tag">&quot;HUD_Fade&quot;</param>
                                     <param id="1" name="Ease parameter {n}"></param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="280373866340355" type="Var_Input">
+                                    <param id="0" name="Instance variable">Pressed_Left</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -1596,9 +1596,6 @@
                         </event-block>
                         <event-block sid="889148650512634">
                             <conditions>
-                                <condition id="0" name="On key pressed" sid="909468356470104" type="Keyboard">
-                                    <param id="0" name="Key">39</param>
-                                </condition>
                                 <condition id="-7" name="Compare instance variable" sid="728111576178711" type="Var_Main">
                                     <param id="0" name="Instance variable">GameState</param>
                                     <param id="1" name="Comparison">0</param>
@@ -1607,6 +1604,9 @@
                                 <condition id="0" inverted="1" name="In Progress" sid="454002930233155" type="Ease">
                                     <param id="0" name="Ease tag">&quot;HUD_Fade&quot;</param>
                                     <param id="1" name="Ease parameter {n}"></param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="653165548991016" type="Var_Input">
+                                    <param id="0" name="Instance variable">Pressed_Right</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -1623,7 +1623,24 @@
                     </sub-events>
                 </event-block>
                 <event-block sid="164086364163134">
-                    <conditions />
+                    <conditions>
+                        <condition id="-33" name="Pick by comparison" sid="625805322320749" type="System">
+                            <param id="0" name="Object">Text</param>
+                            <param id="1" name="Expression">find(Text.ID,&quot;Option_&quot;)</param>
+                            <param id="2" name="Comparison">1</param>
+                            <param id="3" name="Value">-1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="654446968656216" type="Menu_Cursor">
+                            <param id="0" name="Instance variable">Current</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">-1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="717115474379025" type="Menu_Cursor">
+                            <param id="0" name="Instance variable">Current</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">Text.PickedCount</param>
+                        </condition>
+                    </conditions>
                     <actions>
                         <action id="-2" name="Set Y" sid="604212896426344" type="Menu_Cursor">
                             <param id="0" name="Y">24+(20*Self.Current)</param>
@@ -1694,9 +1711,6 @@
                 </event-block>
                 <event-block sid="838231835111921">
                     <conditions>
-                        <condition id="0" name="On key pressed" sid="561504387311311" type="Keyboard">
-                            <param id="0" name="Key">90</param>
-                        </condition>
                         <condition id="-7" name="Compare instance variable" sid="233813009851118" type="Var_Main">
                             <param id="0" name="Instance variable">GameState</param>
                             <param id="1" name="Comparison">0</param>
@@ -1705,6 +1719,9 @@
                         <condition id="0" inverted="1" name="In Progress" sid="743213388217581" type="Ease">
                             <param id="0" name="Ease tag">&quot;HUD_Fade&quot;</param>
                             <param id="1" name="Ease parameter {n}"></param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="930768925999467" type="Var_Input">
+                            <param id="0" name="Instance variable">Pressed_A</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -1829,9 +1846,6 @@
                 </event-block>
                 <event-block sid="257499816693164">
                     <conditions>
-                        <condition id="0" name="On key pressed" sid="356093350253579" type="Keyboard">
-                            <param id="0" name="Key">88</param>
-                        </condition>
                         <condition id="-7" name="Compare instance variable" sid="234804711618513" type="Var_Main">
                             <param id="0" name="Instance variable">GameState</param>
                             <param id="1" name="Comparison">0</param>
@@ -1840,6 +1854,9 @@
                         <condition id="0" inverted="1" name="In Progress" sid="499144392427507" type="Ease">
                             <param id="0" name="Ease tag">&quot;HUD_Fade&quot;</param>
                             <param id="1" name="Ease parameter {n}"></param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="570567987096237" type="Var_Input">
+                            <param id="0" name="Instance variable">Pressed_B</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -1982,8 +1999,8 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Destroy" sid="814501191562886" type="Sprite4" />
-                                <action id="-9" name="Destroy" sid="399827448491854" type="9patch" />
+                                <action id="-9" name="Destroy" sid="814501191562886" type="Menu_SkinIcon" />
+                                <action id="-9" name="Destroy" sid="399827448491854" type="Menu_ListItem" />
                                 <action id="-9" name="Destroy" sid="525384427773428" type="Text" />
                             </actions>
                         </event-block>
@@ -2014,12 +2031,12 @@
                                             <param id="2" name="Key {n}"></param>
                                         </action>
                                         <action id="-3" name="Create object" sid="671131473436156" type="System">
-                                            <param id="0" name="Object to create">9patch</param>
+                                            <param id="0" name="Object to create">Menu_ListItem</param>
                                             <param id="1" name="Layer">&quot;SkinSelect&quot;</param>
                                             <param id="2" name="X">304</param>
                                             <param id="3" name="Y">168+(32*loopindex)</param>
                                         </action>
-                                        <action id="-10" name="Set value" sid="884278526138964" type="9patch">
+                                        <action id="-10" name="Set value" sid="884278526138964" type="Menu_ListItem">
                                             <param id="0" name="Instance variable">ID</param>
                                             <param id="1" name="Value">loopindex</param>
                                         </action>
@@ -2049,7 +2066,7 @@
                                         <action id="8" name="Set vertical alignment" sid="182347410244023" type="Text_Regular">
                                             <param id="0" name="Vertical alignment">1</param>
                                         </action>
-                                        <action id="-24" name="Move to top" sid="937342828691968" type="9patch2" />
+                                        <action id="-24" name="Move to top" sid="937342828691968" type="Menu_ListSelect" />
                                         <action id="-24" name="Move to top" sid="928825475731041" type="Text_Regular" />
                                     </actions>
                                     <sub-events>
@@ -2057,27 +2074,27 @@
                                             <conditions />
                                             <actions>
                                                 <action id="-3" name="Create object" sid="784383002716061" type="System">
-                                                    <param id="0" name="Object to create">Sprite4</param>
+                                                    <param id="0" name="Object to create">Menu_SkinIcon</param>
                                                     <param id="1" name="Layer">&quot;SkinSelect&quot;</param>
                                                     <param id="2" name="X">288</param>
                                                     <param id="3" name="Y">180+(32*loopindex)</param>
                                                 </action>
-                                                <action id="-10" name="Set value" sid="189971941301452" type="Sprite4">
+                                                <action id="-10" name="Set value" sid="189971941301452" type="Menu_SkinIcon">
                                                     <param id="0" name="Instance variable">ID</param>
                                                     <param id="1" name="Value">loopindex</param>
                                                 </action>
-                                                <action id="-10" name="Set value" sid="144394932490794" type="Sprite4">
+                                                <action id="-10" name="Set value" sid="144394932490794" type="Menu_SkinIcon">
                                                     <param id="0" name="Instance variable">skin</param>
                                                     <param id="1" name="Value">NWjs.ListAt(loopindex)</param>
                                                 </action>
-                                                <action id="-10" name="Set value" sid="644868191964915" type="Sprite4">
+                                                <action id="-10" name="Set value" sid="644868191964915" type="Menu_SkinIcon">
                                                     <param id="0" name="Instance variable">name</param>
                                                     <param id="1" name="Value">JSON_COMMON.Value(0,&quot;SuperFreaksSkin&quot;,&quot;Name&quot;)</param>
                                                 </action>
-                                                <action id="5" name="Set frame" sid="277495833448163" type="Sprite4">
+                                                <action id="5" name="Set frame" sid="277495833448163" type="Menu_SkinIcon">
                                                     <param id="0" name="Frame number">loopindex</param>
                                                 </action>
-                                                <action id="10" name="Load image from URL" sid="142372422961757" type="Sprite4">
+                                                <action id="10" name="Load image from URL" sid="142372422961757" type="Menu_SkinIcon">
                                                     <param id="0" name="URI">Var_CONSTANTS.Path_Assets&amp;&quot;\skins\&quot;&amp;NWjs.ListAt(loopindex)&amp;&quot;\icon_0.png&quot;</param>
                                                     <param id="1" name="Size">0</param>
                                                     <param id="2" name="Cross-origin">0</param>
@@ -2092,7 +2109,7 @@
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action id="-10" name="Set value" sid="832269825503595" type="Sprite4">
+                                                        <action id="-10" name="Set value" sid="832269825503595" type="Menu_SkinIcon">
                                                             <param id="0" name="Instance variable">displayname</param>
                                                             <param id="1" name="Value">JSON_COMMON.Value(0,&quot;SuperFreaksSkin&quot;,&quot;DisplayName&quot;)</param>
                                                         </action>
@@ -2106,7 +2123,7 @@
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action id="-10" name="Set value" sid="209167780344141" type="Sprite4">
+                                                        <action id="-10" name="Set value" sid="209167780344141" type="Menu_SkinIcon">
                                                             <param id="0" name="Instance variable">displayname</param>
                                                             <param id="1" name="Value">JSON_COMMON.Value(0,&quot;SuperFreaksSkin&quot;,&quot;Name&quot;)</param>
                                                         </action>
@@ -2133,15 +2150,19 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="574564512953686" type="Sprite3">
+                                <action behavior="Pin" id="0" name="Pin to object" sid="574564512953686" type="Menu_ArrowBig">
                                     <param id="0" name="Pin to">Menu_Window</param>
                                     <param id="1" name="Mode">0</param>
                                 </action>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="997371718717247" type="Sprite2">
+                                <action behavior="Pin" id="0" name="Pin to object" sid="997371718717247" type="Menu_SkinArt">
                                     <param id="0" name="Pin to">Menu_Window</param>
                                     <param id="1" name="Mode">0</param>
                                 </action>
                                 <action behavior="Pin" id="0" name="Pin to object" sid="866204098168095" type="Text">
+                                    <param id="0" name="Pin to">Menu_Window</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="865858558212279" type="Menu_SkinSelectHide">
                                     <param id="0" name="Pin to">Menu_Window</param>
                                     <param id="1" name="Mode">0</param>
                                 </action>
@@ -2154,10 +2175,10 @@
                 </event-block>
                 <event-block sid="192711620895249">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="939898003015616" type="Sprite4">
+                        <condition id="-7" name="Compare instance variable" sid="939898003015616" type="Menu_SkinIcon">
                             <param id="0" name="Instance variable">ID</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">Sprite2.Current</param>
+                            <param id="2" name="Value">Menu_SkinArt.Current</param>
                         </condition>
                         <condition id="-7" name="Compare instance variable" sid="260335622227553" type="Text">
                             <param id="0" name="Instance variable">ID</param>
@@ -2166,13 +2187,13 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="10" name="Load image from URL" sid="922369814725517" type="Sprite2">
-                            <param id="0" name="URI">Var_CONSTANTS.Path_Assets&amp;&quot;\skins\&quot;&amp;Sprite4.skin&amp;&quot;\art.png&quot;</param>
+                        <action id="10" name="Load image from URL" sid="922369814725517" type="Menu_SkinArt">
+                            <param id="0" name="URI">Var_CONSTANTS.Path_Assets&amp;&quot;\skins\&quot;&amp;Menu_SkinIcon.skin&amp;&quot;\art.png&quot;</param>
                             <param id="1" name="Size">0</param>
                             <param id="2" name="Cross-origin">0</param>
                         </action>
                         <action id="0" name="Set text" sid="232291980967109" type="Text">
-                            <param id="0" name="Text">Sprite4.displayname</param>
+                            <param id="0" name="Text">Menu_SkinIcon.displayname</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2234,16 +2255,17 @@
                         <event-block sid="295508083906687">
                             <conditions />
                             <actions>
-                                <action id="-15" name="Set visible" sid="879394846956682" type="9patch2">
+                                <action id="-24" name="Move to top" sid="606409472465987" type="Menu_SkinSelectHide" />
+                                <action id="-15" name="Set visible" sid="879394846956682" type="Menu_ListSelect">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
-                                <action id="-15" name="Set visible" sid="238766791034372" type="9patch">
+                                <action id="-15" name="Set visible" sid="238766791034372" type="Menu_ListItem">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="252949740874845" type="Text">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
-                                <action id="-15" name="Set visible" sid="864909050088742" type="Sprite4">
+                                <action id="-15" name="Set visible" sid="864909050088742" type="Menu_SkinIcon">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>
@@ -2257,23 +2279,23 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="112433319578378" type="9patch2">
+                                <action id="-15" name="Set visible" sid="112433319578378" type="Menu_ListSelect">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
-                                <action id="-15" name="Set visible" sid="274268371977297" type="9patch">
+                                <action id="-15" name="Set visible" sid="274268371977297" type="Menu_ListItem">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="444280584039704" type="Text">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
-                                <action id="-15" name="Set visible" sid="782538198480675" type="Sprite4">
+                                <action id="-15" name="Set visible" sid="782538198480675" type="Menu_SkinIcon">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block sid="302380742024998">
                             <conditions>
-                                <condition id="-2" name="Compare Y" sid="316507577151164" type="9patch">
+                                <condition id="-2" name="Compare Y" sid="316507577151164" type="Menu_ListItem">
                                     <param id="0" name="Comparison">3</param>
                                     <param id="1" name="Y co-ordinate">72</param>
                                 </condition>
@@ -2281,26 +2303,26 @@
                                     <param id="0" name="Comparison">3</param>
                                     <param id="1" name="Y co-ordinate">74</param>
                                 </condition>
-                                <condition id="-2" name="Compare Y" sid="605140195200675" type="Sprite4">
+                                <condition id="-2" name="Compare Y" sid="605140195200675" type="Menu_SkinIcon">
                                     <param id="0" name="Comparison">3</param>
                                     <param id="1" name="Y co-ordinate">84</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="891187205954466" type="9patch">
+                                <action id="-15" name="Set visible" sid="891187205954466" type="Menu_ListItem">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="928124499056240" type="Text">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
-                                <action id="-15" name="Set visible" sid="628191045801088" type="Sprite4">
+                                <action id="-15" name="Set visible" sid="628191045801088" type="Menu_SkinIcon">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block sid="104573102905953">
                             <conditions>
-                                <condition id="-2" name="Compare Y" sid="695000142795279" type="9patch">
+                                <condition id="-2" name="Compare Y" sid="695000142795279" type="Menu_ListItem">
                                     <param id="0" name="Comparison">5</param>
                                     <param id="1" name="Y co-ordinate">264</param>
                                 </condition>
@@ -2308,19 +2330,19 @@
                                     <param id="0" name="Comparison">5</param>
                                     <param id="1" name="Y co-ordinate">266</param>
                                 </condition>
-                                <condition id="-2" name="Compare Y" sid="749597485393995" type="Sprite4">
+                                <condition id="-2" name="Compare Y" sid="749597485393995" type="Menu_SkinIcon">
                                     <param id="0" name="Comparison">5</param>
                                     <param id="1" name="Y co-ordinate">276</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="998693519798309" type="9patch">
+                                <action id="-15" name="Set visible" sid="998693519798309" type="Menu_ListItem">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="291273200021501" type="Text">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
-                                <action id="-15" name="Set visible" sid="698586739337088" type="Sprite4">
+                                <action id="-15" name="Set visible" sid="698586739337088" type="Menu_SkinIcon">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
                             </actions>
@@ -2329,16 +2351,16 @@
                             <conditions>
                                 <condition id="-4" name="Trigger once while true" sid="536586768023218" type="System" />
                                 <condition id="-33" name="Pick by comparison" sid="329259779908471" type="System">
-                                    <param id="0" name="Object">Sprite4</param>
-                                    <param id="1" name="Expression">Sprite4.skin</param>
+                                    <param id="0" name="Object">Menu_SkinIcon</param>
+                                    <param id="1" name="Expression">Menu_SkinIcon.skin</param>
                                     <param id="2" name="Comparison">0</param>
                                     <param id="3" name="Value">Var_Main.Skin</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" sid="526230397561882" type="Sprite2">
+                                <action id="-10" name="Set value" sid="526230397561882" type="Menu_SkinArt">
                                     <param id="0" name="Instance variable">Current</param>
-                                    <param id="1" name="Value">Sprite4.ID</param>
+                                    <param id="1" name="Value">Menu_SkinIcon.ID</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -2347,124 +2369,124 @@
                                 <condition id="-4" name="Trigger once while true" sid="132854999180340" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-2" name="Set Y" sid="489347872846130" type="9patch">
+                                <action id="-2" name="Set Y" sid="489347872846130" type="Menu_ListItem">
                                     <param id="0" name="Y">168+(32*Self.ID)</param>
                                 </action>
                                 <action id="-2" name="Set Y" sid="235778390334356" type="Text">
                                     <param id="0" name="Y">170+(32*int(replace(Self.ID,&quot;Skin_&quot;,&quot;&quot;)))</param>
                                 </action>
-                                <action id="-2" name="Set Y" sid="831139540139209" type="Sprite4">
+                                <action id="-2" name="Set Y" sid="831139540139209" type="Menu_SkinIcon">
                                     <param id="0" name="Y">180+(32*Self.ID)</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="180362076399503" type="System">
                                     <param id="0" name="Seconds">0</param>
                                 </action>
-                                <action id="-2" name="Set Y" sid="404741574999563" type="9patch">
-                                    <param id="0" name="Y">Self.Y-(32*Sprite2.Current)</param>
+                                <action id="-2" name="Set Y" sid="404741574999563" type="Menu_ListItem">
+                                    <param id="0" name="Y">Self.Y-(32*Menu_SkinArt.Current)</param>
                                 </action>
                                 <action id="-2" name="Set Y" sid="414361924145103" type="Text">
-                                    <param id="0" name="Y">Self.Y-(32*Sprite2.Current)</param>
+                                    <param id="0" name="Y">Self.Y-(32*Menu_SkinArt.Current)</param>
                                 </action>
-                                <action id="-2" name="Set Y" sid="121396413497276" type="Sprite4">
-                                    <param id="0" name="Y">Self.Y-(32*Sprite2.Current)</param>
+                                <action id="-2" name="Set Y" sid="121396413497276" type="Menu_SkinIcon">
+                                    <param id="0" name="Y">Self.Y-(32*Menu_SkinArt.Current)</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block sid="576387288426332">
                             <conditions>
-                                <condition id="0" name="On key pressed" sid="321670842358731" type="Keyboard">
-                                    <param id="0" name="Key">38</param>
-                                </condition>
                                 <condition id="0" inverted="1" name="In Progress" sid="290940196300818" type="Ease">
                                     <param id="0" name="Ease tag">&quot;HUD_Fade&quot;</param>
                                     <param id="1" name="Ease parameter {n}"></param>
                                 </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="529062557195626" type="Var_Input">
+                                    <param id="0" name="Instance variable">Pressed_Up</param>
+                                </condition>
                             </conditions>
                             <actions>
-                                <action id="-12" name="Subtract from" sid="677489070930120" type="Sprite2">
+                                <action id="-12" name="Subtract from" sid="677489070930120" type="Menu_SkinArt">
                                     <param id="0" name="Instance variable">Current</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="-2" name="Set Y" sid="759801617799144" type="9patch">
+                                <action id="-2" name="Set Y" sid="759801617799144" type="Menu_ListItem">
                                     <param id="0" name="Y">Self.Y+32</param>
                                 </action>
                                 <action id="-2" name="Set Y" sid="730023207767084" type="Text">
                                     <param id="0" name="Y">Self.Y+32</param>
                                 </action>
-                                <action id="-2" name="Set Y" sid="569951935077917" type="Sprite4">
+                                <action id="-2" name="Set Y" sid="569951935077917" type="Menu_SkinIcon">
                                     <param id="0" name="Y">Self.Y+32</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block sid="921618597864699">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="316445908536914" type="Sprite2">
+                                <condition id="-7" name="Compare instance variable" sid="316445908536914" type="Menu_SkinArt">
                                     <param id="0" name="Instance variable">Current</param>
                                     <param id="1" name="Comparison">2</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-2" name="Set Y" sid="703912537457876" type="9patch">
-                                    <param id="0" name="Y">Self.Y-(32*9patch.Count)</param>
+                                <action id="-2" name="Set Y" sid="703912537457876" type="Menu_ListItem">
+                                    <param id="0" name="Y">Self.Y-(32*Menu_ListItem.Count)</param>
                                 </action>
                                 <action id="-2" name="Set Y" sid="104994664901642" type="Text">
-                                    <param id="0" name="Y">Self.Y-(32*9patch.Count)</param>
+                                    <param id="0" name="Y">Self.Y-(32*Menu_ListItem.Count)</param>
                                 </action>
-                                <action id="-2" name="Set Y" sid="757033163757434" type="Sprite4">
-                                    <param id="0" name="Y">Self.Y-(32*9patch.Count)</param>
+                                <action id="-2" name="Set Y" sid="757033163757434" type="Menu_SkinIcon">
+                                    <param id="0" name="Y">Self.Y-(32*Menu_ListItem.Count)</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="408533183208481" type="Sprite2">
+                                <action id="-10" name="Set value" sid="408533183208481" type="Menu_SkinArt">
                                     <param id="0" name="Instance variable">Current</param>
-                                    <param id="1" name="Value">9patch.Count-1</param>
+                                    <param id="1" name="Value">Menu_ListItem.Count-1</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block sid="182734460424982">
                             <conditions>
-                                <condition id="0" name="On key pressed" sid="410601050327438" type="Keyboard">
-                                    <param id="0" name="Key">40</param>
-                                </condition>
                                 <condition id="0" inverted="1" name="In Progress" sid="743918058244690" type="Ease">
                                     <param id="0" name="Ease tag">&quot;HUD_Fade&quot;</param>
                                     <param id="1" name="Ease parameter {n}"></param>
                                 </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="716210212241658" type="Var_Input">
+                                    <param id="0" name="Instance variable">Pressed_Down</param>
+                                </condition>
                             </conditions>
                             <actions>
-                                <action id="-11" name="Add to" sid="418018520154479" type="Sprite2">
+                                <action id="-11" name="Add to" sid="418018520154479" type="Menu_SkinArt">
                                     <param id="0" name="Instance variable">Current</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="-2" name="Set Y" sid="295132782980190" type="9patch">
+                                <action id="-2" name="Set Y" sid="295132782980190" type="Menu_ListItem">
                                     <param id="0" name="Y">Self.Y-32</param>
                                 </action>
                                 <action id="-2" name="Set Y" sid="898716582712417" type="Text">
                                     <param id="0" name="Y">Self.Y-32</param>
                                 </action>
-                                <action id="-2" name="Set Y" sid="804715484266937" type="Sprite4">
+                                <action id="-2" name="Set Y" sid="804715484266937" type="Menu_SkinIcon">
                                     <param id="0" name="Y">Self.Y-32</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block sid="623692049811657">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="554366714876632" type="Sprite2">
+                                <condition id="-7" name="Compare instance variable" sid="554366714876632" type="Menu_SkinArt">
                                     <param id="0" name="Instance variable">Current</param>
                                     <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">9patch.Count-1</param>
+                                    <param id="2" name="Value">Menu_ListItem.Count-1</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-2" name="Set Y" sid="289846175984311" type="9patch">
+                                <action id="-2" name="Set Y" sid="289846175984311" type="Menu_ListItem">
                                     <param id="0" name="Y">168+(32*Self.ID)</param>
                                 </action>
                                 <action id="-2" name="Set Y" sid="213744718570466" type="Text">
                                     <param id="0" name="Y">170+(32*int(replace(Self.ID,&quot;Skin_&quot;,&quot;&quot;)))</param>
                                 </action>
-                                <action id="-2" name="Set Y" sid="503514243370682" type="Sprite4">
+                                <action id="-2" name="Set Y" sid="503514243370682" type="Menu_SkinIcon">
                                     <param id="0" name="Y">180+(32*Self.ID)</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="462138306500477" type="Sprite2">
+                                <action id="-10" name="Set value" sid="462138306500477" type="Menu_SkinArt">
                                     <param id="0" name="Instance variable">Current</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
@@ -2472,24 +2494,24 @@
                         </event-block>
                         <event-block sid="501148439269248">
                             <conditions>
-                                <condition id="0" name="On key pressed" sid="902903045622863" type="Keyboard">
-                                    <param id="0" name="Key">90</param>
-                                </condition>
                                 <condition id="-33" name="Pick by comparison" sid="276983480071979" type="System">
-                                    <param id="0" name="Object">Sprite4</param>
-                                    <param id="1" name="Expression">Sprite4.ID</param>
+                                    <param id="0" name="Object">Menu_SkinIcon</param>
+                                    <param id="1" name="Expression">Menu_SkinIcon.ID</param>
                                     <param id="2" name="Comparison">0</param>
-                                    <param id="3" name="Value">Sprite2.Current</param>
+                                    <param id="3" name="Value">Menu_SkinArt.Current</param>
                                 </condition>
                                 <condition id="0" inverted="1" name="In Progress" sid="400113621860101" type="Ease">
                                     <param id="0" name="Ease tag">&quot;HUD_Fade&quot;</param>
                                     <param id="1" name="Ease parameter {n}"></param>
                                 </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="704540251293450" type="Var_Input">
+                                    <param id="0" name="Instance variable">Pressed_A</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-10" name="Set value" sid="848652362650712" type="Var_Main">
                                     <param id="0" name="Instance variable">Skin</param>
-                                    <param id="1" name="Value">Sprite4.skin</param>
+                                    <param id="1" name="Value">Menu_SkinIcon.skin</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -2530,12 +2552,12 @@
                         </event-block>
                         <event-block sid="641894929058305">
                             <conditions>
-                                <condition id="0" name="On key pressed" sid="794201283206632" type="Keyboard">
-                                    <param id="0" name="Key">88</param>
-                                </condition>
                                 <condition id="0" inverted="1" name="In Progress" sid="445417776976854" type="Ease">
                                     <param id="0" name="Ease tag">&quot;HUD_Fade&quot;</param>
                                     <param id="1" name="Ease parameter {n}"></param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="576127886544966" type="Var_Input">
+                                    <param id="0" name="Instance variable">Pressed_B</param>
                                 </condition>
                             </conditions>
                             <actions>

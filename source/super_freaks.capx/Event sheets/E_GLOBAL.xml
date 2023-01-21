@@ -244,6 +244,297 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="740950776369911" title="Input">
+            <sub-events>
+                <event-block sid="630118038459795">
+                    <conditions />
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="442508732223500" type="Var_Input">
+                            <param id="0" name="Instance variable">Up</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="500412450390986" type="Var_Input">
+                            <param id="0" name="Instance variable">Down</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="919573898038561" type="Var_Input">
+                            <param id="0" name="Instance variable">Left</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="527546912671470" type="Var_Input">
+                            <param id="0" name="Instance variable">Right</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="540772514498778" type="Var_Input">
+                            <param id="0" name="Instance variable">A</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="373676120870190" type="Var_Input">
+                            <param id="0" name="Instance variable">B</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="270442582443194" type="Var_Input">
+                            <param id="0" name="Instance variable">Start</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="921784853281983">
+                    <conditions>
+                        <condition id="1" name="On any key pressed" sid="840653277636518" type="Keyboard" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="116175640611428" type="Var_Input">
+                            <param id="0" name="Instance variable">InputType</param>
+                            <param id="1" name="Value">&quot;Keyboard&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="133257179814345">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="307001314891334" type="Var_Input">
+                            <param id="0" name="Instance variable">InputType</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Keyboard&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="717303842819135">
+                            <conditions>
+                                <condition id="5" name="Key code is down" sid="805756047313713" type="Keyboard">
+                                    <param id="0" name="Keycode">38</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="699743778857048" type="Var_Input">
+                                    <param id="0" name="Instance variable">Up</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="819946260503666">
+                            <conditions>
+                                <condition id="4" name="On key code pressed" sid="982083735040949" type="Keyboard">
+                                    <param id="0" name="Keycode">38</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="643077164888283" type="Var_Input">
+                                    <param id="0" name="Instance variable">Pressed_Up</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="491244393840009" type="System">
+                                    <param id="0" name="Seconds">0.017</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="212886632961745" type="Var_Input">
+                                    <param id="0" name="Instance variable">Pressed_Up</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="751790996890936">
+                            <conditions>
+                                <condition id="5" name="Key code is down" sid="610659309764304" type="Keyboard">
+                                    <param id="0" name="Keycode">40</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="720812820444746" type="Var_Input">
+                                    <param id="0" name="Instance variable">Down</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="375217617768961">
+                            <conditions>
+                                <condition id="4" name="On key code pressed" sid="560293214650418" type="Keyboard">
+                                    <param id="0" name="Keycode">40</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="612485541667796" type="Var_Input">
+                                    <param id="0" name="Instance variable">Pressed_Down</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="591925441139516" type="System">
+                                    <param id="0" name="Seconds">0.017</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="835140906437703" type="Var_Input">
+                                    <param id="0" name="Instance variable">Pressed_Down</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="145013517540370">
+                            <conditions>
+                                <condition id="5" name="Key code is down" sid="567565540850252" type="Keyboard">
+                                    <param id="0" name="Keycode">37</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="547397050467444" type="Var_Input">
+                                    <param id="0" name="Instance variable">Left</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="614312012680352">
+                            <conditions>
+                                <condition id="4" name="On key code pressed" sid="961548382656429" type="Keyboard">
+                                    <param id="0" name="Keycode">37</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="807244437511468" type="Var_Input">
+                                    <param id="0" name="Instance variable">Pressed_Left</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="105383376388804" type="System">
+                                    <param id="0" name="Seconds">0.017</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="801182955303655" type="Var_Input">
+                                    <param id="0" name="Instance variable">Pressed_Left</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="610058790614759">
+                            <conditions>
+                                <condition id="5" name="Key code is down" sid="461834828184311" type="Keyboard">
+                                    <param id="0" name="Keycode">39</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="459839718692793" type="Var_Input">
+                                    <param id="0" name="Instance variable">Right</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="195497600365448">
+                            <conditions>
+                                <condition id="4" name="On key code pressed" sid="801381756934230" type="Keyboard">
+                                    <param id="0" name="Keycode">39</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="854990492849961" type="Var_Input">
+                                    <param id="0" name="Instance variable">Pressed_Right</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="541879895807862" type="System">
+                                    <param id="0" name="Seconds">0.017</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="906738958635490" type="Var_Input">
+                                    <param id="0" name="Instance variable">Pressed_Right</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="202071036908683">
+                            <conditions>
+                                <condition id="5" name="Key code is down" sid="582396758164813" type="Keyboard">
+                                    <param id="0" name="Keycode">90</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="868647913855128" type="Var_Input">
+                                    <param id="0" name="Instance variable">A</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="314509180300424">
+                            <conditions>
+                                <condition id="4" name="On key code pressed" sid="949286491982402" type="Keyboard">
+                                    <param id="0" name="Keycode">90</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="814315058132059" type="Var_Input">
+                                    <param id="0" name="Instance variable">Pressed_A</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="854371817673700" type="System">
+                                    <param id="0" name="Seconds">0.017</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="264981574735008" type="Var_Input">
+                                    <param id="0" name="Instance variable">Pressed_A</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="178105417126133">
+                            <conditions>
+                                <condition id="5" name="Key code is down" sid="980783643850335" type="Keyboard">
+                                    <param id="0" name="Keycode">88</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="517066813505295" type="Var_Input">
+                                    <param id="0" name="Instance variable">B</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="283796737363825">
+                            <conditions>
+                                <condition id="4" name="On key code pressed" sid="144730766478218" type="Keyboard">
+                                    <param id="0" name="Keycode">88</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="128912287916940" type="Var_Input">
+                                    <param id="0" name="Instance variable">Pressed_B</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="302479626075468" type="System">
+                                    <param id="0" name="Seconds">0.017</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="994756484004430" type="Var_Input">
+                                    <param id="0" name="Instance variable">Pressed_B</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="594925874036451">
+                            <conditions>
+                                <condition id="5" name="Key code is down" sid="847735959649904" type="Keyboard">
+                                    <param id="0" name="Keycode">13</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="963054775551742" type="Var_Input">
+                                    <param id="0" name="Instance variable">Start</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="604461931990303">
+                            <conditions>
+                                <condition id="4" name="On key code pressed" sid="951803327164223" type="Keyboard">
+                                    <param id="0" name="Keycode">13</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="115229019137763" type="Var_Input">
+                                    <param id="0" name="Instance variable">Pressed_Start</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="572525286321978" type="System">
+                                    <param id="0" name="Seconds">0.017</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="889705713158244" type="Var_Input">
+                                    <param id="0" name="Instance variable">Pressed_Start</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
         <comment></comment>
         <event-block sid="949200808020883">
             <conditions>
@@ -847,6 +1138,11 @@
                 </event-block>
                 <event-block sid="105730973113728">
                     <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="129807690704591" type="Var_Level">
+                            <param id="0" name="Instance variable">RoomEngine</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;GMS2&quot;</param>
+                        </condition>
                         <condition id="100" name="For each property" sid="101218525522095" type="JSON_Room">
                             <param id="0" name="Reference point">0</param>
                             <param id="1" name="Key {n}">&quot;layers&quot;{###}JSON_Room.Layer_Instances{###}&quot;instances&quot;</param>
