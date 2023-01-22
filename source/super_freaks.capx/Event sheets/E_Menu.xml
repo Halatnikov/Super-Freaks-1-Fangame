@@ -1468,8 +1468,9 @@
                             <param id="1" name="Ease parameter {n}"></param>
                         </condition>
                         <condition id="-8" name="Is boolean instance variable set" sid="772558004305437" type="Var_Input">
-                            <param id="0" name="Instance variable">Pressed_Up</param>
+                            <param id="0" name="Instance variable">Up</param>
                         </condition>
+                        <condition id="-4" name="Trigger once while true" sid="527233659507054" type="System" />
                     </conditions>
                     <actions>
                         <action id="-12" name="Subtract from" sid="682922388480902" type="Menu_Cursor">
@@ -1494,8 +1495,9 @@
                             <param id="1" name="Ease parameter {n}"></param>
                         </condition>
                         <condition id="-8" name="Is boolean instance variable set" sid="635545786910527" type="Var_Input">
-                            <param id="0" name="Instance variable">Pressed_Down</param>
+                            <param id="0" name="Instance variable">Down</param>
                         </condition>
+                        <condition id="-4" name="Trigger once while true" sid="879646899057136" type="System" />
                     </conditions>
                     <actions>
                         <action id="-11" name="Add to" sid="330088481973613" type="Menu_Cursor">
@@ -1580,8 +1582,9 @@
                                     <param id="1" name="Ease parameter {n}"></param>
                                 </condition>
                                 <condition id="-8" name="Is boolean instance variable set" sid="280373866340355" type="Var_Input">
-                                    <param id="0" name="Instance variable">Pressed_Left</param>
+                                    <param id="0" name="Instance variable">Left</param>
                                 </condition>
+                                <condition id="-4" name="Trigger once while true" sid="719163175820194" type="System" />
                             </conditions>
                             <actions>
                                 <action id="-12" name="Subtract from" sid="353147289529870" type="Menu_Cursor">
@@ -1606,8 +1609,9 @@
                                     <param id="1" name="Ease parameter {n}"></param>
                                 </condition>
                                 <condition id="-8" name="Is boolean instance variable set" sid="653165548991016" type="Var_Input">
-                                    <param id="0" name="Instance variable">Pressed_Right</param>
+                                    <param id="0" name="Instance variable">Right</param>
                                 </condition>
+                                <condition id="-4" name="Trigger once while true" sid="651036759444353" type="System" />
                             </conditions>
                             <actions>
                                 <action id="-11" name="Add to" sid="849714863174544" type="Menu_Cursor">
@@ -2369,6 +2373,10 @@
                                 <condition id="-4" name="Trigger once while true" sid="132854999180340" type="System" />
                             </conditions>
                             <actions>
+                                <action id="0" name="Call function" sid="676075812969732" type="Function">
+                                    <param id="0" name="Name">&quot;Audio_PlaySFX&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;slide_whistle_up&quot;</param>
+                                </action>
                                 <action id="-2" name="Set Y" sid="489347872846130" type="Menu_ListItem">
                                     <param id="0" name="Y">168+(32*Self.ID)</param>
                                 </action>
@@ -2399,8 +2407,9 @@
                                     <param id="1" name="Ease parameter {n}"></param>
                                 </condition>
                                 <condition id="-8" name="Is boolean instance variable set" sid="529062557195626" type="Var_Input">
-                                    <param id="0" name="Instance variable">Pressed_Up</param>
+                                    <param id="0" name="Instance variable">Up</param>
                                 </condition>
+                                <condition id="-4" name="Trigger once while true" sid="893378611247153" type="System" />
                             </conditions>
                             <actions>
                                 <action id="-12" name="Subtract from" sid="677489070930120" type="Menu_SkinArt">
@@ -2449,8 +2458,9 @@
                                     <param id="1" name="Ease parameter {n}"></param>
                                 </condition>
                                 <condition id="-8" name="Is boolean instance variable set" sid="716210212241658" type="Var_Input">
-                                    <param id="0" name="Instance variable">Pressed_Down</param>
+                                    <param id="0" name="Instance variable">Down</param>
                                 </condition>
+                                <condition id="-4" name="Trigger once while true" sid="112170289245879" type="System" />
                             </conditions>
                             <actions>
                                 <action id="-11" name="Add to" sid="418018520154479" type="Menu_SkinArt">
@@ -2561,6 +2571,10 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="0" name="Call function" sid="834864445580650" type="Function">
+                                    <param id="0" name="Name">&quot;Audio_PlaySFX&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;slide_whistle_down&quot;</param>
+                                </action>
                                 <action behavior="LiteTween" id="11" name="Reverse" sid="975841248744438" type="Menu_Window">
                                     <param id="0" name="Reverse mode">1</param>
                                 </action>

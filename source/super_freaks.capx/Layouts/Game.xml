@@ -8,8 +8,8 @@
         <height>360</height>
     </size>
     <margins>
-        <horizontal>500</horizontal>
-        <vertical>500</vertical>
+        <horizontal>1000</horizontal>
+        <vertical>1000</vertical>
     </margins>
     <unbounded-scrolling>1</unbounded-scrolling>
     <layers>
@@ -228,8 +228,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>122</x>
-                        <y>504</y>
+                        <x>120</x>
+                        <y>503</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -271,8 +271,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>42</x>
-                        <y>524</y>
+                        <x>40</x>
+                        <y>519</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -296,6 +296,7 @@
                         <Obj_Difficulty>Everything</Obj_Difficulty>
                         <walk_speed>1</walk_speed>
                         <HP>-1</HP>
+                        <ScreenWrap></ScreenWrap>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -341,6 +342,7 @@
                         <Obj_Difficulty>Everything</Obj_Difficulty>
                         <walk_speed>0.5</walk_speed>
                         <HP>2</HP>
+                        <ScreenWrap></ScreenWrap>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -524,8 +526,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>308</x>
-                        <y>510</y>
+                        <x>313</x>
+                        <y>508</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -614,6 +616,7 @@
                         <Obj_Difficulty>Everything</Obj_Difficulty>
                         <walk_speed>-1</walk_speed>
                         <HP>1</HP>
+                        <ScreenWrap></ScreenWrap>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -890,6 +893,7 @@
                         <Obj_Difficulty>Everything</Obj_Difficulty>
                         <walk_speed>-1</walk_speed>
                         <HP>-1</HP>
+                        <ScreenWrap></ScreenWrap>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -1192,7 +1196,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-42</x>
+                        <x>-45</x>
                         <y>171</y>
                         <z>0</z>
                         <width>64</width>
@@ -1453,7 +1457,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>-61</x>
-                        <y>218</y>
+                        <y>219</y>
                         <z>0</z>
                         <width>96</width>
                         <height>40</height>
@@ -1564,6 +1568,7 @@
                         <Obj_Difficulty>Everything</Obj_Difficulty>
                         <walk_speed>1</walk_speed>
                         <HP>1</HP>
+                        <ScreenWrap></ScreenWrap>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -1584,7 +1589,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>666</x>
+                        <x>681</x>
                         <y>114</y>
                         <z>0</z>
                         <width>32</width>
@@ -1798,11 +1803,13 @@
                         <Obj_Difficulty>Everything</Obj_Difficulty>
                         <walk_speed>-1</walk_speed>
                         <HP>1</HP>
+                        <ScreenWrap></ScreenWrap>
                         <speed_move>0</speed_move>
                         <timer_delay>0</timer_delay>
                         <timer_frequency>1</timer_frequency>
                         <drop_speed>2</drop_speed>
-                        <ExplosionsHurt>True</ExplosionsHurt>
+                        <CreateExplosion>True</CreateExplosion>
+                        <Timer>-99</Timer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -1819,13 +1826,12 @@
                                 <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Timer" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>926</x>
-                        <y>106</y>
+                        <x>907</x>
+                        <y>104</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -1857,8 +1863,8 @@
                         <width>32</width>
                         <height>32</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>0.150000006</opacity>
                     </world>
@@ -1872,13 +1878,13 @@
                     </properties>
                     <instance-variables>
                         <YSpeed>2</YSpeed>
-                        <ExplosionsHurt>True</ExplosionsHurt>
+                        <CreateExplosion>True</CreateExplosion>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>973</x>
-                        <y>34</y>
+                        <x>852</x>
+                        <y>24</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -1902,8 +1908,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1030</x>
-                        <y>42</y>
+                        <x>862</x>
+                        <y>-21</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -1930,8 +1936,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-129</x>
-                        <y>432</y>
+                        <x>-130</x>
+                        <y>431</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -2234,6 +2240,157 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Obj_WaterDeco" uid="178">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Obj_ImportID></Obj_ImportID>
+                        <Obj_ImportInstance></Obj_ImportInstance>
+                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj9pParent_Child>Obj9p_WaterDeco</Obj9pParent_Child>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-161</x>
+                        <y>343</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.5</opacity>
+                    </world>
+                </instance>
+                <instance type="Obj9p_WaterDeco" uid="179">
+                    <properties>
+                        <left-margin>0</left-margin>
+                        <right-margin>0</right-margin>
+                        <top-margin>5</top-margin>
+                        <bottom-margin>0</bottom-margin>
+                        <edges>Tile</edges>
+                        <fill>Tile</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <instance-variables>
+                        <Obj9pChild_ID>Obj9p_WaterDeco</Obj9pChild_ID>
+                        <Obj9pChild_AnimFrame>0</Obj9pChild_AnimFrame>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-128</x>
+                        <y>343</y>
+                        <z>0</z>
+                        <width>48</width>
+                        <height>48</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Enemy_Pointy" uid="180">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Obj_ImportID>obj_pointy</Obj_ImportID>
+                        <Obj_ImportInstance></Obj_ImportInstance>
+                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <walk_speed>-1</walk_speed>
+                        <HP>-1</HP>
+                        <ScreenWrap>XY</ScreenWrap>
+                        <speed_move_x>0</speed_move_x>
+                        <speed_move_y>0</speed_move_y>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>0</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>0</jump-strength>
+                                <gravity>1500</gravity>
+                                <max-fall-speed>200</max-fall-speed>
+                                <double-jump>Disabled</double-jump>
+                                <jump-sustain>0</jump-sustain>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>927</x>
+                        <y>68</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Special_Barrel" uid="181">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <MaxSpeed>180</MaxSpeed>
+                        <CreateExplosion>True</CreateExplosion>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>0</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>429</jump-strength>
+                                <gravity>900</gravity>
+                                <max-fall-speed>360</max-fall-speed>
+                                <double-jump>Disabled</double-jump>
+                                <jump-sustain>0</jump-sustain>
+                                <default-controls>No</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>890</x>
+                        <y>24</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -2394,6 +2551,24 @@
                     </world>
                 </instance>
             </instances>
+            <effects />
+        </layer>
+        <layer name="SceneryHigh" sid="612410595917959">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances />
             <effects />
         </layer>
         <layer name="Water" sid="908611507466036">
@@ -2732,8 +2907,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>362</x>
-                        <y>104</y>
+                        <x>351</x>
+                        <y>105</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -4038,8 +4213,8 @@
         </instance>
         <instance type="Var_Level" uid="59">
             <instance-variables>
-                <RoomEngine>GMS2</RoomEngine>
-                <Room>rm_stadium_1</Room>
+                <RoomEngine>GMS1</RoomEngine>
+                <Room>rmBarrelCanyon1</Room>
                 <Difficulty>Normal</Difficulty>
                 <ImportErrorAttempts>0</ImportErrorAttempts>
             </instance-variables>
@@ -4047,6 +4222,7 @@
         <instance type="Var_Player" uid="77">
             <instance-variables>
                 <Yorbs>0</Yorbs>
+                <Yorbs100>0</Yorbs100>
                 <Hearts>0</Hearts>
                 <ActiveStarTrophy>0</ActiveStarTrophy>
                 <NumberStarStreak>0</NumberStarStreak>
