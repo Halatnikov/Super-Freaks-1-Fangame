@@ -49,7 +49,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="Text_Regular" uid="7">
+                <instance type="Text_Regular16" uid="7">
                     <properties>
                         <character-width>16</character-width>
                         <character-height>20</character-height>
@@ -134,7 +134,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text_Regular" uid="4">
+                <instance type="Text_Regular16" uid="4">
                     <properties>
                         <character-width>16</character-width>
                         <character-height>20</character-height>
@@ -191,7 +191,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text_Regular" uid="5">
+                <instance type="Text_Regular16" uid="5">
                     <properties>
                         <character-width>16</character-width>
                         <character-height>20</character-height>
@@ -300,7 +300,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text_Regular" uid="9">
+                <instance type="Text_Regular16" uid="9">
                     <properties>
                         <character-width>16</character-width>
                         <character-height>20</character-height>
@@ -357,7 +357,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text_Regular" uid="108">
+                <instance type="Text_Regular16" uid="108">
                     <properties>
                         <character-width>16</character-width>
                         <character-height>20</character-height>
@@ -414,7 +414,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text_Regular" uid="110">
+                <instance type="Text_Regular16" uid="110">
                     <properties>
                         <character-width>16</character-width>
                         <character-height>20</character-height>
@@ -670,7 +670,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text_Regular" uid="127">
+                <instance type="Text_Regular16" uid="127">
                     <properties>
                         <character-width>16</character-width>
                         <character-height>20</character-height>
@@ -867,7 +867,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text_Regular" uid="137">
+                <instance type="Text_Regular16" uid="137">
                     <properties>
                         <character-width>16</character-width>
                         <character-height>20</character-height>
@@ -981,7 +981,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text_Regular" uid="139">
+                <instance type="Text_Regular16" uid="139">
                     <properties>
                         <character-width>16</character-width>
                         <character-height>20</character-height>
@@ -1124,7 +1124,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text_Regular" uid="145">
+                <instance type="Text_Regular16" uid="145">
                     <properties>
                         <character-width>16</character-width>
                         <character-height>20</character-height>
@@ -1238,7 +1238,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text_Regular" uid="148">
+                <instance type="Text_Regular16" uid="148">
                     <properties>
                         <character-width>16</character-width>
                         <character-height>20</character-height>
@@ -1381,7 +1381,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text_Regular" uid="152">
+                <instance type="Text_Regular16" uid="152">
                     <properties>
                         <character-width>16</character-width>
                         <character-height>20</character-height>
@@ -1495,7 +1495,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text_Regular" uid="155">
+                <instance type="Text_Regular16" uid="155">
                     <properties>
                         <character-width>16</character-width>
                         <character-height>20</character-height>
@@ -1609,7 +1609,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text_Regular" uid="159">
+                <instance type="Text_Regular16" uid="159">
                     <properties>
                         <character-width>16</character-width>
                         <character-height>20</character-height>

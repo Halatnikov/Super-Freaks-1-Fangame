@@ -1325,23 +1325,23 @@
                                             <conditions />
                                             <actions>
                                                 <action id="-3" name="Create object" sid="374359079936646" type="System">
-                                                    <param id="0" name="Object to create">Text_Regular</param>
+                                                    <param id="0" name="Object to create">Text_Regular16</param>
                                                     <param id="1" name="Layer">&quot;Menu&quot;</param>
                                                     <param id="2" name="X">24</param>
                                                     <param id="3" name="Y">24+(20*int(JSON_PERSIST.CurrentKey))</param>
                                                 </action>
-                                                <action id="-7" name="Set size" sid="921936915449993" type="Text_Regular">
+                                                <action id="-7" name="Set size" sid="921936915449993" type="Text_Regular16">
                                                     <param id="0" name="Width">592</param>
                                                     <param id="1" name="Height">20</param>
                                                 </action>
-                                                <action id="-10" name="Set value" sid="915240741008702" type="Text_Regular">
+                                                <action id="-10" name="Set value" sid="915240741008702" type="Text_Regular16">
                                                     <param id="0" name="Instance variable">ID</param>
                                                     <param id="1" name="Value">&quot;Option_&quot;&amp;JSON_PERSIST.CurrentKey</param>
                                                 </action>
-                                                <action id="0" name="Set text" sid="601946558692808" type="Text_Regular">
+                                                <action id="0" name="Set text" sid="601946558692808" type="Text_Regular16">
                                                     <param id="0" name="Text">JSON_PERSIST.Value(0,&quot;Menus&quot;,Menu_Cursor.Menu,JSON_PERSIST.CurrentKey,&quot;Title&quot;)</param>
                                                 </action>
-                                                <action id="-27" name="Set effect enabled" sid="544240778062683" type="Text_Regular">
+                                                <action id="-27" name="Set effect enabled" sid="544240778062683" type="Text_Regular16">
                                                     <param id="0" name="Mode">0</param>
                                                     <param id="1" name="Effect">&quot;SetColor&quot;</param>
                                                 </action>
@@ -1369,7 +1369,7 @@
                                                                 </condition>
                                                             </conditions>
                                                             <actions>
-                                                                <action id="-27" name="Set effect enabled" sid="467145112861739" type="Text_Regular">
+                                                                <action id="-27" name="Set effect enabled" sid="467145112861739" type="Text_Regular16">
                                                                     <param id="0" name="Mode">1</param>
                                                                     <param id="1" name="Effect">&quot;SetColor&quot;</param>
                                                                 </action>
@@ -1384,14 +1384,14 @@
                                                                 </condition>
                                                             </conditions>
                                                             <actions>
-                                                                <action id="7" name="Set horizontal alignment" sid="705830445531167" type="Text_Regular">
+                                                                <action id="7" name="Set horizontal alignment" sid="705830445531167" type="Text_Regular16">
                                                                     <param id="0" name="Horizontal alignment">1</param>
                                                                 </action>
                                                                 <action id="-3" name="Create object" sid="667321017886656" type="System">
                                                                     <param id="0" name="Object to create">Menu_Arrow</param>
                                                                     <param id="1" name="Layer">&quot;Menu&quot;</param>
-                                                                    <param id="2" name="X">Text_Regular.X+192</param>
-                                                                    <param id="3" name="Y">Text_Regular.Y</param>
+                                                                    <param id="2" name="X">Text_Regular16.X+192</param>
+                                                                    <param id="3" name="Y">Text_Regular16.Y</param>
                                                                 </action>
                                                                 <action id="7" name="Set mirrored" sid="600162938273982" type="Menu_Arrow">
                                                                     <param id="0" name="State">0</param>
@@ -1399,8 +1399,8 @@
                                                                 <action id="-3" name="Create object" sid="151677596588079" type="System">
                                                                     <param id="0" name="Object to create">Menu_Arrow</param>
                                                                     <param id="1" name="Layer">&quot;Menu&quot;</param>
-                                                                    <param id="2" name="X">Text_Regular.X+400</param>
-                                                                    <param id="3" name="Y">Text_Regular.Y</param>
+                                                                    <param id="2" name="X">Text_Regular16.X+400</param>
+                                                                    <param id="3" name="Y">Text_Regular16.Y</param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
@@ -2045,33 +2045,33 @@
                                             <param id="1" name="Value">loopindex</param>
                                         </action>
                                         <action id="-3" name="Create object" sid="673695183324168" type="System">
-                                            <param id="0" name="Object to create">Text_Regular</param>
+                                            <param id="0" name="Object to create">Text_Regular16</param>
                                             <param id="1" name="Layer">&quot;SkinSelect&quot;</param>
                                             <param id="2" name="X">312</param>
                                             <param id="3" name="Y">170+(32*loopindex)</param>
                                         </action>
-                                        <action id="-10" name="Set value" sid="982247151319349" type="Text_Regular">
+                                        <action id="-10" name="Set value" sid="982247151319349" type="Text_Regular16">
                                             <param id="0" name="Instance variable">ID</param>
                                             <param id="1" name="Value">&quot;Skin_&quot;&amp;loopindex</param>
                                         </action>
-                                        <action id="0" name="Set text" sid="563486798138943" type="Text_Regular">
+                                        <action id="0" name="Set text" sid="563486798138943" type="Text_Regular16">
                                             <param id="0" name="Text">NWjs.ListAt(loopindex)</param>
                                         </action>
-                                        <action id="0" name="Set text" sid="947296020143464" type="Text_Regular">
+                                        <action id="0" name="Set text" sid="947296020143464" type="Text_Regular16">
                                             <param id="0" name="Text">JSON_COMMON.Value(0,&quot;SuperFreaksSkin&quot;,&quot;Name&quot;)</param>
                                         </action>
-                                        <action id="-7" name="Set size" sid="130692279340725" type="Text_Regular">
+                                        <action id="-7" name="Set size" sid="130692279340725" type="Text_Regular16">
                                             <param id="0" name="Width">196</param>
                                             <param id="1" name="Height">20</param>
                                         </action>
-                                        <action id="7" name="Set horizontal alignment" sid="673611905282201" type="Text_Regular">
+                                        <action id="7" name="Set horizontal alignment" sid="673611905282201" type="Text_Regular16">
                                             <param id="0" name="Horizontal alignment">0</param>
                                         </action>
-                                        <action id="8" name="Set vertical alignment" sid="182347410244023" type="Text_Regular">
+                                        <action id="8" name="Set vertical alignment" sid="182347410244023" type="Text_Regular16">
                                             <param id="0" name="Vertical alignment">1</param>
                                         </action>
                                         <action id="-24" name="Move to top" sid="937342828691968" type="Menu_ListSelect" />
-                                        <action id="-24" name="Move to top" sid="928825475731041" type="Text_Regular" />
+                                        <action id="-24" name="Move to top" sid="928825475731041" type="Text_Regular16" />
                                     </actions>
                                     <sub-events>
                                         <event-block sid="154932470219310">

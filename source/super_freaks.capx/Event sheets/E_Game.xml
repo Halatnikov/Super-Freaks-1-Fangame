@@ -209,29 +209,6 @@
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <comment>load tilemap collision data</comment>
-                                        <event-block sid="112492366491517">
-                                            <conditions>
-                                                <condition id="0" name="Path exists" sid="304584712610360" type="NWjs">
-                                                    <param id="0" name="Path">Var_CONSTANTS.Path_Assets&amp;&quot;\assets\tilesets\1u_&quot;&amp;replace(JSON_Room.Value(0,&quot;layers&quot;,JSON_Room.CurrentKey,&quot;tilesetId&quot;,&quot;name&quot;),&quot;tileset_&quot;,&quot;&quot;)&amp;&quot;.ini&quot;</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="55" name="Clear" sid="327530325510790" type="JSON_Collisions">
-                                                    <param id="0" name="Reference point">0</param>
-                                                    <param id="1" name="Key {n}"></param>
-                                                </action>
-                                                <action id="0" name="Set New Object" sid="733985195168897" type="JSON_Collisions">
-                                                    <param id="0" name="Reference point">0</param>
-                                                    <param id="1" name="Key {n}"></param>
-                                                </action>
-                                                <action id="60" name="LoadJSON" sid="353817688490014" type="JSON_Collisions">
-                                                    <param id="0" name="JSON">INI.INI2JSON(NWjs.ReadFile(Var_CONSTANTS.Path_Assets&amp;&quot;\assets\tilesets\1u_&quot;&amp;replace(JSON_Room.Value(0,&quot;layers&quot;,JSON_Room.CurrentKey,&quot;tilesetId&quot;,&quot;name&quot;),&quot;tileset_&quot;,&quot;&quot;)&amp;&quot;.ini&quot;))</param>
-                                                    <param id="1" name="Reference point">0</param>
-                                                    <param id="2" name="Key {n}"></param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
                                         <comment>fallback to default collisions</comment>
                                         <event-block sid="338067635581963">
                                             <conditions>
@@ -254,6 +231,86 @@
                                                     <param id="2" name="Key {n}"></param>
                                                 </action>
                                             </actions>
+                                        </event-block>
+                                        <comment>load tilemap collision data</comment>
+                                        <event-block sid="112492366491517">
+                                            <conditions>
+                                                <condition id="0" name="Path exists" sid="304584712610360" type="NWjs">
+                                                    <param id="0" name="Path">Var_CONSTANTS.Path_Assets&amp;&quot;\assets\tilesets\1u_&quot;&amp;replace(JSON_Room.Value(0,&quot;layers&quot;,JSON_Room.CurrentKey,&quot;tilesetId&quot;,&quot;name&quot;),&quot;tileset_&quot;,&quot;&quot;)&amp;&quot;.ini&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="55" name="Clear" sid="327530325510790" type="JSON_Collisions">
+                                                    <param id="0" name="Reference point">0</param>
+                                                    <param id="1" name="Key {n}"></param>
+                                                </action>
+                                                <action id="0" name="Set New Object" sid="733985195168897" type="JSON_Collisions">
+                                                    <param id="0" name="Reference point">0</param>
+                                                    <param id="1" name="Key {n}"></param>
+                                                </action>
+                                                <action id="60" name="LoadJSON" sid="353817688490014" type="JSON_Collisions">
+                                                    <param id="0" name="JSON">INI.INI2JSON(NWjs.ReadFile(Var_CONSTANTS.Path_Assets&amp;&quot;\assets\tilesets\1u_&quot;&amp;replace(JSON_Room.Value(0,&quot;layers&quot;,JSON_Room.CurrentKey,&quot;tilesetId&quot;,&quot;name&quot;),&quot;tileset_&quot;,&quot;&quot;)&amp;&quot;.ini&quot;))</param>
+                                                    <param id="1" name="Reference point">0</param>
+                                                    <param id="2" name="Key {n}"></param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="856851519555542">
+                                                    <conditions>
+                                                        <condition id="60" inverted="1" name="Is undefined" sid="664004986970510" type="JSON_Collisions">
+                                                            <param id="0" name="Reference point">0</param>
+                                                            <param id="1" name="Key {n}">&quot;TileCollisions&quot;{###}&quot;Reuse&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="60" name="LoadJSON" sid="676182705292199" type="JSON_Collisions">
+                                                            <param id="0" name="JSON">INI.INI2JSON(NWjs.ReadFile(Var_CONSTANTS.Path_Assets&amp;&quot;\assets\tilesets\&quot;&amp;JSON_Collisions.Value(0,&quot;TileCollisions&quot;,&quot;Reuse&quot;)&amp;&quot;.ini&quot;))</param>
+                                                            <param id="1" name="Reference point">0</param>
+                                                            <param id="2" name="Key {n}"></param>
+                                                        </action>
+                                                        <action id="60" name="LoadJSON" sid="935371431282147" type="JSON_Collisions">
+                                                            <param id="0" name="JSON">INI.INI2JSON(NWjs.ReadFile(Var_CONSTANTS.Path_Assets&amp;&quot;\assets\tilesets\1u_&quot;&amp;replace(JSON_Room.Value(0,&quot;layers&quot;,JSON_Room.CurrentKey,&quot;tilesetId&quot;,&quot;name&quot;),&quot;tileset_&quot;,&quot;&quot;)&amp;&quot;.ini&quot;))</param>
+                                                            <param id="1" name="Reference point">0</param>
+                                                            <param id="2" name="Key {n}">&quot;Cache&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <event-block sid="268689823847178">
+                                                            <conditions>
+                                                                <condition id="100" name="For each property" sid="381124157117747" type="JSON_Collisions">
+                                                                    <param id="0" name="Reference point">0</param>
+                                                                    <param id="1" name="Key {n}">&quot;TileCollisions&quot;</param>
+                                                                </condition>
+                                                                <condition id="-8" inverted="1" name="Compare two values" sid="499967950124595" type="System">
+                                                                    <param id="0" name="First value">JSON_Collisions.Value(0,&quot;TileCollisions&quot;,JSON_Collisions.CurrentKey)</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Second value">JSON_Collisions.Value(0,&quot;Cache&quot;,&quot;TileCollisions&quot;,JSON_Collisions.CurrentKey)</param>
+                                                                </condition>
+                                                                <condition id="60" inverted="1" name="Is undefined" sid="166858204389863" type="JSON_Collisions">
+                                                                    <param id="0" name="Reference point">0</param>
+                                                                    <param id="1" name="Key {n}">&quot;Cache&quot;{###}&quot;TileCollisions&quot;{###}JSON_Collisions.CurrentKey</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="20" name="Set Value" sid="260721328805411" type="JSON_Collisions">
+                                                                    <param id="0" name="Value">JSON_Collisions.Value(0,&quot;Cache&quot;,&quot;TileCollisions&quot;,JSON_Collisions.CurrentKey)</param>
+                                                                    <param id="1" name="Reference point">0</param>
+                                                                    <param id="2" name="Key {n}">&quot;TileCollisions&quot;{###}JSON_Collisions.CurrentKey</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="987899978457920">
+                                                            <conditions />
+                                                            <actions>
+                                                                <action id="50" name="Delete" sid="185344716365589" type="JSON_Collisions">
+                                                                    <param id="0" name="Reference point">0</param>
+                                                                    <param id="1" name="Key {n}">&quot;Cache&quot;</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
@@ -341,9 +398,18 @@
                                                     <param id="2" name="X">32*x</param>
                                                     <param id="3" name="Y">32*y</param>
                                                 </action>
-                                                <action id="-10" name="Set value" sid="628043040335820" type="Col_Solid">
+                                                <action id="-10" name="Set value" sid="741077129662084" type="Col_Solid">
                                                     <param id="0" name="Instance variable">ID</param>
                                                     <param id="1" name="Value">JSON_Collisions.Value(0,&quot;TileCollisions&quot;,tile)</param>
+                                                </action>
+                                                <action behavior="Solid" id="0" name="Set enabled" sid="920641322391752" type="Col_Solid">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                                <action behavior="Jumpthru" id="0" name="Set enabled" sid="622017413144317" type="Col_Solid">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                                <action id="5" name="Set frame" sid="313866056680688" type="Col_Solid">
+                                                    <param id="0" name="Frame number">0</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -357,14 +423,23 @@
                                             </conditions>
                                             <actions>
                                                 <action id="-3" name="Create object" sid="638556507809418" type="System">
-                                                    <param id="0" name="Object to create">Col_Platform</param>
+                                                    <param id="0" name="Object to create">Col_Solid</param>
                                                     <param id="1" name="Layer">&quot;Collisions&quot;</param>
                                                     <param id="2" name="X">32*x</param>
                                                     <param id="3" name="Y">32*y</param>
                                                 </action>
-                                                <action id="-10" name="Set value" sid="869044171770015" type="Col_Platform">
+                                                <action id="-10" name="Set value" sid="996883363395747" type="Col_Solid">
                                                     <param id="0" name="Instance variable">ID</param>
                                                     <param id="1" name="Value">JSON_Collisions.Value(0,&quot;TileCollisions&quot;,tile)</param>
+                                                </action>
+                                                <action behavior="Solid" id="0" name="Set enabled" sid="649251162602454" type="Col_Solid">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                                <action behavior="Jumpthru" id="0" name="Set enabled" sid="919032542095064" type="Col_Solid">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                                <action id="5" name="Set frame" sid="731097809603528" type="Col_Solid">
+                                                    <param id="0" name="Frame number">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -383,9 +458,48 @@
                                                     <param id="2" name="X">32*x</param>
                                                     <param id="3" name="Y">32*y</param>
                                                 </action>
-                                                <action id="-10" name="Set value" sid="590037543907246" type="Col_Slope">
+                                                <action id="-10" name="Set value" sid="633359309386197" type="Col_Slope">
                                                     <param id="0" name="Instance variable">ID</param>
                                                     <param id="1" name="Value">JSON_Collisions.Value(0,&quot;TileCollisions&quot;,tile)</param>
+                                                </action>
+                                                <action behavior="Solid" id="0" name="Set enabled" sid="456190847821655" type="Col_Slope">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                                <action behavior="Jumpthru" id="0" name="Set enabled" sid="731759547124721" type="Col_Slope">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                                <action id="5" name="Set frame" sid="558393458295023" type="Col_Slope">
+                                                    <param id="0" name="Frame number">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="896384540865501">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="419574569905074" type="System">
+                                                    <param id="0" name="First value">JSON_Collisions.Value(0,&quot;TileCollisions&quot;,tile)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">&quot;platform_slope&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="202013366664627" type="System">
+                                                    <param id="0" name="Object to create">Col_Slope</param>
+                                                    <param id="1" name="Layer">&quot;Collisions&quot;</param>
+                                                    <param id="2" name="X">32*x</param>
+                                                    <param id="3" name="Y">32*y</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="625815473329370" type="Col_Slope">
+                                                    <param id="0" name="Instance variable">ID</param>
+                                                    <param id="1" name="Value">JSON_Collisions.Value(0,&quot;TileCollisions&quot;,tile)</param>
+                                                </action>
+                                                <action behavior="Solid" id="0" name="Set enabled" sid="836067614016844" type="Col_Slope">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                                <action behavior="Jumpthru" id="0" name="Set enabled" sid="551403874607174" type="Col_Slope">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                                <action id="5" name="Set frame" sid="432866116604403" type="Col_Slope">
+                                                    <param id="0" name="Frame number">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -410,9 +524,54 @@
                                                 <action id="-1" name="Set X" sid="844014601113363" type="Col_Slope">
                                                     <param id="0" name="X">Self.X+32</param>
                                                 </action>
-                                                <action id="-10" name="Set value" sid="715263410216985" type="Col_Slope">
+                                                <action id="-10" name="Set value" sid="914501267177246" type="Col_Slope">
                                                     <param id="0" name="Instance variable">ID</param>
                                                     <param id="1" name="Value">JSON_Collisions.Value(0,&quot;TileCollisions&quot;,tile)</param>
+                                                </action>
+                                                <action behavior="Solid" id="0" name="Set enabled" sid="723721158866965" type="Col_Slope">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                                <action behavior="Jumpthru" id="0" name="Set enabled" sid="934631684414301" type="Col_Slope">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                                <action id="5" name="Set frame" sid="144643228936939" type="Col_Slope">
+                                                    <param id="0" name="Frame number">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="512010265863848">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="920730855908983" type="System">
+                                                    <param id="0" name="First value">JSON_Collisions.Value(0,&quot;TileCollisions&quot;,tile)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">&quot;platform_slope_mirrored&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="789925092742957" type="System">
+                                                    <param id="0" name="Object to create">Col_Slope</param>
+                                                    <param id="1" name="Layer">&quot;Collisions&quot;</param>
+                                                    <param id="2" name="X">32*x</param>
+                                                    <param id="3" name="Y">32*y</param>
+                                                </action>
+                                                <action id="-5" name="Set width" sid="689686072907980" type="Col_Slope">
+                                                    <param id="0" name="Width">-Self.Width</param>
+                                                </action>
+                                                <action id="-1" name="Set X" sid="303877924326784" type="Col_Slope">
+                                                    <param id="0" name="X">Self.X+32</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="739237256293929" type="Col_Slope">
+                                                    <param id="0" name="Instance variable">ID</param>
+                                                    <param id="1" name="Value">JSON_Collisions.Value(0,&quot;TileCollisions&quot;,tile)</param>
+                                                </action>
+                                                <action behavior="Solid" id="0" name="Set enabled" sid="191014824647780" type="Col_Slope">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                                <action behavior="Jumpthru" id="0" name="Set enabled" sid="987946466795943" type="Col_Slope">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                                <action id="5" name="Set frame" sid="708845514366130" type="Col_Slope">
+                                                    <param id="0" name="Frame number">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -431,9 +590,48 @@
                                                     <param id="2" name="X">32*x</param>
                                                     <param id="3" name="Y">32*y</param>
                                                 </action>
-                                                <action id="-10" name="Set value" sid="869956106992227" type="Col_Slope2_1">
+                                                <action id="-10" name="Set value" sid="446944403897006" type="Col_Slope2_1">
                                                     <param id="0" name="Instance variable">ID</param>
                                                     <param id="1" name="Value">JSON_Collisions.Value(0,&quot;TileCollisions&quot;,tile)</param>
+                                                </action>
+                                                <action behavior="Solid" id="0" name="Set enabled" sid="588175101872502" type="Col_Slope2_1">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                                <action behavior="Jumpthru" id="0" name="Set enabled" sid="759297201339796" type="Col_Slope2_1">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                                <action id="5" name="Set frame" sid="380156205619955" type="Col_Slope2_1">
+                                                    <param id="0" name="Frame number">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="716670173635598">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="429462734512003" type="System">
+                                                    <param id="0" name="First value">JSON_Collisions.Value(0,&quot;TileCollisions&quot;,tile)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">&quot;platform_slope2_1&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="307647212773184" type="System">
+                                                    <param id="0" name="Object to create">Col_Slope2_1</param>
+                                                    <param id="1" name="Layer">&quot;Collisions&quot;</param>
+                                                    <param id="2" name="X">32*x</param>
+                                                    <param id="3" name="Y">32*y</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="316225331851044" type="Col_Slope2_1">
+                                                    <param id="0" name="Instance variable">ID</param>
+                                                    <param id="1" name="Value">JSON_Collisions.Value(0,&quot;TileCollisions&quot;,tile)</param>
+                                                </action>
+                                                <action behavior="Solid" id="0" name="Set enabled" sid="691517043675513" type="Col_Slope2_1">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                                <action behavior="Jumpthru" id="0" name="Set enabled" sid="976255215256084" type="Col_Slope2_1">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                                <action id="5" name="Set frame" sid="204993793356711" type="Col_Slope2_1">
+                                                    <param id="0" name="Frame number">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -452,9 +650,48 @@
                                                     <param id="2" name="X">32*x</param>
                                                     <param id="3" name="Y">32*y</param>
                                                 </action>
-                                                <action id="-10" name="Set value" sid="833250749802889" type="Col_Slope2_2">
+                                                <action id="-10" name="Set value" sid="300482973596788" type="Col_Slope2_2">
                                                     <param id="0" name="Instance variable">ID</param>
                                                     <param id="1" name="Value">JSON_Collisions.Value(0,&quot;TileCollisions&quot;,tile)</param>
+                                                </action>
+                                                <action behavior="Solid" id="0" name="Set enabled" sid="427929209837544" type="Col_Slope2_2">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                                <action behavior="Jumpthru" id="0" name="Set enabled" sid="956722737956562" type="Col_Slope2_2">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                                <action id="5" name="Set frame" sid="572522874574040" type="Col_Slope2_2">
+                                                    <param id="0" name="Frame number">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="254294757906919">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="281459859364683" type="System">
+                                                    <param id="0" name="First value">JSON_Collisions.Value(0,&quot;TileCollisions&quot;,tile)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">&quot;platform_slope2_2&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="476309017410584" type="System">
+                                                    <param id="0" name="Object to create">Col_Slope2_2</param>
+                                                    <param id="1" name="Layer">&quot;Collisions&quot;</param>
+                                                    <param id="2" name="X">32*x</param>
+                                                    <param id="3" name="Y">32*y</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="712750438643453" type="Col_Slope2_2">
+                                                    <param id="0" name="Instance variable">ID</param>
+                                                    <param id="1" name="Value">JSON_Collisions.Value(0,&quot;TileCollisions&quot;,tile)</param>
+                                                </action>
+                                                <action behavior="Solid" id="0" name="Set enabled" sid="907806142101138" type="Col_Slope2_2">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                                <action behavior="Jumpthru" id="0" name="Set enabled" sid="209873182984628" type="Col_Slope2_2">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                                <action id="5" name="Set frame" sid="922132714587202" type="Col_Slope2_2">
+                                                    <param id="0" name="Frame number">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -479,9 +716,54 @@
                                                 <action id="-1" name="Set X" sid="273364433296513" type="Col_Slope2_1">
                                                     <param id="0" name="X">Self.X+32</param>
                                                 </action>
-                                                <action id="-10" name="Set value" sid="627470068704141" type="Col_Slope2_1">
+                                                <action id="-10" name="Set value" sid="972828296400861" type="Col_Slope2_1">
                                                     <param id="0" name="Instance variable">ID</param>
                                                     <param id="1" name="Value">JSON_Collisions.Value(0,&quot;TileCollisions&quot;,tile)</param>
+                                                </action>
+                                                <action behavior="Solid" id="0" name="Set enabled" sid="508893305352252" type="Col_Slope2_1">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                                <action behavior="Jumpthru" id="0" name="Set enabled" sid="184810826743783" type="Col_Slope2_1">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                                <action id="5" name="Set frame" sid="425343305996089" type="Col_Slope2_1">
+                                                    <param id="0" name="Frame number">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="884829768026496">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="498318094324179" type="System">
+                                                    <param id="0" name="First value">JSON_Collisions.Value(0,&quot;TileCollisions&quot;,tile)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">&quot;platform_slope2_1_mirrored&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="560765722680089" type="System">
+                                                    <param id="0" name="Object to create">Col_Slope2_1</param>
+                                                    <param id="1" name="Layer">&quot;Collisions&quot;</param>
+                                                    <param id="2" name="X">32*x</param>
+                                                    <param id="3" name="Y">32*y</param>
+                                                </action>
+                                                <action id="-5" name="Set width" sid="517418108198123" type="Col_Slope2_1">
+                                                    <param id="0" name="Width">-Self.Width</param>
+                                                </action>
+                                                <action id="-1" name="Set X" sid="472740396858818" type="Col_Slope2_1">
+                                                    <param id="0" name="X">Self.X+32</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="947153277971170" type="Col_Slope2_1">
+                                                    <param id="0" name="Instance variable">ID</param>
+                                                    <param id="1" name="Value">JSON_Collisions.Value(0,&quot;TileCollisions&quot;,tile)</param>
+                                                </action>
+                                                <action behavior="Solid" id="0" name="Set enabled" sid="210174569181678" type="Col_Slope2_1">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                                <action behavior="Jumpthru" id="0" name="Set enabled" sid="938963550394708" type="Col_Slope2_1">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                                <action id="5" name="Set frame" sid="427490524862769" type="Col_Slope2_1">
+                                                    <param id="0" name="Frame number">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -506,9 +788,54 @@
                                                 <action id="-1" name="Set X" sid="261208821218746" type="Col_Slope2_2">
                                                     <param id="0" name="X">Self.X+32</param>
                                                 </action>
-                                                <action id="-10" name="Set value" sid="527016131716333" type="Col_Slope2_2">
+                                                <action id="-10" name="Set value" sid="776305213386071" type="Col_Slope2_2">
                                                     <param id="0" name="Instance variable">ID</param>
                                                     <param id="1" name="Value">JSON_Collisions.Value(0,&quot;TileCollisions&quot;,tile)</param>
+                                                </action>
+                                                <action behavior="Solid" id="0" name="Set enabled" sid="645737754839625" type="Col_Slope2_2">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                                <action behavior="Jumpthru" id="0" name="Set enabled" sid="821844876118990" type="Col_Slope2_2">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                                <action id="5" name="Set frame" sid="211016843177408" type="Col_Slope2_2">
+                                                    <param id="0" name="Frame number">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="781698644379371">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="264306636911073" type="System">
+                                                    <param id="0" name="First value">JSON_Collisions.Value(0,&quot;TileCollisions&quot;,tile)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">&quot;platform_slope2_2_mirrored&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="429439288751242" type="System">
+                                                    <param id="0" name="Object to create">Col_Slope2_2</param>
+                                                    <param id="1" name="Layer">&quot;Collisions&quot;</param>
+                                                    <param id="2" name="X">32*x</param>
+                                                    <param id="3" name="Y">32*y</param>
+                                                </action>
+                                                <action id="-5" name="Set width" sid="503010035217101" type="Col_Slope2_2">
+                                                    <param id="0" name="Width">-Self.Width</param>
+                                                </action>
+                                                <action id="-1" name="Set X" sid="509657446525453" type="Col_Slope2_2">
+                                                    <param id="0" name="X">Self.X+32</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="134649631091631" type="Col_Slope2_2">
+                                                    <param id="0" name="Instance variable">ID</param>
+                                                    <param id="1" name="Value">JSON_Collisions.Value(0,&quot;TileCollisions&quot;,tile)</param>
+                                                </action>
+                                                <action behavior="Solid" id="0" name="Set enabled" sid="136887377822584" type="Col_Slope2_2">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                                <action behavior="Jumpthru" id="0" name="Set enabled" sid="507374321041145" type="Col_Slope2_2">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                                <action id="5" name="Set frame" sid="599643435909492" type="Col_Slope2_2">
+                                                    <param id="0" name="Frame number">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -997,7 +1324,26 @@
                                     <param id="0" name="Instance variable">Height</param>
                                     <param id="1" name="Value">int(JSON_Room.Value(0,&quot;room&quot;,&quot;height&quot;))</param>
                                 </action>
+                                <action id="-16" name="Wait" sid="225956470059526" type="System">
+                                    <param id="0" name="Seconds">0</param>
+                                </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="850288455707508">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="316852998150904" type="System">
+                                            <param id="0" name="First value">JSON_Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,0,&quot;bgName&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;tiles_skyway_highway&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Load image from URL" sid="327552551448146" type="Tiles_GMS1">
+                                            <param id="0" name="URI">Var_CONSTANTS.Path_Assets&amp;&quot;\assets\tilesets\1r_sky.png&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <comment>&quot;tiles&quot;</comment>
                         <event-block sid="419590774391719">
@@ -1275,16 +1621,16 @@
                                     </conditions>
                                     <actions>
                                         <action id="-3" name="Create object" sid="999349169623664" type="System">
-                                            <param id="0" name="Object to create">Obj_WaterDeco</param>
+                                            <param id="0" name="Object to create">Obj_1rWaterDeco</param>
                                             <param id="1" name="Layer">&quot;SceneryHigh&quot;</param>
                                             <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;x&quot;))</param>
                                             <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;y&quot;))</param>
                                         </action>
-                                        <action id="-7" name="Set size" sid="895535698930390" type="Obj_WaterDeco">
+                                        <action id="-7" name="Set size" sid="895535698930390" type="Obj_1rWaterDeco">
                                             <param id="0" name="Width">int(32*float(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;scaleX&quot;)))</param>
                                             <param id="1" name="Height">int(32*float(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;scaleY&quot;)))</param>
                                         </action>
-                                        <action id="-10" name="Set value" sid="970127710714980" type="Obj_WaterDeco">
+                                        <action id="-10" name="Set value" sid="970127710714980" type="Obj_1rWaterDeco">
                                             <param id="0" name="Instance variable">Obj_ImportID</param>
                                             <param id="1" name="Value">instance</param>
                                         </action>
@@ -1805,21 +2151,21 @@
                                             <param id="0" name="Instance variable">Obj_ImportID</param>
                                             <param id="1" name="Value">instance</param>
                                         </action>
-                                        <action id="-10" name="Set value" sid="213777165907491" type="Enemy_Fusedropper">
-                                            <param id="0" name="Instance variable">timer_delay</param>
-                                            <param id="1" name="Value">1.25</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="572374551498377" type="Enemy_Fusedropper">
-                                            <param id="0" name="Instance variable">timer_frequency</param>
-                                            <param id="1" name="Value">1.25</param>
-                                        </action>
                                         <action id="-10" name="Set value" sid="603267555756268" type="Enemy_Fusedropper">
                                             <param id="0" name="Instance variable">BounceHeight</param>
                                             <param id="1" name="Value">480</param>
                                         </action>
+                                        <action id="-10" name="Set value" sid="213777165907491" type="Enemy_Fusedropper">
+                                            <param id="0" name="Instance variable">timer_delay</param>
+                                            <param id="1" name="Value">1.25</param>
+                                        </action>
                                         <action id="-10" name="Set value" sid="810131313959541" type="Enemy_Fusedropper">
                                             <param id="0" name="Instance variable">drop_speed</param>
                                             <param id="1" name="Value">2</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="572374551498377" type="Enemy_Fusedropper">
+                                            <param id="0" name="Instance variable">timer_frequency</param>
+                                            <param id="1" name="Value">1.25</param>
                                         </action>
                                     </actions>
                                     <sub-events>
@@ -3528,6 +3874,7 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Second value">0</param>
                         </condition>
+                        <condition id="-3" name="Is on-screen" sid="700880431442059" type="Objects9patch_Parent" />
                     </conditions>
                     <actions />
                     <sub-events>
@@ -4705,22 +5052,23 @@
                     <conditions>
                         <condition behavior="Platform" id="4" name="Is falling" sid="851131983877250" type="Player" />
                         <condition id="1" name="Is overlapping another object" sid="970357775893975" type="Player">
-                            <param id="0" name="Object">Col_Platform</param>
+                            <param id="0" name="Object">Col_Solid</param>
                         </condition>
                         <condition id="9" inverted="1" name="Is overlapping at offset" sid="391278147685562" type="Player">
-                            <param id="0" name="Object">Col_Platform</param>
+                            <param id="0" name="Object">Col_Solid</param>
                             <param id="1" name="Offset X">0</param>
-                            <param id="2" name="Offset Y">-(Col_Platform.Height/1.33)</param>
+                            <param id="2" name="Offset Y">-(Col_Solid.Height/1.33)</param>
                         </condition>
-                        <condition id="-15" name="Pick nearest/furthest" sid="987692236411263" type="Col_Platform">
+                        <condition id="-15" name="Pick nearest/furthest" sid="987692236411263" type="Col_Solid">
                             <param id="0" name="Which">0</param>
                             <param id="1" name="X">Self.X</param>
                             <param id="2" name="Y">Player.Y</param>
                         </condition>
+                        <condition behavior="Jumpthru" id="0" name="Is enabled" sid="578713712432496" type="Col_Solid" />
                     </conditions>
                     <actions>
                         <action id="-2" name="Set Y" sid="795735531775443" type="Player">
-                            <param id="0" name="Y">Col_Platform.BBoxTop-24</param>
+                            <param id="0" name="Y">Col_Solid.BBoxTop-24</param>
                         </action>
                         <action behavior="Platform" id="9" name="Set vector Y" sid="777870698318482" type="Player">
                             <param id="0" name="Vector Y">0</param>
@@ -5107,6 +5455,7 @@
                             <param id="1" name="Offset X">0</param>
                             <param id="2" name="Offset Y">-6</param>
                         </condition>
+                        <condition behavior="Solid" id="0" name="Is enabled" sid="674000364022114" type="Col_Solid" />
                         <condition id="-4" name="Trigger once while true" sid="431098035263414" type="System" />
                     </conditions>
                     <actions>
@@ -8979,6 +9328,21 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <event-block sid="110253329386696">
+                                    <conditions>
+                                        <condition id="0" name="On collision with another object" sid="171806820964115" type="Player_Hitbox">
+                                            <param id="0" name="Object">Level_Water</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="9" name="Set vector Y" sid="408241623041251" type="Player">
+                                            <param id="0" name="Vector Y">-480</param>
+                                        </action>
+                                        <action behavior="Platform" id="8" name="Set vector X" sid="433430476720189" type="Player">
+                                            <param id="0" name="Vector X">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                             </sub-events>
                         </event-block>
                     </sub-events>
@@ -9176,6 +9540,11 @@
                         <condition id="-6" name="Every X seconds" sid="827757612414646" type="System">
                             <param id="0" name="Interval (seconds)">dt</param>
                         </condition>
+                        <condition id="-7" name="Compare instance variable" sid="609198176125888" type="Var_Gameplay">
+                            <param id="0" name="Instance variable">Pause</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;False&quot;</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-11" name="Add to" sid="986963510257576" type="Enemy_Fusedropper">
@@ -9207,99 +9576,87 @@
                                 </action>
                             </actions>
                             <sub-events>
-                                <event-block sid="527039906473150">
+                                <event-block sid="754823820672162">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="609198176125888" type="Var_Gameplay">
-                                            <param id="0" name="Instance variable">Pause</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;False&quot;</param>
+                                        <condition id="2" inverted="1" name="Is playing" sid="471391772129386" type="Enemy_Fusedropper">
+                                            <param id="0" name="Animation">&quot;Bomb&quot;</param>
                                         </condition>
                                     </conditions>
-                                    <actions />
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="913651307408993" type="Enemy_Fusedropper">
+                                            <param id="0" name="Object">Obj_Barrel</param>
+                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                            <param id="2" name="Image point">1</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="770215318776183" type="Enemy_Fusedropper" />
+                                        <action id="4" name="Set animation" sid="378765153137533" type="Obj_Barrel">
+                                            <param id="0" name="Animation">Enemy_Fusedropper.AnimationName</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="147725406435518" type="Obj_Barrel">
+                                            <param id="0" name="Instance variable">MaxSpeed</param>
+                                            <param id="1" name="Value">Enemy_Fusedropper.drop_speed*60</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="473599437560105" type="Obj_Barrel">
+                                            <param id="0" name="Instance variable">BounceHeight</param>
+                                            <param id="1" name="Value">Enemy_Fusedropper.BounceHeight</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="544177664324475" type="Obj_Barrel">
+                                            <param id="0" name="Instance variable">ExplodeAtWall</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="7" name="Set mirrored" sid="606949003274224" type="Obj_Barrel">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
                                     <sub-events>
-                                        <event-block sid="754823820672162">
+                                        <event-block sid="957415965689180">
                                             <conditions>
-                                                <condition id="2" inverted="1" name="Is playing" sid="471391772129386" type="Enemy_Fusedropper">
-                                                    <param id="0" name="Animation">&quot;Bomb&quot;</param>
-                                                </condition>
+                                                <condition id="7" inverted="1" name="Is mirrored" sid="527180699324498" type="Enemy_Fusedropper" />
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Spawn another object" sid="913651307408993" type="Enemy_Fusedropper">
-                                                    <param id="0" name="Object">Obj_Barrel</param>
-                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                                    <param id="2" name="Image point">1</param>
-                                                </action>
-                                                <action id="-24" name="Move to top" sid="770215318776183" type="Enemy_Fusedropper" />
-                                                <action id="4" name="Set animation" sid="378765153137533" type="Obj_Barrel">
-                                                    <param id="0" name="Animation">Enemy_Fusedropper.AnimationName</param>
-                                                    <param id="1" name="From">1</param>
-                                                </action>
-                                                <action id="-10" name="Set value" sid="147725406435518" type="Obj_Barrel">
-                                                    <param id="0" name="Instance variable">MaxSpeed</param>
-                                                    <param id="1" name="Value">Enemy_Fusedropper.drop_speed*60</param>
-                                                </action>
-                                                <action id="-10" name="Set value" sid="473599437560105" type="Obj_Barrel">
-                                                    <param id="0" name="Instance variable">BounceHeight</param>
-                                                    <param id="1" name="Value">Enemy_Fusedropper.BounceHeight</param>
-                                                </action>
-                                                <action id="-13" name="Set boolean" sid="544177664324475" type="Obj_Barrel">
-                                                    <param id="0" name="Instance variable">ExplodeAtWall</param>
-                                                    <param id="1" name="Value">1</param>
-                                                </action>
-                                                <action id="7" name="Set mirrored" sid="606949003274224" type="Obj_Barrel">
-                                                    <param id="0" name="State">0</param>
+                                                <action id="7" name="Set mirrored" sid="874178301357295" type="Obj_Barrel">
+                                                    <param id="0" name="State">1</param>
                                                 </action>
                                             </actions>
-                                            <sub-events>
-                                                <event-block sid="957415965689180">
-                                                    <conditions>
-                                                        <condition id="7" inverted="1" name="Is mirrored" sid="527180699324498" type="Enemy_Fusedropper" />
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="7" name="Set mirrored" sid="874178301357295" type="Obj_Barrel">
-                                                            <param id="0" name="State">1</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="891307949142430">
-                                                    <conditions>
-                                                        <condition id="2" name="Is playing" sid="985098840305846" type="Enemy_Fusedropper">
-                                                            <param id="0" name="Animation">&quot;Ball&quot;</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-13" name="Set boolean" sid="511307525543848" type="Obj_Barrel">
-                                                            <param id="0" name="Instance variable">ExplodeAtWall</param>
-                                                            <param id="1" name="Value">0</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                            </sub-events>
                                         </event-block>
-                                        <event-block sid="292603808068436">
+                                        <event-block sid="891307949142430">
                                             <conditions>
-                                                <condition id="2" name="Is playing" sid="532716296463041" type="Enemy_Fusedropper">
-                                                    <param id="0" name="Animation">&quot;Bomb&quot;</param>
+                                                <condition id="2" name="Is playing" sid="985098840305846" type="Enemy_Fusedropper">
+                                                    <param id="0" name="Animation">&quot;Ball&quot;</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Spawn another object" sid="626939668382100" type="Enemy_Fusedropper">
-                                                    <param id="0" name="Object">Special_Bomb</param>
-                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                                    <param id="2" name="Image point">1</param>
-                                                </action>
-                                                <action id="-24" name="Move to top" sid="743259046550324" type="Enemy_Fusedropper" />
-                                                <action id="-10" name="Set value" sid="437877219614410" type="Special_Bomb">
-                                                    <param id="0" name="Instance variable">YSpeed</param>
-                                                    <param id="1" name="Value">Enemy_Fusedropper.drop_speed</param>
-                                                </action>
-                                                <action id="-10" name="Set value" sid="967025865798352" type="Special_Bomb">
-                                                    <param id="0" name="Instance variable">CreateExplosion</param>
-                                                    <param id="1" name="Value">Enemy_Fusedropper.CreateExplosion</param>
+                                                <action id="-13" name="Set boolean" sid="511307525543848" type="Obj_Barrel">
+                                                    <param id="0" name="Instance variable">ExplodeAtWall</param>
+                                                    <param id="1" name="Value">0</param>
                                                 </action>
                                             </actions>
                                         </event-block>
                                     </sub-events>
+                                </event-block>
+                                <event-block sid="292603808068436">
+                                    <conditions>
+                                        <condition id="2" name="Is playing" sid="532716296463041" type="Enemy_Fusedropper">
+                                            <param id="0" name="Animation">&quot;Bomb&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="626939668382100" type="Enemy_Fusedropper">
+                                            <param id="0" name="Object">Special_Bomb</param>
+                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                            <param id="2" name="Image point">1</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="743259046550324" type="Enemy_Fusedropper" />
+                                        <action id="-10" name="Set value" sid="437877219614410" type="Special_Bomb">
+                                            <param id="0" name="Instance variable">YSpeed</param>
+                                            <param id="1" name="Value">Enemy_Fusedropper.drop_speed</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="967025865798352" type="Special_Bomb">
+                                            <param id="0" name="Instance variable">CreateExplosion</param>
+                                            <param id="1" name="Value">Enemy_Fusedropper.CreateExplosion</param>
+                                        </action>
+                                    </actions>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -10089,11 +10446,17 @@
             </actions>
         </event-block>
         <event-block sid="750106918628816">
-            <conditions />
+            <conditions>
+                <condition id="-18" name="On created" sid="403766834753232" type="Obj_BarrelGiant" />
+            </conditions>
             <actions>
+                <action id="-16" name="Wait" sid="762187855236460" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
                 <action id="6" name="Set speed" sid="986064591292869" type="Obj_BarrelGiant">
                     <param id="0" name="Speed">((Self.speed_move)/1.4)*7</param>
                 </action>
+                <action id="-25" name="Move to bottom" sid="616405851723095" type="Obj_BarrelGiant" />
             </actions>
         </event-block>
         <event-block sid="704571844116459">
@@ -10103,6 +10466,10 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="0" name="Call function" sid="105578871574002" type="Function">
+                    <param id="0" name="Name">&quot;Audio_PlaySFX&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;explode&quot;</param>
+                </action>
                 <action id="-9" name="Destroy" sid="970280602346497" type="Obj_BarrelGiant" />
                 <action id="0" name="Spawn another object" sid="341684812685766" type="Obj_BarrelGiant">
                     <param id="0" name="Object">Special_Explosion</param>

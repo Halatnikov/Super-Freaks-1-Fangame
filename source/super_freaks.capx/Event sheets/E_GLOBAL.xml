@@ -7,62 +7,123 @@
             <sub-events>
                 <event-block sid="285894410113596">
                     <conditions>
-                        <condition id="-18" name="On created" sid="168071514699840" type="Text_Regular" />
+                        <condition id="-18" name="On created" sid="168071514699840" type="Text_Regular16" />
                     </conditions>
                     <actions>
-                        <action id="5" name="Set character width" sid="790426660344445" type="Text_Regular">
+                        <action id="5" name="Set character width" sid="790426660344445" type="Text_Regular16">
                             <param id="0" name="Character">&quot;!.il&quot;</param>
                             <param id="1" name="Width">3</param>
                         </action>
-                        <action id="5" name="Set character width" sid="793451040769983" type="Text_Regular">
+                        <action id="5" name="Set character width" sid="793451040769983" type="Text_Regular16">
                             <param id="0" name="Character">&quot;&apos;,:;|&quot;</param>
                             <param id="1" name="Width">4</param>
                         </action>
-                        <action id="5" name="Set character width" sid="491453572069360" type="Text_Regular">
+                        <action id="5" name="Set character width" sid="491453572069360" type="Text_Regular16">
                             <param id="0" name="Character">&quot;&quot;&quot;[]`&quot;</param>
                             <param id="1" name="Width">6</param>
                         </action>
-                        <action id="5" name="Set character width" sid="163389880909118" type="Text_Regular">
+                        <action id="5" name="Set character width" sid="163389880909118" type="Text_Regular16">
                             <param id="0" name="Character">&quot;()j&quot;</param>
                             <param id="1" name="Width">7</param>
                         </action>
-                        <action id="5" name="Set character width" sid="903159513605700" type="Text_Regular">
+                        <action id="5" name="Set character width" sid="903159513605700" type="Text_Regular16">
                             <param id="0" name="Character">&quot;*1I^r{}&quot;</param>
                             <param id="1" name="Width">8</param>
                         </action>
-                        <action id="5" name="Set character width" sid="759856927611670" type="Text_Regular">
+                        <action id="5" name="Set character width" sid="759856927611670" type="Text_Regular16">
                             <param id="0" name="Character">&quot;+-=fht&quot;</param>
                             <param id="1" name="Width">9</param>
                         </action>
-                        <action id="5" name="Set character width" sid="556024449996702" type="Text_Regular">
+                        <action id="5" name="Set character width" sid="556024449996702" type="Text_Regular16">
                             <param id="0" name="Character">&quot;234789&lt;&gt;?JLOabcdegknpqsuvz&quot;</param>
                             <param id="1" name="Width">10</param>
                         </action>
-                        <action id="5" name="Set character width" sid="184429647407860" type="Text_Regular">
+                        <action id="5" name="Set character width" sid="184429647407860" type="Text_Regular16">
                             <param id="0" name="Character">&quot;$/56BEFKPRS\oy&quot;</param>
                             <param id="1" name="Width">11</param>
                         </action>
-                        <action id="5" name="Set character width" sid="835228447000908" type="Text_Regular">
+                        <action id="5" name="Set character width" sid="835228447000908" type="Text_Regular16">
                             <param id="0" name="Character">&quot;0ADNTx~&quot;</param>
                             <param id="1" name="Width">12</param>
                         </action>
-                        <action id="5" name="Set character width" sid="316566066156297" type="Text_Regular">
+                        <action id="5" name="Set character width" sid="316566066156297" type="Text_Regular16">
                             <param id="0" name="Character">&quot;&amp;CHUVZ_&quot;</param>
                             <param id="1" name="Width">13</param>
                         </action>
-                        <action id="5" name="Set character width" sid="268001882148282" type="Text_Regular">
+                        <action id="5" name="Set character width" sid="268001882148282" type="Text_Regular16">
                             <param id="0" name="Character">&quot;%QXYw&quot;</param>
                             <param id="1" name="Width">14</param>
                         </action>
-                        <action id="5" name="Set character width" sid="437738521486061" type="Text_Regular">
+                        <action id="5" name="Set character width" sid="437738521486061" type="Text_Regular16">
                             <param id="0" name="Character">&quot;Gm&quot;</param>
                             <param id="1" name="Width">15</param>
                         </action>
-                        <action id="5" name="Set character width" sid="711386523714380" type="Text_Regular">
+                        <action id="5" name="Set character width" sid="711386523714380" type="Text_Regular16">
                             <param id="0" name="Character">&quot;#@MW &quot;</param>
                             <param id="1" name="Width">16</param>
                         </action>
-                        <action id="3" name="Set character spacing" sid="959380596297333" type="Text_Regular">
+                        <action id="3" name="Set character spacing" sid="959380596297333" type="Text_Regular16">
+                            <param id="0" name="Character spacing">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="394457305583358">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="677247516815162" type="Text_Regular16" />
+                    </conditions>
+                    <actions>
+                        <action id="-27" name="Set effect enabled" sid="838397810260232" type="Text_Regular16">
+                            <param id="0" name="Mode">0</param>
+                            <param id="1" name="Effect">&quot;SetColor&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="867348938390668">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="745585079685210" type="Text_Regular12" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set character width" sid="431344347520851" type="Text_Regular12">
+                            <param id="0" name="Character">&quot;!&apos;.:`il|&quot;</param>
+                            <param id="1" name="Width">3</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="749455506767728" type="Text_Regular12">
+                            <param id="0" name="Character">&quot;,;&quot;</param>
+                            <param id="1" name="Width">4</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="232271730351356" type="Text_Regular12">
+                            <param id="0" name="Character">&quot;&quot;&quot;[]&quot;</param>
+                            <param id="1" name="Width">5</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="688522779702213" type="Text_Regular12">
+                            <param id="0" name="Character">&quot;()*1^j{}&quot;</param>
+                            <param id="1" name="Width">6</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="228274314267260" type="Text_Regular12">
+                            <param id="0" name="Character">&quot;+-=Ifr&quot;</param>
+                            <param id="1" name="Width">7</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="704582701591496" type="Text_Regular12">
+                            <param id="0" name="Character">&quot;/234789&lt;&gt;J\acdeghqstu&quot;</param>
+                            <param id="1" name="Width">8</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="205423263575143" type="Text_Regular12">
+                            <param id="0" name="Character">&quot;$56?Lbknopvyz&quot;</param>
+                            <param id="1" name="Width">9</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="326174956196975" type="Text_Regular12">
+                            <param id="0" name="Character">&quot;&amp;0BCDEFKNOPRSTV_x~&quot;</param>
+                            <param id="1" name="Width">10</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="593064996803998" type="Text_Regular12">
+                            <param id="0" name="Character">&quot;%AHUXYZw&quot;</param>
+                            <param id="1" name="Width">11</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="730674554598318" type="Text_Regular12">
+                            <param id="0" name="Character">&quot;#@GMQWm&quot;</param>
+                            <param id="1" name="Width">12</param>
+                        </action>
+                        <action id="3" name="Set character spacing" sid="501562052282569" type="Text_Regular12">
                             <param id="0" name="Character spacing">2</param>
                         </action>
                     </actions>
@@ -134,17 +195,6 @@
                         </action>
                         <action id="3" name="Set character spacing" sid="356883191721455" type="Text_Big">
                             <param id="0" name="Character spacing">2</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="394457305583358">
-                    <conditions>
-                        <condition id="-18" name="On created" sid="677247516815162" type="Text_Regular" />
-                    </conditions>
-                    <actions>
-                        <action id="-27" name="Set effect enabled" sid="838397810260232" type="Text_Regular">
-                            <param id="0" name="Mode">0</param>
-                            <param id="1" name="Effect">&quot;SetColor&quot;</param>
                         </action>
                     </actions>
                 </event-block>

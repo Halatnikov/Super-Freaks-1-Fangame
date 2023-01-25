@@ -136,24 +136,6 @@
             <instances />
             <effects />
         </layer>
-        <layer name="Tilemap3" sid="642458284268386">
-            <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
-            <transparent>1</transparent>
-            <parallax>
-                <x>1</x>
-                <y>1</y>
-            </parallax>
-            <zoom-rate>1</zoom-rate>
-            <opacity>1</opacity>
-            <force-own-texture>0</force-own-texture>
-            <global>0</global>
-            <use-render-cells>1</use-render-cells>
-            <blend-mode>0</blend-mode>
-            <effect-fallback>0</effect-fallback>
-            <instances />
-            <effects />
-        </layer>
         <layer name="Scenery" sid="843329560622153">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
@@ -302,11 +284,11 @@
                         <behavior-instance type="Platform">
                             <properties>
                                 <max-speed>0</max-speed>
-                                <acceleration>1500</acceleration>
-                                <deceleration>1500</deceleration>
-                                <jump-strength>0</jump-strength>
-                                <gravity>1500</gravity>
-                                <max-fall-speed>200</max-fall-speed>
+                                <acceleration>1080</acceleration>
+                                <deceleration>1080</deceleration>
+                                <jump-strength>429</jump-strength>
+                                <gravity>1800</gravity>
+                                <max-fall-speed>360</max-fall-speed>
                                 <double-jump>Disabled</double-jump>
                                 <jump-sustain>0</jump-sustain>
                                 <default-controls>No</default-controls>
@@ -348,11 +330,11 @@
                         <behavior-instance type="Platform">
                             <properties>
                                 <max-speed>0</max-speed>
-                                <acceleration>1500</acceleration>
-                                <deceleration>1500</deceleration>
-                                <jump-strength>0</jump-strength>
-                                <gravity>1500</gravity>
-                                <max-fall-speed>200</max-fall-speed>
+                                <acceleration>1080</acceleration>
+                                <deceleration>1080</deceleration>
+                                <jump-strength>429</jump-strength>
+                                <gravity>1800</gravity>
+                                <max-fall-speed>360</max-fall-speed>
                                 <double-jump>Disabled</double-jump>
                                 <jump-sustain>0</jump-sustain>
                                 <default-controls>No</default-controls>
@@ -411,11 +393,11 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <ID></ID>
                         <Obj_ImportID>obj_platform_normal</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
                         <Obj_Difficulty>Everything</Obj_Difficulty>
                         <Obj9pParent_Child>Obj9p_Platform</Obj9pParent_Child>
+                        <ID></ID>
                         <my_path>-1</my_path>
                         <speed_move>1</speed_move>
                     </instance-variables>
@@ -623,11 +605,11 @@
                         <behavior-instance type="Platform">
                             <properties>
                                 <max-speed>0</max-speed>
-                                <acceleration>1500</acceleration>
-                                <deceleration>1500</deceleration>
-                                <jump-strength>0</jump-strength>
-                                <gravity>1500</gravity>
-                                <max-fall-speed>200</max-fall-speed>
+                                <acceleration>1080</acceleration>
+                                <deceleration>1080</deceleration>
+                                <jump-strength>429</jump-strength>
+                                <gravity>1800</gravity>
+                                <max-fall-speed>360</max-fall-speed>
                                 <double-jump>Disabled</double-jump>
                                 <jump-sustain>0</jump-sustain>
                                 <default-controls>No</default-controls>
@@ -745,7 +727,7 @@
                     </properties>
                     <instance-variables>
                         <Obj_ImportID>obj_climb_mesh</Obj_ImportID>
-                        <Obj_ImportInstance></Obj_ImportInstance>
+                        <Obj_ImportInstance>0</Obj_ImportInstance>
                         <Obj_Difficulty>Everything</Obj_Difficulty>
                         <Obj9pParent_Child>Obj9p_ClimbMesh</Obj9pParent_Child>
                     </instance-variables>
@@ -900,11 +882,11 @@
                         <behavior-instance type="Platform">
                             <properties>
                                 <max-speed>0</max-speed>
-                                <acceleration>1500</acceleration>
-                                <deceleration>1500</deceleration>
-                                <jump-strength>0</jump-strength>
-                                <gravity>1500</gravity>
-                                <max-fall-speed>200</max-fall-speed>
+                                <acceleration>1080</acceleration>
+                                <deceleration>1080</deceleration>
+                                <jump-strength>429</jump-strength>
+                                <gravity>1800</gravity>
+                                <max-fall-speed>360</max-fall-speed>
                                 <double-jump>Disabled</double-jump>
                                 <jump-sustain>0</jump-sustain>
                                 <default-controls>No</default-controls>
@@ -1217,11 +1199,11 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <ID></ID>
                         <Obj_ImportID>obj_platform_rocket_apple</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
                         <Obj_Difficulty>Everything</Obj_Difficulty>
                         <Obj9pParent_Child>Obj9p_RocketApplePlatform</Obj9pParent_Child>
+                        <ID></ID>
                         <rocket_height>0</rocket_height>
                         <rocket_speed>0</rocket_speed>
                         <lower_speed>0</lower_speed>
@@ -1430,13 +1412,13 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <ID></ID>
                         <Obj_ImportID>obj_platform_orange</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
                         <Obj_Difficulty>Everything</Obj_Difficulty>
                         <Attach_Allowed>true</Attach_Allowed>
                         <Attach_True>false</Attach_True>
                         <Compat_Chain>true</Compat_Chain>
+                        <ID></ID>
                         <Segments>3</Segments>
                         <chain_segments>0</chain_segments>
                         <starting_angle>0</starting_angle>
@@ -1444,6 +1426,7 @@
                         <circle_angle>0</circle_angle>
                     </instance-variables>
                     <behavior-instances>
+                        <behavior-instance type="Pin" />
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Disabled</initial-state>
@@ -1454,7 +1437,6 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Pin" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1577,11 +1559,11 @@
                         <behavior-instance type="Platform">
                             <properties>
                                 <max-speed>0</max-speed>
-                                <acceleration>1500</acceleration>
-                                <deceleration>1500</deceleration>
-                                <jump-strength>0</jump-strength>
-                                <gravity>1500</gravity>
-                                <max-fall-speed>200</max-fall-speed>
+                                <acceleration>1080</acceleration>
+                                <deceleration>1080</deceleration>
+                                <jump-strength>429</jump-strength>
+                                <gravity>1800</gravity>
+                                <max-fall-speed>360</max-fall-speed>
                                 <double-jump>Disabled</double-jump>
                                 <jump-sustain>0</jump-sustain>
                                 <default-controls>No</default-controls>
@@ -1819,11 +1801,11 @@
                         <behavior-instance type="Platform">
                             <properties>
                                 <max-speed>0</max-speed>
-                                <acceleration>1500</acceleration>
-                                <deceleration>1500</deceleration>
-                                <jump-strength>0</jump-strength>
-                                <gravity>1500</gravity>
-                                <max-fall-speed>200</max-fall-speed>
+                                <acceleration>1080</acceleration>
+                                <deceleration>1080</deceleration>
+                                <jump-strength>429</jump-strength>
+                                <gravity>1800</gravity>
+                                <max-fall-speed>360</max-fall-speed>
                                 <double-jump>Disabled</double-jump>
                                 <jump-sustain>0</jump-sustain>
                                 <default-controls>No</default-controls>
@@ -1914,7 +1896,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>862</x>
-                        <y>-21</y>
+                        <y>-39</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -2245,7 +2227,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Obj_WaterDeco" uid="178">
+                <instance type="Obj_1rWaterDeco" uid="178">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2273,7 +2255,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="Obj9p_WaterDeco" uid="179">
+                <instance type="Obj9p_1rWaterDeco" uid="179">
                     <properties>
                         <left-margin>0</left-margin>
                         <right-margin>0</right-margin>
@@ -2286,7 +2268,7 @@
                         <seams>Overlap</seams>
                     </properties>
                     <instance-variables>
-                        <Obj9pChild_ID>Obj9p_WaterDeco</Obj9pChild_ID>
+                        <Obj9pChild_ID>Obj9p_1rWaterDeco</Obj9pChild_ID>
                         <Obj9pChild_AnimFrame>0</Obj9pChild_AnimFrame>
                     </instance-variables>
                     <behavior-instances>
@@ -2327,11 +2309,11 @@
                         <behavior-instance type="Platform">
                             <properties>
                                 <max-speed>0</max-speed>
-                                <acceleration>1500</acceleration>
-                                <deceleration>1500</deceleration>
-                                <jump-strength>0</jump-strength>
-                                <gravity>1500</gravity>
-                                <max-fall-speed>200</max-fall-speed>
+                                <acceleration>1080</acceleration>
+                                <deceleration>1080</deceleration>
+                                <jump-strength>429</jump-strength>
+                                <gravity>1800</gravity>
+                                <max-fall-speed>360</max-fall-speed>
                                 <double-jump>Disabled</double-jump>
                                 <jump-sustain>0</jump-sustain>
                                 <default-controls>No</default-controls>
@@ -2830,43 +2812,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Col_Platform" uid="51">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <ID></ID>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Disabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Jumpthru">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>131</x>
-                        <y>-66</y>
-                        <z>0</z>
-                        <width>32</width>
-                        <height>32</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="Col_Slope2_2" uid="55">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -3248,7 +3193,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text_Regular" uid="33">
+                <instance type="Text_Regular16" uid="33">
                     <properties>
                         <character-width>16</character-width>
                         <character-height>20</character-height>
@@ -3305,7 +3250,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text_Regular" uid="34">
+                <instance type="Text_Regular16" uid="34">
                     <properties>
                         <character-width>16</character-width>
                         <character-height>20</character-height>
@@ -3384,7 +3329,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text_Regular" uid="102">
+                <instance type="Text_Regular16" uid="102">
                     <properties>
                         <character-width>16</character-width>
                         <character-height>20</character-height>
@@ -3441,7 +3386,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text_Regular" uid="167">
+                <instance type="Text_Regular16" uid="167">
                     <properties>
                         <character-width>16</character-width>
                         <character-height>20</character-height>
@@ -3567,63 +3512,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text_Regular" uid="91">
-                    <properties>
-                        <character-width>16</character-width>
-                        <character-height>20</character-height>
-                        <character-set>!&quot;#$%&amp;&apos;()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~</character-set>
-                        <text>Yo what&apos;s up gamers</text>
-                        <scale>1</scale>
-                        <initial-visibility>Visible</initial-visibility>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Center</hotspot>
-                        <wrapping>Word</wrapping>
-                        <character-spacing>2</character-spacing>
-                        <line-height>0</line-height>
-                    </properties>
-                    <instance-variables>
-                        <ID>HUD_Message</ID>
-                        <ParentUID>0</ParentUID>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="LiteTween">
-                            <properties>
-                                <active-on-start>No</active-on-start>
-                                <tweened-property>Position</tweened-property>
-                                <function>Linear</function>
-                                <target>0</target>
-                                <target-mode>Absolute</target-mode>
-                                <duration>0</duration>
-                                <enforce-mode>Enforce</enforce-mode>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Pin" />
-                    </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0</blue>
-                                <green>0</green>
-                                <red>0</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>320</x>
-                        <y>180</y>
-                        <z>0</z>
-                        <width>576</width>
-                        <height>288</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="Menu_Controls" uid="93">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -3650,7 +3538,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text_Regular" uid="118">
+                <instance type="Text_Regular16" uid="118">
                     <properties>
                         <character-width>16</character-width>
                         <character-height>20</character-height>
@@ -3703,6 +3591,54 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Text_Regular12" uid="184">
+                    <properties>
+                        <character-width>12</character-width>
+                        <character-height>16</character-height>
+                        <character-set>!&quot;#$%&amp;&apos;()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~</character-set>
+                        <text>Name</text>
+                        <scale>1</scale>
+                        <initial-visibility>Visible</initial-visibility>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <character-spacing>2</character-spacing>
+                        <line-height>0</line-height>
+                    </properties>
+                    <instance-variables>
+                        <ID>HUD_Message</ID>
+                        <ParentUID>0</ParentUID>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="LiteTween">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <tweened-property>Position</tweened-property>
+                                <function>Linear</function>
+                                <target>0</target>
+                                <target-mode>Absolute</target-mode>
+                                <duration>0</duration>
+                                <enforce-mode>Enforce</enforce-mode>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>320</x>
+                        <y>180</y>
+                        <z>0</z>
+                        <width>576</width>
+                        <height>288</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -4186,7 +4122,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Text_Regular" uid="60">
+                <instance type="Text_Regular16" uid="60">
                     <properties>
                         <character-width>16</character-width>
                         <character-height>20</character-height>
@@ -4269,7 +4205,7 @@
         <instance type="Var_Level" uid="59">
             <instance-variables>
                 <RoomEngine>GMS2</RoomEngine>
-                <Room>rm_canyon_5</Room>
+                <Room>rm_park_1</Room>
                 <Difficulty>Normal</Difficulty>
                 <ImportErrorAttempts>0</ImportErrorAttempts>
             </instance-variables>
