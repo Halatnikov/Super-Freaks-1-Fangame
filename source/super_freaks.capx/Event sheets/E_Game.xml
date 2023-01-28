@@ -2545,359 +2545,112 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <comment>&quot;tiles&quot;</comment>
-                        <event-block sid="920003376648914">
+                        <event-block sid="992610237305705">
                             <conditions>
-                                <condition id="100" name="For each property" sid="800686593878341" type="JSON_Room">
-                                    <param id="0" name="Reference point">0</param>
-                                    <param id="1" name="Key {n}">&quot;room&quot;{###}&quot;tiles&quot;{###}&quot;tile&quot;</param>
+                                <condition id="-14" name="Compare variable" sid="593533220176614" type="System">
+                                    <param id="0" name="Variable">game</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;GM8_3&quot;</param>
                                 </condition>
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="476338318651881">
-                                    <conditions />
-                                    <actions>
-                                        <action id="-3" name="Create object" sid="836638451920620" type="System">
-                                            <param id="0" name="Object to create">Tiles_GMS1</param>
-                                            <param id="1" name="Layer">&quot;SceneryLow&quot;</param>
-                                            <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_Room.CurrentKey,&quot;roomPosition&quot;,&quot;x&quot;))</param>
-                                            <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_Room.CurrentKey,&quot;roomPosition&quot;,&quot;y&quot;))</param>
-                                        </action>
-                                        <action id="2" name="Set sub-image offset and size" sid="836499785377832" type="Tiles_GMS1">
-                                            <param id="0" name="offset x">int(JSON_Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_Room.CurrentKey,&quot;backgroundPosition&quot;,&quot;x&quot;))</param>
-                                            <param id="1" name="offset y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_Room.CurrentKey,&quot;backgroundPosition&quot;,&quot;y&quot;))</param>
-                                            <param id="2" name="sub width">int(JSON_Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_Room.CurrentKey,&quot;size&quot;,&quot;width&quot;))</param>
-                                            <param id="3" name="sub height">int(JSON_Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_Room.CurrentKey,&quot;size&quot;,&quot;height&quot;))</param>
-                                        </action>
-                                        <action id="-7" name="Set size" sid="939702938439844" type="Tiles_GMS1">
-                                            <param id="0" name="Width">int(JSON_Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_Room.CurrentKey,&quot;size&quot;,&quot;width&quot;))</param>
-                                            <param id="1" name="Height">int(JSON_Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_Room.CurrentKey,&quot;size&quot;,&quot;height&quot;))</param>
-                                        </action>
-                                    </actions>
-                                    <sub-events>
-                                        <event-block sid="596196141068711">
-                                            <conditions>
-                                                <condition id="-8" name="Compare two values" sid="318904541643751" type="System">
-                                                    <param id="0" name="First value">JSON_Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_Room.CurrentKey,&quot;background&quot;)</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Second value">&quot;bacBattleBaseTiles&quot;</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="2" name="Set sub-image offset and size" sid="201904487858995" type="Tiles_GMS1">
-                                                    <param id="0" name="offset x">Self.offsetX+0</param>
-                                                    <param id="1" name="offset y">Self.offsetY+0</param>
-                                                    <param id="2" name="sub width">Self.SubWidth</param>
-                                                    <param id="3" name="sub height">Self.SubHeight</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="223450983465917">
-                                            <conditions>
-                                                <condition id="-8" name="Compare two values" sid="275892359571869" type="System">
-                                                    <param id="0" name="First value">JSON_Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_Room.CurrentKey,&quot;background&quot;)</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Second value">&quot;bacCandyTiles&quot;</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="2" name="Set sub-image offset and size" sid="377488827168045" type="Tiles_GMS1">
-                                                    <param id="0" name="offset x">Self.offsetX+64</param>
-                                                    <param id="1" name="offset y">Self.offsetY+0</param>
-                                                    <param id="2" name="sub width">Self.SubWidth</param>
-                                                    <param id="3" name="sub height">Self.SubHeight</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="306305433444026">
-                                            <conditions>
-                                                <condition id="-8" name="Compare two values" sid="748475577776314" type="System">
-                                                    <param id="0" name="First value">JSON_Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_Room.CurrentKey,&quot;background&quot;)</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Second value">&quot;bacHallucination&quot;</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="2" name="Set sub-image offset and size" sid="531243179579724" type="Tiles_GMS1">
-                                                    <param id="0" name="offset x">Self.offsetX+128</param>
-                                                    <param id="1" name="offset y">Self.offsetY+0</param>
-                                                    <param id="2" name="sub width">Self.SubWidth</param>
-                                                    <param id="3" name="sub height">Self.SubHeight</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="395080143120130">
-                                            <conditions>
-                                                <condition id="-8" name="Compare two values" sid="637199394695857" type="System">
-                                                    <param id="0" name="First value">JSON_Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_Room.CurrentKey,&quot;background&quot;)</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Second value">&quot;bacSunPalaceTile&quot;</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="2" name="Set sub-image offset and size" sid="705122327286386" type="Tiles_GMS1">
-                                                    <param id="0" name="offset x">Self.offsetX+192</param>
-                                                    <param id="1" name="offset y">Self.offsetY+0</param>
-                                                    <param id="2" name="sub width">Self.SubWidth</param>
-                                                    <param id="3" name="sub height">Self.SubHeight</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <comment>objects</comment>
-                        <event-block sid="766135434876772">
-                            <conditions>
-                                <condition id="100" name="For each property" sid="400917473998887" type="JSON_Room">
-                                    <param id="0" name="Reference point">0</param>
-                                    <param id="1" name="Key {n}">&quot;room&quot;{###}&quot;instances&quot;{###}&quot;instance&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="519395707712937">
-                                    <conditions />
-                                    <actions>
-                                        <action id="-9" name="Set value" sid="406416649596692" type="System">
-                                            <param id="0" name="Variable">instance</param>
-                                            <param id="1" name="Value">JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;object&quot;)</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="266423794448829">
+                                <comment>&quot;tiles&quot;</comment>
+                                <event-block sid="920003376648914">
                                     <conditions>
-                                        <condition id="-8" name="Compare two values" sid="501758181140255" type="System">
-                                            <param id="0" name="First value">find(JSON_Room.InstanceArray,instance&amp;&quot;,&quot;)</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Second value">-1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="264059134424896" type="JSON_Room">
-                                            <param id="0" name="Instance variable">InstanceArray</param>
-                                            <param id="1" name="Value">Self.InstanceArray&amp;instance&amp;&quot;,&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <comment>&quot;tiles&quot; 2: the squeakvel</comment>
-                                <event-block any="1" sid="831325694272434">
-                                    <conditions>
-                                        <condition id="-8" inverted="1" name="Compare two values" sid="486558580690976" type="System">
-                                            <param id="0" name="First value">find(instance,&quot;Floor&quot;)</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Second value">-1</param>
-                                        </condition>
-                                        <condition id="-8" inverted="1" name="Compare two values" sid="755099720406400" type="System">
-                                            <param id="0" name="First value">find(instance,&quot;Ceiling&quot;)</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Second value">-1</param>
+                                        <condition id="100" name="For each property" sid="800686593878341" type="JSON_Room">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}">&quot;room&quot;{###}&quot;tiles&quot;{###}&quot;tile&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="442832710470221">
-                                            <conditions>
-                                                <condition id="-14" inverted="1" name="Compare variable" sid="863429584918510" type="System">
-                                                    <param id="0" name="Variable">instance</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;objCrackedFloor&quot;</param>
-                                                </condition>
-                                            </conditions>
+                                        <event-block sid="476338318651881">
+                                            <conditions />
                                             <actions>
-                                                <action id="-3" name="Create object" sid="361022087312373" type="System">
-                                                    <param id="0" name="Object to create">Tiles_GM8</param>
-                                                    <param id="1" name="Layer">&quot;Scenery&quot;</param>
-                                                    <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))</param>
-                                                    <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))</param>
+                                                <action id="-3" name="Create object" sid="836638451920620" type="System">
+                                                    <param id="0" name="Object to create">Tiles_GMS1</param>
+                                                    <param id="1" name="Layer">&quot;SceneryLow&quot;</param>
+                                                    <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_Room.CurrentKey,&quot;roomPosition&quot;,&quot;x&quot;))</param>
+                                                    <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_Room.CurrentKey,&quot;roomPosition&quot;,&quot;y&quot;))</param>
                                                 </action>
-                                                <action id="-3" name="Create object" sid="882746325267041" type="System">
-                                                    <param id="0" name="Object to create">Col_Solid</param>
-                                                    <param id="1" name="Layer">&quot;Collisions&quot;</param>
-                                                    <param id="2" name="X">Tiles_GM8.X</param>
-                                                    <param id="3" name="Y">Tiles_GM8.Y</param>
+                                                <action id="2" name="Set sub-image offset and size" sid="836499785377832" type="Tiles_GMS1">
+                                                    <param id="0" name="offset x">int(JSON_Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_Room.CurrentKey,&quot;backgroundPosition&quot;,&quot;x&quot;))</param>
+                                                    <param id="1" name="offset y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_Room.CurrentKey,&quot;backgroundPosition&quot;,&quot;y&quot;))</param>
+                                                    <param id="2" name="sub width">int(JSON_Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_Room.CurrentKey,&quot;size&quot;,&quot;width&quot;))</param>
+                                                    <param id="3" name="sub height">int(JSON_Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_Room.CurrentKey,&quot;size&quot;,&quot;height&quot;))</param>
                                                 </action>
-                                                <action id="-10" name="Set value" sid="147855660425628" type="Col_Solid">
-                                                    <param id="0" name="Instance variable">ID</param>
-                                                    <param id="1" name="Value">&quot;gm8_&quot;&amp;str(Tiles_GM8.UID)</param>
+                                                <action id="-7" name="Set size" sid="939702938439844" type="Tiles_GMS1">
+                                                    <param id="0" name="Width">int(JSON_Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_Room.CurrentKey,&quot;size&quot;,&quot;width&quot;))</param>
+                                                    <param id="1" name="Height">int(JSON_Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_Room.CurrentKey,&quot;size&quot;,&quot;height&quot;))</param>
                                                 </action>
                                             </actions>
                                             <sub-events>
-                                                <event-block sid="614261791044782">
+                                                <event-block sid="596196141068711">
                                                     <conditions>
-                                                        <condition id="-14" name="Compare variable" sid="776822604774611" type="System">
-                                                            <param id="0" name="Variable">instance</param>
+                                                        <condition id="-8" name="Compare two values" sid="318904541643751" type="System">
+                                                            <param id="0" name="First value">JSON_Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_Room.CurrentKey,&quot;background&quot;)</param>
                                                             <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;objGrassFloor&quot;</param>
+                                                            <param id="2" name="Second value">&quot;bacBattleBaseTiles&quot;</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action id="2" name="Set sub-image offset and size" sid="263460338767385" type="Tiles_GM8">
-                                                            <param id="0" name="offset x">0</param>
-                                                            <param id="1" name="offset y">32</param>
-                                                            <param id="2" name="sub width">32</param>
-                                                            <param id="3" name="sub height">32</param>
+                                                        <action id="2" name="Set sub-image offset and size" sid="201904487858995" type="Tiles_GMS1">
+                                                            <param id="0" name="offset x">Self.offsetX+0</param>
+                                                            <param id="1" name="offset y">Self.offsetY+0</param>
+                                                            <param id="2" name="sub width">Self.SubWidth</param>
+                                                            <param id="3" name="sub height">Self.SubHeight</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
-                                                <event-block sid="133863777761516">
+                                                <event-block sid="223450983465917">
                                                     <conditions>
-                                                        <condition id="-14" name="Compare variable" sid="158175458474850" type="System">
-                                                            <param id="0" name="Variable">instance</param>
+                                                        <condition id="-8" name="Compare two values" sid="275892359571869" type="System">
+                                                            <param id="0" name="First value">JSON_Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_Room.CurrentKey,&quot;background&quot;)</param>
                                                             <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;objRobotFloor&quot;</param>
+                                                            <param id="2" name="Second value">&quot;bacCandyTiles&quot;</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action id="2" name="Set sub-image offset and size" sid="647737940711063" type="Tiles_GM8">
-                                                            <param id="0" name="offset x">32</param>
-                                                            <param id="1" name="offset y">32</param>
-                                                            <param id="2" name="sub width">32</param>
-                                                            <param id="3" name="sub height">32</param>
+                                                        <action id="2" name="Set sub-image offset and size" sid="377488827168045" type="Tiles_GMS1">
+                                                            <param id="0" name="offset x">Self.offsetX+64</param>
+                                                            <param id="1" name="offset y">Self.offsetY+0</param>
+                                                            <param id="2" name="sub width">Self.SubWidth</param>
+                                                            <param id="3" name="sub height">Self.SubHeight</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
-                                                <event-block sid="517167345891251">
+                                                <event-block sid="306305433444026">
                                                     <conditions>
-                                                        <condition id="-14" name="Compare variable" sid="446622932305934" type="System">
-                                                            <param id="0" name="Variable">instance</param>
+                                                        <condition id="-8" name="Compare two values" sid="748475577776314" type="System">
+                                                            <param id="0" name="First value">JSON_Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_Room.CurrentKey,&quot;background&quot;)</param>
                                                             <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;objCandyFloor&quot;</param>
+                                                            <param id="2" name="Second value">&quot;bacHallucination&quot;</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action id="2" name="Set sub-image offset and size" sid="724532067847195" type="Tiles_GM8">
-                                                            <param id="0" name="offset x">64</param>
-                                                            <param id="1" name="offset y">32</param>
-                                                            <param id="2" name="sub width">32</param>
-                                                            <param id="3" name="sub height">32</param>
+                                                        <action id="2" name="Set sub-image offset and size" sid="531243179579724" type="Tiles_GMS1">
+                                                            <param id="0" name="offset x">Self.offsetX+128</param>
+                                                            <param id="1" name="offset y">Self.offsetY+0</param>
+                                                            <param id="2" name="sub width">Self.SubWidth</param>
+                                                            <param id="3" name="sub height">Self.SubHeight</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
-                                                <event-block sid="960024743088717">
+                                                <event-block sid="395080143120130">
                                                     <conditions>
-                                                        <condition id="-14" name="Compare variable" sid="201962320173346" type="System">
-                                                            <param id="0" name="Variable">instance</param>
+                                                        <condition id="-8" name="Compare two values" sid="637199394695857" type="System">
+                                                            <param id="0" name="First value">JSON_Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_Room.CurrentKey,&quot;background&quot;)</param>
                                                             <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;objCandyCeiling&quot;</param>
+                                                            <param id="2" name="Second value">&quot;bacSunPalaceTile&quot;</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action id="2" name="Set sub-image offset and size" sid="107951045506834" type="Tiles_GM8">
-                                                            <param id="0" name="offset x">96</param>
-                                                            <param id="1" name="offset y">32</param>
-                                                            <param id="2" name="sub width">32</param>
-                                                            <param id="3" name="sub height">32</param>
-                                                        </action>
-                                                        <action id="8" name="Set flipped" sid="837582268696261" type="Col_Solid">
-                                                            <param id="0" name="State">0</param>
-                                                        </action>
-                                                        <action id="-2" name="Set Y" sid="346135806071408" type="Col_Solid">
-                                                            <param id="0" name="Y">Self.Y+32</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="837699016722161">
-                                                    <conditions>
-                                                        <condition id="-14" name="Compare variable" sid="922103988494394" type="System">
-                                                            <param id="0" name="Variable">instance</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;objInsaneFloor&quot;</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="2" name="Set sub-image offset and size" sid="231849316520437" type="Tiles_GM8">
-                                                            <param id="0" name="offset x">128</param>
-                                                            <param id="1" name="offset y">32</param>
-                                                            <param id="2" name="sub width">32</param>
-                                                            <param id="3" name="sub height">32</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="183858583678068">
-                                                    <conditions>
-                                                        <condition id="-14" name="Compare variable" sid="351199422567243" type="System">
-                                                            <param id="0" name="Variable">instance</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;objMountainFloor&quot;</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="2" name="Set sub-image offset and size" sid="191506414008228" type="Tiles_GM8">
-                                                            <param id="0" name="offset x">160</param>
-                                                            <param id="1" name="offset y">32</param>
-                                                            <param id="2" name="sub width">32</param>
-                                                            <param id="3" name="sub height">32</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="790110559784425">
-                                                    <conditions>
-                                                        <condition id="-14" name="Compare variable" sid="998794889280146" type="System">
-                                                            <param id="0" name="Variable">instance</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;objPurpleFloor&quot;</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="2" name="Set sub-image offset and size" sid="679223269434854" type="Tiles_GM8">
-                                                            <param id="0" name="offset x">192</param>
-                                                            <param id="1" name="offset y">32</param>
-                                                            <param id="2" name="sub width">32</param>
-                                                            <param id="3" name="sub height">32</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="512804226896704">
-                                                    <conditions>
-                                                        <condition id="-14" name="Compare variable" sid="381681132931370" type="System">
-                                                            <param id="0" name="Variable">instance</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;objIceFloor&quot;</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="2" name="Set sub-image offset and size" sid="949082754743084" type="Tiles_GM8">
-                                                            <param id="0" name="offset x">224</param>
-                                                            <param id="1" name="offset y">32</param>
-                                                            <param id="2" name="sub width">32</param>
-                                                            <param id="3" name="sub height">32</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="531221681588935">
-                                                    <conditions>
-                                                        <condition id="-14" name="Compare variable" sid="896212537823669" type="System">
-                                                            <param id="0" name="Variable">instance</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;objSunFloor&quot;</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="2" name="Set sub-image offset and size" sid="476660944482681" type="Tiles_GM8">
-                                                            <param id="0" name="offset x">256</param>
-                                                            <param id="1" name="offset y">32</param>
-                                                            <param id="2" name="sub width">32</param>
-                                                            <param id="3" name="sub height">32</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="688031940432893">
-                                                    <conditions>
-                                                        <condition id="-14" name="Compare variable" sid="606457664899268" type="System">
-                                                            <param id="0" name="Variable">instance</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;objSunPalaceFloor&quot;</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="2" name="Set sub-image offset and size" sid="367492454830455" type="Tiles_GM8">
-                                                            <param id="0" name="offset x">288</param>
-                                                            <param id="1" name="offset y">32</param>
-                                                            <param id="2" name="sub width">32</param>
-                                                            <param id="3" name="sub height">32</param>
+                                                        <action id="2" name="Set sub-image offset and size" sid="705122327286386" type="Tiles_GMS1">
+                                                            <param id="0" name="offset x">Self.offsetX+192</param>
+                                                            <param id="1" name="offset y">Self.offsetY+0</param>
+                                                            <param id="2" name="sub width">Self.SubWidth</param>
+                                                            <param id="3" name="sub height">Self.SubHeight</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -2906,404 +2659,746 @@
                                     </sub-events>
                                 </event-block>
                                 <comment>objects</comment>
-                                <event-block sid="332086841290308">
+                                <event-block sid="766135434876772">
                                     <conditions>
-                                        <condition id="-14" name="Compare variable" sid="394725372384333" type="System">
-                                            <param id="0" name="Variable">instance</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;objExit&quot;</param>
+                                        <condition id="100" name="For each property" sid="400917473998887" type="JSON_Room">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}">&quot;room&quot;{###}&quot;instances&quot;{###}&quot;instance&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="176562739515959">
-                                            <conditions>
-                                                <condition id="-14" inverted="1" name="Compare variable" sid="266411121791119" type="System">
-                                                    <param id="0" name="Variable">next_room</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;&quot;</param>
-                                                </condition>
-                                            </conditions>
+                                        <event-block sid="519395707712937">
+                                            <conditions />
                                             <actions>
-                                                <action id="-3" name="Create object" sid="598600384741984" type="System">
-                                                    <param id="0" name="Object to create">Obj_Portal</param>
-                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                                    <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))+32</param>
-                                                    <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))+32</param>
-                                                </action>
-                                                <action id="-10" name="Set value" sid="156897752716762" type="Obj_Portal">
-                                                    <param id="0" name="Instance variable">Obj_ImportID</param>
-                                                    <param id="1" name="Value">instance</param>
-                                                </action>
-                                                <action id="4" name="Set animation" sid="182521209280778" type="Obj_Portal">
-                                                    <param id="0" name="Animation">&quot;Exit_3&quot;</param>
-                                                    <param id="1" name="From">1</param>
-                                                </action>
-                                                <action id="-16" name="Wait" sid="438200522823356" type="System">
-                                                    <param id="0" name="Seconds">0.2</param>
-                                                </action>
-                                                <action id="-10" name="Set value" sid="361459397862137" type="Obj_Portal">
-                                                    <param id="0" name="Instance variable">destination_room</param>
-                                                    <param id="1" name="Value">next_room</param>
+                                                <action id="-9" name="Set value" sid="406416649596692" type="System">
+                                                    <param id="0" name="Variable">instance</param>
+                                                    <param id="1" name="Value">JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;object&quot;)</param>
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="255599758260140">
+                                        <event-block sid="266423794448829">
                                             <conditions>
-                                                <condition id="-14" name="Compare variable" sid="493611143967881" type="System">
-                                                    <param id="0" name="Variable">next_room</param>
+                                                <condition id="-8" name="Compare two values" sid="501758181140255" type="System">
+                                                    <param id="0" name="First value">find(JSON_Room.InstanceArray,instance&amp;&quot;,&quot;)</param>
                                                     <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;&quot;</param>
+                                                    <param id="2" name="Second value">-1</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-3" name="Create object" sid="710129720150391" type="System">
-                                                    <param id="0" name="Object to create">Obj_SkullJar</param>
+                                                <action id="-10" name="Set value" sid="264059134424896" type="JSON_Room">
+                                                    <param id="0" name="Instance variable">InstanceArray</param>
+                                                    <param id="1" name="Value">Self.InstanceArray&amp;instance&amp;&quot;,&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="163386109610749">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="805267739628076" type="System">
+                                                    <param id="0" name="Variable">instance</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;objNoSpeedChange&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="20" name="Set Value" sid="140138816480711" type="JSON_PERSIST">
+                                                    <param id="0" name="Value">replace(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;game,Function.Param(0),&quot;Flags&quot;),&quot;|SpeedSuit&quot;,&quot;&quot;)</param>
+                                                    <param id="1" name="Reference point">0</param>
+                                                    <param id="2" name="Key {n}">&quot;ImportRoom_&quot;&amp;game{###}Function.Param(0){###}&quot;Flags&quot;</param>
+                                                </action>
+                                                <action id="14" name="Log" sid="874240879484428" type="Browser">
+                                                    <param id="0" name="Type">0</param>
+                                                    <param id="1" name="Message">instance</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="731127531585695">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="133533962123495" type="System">
+                                                    <param id="0" name="Variable">instance</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;objNoStrongChange&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="20" name="Set Value" sid="686354507704001" type="JSON_PERSIST">
+                                                    <param id="0" name="Value">replace(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;game,Function.Param(0),&quot;Flags&quot;),&quot;|StrongSuit&quot;,&quot;&quot;)</param>
+                                                    <param id="1" name="Reference point">0</param>
+                                                    <param id="2" name="Key {n}">&quot;ImportRoom_&quot;&amp;game{###}Function.Param(0){###}&quot;Flags&quot;</param>
+                                                </action>
+                                                <action id="14" name="Log" sid="276749899821672" type="Browser">
+                                                    <param id="0" name="Type">0</param>
+                                                    <param id="1" name="Message">instance</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <comment>&quot;tiles&quot; 2: the squeakvel</comment>
+                                        <event-block any="1" sid="831325694272434">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Compare two values" sid="486558580690976" type="System">
+                                                    <param id="0" name="First value">find(instance,&quot;Floor&quot;)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">-1</param>
+                                                </condition>
+                                                <condition id="-8" inverted="1" name="Compare two values" sid="755099720406400" type="System">
+                                                    <param id="0" name="First value">find(instance,&quot;Ceiling&quot;)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">-1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="442832710470221">
+                                                    <conditions>
+                                                        <condition id="-14" inverted="1" name="Compare variable" sid="863429584918510" type="System">
+                                                            <param id="0" name="Variable">instance</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;objCrackedFloor&quot;</param>
+                                                        </condition>
+                                                        <condition id="-14" inverted="1" name="Compare variable" sid="552867034587896" type="System">
+                                                            <param id="0" name="Variable">instance</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;objCrackedFloor2&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-3" name="Create object" sid="361022087312373" type="System">
+                                                            <param id="0" name="Object to create">Tiles_GM8</param>
+                                                            <param id="1" name="Layer">&quot;Scenery&quot;</param>
+                                                            <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))</param>
+                                                            <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))</param>
+                                                        </action>
+                                                        <action id="-3" name="Create object" sid="882746325267041" type="System">
+                                                            <param id="0" name="Object to create">Col_Solid</param>
+                                                            <param id="1" name="Layer">&quot;Collisions&quot;</param>
+                                                            <param id="2" name="X">Tiles_GM8.X</param>
+                                                            <param id="3" name="Y">Tiles_GM8.Y</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="147855660425628" type="Col_Solid">
+                                                            <param id="0" name="Instance variable">ID</param>
+                                                            <param id="1" name="Value">&quot;gm8_&quot;&amp;str(Tiles_GM8.UID)</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <event-block sid="614261791044782">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="776822604774611" type="System">
+                                                                    <param id="0" name="Variable">instance</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;objGrassFloor&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="2" name="Set sub-image offset and size" sid="263460338767385" type="Tiles_GM8">
+                                                                    <param id="0" name="offset x">0</param>
+                                                                    <param id="1" name="offset y">32</param>
+                                                                    <param id="2" name="sub width">32</param>
+                                                                    <param id="3" name="sub height">32</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="133863777761516">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="158175458474850" type="System">
+                                                                    <param id="0" name="Variable">instance</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;objRobotFloor&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="2" name="Set sub-image offset and size" sid="647737940711063" type="Tiles_GM8">
+                                                                    <param id="0" name="offset x">32</param>
+                                                                    <param id="1" name="offset y">32</param>
+                                                                    <param id="2" name="sub width">32</param>
+                                                                    <param id="3" name="sub height">32</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="517167345891251">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="446622932305934" type="System">
+                                                                    <param id="0" name="Variable">instance</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;objCandyFloor&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="2" name="Set sub-image offset and size" sid="724532067847195" type="Tiles_GM8">
+                                                                    <param id="0" name="offset x">64</param>
+                                                                    <param id="1" name="offset y">32</param>
+                                                                    <param id="2" name="sub width">32</param>
+                                                                    <param id="3" name="sub height">32</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="960024743088717">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="201962320173346" type="System">
+                                                                    <param id="0" name="Variable">instance</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;objCandyCeiling&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="2" name="Set sub-image offset and size" sid="107951045506834" type="Tiles_GM8">
+                                                                    <param id="0" name="offset x">96</param>
+                                                                    <param id="1" name="offset y">32</param>
+                                                                    <param id="2" name="sub width">32</param>
+                                                                    <param id="3" name="sub height">32</param>
+                                                                </action>
+                                                                <action id="8" name="Set flipped" sid="837582268696261" type="Col_Solid">
+                                                                    <param id="0" name="State">0</param>
+                                                                </action>
+                                                                <action id="-2" name="Set Y" sid="346135806071408" type="Col_Solid">
+                                                                    <param id="0" name="Y">Self.Y+32</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="837699016722161">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="922103988494394" type="System">
+                                                                    <param id="0" name="Variable">instance</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;objInsaneFloor&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="2" name="Set sub-image offset and size" sid="231849316520437" type="Tiles_GM8">
+                                                                    <param id="0" name="offset x">128</param>
+                                                                    <param id="1" name="offset y">32</param>
+                                                                    <param id="2" name="sub width">32</param>
+                                                                    <param id="3" name="sub height">32</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="183858583678068">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="351199422567243" type="System">
+                                                                    <param id="0" name="Variable">instance</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;objMountainFloor&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="2" name="Set sub-image offset and size" sid="191506414008228" type="Tiles_GM8">
+                                                                    <param id="0" name="offset x">160</param>
+                                                                    <param id="1" name="offset y">32</param>
+                                                                    <param id="2" name="sub width">32</param>
+                                                                    <param id="3" name="sub height">32</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="790110559784425">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="998794889280146" type="System">
+                                                                    <param id="0" name="Variable">instance</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;objPurpleFloor&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="2" name="Set sub-image offset and size" sid="679223269434854" type="Tiles_GM8">
+                                                                    <param id="0" name="offset x">192</param>
+                                                                    <param id="1" name="offset y">32</param>
+                                                                    <param id="2" name="sub width">32</param>
+                                                                    <param id="3" name="sub height">32</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="512804226896704">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="381681132931370" type="System">
+                                                                    <param id="0" name="Variable">instance</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;objIceFloor&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="2" name="Set sub-image offset and size" sid="949082754743084" type="Tiles_GM8">
+                                                                    <param id="0" name="offset x">224</param>
+                                                                    <param id="1" name="offset y">32</param>
+                                                                    <param id="2" name="sub width">32</param>
+                                                                    <param id="3" name="sub height">32</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="531221681588935">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="896212537823669" type="System">
+                                                                    <param id="0" name="Variable">instance</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;objSunFloor&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="2" name="Set sub-image offset and size" sid="476660944482681" type="Tiles_GM8">
+                                                                    <param id="0" name="offset x">256</param>
+                                                                    <param id="1" name="offset y">32</param>
+                                                                    <param id="2" name="sub width">32</param>
+                                                                    <param id="3" name="sub height">32</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="688031940432893">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="606457664899268" type="System">
+                                                                    <param id="0" name="Variable">instance</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;objSunPalaceFloor&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="2" name="Set sub-image offset and size" sid="367492454830455" type="Tiles_GM8">
+                                                                    <param id="0" name="offset x">288</param>
+                                                                    <param id="1" name="offset y">32</param>
+                                                                    <param id="2" name="sub width">32</param>
+                                                                    <param id="3" name="sub height">32</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="956774450799003">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="553822681215900" type="System">
+                                                                    <param id="0" name="Variable">instance</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;objCastleFloor&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="2" name="Set sub-image offset and size" sid="158638693229541" type="Tiles_GM8">
+                                                                    <param id="0" name="offset x">320</param>
+                                                                    <param id="1" name="offset y">32</param>
+                                                                    <param id="2" name="sub width">32</param>
+                                                                    <param id="3" name="sub height">32</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <comment>objects</comment>
+                                        <event-block sid="332086841290308">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="394725372384333" type="System">
+                                                    <param id="0" name="Variable">instance</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;objExit&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="176562739515959">
+                                                    <conditions>
+                                                        <condition id="-14" inverted="1" name="Compare variable" sid="266411121791119" type="System">
+                                                            <param id="0" name="Variable">next_room</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-3" name="Create object" sid="598600384741984" type="System">
+                                                            <param id="0" name="Object to create">Obj_Portal</param>
+                                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                            <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))+32</param>
+                                                            <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))+32</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="156897752716762" type="Obj_Portal">
+                                                            <param id="0" name="Instance variable">Obj_ImportID</param>
+                                                            <param id="1" name="Value">instance</param>
+                                                        </action>
+                                                        <action id="4" name="Set animation" sid="182521209280778" type="Obj_Portal">
+                                                            <param id="0" name="Animation">&quot;Exit_3&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="-16" name="Wait" sid="438200522823356" type="System">
+                                                            <param id="0" name="Seconds">0.2</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="361459397862137" type="Obj_Portal">
+                                                            <param id="0" name="Instance variable">destination_room</param>
+                                                            <param id="1" name="Value">next_room</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="255599758260140">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="493611143967881" type="System">
+                                                            <param id="0" name="Variable">next_room</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-3" name="Create object" sid="710129720150391" type="System">
+                                                            <param id="0" name="Object to create">Obj_SkullJar</param>
+                                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                            <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))+32</param>
+                                                            <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))+32</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="185244071658189" type="Obj_SkullJar">
+                                                            <param id="0" name="Instance variable">Obj_ImportID</param>
+                                                            <param id="1" name="Value">instance</param>
+                                                        </action>
+                                                        <action id="4" name="Set animation" sid="631849779040342" type="Obj_SkullJar">
+                                                            <param id="0" name="Animation">&quot;Key_3&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block any="1" sid="504245248595734">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="543600672334556" type="System">
+                                                    <param id="0" name="Variable">instance</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;objScruffy&quot;</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="320882114251053" type="System">
+                                                    <param id="0" name="Variable">instance</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;objScruffyCutscene1&quot;</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="818540130515328" type="System">
+                                                    <param id="0" name="Variable">instance</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;objScruffyCutscene2&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="505263998737696" type="System">
+                                                    <param id="0" name="Object to create">Special_StartPos</param>
                                                     <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                                    <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))+32</param>
+                                                    <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))+16</param>
                                                     <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))+32</param>
                                                 </action>
-                                                <action id="-10" name="Set value" sid="185244071658189" type="Obj_SkullJar">
+                                                <action id="-10" name="Set value" sid="485149449634616" type="Special_StartPos">
                                                     <param id="0" name="Instance variable">Obj_ImportID</param>
                                                     <param id="1" name="Value">instance</param>
                                                 </action>
-                                                <action id="4" name="Set animation" sid="631849779040342" type="Obj_SkullJar">
-                                                    <param id="0" name="Animation">&quot;Key_3&quot;</param>
+                                            </actions>
+                                        </event-block>
+                                        <event-block any="1" sid="897251396619610">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="518559939825248" type="System">
+                                                    <param id="0" name="Variable">instance</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;objSCar&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="617215619171633" type="System">
+                                                    <param id="0" name="Object to create">Special_StartPos</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))+48</param>
+                                                    <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))+64</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="434712830342033" type="Special_StartPos">
+                                                    <param id="0" name="Instance variable">Obj_ImportID</param>
+                                                    <param id="1" name="Value">instance</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="838455493644256">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="583937209877654" type="System">
+                                                    <param id="0" name="Variable">instance</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;objBlocker&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="673740136341238" type="System">
+                                                    <param id="0" name="Object to create">Special_EnemyBlocker</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))</param>
+                                                    <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="596781916151659" type="Special_EnemyBlocker">
+                                                    <param id="0" name="Instance variable">Obj_ImportID</param>
+                                                    <param id="1" name="Value">instance</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="141844390661118">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="546321322993186" type="System">
+                                                    <param id="0" name="Variable">instance</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;objBarrelKiller&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="272301099722911" type="System">
+                                                    <param id="0" name="Object to create">Special_EnemyBlocker</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))</param>
+                                                    <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="917326239633214" type="Special_EnemyBlocker">
+                                                    <param id="0" name="Instance variable">Obj_ImportID</param>
+                                                    <param id="1" name="Value">instance</param>
+                                                </action>
+                                                <action id="5" name="Set frame" sid="356817041131989" type="Special_EnemyBlocker">
+                                                    <param id="0" name="Frame number">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="801379846892678">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="369764914546314" type="System">
+                                                    <param id="0" name="Variable">instance</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;objLittleRobot&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="308261889404068" type="System">
+                                                    <param id="0" name="Object to create">Enemy_BoneyM</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))+16</param>
+                                                    <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))+16</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="441085789672876" type="Enemy_BoneyM">
+                                                    <param id="0" name="Instance variable">Obj_ImportID</param>
+                                                    <param id="1" name="Value">instance</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="966937222624646" type="Enemy_BoneyM">
+                                                    <param id="0" name="Animation">&quot;Robot_1&quot;</param>
                                                     <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="348274749493430" type="Enemy_BoneyM">
+                                                    <param id="0" name="Instance variable">walk_speed</param>
+                                                    <param id="1" name="Value">2</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="911232020401795">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="292097313191214" type="System">
+                                                    <param id="0" name="Variable">instance</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;objBigRobot&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="935995183143283" type="System">
+                                                    <param id="0" name="Object to create">Enemy_BoneyM</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))+16</param>
+                                                    <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))+32</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="407763667469961" type="Enemy_BoneyM">
+                                                    <param id="0" name="Instance variable">Obj_ImportID</param>
+                                                    <param id="1" name="Value">instance</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="886362217689640" type="Enemy_BoneyM">
+                                                    <param id="0" name="Animation">&quot;RobotBig_3&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="497936918882480" type="Enemy_BoneyM">
+                                                    <param id="0" name="Instance variable">walk_speed</param>
+                                                    <param id="1" name="Value">1.25</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="423481412201899">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="123518081523404" type="System">
+                                                    <param id="0" name="Variable">instance</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;objUFORobot&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="149744879406232" type="System">
+                                                    <param id="0" name="Object to create">Enemy_Pointy</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))+16</param>
+                                                    <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))+16</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="480818732733704" type="Enemy_Pointy">
+                                                    <param id="0" name="Instance variable">Obj_ImportID</param>
+                                                    <param id="1" name="Value">instance</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="727750023107025" type="Enemy_Pointy">
+                                                    <param id="0" name="Animation">&quot;UFO_3&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="360878982996683" type="Enemy_Pointy">
+                                                    <param id="0" name="Instance variable">speed_move_y</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="895113085615786" type="Enemy_Pointy">
+                                                    <param id="0" name="Instance variable">speed_move_x</param>
+                                                    <param id="1" name="Value">1.5</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="486552318214202">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="753126314713345" type="System">
+                                                    <param id="0" name="Variable">instance</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;objSizzor&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="697376780298735" type="System">
+                                                    <param id="0" name="Object to create">Enemy_Skizzor</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))+16</param>
+                                                    <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))+16</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="204597366808190" type="Enemy_Skizzor">
+                                                    <param id="0" name="Instance variable">Obj_ImportID</param>
+                                                    <param id="1" name="Value">instance</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="115560193244225" type="Enemy_Skizzor">
+                                                    <param id="0" name="Animation">&quot;Sizzor_3&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="298977400510779">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="788863724799626" type="System">
+                                                    <param id="0" name="Variable">instance</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;objBarrelMaker&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="576356708822984" type="System">
+                                                    <param id="0" name="Object to create">Enemy_Fusedropper</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))+16</param>
+                                                    <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))+16</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="632492537182035" type="Enemy_Fusedropper">
+                                                    <param id="0" name="Instance variable">Obj_ImportID</param>
+                                                    <param id="1" name="Value">instance</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="856996815423812" type="Enemy_Fusedropper">
+                                                    <param id="0" name="Animation">&quot;Barrel_3&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="7" name="Set mirrored" sid="573166956616818" type="Enemy_Fusedropper">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="631347511012807" type="Enemy_Fusedropper">
+                                                    <param id="0" name="Instance variable">timer_delay</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="476531669959728" type="Enemy_Fusedropper">
+                                                    <param id="0" name="Instance variable">timer_frequency</param>
+                                                    <param id="1" name="Value">1.25</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="546843404826809" type="Enemy_Fusedropper">
+                                                    <param id="0" name="Instance variable">drop_speed</param>
+                                                    <param id="1" name="Value">2</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="147668713533330">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="517625060246963" type="System">
+                                                    <param id="0" name="Variable">instance</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;objBombMaker&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="530342462554848" type="System">
+                                                    <param id="0" name="Object to create">Enemy_Fusedropper</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))+16</param>
+                                                    <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))+16</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="696507596183049" type="Enemy_Fusedropper">
+                                                    <param id="0" name="Instance variable">Obj_ImportID</param>
+                                                    <param id="1" name="Value">instance</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="266940288655974" type="Enemy_Fusedropper">
+                                                    <param id="0" name="Animation">&quot;Bomb_3&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="7" name="Set mirrored" sid="356431484272670" type="Enemy_Fusedropper">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="152407738979610" type="Enemy_Fusedropper">
+                                                    <param id="0" name="Instance variable">speed_move</param>
+                                                    <param id="1" name="Value">2</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="926538120346059" type="Enemy_Fusedropper">
+                                                    <param id="0" name="Instance variable">timer_delay</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="921260799141347" type="Enemy_Fusedropper">
+                                                    <param id="0" name="Instance variable">timer_frequency</param>
+                                                    <param id="1" name="Value">0.5</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="123804423649258" type="Enemy_Fusedropper">
+                                                    <param id="0" name="Instance variable">drop_speed</param>
+                                                    <param id="1" name="Value">2</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="832692442830140" type="Enemy_Fusedropper">
+                                                    <param id="0" name="Instance variable">CreateExplosion</param>
+                                                    <param id="1" name="Value">&quot;False&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="203409863805291">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="223125657998935" type="System">
+                                                    <param id="0" name="Variable">instance</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;objSpring&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="186425764569553" type="System">
+                                                    <param id="0" name="Object to create">Obj_Spring</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))+16</param>
+                                                    <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))+16</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="420086022858076" type="Obj_Spring">
+                                                    <param id="0" name="Instance variable">Obj9pParent_Child</param>
+                                                    <param id="1" name="Value">&quot;&quot;</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="845394288636569" type="Obj_Spring">
+                                                    <param id="0" name="Instance variable">Obj_ImportID</param>
+                                                    <param id="1" name="Value">instance</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="108036113719474" type="Obj_Spring">
+                                                    <param id="0" name="Animation">&quot;Spring_3&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="986770835942308">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="546190085013129" type="System">
+                                                    <param id="0" name="Variable">instance</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;objCrackedFloor&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="963653326050660" type="System">
+                                                    <param id="0" name="Object to create">Obj_CrackedFloor</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))+16</param>
+                                                    <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))+16</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="396737468901175" type="Obj_CrackedFloor">
+                                                    <param id="0" name="Instance variable">Obj_ImportID</param>
+                                                    <param id="1" name="Value">instance</param>
                                                 </action>
                                             </actions>
                                         </event-block>
                                     </sub-events>
-                                </event-block>
-                                <event-block any="1" sid="504245248595734">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="543600672334556" type="System">
-                                            <param id="0" name="Variable">instance</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;objScruffy&quot;</param>
-                                        </condition>
-                                        <condition id="-14" name="Compare variable" sid="320882114251053" type="System">
-                                            <param id="0" name="Variable">instance</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;objScruffyCutscene1&quot;</param>
-                                        </condition>
-                                        <condition id="-14" name="Compare variable" sid="818540130515328" type="System">
-                                            <param id="0" name="Variable">instance</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;objScruffyCutscene2&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-3" name="Create object" sid="505263998737696" type="System">
-                                            <param id="0" name="Object to create">Special_StartPos</param>
-                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))+16</param>
-                                            <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))+32</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="485149449634616" type="Special_StartPos">
-                                            <param id="0" name="Instance variable">Obj_ImportID</param>
-                                            <param id="1" name="Value">instance</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block any="1" sid="897251396619610">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="518559939825248" type="System">
-                                            <param id="0" name="Variable">instance</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;objSCar&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-3" name="Create object" sid="617215619171633" type="System">
-                                            <param id="0" name="Object to create">Special_StartPos</param>
-                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))+48</param>
-                                            <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))+64</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="434712830342033" type="Special_StartPos">
-                                            <param id="0" name="Instance variable">Obj_ImportID</param>
-                                            <param id="1" name="Value">instance</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="838455493644256">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="583937209877654" type="System">
-                                            <param id="0" name="Variable">instance</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;objBlocker&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-3" name="Create object" sid="673740136341238" type="System">
-                                            <param id="0" name="Object to create">Special_EnemyBlocker</param>
-                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))</param>
-                                            <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="596781916151659" type="Special_EnemyBlocker">
-                                            <param id="0" name="Instance variable">Obj_ImportID</param>
-                                            <param id="1" name="Value">instance</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="141844390661118">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="546321322993186" type="System">
-                                            <param id="0" name="Variable">instance</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;objBarrelKiller&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-3" name="Create object" sid="272301099722911" type="System">
-                                            <param id="0" name="Object to create">Special_EnemyBlocker</param>
-                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))</param>
-                                            <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="917326239633214" type="Special_EnemyBlocker">
-                                            <param id="0" name="Instance variable">Obj_ImportID</param>
-                                            <param id="1" name="Value">instance</param>
-                                        </action>
-                                        <action id="5" name="Set frame" sid="356817041131989" type="Special_EnemyBlocker">
-                                            <param id="0" name="Frame number">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="801379846892678">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="369764914546314" type="System">
-                                            <param id="0" name="Variable">instance</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;objLittleRobot&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-3" name="Create object" sid="308261889404068" type="System">
-                                            <param id="0" name="Object to create">Enemy_BoneyM</param>
-                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))+16</param>
-                                            <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))+16</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="441085789672876" type="Enemy_BoneyM">
-                                            <param id="0" name="Instance variable">Obj_ImportID</param>
-                                            <param id="1" name="Value">instance</param>
-                                        </action>
-                                        <action id="4" name="Set animation" sid="966937222624646" type="Enemy_BoneyM">
-                                            <param id="0" name="Animation">&quot;Robot_1&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="348274749493430" type="Enemy_BoneyM">
-                                            <param id="0" name="Instance variable">walk_speed</param>
-                                            <param id="1" name="Value">2</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="911232020401795">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="292097313191214" type="System">
-                                            <param id="0" name="Variable">instance</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;objBigRobot&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-3" name="Create object" sid="935995183143283" type="System">
-                                            <param id="0" name="Object to create">Enemy_BoneyM</param>
-                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))+16</param>
-                                            <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))+32</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="407763667469961" type="Enemy_BoneyM">
-                                            <param id="0" name="Instance variable">Obj_ImportID</param>
-                                            <param id="1" name="Value">instance</param>
-                                        </action>
-                                        <action id="4" name="Set animation" sid="886362217689640" type="Enemy_BoneyM">
-                                            <param id="0" name="Animation">&quot;RobotBig_3&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="497936918882480" type="Enemy_BoneyM">
-                                            <param id="0" name="Instance variable">walk_speed</param>
-                                            <param id="1" name="Value">1.25</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="423481412201899">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="123518081523404" type="System">
-                                            <param id="0" name="Variable">instance</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;objUFORobot&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-3" name="Create object" sid="149744879406232" type="System">
-                                            <param id="0" name="Object to create">Enemy_Pointy</param>
-                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))+16</param>
-                                            <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))+16</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="480818732733704" type="Enemy_Pointy">
-                                            <param id="0" name="Instance variable">Obj_ImportID</param>
-                                            <param id="1" name="Value">instance</param>
-                                        </action>
-                                        <action id="4" name="Set animation" sid="727750023107025" type="Enemy_Pointy">
-                                            <param id="0" name="Animation">&quot;UFO_3&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="895113085615786" type="Enemy_Pointy">
-                                            <param id="0" name="Instance variable">speed_move_x</param>
-                                            <param id="1" name="Value">1.5</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="360878982996683" type="Enemy_Pointy">
-                                            <param id="0" name="Instance variable">speed_move_y</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="486552318214202">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="753126314713345" type="System">
-                                            <param id="0" name="Variable">instance</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;objSizzor&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-3" name="Create object" sid="697376780298735" type="System">
-                                            <param id="0" name="Object to create">Enemy_Skizzor</param>
-                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))+16</param>
-                                            <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))+16</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="204597366808190" type="Enemy_Skizzor">
-                                            <param id="0" name="Instance variable">Obj_ImportID</param>
-                                            <param id="1" name="Value">instance</param>
-                                        </action>
-                                        <action id="4" name="Set animation" sid="115560193244225" type="Enemy_Skizzor">
-                                            <param id="0" name="Animation">&quot;Sizzor_3&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="298977400510779">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="788863724799626" type="System">
-                                            <param id="0" name="Variable">instance</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;objBarrelMaker&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-3" name="Create object" sid="576356708822984" type="System">
-                                            <param id="0" name="Object to create">Enemy_Fusedropper</param>
-                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))+16</param>
-                                            <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))+16</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="632492537182035" type="Enemy_Fusedropper">
-                                            <param id="0" name="Instance variable">Obj_ImportID</param>
-                                            <param id="1" name="Value">instance</param>
-                                        </action>
-                                        <action id="4" name="Set animation" sid="856996815423812" type="Enemy_Fusedropper">
-                                            <param id="0" name="Animation">&quot;Barrel_3&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                        <action id="7" name="Set mirrored" sid="573166956616818" type="Enemy_Fusedropper">
-                                            <param id="0" name="State">0</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="631347511012807" type="Enemy_Fusedropper">
-                                            <param id="0" name="Instance variable">timer_delay</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="476531669959728" type="Enemy_Fusedropper">
-                                            <param id="0" name="Instance variable">timer_frequency</param>
-                                            <param id="1" name="Value">1.25</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="546843404826809" type="Enemy_Fusedropper">
-                                            <param id="0" name="Instance variable">drop_speed</param>
-                                            <param id="1" name="Value">2</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="147668713533330">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="517625060246963" type="System">
-                                            <param id="0" name="Variable">instance</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;objBombMaker&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-3" name="Create object" sid="530342462554848" type="System">
-                                            <param id="0" name="Object to create">Enemy_Fusedropper</param>
-                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))+16</param>
-                                            <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))+16</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="696507596183049" type="Enemy_Fusedropper">
-                                            <param id="0" name="Instance variable">Obj_ImportID</param>
-                                            <param id="1" name="Value">instance</param>
-                                        </action>
-                                        <action id="4" name="Set animation" sid="266940288655974" type="Enemy_Fusedropper">
-                                            <param id="0" name="Animation">&quot;Bomb_3&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                        <action id="7" name="Set mirrored" sid="356431484272670" type="Enemy_Fusedropper">
-                                            <param id="0" name="State">0</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="152407738979610" type="Enemy_Fusedropper">
-                                            <param id="0" name="Instance variable">speed_move</param>
-                                            <param id="1" name="Value">2</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="926538120346059" type="Enemy_Fusedropper">
-                                            <param id="0" name="Instance variable">timer_delay</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="921260799141347" type="Enemy_Fusedropper">
-                                            <param id="0" name="Instance variable">timer_frequency</param>
-                                            <param id="1" name="Value">0.5</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="123804423649258" type="Enemy_Fusedropper">
-                                            <param id="0" name="Instance variable">drop_speed</param>
-                                            <param id="1" name="Value">2</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="832692442830140" type="Enemy_Fusedropper">
-                                            <param id="0" name="Instance variable">CreateExplosion</param>
-                                            <param id="1" name="Value">&quot;False&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="203409863805291">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="223125657998935" type="System">
-                                            <param id="0" name="Variable">instance</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;objSpring&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-3" name="Create object" sid="186425764569553" type="System">
-                                            <param id="0" name="Object to create">Obj_Spring</param>
-                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))+16</param>
-                                            <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))+16</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="420086022858076" type="Obj_Spring">
-                                            <param id="0" name="Instance variable">Obj9pParent_Child</param>
-                                            <param id="1" name="Value">&quot;&quot;</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="845394288636569" type="Obj_Spring">
-                                            <param id="0" name="Instance variable">Obj_ImportID</param>
-                                            <param id="1" name="Value">instance</param>
-                                        </action>
-                                        <action id="4" name="Set animation" sid="108036113719474" type="Obj_Spring">
-                                            <param id="0" name="Animation">&quot;Spring_3&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                    </actions>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -4450,7 +4545,6 @@
                         <action id="-9" name="Destroy" sid="416441269446760" type="HUD_FinishExplosion" />
                         <action id="-9" name="Destroy" sid="365192406075485" type="Special_TimedStarPie" />
                         <action id="-9" name="Destroy" sid="701085289011264" type="Special_StarArrowStars" />
-                        <action id="-9" name="Destroy" sid="975729403480047" type="Special_YorbX2" />
                         <action id="-9" name="Destroy" sid="853584823273983" type="Special_Bomb" />
                         <action id="-9" name="Destroy" sid="322488411036475" type="Special_Explosion" />
                         <action id="-9" name="Destroy" sid="491016988973140" type="JSON_COMMON" />
@@ -4478,6 +4572,8 @@
                             <param id="0" name="Instance variable">ScreenWrap</param>
                             <param id="1" name="Value">&quot;&quot;</param>
                         </action>
+                        <action id="-9" name="Destroy" sid="975729403480047" type="Player_YorbX2" />
+                        <action id="-9" name="Destroy" sid="797646093879511" type="Player_SuitFist" />
                     </actions>
                 </event-block>
                 <comment>after loading room</comment>
@@ -6020,6 +6116,15 @@
                             <param id="0" name="Instance variable">WalljumpAuto</param>
                             <param id="1" name="Value">0</param>
                         </action>
+                        <action id="-27" name="Set effect enabled" sid="503886543565187" type="Player_Skin">
+                            <param id="0" name="Mode">0</param>
+                            <param id="1" name="Effect">&quot;Outline&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="115406595858352" type="Player_SuitTrail" />
+                        <action id="-10" name="Set value" sid="184189938099055" type="Var_Player">
+                            <param id="0" name="Instance variable">Suit</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="762649622855883">
@@ -6065,6 +6170,17 @@
                         <action behavior="Pin" id="0" name="Pin to object" sid="602714750993296" type="Player_Hitbox">
                             <param id="0" name="Pin to">Player</param>
                             <param id="1" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="355861435045909">
+                    <conditions />
+                    <actions>
+                        <action behavior="Platform" id="1" name="Set max speed" sid="428577877614753" type="Player">
+                            <param id="0" name="Max Speed">Self.MaxSpeed</param>
+                        </action>
+                        <action behavior="Platform" id="4" name="Set jump strength" sid="702535755341636" type="Player">
+                            <param id="0" name="Jump strength">Self.JumpStrength</param>
                         </action>
                     </actions>
                 </event-block>
@@ -7154,6 +7270,506 @@
                             <param id="1" name="Value">0</param>
                         </action>
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="for scruffy 3" sid="190561135179684" title="Player Suits">
+            <sub-events>
+                <event-block sid="265889663765467">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="879976101248314" type="System">
+                            <param id="0" name="Object">Player_SuitFist</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="797124293834567">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="399749206007504" type="System">
+                                    <param id="0" name="Interval (seconds)">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="135874202977132" type="Player_SuitFist">
+                                    <param id="0" name="Instance variable">Timer</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="227486695791984">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="424406731822448" type="Player_SuitFist">
+                                    <param id="0" name="Instance variable">Timer</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="657774914254997" type="Player_SuitFist" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="938710058490487">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="328767134153565" type="Player_SuitFist">
+                            <param id="0" name="Object">Obj_CrackedFloor</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="925089077162907" type="Obj_CrackedFloor" />
+                        <action id="-9" name="Destroy" sid="209010371622130" type="Player_SuitFist" />
+                    </actions>
+                </event-block>
+                <event-block sid="223813421040836">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="448365442233026" type="Player_SuitFist">
+                            <param id="0" name="Object">Obj_Barrel</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="106411535548719" type="Obj_Barrel" />
+                        <action id="-9" name="Destroy" sid="514757393472770" type="Player_SuitFist" />
+                    </actions>
+                </event-block>
+                <event-block sid="497863685284239">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="258298715241552" type="Player_SuitFist">
+                            <param id="0" name="Object">Special_Bomb</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="568773554395053" type="Special_Bomb">
+                            <param id="0" name="Instance variable">CreateExplosion</param>
+                            <param id="1" name="Value">&quot;True&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="783189235487128" type="Special_Bomb" />
+                        <action id="-9" name="Destroy" sid="385934657193511" type="Player_SuitFist" />
+                    </actions>
+                </event-block>
+                <event-block sid="578933220224690">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="433742085998738" type="Player_SuitFist">
+                            <param id="0" name="Object">LevelCollisions</param>
+                        </condition>
+                        <condition behavior="Solid" id="0" name="Is enabled" sid="367533645562726" type="LevelCollisions" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="400417527612156" type="Player_SuitFist" />
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="352504647698010">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="572689543507197" type="Player_SuitFist">
+                            <param id="0" name="Object">Enemy_Skizzor</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="717912885731920" type="Player_SuitFist" />
+                    </actions>
+                </event-block>
+                <event-block sid="879137763809546">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="873127236417316" type="Var_Player">
+                            <param id="0" name="Instance variable">Suit</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;&quot;</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="728352327459402" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-27" name="Set effect enabled" sid="872692910225024" type="Player_Skin">
+                            <param id="0" name="Mode">0</param>
+                            <param id="1" name="Effect">&quot;Outline&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="221443444962676" type="Player_SuitTrail" />
+                    </actions>
+                </event-block>
+                <event-block sid="147433120430504">
+                    <conditions>
+                        <condition id="-7" inverted="1" name="Compare instance variable" sid="374385138451057" type="Var_Player">
+                            <param id="0" name="Instance variable">Suit</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;&quot;</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="226303492239453" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="981291027423074" type="Player">
+                            <param id="0" name="Object">Player_SuitTrail</param>
+                            <param id="1" name="Layer">&quot;Player&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="751746913272611" type="Player_SuitTrail" />
+                        <action behavior="Pin" id="0" name="Pin to object" sid="449894816157352" type="Player_SuitTrail">
+                            <param id="0" name="Pin to">Player</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action id="-27" name="Set effect enabled" sid="934751527612541" type="Player_Skin">
+                            <param id="0" name="Mode">1</param>
+                            <param id="1" name="Effect">&quot;Outline&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="941483706639953">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="125752903738814" type="Var_Player">
+                            <param id="0" name="Instance variable">Suit</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Strong&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="608206327293649">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="532997964696081" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-28" name="Set effect parameter" sid="548947519982059" type="Player_Skin">
+                                    <param id="0" name="Effect">&quot;Outline&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">255</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="641346634648643" type="Player_Skin">
+                                    <param id="0" name="Effect">&quot;Outline&quot;</param>
+                                    <param id="1" name="Parameter index">1</param>
+                                    <param id="2" name="Value">0</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="995545993191403" type="Player_Skin">
+                                    <param id="0" name="Effect">&quot;Outline&quot;</param>
+                                    <param id="1" name="Parameter index">2</param>
+                                    <param id="2" name="Value">0</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="751088169880627" type="Player_SuitTrail">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">100</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="704777674313357" type="Player_SuitTrail">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">1</param>
+                                    <param id="2" name="Value">0</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="575795474607529" type="Player_SuitTrail">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">2</param>
+                                    <param id="2" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="451861677012622">
+                            <conditions />
+                            <actions>
+                                <action id="6" name="Set speed" sid="676730091492562" type="Player_Skin">
+                                    <param id="0" name="Speed">int(JSON_Skin.Value(0,Var_Player.Animation,&quot;Speed&quot;))/2</param>
+                                </action>
+                                <action behavior="Platform" id="1" name="Set max speed" sid="575910690584565" type="Player">
+                                    <param id="0" name="Max Speed">Self.MaxSpeed/2</param>
+                                </action>
+                                <action behavior="Platform" id="4" name="Set jump strength" sid="340104286369537" type="Player">
+                                    <param id="0" name="Jump strength">Self.JumpStrength/1.5</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="208703598035397">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="322666915490873" type="System">
+                                    <param id="0" name="First value">Player_SuitFist.Count</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">3</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="874330552806004" type="Var_Input">
+                                    <param id="0" name="Instance variable">Pressed_B</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="277435342335315" type="Var_Gameplay">
+                                    <param id="0" name="Instance variable">Pause</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;False&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="882574357134598" type="Player">
+                                    <param id="0" name="Object">Player_SuitFist</param>
+                                    <param id="1" name="Layer">&quot;Player&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-25" name="Move to bottom" sid="729229445525666" type="Player_SuitFist" />
+                            </actions>
+                            <sub-events>
+                                <event-block sid="314360275036461">
+                                    <conditions>
+                                        <condition id="7" name="Is mirrored" sid="646811700401490" type="Player_Skin" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Bullet" id="0" name="Set speed" sid="190850762964108" type="Player_SuitFist">
+                                            <param id="0" name="Speed">-Self.Bullet.Speed</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="819513756486478">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="594028220227619" type="Var_Player">
+                            <param id="0" name="Instance variable">Suit</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Speed&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="615918717959217">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="442732058747493" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-28" name="Set effect parameter" sid="751390625486251" type="Player_Skin">
+                                    <param id="0" name="Effect">&quot;Outline&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="456547088508308" type="Player_Skin">
+                                    <param id="0" name="Effect">&quot;Outline&quot;</param>
+                                    <param id="1" name="Parameter index">1</param>
+                                    <param id="2" name="Value">128</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="241187808292844" type="Player_Skin">
+                                    <param id="0" name="Effect">&quot;Outline&quot;</param>
+                                    <param id="1" name="Parameter index">2</param>
+                                    <param id="2" name="Value">255</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="351958006559186" type="Player_SuitTrail">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="794253445003958" type="Player_SuitTrail">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">1</param>
+                                    <param id="2" name="Value">50</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="403588559521439" type="Player_SuitTrail">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">2</param>
+                                    <param id="2" name="Value">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="106401728480065">
+                            <conditions />
+                            <actions>
+                                <action id="6" name="Set speed" sid="473797342024784" type="Player_Skin">
+                                    <param id="0" name="Speed">int(JSON_Skin.Value(0,Var_Player.Animation,&quot;Speed&quot;))*2</param>
+                                </action>
+                                <action behavior="Platform" id="1" name="Set max speed" sid="311227862010742" type="Player">
+                                    <param id="0" name="Max Speed">Self.MaxSpeed*2</param>
+                                </action>
+                                <action behavior="Platform" id="4" name="Set jump strength" sid="324386560467334" type="Player">
+                                    <param id="0" name="Jump strength">Self.JumpStrength/1.5</param>
+                                </action>
+                                <action behavior="Platform" id="6" name="Set max fall speed" sid="533442494230564" type="Player">
+                                    <param id="0" name="Max fall speed">Self.MaxFallSpeed*1.5</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="280243689234803">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="662717928732037" type="Var_Player">
+                                            <param id="0" name="Instance variable">LockHorizontal</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="2" name="Set acceleration" sid="725968528347496" type="Player">
+                                            <param id="0" name="Acceleration">9000</param>
+                                        </action>
+                                        <action behavior="Platform" id="3" name="Set deceleration" sid="448217168540689" type="Player">
+                                            <param id="0" name="Deceleration">Self.Deceleration/3</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="734942212574637">
+                                            <conditions>
+                                                <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="575070726023932" type="Player" />
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Platform" id="3" name="Set deceleration" sid="818805596176043" type="Player">
+                                                    <param id="0" name="Deceleration">9000</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="110316104974437">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="659625970769185" type="Var_Input">
+                                                    <param id="0" name="Instance variable">Left</param>
+                                                </condition>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="729295987875935" type="Var_Input">
+                                                    <param id="0" name="Instance variable">Right</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Platform" id="3" name="Set deceleration" sid="391107992167060" type="Player">
+                                                    <param id="0" name="Deceleration">Self.Deceleration/6</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="782698145936017">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="413359800862634" type="Var_Player">
+                                            <param id="0" name="Instance variable">LockHorizontal</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="5" name="Set gravity" sid="597285028655797" type="Player">
+                                            <param id="0" name="Gravity">Self.Gravity*2.5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="598776660980611">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="235035158603624" type="Var_Gameplay">
+                            <param id="0" name="Instance variable">Pause</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;False&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="799231980728131" type="Var_Input">
+                            <param id="0" name="Instance variable">Pressed_X</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="138642016555410">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="746635796126748" type="Var_Player">
+                                    <param id="0" name="Instance variable">Suit</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="145043545765503">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Compare two values" sid="827797881234452" type="System">
+                                            <param id="0" name="First value">find(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine,Var_Level.Room,&quot;Flags&quot;),&quot;|StrongSuit&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">-1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="212802656362868" type="System">
+                                            <param id="0" name="Seconds">0.1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="199047279650751" type="Var_Player">
+                                            <param id="0" name="Instance variable">Suit</param>
+                                            <param id="1" name="Value">&quot;Strong&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="974230446626220">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="350558904196789" type="System">
+                                            <param id="0" name="First value">find(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine,Var_Level.Room,&quot;Flags&quot;),&quot;|StrongSuit&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">-1</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Compare two values" sid="289442590829012" type="System">
+                                            <param id="0" name="First value">find(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine,Var_Level.Room,&quot;Flags&quot;),&quot;|SpeedSuit&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">-1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="618671387731633" type="System">
+                                            <param id="0" name="Seconds">0.1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="133365036795375" type="Var_Player">
+                                            <param id="0" name="Instance variable">Suit</param>
+                                            <param id="1" name="Value">&quot;Speed&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="600476084872873">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="406064781643545" type="Var_Player">
+                                    <param id="0" name="Instance variable">Suit</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Strong&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="692769475972937">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Compare two values" sid="218907740082326" type="System">
+                                            <param id="0" name="First value">find(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine,Var_Level.Room,&quot;Flags&quot;),&quot;|SpeedSuit&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">-1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="895522269007823" type="System">
+                                            <param id="0" name="Seconds">0.1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="643779711001072" type="Var_Player">
+                                            <param id="0" name="Instance variable">Suit</param>
+                                            <param id="1" name="Value">&quot;Speed&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="400802967778502">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="619518166522317" type="System">
+                                            <param id="0" name="First value">find(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine,Var_Level.Room,&quot;Flags&quot;),&quot;|SpeedSuit&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">-1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="255748673717896" type="System">
+                                            <param id="0" name="Seconds">0.1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="876381387151340" type="Var_Player">
+                                            <param id="0" name="Instance variable">Suit</param>
+                                            <param id="1" name="Value">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="620755284024403">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="121561248176932" type="Var_Player">
+                                    <param id="0" name="Instance variable">Suit</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Speed&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="218676214618771" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="397899264125662" type="Var_Player">
+                                    <param id="0" name="Instance variable">Suit</param>
+                                    <param id="1" name="Value">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -9372,10 +9988,8 @@
                         </event-block>
                         <event-block sid="720559425747011">
                             <conditions>
-                                <condition id="9" name="Is overlapping at offset" sid="609126903996630" type="Enemies">
+                                <condition id="1" name="Is overlapping another object" sid="609126903996630" type="Enemies">
                                     <param id="0" name="Object">Special_EnemyBlocker</param>
-                                    <param id="1" name="Offset X">-4</param>
-                                    <param id="2" name="Offset Y">0</param>
                                 </condition>
                                 <condition id="-8" name="Compare two values" sid="191859029295735" type="System">
                                     <param id="0" name="First value">Enemies.Platform.VectorX</param>
@@ -9388,16 +10002,14 @@
                                     <param id="0" name="State">1</param>
                                 </action>
                                 <action id="-1" name="Set X" sid="616611522829365" type="Enemies">
-                                    <param id="0" name="X">Special_EnemyGroundCollision.LastSeenX+Self.walk_speed</param>
+                                    <param id="0" name="X">Special_EnemyBlocker.BBoxRight+abs(Self.Width/2)+Self.walk_speed</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block sid="119480290241744">
                             <conditions>
-                                <condition id="9" name="Is overlapping at offset" sid="588592456737588" type="Enemies">
+                                <condition id="1" name="Is overlapping another object" sid="588592456737588" type="Enemies">
                                     <param id="0" name="Object">Special_EnemyBlocker</param>
-                                    <param id="1" name="Offset X">4</param>
-                                    <param id="2" name="Offset Y">0</param>
                                 </condition>
                                 <condition id="-8" name="Compare two values" sid="510538969209849" type="System">
                                     <param id="0" name="First value">Enemies.Platform.VectorX</param>
@@ -9409,8 +10021,8 @@
                                 <action id="7" name="Set mirrored" sid="648269948597967" type="Enemies">
                                     <param id="0" name="State">0</param>
                                 </action>
-                                <action id="-1" name="Set X" sid="139044156207859" type="Enemies">
-                                    <param id="0" name="X">Special_EnemyGroundCollision.LastSeenX-Self.walk_speed</param>
+                                <action id="-1" name="Set X" sid="243745106663345" type="Enemies">
+                                    <param id="0" name="X">Special_EnemyBlocker.BBoxLeft-abs(Self.Width/2)-Self.walk_speed</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -10519,12 +11131,12 @@
                     </conditions>
                     <actions>
                         <action id="-3" name="Create object" sid="947908821455560" type="System">
-                            <param id="0" name="Object to create">Special_YorbX2</param>
+                            <param id="0" name="Object to create">Player_YorbX2</param>
                             <param id="1" name="Layer">&quot;Player&quot;</param>
                             <param id="2" name="X">(Player.X-16)+random(0,32)</param>
                             <param id="3" name="Y">(Player.Y-24)+random(0,48)</param>
                         </action>
-                        <action id="5" name="Set frame" sid="220705612100574" type="Special_YorbX2">
+                        <action id="5" name="Set frame" sid="220705612100574" type="Player_YorbX2">
                             <param id="0" name="Frame number">int(random(0,Self.AnimationFrameCount))</param>
                         </action>
                     </actions>
@@ -10533,10 +11145,10 @@
         </event-block>
         <event-block sid="409381799599150">
             <conditions>
-                <condition behavior="LiteTween" id="4" name="On tween end" sid="161590387574066" type="Special_YorbX2" />
+                <condition behavior="LiteTween" id="4" name="On tween end" sid="161590387574066" type="Player_YorbX2" />
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="637618800488484" type="Special_YorbX2" />
+                <action id="-9" name="Destroy" sid="637618800488484" type="Player_YorbX2" />
             </actions>
         </event-block>
         <event-group description="barrels, bombs" sid="183647384025827" title="Fusedroppers">

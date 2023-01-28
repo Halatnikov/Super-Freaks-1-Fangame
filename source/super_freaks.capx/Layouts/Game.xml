@@ -1764,7 +1764,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Special_YorbX2" uid="162">
+                <instance type="Player_YorbX2" uid="162">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2437,6 +2437,40 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Obj_CrackedFloor" uid="136">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Obj_ImportID>obj_pointy</Obj_ImportID>
+                        <Obj_ImportInstance></Obj_ImportInstance>
+                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>300</x>
+                        <y>253</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -2456,6 +2490,57 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
+                <instance type="Player_SuitTrail" uid="91">
+                    <properties>
+                        <rate>50</rate>
+                        <spray-cone>0</spray-cone>
+                        <type>Continuous spray</type>
+                        <initial-particle-properties></initial-particle-properties>
+                        <speed>0</speed>
+                        <size>24</size>
+                        <opacity>100</opacity>
+                        <grow-rate>0</grow-rate>
+                        <x-randomiser>0</x-randomiser>
+                        <y-randomiser>0</y-randomiser>
+                        <speed-randomiser->0</speed-randomiser->
+                        <size-randomiser>0</size-randomiser>
+                        <grow-rate-randomiser>0</grow-rate-randomiser>
+                        <particle-lifetime-properties></particle-lifetime-properties>
+                        <acceleration>0</acceleration>
+                        <gravity>0</gravity>
+                        <angle-randomiser>0</angle-randomiser>
+                        <speed-randomiser>0</speed-randomiser>
+                        <opacity-randomiser>0</opacity-randomiser>
+                        <destroy-mode>Fade to invisible</destroy-mode>
+                        <timeout>0.425</timeout>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="Tint">
+                            <parameters>
+                                <blue>1</blue>
+                                <green>0.5</green>
+                                <red>0</red>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>254</x>
+                        <y>-34</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="Special_StartPos" uid="61">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
@@ -2491,22 +2576,24 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Gravity>900</Gravity>
-                        <MaxFallSpeed>360</MaxFallSpeed>
+                        <MaxSpeed>180</MaxSpeed>
                         <Acceleration>1080</Acceleration>
                         <AirAcceleration>1080</AirAcceleration>
                         <Deceleration>900</Deceleration>
                         <AirDeceleration>900</AirDeceleration>
+                        <JumpStrength>429</JumpStrength>
+                        <Gravity>900</Gravity>
+                        <MaxFallSpeed>360</MaxFallSpeed>
                         <Friction>0.3</Friction>
                         <AirFriction>0.96875</AirFriction>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
                             <properties>
-                                <max-speed>180</max-speed>
+                                <max-speed>0</max-speed>
                                 <acceleration>0</acceleration>
                                 <deceleration>0</deceleration>
-                                <jump-strength>429</jump-strength>
+                                <jump-strength>0</jump-strength>
                                 <gravity>0</gravity>
                                 <max-fall-speed>0</max-fall-speed>
                                 <double-jump>Disabled</double-jump>
@@ -2581,11 +2668,22 @@
                         <behavior-instance type="Pin" />
                         <behavior-instance type="AnimationLoader" />
                     </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="Outline">
+                            <parameters>
+                                <blue>0</blue>
+                                <green>0</green>
+                                <just-outline>0</just-outline>
+                                <red>255</red>
+                                <width>2</width>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>264</x>
-                        <y>105</y>
+                        <x>227</x>
+                        <y>114</y>
                         <z>0</z>
                         <width>48</width>
                         <height>64</height>
@@ -2596,10 +2694,65 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Player_SuitFist" uid="135">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Timer>4</Timer>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>240</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>No</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>318</x>
+                        <y>-28</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
         <layer name="SceneryHigh" sid="612410595917959">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances />
+            <effects />
+        </layer>
+        <layer name="BGHigh" sid="394569974899379">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -4229,7 +4382,7 @@
         <instance type="Var_Level" uid="59">
             <instance-variables>
                 <RoomEngine>GM8_3</RoomEngine>
-                <Room>Stage2-3</Room>
+                <Room>Stage2-1</Room>
                 <Difficulty>Normal</Difficulty>
                 <ImportErrorAttempts>0</ImportErrorAttempts>
             </instance-variables>
@@ -4244,6 +4397,7 @@
                 <TimedStarStreak>0</TimedStarStreak>
                 <State>Idle</State>
                 <GimmickState></GimmickState>
+                <Suit></Suit>
                 <Animation>Idle</Animation>
                 <AllowTurn>true</AllowTurn>
                 <Direction>Right</Direction>

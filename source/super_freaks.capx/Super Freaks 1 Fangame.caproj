@@ -2,7 +2,7 @@
 <c2project>
     <name>Super Freaks 1 Fangame</name>
     <description></description>
-    <version>0.3.0-1</version>
+    <version>0.3.0-2</version>
     <author>Halatnikov</author>
     <author-email></author-email>
     <author-website>https://halatnikov.github.io</author-website>
@@ -21,6 +21,7 @@
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
         <plugin author="Scirra" id="NodeWebkit" version="1">NW.js</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Exit Games" id="Photon" version="1">Photon</plugin>
         <plugin author="Rex.Rainbow" id="Rex_INI" version="0.100000001">INI</plugin>
         <plugin author="Rex.Rainbow" id="Rex_InstanceBank2" version="0.100000001">Instance Bank 2</plugin>
@@ -35,6 +36,7 @@
         <plugin author="&lt;your name/organisation&gt;" id="xml2json" version="1">xml2json</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
@@ -48,7 +50,9 @@
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects>
+        <effect author="R0J0hound" id="outline">Outline</effect>
         <effect author="Scirra" id="setcolor">Set color</effect>
+        <effect author="Scirra" id="tint">Tint</effect>
     </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -186,6 +190,7 @@
                     <instance-variable name="TimedStarStreak" sid="903789600284950" type="number" />
                     <instance-variable name="State" sid="692494682635932" type="string" />
                     <instance-variable name="GimmickState" sid="493211812958846" type="string" />
+                    <instance-variable name="Suit" sid="898819814725257" type="string" />
                     <instance-variable name="Animation" sid="445687233624146" type="string" />
                     <instance-variable name="AllowTurn" sid="894912853118803" type="boolean" />
                     <instance-variable name="Direction" sid="246481464479356" type="string" />
@@ -215,6 +220,8 @@
                     <instance-variable name="Right" sid="666922048660022" type="boolean" />
                     <instance-variable name="A" sid="181441799010236" type="boolean" />
                     <instance-variable name="B" sid="294335044241845" type="boolean" />
+                    <instance-variable name="X" sid="396677288650148" type="boolean" />
+                    <instance-variable name="Y" sid="468433068682576" type="boolean" />
                     <instance-variable name="Start" sid="547027341552998" type="boolean" />
                     <instance-variable name="Pressed_Up" sid="994067129803154" type="boolean" />
                     <instance-variable name="Pressed_Down" sid="393348231855612" type="boolean" />
@@ -222,6 +229,8 @@
                     <instance-variable name="Pressed_Right" sid="668582587487394" type="boolean" />
                     <instance-variable name="Pressed_A" sid="478794560404416" type="boolean" />
                     <instance-variable name="Pressed_B" sid="714761702353736" type="boolean" />
+                    <instance-variable name="Pressed_X" sid="960788531833259" type="boolean" />
+                    <instance-variable name="Pressed_Y" sid="833476133843598" type="boolean" />
                     <instance-variable name="Pressed_Start" sid="711308605952506" type="boolean" />
                 </instance-variables>
             </object-type>
@@ -2063,25 +2072,6 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="Special_YorbX2" sid="651416833863599">
-                <plugin id="Sprite" />
-                <behaviors>
-                    <behavior-type name="LiteTween" sid="318035199433423">
-                        <behavior id="lunarray_LiteTween" />
-                    </behavior-type>
-                </behaviors>
-                <animation-folder>
-                    <animation framecount="7" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="355117225852084" speed="0">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
             <object-type name="Obj_YorbX2" sid="518035296433824">
                 <plugin id="Sprite" />
                 <animation-folder>
@@ -2135,6 +2125,19 @@
                 <animation-folder>
                     <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="532354996533412" speed="7">
                         <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\spr_water_1.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Obj_CrackedFloor" sid="598547862457293">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="407474920908579">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="778024544134919" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\123\Super Freaks 3 2006 - Scruffy 3 - A Day in the Life\Sprites\sprCrackedFloor.images\image 0.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -2840,12 +2843,14 @@
             <object-type name="Player" sid="213508341822418">
                 <plugin id="Sprite" />
                 <instance-variables>
-                    <instance-variable name="Gravity" sid="949659406704068" type="number" />
-                    <instance-variable name="MaxFallSpeed" sid="288829483578963" type="number" />
+                    <instance-variable name="MaxSpeed" sid="322772283980214" type="number" />
                     <instance-variable name="Acceleration" sid="613209372220972" type="number" />
                     <instance-variable name="AirAcceleration" sid="891618369208579" type="number" />
                     <instance-variable name="Deceleration" sid="722101574733280" type="number" />
                     <instance-variable name="AirDeceleration" sid="107172563726624" type="number" />
+                    <instance-variable name="JumpStrength" sid="647561909534558" type="number" />
+                    <instance-variable name="Gravity" sid="949659406704068" type="number" />
+                    <instance-variable name="MaxFallSpeed" sid="288829483578963" type="number" />
                     <instance-variable name="Friction" sid="165125595699650" type="number" />
                     <instance-variable name="AirFriction" sid="585382179574207" type="number" />
                 </instance-variables>
@@ -2984,6 +2989,11 @@
                         <behavior id="Rex_animation_loaderEDIT" />
                     </behavior-type>
                 </behaviors>
+                <effects>
+                    <effect-type name="Outline">
+                        <effect id="outline" />
+                    </effect-type>
+                </effects>
                 <animation-folder>
                     <animation framecount="32" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="173991189485131" speed="0">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\Player Characters\Scruffy\spr_player_stand_scruffy.png" />
@@ -3433,6 +3443,66 @@
                 <plugin id="rojo_spritesheet" />
                 <texture />
             </object-type>
+            <object-type name="Player_SuitFist" sid="116471528834366">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Timer" sid="428940175314713" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Bullet" sid="850705944790869">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="958691809553284" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\123\Super Freaks 3 2006 - Scruffy 3 - A Day in the Life\Sprites\sprFist.images\image 0.png">
+                            <collision-poly>
+                                <point x="0.125" y="0.125" />
+                                <point x="0.5" y="0" />
+                                <point x="0.875" y="0.125" />
+                                <point x="1" y="0.5" />
+                                <point x="0.875" y="0.875" />
+                                <point x="0.5" y="1" />
+                                <point x="0.125" y="0.875" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Player_SuitTrail" sid="607836310346139">
+                <plugin id="Particles" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="618517577703607">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <effects>
+                    <effect-type name="Tint">
+                        <effect id="tint" />
+                    </effect-type>
+                </effects>
+                <texture />
+            </object-type>
+            <object-type name="Player_YorbX2" sid="651416833863599">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="LiteTween" sid="318035199433423">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="7" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="355117225852084" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
     </object-folder>
     <families>
@@ -3469,6 +3539,7 @@
                 <member>Obj_BarrelGiant</member>
                 <member>Obj_Chain</member>
                 <member>Obj_ClimbMesh</member>
+                <member>Obj_CrackedFloor</member>
                 <member>Obj_FruitPlatform</member>
                 <member>Obj_GravityHigh</member>
                 <member>Obj_GravityLow</member>

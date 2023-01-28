@@ -1009,6 +1009,8 @@
                 <Right>false</Right>
                 <A>false</A>
                 <B>false</B>
+                <X>false</X>
+                <Y>false</Y>
                 <Start>false</Start>
                 <Pressed_Up>false</Pressed_Up>
                 <Pressed_Down>false</Pressed_Down>
@@ -1016,6 +1018,8 @@
                 <Pressed_Right>false</Pressed_Right>
                 <Pressed_A>false</Pressed_A>
                 <Pressed_B>false</Pressed_B>
+                <Pressed_X>false</Pressed_X>
+                <Pressed_Y>false</Pressed_Y>
                 <Pressed_Start>false</Pressed_Start>
             </instance-variables>
         </instance>
