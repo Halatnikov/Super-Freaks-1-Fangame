@@ -176,6 +176,30 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Tiles_GM8" uid="51">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <offset-x>0</offset-x>
+                        <offset-y>0</offset-y>
+                        <sub-width>32</sub-width>
+                        <sub-height>32</sub-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>64</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -345,8 +369,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>727</x>
-                        <y>95</y>
+                        <x>729</x>
+                        <y>100</y>
                         <z>0</z>
                         <width>64</width>
                         <height>96</height>
@@ -1065,7 +1089,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>375</x>
-                        <y>551</y>
+                        <y>571</y>
                         <z>0</z>
                         <width>16</width>
                         <height>16</height>
@@ -1843,8 +1867,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>668</x>
-                        <y>56</y>
+                        <x>658</x>
+                        <y>55</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -2447,8 +2471,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>183</x>
-                        <y>420</y>
+                        <x>453</x>
+                        <y>447</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -2506,8 +2530,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>217</x>
-                        <y>91</y>
+                        <x>207</x>
+                        <y>92</y>
                         <z>0</z>
                         <width>28</width>
                         <height>36</height>
@@ -4198,14 +4222,14 @@
                 <Path_Assets></Path_Assets>
                 <Path_SourceCode1u></Path_SourceCode1u>
                 <Path_SourceCode1r></Path_SourceCode1r>
+                <Path_SourceCode3></Path_SourceCode3>
                 <LogVerbose>1</LogVerbose>
-                <GMS2_LevelsArray></GMS2_LevelsArray>
             </instance-variables>
         </instance>
         <instance type="Var_Level" uid="59">
             <instance-variables>
-                <RoomEngine>GMS2</RoomEngine>
-                <Room>rm_park_1</Room>
+                <RoomEngine>GM8_3</RoomEngine>
+                <Room>Stage2-3</Room>
                 <Difficulty>Normal</Difficulty>
                 <ImportErrorAttempts>0</ImportErrorAttempts>
             </instance-variables>

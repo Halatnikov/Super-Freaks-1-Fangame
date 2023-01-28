@@ -2,7 +2,7 @@
 <c2project>
     <name>Super Freaks 1 Fangame</name>
     <description></description>
-    <version>0.2.0</version>
+    <version>0.3.0-1</version>
     <author>Halatnikov</author>
     <author-email></author-email>
     <author-website>https://halatnikov.github.io</author-website>
@@ -162,8 +162,8 @@
                     <instance-variable name="Path_Assets" sid="848621485292649" type="string" />
                     <instance-variable name="Path_SourceCode1u" sid="885943548537521" type="string" />
                     <instance-variable name="Path_SourceCode1r" sid="921199061794404" type="string" />
+                    <instance-variable name="Path_SourceCode3" sid="677138954357210" type="string" />
                     <instance-variable name="LogVerbose" sid="819295291835664" type="number" />
-                    <instance-variable name="GMS2_LevelsArray" sid="270813940939173" type="string" />
                 </instance-variables>
             </object-type>
             <object-type global="1" name="Var_Level" sid="285604653832218">
@@ -308,6 +308,42 @@
                                 </collision-poly>
                             </frame>
                         </animation>
+                        <animation framecount="2" loop="1" name="Robot_1" pingpong="0" repeatcount="1" repeatto="0" sid="150942667623751" speed="12">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\123\Super Freaks 3 2006 - Scruffy 3 - A Day in the Life\Sprites\sprLittleRobotR.images\image 1.png">
+                                <collision-poly>
+                                    <point x="0.09375" y="0.15625" />
+                                    <point x="0.71875" y="0.15625" />
+                                    <point x="0.71875" y="1" />
+                                    <point x="0.09375" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\123\Super Freaks 3 2006 - Scruffy 3 - A Day in the Life\Sprites\sprLittleRobotR.images\image 2.png">
+                                <collision-poly>
+                                    <point x="0.09375" y="0.15625" />
+                                    <point x="0.71875" y="0.15625" />
+                                    <point x="0.71875" y="1" />
+                                    <point x="0.09375" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="2" loop="1" name="RobotBig_3" pingpong="0" repeatcount="1" repeatto="0" sid="353338655847746" speed="7">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\123\Super Freaks 3 2006 - Scruffy 3 - A Day in the Life\Sprites\sprBigRobotR.images\image 0.png">
+                                <collision-poly>
+                                    <point x="0.15625" y="0.0625" />
+                                    <point x="0.78125" y="0.0625" />
+                                    <point x="0.78125" y="1" />
+                                    <point x="0.15625" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\123\Super Freaks 3 2006 - Scruffy 3 - A Day in the Life\Sprites\sprBigRobotR.images\image 1.png">
+                                <collision-poly>
+                                    <point x="0.15625" y="0.0625" />
+                                    <point x="0.78125" y="0.0625" />
+                                    <point x="0.78125" y="1" />
+                                    <point x="0.15625" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
                     </animation-folder>
                 </object-type>
                 <object-type name="Enemy_BoneyM_Giant" sid="350981977105324">
@@ -434,7 +470,7 @@
                                 </collision-poly>
                             </frame>
                         </animation>
-                        <animation framecount="3" loop="1" name="Bite" pingpong="0" repeatcount="1" repeatto="0" sid="588061076192346" speed="7">
+                        <animation framecount="3" loop="0" name="Bite" pingpong="0" repeatcount="1" repeatto="0" sid="588061076192346" speed="7">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                                 <collision-poly>
                                     <point x="0.125" y="0.5" />
@@ -478,6 +514,40 @@
                                 </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0.125" y="0.5" />
+                                    <point x="0.875" y="0.5" />
+                                    <point x="0.875" y="1" />
+                                    <point x="0.125" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="4" loop="1" name="Sizzor_3" pingpong="0" repeatcount="1" repeatto="0" sid="579282259234933" speed="15">
+                            <frame duration="3" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\123\Super Freaks 3 2006 - Scruffy 3 - A Day in the Life\Sprites\sprSizzor.images\image 0.png">
+                                <collision-poly>
+                                    <point x="0.125" y="0.5" />
+                                    <point x="0.875" y="0.5" />
+                                    <point x="0.875" y="1" />
+                                    <point x="0.125" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\123\Super Freaks 3 2006 - Scruffy 3 - A Day in the Life\Sprites\sprSizzor.images\image 7.png">
+                                <collision-poly>
+                                    <point x="0.125" y="0.5" />
+                                    <point x="0.875" y="0.5" />
+                                    <point x="0.875" y="1" />
+                                    <point x="0.125" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="2" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\123\Super Freaks 3 2006 - Scruffy 3 - A Day in the Life\Sprites\sprSizzor.images\image 8.png">
+                                <collision-poly>
+                                    <point x="0.125" y="0.5" />
+                                    <point x="0.875" y="0.5" />
+                                    <point x="0.875" y="1" />
+                                    <point x="0.125" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\123\Super Freaks 3 2006 - Scruffy 3 - A Day in the Life\Sprites\sprSizzor.images\image 13.png">
                                 <collision-poly>
                                     <point x="0.125" y="0.5" />
                                     <point x="0.875" y="0.5" />
@@ -580,12 +650,52 @@
                                 </collision-poly>
                             </frame>
                         </animation>
+                        <animation framecount="2" loop="1" name="Barrel_3" pingpong="0" repeatcount="1" repeatto="0" sid="230193908892920" speed="12">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\123\Super Freaks 3 2006 - Scruffy 3 - A Day in the Life\Sprites\sprBarrelMaker.images\image 0.png">
+                                <image-point name="Imagepoint 1" x="0.5" y="1.15625" />
+                                <collision-poly>
+                                    <point x="0.0625" y="0.0625" />
+                                    <point x="0.9375" y="0.0625" />
+                                    <point x="0.9375" y="0.875" />
+                                    <point x="0.0625" y="0.875" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\123\Super Freaks 3 2006 - Scruffy 3 - A Day in the Life\Sprites\sprBarrelMaker.images\image 1.png">
+                                <image-point name="Imagepoint 1" x="0.5" y="1.15625" />
+                                <collision-poly>
+                                    <point x="0.0625" y="0.0625" />
+                                    <point x="0.9375" y="0.0625" />
+                                    <point x="0.9375" y="0.875" />
+                                    <point x="0.0625" y="0.875" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="2" loop="1" name="Bomb_3" pingpong="0" repeatcount="1" repeatto="0" sid="550405655295599" speed="12">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <image-point name="Imagepoint 1" x="0.5" y="1.15625" />
+                                <collision-poly>
+                                    <point x="0.0625" y="0.0625" />
+                                    <point x="0.9375" y="0.0625" />
+                                    <point x="0.9375" y="0.875" />
+                                    <point x="0.0625" y="0.875" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <image-point name="Imagepoint 1" x="0.5" y="1.15625" />
+                                <collision-poly>
+                                    <point x="0.0625" y="0.0625" />
+                                    <point x="0.9375" y="0.0625" />
+                                    <point x="0.9375" y="0.875" />
+                                    <point x="0.0625" y="0.875" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
                     </animation-folder>
                 </object-type>
                 <object-type name="Special_EnemyBlocker" sid="664445691641907">
                     <plugin id="Sprite" />
                     <animation-folder>
-                        <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="436886619614684" speed="7">
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="436886619614684" speed="0">
                             <frame duration="1" hotspotX="0" hotspotY="0">
                                 <collision-poly>
                                     <point x="1" y="1" />
@@ -594,6 +704,7 @@
                                     <point x="1" y="0" />
                                 </collision-poly>
                             </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -614,6 +725,16 @@
                                 </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\spr_bomb_1.png">
+                                <collision-poly>
+                                    <point x="0.25" y="0.5" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.75" y="0.5" />
+                                    <point x="0.5" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Bomb_3" pingpong="0" repeatcount="1" repeatto="0" sid="462207408436723" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\123\Super Freaks 3 2006 - Scruffy 3 - A Day in the Life\Sprites\sprBomb.images\image 0.png">
                                 <collision-poly>
                                     <point x="0.25" y="0.5" />
                                     <point x="0.5" y="0" />
@@ -726,6 +847,28 @@
                                     <point x="0.5" y="0.96875" />
                                     <point x="0.15625" y="0.84375" />
                                     <point x="0.03125" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="2" loop="1" name="UFO_3" pingpong="0" repeatcount="1" repeatto="0" sid="494631534621628" speed="12">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\123\Super Freaks 3 2006 - Scruffy 3 - A Day in the Life\Sprites\sprUFORobotR.images\image 0.png">
+                                <collision-poly>
+                                    <point x="0" y="0.46875" />
+                                    <point x="0.5" y="0.28125" />
+                                    <point x="1" y="0.46875" />
+                                    <point x="1" y="0.71875" />
+                                    <point x="0.5" y="0.90625" />
+                                    <point x="0" y="0.71875" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\123\Super Freaks 3 2006 - Scruffy 3 - A Day in the Life\Sprites\sprUFORobotR.images\image 1.png">
+                                <collision-poly>
+                                    <point x="0" y="0.46875" />
+                                    <point x="0.5" y="0.28125" />
+                                    <point x="1" y="0.46875" />
+                                    <point x="1" y="0.71875" />
+                                    <point x="0.5" y="0.90625" />
+                                    <point x="0" y="0.71875" />
                                 </collision-poly>
                             </frame>
                         </animation>
@@ -945,6 +1088,16 @@
                                 </collision-poly>
                             </frame>
                         </animation>
+                        <animation framecount="1" loop="0" name="Barrel_3" pingpong="0" repeatcount="1" repeatto="0" sid="549475225533367" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\123\Super Freaks 3 2006 - Scruffy 3 - A Day in the Life\Sprites\sprBarrel.images\image 0.png">
+                                <collision-poly>
+                                    <point x="0.0625" y="0.125" />
+                                    <point x="0.9375" y="0.125" />
+                                    <point x="0.9375" y="1" />
+                                    <point x="0.0625" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
                     </animation-folder>
                 </object-type>
                 <object-type name="Obj_BarrelGiant" sid="252908003529742">
@@ -1141,6 +1294,9 @@
                                 </collision-poly>
                             </frame>
                         </animation>
+                        <animation framecount="1" loop="0" name="Exit_3" pingpong="0" repeatcount="1" repeatto="0" sid="397772996855880" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\123\Super Freaks 3 2006 - Scruffy 3 - A Day in the Life\Sprites\sprExit.images\image 0.png" />
+                        </animation>
                     </animation-folder>
                 </object-type>
                 <object-type name="Obj_Ray" sid="780760331153782">
@@ -1234,6 +1390,16 @@
                                     <point x="0.140625" y="0.859375" />
                                 </collision-poly>
                             </frame>
+                        </animation>
+                        <animation framecount="8" loop="1" name="Key_3" pingpong="0" repeatcount="1" repeatto="0" sid="491282145269164" speed="7">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\123\Super Freaks 3 2006 - Scruffy 3 - A Day in the Life\Sprites\sprKrystalKey.images\image 0.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\123\Super Freaks 3 2006 - Scruffy 3 - A Day in the Life\Sprites\sprKrystalKey.images\image 1.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\123\Super Freaks 3 2006 - Scruffy 3 - A Day in the Life\Sprites\sprKrystalKey.images\image 2.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\123\Super Freaks 3 2006 - Scruffy 3 - A Day in the Life\Sprites\sprKrystalKey.images\image 3.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\123\Super Freaks 3 2006 - Scruffy 3 - A Day in the Life\Sprites\sprKrystalKey.images\image 4.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\123\Super Freaks 3 2006 - Scruffy 3 - A Day in the Life\Sprites\sprKrystalKey.images\image 5.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\123\Super Freaks 3 2006 - Scruffy 3 - A Day in the Life\Sprites\sprKrystalKey.images\image 6.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\123\Super Freaks 3 2006 - Scruffy 3 - A Day in the Life\Sprites\sprKrystalKey.images\image 7.png" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -1830,6 +1996,10 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
                     </animation>
+                    <animation framecount="2" loop="0" name="Spring_3" pingpong="0" repeatcount="1" repeatto="0" sid="115735284879437" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\123\Super Freaks 3 2006 - Scruffy 3 - A Day in the Life\Sprites\sprSpring.images\image 1.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\123\Super Freaks 3 2006 - Scruffy 3 - A Day in the Life\Sprites\sprSpring.images\image 0.png" />
+                    </animation>
                 </animation-folder>
             </object-type>
             <object-type name="Obj_WorldMapIcon" sid="683900082749609">
@@ -2146,9 +2316,10 @@
             <object-type name="Col_Solid" sid="612446696419818">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="303794167808551" speed="0">
+                    <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="303794167808551" speed="0">
                         <frame duration="1" hotspotX="0" hotspotY="0" />
                         <frame duration="1" hotspotX="0" hotspotY="0" />
+                        <frame duration="1" hotspotX="0" hotspotY="-1" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -3257,6 +3428,10 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
                     </animation>
                 </animation-folder>
+            </object-type>
+            <object-type name="Tiles_GM8" sid="195484576286120">
+                <plugin id="rojo_spritesheet" />
+                <texture />
             </object-type>
         </object-folder>
     </object-folder>

@@ -1225,6 +1225,166 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <event-block sid="768194587325505">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="510554583543047" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;ImportRoom_GM8_3&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="counter" sid="667381488900173" static="1" type="number">-1</variable>
+                                <variable constant="0" name="counter_menu" sid="541896299077858" static="1" type="number">-1</variable>
+                                <event-block sid="419122256601627">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="600050522617300" type="System">
+                                            <param id="0" name="Variable">counter</param>
+                                            <param id="1" name="Value">-1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="832670647935321" type="System">
+                                            <param id="0" name="Variable">counter_menu</param>
+                                            <param id="1" name="Value">-1</param>
+                                        </action>
+                                        <action id="0" name="Set New Object" sid="407475864923964" type="JSON_PERSIST">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}">&quot;Menus&quot;{###}&quot;ImportRoom_GM8_3&quot;</param>
+                                        </action>
+                                        <action id="20" name="Set Value" sid="870251885904582" type="JSON_PERSIST">
+                                            <param id="0" name="Value">&quot;Super Freaks 3&quot;</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;Menus&quot;{###}&quot;ImportRoom_GM8_3&quot;{###}&quot;Title&quot;</param>
+                                        </action>
+                                        <action id="20" name="Set Value" sid="806214069575881" type="JSON_PERSIST">
+                                            <param id="0" name="Value">&quot;ImportRoom&quot;</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;Menus&quot;{###}&quot;ImportRoom_GM8_3&quot;{###}&quot;Previous&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="663249335387186">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="262982634182860" type="System">
+                                            <param id="0" name="First value">JSON_PERSIST.Size(0,&quot;ImportRoom_GM8_3&quot;,&quot;Array&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="20" name="Set Value" sid="345851168016674" type="JSON_PERSIST">
+                                            <param id="0" name="Value">&quot;No room files found!|Make sure you placed the source code|in the path you put in config.ini&quot;</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;Menus&quot;{###}&quot;ImportRoom_GM8_3&quot;{###}&quot;Description&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="802943156702067" type="Menu_Cursor">
+                                            <param id="0" name="Instance variable">Offset</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="110278894401976">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="256025593021955" type="Menu_Cursor">
+                                            <param id="0" name="Instance variable">Offset</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="574559442897683" type="Menu_Cursor">
+                                            <param id="0" name="Instance variable">Offset</param>
+                                            <param id="1" name="Value">ceil(JSON_PERSIST.Size(0,&quot;ImportRoom_GM8_3&quot;,&quot;Array&quot;)/15)-1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="609952633457657">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="843002110287595" type="Menu_Cursor">
+                                            <param id="0" name="Instance variable">Offset</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">ceil(JSON_PERSIST.Size(0,&quot;ImportRoom_GM8_3&quot;,&quot;Array&quot;)/15)-1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="367640615501076" type="Menu_Cursor">
+                                            <param id="0" name="Instance variable">Offset</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="645756871246361">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Compare two values" sid="794130941182378" type="System">
+                                            <param id="0" name="First value">JSON_PERSIST.Size(0,&quot;ImportRoom_GM8_3&quot;,&quot;Array&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                        <condition id="100" name="For each property" sid="637348562813157" type="JSON_PERSIST">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}">&quot;ImportRoom_GM8_3&quot;{###}&quot;Array&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="771613511326694" type="System">
+                                            <param id="0" name="Variable">counter</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="216401950636571">
+                                            <conditions>
+                                                <condition id="-21" name="Is between values" sid="410662382038292" type="System">
+                                                    <param id="0" name="Value">counter</param>
+                                                    <param id="1" name="Lower bound">Menu_Cursor.Offset*15</param>
+                                                    <param id="2" name="Upper bound">(Menu_Cursor.Offset*15)+14</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="690640813820818" type="System">
+                                                    <param id="0" name="Variable">counter_menu</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="0" name="Set New Object" sid="591410704988232" type="JSON_PERSIST">
+                                                    <param id="0" name="Reference point">0</param>
+                                                    <param id="1" name="Key {n}">&quot;Menus&quot;{###}&quot;ImportRoom_GM8_3&quot;{###}str(1+counter_menu)</param>
+                                                </action>
+                                                <action id="20" name="Set Value" sid="252067041223031" type="JSON_PERSIST">
+                                                    <param id="0" name="Value">JSON_PERSIST.CurrentValue</param>
+                                                    <param id="1" name="Reference point">0</param>
+                                                    <param id="2" name="Key {n}">&quot;Menus&quot;{###}&quot;ImportRoom_GM8_3&quot;{###}str(1+counter_menu){###}&quot;Title&quot;</param>
+                                                </action>
+                                                <action id="20" name="Set Value" sid="861230541503544" type="JSON_PERSIST">
+                                                    <param id="0" name="Value">&quot;ImportRoom_GM8_3&quot;</param>
+                                                    <param id="1" name="Reference point">0</param>
+                                                    <param id="2" name="Key {n}">&quot;Menus&quot;{###}&quot;ImportRoom_GM8_3&quot;{###}str(1+counter_menu){###}&quot;Action&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="237046542301520">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Set New Object" sid="299199970444071" type="JSON_PERSIST">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}">&quot;Menus&quot;{###}&quot;ImportRoom_GM8_3&quot;{###}&quot;0&quot;</param>
+                                        </action>
+                                        <action id="20" name="Set Value" sid="235532564379081" type="JSON_PERSIST">
+                                            <param id="0" name="Value">&quot;PAGE &quot;&amp;Menu_Cursor.Offset+1&amp;&quot;/&quot;&amp;ceil(JSON_PERSIST.Size(0,&quot;ImportRoom_GMS1&quot;,&quot;Array&quot;)/15)</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;Menus&quot;{###}&quot;ImportRoom_GM8_3&quot;{###}&quot;0&quot;{###}&quot;Title&quot;</param>
+                                        </action>
+                                        <action id="20" name="Set Value" sid="270531217622334" type="JSON_PERSIST">
+                                            <param id="0" name="Value">&quot;Page&quot;</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;Menus&quot;{###}&quot;ImportRoom_GM8_3&quot;{###}&quot;0&quot;{###}&quot;Type&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                         <event-block sid="131783346742369">
                             <conditions>
                                 <condition id="60" inverted="1" name="Is undefined" sid="819385402401658" type="JSON_PERSIST">
@@ -1830,6 +1990,36 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <event-block sid="620401290131691">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="191069659411479" type="System">
+                                            <param id="0" name="First value">JSON_PERSIST.Value(0,&quot;Menus&quot;,Menu_Cursor.Menu,str(Menu_Cursor.Current),&quot;Action&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;ImportRoom_GM8_3&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="715152769869954" type="Var_Level">
+                                            <param id="0" name="Instance variable">RoomEngine</param>
+                                            <param id="1" name="Value">&quot;GM8_3&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="115678455247928" type="Var_Level">
+                                            <param id="0" name="Instance variable">Room</param>
+                                            <param id="1" name="Value">JSON_PERSIST.Value(0,&quot;Menus&quot;,Menu_Cursor.Menu,str(Menu_Cursor.Current),&quot;Title&quot;)</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="271795721910283" type="System">
+                                            <param id="0" name="Seconds">0.1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="615898848683103" type="Var_Main">
+                                            <param id="0" name="Instance variable">GameMode</param>
+                                            <param id="1" name="Value">&quot;ImportRoom&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="828108914799672" type="Var_Main">
+                                            <param id="0" name="Instance variable">GameState</param>
+                                            <param id="1" name="Value">&quot;SkinSelect&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                             </sub-events>
                         </event-block>
                         <event-block sid="959678019848289">
@@ -1927,6 +2117,11 @@
                             <param id="0" name="Instance variable">Menu</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;ImportRoom_GMS1&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="905721429220569" type="Menu_Cursor">
+                            <param id="0" name="Instance variable">Menu</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;ImportRoom_GM8_3&quot;</param>
                         </condition>
                     </conditions>
                     <actions />
