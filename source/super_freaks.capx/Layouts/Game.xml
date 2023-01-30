@@ -2267,8 +2267,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-161</x>
-                        <y>343</y>
+                        <x>-179</x>
+                        <y>368</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -2301,8 +2301,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-128</x>
-                        <y>343</y>
+                        <x>-147</x>
+                        <y>370</y>
                         <z>0</z>
                         <width>48</width>
                         <height>48</height>
@@ -2459,8 +2459,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>300</x>
-                        <y>253</y>
+                        <x>257</x>
+                        <y>-73</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -2719,8 +2719,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>318</x>
-                        <y>-28</y>
+                        <x>302</x>
+                        <y>-65</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -4366,7 +4366,11 @@
                 <LevelTimer>0</LevelTimer>
                 <TitlecardSeen>false</TitlecardSeen>
                 <Pause>False</Pause>
-                <TimerActive>true</TimerActive>
+                <TimerActive>false</TimerActive>
+                <RoomLoaded>false</RoomLoaded>
+                <CheckpointID>-1</CheckpointID>
+                <CheckpointRoom></CheckpointRoom>
+                <CheckpointDeaths>0</CheckpointDeaths>
             </instance-variables>
         </instance>
         <instance type="Var_CONSTANTS" uid="45">
@@ -4405,6 +4409,7 @@
                 <LockVertical>0</LockVertical>
                 <WalljumpAuto>0</WalljumpAuto>
                 <YorbMultiplier>0</YorbMultiplier>
+                <Hurt>False</Hurt>
             </instance-variables>
         </instance>
         <instance type="Var_Room" uid="105">

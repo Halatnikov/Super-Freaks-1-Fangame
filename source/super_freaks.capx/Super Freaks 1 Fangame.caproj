@@ -2,7 +2,7 @@
 <c2project>
     <name>Super Freaks 1 Fangame</name>
     <description></description>
-    <version>0.3.0-2</version>
+    <version>0.3.0-3</version>
     <author>Halatnikov</author>
     <author-email></author-email>
     <author-website>https://halatnikov.github.io</author-website>
@@ -157,6 +157,10 @@
                     <instance-variable name="TitlecardSeen" sid="595973637287574" type="boolean" />
                     <instance-variable name="Pause" sid="142450650666757" type="string" />
                     <instance-variable name="TimerActive" sid="384507261630613" type="boolean" />
+                    <instance-variable name="RoomLoaded" sid="812180491435475" type="boolean" />
+                    <instance-variable name="CheckpointID" sid="339561956418216" type="number" />
+                    <instance-variable name="CheckpointRoom" sid="146024367512652" type="string" />
+                    <instance-variable name="CheckpointDeaths" sid="259862413440171" type="number" />
                 </instance-variables>
             </object-type>
             <object-type global="1" name="Var_CONSTANTS" sid="548262914357161">
@@ -198,6 +202,7 @@
                     <instance-variable name="LockVertical" sid="762534422477635" type="number" />
                     <instance-variable name="WalljumpAuto" sid="476522372977083" type="number" />
                     <instance-variable name="YorbMultiplier" sid="296466046340309" type="number" />
+                    <instance-variable name="Hurt" sid="155826768728917" type="string" />
                 </instance-variables>
             </object-type>
             <object-type global="1" name="Var_Room" sid="803519937269875">
