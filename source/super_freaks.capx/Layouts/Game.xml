@@ -301,8 +301,10 @@
                         <Obj_ImportInstance></Obj_ImportInstance>
                         <Obj_Difficulty>Everything</Obj_Difficulty>
                         <walk_speed>1</walk_speed>
-                        <HP>-1</HP>
+                        <DamageType>Hazard</DamageType>
+                        <HP>1</HP>
                         <ScreenWrap></ScreenWrap>
+                        <InitialHP>0</InitialHP>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -347,8 +349,10 @@
                         <Obj_ImportInstance></Obj_ImportInstance>
                         <Obj_Difficulty>Everything</Obj_Difficulty>
                         <walk_speed>0.5</walk_speed>
+                        <DamageType>Heavy</DamageType>
                         <HP>2</HP>
                         <ScreenWrap></ScreenWrap>
+                        <InitialHP>0</InitialHP>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -622,8 +626,10 @@
                         <Obj_ImportInstance></Obj_ImportInstance>
                         <Obj_Difficulty>Everything</Obj_Difficulty>
                         <walk_speed>-1</walk_speed>
+                        <DamageType>Normal</DamageType>
                         <HP>1</HP>
                         <ScreenWrap></ScreenWrap>
+                        <InitialHP>0</InitialHP>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -899,8 +905,10 @@
                         <Obj_ImportInstance></Obj_ImportInstance>
                         <Obj_Difficulty>Everything</Obj_Difficulty>
                         <walk_speed>-1</walk_speed>
-                        <HP>-1</HP>
+                        <DamageType>Hazard</DamageType>
+                        <HP>1</HP>
                         <ScreenWrap></ScreenWrap>
+                        <InitialHP>0</InitialHP>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -1576,8 +1584,10 @@
                         <Obj_ImportInstance></Obj_ImportInstance>
                         <Obj_Difficulty>Everything</Obj_Difficulty>
                         <walk_speed>1</walk_speed>
+                        <DamageType>Normal</DamageType>
                         <HP>1</HP>
                         <ScreenWrap></ScreenWrap>
+                        <InitialHP>0</InitialHP>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -1622,6 +1632,7 @@
                         <Obj_ImportInstance></Obj_ImportInstance>
                         <Obj_Difficulty>Everything</Obj_Difficulty>
                         <Obj9pParent_Child>Obj9p_Spring</Obj9pParent_Child>
+                        <BounceHeight>-600</BounceHeight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1811,8 +1822,10 @@
                         <Obj_ImportInstance></Obj_ImportInstance>
                         <Obj_Difficulty>Everything</Obj_Difficulty>
                         <walk_speed>-1</walk_speed>
+                        <DamageType>Normal</DamageType>
                         <HP>1</HP>
                         <ScreenWrap></ScreenWrap>
+                        <InitialHP>0</InitialHP>
                         <speed_move>0</speed_move>
                         <timer_delay>0</timer_delay>
                         <timer_frequency>1</timer_frequency>
@@ -2324,8 +2337,10 @@
                         <Obj_ImportInstance></Obj_ImportInstance>
                         <Obj_Difficulty>Everything</Obj_Difficulty>
                         <walk_speed>-1</walk_speed>
-                        <HP>-1</HP>
+                        <DamageType>Hazard</DamageType>
+                        <HP>1</HP>
                         <ScreenWrap>XY</ScreenWrap>
+                        <InitialHP>0</InitialHP>
                         <speed_move_x>0</speed_move_x>
                         <speed_move_y>0</speed_move_y>
                     </instance-variables>

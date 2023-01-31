@@ -2,7 +2,7 @@
 <c2project>
     <name>Super Freaks 1 Fangame</name>
     <description></description>
-    <version>0.3.0-3</version>
+    <version>0.3.0-4</version>
     <author>Halatnikov</author>
     <author-email></author-email>
     <author-website>https://halatnikov.github.io</author-website>
@@ -355,6 +355,44 @@
                                     <point x="0.78125" y="0.0625" />
                                     <point x="0.78125" y="1" />
                                     <point x="0.15625" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="4" loop="1" name="RobotGiant_3" pingpong="0" repeatcount="1" repeatto="0" sid="609985590349023" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\123\Super Freaks 3 2006 - Scruffy 3 - A Day in the Life\Sprites\sprGiantRobotR.images\image 0.png">
+                                <collision-poly>
+                                    <point x="0.1875" y="0.136364" />
+                                    <point x="0.53125" y="0" />
+                                    <point x="0.875" y="0.125" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\123\Super Freaks 3 2006 - Scruffy 3 - A Day in the Life\Sprites\sprGiantRobotR.images\image 3.png">
+                                <collision-poly>
+                                    <point x="0.1875" y="0.136364" />
+                                    <point x="0.53125" y="0" />
+                                    <point x="0.875" y="0.125" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\123\Super Freaks 3 2006 - Scruffy 3 - A Day in the Life\Sprites\sprGiantRobotR.images\image 6.png">
+                                <collision-poly>
+                                    <point x="0.1875" y="0.136364" />
+                                    <point x="0.53125" y="0" />
+                                    <point x="0.875" y="0.125" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\123\Super Freaks 3 2006 - Scruffy 3 - A Day in the Life\Sprites\sprGiantRobotR.images\image 12.png">
+                                <collision-poly>
+                                    <point x="0.1875" y="0.136364" />
+                                    <point x="0.53125" y="0" />
+                                    <point x="0.875" y="0.125" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
                                 </collision-poly>
                             </frame>
                         </animation>
@@ -2004,6 +2042,9 @@
             </object-type>
             <object-type name="Obj_Spring" sid="593124344060718">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="BounceHeight" sid="537683443138131" type="number" />
+                </instance-variables>
                 <animation-folder>
                     <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="951369906712724" speed="10">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
@@ -3637,8 +3678,10 @@
             </members>
             <instance-variables>
                 <instance-variable name="walk_speed" sid="833374463177727" type="number" />
+                <instance-variable name="DamageType" sid="467689896831941" type="string" />
                 <instance-variable name="HP" sid="666643145678727" type="number" />
                 <instance-variable name="ScreenWrap" sid="656632667359998" type="string" />
+                <instance-variable name="InitialHP" sid="210115062667098" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Platform" sid="544851210712236">
