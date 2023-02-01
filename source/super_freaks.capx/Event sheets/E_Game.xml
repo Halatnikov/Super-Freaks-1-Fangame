@@ -1590,7 +1590,7 @@
                                     <actions>
                                         <action id="-3" name="Create object" sid="584492865222109" type="System">
                                             <param id="0" name="Object to create">Special_EnemyBlocker</param>
-                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                            <param id="1" name="Layer">&quot;Collisions&quot;</param>
                                             <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;x&quot;))</param>
                                             <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;y&quot;))</param>
                                         </action>
@@ -1696,7 +1696,7 @@
                                     <actions>
                                         <action id="-3" name="Create object" sid="604891925911023" type="System">
                                             <param id="0" name="Object to create">Special_StartPos</param>
-                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                            <param id="1" name="Layer">&quot;Collisions&quot;</param>
                                             <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;x&quot;))+16</param>
                                             <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;y&quot;))+16</param>
                                         </action>
@@ -1839,8 +1839,8 @@
                                         <action id="-3" name="Create object" sid="599706530739418" type="System">
                                             <param id="0" name="Object to create">Enemy_BoneyM</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;x&quot;))</param>
-                                            <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;y&quot;))</param>
+                                            <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;x&quot;))+16</param>
+                                            <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;y&quot;))+16</param>
                                         </action>
                                         <action id="-10" name="Set value" sid="273408091387247" type="Enemy_BoneyM">
                                             <param id="0" name="Instance variable">Obj_ImportID</param>
@@ -1893,6 +1893,62 @@
                                         </event-block>
                                     </sub-events>
                                 </event-block>
+                                <event-block sid="586887103284686">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="293243801434095" type="System">
+                                            <param id="0" name="Variable">instance</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;objBoneyMGiant&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="933365706371249" type="System">
+                                            <param id="0" name="Object to create">Enemy_BoneyM</param>
+                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                            <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;x&quot;))</param>
+                                            <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;y&quot;))</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="924479648199515" type="Enemy_BoneyM">
+                                            <param id="0" name="Instance variable">Obj_ImportID</param>
+                                            <param id="1" name="Value">instance</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="818310366009123" type="Enemy_BoneyM">
+                                            <param id="0" name="Width">64</param>
+                                            <param id="1" name="Height">96</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="723604092305291" type="Enemy_BoneyM">
+                                            <param id="0" name="Instance variable">walk_speed</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="6" name="Set speed" sid="744309089629898" type="Enemy_BoneyM">
+                                            <param id="0" name="Speed">12</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="593894601610103" type="Enemy_BoneyM">
+                                            <param id="0" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;x&quot;))+32</param>
+                                            <param id="1" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;y&quot;))+48</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="140757997835363">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="337428703400401" type="Var_Level">
+                                                    <param id="0" name="Instance variable">Difficulty</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Hard&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="275551252239161" type="Enemy_BoneyM">
+                                                    <param id="0" name="Instance variable">walk_speed</param>
+                                                    <param id="1" name="Value">2</param>
+                                                </action>
+                                                <action id="6" name="Set speed" sid="863950624575393" type="Enemy_BoneyM">
+                                                    <param id="0" name="Speed">14</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
                                 <event-block sid="996700955828407">
                                     <conditions>
                                         <condition id="-14" name="Compare variable" sid="716880622520873" type="System">
@@ -1905,8 +1961,8 @@
                                         <action id="-3" name="Create object" sid="432765002303719" type="System">
                                             <param id="0" name="Object to create">Enemy_BoneyM</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;x&quot;))</param>
-                                            <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;y&quot;))</param>
+                                            <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;x&quot;))+16</param>
+                                            <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;y&quot;))+16</param>
                                         </action>
                                         <action id="4" name="Set animation" sid="963771272080085" type="Enemy_BoneyM">
                                             <param id="0" name="Animation">&quot;Gold&quot;</param>
@@ -1986,8 +2042,8 @@
                                         <action id="-3" name="Create object" sid="978075903658432" type="System">
                                             <param id="0" name="Object to create">Enemy_Pinhead</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;x&quot;))</param>
-                                            <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;y&quot;))</param>
+                                            <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;x&quot;))+16</param>
+                                            <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;y&quot;))+16</param>
                                         </action>
                                         <action id="-10" name="Set value" sid="495250496410776" type="Enemy_Pinhead">
                                             <param id="0" name="Instance variable">Obj_ImportID</param>
@@ -2446,6 +2502,35 @@
                                             </actions>
                                         </event-block>
                                     </sub-events>
+                                </event-block>
+                                <event-block sid="985634083413646">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="471505545752930" type="System">
+                                            <param id="0" name="Variable">instance</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;objRedSkizzor&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="128538316583632" type="System">
+                                            <param id="0" name="Object to create">Enemy_Skizzor</param>
+                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                            <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;x&quot;))</param>
+                                            <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;y&quot;))</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="832230031323490" type="Enemy_Skizzor">
+                                            <param id="0" name="Instance variable">Obj_ImportID</param>
+                                            <param id="1" name="Value">instance</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="861542879503160" type="Enemy_Skizzor">
+                                            <param id="0" name="Animation">&quot;Walk_1r&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="784732366966359" type="Enemy_Skizzor">
+                                            <param id="0" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;x&quot;))+16</param>
+                                            <param id="1" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;y&quot;))+16</param>
+                                        </action>
+                                    </actions>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -3120,7 +3205,7 @@
                                             <actions>
                                                 <action id="-3" name="Create object" sid="505263998737696" type="System">
                                                     <param id="0" name="Object to create">Special_StartPos</param>
-                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="1" name="Layer">&quot;Collisions&quot;</param>
                                                     <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))+16</param>
                                                     <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))+32</param>
                                                 </action>
@@ -3141,7 +3226,7 @@
                                             <actions>
                                                 <action id="-3" name="Create object" sid="617215619171633" type="System">
                                                     <param id="0" name="Object to create">Special_StartPos</param>
-                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="1" name="Layer">&quot;Collisions&quot;</param>
                                                     <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))+48</param>
                                                     <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))+64</param>
                                                 </action>
@@ -3180,7 +3265,7 @@
                                             <actions>
                                                 <action id="-3" name="Create object" sid="673740136341238" type="System">
                                                     <param id="0" name="Object to create">Special_EnemyBlocker</param>
-                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="1" name="Layer">&quot;Collisions&quot;</param>
                                                     <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))</param>
                                                     <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))</param>
                                                 </action>
@@ -3201,7 +3286,7 @@
                                             <actions>
                                                 <action id="-3" name="Create object" sid="272301099722911" type="System">
                                                     <param id="0" name="Object to create">Special_EnemyBlocker</param>
-                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="1" name="Layer">&quot;Collisions&quot;</param>
                                                     <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))</param>
                                                     <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))</param>
                                                 </action>
@@ -3225,7 +3310,7 @@
                                             <actions>
                                                 <action id="-3" name="Create object" sid="327217344200929" type="System">
                                                     <param id="0" name="Object to create">Special_EnemyBlocker</param>
-                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="1" name="Layer">&quot;Collisions&quot;</param>
                                                     <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))</param>
                                                     <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))</param>
                                                 </action>
@@ -3719,28 +3804,28 @@
                                             </conditions>
                                             <actions>
                                                 <action id="-3" name="Create object" sid="462643956268247" type="System">
-                                                    <param id="0" name="Object to create">Enemy_Pinhead</param>
+                                                    <param id="0" name="Object to create">Enemy_BoneyM</param>
                                                     <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                     <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))+16</param>
                                                     <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))+16</param>
                                                 </action>
-                                                <action id="-10" name="Set value" sid="571070088641752" type="Enemy_Pinhead">
+                                                <action id="-10" name="Set value" sid="571070088641752" type="Enemy_BoneyM">
                                                     <param id="0" name="Instance variable">Obj_ImportID</param>
                                                     <param id="1" name="Value">instance</param>
                                                 </action>
-                                                <action id="4" name="Set animation" sid="478708431799697" type="Enemy_Pinhead">
+                                                <action id="4" name="Set animation" sid="478708431799697" type="Enemy_BoneyM">
                                                     <param id="0" name="Animation">&quot;Flame_1&quot;</param>
                                                     <param id="1" name="From">1</param>
                                                 </action>
-                                                <action id="-10" name="Set value" sid="358590867144649" type="Enemy_Pinhead">
+                                                <action id="-10" name="Set value" sid="358590867144649" type="Enemy_BoneyM">
                                                     <param id="0" name="Instance variable">walk_speed</param>
                                                     <param id="1" name="Value">2</param>
                                                 </action>
-                                                <action id="-3" name="Set position" sid="119932675988316" type="Enemy_Pinhead">
+                                                <action id="-3" name="Set position" sid="119932675988316" type="Enemy_BoneyM">
                                                     <param id="0" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))+16</param>
                                                     <param id="1" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))+16</param>
                                                 </action>
-                                                <action id="-10" name="Set value" sid="832975019153145" type="Enemy_Pinhead">
+                                                <action id="-10" name="Set value" sid="832975019153145" type="Enemy_BoneyM">
                                                     <param id="0" name="Instance variable">DamageType</param>
                                                     <param id="1" name="Value">&quot;HazardStrong&quot;</param>
                                                 </action>
@@ -3791,6 +3876,35 @@
                                                 <action id="-13" name="Set boolean" sid="788513201765680" type="Obj_Barrel">
                                                     <param id="0" name="Instance variable">Active</param>
                                                     <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="290796267462439">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="561002112156501" type="System">
+                                                    <param id="0" name="Variable">instance</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;objRedSizzor&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="684227833027357" type="System">
+                                                    <param id="0" name="Object to create">Enemy_Skizzor</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))</param>
+                                                    <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="750186857235333" type="Enemy_Skizzor">
+                                                    <param id="0" name="Instance variable">Obj_ImportID</param>
+                                                    <param id="1" name="Value">instance</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="632822571508380" type="Enemy_Skizzor">
+                                                    <param id="0" name="Animation">&quot;Walk_3&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-3" name="Set position" sid="442930535842331" type="Enemy_Skizzor">
+                                                    <param id="0" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))+16</param>
+                                                    <param id="1" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))+16</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -3847,11 +3961,39 @@
                         <action id="-16" name="Wait" sid="357708065851674" type="System">
                             <param id="0" name="Seconds">0</param>
                         </action>
-                        <action id="-10" name="Set value" sid="646889858945314" type="Enemies">
-                            <param id="0" name="Instance variable">walk_speed</param>
-                            <param id="1" name="Value">float(Function.Call(&quot;GMS2_InstanceProperty&quot;,LevelObjects.Obj_ImportInstance,&quot;walk_speed&quot;,&quot;1&quot;))</param>
-                        </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="378704565239216">
+                            <conditions>
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="964010642049323" type="LevelObjects">
+                                    <param id="0" name="Instance variable">Obj_ImportID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;obj_skizzor&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="646889858945314" type="Enemies">
+                                    <param id="0" name="Instance variable">walk_speed</param>
+                                    <param id="1" name="Value">float(Function.Call(&quot;GMS2_InstanceProperty&quot;,LevelObjects.Obj_ImportInstance,&quot;walk_speed&quot;,&quot;1&quot;))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="740634452045655">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="653743060797998" type="LevelObjects">
+                                    <param id="0" name="Instance variable">Obj_ImportID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;obj_skizzor&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="514729222131515" type="Enemies">
+                                    <param id="0" name="Instance variable">walk_speed</param>
+                                    <param id="1" name="Value">float(Function.Call(&quot;GMS2_InstanceProperty&quot;,LevelObjects.Obj_ImportInstance,&quot;move_speed&quot;,&quot;0&quot;))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <comment></comment>
                 <event-block sid="152624301952255">
@@ -5002,6 +5144,7 @@
                         <action id="-9" name="Destroy" sid="322488411036475" type="Special_Explosion" />
                         <action id="-9" name="Destroy" sid="491016988973140" type="JSON_COMMON" />
                         <action id="-9" name="Destroy" sid="125116793515645" type="Special_EnemyGroundCollision" />
+                        <action id="-9" name="Destroy" sid="979183197088855" type="Special_SkizzorCollisions" />
                         <action id="-9" name="Destroy" sid="381358754147011" type="Tiles_GMS1" />
                         <action id="-9" name="Destroy" sid="316987965103153" type="Tiles_GM8" />
                         <action id="-9" name="Destroy" sid="499659319212526" type="XML_COMMON" />
@@ -8090,6 +8233,19 @@
                         <action id="-9" name="Destroy" sid="514757393472770" type="Player_SuitFist" />
                     </actions>
                 </event-block>
+                <event-block sid="682497359944968">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="891172387947797" type="Player_SuitFist">
+                            <param id="0" name="Object">Obj_Barrel</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="600791032361955" type="Obj_Barrel">
+                            <param id="0" name="Instance variable">ExplodeAtWall</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="342629666541775" type="Player_SuitFist" />
+                    </actions>
+                </event-block>
                 <event-block sid="497863685284239">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="258298715241552" type="Player_SuitFist">
@@ -8199,7 +8355,7 @@
                 <event-block any="1" sid="352504647698010">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="572689543507197" type="Player_SuitFist">
-                            <param id="0" name="Object">Enemy_Skizzor</param>
+                            <param id="0" name="Object">Obj_Hazard</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -9164,6 +9320,16 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="530629563908493">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="707405246852480" type="Special_RealExplosion">
+                            <param id="0" name="Animation">&quot;Explosion&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="839966891970380" type="Special_RealExplosion" />
+                    </actions>
+                </event-block>
                 <comment></comment>
                 <event-block sid="561944467901855">
                     <conditions>
@@ -9539,7 +9705,9 @@
                 </event-block>
                 <event-block sid="217843991367321">
                     <conditions>
-                        <condition id="5" name="On any finished" sid="892443030123622" type="Special_RealExplosion" />
+                        <condition id="4" name="On finished" sid="892443030123622" type="Special_RealExplosion">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="747570171426062" type="Function">
@@ -11165,7 +11333,7 @@
                                 </action>
                                 <action id="-3" name="Create object" sid="929186960163433" type="System">
                                     <param id="0" name="Object to create">Special_EnemyGroundCollision</param>
-                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                    <param id="1" name="Layer">&quot;Collisions&quot;</param>
                                     <param id="2" name="X">Enemies.X</param>
                                     <param id="3" name="Y">Enemies.BBoxBottom</param>
                                 </action>
@@ -11191,6 +11359,14 @@
                                             <param id="0" name="Instance variable">walk_speed</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-14" name="Pick by unique ID" sid="893545203154364" type="LevelObjects">
+                                            <param id="0" name="Unique ID">Enemies.UID</param>
+                                        </condition>
+                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="475853996809898" type="LevelObjects">
+                                            <param id="0" name="Instance variable">Obj_ImportID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;obj_skizzor&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -11341,31 +11517,72 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="485814165101877">
+                        <event-block sid="155283284316902">
                             <conditions>
-                                <condition id="7" name="Is mirrored" sid="974187191443292" type="Enemies" />
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="663414839497238" type="Enemies">
+                                    <param id="0" name="Instance variable">MoveOnlyOnFloor</param>
+                                </condition>
                                 <condition id="-8" name="Is boolean instance variable set" sid="723748942796597" type="Var_Gameplay">
                                     <param id="0" name="Instance variable">TimerActive</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action behavior="Platform" id="8" name="Set vector X" sid="656459713262436" type="Enemies">
-                                    <param id="0" name="Vector X">-Self.Platform.MaxSpeed</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="485814165101877">
+                                    <conditions>
+                                        <condition id="7" name="Is mirrored" sid="974187191443292" type="Enemies" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="8" name="Set vector X" sid="656459713262436" type="Enemies">
+                                            <param id="0" name="Vector X">-Self.Platform.MaxSpeed</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="945443140972802">
+                                    <conditions>
+                                        <condition id="7" inverted="1" name="Is mirrored" sid="598772231369277" type="Enemies" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="8" name="Set vector X" sid="282471079757867" type="Enemies">
+                                            <param id="0" name="Vector X">Self.Platform.MaxSpeed</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
-                        <event-block sid="945443140972802">
+                        <event-block sid="880506500206769">
                             <conditions>
-                                <condition id="7" inverted="1" name="Is mirrored" sid="598772231369277" type="Enemies" />
-                                <condition id="-8" name="Is boolean instance variable set" sid="806824805103975" type="Var_Gameplay">
+                                <condition id="-8" name="Is boolean instance variable set" sid="918380701784642" type="Enemies">
+                                    <param id="0" name="Instance variable">MoveOnlyOnFloor</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="480822003060724" type="Var_Gameplay">
                                     <param id="0" name="Instance variable">TimerActive</param>
                                 </condition>
+                                <condition behavior="Platform" id="2" name="Is on floor" sid="423992316513030" type="Enemies" />
                             </conditions>
-                            <actions>
-                                <action behavior="Platform" id="8" name="Set vector X" sid="282471079757867" type="Enemies">
-                                    <param id="0" name="Vector X">Self.Platform.MaxSpeed</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="954848604298774">
+                                    <conditions>
+                                        <condition id="7" name="Is mirrored" sid="612352726039556" type="Enemies" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="8" name="Set vector X" sid="723838639269628" type="Enemies">
+                                            <param id="0" name="Vector X">-Self.Platform.MaxSpeed</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="386849785156785">
+                                    <conditions>
+                                        <condition id="7" inverted="1" name="Is mirrored" sid="875489192009256" type="Enemies" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="8" name="Set vector X" sid="404645912400385" type="Enemies">
+                                            <param id="0" name="Vector X">Self.Platform.MaxSpeed</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="887077923514693">
                             <conditions>
@@ -12950,7 +13167,7 @@
                         </action>
                         <action id="-3" name="Create object" sid="655122406939152" type="System">
                             <param id="0" name="Object to create">Special_EnemyGroundCollision</param>
-                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="1" name="Layer">&quot;Collisions&quot;</param>
                             <param id="2" name="X">Obj_Barrel.X</param>
                             <param id="3" name="Y">Obj_Barrel.BBoxBottom</param>
                         </action>
@@ -13075,6 +13292,7 @@
                                                     <param id="1" name="Offset X">0</param>
                                                     <param id="2" name="Offset Y">-6</param>
                                                 </condition>
+                                                <condition behavior="Solid" id="0" name="Is enabled" sid="550399072675027" type="Col_Solid" />
                                                 <condition id="-3" name="Is on-screen" sid="187671775149927" type="Obj_Barrel" />
                                                 <condition id="-4" name="Trigger once while true" sid="618159354112712" type="System" />
                                             </conditions>
@@ -14254,6 +14472,48 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="113393988947494">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="256781898666814" type="Obj_Car">
+                            <param id="0" name="Instance variable">Destroy</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="253377700930308" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="123932222468365" type="Player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Pin" id="1" name="Unpin" sid="594049025358118" type="Player" />
+                        <action id="8" name="Set flipped" sid="845505105154933" type="Player_Skin">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="692136997946530" type="Obj_Car">
+                            <param id="0" name="Object">Special_RealExplosion</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="385161609925561" type="Special_RealExplosion">
+                            <param id="0" name="Animation">&quot;Explosion&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="851826556937339" type="Special_RealExplosion">
+                            <param id="0" name="Scale">2</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="828942798603101" type="Obj_Car" />
+                        <action id="-10" name="Set value" sid="817584195269586" type="Var_Player">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Value">&quot;Fall&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="677369730248037" type="Var_Player">
+                            <param id="0" name="Instance variable">GimmickState</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="849596790524037" type="Function">
+                            <param id="0" name="Name">&quot;Audio_PlaySFX&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;explode_big&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="425980553581866">
                     <conditions>
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="160303231291564" type="Var_Gameplay">
@@ -14346,10 +14606,6 @@
                                                 <action behavior="Platform" id="10" name="Set angle of gravity" sid="193844736065403" type="Obj_Car">
                                                     <param id="0" name="Angle">270</param>
                                                 </action>
-                                                <action id="-13" name="Set boolean" sid="255804300430020" type="Obj_Car">
-                                                    <param id="0" name="Instance variable">InControl</param>
-                                                    <param id="1" name="Value">0</param>
-                                                </action>
                                             </actions>
                                         </event-block>
                                         <event-block sid="499628831589655">
@@ -14366,10 +14622,6 @@
                                                 </action>
                                                 <action behavior="Platform" id="10" name="Set angle of gravity" sid="215674208088992" type="Obj_Car">
                                                     <param id="0" name="Angle">90</param>
-                                                </action>
-                                                <action id="-13" name="Set boolean" sid="707918010974325" type="Obj_Car">
-                                                    <param id="0" name="Instance variable">InControl</param>
-                                                    <param id="1" name="Value">0</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -14418,6 +14670,24 @@
                                         </action>
                                         <action id="8" name="Set flipped" sid="202868691956844" type="Obj_Car">
                                             <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="707918010974325" type="Obj_Car">
+                                            <param id="0" name="Instance variable">InControl</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="400242207984550">
+                                    <conditions>
+                                        <condition behavior="Platform" id="10" name="Is by wall" sid="823417204658620" type="Obj_Car">
+                                            <param id="0" name="Side">1</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="926451985613379" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="143025196901477" type="Obj_Car">
+                                            <param id="0" name="Instance variable">Destroy</param>
+                                            <param id="1" name="Value">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -14509,6 +14779,24 @@
                                         </action>
                                         <action id="8" name="Set flipped" sid="806960018066969" type="Obj_Car">
                                             <param id="0" name="State">0</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="297225917766938" type="Obj_Car">
+                                            <param id="0" name="Instance variable">InControl</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="673259556829808">
+                                    <conditions>
+                                        <condition behavior="Platform" id="10" name="Is by wall" sid="893008114671528" type="Obj_Car">
+                                            <param id="0" name="Side">0</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="567382347700102" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="620720472805428" type="Obj_Car">
+                                            <param id="0" name="Instance variable">Destroy</param>
+                                            <param id="1" name="Value">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -14630,6 +14918,26 @@
                             </sub-events>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="416003815701740">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="305887636346962" type="Obj_Car">
+                            <param id="0" name="Object">Obj_Spring</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="809105264439414" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="360799085461567" type="Obj_Car">
+                            <param id="0" name="Vector Y">Obj_Spring.BounceHeight</param>
+                        </action>
+                        <action id="3" name="Start" sid="922405103699038" type="Obj_Spring">
+                            <param id="0" name="From">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="391579900487630" type="Function">
+                            <param id="0" name="Name">&quot;Audio_PlaySFX&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;spring&quot;</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="936044068059044">
                     <conditions>
@@ -14778,25 +15086,265 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="416003815701740">
+                <event-block sid="375974354958375">
                     <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="305887636346962" type="Obj_Car">
-                            <param id="0" name="Object">Obj_Spring</param>
+                        <condition id="0" name="On collision with another object" sid="199169883992481" type="Obj_Car">
+                            <param id="0" name="Object">Enemies</param>
                         </condition>
-                        <condition id="-4" name="Trigger once while true" sid="809105264439414" type="System" />
+                        <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="503982978777575" type="Obj_Car" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="226091411938041">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="486944233963784" type="System">
+                                    <param id="0" name="First value">Obj_Car.Platform.GravityAngle</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">90</param>
+                                </condition>
+                                <condition id="-2" name="Compare Y" sid="527126306666772" type="Obj_Car">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Y co-ordinate">Enemies.Y</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="726543668520515" type="Obj_Car">
+                                    <param id="0" name="Instance variable">Destroy</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="208370183492691">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="778705965328413" type="System">
+                                    <param id="0" name="First value">Obj_Car.Platform.GravityAngle</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">270</param>
+                                </condition>
+                                <condition id="-2" name="Compare Y" sid="650506305749844" type="Obj_Car">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Y co-ordinate">Enemies.Y</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="263673106004992" type="Obj_Car">
+                                    <param id="0" name="Instance variable">Destroy</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="193615363973320">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="112608223773153" type="Obj_Car">
+                            <param id="0" name="Object">Obj_Hazard</param>
+                        </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Platform" id="9" name="Set vector Y" sid="360799085461567" type="Obj_Car">
-                            <param id="0" name="Vector Y">Obj_Spring.BounceHeight</param>
-                        </action>
-                        <action id="3" name="Start" sid="922405103699038" type="Obj_Spring">
-                            <param id="0" name="From">1</param>
-                        </action>
-                        <action id="0" name="Call function" sid="391579900487630" type="Function">
-                            <param id="0" name="Name">&quot;Audio_PlaySFX&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;spring&quot;</param>
+                        <action id="-13" name="Set boolean" sid="601014145763023" type="Obj_Car">
+                            <param id="0" name="Instance variable">Destroy</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
+                </event-block>
+                <event-block sid="162522296565456">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="727919866045464" type="Obj_Car">
+                            <param id="0" name="Object">Enemies</param>
+                        </condition>
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="622505401101289" type="Obj_Car" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="788035239478343" type="Obj_Car">
+                            <param id="0" name="Instance variable">Destroy</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="326804658886891">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="399164145494826" type="Obj_Car">
+                            <param id="0" name="Object">Enemies</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="845161314585006">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="607237086790793" type="Enemies">
+                                    <param id="0" name="Instance variable">DamageType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Hazard&quot;</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="485421495810986" type="Enemies">
+                                    <param id="0" name="Instance variable">DamageType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;HazardStrong&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="104733153591330" type="Obj_Car">
+                                    <param id="0" name="Instance variable">Destroy</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment></comment>
+        <event-block sid="297594339374579">
+            <conditions>
+                <condition id="-18" name="On created" sid="561367379837052" type="Enemy_Skizzor" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="902885786565705" type="System">
+                    <param id="0" name="Seconds">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="238252238841445" type="System">
+                    <param id="0" name="Object to create">Special_SkizzorCollisions</param>
+                    <param id="1" name="Layer">&quot;Collisions&quot;</param>
+                    <param id="2" name="X">Enemy_Skizzor.X</param>
+                    <param id="3" name="Y">Enemy_Skizzor.Y</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="194278489730373" type="Special_SkizzorCollisions">
+                    <param id="0" name="Pin to">Enemy_Skizzor</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="661596385987109">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="551287849181339" type="Enemy_Skizzor" />
+                <condition id="-11" name="For Each" sid="786050734078825" type="System">
+                    <param id="0" name="Object">Special_SkizzorCollisions</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="418663901021224" type="System">
+                    <param id="0" name="First value">Special_SkizzorCollisions.Pin.PinnedUID</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">Enemy_Skizzor.UID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="686810806191929" type="Special_SkizzorCollisions" />
+            </actions>
+        </event-block>
+        <event-block sid="327070547729344">
+            <conditions>
+                <condition behavior="Platform" id="9" name="On landed" sid="327008232660585" type="Enemy_Skizzor" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="877556618962315" type="Enemy_Skizzor">
+                    <param id="0" name="Animation">&quot;Walk_&quot;&amp;tokenat(Self.AnimationName,1,&quot;_&quot;)</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="809042086450569">
+            <conditions>
+                <condition id="-11" name="For Each" sid="439302792114647" type="System">
+                    <param id="0" name="Object">Special_SkizzorCollisions</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="175144807188367" type="Enemy_Skizzor">
+                    <param id="0" name="Unique ID">Special_SkizzorCollisions.Pin.PinnedUID</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" sid="318390480360357" type="Enemy_Skizzor">
+                    <param id="0" name="Object">Player_CameraLoadingZone</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="990988681413372">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="698546929628831" type="Var_Gameplay">
+                            <param id="0" name="Instance variable">TimerActive</param>
+                        </condition>
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="285309574721535" type="Enemy_Skizzor" />
+                        <condition id="1" name="Is overlapping another object" sid="507027291999123" type="Player_Hitbox">
+                            <param id="0" name="Object">Special_SkizzorCollisions</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="353235608119004" type="Enemy_Skizzor">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="279222295967272">
+                    <conditions>
+                        <condition behavior="Platform" id="3" name="Is jumping" sid="591055473075033" type="Enemy_Skizzor" />
+                        <condition id="9" name="Is overlapping at offset" sid="941451308024797" type="Enemy_Skizzor">
+                            <param id="0" name="Object">Col_Solid</param>
+                            <param id="1" name="Offset X">0</param>
+                            <param id="2" name="Offset Y">-6</param>
+                        </condition>
+                        <condition behavior="Solid" id="0" name="Is enabled" sid="379335935519205" type="Col_Solid" />
+                        <condition id="-3" name="Is on-screen" sid="139612392392427" type="Enemy_Skizzor" />
+                        <condition id="-4" name="Trigger once while true" sid="775361684215108" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="913586718095037" type="Function">
+                            <param id="0" name="Name">&quot;Audio_PlaySFX&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;honk&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="671192082898823">
+                    <conditions>
+                        <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="766699840657386" type="Enemy_Skizzor" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="635554077812996">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="858213311451220" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="618503672219392" type="Enemy_Skizzor">
+                                    <param id="0" name="Animation">&quot;Bite_&quot;&amp;tokenat(Self.AnimationName,1,&quot;_&quot;)</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="890550326186667" type="Enemy_Skizzor">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="720560209800304">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="915062463705779" type="System">
+                                    <param id="0" name="First value">Enemy_Skizzor.Platform.VectorY</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="714394979884746" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="190329438848042" type="Function">
+                                    <param id="0" name="Name">&quot;Audio_PlaySFX&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;bite&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="755741993927974" type="Enemy_Skizzor">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="520066815629010">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="359943641310195" type="System">
+                                    <param id="0" name="First value">Enemy_Skizzor.Platform.VectorY</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">60</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="949887301482034" type="Enemy_Skizzor">
+                                    <param id="0" name="Frame number">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>

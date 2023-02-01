@@ -306,6 +306,7 @@
                         <ScreenWrap></ScreenWrap>
                         <InitialHP>0</InitialHP>
                         <IgnoreBlockers>false</IgnoreBlockers>
+                        <MoveOnlyOnFloor>false</MoveOnlyOnFloor>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -355,6 +356,7 @@
                         <ScreenWrap></ScreenWrap>
                         <InitialHP>0</InitialHP>
                         <IgnoreBlockers>false</IgnoreBlockers>
+                        <MoveOnlyOnFloor>false</MoveOnlyOnFloor>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -633,6 +635,7 @@
                         <ScreenWrap></ScreenWrap>
                         <InitialHP>0</InitialHP>
                         <IgnoreBlockers>false</IgnoreBlockers>
+                        <MoveOnlyOnFloor>false</MoveOnlyOnFloor>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -907,12 +910,13 @@
                         <Obj_ImportID>obj_skizzor</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
                         <Obj_Difficulty>Everything</Obj_Difficulty>
-                        <walk_speed>-1</walk_speed>
+                        <walk_speed>0</walk_speed>
                         <DamageType>Hazard</DamageType>
                         <HP>1</HP>
                         <ScreenWrap></ScreenWrap>
                         <InitialHP>0</InitialHP>
                         <IgnoreBlockers>false</IgnoreBlockers>
+                        <MoveOnlyOnFloor>true</MoveOnlyOnFloor>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -921,7 +925,7 @@
                                 <acceleration>1080</acceleration>
                                 <deceleration>1080</deceleration>
                                 <jump-strength>429</jump-strength>
-                                <gravity>1800</gravity>
+                                <gravity>900</gravity>
                                 <max-fall-speed>360</max-fall-speed>
                                 <double-jump>Disabled</double-jump>
                                 <jump-sustain>0</jump-sustain>
@@ -933,8 +937,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>877</x>
-                        <y>112</y>
+                        <x>797</x>
+                        <y>264</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -1593,6 +1597,7 @@
                         <ScreenWrap></ScreenWrap>
                         <InitialHP>0</InitialHP>
                         <IgnoreBlockers>false</IgnoreBlockers>
+                        <MoveOnlyOnFloor>false</MoveOnlyOnFloor>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -1832,6 +1837,7 @@
                         <ScreenWrap></ScreenWrap>
                         <InitialHP>0</InitialHP>
                         <IgnoreBlockers>false</IgnoreBlockers>
+                        <MoveOnlyOnFloor>false</MoveOnlyOnFloor>
                         <speed_move>0</speed_move>
                         <timer_delay>0</timer_delay>
                         <timer_frequency>1</timer_frequency>
@@ -1869,33 +1875,6 @@
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Special_EnemyBlocker" uid="164">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Obj_ImportID></Obj_ImportID>
-                        <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>658</x>
-                        <y>55</y>
-                        <z>0</z>
-                        <width>32</width>
-                        <height>32</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>0.150000006</opacity>
                     </world>
                 </instance>
                 <instance type="Special_Bomb" uid="165">
@@ -2348,6 +2327,7 @@
                         <ScreenWrap>XY</ScreenWrap>
                         <InitialHP>0</InitialHP>
                         <IgnoreBlockers>false</IgnoreBlockers>
+                        <MoveOnlyOnFloor>false</MoveOnlyOnFloor>
                         <speed_move_x>0</speed_move_x>
                         <speed_move_y>0</speed_move_y>
                     </instance-variables>
@@ -2467,7 +2447,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Obj_ImportID>obj_pointy</Obj_ImportID>
+                        <Obj_ImportID></Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
                         <Obj_Difficulty>Everything</Obj_Difficulty>
                     </instance-variables>
@@ -2506,6 +2486,7 @@
                         <Obj_Difficulty>Everything</Obj_Difficulty>
                         <Mode>Gravity</Mode>
                         <InControl>false</InControl>
+                        <Destroy>false</Destroy>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -2526,8 +2507,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>289</x>
-                        <y>195</y>
+                        <x>295</x>
+                        <y>154</y>
                         <z>0</z>
                         <width>128</width>
                         <height>64</height>
@@ -2553,8 +2534,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>583</x>
-                        <y>-68</y>
+                        <x>650</x>
+                        <y>-42</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -2630,33 +2611,6 @@
                         <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Special_StartPos" uid="61">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Obj_ImportID>obj_start_pos</Obj_ImportID>
-                        <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>453</x>
-                        <y>447</y>
-                        <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -2797,7 +2751,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Timer>4</Timer>
+                        <Timer>3</Timer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet">
@@ -2822,35 +2776,6 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Special_EnemyGroundCollision" uid="97">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <LastSeenX>0</LastSeenX>
-                        <RevertToOld>false</RevertToOld>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Pin" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>678</x>
-                        <y>133</y>
-                        <z>0</z>
-                        <width>4</width>
-                        <height>32</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -3117,6 +3042,114 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Special_StartPos" uid="61">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Obj_ImportID>obj_start_pos</Obj_ImportID>
+                        <Obj_ImportInstance></Obj_ImportInstance>
+                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>453</x>
+                        <y>447</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Special_EnemyBlocker" uid="164">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Obj_ImportID></Obj_ImportID>
+                        <Obj_ImportInstance></Obj_ImportInstance>
+                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>658</x>
+                        <y>55</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Special_EnemyGroundCollision" uid="97">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <LastSeenX>0</LastSeenX>
+                        <RevertToOld>false</RevertToOld>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>678</x>
+                        <y>133</y>
+                        <z>0</z>
+                        <width>4</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Special_SkizzorCollisions" uid="144">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>797</x>
+                        <y>264</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>128</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -4194,17 +4227,40 @@
             <background-color>0,0,0</background-color>
             <transparent>0</transparent>
             <parallax>
-                <x>1</x>
-                <y>1</y>
+                <x>0</x>
+                <y>0</y>
             </parallax>
-            <zoom-rate>1</zoom-rate>
+            <zoom-rate>0</zoom-rate>
             <opacity>1</opacity>
             <force-own-texture>0</force-own-texture>
             <global>1</global>
             <use-render-cells>0</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
-            <instances />
+            <instances>
+                <instance type="HUD_NohBodee" uid="142">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Disabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>320</x>
+                        <y>180</y>
+                        <z>0</z>
+                        <width>640</width>
+                        <height>360</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
             <effects />
         </layer>
         <layer name="GLOBAL_Loading" sid="730632758866411">
@@ -4480,8 +4536,8 @@
         </instance>
         <instance type="Var_Level" uid="59">
             <instance-variables>
-                <RoomEngine>GM8_3</RoomEngine>
-                <Room>Stage3-2</Room>
+                <RoomEngine>GMS1</RoomEngine>
+                <Room>rmChilledCavern3</Room>
                 <Difficulty>Normal</Difficulty>
                 <ImportErrorAttempts>0</ImportErrorAttempts>
             </instance-variables>

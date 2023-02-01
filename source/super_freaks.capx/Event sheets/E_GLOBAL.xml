@@ -1100,6 +1100,21 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="355192722569354">
+                    <conditions>
+                        <condition id="-17" name="Compare opacity" sid="587468436215673" type="System">
+                            <param id="0" name="Layer">&quot;GLOBAL_Fade&quot;</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Opacity">0</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="655955196681718" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="469775337623725" type="HUD_NohBodee">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="717801578855021">
                     <conditions>
                         <condition id="3" name="On ticked" sid="113486463268744" type="Ease">
@@ -1166,6 +1181,27 @@
                                     <param id="1" name="Color">rgb(255, 0, 0)</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="643580104587431">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="382864960537334" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;in&quot;</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="270797786744643" type="System">
+                                            <param id="0" name="First value">random(0,100)</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Second value">4.20</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="208996687352060" type="HUD_NohBodee">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="730795968157399">
                             <conditions>
