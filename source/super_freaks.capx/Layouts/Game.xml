@@ -90,8 +90,8 @@
                         <opacity>1</opacity>
                     </world>
                     <tilemap-data>
-                        <width>1</width>
-                        <height>1</height>
+                        <width>20</width>
+                        <height>11</height>
                         <max-width>20</max-width>
                         <max-height>11</max-height>
                         <data>0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1</data>
@@ -229,7 +229,7 @@
                     <instance-variables>
                         <Obj_ImportID>obj_heart</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -256,7 +256,7 @@
                     <instance-variables>
                         <Obj_ImportID>obj_yorb_star</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                         <checkpoint_id>0</checkpoint_id>
                     </instance-variables>
                     <behavior-instances>
@@ -299,14 +299,14 @@
                     <instance-variables>
                         <Obj_ImportID>obj_pinhead</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                         <walk_speed>1</walk_speed>
                         <DamageType>Hazard</DamageType>
                         <HP>1</HP>
                         <ScreenWrap></ScreenWrap>
-                        <InitialHP>0</InitialHP>
                         <IgnoreBlockers>false</IgnoreBlockers>
                         <MoveOnlyOnFloor>false</MoveOnlyOnFloor>
+                        <InitialHP>0</InitialHP>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -349,14 +349,14 @@
                     <instance-variables>
                         <Obj_ImportID>obj_boneym_giant</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                         <walk_speed>0.5</walk_speed>
                         <DamageType>Heavy</DamageType>
                         <HP>2</HP>
                         <ScreenWrap></ScreenWrap>
-                        <InitialHP>0</InitialHP>
                         <IgnoreBlockers>false</IgnoreBlockers>
                         <MoveOnlyOnFloor>false</MoveOnlyOnFloor>
+                        <InitialHP>0</InitialHP>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -399,7 +399,7 @@
                     <instance-variables>
                         <Obj_ImportID>obj_walkietalkie</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                         <hint>What&apos;s up gamers</hint>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -427,7 +427,7 @@
                     <instance-variables>
                         <Obj_ImportID>obj_platform_normal</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                         <Obj9pParent_Child>Obj9p_Platform</Obj9pParent_Child>
                         <ID></ID>
                         <my_path>-1</my_path>
@@ -503,7 +503,7 @@
                     <instance-variables>
                         <Obj_ImportID>obj_ray</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                         <checkpoint_id>0</checkpoint_id>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -531,7 +531,7 @@
                     <instance-variables>
                         <Obj_ImportID>obj_trophy</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                         <trophy_id>-1</trophy_id>
                         <NumberStars>0</NumberStars>
                         <TimedStars>0</TimedStars>
@@ -563,7 +563,7 @@
                     <instance-variables>
                         <Obj_ImportID>obj_portal</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                         <destination_room></destination_room>
                         <destination_x>0</destination_x>
                         <destination_y>0</destination_y>
@@ -593,7 +593,7 @@
                     <instance-variables>
                         <Obj_ImportID>obj_star_arrow</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                         <Rot_XDistance>0</Rot_XDistance>
                         <Rot_YDistance>0</Rot_YDistance>
                         <Rot_CircleW>32</Rot_CircleW>
@@ -628,14 +628,14 @@
                     <instance-variables>
                         <Obj_ImportID>obj_propello</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                         <walk_speed>-1</walk_speed>
                         <DamageType>Normal</DamageType>
                         <HP>1</HP>
                         <ScreenWrap></ScreenWrap>
-                        <InitialHP>0</InitialHP>
                         <IgnoreBlockers>false</IgnoreBlockers>
                         <MoveOnlyOnFloor>false</MoveOnlyOnFloor>
+                        <InitialHP>0</InitialHP>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -678,7 +678,7 @@
                     <instance-variables>
                         <Obj_ImportID>obj_skulljar</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -705,7 +705,7 @@
                     <instance-variables>
                         <Obj_ImportID>obj_view_blocker</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                         <solid_up>True</solid_up>
                         <solid_down>True</solid_down>
                         <solid_left>True</solid_left>
@@ -737,7 +737,7 @@
                     <instance-variables>
                         <Obj_ImportID>obj_climb_mesh_path</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -764,7 +764,7 @@
                     <instance-variables>
                         <Obj_ImportID>obj_climb_mesh</Obj_ImportID>
                         <Obj_ImportInstance>0</Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                         <Obj9pParent_Child>Obj9p_ClimbMesh</Obj9pParent_Child>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -792,7 +792,7 @@
                     <instance-variables>
                         <Obj_ImportID>obj_climb_mesh_fall</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -852,7 +852,7 @@
                     <instance-variables>
                         <Obj_ImportID>obj_zone</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -879,7 +879,7 @@
                     <instance-variables>
                         <Obj_ImportID>obj_view_trapper</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                         <my_zoom>0</my_zoom>
                         <my_x>0</my_x>
                         <my_y>0</my_y>
@@ -909,14 +909,14 @@
                     <instance-variables>
                         <Obj_ImportID>obj_skizzor</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                         <walk_speed>0</walk_speed>
                         <DamageType>Hazard</DamageType>
                         <HP>1</HP>
                         <ScreenWrap></ScreenWrap>
-                        <InitialHP>0</InitialHP>
                         <IgnoreBlockers>false</IgnoreBlockers>
                         <MoveOnlyOnFloor>true</MoveOnlyOnFloor>
+                        <InitialHP>0</InitialHP>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -959,7 +959,7 @@
                     <instance-variables>
                         <Obj_ImportID>obj_number_star</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                         <path></path>
                         <ID>0</ID>
                         <InstanceCreationCode></InstanceCreationCode>
@@ -1005,7 +1005,7 @@
                     <instance-variables>
                         <Obj_ImportID>obj_time_star</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                         <path></path>
                         <time>1</time>
                         <InstanceCreationCode></InstanceCreationCode>
@@ -1157,7 +1157,7 @@
                     <instance-variables>
                         <Obj_ImportID>obj_path_visual</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                         <my_path></my_path>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -1208,7 +1208,7 @@
                     <instance-variables>
                         <Obj_ImportID>obj_swinging_spikeball_pineapple</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                         <Attach_Allowed>true</Attach_Allowed>
                         <Attach_True>false</Attach_True>
                         <Compat_Chain>true</Compat_Chain>
@@ -1241,7 +1241,7 @@
                     <instance-variables>
                         <Obj_ImportID>obj_platform_rocket_apple</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                         <Obj9pParent_Child>Obj9p_RocketApplePlatform</Obj9pParent_Child>
                         <ID></ID>
                         <rocket_height>0</rocket_height>
@@ -1373,7 +1373,7 @@
                     <instance-variables>
                         <Obj_ImportID></Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1400,7 +1400,7 @@
                     <instance-variables>
                         <Obj_ImportID>obj_worldmap_icon</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1427,7 +1427,7 @@
                     <instance-variables>
                         <Obj_ImportID>obj_yorb</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1454,7 +1454,7 @@
                     <instance-variables>
                         <Obj_ImportID>obj_platform_orange</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                         <Attach_Allowed>true</Attach_Allowed>
                         <Attach_True>false</Attach_True>
                         <Compat_Chain>true</Compat_Chain>
@@ -1503,7 +1503,7 @@
                     <instance-variables>
                         <Obj_ImportID></Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                         <chain_segments>1</chain_segments>
                         <starting_angle>0</starting_angle>
                         <swing_speed>0</swing_speed>
@@ -1557,7 +1557,7 @@
                     <instance-variables>
                         <Obj_ImportID></Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                         <Attach_Allowed>true</Attach_Allowed>
                         <Attach_True>false</Attach_True>
                         <Compat_Chain>true</Compat_Chain>
@@ -1590,14 +1590,14 @@
                     <instance-variables>
                         <Obj_ImportID>obj_boneym</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                         <walk_speed>1</walk_speed>
                         <DamageType>Normal</DamageType>
                         <HP>1</HP>
                         <ScreenWrap></ScreenWrap>
-                        <InitialHP>0</InitialHP>
                         <IgnoreBlockers>false</IgnoreBlockers>
                         <MoveOnlyOnFloor>false</MoveOnlyOnFloor>
+                        <InitialHP>0</InitialHP>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -1640,7 +1640,7 @@
                     <instance-variables>
                         <Obj_ImportID>obj_spring</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                         <Obj9pParent_Child>Obj9p_Spring</Obj9pParent_Child>
                         <BounceHeight>-600</BounceHeight>
                     </instance-variables>
@@ -1768,7 +1768,7 @@
                     <instance-variables>
                         <Obj_ImportID></Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1830,14 +1830,14 @@
                     <instance-variables>
                         <Obj_ImportID>obj_fusedropper</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                         <walk_speed>-1</walk_speed>
                         <DamageType>Normal</DamageType>
                         <HP>1</HP>
                         <ScreenWrap></ScreenWrap>
-                        <InitialHP>0</InitialHP>
                         <IgnoreBlockers>false</IgnoreBlockers>
                         <MoveOnlyOnFloor>false</MoveOnlyOnFloor>
+                        <InitialHP>0</InitialHP>
                         <speed_move>0</speed_move>
                         <timer_delay>0</timer_delay>
                         <timer_frequency>1</timer_frequency>
@@ -1939,7 +1939,7 @@
                     <instance-variables>
                         <Obj_ImportID></Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                         <Obj9pParent_Child>Obj9p_GravityLow</Obj9pParent_Child>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -1967,7 +1967,7 @@
                     <instance-variables>
                         <Obj_ImportID></Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                         <Obj9pParent_Child>Obj9p_GravityHigh</Obj9pParent_Child>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -2259,7 +2259,7 @@
                     <instance-variables>
                         <Obj_ImportID></Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                         <Obj9pParent_Child>Obj9p_WaterDeco</Obj9pParent_Child>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -2320,14 +2320,14 @@
                     <instance-variables>
                         <Obj_ImportID>obj_pointy</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                         <walk_speed>-1</walk_speed>
                         <DamageType>Hazard</DamageType>
                         <HP>1</HP>
                         <ScreenWrap>XY</ScreenWrap>
-                        <InitialHP>0</InitialHP>
                         <IgnoreBlockers>false</IgnoreBlockers>
                         <MoveOnlyOnFloor>false</MoveOnlyOnFloor>
+                        <InitialHP>0</InitialHP>
                         <speed_move_x>0</speed_move_x>
                         <speed_move_y>0</speed_move_y>
                     </instance-variables>
@@ -2372,7 +2372,7 @@
                     <instance-variables>
                         <Obj_ImportID>obj_crackerball</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                         <MaxSpeed>120</MaxSpeed>
                         <BounceHeight>429</BounceHeight>
                         <CreateExplosion>True</CreateExplosion>
@@ -2421,7 +2421,7 @@
                     <instance-variables>
                         <Obj_ImportID>obj_crackerbarrel_giant</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                         <speed_move>2</speed_move>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -2449,7 +2449,7 @@
                     <instance-variables>
                         <Obj_ImportID></Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -2483,7 +2483,7 @@
                     <instance-variables>
                         <Obj_ImportID></Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                         <Mode>Gravity</Mode>
                         <InControl>false</InControl>
                         <Destroy>false</Destroy>
@@ -2507,8 +2507,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>295</x>
-                        <y>154</y>
+                        <x>289</x>
+                        <y>159</y>
                         <z>0</z>
                         <width>128</width>
                         <height>64</height>
@@ -2529,7 +2529,7 @@
                     <instance-variables>
                         <Obj_ImportID></Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2565,9 +2565,9 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Player_SuitTrail" uid="91">
+                <instance type="Particle_Trail" uid="91">
                     <properties>
-                        <rate>50</rate>
+                        <rate>30</rate>
                         <spray-cone>0</spray-cone>
                         <type>Continuous spray</type>
                         <initial-particle-properties></initial-particle-properties>
@@ -2604,7 +2604,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>254</x>
+                        <x>241</x>
                         <y>-34</y>
                         <z>0</z>
                         <width>32</width>
@@ -2883,7 +2883,7 @@
             <effects />
         </layer>
         <layer name="Collisions" sid="482401880765482">
-            <initially-visible>0</initially-visible>
+            <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
             <parallax>
@@ -3056,7 +3056,7 @@
                     <instance-variables>
                         <Obj_ImportID>obj_start_pos</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3083,7 +3083,7 @@
                     <instance-variables>
                         <Obj_ImportID></Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_Difficulty>Everything</Obj_Difficulty>
+                        <Obj_Difficulty></Obj_Difficulty>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -4536,8 +4536,8 @@
         </instance>
         <instance type="Var_Level" uid="59">
             <instance-variables>
-                <RoomEngine>GMS1</RoomEngine>
-                <Room>rmChilledCavern3</Room>
+                <RoomEngine>GM8_3</RoomEngine>
+                <Room>Stage4-1</Room>
                 <Difficulty>Normal</Difficulty>
                 <ImportErrorAttempts>0</ImportErrorAttempts>
             </instance-variables>

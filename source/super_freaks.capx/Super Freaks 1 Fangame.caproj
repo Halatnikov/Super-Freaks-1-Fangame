@@ -2,7 +2,7 @@
 <c2project>
     <name>Super Freaks 1 Fangame</name>
     <description></description>
-    <version>0.3.0-6</version>
+    <version>0.3.0-7</version>
     <author>Halatnikov</author>
     <author-email></author-email>
     <author-website>https://halatnikov.github.io</author-website>
@@ -322,7 +322,7 @@
                                 </collision-poly>
                             </frame>
                         </animation>
-                        <animation framecount="2" loop="1" name="Robot_1" pingpong="0" repeatcount="1" repeatto="0" sid="150942667623751" speed="12">
+                        <animation framecount="2" loop="1" name="Robot_3" pingpong="0" repeatcount="1" repeatto="0" sid="150942667623751" speed="12">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\123\Super Freaks 3 2006 - Scruffy 3 - A Day in the Life\Sprites\sprLittleRobotR.images\image 1.png">
                                 <collision-poly>
                                     <point x="0.09375" y="0.15625" />
@@ -340,7 +340,7 @@
                                 </collision-poly>
                             </frame>
                         </animation>
-                        <animation framecount="1" loop="0" name="Flame_1" pingpong="0" repeatcount="1" repeatto="0" sid="208242302844065" speed="5">
+                        <animation framecount="1" loop="0" name="Flame_3" pingpong="0" repeatcount="1" repeatto="0" sid="208242302844065" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                                 <collision-poly>
                                     <point x="0.0625" y="0.0625" />
@@ -441,6 +441,19 @@
                                     <point x="0.818182" y="0.333333" />
                                     <point x="0.818182" y="1" />
                                     <point x="0.159091" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="SuperRobot_3" pingpong="0" repeatcount="1" repeatto="0" sid="636810304670642" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\123\Super Freaks 3 2006 - Scruffy 3 - A Day in the Life\Sprites\sprSuperRobotR.images\image 0.png">
+                                <collision-poly>
+                                    <point x="0.173333" y="0.22" />
+                                    <point x="0.453333" y="0.14" />
+                                    <point x="0.746667" y="0.22" />
+                                    <point x="0.846667" y="0.48" />
+                                    <point x="0.846667" y="1" />
+                                    <point x="0.0666667" y="1" />
+                                    <point x="0.0666667" y="0.473333" />
                                 </collision-poly>
                             </frame>
                         </animation>
@@ -1445,6 +1458,16 @@
                         </animation>
                         <animation framecount="1" loop="0" name="Exit_3" pingpong="0" repeatcount="1" repeatto="0" sid="397772996855880" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\123\Super Freaks 3 2006 - Scruffy 3 - A Day in the Life\Sprites\sprExit.images\image 0.png" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="OldExit_3" pingpong="0" repeatcount="1" repeatto="0" sid="748340308930453" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\123\Super Freaks 3 2006 - Scruffy 3 - A Day in the Life\Sprites\sprExit2.images\image 0.png">
+                                <collision-poly>
+                                    <point x="0.40625" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0.40625" y="1" />
+                                </collision-poly>
+                            </frame>
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -2474,19 +2497,19 @@
                     </animation>
                     <animation framecount="16" loop="0" name="Explosion" pingpong="0" repeatcount="1" repeatto="0" sid="443642382725188" speed="24">
                         <frame duration="1" hotspotX="0.507042" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.507042" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.507042" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.507042" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.507042" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.507042" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.507042" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.507042" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.507042" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.507042" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.507042" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.507042" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.507042" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.507042" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.507042" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.507042" hotspotY="0.5" />
                     </animation>
@@ -3809,7 +3832,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="Player_SuitTrail" sid="607836310346139">
+            <object-type name="Particle_Trail" sid="607836310346139">
                 <plugin id="Particles" />
                 <behaviors>
                     <behavior-type name="Pin" sid="618517577703607">
@@ -3976,9 +3999,9 @@
                 <instance-variable name="DamageType" sid="467689896831941" type="string" />
                 <instance-variable name="HP" sid="666643145678727" type="number" />
                 <instance-variable name="ScreenWrap" sid="656632667359998" type="string" />
-                <instance-variable name="InitialHP" sid="210115062667098" type="number" />
                 <instance-variable name="IgnoreBlockers" sid="787016242216019" type="boolean" />
                 <instance-variable name="MoveOnlyOnFloor" sid="871234221551948" type="boolean" />
+                <instance-variable name="InitialHP" sid="210115062667098" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Platform" sid="544851210712236">

@@ -2269,13 +2269,25 @@
                                                     <param id="1" name="Key {n}">&quot;ImportRoom_GM8_&quot;&amp;game{###}room{###}&quot;Flags&quot;</param>
                                                 </condition>
                                             </conditions>
-                                            <actions>
-                                                <action id="20" name="Set Value" sid="185592880535923" type="JSON_PERSIST">
-                                                    <param id="0" name="Value">JSON_PERSIST.Value(0,&quot;ImportRoom_GM8_&quot;&amp;game,room,&quot;Flags&quot;)&amp;&quot;|SpeedSuit|StrongSuit&quot;</param>
-                                                    <param id="1" name="Reference point">0</param>
-                                                    <param id="2" name="Key {n}">&quot;ImportRoom_GM8_&quot;&amp;game{###}room{###}&quot;Flags&quot;</param>
-                                                </action>
-                                            </actions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="517995415778789">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="119906867785106" type="System">
+                                                            <param id="0" name="First value">find(JSON_PERSIST.Value(0,&quot;ImportRoom_GM8_&quot;&amp;game,room,&quot;Flags&quot;),&quot;|GM8&quot;)</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">-1</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="20" name="Set Value" sid="185592880535923" type="JSON_PERSIST">
+                                                            <param id="0" name="Value">JSON_PERSIST.Value(0,&quot;ImportRoom_GM8_&quot;&amp;game,room,&quot;Flags&quot;)&amp;&quot;|GM8&quot;</param>
+                                                            <param id="1" name="Reference point">0</param>
+                                                            <param id="2" name="Key {n}">&quot;ImportRoom_GM8_&quot;&amp;game{###}room{###}&quot;Flags&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                         <event-block sid="628926931476200">
                                             <conditions>
@@ -2284,13 +2296,41 @@
                                                     <param id="1" name="Key {n}">&quot;ImportRoom_GM8_&quot;&amp;game{###}room{###}&quot;Flags&quot;</param>
                                                 </condition>
                                             </conditions>
-                                            <actions>
-                                                <action id="20" name="Set Value" sid="973878693140779" type="JSON_PERSIST">
-                                                    <param id="0" name="Value">&quot;|SpeedSuit|StrongSuit&quot;</param>
-                                                    <param id="1" name="Reference point">0</param>
-                                                    <param id="2" name="Key {n}">&quot;ImportRoom_GM8_&quot;&amp;game{###}room{###}&quot;Flags&quot;</param>
-                                                </action>
-                                            </actions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="998667374311454">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="766997396226913" type="System">
+                                                            <param id="0" name="First value">JSON_PERSIST.Value(0,&quot;ImportRoom_GM8_&quot;&amp;game,room,&quot;Type&quot;)</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">&quot;Level&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="20" name="Set Value" sid="973878693140779" type="JSON_PERSIST">
+                                                            <param id="0" name="Value">&quot;|GM8|SpeedSuit|StrongSuit&quot;</param>
+                                                            <param id="1" name="Reference point">0</param>
+                                                            <param id="2" name="Key {n}">&quot;ImportRoom_GM8_&quot;&amp;game{###}room{###}&quot;Flags&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="832569912601444">
+                                                    <conditions>
+                                                        <condition id="-8" inverted="1" name="Compare two values" sid="365945841625711" type="System">
+                                                            <param id="0" name="First value">JSON_PERSIST.Value(0,&quot;ImportRoom_GM8_&quot;&amp;game,room,&quot;Type&quot;)</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">&quot;Level&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="20" name="Set Value" sid="701301692780455" type="JSON_PERSIST">
+                                                            <param id="0" name="Value">&quot;|GM8&quot;</param>
+                                                            <param id="1" name="Reference point">0</param>
+                                                            <param id="2" name="Key {n}">&quot;ImportRoom_GM8_&quot;&amp;game{###}room{###}&quot;Flags&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-block>

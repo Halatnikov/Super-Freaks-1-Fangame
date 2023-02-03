@@ -2794,6 +2794,23 @@
                                                         </action>
                                                     </actions>
                                                 </event-block>
+                                                <event-block sid="189148092583743">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="664969879270141" type="System">
+                                                            <param id="0" name="First value">JSON_Room.Value(0,&quot;room&quot;,&quot;tiles&quot;,&quot;tile&quot;,JSON_Room.CurrentKey,&quot;background&quot;)</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">&quot;bacOriginalTikimanStage&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="2" name="Set sub-image offset and size" sid="155279342766706" type="Tiles_GMS1">
+                                                            <param id="0" name="offset x">Self.offsetX+256</param>
+                                                            <param id="1" name="offset y">Self.offsetY+0</param>
+                                                            <param id="2" name="sub width">Self.SubWidth</param>
+                                                            <param id="3" name="sub height">Self.SubHeight</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
                                             </sub-events>
                                         </event-block>
                                     </sub-events>
@@ -3115,12 +3132,17 @@
                                             </sub-events>
                                         </event-block>
                                         <comment>objects</comment>
-                                        <event-block sid="332086841290308">
+                                        <event-block any="1" sid="332086841290308">
                                             <conditions>
                                                 <condition id="-14" name="Compare variable" sid="394725372384333" type="System">
                                                     <param id="0" name="Variable">instance</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">&quot;objExit&quot;</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="816845964592354" type="System">
+                                                    <param id="0" name="Variable">instance</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;objOldExit&quot;</param>
                                                 </condition>
                                             </conditions>
                                             <actions />
@@ -3148,14 +3170,36 @@
                                                             <param id="0" name="Animation">&quot;Exit_3&quot;</param>
                                                             <param id="1" name="From">1</param>
                                                         </action>
-                                                        <action id="-16" name="Wait" sid="438200522823356" type="System">
-                                                            <param id="0" name="Seconds">0.2</param>
-                                                        </action>
-                                                        <action id="-10" name="Set value" sid="361459397862137" type="Obj_Portal">
-                                                            <param id="0" name="Instance variable">destination_room</param>
-                                                            <param id="1" name="Value">next_room</param>
-                                                        </action>
                                                     </actions>
+                                                    <sub-events>
+                                                        <event-block sid="639967883003126">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="510453573873470" type="System">
+                                                                    <param id="0" name="Variable">instance</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;objOldExit&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="4" name="Set animation" sid="383158967778501" type="Obj_Portal">
+                                                                    <param id="0" name="Animation">&quot;OldExit_3&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="874932216378277">
+                                                            <conditions />
+                                                            <actions>
+                                                                <action id="-16" name="Wait" sid="438200522823356" type="System">
+                                                                    <param id="0" name="Seconds">0.2</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="361459397862137" type="Obj_Portal">
+                                                                    <param id="0" name="Instance variable">destination_room</param>
+                                                                    <param id="1" name="Value">next_room</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                                 <event-block sid="255599758260140">
                                                     <conditions>
@@ -3343,7 +3387,7 @@
                                                     <param id="1" name="Value">instance</param>
                                                 </action>
                                                 <action id="4" name="Set animation" sid="966937222624646" type="Enemy_BoneyM">
-                                                    <param id="0" name="Animation">&quot;Robot_1&quot;</param>
+                                                    <param id="0" name="Animation">&quot;Robot_3&quot;</param>
                                                     <param id="1" name="From">1</param>
                                                 </action>
                                                 <action id="-10" name="Set value" sid="348274749493430" type="Enemy_BoneyM">
@@ -3390,6 +3434,50 @@
                                                 <action id="-3" name="Set position" sid="165327131233188" type="Enemy_BoneyM">
                                                     <param id="0" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))+16</param>
                                                     <param id="1" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))+32</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="646594953843118">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="287963683819439" type="System">
+                                                    <param id="0" name="Variable">instance</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;objSuperRobot&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="195515483097057" type="System">
+                                                    <param id="0" name="Object to create">Enemy_BoneyM</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))</param>
+                                                    <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="375360417448020" type="Enemy_BoneyM">
+                                                    <param id="0" name="Instance variable">Obj_ImportID</param>
+                                                    <param id="1" name="Value">instance</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="394064575536540" type="Enemy_BoneyM">
+                                                    <param id="0" name="Animation">&quot;SuperRobot_3&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="275234653652688" type="Enemy_BoneyM">
+                                                    <param id="0" name="Instance variable">walk_speed</param>
+                                                    <param id="1" name="Value">0.75</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="143203500309989" type="Enemy_BoneyM">
+                                                    <param id="0" name="Instance variable">HP</param>
+                                                    <param id="1" name="Value">2</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="749236165892481" type="Enemy_BoneyM">
+                                                    <param id="0" name="Instance variable">DamageType</param>
+                                                    <param id="1" name="Value">&quot;StrongPushAway&quot;</param>
+                                                </action>
+                                                <action id="7" name="Set mirrored" sid="451577779712368" type="Enemy_BoneyM">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                                <action id="-3" name="Set position" sid="321220904428824" type="Enemy_BoneyM">
+                                                    <param id="0" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))+75-16</param>
+                                                    <param id="1" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))+75</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -3806,15 +3894,15 @@
                                                 <action id="-3" name="Create object" sid="462643956268247" type="System">
                                                     <param id="0" name="Object to create">Enemy_BoneyM</param>
                                                     <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                                    <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))+16</param>
-                                                    <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))+16</param>
+                                                    <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))</param>
+                                                    <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))</param>
                                                 </action>
                                                 <action id="-10" name="Set value" sid="571070088641752" type="Enemy_BoneyM">
                                                     <param id="0" name="Instance variable">Obj_ImportID</param>
                                                     <param id="1" name="Value">instance</param>
                                                 </action>
                                                 <action id="4" name="Set animation" sid="478708431799697" type="Enemy_BoneyM">
-                                                    <param id="0" name="Animation">&quot;Flame_1&quot;</param>
+                                                    <param id="0" name="Animation">&quot;Flame_3&quot;</param>
                                                     <param id="1" name="From">1</param>
                                                 </action>
                                                 <action id="-10" name="Set value" sid="358590867144649" type="Enemy_BoneyM">
@@ -3940,7 +4028,7 @@
                         </action>
                         <action id="-10" name="Set value" sid="992886992597611" type="LevelObjects">
                             <param id="0" name="Instance variable">Obj_Difficulty</param>
-                            <param id="1" name="Value">replace(Function.Call(&quot;GMS2_InstanceProperty&quot;,Self.Obj_ImportInstance,&quot;difficulty&quot;,&quot;Everything&quot;),&quot;&quot;&quot;&quot;,&quot;&quot;)</param>
+                            <param id="1" name="Value">replace(Function.Call(&quot;GMS2_InstanceProperty&quot;,Self.Obj_ImportInstance,&quot;difficulty&quot;,&quot;&quot;),&quot;&quot;&quot;&quot;,&quot;&quot;)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -4833,7 +4921,7 @@
                         <condition id="-7" inverted="1" name="Compare instance variable" sid="217620975410714" type="ObjCompat_PathVisual">
                             <param id="0" name="Instance variable">Obj_Difficulty</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;Everything&quot;</param>
+                            <param id="2" name="Value">&quot;&quot;</param>
                         </condition>
                         <condition id="-8" name="Compare two values" sid="116978643251170" type="System">
                             <param id="0" name="First value">find(ObjCompat_PathVisual.Obj_Difficulty,Var_Level.Difficulty)</param>
@@ -5727,7 +5815,7 @@
                                 <condition id="-7" inverted="1" name="Compare instance variable" sid="151132650335518" type="LevelObjects">
                                     <param id="0" name="Instance variable">Obj_Difficulty</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Everything&quot;</param>
+                                    <param id="2" name="Value">&quot;&quot;</param>
                                 </condition>
                                 <condition id="-8" name="Compare two values" sid="978019742624933" type="System">
                                     <param id="0" name="First value">find(LevelObjects.Obj_Difficulty,Var_Level.Difficulty)</param>
@@ -6791,7 +6879,7 @@
                                     <param id="0" name="Mode">0</param>
                                     <param id="1" name="Effect">&quot;Outline&quot;</param>
                                 </action>
-                                <action id="-9" name="Destroy" sid="115406595858352" type="Player_SuitTrail" />
+                                <action id="-9" name="Destroy" sid="115406595858352" type="Particle_Trail" />
                                 <action id="-9" name="Destroy" sid="384179249434768" type="Player_YorbX2" />
                                 <action id="-9" name="Destroy" sid="298196467479817" type="Player_SuitFist" />
                                 <action id="-10" name="Set value" sid="184189938099055" type="Var_Player">
@@ -6809,6 +6897,9 @@
                                 <action behavior="Pin" id="1" name="Unpin" sid="146341137417978" type="Player" />
                                 <action behavior="Platform" id="11" name="Set enabled" sid="212694276746888" type="Obj_Car">
                                     <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="691317803854770" type="Player_Skin">
+                                    <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -7495,14 +7586,30 @@
                             <param id="0" name="Name">&quot;Audio_PlaySFX&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;yell_goofy&quot;</param>
                         </action>
-                        <action id="0" name="Call function" sid="503254789731895" type="Function">
-                            <param id="0" name="Name">&quot;Audio_PlaySFX&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;fall&quot;</param>
-                        </action>
                         <action behavior="Platform" id="11" name="Set enabled" sid="857068437656476" type="Player">
                             <param id="0" name="State">0</param>
                         </action>
+                        <action id="-15" name="Set visible" sid="278458187743445" type="Player_Skin">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="200128472844647">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="942934246985884" type="System">
+                                    <param id="0" name="First value">find(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine,Var_Level.Room,&quot;Flags&quot;),&quot;|GM8&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="503254789731895" type="Function">
+                                    <param id="0" name="Name">&quot;Audio_PlaySFX&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;fall&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="807634965814403">
                     <conditions>
@@ -7556,6 +7663,23 @@
                                     <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="122607729222344">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Compare two values" sid="594702253566713" type="System">
+                                            <param id="0" name="First value">find(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine,Var_Level.Room,&quot;Flags&quot;),&quot;|GM8&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">-1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="546472080593483" type="Function">
+                                            <param id="0" name="Name">&quot;Audio_PlaySFX&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;death&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="368498488002740">
                             <conditions>
@@ -7776,6 +7900,10 @@
                                         <action behavior="Platform" id="9" name="Set vector Y" sid="128713459340907" type="Player">
                                             <param id="0" name="Vector Y">-Self.Platform.JumpStrength</param>
                                         </action>
+                                        <action id="-10" name="Set value" sid="978396675554059" type="Var_Player">
+                                            <param id="0" name="Instance variable">Direction</param>
+                                            <param id="1" name="Value">&quot;Right&quot;</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
@@ -7862,6 +7990,10 @@
                                         </action>
                                         <action behavior="Platform" id="9" name="Set vector Y" sid="703191407953254" type="Player">
                                             <param id="0" name="Vector Y">-Self.Platform.JumpStrength</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="965996118569035" type="Var_Player">
+                                            <param id="0" name="Instance variable">Direction</param>
+                                            <param id="1" name="Value">&quot;Left&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -8211,7 +8343,7 @@
                         <action id="-9" name="Destroy" sid="209010371622130" type="Player_SuitFist" />
                         <action id="0" name="Call function" sid="659133246357648" type="Function">
                             <param id="0" name="Name">&quot;Audio_PlaySFX&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;explode&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;explode_short&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -8324,6 +8456,47 @@
                                 <action id="-9" name="Destroy" sid="177202465588881" type="Player_SuitFist" />
                             </actions>
                         </event-block>
+                        <event-block sid="389090230014650">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="400143864666294" type="Enemies">
+                                    <param id="0" name="Instance variable">DamageType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;StrongPushAway&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="636068700913913">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="110143586013559" type="Enemies">
+                                            <param id="0" name="Instance variable">HP</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="486857517101561" type="Enemies">
+                                            <param id="0" name="Instance variable">HP</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="663483993033539" type="Function">
+                                            <param id="0" name="Name">&quot;Audio_PlaySFX&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;hit&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="594514379631623">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="352737668226318" type="Enemies">
+                                            <param id="0" name="Instance variable">HP</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                         <event-block sid="646454480186483">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="761993373654026" type="Enemies">
@@ -8387,8 +8560,8 @@
                             <param id="2" name="Value">&quot;&quot;</param>
                         </condition>
                         <condition id="-33" name="Pick by comparison" sid="264794463997296" type="System">
-                            <param id="0" name="Object">Player_SuitTrail</param>
-                            <param id="1" name="Expression">Player_SuitTrail.Pin.PinnedUID</param>
+                            <param id="0" name="Object">Particle_Trail</param>
+                            <param id="1" name="Expression">Particle_Trail.Pin.PinnedUID</param>
                             <param id="2" name="Comparison">0</param>
                             <param id="3" name="Value">Player.UID</param>
                         </condition>
@@ -8399,21 +8572,21 @@
                             <param id="0" name="Mode">0</param>
                             <param id="1" name="Effect">&quot;Outline&quot;</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="221443444962676" type="Player_SuitTrail" />
+                        <action id="-9" name="Destroy" sid="221443444962676" type="Particle_Trail" />
                     </actions>
                 </event-block>
                 <event-block sid="461665367490406">
                     <conditions>
                         <condition id="-19" name="On destroyed" sid="156190836781112" type="Player_SuitFist" />
                         <condition id="-33" name="Pick by comparison" sid="812426433802155" type="System">
-                            <param id="0" name="Object">Player_SuitTrail</param>
-                            <param id="1" name="Expression">Player_SuitTrail.Pin.PinnedUID</param>
+                            <param id="0" name="Object">Particle_Trail</param>
+                            <param id="1" name="Expression">Particle_Trail.Pin.PinnedUID</param>
                             <param id="2" name="Comparison">0</param>
                             <param id="3" name="Value">Player_SuitFist.UID</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="194390981666791" type="Player_SuitTrail" />
+                        <action id="-9" name="Destroy" sid="194390981666791" type="Particle_Trail" />
                     </actions>
                 </event-block>
                 <event-block sid="147433120430504">
@@ -8427,12 +8600,12 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Spawn another object" sid="981291027423074" type="Player">
-                            <param id="0" name="Object">Player_SuitTrail</param>
+                            <param id="0" name="Object">Particle_Trail</param>
                             <param id="1" name="Layer">&quot;Player&quot;</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="-25" name="Move to bottom" sid="751746913272611" type="Player_SuitTrail" />
-                        <action behavior="Pin" id="0" name="Pin to object" sid="449894816157352" type="Player_SuitTrail">
+                        <action id="-25" name="Move to bottom" sid="751746913272611" type="Particle_Trail" />
+                        <action behavior="Pin" id="0" name="Pin to object" sid="449894816157352" type="Particle_Trail">
                             <param id="0" name="Pin to">Player</param>
                             <param id="1" name="Mode">1</param>
                         </action>
@@ -8459,8 +8632,8 @@
                             <conditions>
                                 <condition id="-4" name="Trigger once while true" sid="532997964696081" type="System" />
                                 <condition id="-33" name="Pick by comparison" sid="678060119447018" type="System">
-                                    <param id="0" name="Object">Player_SuitTrail</param>
-                                    <param id="1" name="Expression">Player_SuitTrail.Pin.PinnedUID</param>
+                                    <param id="0" name="Object">Particle_Trail</param>
+                                    <param id="1" name="Expression">Particle_Trail.Pin.PinnedUID</param>
                                     <param id="2" name="Comparison">0</param>
                                     <param id="3" name="Value">Player.UID</param>
                                 </condition>
@@ -8481,17 +8654,17 @@
                                     <param id="1" name="Parameter index">2</param>
                                     <param id="2" name="Value">0</param>
                                 </action>
-                                <action id="-28" name="Set effect parameter" sid="751088169880627" type="Player_SuitTrail">
+                                <action id="-28" name="Set effect parameter" sid="751088169880627" type="Particle_Trail">
                                     <param id="0" name="Effect">&quot;Tint&quot;</param>
                                     <param id="1" name="Parameter index">0</param>
                                     <param id="2" name="Value">100</param>
                                 </action>
-                                <action id="-28" name="Set effect parameter" sid="704777674313357" type="Player_SuitTrail">
+                                <action id="-28" name="Set effect parameter" sid="704777674313357" type="Particle_Trail">
                                     <param id="0" name="Effect">&quot;Tint&quot;</param>
                                     <param id="1" name="Parameter index">1</param>
                                     <param id="2" name="Value">0</param>
                                 </action>
-                                <action id="-28" name="Set effect parameter" sid="575795474607529" type="Player_SuitTrail">
+                                <action id="-28" name="Set effect parameter" sid="575795474607529" type="Particle_Trail">
                                     <param id="0" name="Effect">&quot;Tint&quot;</param>
                                     <param id="1" name="Parameter index">2</param>
                                     <param id="2" name="Value">0</param>
@@ -8534,35 +8707,35 @@
                                 </action>
                                 <action id="-25" name="Move to bottom" sid="729229445525666" type="Player_SuitFist" />
                                 <action id="0" name="Spawn another object" sid="478527767160324" type="Player_SuitFist">
-                                    <param id="0" name="Object">Player_SuitTrail</param>
+                                    <param id="0" name="Object">Particle_Trail</param>
                                     <param id="1" name="Layer">&quot;Player&quot;</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
-                                <action id="-25" name="Move to bottom" sid="319828945678984" type="Player_SuitTrail" />
-                                <action behavior="Pin" id="0" name="Pin to object" sid="288449648281172" type="Player_SuitTrail">
+                                <action id="-25" name="Move to bottom" sid="319828945678984" type="Particle_Trail" />
+                                <action behavior="Pin" id="0" name="Pin to object" sid="288449648281172" type="Particle_Trail">
                                     <param id="0" name="Pin to">Player_SuitFist</param>
                                     <param id="1" name="Mode">1</param>
                                 </action>
-                                <action id="6" name="Set opacity" sid="929435103056159" type="Player_SuitTrail">
+                                <action id="6" name="Set opacity" sid="929435103056159" type="Particle_Trail">
                                     <param id="0" name="Opacity">50</param>
                                 </action>
-                                <action id="5" name="Set size" sid="236629831568419" type="Player_SuitTrail">
+                                <action id="5" name="Set size" sid="236629831568419" type="Particle_Trail">
                                     <param id="0" name="Size">24</param>
                                 </action>
-                                <action id="18" name="Set timeout" sid="662602860031602" type="Player_SuitTrail">
+                                <action id="18" name="Set timeout" sid="662602860031602" type="Particle_Trail">
                                     <param id="0" name="Timeout">0.25</param>
                                 </action>
-                                <action id="-28" name="Set effect parameter" sid="631217061061863" type="Player_SuitTrail">
+                                <action id="-28" name="Set effect parameter" sid="631217061061863" type="Particle_Trail">
                                     <param id="0" name="Effect">&quot;Tint&quot;</param>
                                     <param id="1" name="Parameter index">0</param>
                                     <param id="2" name="Value">100</param>
                                 </action>
-                                <action id="-28" name="Set effect parameter" sid="836567213488046" type="Player_SuitTrail">
+                                <action id="-28" name="Set effect parameter" sid="836567213488046" type="Particle_Trail">
                                     <param id="0" name="Effect">&quot;Tint&quot;</param>
                                     <param id="1" name="Parameter index">1</param>
                                     <param id="2" name="Value">0</param>
                                 </action>
-                                <action id="-28" name="Set effect parameter" sid="213048610640827" type="Player_SuitTrail">
+                                <action id="-28" name="Set effect parameter" sid="213048610640827" type="Particle_Trail">
                                     <param id="0" name="Effect">&quot;Tint&quot;</param>
                                     <param id="1" name="Parameter index">2</param>
                                     <param id="2" name="Value">0</param>
@@ -8597,8 +8770,8 @@
                             <conditions>
                                 <condition id="-4" name="Trigger once while true" sid="442732058747493" type="System" />
                                 <condition id="-33" name="Pick by comparison" sid="628832710888823" type="System">
-                                    <param id="0" name="Object">Player_SuitTrail</param>
-                                    <param id="1" name="Expression">Player_SuitTrail.Pin.PinnedUID</param>
+                                    <param id="0" name="Object">Particle_Trail</param>
+                                    <param id="1" name="Expression">Particle_Trail.Pin.PinnedUID</param>
                                     <param id="2" name="Comparison">0</param>
                                     <param id="3" name="Value">Player.UID</param>
                                 </condition>
@@ -8619,17 +8792,17 @@
                                     <param id="1" name="Parameter index">2</param>
                                     <param id="2" name="Value">255</param>
                                 </action>
-                                <action id="-28" name="Set effect parameter" sid="351958006559186" type="Player_SuitTrail">
+                                <action id="-28" name="Set effect parameter" sid="351958006559186" type="Particle_Trail">
                                     <param id="0" name="Effect">&quot;Tint&quot;</param>
                                     <param id="1" name="Parameter index">0</param>
                                     <param id="2" name="Value">0</param>
                                 </action>
-                                <action id="-28" name="Set effect parameter" sid="794253445003958" type="Player_SuitTrail">
+                                <action id="-28" name="Set effect parameter" sid="794253445003958" type="Particle_Trail">
                                     <param id="0" name="Effect">&quot;Tint&quot;</param>
                                     <param id="1" name="Parameter index">1</param>
                                     <param id="2" name="Value">50</param>
                                 </action>
-                                <action id="-28" name="Set effect parameter" sid="403588559521439" type="Player_SuitTrail">
+                                <action id="-28" name="Set effect parameter" sid="403588559521439" type="Particle_Trail">
                                     <param id="0" name="Effect">&quot;Tint&quot;</param>
                                     <param id="1" name="Parameter index">2</param>
                                     <param id="2" name="Value">100</param>
@@ -14166,12 +14339,17 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="715585258239859">
+                <event-block any="1" sid="715585258239859">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="431420068353766" type="Enemies">
                             <param id="0" name="Instance variable">DamageType</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;StrongSuit&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="201477896172544" type="Enemies">
+                            <param id="0" name="Instance variable">DamageType</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;StrongPushAway&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -15341,6 +15519,58 @@
                             <actions>
                                 <action id="5" name="Set frame" sid="949887301482034" type="Enemy_Skizzor">
                                     <param id="0" name="Frame number">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment></comment>
+        <event-block sid="759663275162259">
+            <conditions>
+                <condition id="-11" name="For Each" sid="683055510846652" type="System">
+                    <param id="0" name="Object">Enemies</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="137850638388540" type="Enemies">
+                    <param id="0" name="Instance variable">DamageType</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;StrongPushAway&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="265936084595416">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="536143864282456" type="Enemies">
+                            <param id="0" name="Instance variable">HP</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="1" name="Set max speed" sid="236730385865833" type="Enemies">
+                            <param id="0" name="Max Speed">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="842525296262792">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="738331897155360" type="Enemies">
+                            <param id="0" name="Instance variable">HP</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="592959719634554">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="867518766410291" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="1" name="Set max speed" sid="393798068842728" type="Enemies">
+                                    <param id="0" name="Max Speed">Self.walk_speed*60</param>
                                 </action>
                             </actions>
                         </event-block>
