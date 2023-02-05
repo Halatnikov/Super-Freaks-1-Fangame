@@ -3,12 +3,12 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>E_Launch</name>
     <events>
-        <event-block sid="999804906256369">
+        <event-block disabled="1" sid="999804906256369">
             <conditions />
             <actions />
             <sub-events>
                 <variable constant="0" name="state" sid="142914641552264" static="1" type="number">1</variable>
-                <event-block sid="274449252077331">
+                <event-block disabled="1" sid="274449252077331">
                     <conditions>
                         <condition id="-4" name="Trigger once while true" sid="390455779123414" type="System" />
                     </conditions>
@@ -19,7 +19,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="680498910120329">
+                <event-block disabled="1" sid="680498910120329">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="117098446088887" type="System">
                             <param id="0" name="Interval (seconds)">0.25</param>
@@ -32,7 +32,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="487557023792974">
+                <event-block disabled="1" sid="487557023792974">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="864763609783319" type="System">
                             <param id="0" name="Variable">state</param>
@@ -42,7 +42,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="260775789462149">
+                        <event-block disabled="1" sid="260775789462149">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="949802313180480" type="Loading">
                                     <param id="0" name="Instance variable">ID</param>
@@ -62,7 +62,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="222311926572434">
+                        <event-block disabled="1" sid="222311926572434">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="943867595731397" type="Loading">
                                     <param id="0" name="Instance variable">ID</param>
@@ -84,7 +84,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="775101560723033">
+                <event-block disabled="1" sid="775101560723033">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="767868298231657" type="System">
                             <param id="0" name="Variable">state</param>
@@ -94,7 +94,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="456335974464680">
+                        <event-block disabled="1" sid="456335974464680">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="259558720983600" type="Loading">
                                     <param id="0" name="Instance variable">ID</param>
@@ -114,7 +114,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="789183087458750">
+                        <event-block disabled="1" sid="789183087458750">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="130959539159941" type="Loading">
                                     <param id="0" name="Instance variable">ID</param>
@@ -136,7 +136,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="855462667186581">
+                <event-block disabled="1" sid="855462667186581">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="198960799252133" type="System">
                             <param id="0" name="Variable">state</param>
@@ -146,7 +146,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="441164832906817">
+                        <event-block disabled="1" sid="441164832906817">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="778859920543495" type="Loading">
                                     <param id="0" name="Instance variable">ID</param>
@@ -166,7 +166,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="209577034786766">
+                        <event-block disabled="1" sid="209577034786766">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="315910090852954" type="Loading">
                                     <param id="0" name="Instance variable">ID</param>
@@ -188,7 +188,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="783627333422798">
+                <event-block disabled="1" sid="783627333422798">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="388037719772522" type="System">
                             <param id="0" name="Variable">state</param>
@@ -198,7 +198,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="555181324079618">
+                        <event-block disabled="1" sid="555181324079618">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="592261983856758" type="Loading">
                                     <param id="0" name="Instance variable">ID</param>
@@ -218,7 +218,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="559101585584546">
+                        <event-block disabled="1" sid="559101585584546">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="294714150820258" type="Loading">
                                     <param id="0" name="Instance variable">ID</param>
@@ -240,7 +240,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="304195414996457">
+                <event-block disabled="1" sid="304195414996457">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="191279334961310" type="System">
                             <param id="0" name="Variable">state</param>

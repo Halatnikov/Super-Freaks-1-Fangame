@@ -3437,7 +3437,7 @@
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="646594953843118">
+                                        <event-block disabled="1" sid="646594953843118">
                                             <conditions>
                                                 <condition id="-14" name="Compare variable" sid="287963683819439" type="System">
                                                     <param id="0" name="Variable">instance</param>
@@ -7049,7 +7049,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="719460975924132">
+                <event-block disabled="1" sid="719460975924132">
                     <conditions>
                         <condition behavior="Platform" id="4" name="Is falling" sid="434283039885047" type="Player" />
                         <condition id="1" name="Is overlapping another object" sid="440494347410820" type="Player">
@@ -8464,7 +8464,9 @@
                                     <param id="2" name="Value">&quot;StrongPushAway&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="-9" name="Destroy" sid="811125422901804" type="Player_SuitFist" />
+                            </actions>
                             <sub-events>
                                 <event-block sid="636068700913913">
                                     <conditions>
