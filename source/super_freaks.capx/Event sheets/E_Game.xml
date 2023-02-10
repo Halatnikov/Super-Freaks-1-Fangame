@@ -2663,6 +2663,20 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="663602147098949">
+                            <conditions>
+                                <condition id="60" inverted="1" name="Is undefined" sid="483210711927936" type="JSON_PERSIST">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}">&quot;ImportRoom_&quot;&amp;game{###}Function.Param(0){###}&quot;Background&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="514217370357225" type="Var_Room">
+                                    <param id="0" name="Instance variable">Background</param>
+                                    <param id="1" name="Value">JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;game,Function.Param(0),&quot;Background&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="939324425503475">
                             <conditions />
                             <actions>
@@ -2881,6 +2895,36 @@
                                                 </action>
                                             </actions>
                                         </event-block>
+                                        <event-block sid="858673750758595">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="799315145589844" type="System">
+                                                    <param id="0" name="Variable">instance</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;objWorld1Back&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="803564906720286" type="Var_Room">
+                                                    <param id="0" name="Instance variable">Background</param>
+                                                    <param id="1" name="Value">&quot;3_level1&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="354195912192704">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="211148318111494" type="System">
+                                                    <param id="0" name="Variable">instance</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;objWorld2Back&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="851723110737297" type="Var_Room">
+                                                    <param id="0" name="Instance variable">Background</param>
+                                                    <param id="1" name="Value">&quot;3_level2&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
                                         <comment>&quot;tiles&quot; 2: the squeakvel</comment>
                                         <event-block any="1" sid="831325694272434">
                                             <conditions>
@@ -2945,7 +2989,7 @@
                                                             <actions>
                                                                 <action id="2" name="Set sub-image offset and size" sid="263460338767385" type="Tiles_GM8">
                                                                     <param id="0" name="offset x">0</param>
-                                                                    <param id="1" name="offset y">32</param>
+                                                                    <param id="1" name="offset y">160</param>
                                                                     <param id="2" name="sub width">32</param>
                                                                     <param id="3" name="sub height">32</param>
                                                                 </action>
@@ -2962,7 +3006,7 @@
                                                             <actions>
                                                                 <action id="2" name="Set sub-image offset and size" sid="647737940711063" type="Tiles_GM8">
                                                                     <param id="0" name="offset x">32</param>
-                                                                    <param id="1" name="offset y">32</param>
+                                                                    <param id="1" name="offset y">160</param>
                                                                     <param id="2" name="sub width">32</param>
                                                                     <param id="3" name="sub height">32</param>
                                                                 </action>
@@ -2979,7 +3023,7 @@
                                                             <actions>
                                                                 <action id="2" name="Set sub-image offset and size" sid="724532067847195" type="Tiles_GM8">
                                                                     <param id="0" name="offset x">64</param>
-                                                                    <param id="1" name="offset y">32</param>
+                                                                    <param id="1" name="offset y">160</param>
                                                                     <param id="2" name="sub width">32</param>
                                                                     <param id="3" name="sub height">32</param>
                                                                 </action>
@@ -2996,7 +3040,7 @@
                                                             <actions>
                                                                 <action id="2" name="Set sub-image offset and size" sid="107951045506834" type="Tiles_GM8">
                                                                     <param id="0" name="offset x">96</param>
-                                                                    <param id="1" name="offset y">32</param>
+                                                                    <param id="1" name="offset y">160</param>
                                                                     <param id="2" name="sub width">32</param>
                                                                     <param id="3" name="sub height">32</param>
                                                                 </action>
@@ -3019,7 +3063,7 @@
                                                             <actions>
                                                                 <action id="2" name="Set sub-image offset and size" sid="231849316520437" type="Tiles_GM8">
                                                                     <param id="0" name="offset x">128</param>
-                                                                    <param id="1" name="offset y">32</param>
+                                                                    <param id="1" name="offset y">160</param>
                                                                     <param id="2" name="sub width">32</param>
                                                                     <param id="3" name="sub height">32</param>
                                                                 </action>
@@ -3036,7 +3080,7 @@
                                                             <actions>
                                                                 <action id="2" name="Set sub-image offset and size" sid="191506414008228" type="Tiles_GM8">
                                                                     <param id="0" name="offset x">160</param>
-                                                                    <param id="1" name="offset y">32</param>
+                                                                    <param id="1" name="offset y">160</param>
                                                                     <param id="2" name="sub width">32</param>
                                                                     <param id="3" name="sub height">32</param>
                                                                 </action>
@@ -3053,7 +3097,7 @@
                                                             <actions>
                                                                 <action id="2" name="Set sub-image offset and size" sid="679223269434854" type="Tiles_GM8">
                                                                     <param id="0" name="offset x">192</param>
-                                                                    <param id="1" name="offset y">32</param>
+                                                                    <param id="1" name="offset y">160</param>
                                                                     <param id="2" name="sub width">32</param>
                                                                     <param id="3" name="sub height">32</param>
                                                                 </action>
@@ -3070,7 +3114,7 @@
                                                             <actions>
                                                                 <action id="2" name="Set sub-image offset and size" sid="949082754743084" type="Tiles_GM8">
                                                                     <param id="0" name="offset x">224</param>
-                                                                    <param id="1" name="offset y">32</param>
+                                                                    <param id="1" name="offset y">160</param>
                                                                     <param id="2" name="sub width">32</param>
                                                                     <param id="3" name="sub height">32</param>
                                                                 </action>
@@ -3087,7 +3131,7 @@
                                                             <actions>
                                                                 <action id="2" name="Set sub-image offset and size" sid="476660944482681" type="Tiles_GM8">
                                                                     <param id="0" name="offset x">256</param>
-                                                                    <param id="1" name="offset y">32</param>
+                                                                    <param id="1" name="offset y">160</param>
                                                                     <param id="2" name="sub width">32</param>
                                                                     <param id="3" name="sub height">32</param>
                                                                 </action>
@@ -3104,7 +3148,7 @@
                                                             <actions>
                                                                 <action id="2" name="Set sub-image offset and size" sid="367492454830455" type="Tiles_GM8">
                                                                     <param id="0" name="offset x">288</param>
-                                                                    <param id="1" name="offset y">32</param>
+                                                                    <param id="1" name="offset y">160</param>
                                                                     <param id="2" name="sub width">32</param>
                                                                     <param id="3" name="sub height">32</param>
                                                                 </action>
@@ -3121,7 +3165,7 @@
                                                             <actions>
                                                                 <action id="2" name="Set sub-image offset and size" sid="158638693229541" type="Tiles_GM8">
                                                                     <param id="0" name="offset x">320</param>
-                                                                    <param id="1" name="offset y">32</param>
+                                                                    <param id="1" name="offset y">160</param>
                                                                     <param id="2" name="sub width">32</param>
                                                                     <param id="3" name="sub height">32</param>
                                                                 </action>
@@ -3245,6 +3289,11 @@
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">&quot;objScruffyCutscene2&quot;</param>
                                                 </condition>
+                                                <condition id="-14" name="Compare variable" sid="804795352756421" type="System">
+                                                    <param id="0" name="Variable">instance</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;objSCar&quot;</param>
+                                                </condition>
                                             </conditions>
                                             <actions>
                                                 <action id="-3" name="Create object" sid="505263998737696" type="System">
@@ -3268,16 +3317,6 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-3" name="Create object" sid="617215619171633" type="System">
-                                                    <param id="0" name="Object to create">Special_StartPos</param>
-                                                    <param id="1" name="Layer">&quot;Collisions&quot;</param>
-                                                    <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))+48</param>
-                                                    <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))+64</param>
-                                                </action>
-                                                <action id="-10" name="Set value" sid="434712830342033" type="Special_StartPos">
-                                                    <param id="0" name="Instance variable">Obj_ImportID</param>
-                                                    <param id="1" name="Value">instance</param>
-                                                </action>
                                                 <action id="-3" name="Create object" sid="379095793330205" type="System">
                                                     <param id="0" name="Object to create">Obj_Car</param>
                                                     <param id="1" name="Layer">&quot;Objects&quot;</param>
@@ -3437,7 +3476,7 @@
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block disabled="1" sid="646594953843118">
+                                        <event-block sid="646594953843118">
                                             <conditions>
                                                 <condition id="-14" name="Compare variable" sid="287963683819439" type="System">
                                                     <param id="0" name="Variable">instance</param>
@@ -5256,6 +5295,10 @@
                             <param id="0" name="Instance variable">ScreenWrap</param>
                             <param id="1" name="Value">&quot;&quot;</param>
                         </action>
+                        <action id="-10" name="Set value" sid="405784606159488" type="Var_Room">
+                            <param id="0" name="Instance variable">Background</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <comment>after loading room</comment>
@@ -5273,6 +5316,10 @@
                                 <action id="-4" name="Set position to another object" sid="662441774675475" type="Player_Camera">
                                     <param id="0" name="Object">Player</param>
                                     <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="249261103437319" type="Function">
+                                    <param id="0" name="Name">&quot;Room_Background&quot;</param>
+                                    <param id="1" name="Parameter {n}">Var_Room.Background</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -5403,44 +5450,41 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <event-block sid="880117351450715">
+                            <conditions>
+                                <condition id="60" inverted="1" name="Is undefined" sid="432281037870633" type="JSON_PERSIST">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}">&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine{###}Var_Level.Room{###}&quot;TitleWorld&quot;</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="365461852847029" type="Text">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;HUD_TitleCard1&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="132774710491253" type="Text">
+                                    <param id="0" name="Text">uppercase(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine,Var_Level.Room,&quot;TitleWorld&quot;))</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="643798429362043">
                             <conditions>
                                 <condition id="60" inverted="1" name="Is undefined" sid="756251505140984" type="JSON_PERSIST">
                                     <param id="0" name="Reference point">0</param>
                                     <param id="1" name="Key {n}">&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine{###}Var_Level.Room{###}&quot;Title&quot;</param>
                                 </condition>
+                                <condition id="-7" name="Compare instance variable" sid="968707692969552" type="Text">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;HUD_TitleCard2&quot;</param>
+                                </condition>
                             </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="574069279303815">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="949334732119698" type="Text">
-                                            <param id="0" name="Instance variable">ID</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;HUD_TitleCard1&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Set text" sid="608944176200376" type="Text">
-                                            <param id="0" name="Text">uppercase(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine,Var_Level.Room,&quot;TitleWorld&quot;))</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="990384115993055">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="968707692969552" type="Text">
-                                            <param id="0" name="Instance variable">ID</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;HUD_TitleCard2&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Set text" sid="567558742813135" type="Text">
-                                            <param id="0" name="Text">uppercase(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine,Var_Level.Room,&quot;Title&quot;))</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
+                            <actions>
+                                <action id="0" name="Set text" sid="567558742813135" type="Text">
+                                    <param id="0" name="Text">uppercase(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine,Var_Level.Room,&quot;Title&quot;))</param>
+                                </action>
+                            </actions>
                         </event-block>
                         <event-block sid="928518184928964">
                             <conditions>
@@ -7049,7 +7093,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block disabled="1" sid="719460975924132">
+                <event-block sid="719460975924132">
                     <conditions>
                         <condition behavior="Platform" id="4" name="Is falling" sid="434283039885047" type="Player" />
                         <condition id="1" name="Is overlapping another object" sid="440494347410820" type="Player">
@@ -7058,7 +7102,7 @@
                         <condition id="9" inverted="1" name="Is overlapping at offset" sid="450618329101458" type="Player">
                             <param id="0" name="Object">Obj_Platform</param>
                             <param id="1" name="Offset X">0</param>
-                            <param id="2" name="Offset Y">-(Obj_Platform.Height/1.125)</param>
+                            <param id="2" name="Offset Y">-(Obj_Platform.Height/1.1125)</param>
                         </condition>
                         <condition id="-15" name="Pick nearest/furthest" sid="195722554550997" type="Obj_Platform">
                             <param id="0" name="Which">0</param>
@@ -7132,10 +7176,8 @@
                             <param id="1" name="Comparison">4</param>
                             <param id="2" name="Value">0</param>
                         </condition>
-                        <condition id="-7" name="Compare instance variable" sid="942783239560187" type="Var_Gameplay">
-                            <param id="0" name="Instance variable">Pause</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;False&quot;</param>
+                        <condition id="-8" name="Is boolean instance variable set" sid="361545144715030" type="Var_Gameplay">
+                            <param id="0" name="Instance variable">TimerActive</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -7194,6 +7236,17 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <event-block sid="625359283670198">
+                            <conditions>
+                                <condition behavior="Platform" id="9" name="On landed" sid="378768536907842" type="Player" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="892518529833067" type="Var_Player">
+                                    <param id="0" name="Instance variable">LockHorizontal</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
                 <event-block sid="389679506288602">
@@ -7203,10 +7256,8 @@
                             <param id="1" name="Comparison">4</param>
                             <param id="2" name="Value">0</param>
                         </condition>
-                        <condition id="-7" name="Compare instance variable" sid="804068715037920" type="Var_Gameplay">
-                            <param id="0" name="Instance variable">Pause</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;False&quot;</param>
+                        <condition id="-8" name="Is boolean instance variable set" sid="743318800335978" type="Var_Gameplay">
+                            <param id="0" name="Instance variable">TimerActive</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -9079,6 +9130,9 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-15" name="Set visible" sid="865772608307430" type="Text">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
                                 <action behavior="LiteTween" id="14" name="Stop" sid="196520035700992" type="Text">
                                     <param id="0" name="Stop Mode">1</param>
                                 </action>
@@ -9095,6 +9149,21 @@
                                     <param id="1" name="Force use current">0</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="938944589760756">
+                                    <conditions>
+                                        <condition id="60" name="Is undefined" sid="528933754135999" type="JSON_PERSIST">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}">&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine{###}Var_Level.Room{###}&quot;TitleWorld&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="247950291224612" type="Text">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="197015987682070">
                             <conditions>
@@ -9105,6 +9174,9 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-2" name="Set Y" sid="529003738230686" type="Text">
+                                    <param id="0" name="Y">180</param>
+                                </action>
                                 <action behavior="LiteTween" id="14" name="Stop" sid="642795506189303" type="Text">
                                     <param id="0" name="Stop Mode">1</param>
                                 </action>
@@ -9121,6 +9193,21 @@
                                     <param id="1" name="Force use current">0</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="384280730918981">
+                                    <conditions>
+                                        <condition id="60" name="Is undefined" sid="266548922148842" type="JSON_PERSIST">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}">&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine{###}Var_Level.Room{###}&quot;TitleWorld&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Set Y" sid="553203865403009" type="Text">
+                                            <param id="0" name="Y">164</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="174509459728795">
                             <conditions />
@@ -12036,18 +12123,18 @@
                             <param id="1" name="Y">OriginalWindowHeight/2</param>
                         </action>
                         <action id="-7" name="Set size" sid="572348018607665" type="Text">
-                            <param id="0" name="Width">OriginalWindowWidth-(64*3)-32</param>
+                            <param id="0" name="Width">OriginalWindowWidth-256-64</param>
                             <param id="1" name="Height">OriginalWindowHeight-64</param>
                         </action>
                         <action id="-15" name="Set visible" sid="837753539026234" type="Text">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-3" name="Set position" sid="328097465571456" type="Menu_Window">
+                        <action id="-3" name="Set position" sid="328097465571456" type="HUD_HintMessage">
                             <param id="0" name="X">OriginalWindowWidth/2</param>
                             <param id="1" name="Y">OriginalWindowHeight/2</param>
                         </action>
-                        <action id="-7" name="Set size" sid="861103798104303" type="Menu_Window">
-                            <param id="0" name="Width">32</param>
+                        <action id="-7" name="Set size" sid="861103798104303" type="HUD_HintMessage">
+                            <param id="0" name="Width">80</param>
                             <param id="1" name="Height">32</param>
                         </action>
                     </actions>
@@ -12080,21 +12167,21 @@
                         <action id="0" name="Set text" sid="727595470297881" type="Text">
                             <param id="0" name="Text">replace(Obj_WalkieTalkie.hint,&quot;&quot;&quot;&quot;,&quot;&quot;)</param>
                         </action>
-                        <action behavior="LiteTween" id="3" name="Set target" sid="354976890423978" type="Menu_Window">
+                        <action behavior="LiteTween" id="3" name="Set target" sid="354976890423978" type="HUD_HintMessage">
                             <param id="0" name="Target is">4</param>
                             <param id="1" name="Relativity">0</param>
                             <param id="2" name="Value">Text.TextWidth+32</param>
                         </action>
-                        <action behavior="LiteTween2" id="3" name="Set target" sid="703826009885117" type="Menu_Window">
+                        <action behavior="LiteTween2" id="3" name="Set target" sid="703826009885117" type="HUD_HintMessage">
                             <param id="0" name="Target is">5</param>
                             <param id="1" name="Relativity">0</param>
                             <param id="2" name="Value">Text.TextHeight+32</param>
                         </action>
-                        <action behavior="LiteTween" id="10" name="Start" sid="449760712670892" type="Menu_Window">
+                        <action behavior="LiteTween" id="10" name="Start" sid="449760712670892" type="HUD_HintMessage">
                             <param id="0" name="Start Mode">0</param>
                             <param id="1" name="Force use current">0</param>
                         </action>
-                        <action behavior="LiteTween2" id="10" name="Start" sid="780690758289922" type="Menu_Window">
+                        <action behavior="LiteTween2" id="10" name="Start" sid="780690758289922" type="HUD_HintMessage">
                             <param id="0" name="Start Mode">0</param>
                             <param id="1" name="Force use current">0</param>
                         </action>
@@ -12168,7 +12255,7 @@
                 </event-block>
                 <event-block sid="162593050390504">
                     <conditions>
-                        <condition behavior="LiteTween" id="4" name="On tween end" sid="612320527897341" type="Menu_Window" />
+                        <condition behavior="LiteTween" id="4" name="On tween end" sid="612320527897341" type="HUD_HintMessage" />
                         <condition id="-7" name="Compare instance variable" sid="599044195844101" type="Text">
                             <param id="0" name="Instance variable">ID</param>
                             <param id="1" name="Comparison">0</param>
@@ -12199,13 +12286,13 @@
                                 <condition id="-8" name="Is boolean instance variable set" sid="795551289754478" type="Var_Input">
                                     <param id="0" name="Instance variable">Pressed_A</param>
                                 </condition>
-                                <condition behavior="LiteTween2" id="0" inverted="1" name="Is active" sid="704455218153260" type="Menu_Window" />
+                                <condition behavior="LiteTween2" id="0" inverted="1" name="Is active" sid="704455218153260" type="HUD_HintMessage" />
                             </conditions>
                             <actions>
-                                <action behavior="LiteTween" id="11" name="Reverse" sid="823550059975909" type="Menu_Window">
+                                <action behavior="LiteTween" id="11" name="Reverse" sid="823550059975909" type="HUD_HintMessage">
                                     <param id="0" name="Reverse mode">1</param>
                                 </action>
-                                <action behavior="LiteTween2" id="11" name="Reverse" sid="487250592685500" type="Menu_Window">
+                                <action behavior="LiteTween2" id="11" name="Reverse" sid="487250592685500" type="HUD_HintMessage">
                                     <param id="0" name="Reverse mode">1</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="848485519684481" type="Text">
@@ -12219,7 +12306,7 @@
                         </event-block>
                         <event-block sid="567926941785461">
                             <conditions>
-                                <condition behavior="LiteTween" id="6" name="On tween reverse end" sid="118436302412966" type="Menu_Window" />
+                                <condition behavior="LiteTween" id="6" name="On tween reverse end" sid="118436302412966" type="HUD_HintMessage" />
                             </conditions>
                             <actions>
                                 <action id="-4" name="Set layer visible" sid="771305195461563" type="System">
@@ -15580,5 +15667,369 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-group description="" sid="638043750081361" title="Backgrounds">
+            <sub-events>
+                <comment>should be ordered after camera</comment>
+                <event-block sid="163697082509758">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="402542449591009" type="System">
+                            <param id="0" name="Object">Custom_Backgrounds</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="102137605084525">
+                            <conditions>
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="944088019929129" type="Custom_Backgrounds">
+                                    <param id="0" name="Instance variable">ParallaxX</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="828421895487725" type="Custom_Backgrounds">
+                                    <param id="0" name="X">(ScrollX/Self.ParallaxX)-Self.ImageWidth+(Self.InitialX)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="937659096317510">
+                            <conditions>
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="309963446945767" type="Custom_Backgrounds">
+                                    <param id="0" name="Instance variable">ParallaxY</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="304462707840885" type="Custom_Backgrounds">
+                                    <param id="0" name="Y">(ScrollY/Self.ParallaxY)-Self.ImageHeight+(Self.InitialY)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment></comment>
+                <event-block sid="513159898631394">
+                    <conditions>
+                        <condition id="0" name="On function" sid="247566312215585" type="Function">
+                            <param id="0" name="Name">&quot;Room_Background&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="count" sid="444551879063999" static="1" type="number">-1</variable>
+                        <variable constant="0" name="image" sid="779578467342036" static="1" type="text"></variable>
+                        <event-block sid="373240780979677">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Destroy" sid="682005080614173" type="Custom_Backgrounds" />
+                                <action id="55" name="Clear" sid="501034360153973" type="JSON_Background">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}"></param>
+                                </action>
+                                <action id="0" name="Set New Object" sid="644199949883129" type="JSON_Background">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}"></param>
+                                </action>
+                                <action id="-9" name="Set value" sid="129801952819605" type="System">
+                                    <param id="0" name="Variable">count</param>
+                                    <param id="1" name="Value">-1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="559489596998274" type="System">
+                                    <param id="0" name="Variable">image</param>
+                                    <param id="1" name="Value">&quot;&quot;</param>
+                                </action>
+                                <action id="-34" name="Set layer background color" sid="638243095874951" type="System">
+                                    <param id="0" name="Layer">&quot;BG&quot;</param>
+                                    <param id="1" name="Color">rgb(255,255,255)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="828309963073790">
+                            <conditions />
+                            <actions>
+                                <action id="60" name="LoadJSON" sid="964787260702841" type="JSON_Background">
+                                    <param id="0" name="JSON">INI.INI2JSON(NWjs.ReadFile(Var_CONSTANTS.Path_Assets&amp;&quot;\assets\backgrounds\&quot;&amp;Function.Param(0)&amp;&quot;\background.ini&quot;))</param>
+                                    <param id="1" name="Reference point">0</param>
+                                    <param id="2" name="Key {n}"></param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="505312283444376">
+                                    <conditions>
+                                        <condition id="60" inverted="1" name="Is undefined" sid="103511119075000" type="JSON_Background">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}">&quot;Background&quot;</param>
+                                        </condition>
+                                        <condition id="60" inverted="1" name="Is undefined" sid="507560036786765" type="JSON_Background">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}">&quot;Background&quot;{###}&quot;Color&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-34" name="Set layer background color" sid="738457150792608" type="System">
+                                            <param id="0" name="Layer">&quot;BG&quot;</param>
+                                            <param id="1" name="Color">rgb(int(tokenat(JSON_Background.Value(0,&quot;Background&quot;,&quot;Color&quot;),0,&quot;,&quot;)), int(tokenat(JSON_Background.Value(0,&quot;Background&quot;,&quot;Color&quot;),1,&quot;,&quot;)), int(tokenat(JSON_Background.Value(0,&quot;Background&quot;,&quot;Color&quot;),2,&quot;,&quot;)))</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="959363553409176">
+                                    <conditions>
+                                        <condition id="100" name="For each property" sid="924598906335708" type="JSON_Background">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}"></param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Compare two values" sid="999943897095934" type="System">
+                                            <param id="0" name="First value">JSON_Background.CurrentKey</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;Background&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block any="1" sid="385836187864455">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="851280586600161" type="System">
+                                                    <param id="0" name="Variable">image</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;&quot;</param>
+                                                </condition>
+                                                <condition id="-14" inverted="1" name="Compare variable" sid="245065927336067" type="System">
+                                                    <param id="0" name="Variable">image</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">JSON_Background.Value(0,JSON_Background.CurrentKey,&quot;Image&quot;)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="110307031866983" type="System">
+                                                    <param id="0" name="Variable">count</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="245351740115885">
+                                            <conditions />
+                                            <actions>
+                                                <action id="0" name="Create family object" sid="624790987230065" type="CreateObjectByVal">
+                                                    <param id="0" name="Family object">Custom_Backgrounds</param>
+                                                    <param id="1" name="Variable ID">0</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">count</param>
+                                                    <param id="4" name="Layer">&quot;BG&quot;</param>
+                                                    <param id="5" name="X">0</param>
+                                                    <param id="6" name="Y">0</param>
+                                                    <param id="7" name="Tag">&quot;&quot;</param>
+                                                </action>
+                                                <action id="2" name="Load image from URL" sid="764562850122483" type="Custom_Backgrounds">
+                                                    <param id="0" name="URI">Var_CONSTANTS.Path_Assets&amp;&quot;\assets\backgrounds\&quot;&amp;Function.Param(0)&amp;&quot;\&quot;&amp;JSON_Background.Value(0,JSON_Background.CurrentKey,&quot;Image&quot;)&amp;&quot;.png&quot;</param>
+                                                    <param id="1" name="Cross-origin">0</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="960112535279097" type="Custom_Backgrounds">
+                                                    <param id="0" name="Instance variable">ID</param>
+                                                    <param id="1" name="Value">JSON_Background.CurrentKey</param>
+                                                </action>
+                                                <action id="-27" name="Set effect enabled" sid="151162647386534" type="Custom_Backgrounds">
+                                                    <param id="0" name="Mode">0</param>
+                                                    <param id="1" name="Effect">&quot;Scroll&quot;</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="115573928227287">
+                                                    <conditions>
+                                                        <condition id="60" inverted="1" name="Is undefined" sid="419489090467265" type="JSON_Background">
+                                                            <param id="0" name="Reference point">0</param>
+                                                            <param id="1" name="Key {n}">JSON_Background.CurrentKey{###}&quot;X&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Set value" sid="616770285208881" type="Custom_Backgrounds">
+                                                            <param id="0" name="Instance variable">InitialX</param>
+                                                            <param id="1" name="Value">int(JSON_Background.Value(0,JSON_Background.CurrentKey,&quot;X&quot;))</param>
+                                                        </action>
+                                                        <action id="-1" name="Set X" sid="800786715577470" type="Custom_Backgrounds">
+                                                            <param id="0" name="X">Self.InitialX</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="237991842606646">
+                                                    <conditions>
+                                                        <condition id="60" inverted="1" name="Is undefined" sid="449533998767970" type="JSON_Background">
+                                                            <param id="0" name="Reference point">0</param>
+                                                            <param id="1" name="Key {n}">JSON_Background.CurrentKey{###}&quot;Y&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Set value" sid="918360414831856" type="Custom_Backgrounds">
+                                                            <param id="0" name="Instance variable">InitialY</param>
+                                                            <param id="1" name="Value">int(JSON_Background.Value(0,JSON_Background.CurrentKey,&quot;Y&quot;))</param>
+                                                        </action>
+                                                        <action id="-2" name="Set Y" sid="138839932087353" type="Custom_Backgrounds">
+                                                            <param id="0" name="Y">Self.InitialY</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="905128156875176">
+                                                    <conditions>
+                                                        <condition id="60" inverted="1" name="Is undefined" sid="302094751241255" type="JSON_Background">
+                                                            <param id="0" name="Reference point">0</param>
+                                                            <param id="1" name="Key {n}">JSON_Background.CurrentKey{###}&quot;ParallaxX&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Set value" sid="352833140563237" type="Custom_Backgrounds">
+                                                            <param id="0" name="Instance variable">ParallaxX</param>
+                                                            <param id="1" name="Value">float(JSON_Background.Value(0,JSON_Background.CurrentKey,&quot;ParallaxX&quot;))</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="105898704742165">
+                                                    <conditions>
+                                                        <condition id="60" inverted="1" name="Is undefined" sid="244392634839655" type="JSON_Background">
+                                                            <param id="0" name="Reference point">0</param>
+                                                            <param id="1" name="Key {n}">JSON_Background.CurrentKey{###}&quot;ParallaxY&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Set value" sid="477941641805435" type="Custom_Backgrounds">
+                                                            <param id="0" name="Instance variable">ParallaxY</param>
+                                                            <param id="1" name="Value">float(JSON_Background.Value(0,JSON_Background.CurrentKey,&quot;ParallaxY&quot;))</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="529425155415376">
+                                                    <conditions>
+                                                        <condition id="60" inverted="1" name="Is undefined" sid="135432999843983" type="JSON_Background">
+                                                            <param id="0" name="Reference point">0</param>
+                                                            <param id="1" name="Key {n}">JSON_Background.CurrentKey{###}&quot;ScrollX&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-27" name="Set effect enabled" sid="450178943601298" type="Custom_Backgrounds">
+                                                            <param id="0" name="Mode">1</param>
+                                                            <param id="1" name="Effect">&quot;Scroll&quot;</param>
+                                                        </action>
+                                                        <action id="-28" name="Set effect parameter" sid="504174883116675" type="Custom_Backgrounds">
+                                                            <param id="0" name="Effect">&quot;Scroll&quot;</param>
+                                                            <param id="1" name="Parameter index">0</param>
+                                                            <param id="2" name="Value">float(JSON_Background.Value(0,JSON_Background.CurrentKey,&quot;ScrollX&quot;))</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="887442932136790">
+                                                    <conditions>
+                                                        <condition id="60" inverted="1" name="Is undefined" sid="649476908258233" type="JSON_Background">
+                                                            <param id="0" name="Reference point">0</param>
+                                                            <param id="1" name="Key {n}">JSON_Background.CurrentKey{###}&quot;ScrollY&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-27" name="Set effect enabled" sid="533605273146849" type="Custom_Backgrounds">
+                                                            <param id="0" name="Mode">1</param>
+                                                            <param id="1" name="Effect">&quot;Scroll&quot;</param>
+                                                        </action>
+                                                        <action id="-28" name="Set effect parameter" sid="663697203232727" type="Custom_Backgrounds">
+                                                            <param id="0" name="Effect">&quot;Scroll&quot;</param>
+                                                            <param id="1" name="Parameter index">1</param>
+                                                            <param id="2" name="Value">float(JSON_Background.Value(0,JSON_Background.CurrentKey,&quot;ScrollY&quot;))</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="449304857023962">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="156740521483642" type="System">
+                                                    <param id="0" name="Variable">image</param>
+                                                    <param id="1" name="Value">JSON_Background.Value(0,JSON_Background.CurrentKey,&quot;Image&quot;)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="411365981469112">
+                    <conditions>
+                        <condition id="0" name="On image URL loaded" sid="586711494718808" type="Custom_Backgrounds" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="327422705660624">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="268370693335906" type="System">
+                                    <param id="0" name="First value">find(JSON_Background.Value(0,Custom_Backgrounds.ID,&quot;Flags&quot;),&quot;TileX|&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-5" name="Set width" sid="982595431352251" type="Custom_Backgrounds">
+                                    <param id="0" name="Width">Self.ImageWidth</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="331441695379745">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Compare two values" sid="335031220101656" type="System">
+                                    <param id="0" name="First value">find(JSON_Background.Value(0,Custom_Backgrounds.ID,&quot;Flags&quot;),&quot;TileX|&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-5" name="Set width" sid="729008345519587" type="Custom_Backgrounds">
+                                    <param id="0" name="Width">Self.ImageWidth*ceil(Var_Room.Width/Self.ImageWidth)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="354830857099842">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="903153465126793" type="System">
+                                    <param id="0" name="First value">find(JSON_Background.Value(0,Custom_Backgrounds.ID,&quot;Flags&quot;),&quot;TileY|&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-6" name="Set height" sid="130214246606711" type="Custom_Backgrounds">
+                                    <param id="0" name="Height">Self.ImageHeight</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="846720471988864">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Compare two values" sid="157945551756786" type="System">
+                                    <param id="0" name="First value">find(JSON_Background.Value(0,Custom_Backgrounds.ID,&quot;Flags&quot;),&quot;TileY|&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-6" name="Set height" sid="408103753673798" type="Custom_Backgrounds">
+                                    <param id="0" name="Height">Self.ImageHeight*ceil(Var_Room.Height/Self.ImageHeight)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="359547273735282">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Compare two values" sid="436020606316782" type="System">
+                                    <param id="0" name="First value">find(JSON_Background.Value(0,Custom_Backgrounds.ID,&quot;Flags&quot;),&quot;YRoomBottom|&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="690251137396596" type="Custom_Backgrounds">
+                                    <param id="0" name="Y">Var_Room.Height-Self.ImageHeight-(Self.ImageHeight-Self.InitialY)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

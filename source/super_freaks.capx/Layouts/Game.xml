@@ -25,10 +25,1163 @@
             <opacity>1</opacity>
             <force-own-texture>0</force-own-texture>
             <global>0</global>
-            <use-render-cells>0</use-render-cells>
+            <use-render-cells>1</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
-            <instances />
+            <instances>
+                <instance type="Custom_Background0" uid="34">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <instance-variables>
+                        <Image>0</Image>
+                        <ID></ID>
+                        <InitialX>0</InitialX>
+                        <InitialY>0</InitialY>
+                        <ParallaxX>0</ParallaxX>
+                        <ParallaxY>0</ParallaxY>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="Scroll">
+                            <parameters>
+                                <x-shift>0</x-shift>
+                                <y-shift>0</y-shift>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <width>2</width>
+                        <height>2</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Custom_Background1" uid="146">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <instance-variables>
+                        <Image>1</Image>
+                        <ID></ID>
+                        <InitialX>0</InitialX>
+                        <InitialY>0</InitialY>
+                        <ParallaxX>0</ParallaxX>
+                        <ParallaxY>0</ParallaxY>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="Scroll">
+                            <parameters>
+                                <x-shift>0</x-shift>
+                                <y-shift>0</y-shift>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <width>2</width>
+                        <height>2</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Custom_Background2" uid="147">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <instance-variables>
+                        <Image>2</Image>
+                        <ID></ID>
+                        <InitialX>0</InitialX>
+                        <InitialY>0</InitialY>
+                        <ParallaxX>0</ParallaxX>
+                        <ParallaxY>0</ParallaxY>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="Scroll">
+                            <parameters>
+                                <x-shift>0</x-shift>
+                                <y-shift>0</y-shift>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>4</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <width>2</width>
+                        <height>2</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Custom_Background3" uid="148">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <instance-variables>
+                        <Image>3</Image>
+                        <ID></ID>
+                        <InitialX>0</InitialX>
+                        <InitialY>0</InitialY>
+                        <ParallaxX>0</ParallaxX>
+                        <ParallaxY>0</ParallaxY>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="Scroll">
+                            <parameters>
+                                <x-shift>0</x-shift>
+                                <y-shift>0</y-shift>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>6</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <width>2</width>
+                        <height>2</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Custom_Background4" uid="149">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <instance-variables>
+                        <Image>4</Image>
+                        <ID></ID>
+                        <InitialX>0</InitialX>
+                        <InitialY>0</InitialY>
+                        <ParallaxX>0</ParallaxX>
+                        <ParallaxY>0</ParallaxY>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="Scroll">
+                            <parameters>
+                                <x-shift>0</x-shift>
+                                <y-shift>0</y-shift>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>8</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <width>2</width>
+                        <height>2</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Custom_Background5" uid="150">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <instance-variables>
+                        <Image>5</Image>
+                        <ID></ID>
+                        <InitialX>0</InitialX>
+                        <InitialY>0</InitialY>
+                        <ParallaxX>0</ParallaxX>
+                        <ParallaxY>0</ParallaxY>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="Scroll">
+                            <parameters>
+                                <x-shift>0</x-shift>
+                                <y-shift>0</y-shift>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>10</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <width>2</width>
+                        <height>2</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Custom_Background6" uid="151">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <instance-variables>
+                        <Image>6</Image>
+                        <ID></ID>
+                        <InitialX>0</InitialX>
+                        <InitialY>0</InitialY>
+                        <ParallaxX>0</ParallaxX>
+                        <ParallaxY>0</ParallaxY>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="Scroll">
+                            <parameters>
+                                <x-shift>0</x-shift>
+                                <y-shift>0</y-shift>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>12</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <width>2</width>
+                        <height>2</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Custom_Background7" uid="152">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <instance-variables>
+                        <Image>7</Image>
+                        <ID></ID>
+                        <InitialX>0</InitialX>
+                        <InitialY>0</InitialY>
+                        <ParallaxX>0</ParallaxX>
+                        <ParallaxY>0</ParallaxY>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="Scroll">
+                            <parameters>
+                                <x-shift>0</x-shift>
+                                <y-shift>0</y-shift>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>14</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <width>2</width>
+                        <height>2</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Custom_Background8" uid="153">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <instance-variables>
+                        <Image>8</Image>
+                        <ID></ID>
+                        <InitialX>0</InitialX>
+                        <InitialY>0</InitialY>
+                        <ParallaxX>0</ParallaxX>
+                        <ParallaxY>0</ParallaxY>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="Scroll">
+                            <parameters>
+                                <x-shift>0</x-shift>
+                                <y-shift>0</y-shift>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>0</x>
+                        <y>2</y>
+                        <z>0</z>
+                        <width>2</width>
+                        <height>2</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Custom_Background9" uid="154">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <instance-variables>
+                        <Image>9</Image>
+                        <ID></ID>
+                        <InitialX>0</InitialX>
+                        <InitialY>0</InitialY>
+                        <ParallaxX>0</ParallaxX>
+                        <ParallaxY>0</ParallaxY>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="Scroll">
+                            <parameters>
+                                <x-shift>0</x-shift>
+                                <y-shift>0</y-shift>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2</x>
+                        <y>2</y>
+                        <z>0</z>
+                        <width>2</width>
+                        <height>2</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Custom_Background10" uid="155">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <instance-variables>
+                        <Image>10</Image>
+                        <ID></ID>
+                        <InitialX>0</InitialX>
+                        <InitialY>0</InitialY>
+                        <ParallaxX>0</ParallaxX>
+                        <ParallaxY>0</ParallaxY>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="Scroll">
+                            <parameters>
+                                <x-shift>0</x-shift>
+                                <y-shift>0</y-shift>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>4</x>
+                        <y>2</y>
+                        <z>0</z>
+                        <width>2</width>
+                        <height>2</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Custom_Background11" uid="157">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <instance-variables>
+                        <Image>11</Image>
+                        <ID></ID>
+                        <InitialX>0</InitialX>
+                        <InitialY>0</InitialY>
+                        <ParallaxX>0</ParallaxX>
+                        <ParallaxY>0</ParallaxY>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="Scroll">
+                            <parameters>
+                                <x-shift>0</x-shift>
+                                <y-shift>0</y-shift>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>6</x>
+                        <y>2</y>
+                        <z>0</z>
+                        <width>2</width>
+                        <height>2</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Custom_Background12" uid="158">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <instance-variables>
+                        <Image>12</Image>
+                        <ID></ID>
+                        <InitialX>0</InitialX>
+                        <InitialY>0</InitialY>
+                        <ParallaxX>0</ParallaxX>
+                        <ParallaxY>0</ParallaxY>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="Scroll">
+                            <parameters>
+                                <x-shift>0</x-shift>
+                                <y-shift>0</y-shift>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>8</x>
+                        <y>2</y>
+                        <z>0</z>
+                        <width>2</width>
+                        <height>2</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Custom_Background13" uid="159">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <instance-variables>
+                        <Image>13</Image>
+                        <ID></ID>
+                        <InitialX>0</InitialX>
+                        <InitialY>0</InitialY>
+                        <ParallaxX>0</ParallaxX>
+                        <ParallaxY>0</ParallaxY>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="Scroll">
+                            <parameters>
+                                <x-shift>0</x-shift>
+                                <y-shift>0</y-shift>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>10</x>
+                        <y>2</y>
+                        <z>0</z>
+                        <width>2</width>
+                        <height>2</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Custom_Background14" uid="183">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <instance-variables>
+                        <Image>14</Image>
+                        <ID></ID>
+                        <InitialX>0</InitialX>
+                        <InitialY>0</InitialY>
+                        <ParallaxX>0</ParallaxX>
+                        <ParallaxY>0</ParallaxY>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="Scroll">
+                            <parameters>
+                                <x-shift>0</x-shift>
+                                <y-shift>0</y-shift>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>12</x>
+                        <y>2</y>
+                        <z>0</z>
+                        <width>2</width>
+                        <height>2</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Custom_Background15" uid="185">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <instance-variables>
+                        <Image>15</Image>
+                        <ID></ID>
+                        <InitialX>0</InitialX>
+                        <InitialY>0</InitialY>
+                        <ParallaxX>0</ParallaxX>
+                        <ParallaxY>0</ParallaxY>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="Scroll">
+                            <parameters>
+                                <x-shift>0</x-shift>
+                                <y-shift>0</y-shift>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>14</x>
+                        <y>2</y>
+                        <z>0</z>
+                        <width>2</width>
+                        <height>2</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Custom_Background16" uid="186">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <instance-variables>
+                        <Image>16</Image>
+                        <ID></ID>
+                        <InitialX>0</InitialX>
+                        <InitialY>0</InitialY>
+                        <ParallaxX>0</ParallaxX>
+                        <ParallaxY>0</ParallaxY>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="Scroll">
+                            <parameters>
+                                <x-shift>0</x-shift>
+                                <y-shift>0</y-shift>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>0</x>
+                        <y>4</y>
+                        <z>0</z>
+                        <width>2</width>
+                        <height>2</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Custom_Background17" uid="187">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <instance-variables>
+                        <Image>17</Image>
+                        <ID></ID>
+                        <InitialX>0</InitialX>
+                        <InitialY>0</InitialY>
+                        <ParallaxX>0</ParallaxX>
+                        <ParallaxY>0</ParallaxY>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="Scroll">
+                            <parameters>
+                                <x-shift>0</x-shift>
+                                <y-shift>0</y-shift>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2</x>
+                        <y>4</y>
+                        <z>0</z>
+                        <width>2</width>
+                        <height>2</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Custom_Background18" uid="188">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <instance-variables>
+                        <Image>18</Image>
+                        <ID></ID>
+                        <InitialX>0</InitialX>
+                        <InitialY>0</InitialY>
+                        <ParallaxX>0</ParallaxX>
+                        <ParallaxY>0</ParallaxY>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="Scroll">
+                            <parameters>
+                                <x-shift>0</x-shift>
+                                <y-shift>0</y-shift>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>4</x>
+                        <y>4</y>
+                        <z>0</z>
+                        <width>2</width>
+                        <height>2</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Custom_Background19" uid="189">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <instance-variables>
+                        <Image>19</Image>
+                        <ID></ID>
+                        <InitialX>0</InitialX>
+                        <InitialY>0</InitialY>
+                        <ParallaxX>0</ParallaxX>
+                        <ParallaxY>0</ParallaxY>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="Scroll">
+                            <parameters>
+                                <x-shift>0</x-shift>
+                                <y-shift>0</y-shift>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>6</x>
+                        <y>4</y>
+                        <z>0</z>
+                        <width>2</width>
+                        <height>2</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Custom_Background20" uid="190">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <instance-variables>
+                        <Image>20</Image>
+                        <ID></ID>
+                        <InitialX>0</InitialX>
+                        <InitialY>0</InitialY>
+                        <ParallaxX>0</ParallaxX>
+                        <ParallaxY>0</ParallaxY>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="Scroll">
+                            <parameters>
+                                <x-shift>0</x-shift>
+                                <y-shift>0</y-shift>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>8</x>
+                        <y>4</y>
+                        <z>0</z>
+                        <width>2</width>
+                        <height>2</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Custom_Background21" uid="191">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <instance-variables>
+                        <Image>21</Image>
+                        <ID></ID>
+                        <InitialX>0</InitialX>
+                        <InitialY>0</InitialY>
+                        <ParallaxX>0</ParallaxX>
+                        <ParallaxY>0</ParallaxY>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="Scroll">
+                            <parameters>
+                                <x-shift>0</x-shift>
+                                <y-shift>0</y-shift>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>10</x>
+                        <y>4</y>
+                        <z>0</z>
+                        <width>2</width>
+                        <height>2</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Custom_Background22" uid="192">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <instance-variables>
+                        <Image>22</Image>
+                        <ID></ID>
+                        <InitialX>0</InitialX>
+                        <InitialY>0</InitialY>
+                        <ParallaxX>0</ParallaxX>
+                        <ParallaxY>0</ParallaxY>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="Scroll">
+                            <parameters>
+                                <x-shift>0</x-shift>
+                                <y-shift>0</y-shift>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>12</x>
+                        <y>4</y>
+                        <z>0</z>
+                        <width>2</width>
+                        <height>2</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Custom_Background23" uid="193">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <instance-variables>
+                        <Image>23</Image>
+                        <ID></ID>
+                        <InitialX>0</InitialX>
+                        <InitialY>0</InitialY>
+                        <ParallaxX>0</ParallaxX>
+                        <ParallaxY>0</ParallaxY>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="Scroll">
+                            <parameters>
+                                <x-shift>0</x-shift>
+                                <y-shift>0</y-shift>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>14</x>
+                        <y>4</y>
+                        <z>0</z>
+                        <width>2</width>
+                        <height>2</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Custom_Background24" uid="194">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <instance-variables>
+                        <Image>24</Image>
+                        <ID></ID>
+                        <InitialX>0</InitialX>
+                        <InitialY>0</InitialY>
+                        <ParallaxX>0</ParallaxX>
+                        <ParallaxY>0</ParallaxY>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="Scroll">
+                            <parameters>
+                                <x-shift>0</x-shift>
+                                <y-shift>0</y-shift>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>0</x>
+                        <y>6</y>
+                        <z>0</z>
+                        <width>2</width>
+                        <height>2</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Custom_Background25" uid="195">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <instance-variables>
+                        <Image>25</Image>
+                        <ID></ID>
+                        <InitialX>0</InitialX>
+                        <InitialY>0</InitialY>
+                        <ParallaxX>0</ParallaxX>
+                        <ParallaxY>0</ParallaxY>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="Scroll">
+                            <parameters>
+                                <x-shift>0</x-shift>
+                                <y-shift>0</y-shift>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2</x>
+                        <y>6</y>
+                        <z>0</z>
+                        <width>2</width>
+                        <height>2</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Custom_Background26" uid="196">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <instance-variables>
+                        <Image>26</Image>
+                        <ID></ID>
+                        <InitialX>0</InitialX>
+                        <InitialY>0</InitialY>
+                        <ParallaxX>0</ParallaxX>
+                        <ParallaxY>0</ParallaxY>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="Scroll">
+                            <parameters>
+                                <x-shift>0</x-shift>
+                                <y-shift>0</y-shift>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>4</x>
+                        <y>6</y>
+                        <z>0</z>
+                        <width>2</width>
+                        <height>2</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Custom_Background27" uid="197">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <instance-variables>
+                        <Image>27</Image>
+                        <ID></ID>
+                        <InitialX>0</InitialX>
+                        <InitialY>0</InitialY>
+                        <ParallaxX>0</ParallaxX>
+                        <ParallaxY>0</ParallaxY>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="Scroll">
+                            <parameters>
+                                <x-shift>0</x-shift>
+                                <y-shift>0</y-shift>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>6</x>
+                        <y>6</y>
+                        <z>0</z>
+                        <width>2</width>
+                        <height>2</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Custom_Background28" uid="198">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <instance-variables>
+                        <Image>28</Image>
+                        <ID></ID>
+                        <InitialX>0</InitialX>
+                        <InitialY>0</InitialY>
+                        <ParallaxX>0</ParallaxX>
+                        <ParallaxY>0</ParallaxY>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="Scroll">
+                            <parameters>
+                                <x-shift>0</x-shift>
+                                <y-shift>0</y-shift>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>8</x>
+                        <y>6</y>
+                        <z>0</z>
+                        <width>2</width>
+                        <height>2</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Custom_Background29" uid="199">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <instance-variables>
+                        <Image>29</Image>
+                        <ID></ID>
+                        <InitialX>0</InitialX>
+                        <InitialY>0</InitialY>
+                        <ParallaxX>0</ParallaxX>
+                        <ParallaxY>0</ParallaxY>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="Scroll">
+                            <parameters>
+                                <x-shift>0</x-shift>
+                                <y-shift>0</y-shift>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>10</x>
+                        <y>6</y>
+                        <z>0</z>
+                        <width>2</width>
+                        <height>2</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Custom_Background30" uid="200">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <instance-variables>
+                        <Image>30</Image>
+                        <ID></ID>
+                        <InitialX>0</InitialX>
+                        <InitialY>0</InitialY>
+                        <ParallaxX>0</ParallaxX>
+                        <ParallaxY>0</ParallaxY>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="Scroll">
+                            <parameters>
+                                <x-shift>0</x-shift>
+                                <y-shift>0</y-shift>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>12</x>
+                        <y>6</y>
+                        <z>0</z>
+                        <width>2</width>
+                        <height>2</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Custom_Background31" uid="201">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <instance-variables>
+                        <Image>31</Image>
+                        <ID></ID>
+                        <InitialX>0</InitialX>
+                        <InitialY>0</InitialY>
+                        <ParallaxX>0</ParallaxX>
+                        <ParallaxY>0</ParallaxY>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="Scroll">
+                            <parameters>
+                                <x-shift>0</x-shift>
+                                <y-shift>0</y-shift>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>14</x>
+                        <y>6</y>
+                        <z>0</z>
+                        <width>2</width>
+                        <height>2</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
             <effects />
         </layer>
         <layer name="SceneryLow" sid="890061805479884">
@@ -405,8 +1558,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>160</x>
-                        <y>503</y>
+                        <x>176</x>
+                        <y>505</y>
                         <z>0</z>
                         <width>40</width>
                         <height>52</height>
@@ -509,8 +1662,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>232</x>
-                        <y>512</y>
+                        <x>283</x>
+                        <y>504</y>
                         <z>0</z>
                         <width>96</width>
                         <height>96</height>
@@ -541,8 +1694,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>313</x>
-                        <y>508</y>
+                        <x>98</x>
+                        <y>605</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -571,7 +1724,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>421</x>
+                        <x>427</x>
                         <y>517</y>
                         <z>0</z>
                         <width>64</width>
@@ -983,8 +2136,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>112</x>
-                        <y>583</y>
+                        <x>163</x>
+                        <y>604</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -1056,8 +2209,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>275</x>
-                        <y>604</y>
+                        <x>229</x>
+                        <y>606</y>
                         <z>0</z>
                         <width>46</width>
                         <height>48</height>
@@ -3061,8 +4214,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>453</x>
-                        <y>447</y>
+                        <x>363</x>
+                        <y>519</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -3088,8 +4241,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>658</x>
-                        <y>55</y>
+                        <x>659</x>
+                        <y>49</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -3314,7 +4467,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>16</x>
-                        <y>48</y>
+                        <y>344</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -3334,7 +4487,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>16</x>
-                        <y>64</y>
+                        <y>360</y>
                         <z>0</z>
                         <width>32</width>
                         <height>16</height>
@@ -3384,8 +4537,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>48</x>
-                        <y>48</y>
+                        <x>16</x>
+                        <y>312</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -3435,8 +4588,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>80</x>
-                        <y>48</y>
+                        <x>16</x>
+                        <y>280</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -3486,8 +4639,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>112</x>
-                        <y>48</y>
+                        <x>16</x>
+                        <y>248</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -3544,70 +4697,13 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>16</x>
-                        <y>48</y>
+                        <y>344</y>
                         <z>0</z>
                         <width>48</width>
                         <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Text_Regular16" uid="34">
-                    <properties>
-                        <character-width>16</character-width>
-                        <character-height>20</character-height>
-                        <character-set>!&quot;#$%&amp;&apos;()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~</character-set>
-                        <text>0:00:00.00</text>
-                        <scale>1</scale>
-                        <initial-visibility>Visible</initial-visibility>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Character</wrapping>
-                        <character-spacing>2</character-spacing>
-                        <line-height>0</line-height>
-                    </properties>
-                    <instance-variables>
-                        <ID>HUD_Timer</ID>
-                        <ParentUID>0</ParentUID>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="LiteTween">
-                            <properties>
-                                <active-on-start>No</active-on-start>
-                                <tweened-property>Position</tweened-property>
-                                <function>Linear</function>
-                                <target>0</target>
-                                <target-mode>Absolute</target-mode>
-                                <duration>0</duration>
-                                <enforce-mode>Enforce</enforce-mode>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Pin" />
-                    </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0</blue>
-                                <green>0</green>
-                                <red>0</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>18</x>
-                        <y>340</y>
-                        <z>0</z>
-                        <width>180</width>
-                        <height>20</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -3622,7 +4718,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-6</x>
+                        <x>-13</x>
                         <y>7</y>
                         <z>0</z>
                         <width>16</width>
@@ -3748,6 +4844,54 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Text_Regular12" uid="90">
+                    <properties>
+                        <character-width>12</character-width>
+                        <character-height>16</character-height>
+                        <character-set>!&quot;#$%&amp;&apos;()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~</character-set>
+                        <text>0:00:00.00</text>
+                        <scale>1</scale>
+                        <initial-visibility>Visible</initial-visibility>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Character</wrapping>
+                        <character-spacing>2</character-spacing>
+                        <line-height>0</line-height>
+                    </properties>
+                    <instance-variables>
+                        <ID>HUD_Timer</ID>
+                        <ParentUID>0</ParentUID>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="LiteTween">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <tweened-property>Position</tweened-property>
+                                <function>Linear</function>
+                                <target>0</target>
+                                <target-mode>Absolute</target-mode>
+                                <duration>0</duration>
+                                <enforce-mode>Enforce</enforce-mode>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>44</x>
+                        <y>344</y>
+                        <z>0</z>
+                        <width>180</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -3767,14 +4911,14 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Menu_Window" uid="90">
+                <instance type="HUD_HintMessage" uid="145">
                     <properties>
-                        <left-margin>16</left-margin>
-                        <right-margin>16</right-margin>
-                        <top-margin>16</top-margin>
-                        <bottom-margin>16</bottom-margin>
-                        <edges>Tile</edges>
-                        <fill>Tile</fill>
+                        <left-margin>23</left-margin>
+                        <right-margin>23</right-margin>
+                        <top-margin>1</top-margin>
+                        <bottom-margin>1</bottom-margin>
+                        <edges>Stretch</edges>
+                        <fill>Stretch</fill>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Center</hotspot>
                         <seams>Exact</seams>
@@ -3809,11 +4953,59 @@
                         <x>320</x>
                         <y>182</y>
                         <z>0</z>
-                        <width>32</width>
+                        <width>80</width>
                         <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Text_Regular12" uid="184">
+                    <properties>
+                        <character-width>12</character-width>
+                        <character-height>16</character-height>
+                        <character-set>!&quot;#$%&amp;&apos;()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~</character-set>
+                        <text>yo what&apos;s up gamers</text>
+                        <scale>1</scale>
+                        <initial-visibility>Visible</initial-visibility>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <character-spacing>2</character-spacing>
+                        <line-height>0</line-height>
+                    </properties>
+                    <instance-variables>
+                        <ID>HUD_Message</ID>
+                        <ParentUID>0</ParentUID>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="LiteTween">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <tweened-property>Position</tweened-property>
+                                <function>Linear</function>
+                                <target>0</target>
+                                <target-mode>Absolute</target-mode>
+                                <duration>0</duration>
+                                <enforce-mode>Enforce</enforce-mode>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>320</x>
+                        <y>180</y>
+                        <z>0</z>
+                        <width>576</width>
+                        <height>288</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -3896,54 +5088,6 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Text_Regular12" uid="184">
-                    <properties>
-                        <character-width>12</character-width>
-                        <character-height>16</character-height>
-                        <character-set>!&quot;#$%&amp;&apos;()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~</character-set>
-                        <text>Name</text>
-                        <scale>1</scale>
-                        <initial-visibility>Visible</initial-visibility>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Center</hotspot>
-                        <wrapping>Word</wrapping>
-                        <character-spacing>2</character-spacing>
-                        <line-height>0</line-height>
-                    </properties>
-                    <instance-variables>
-                        <ID>HUD_Message</ID>
-                        <ParentUID>0</ParentUID>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="LiteTween">
-                            <properties>
-                                <active-on-start>No</active-on-start>
-                                <tweened-property>Position</tweened-property>
-                                <function>Linear</function>
-                                <target>0</target>
-                                <target-mode>Absolute</target-mode>
-                                <duration>0</duration>
-                                <enforce-mode>Enforce</enforce-mode>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Pin" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>320</x>
-                        <y>180</y>
-                        <z>0</z>
-                        <width>576</width>
-                        <height>288</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -4455,7 +5599,7 @@
                         <character-width>16</character-width>
                         <character-height>20</character-height>
                         <character-set>!&quot;#$%&amp;&apos;()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~</character-set>
-                        <text>Tile: -</text>
+                        <text>fps</text>
                         <scale>1</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Right</horizontal-alignment>
@@ -4537,7 +5681,7 @@
         <instance type="Var_Level" uid="59">
             <instance-variables>
                 <RoomEngine>GM8_3</RoomEngine>
-                <Room>Stage4-1</Room>
+                <Room>Stage3-1</Room>
                 <Difficulty>Normal</Difficulty>
                 <ImportErrorAttempts>0</ImportErrorAttempts>
             </instance-variables>
@@ -4570,6 +5714,7 @@
                 <Water>0</Water>
                 <Water_Type>Lemonade</Water_Type>
                 <ScreenWrap></ScreenWrap>
+                <Background></Background>
             </instance-variables>
         </instance>
         <instance type="JSON_Skin" uid="121" />

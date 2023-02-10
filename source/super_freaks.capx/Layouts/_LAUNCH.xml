@@ -234,6 +234,7 @@
                 <GameState></GameState>
             </instance-variables>
         </instance>
+        <instance type="JSON_Background" uid="202" />
     </nonworld-instances>
     <effects />
 </c2layout>

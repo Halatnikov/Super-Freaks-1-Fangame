@@ -2,7 +2,7 @@
 <c2project>
     <name>Super Freaks 1 Fangame</name>
     <description></description>
-    <version>0.3.0</version>
+    <version>0.4.0-1</version>
     <author>Halatnikov</author>
     <author-email></author-email>
     <author-website>https://halatnikov.github.io</author-website>
@@ -51,6 +51,7 @@
     </used-behaviors>
     <used-effects>
         <effect author="R0J0hound" id="outline">Outline</effect>
+        <effect author="Somebody" id="scroll">Scroll</effect>
         <effect author="Scirra" id="setcolor">Set color</effect>
         <effect author="Scirra" id="tint">Tint</effect>
     </used-effects>
@@ -148,6 +149,9 @@
             <object-type name="Photon" sid="782085482459366">
                 <plugin id="Photon" />
             </object-type>
+            <object-type global="1" name="JSON_Background" sid="477807435174117">
+                <plugin id="JSON" />
+            </object-type>
         </object-folder>
         <object-folder name=".Variables">
             <object-type global="1" name="Var_Gameplay" sid="330730497597134">
@@ -213,6 +217,7 @@
                     <instance-variable name="Water" sid="846440047345651" type="number" />
                     <instance-variable name="Water_Type" sid="527170937054919" type="string" />
                     <instance-variable name="ScreenWrap" sid="756236772160089" type="string" />
+                    <instance-variable name="Background" sid="438269227731215" type="string" />
                 </instance-variables>
             </object-type>
             <object-type global="1" name="Var_Input" sid="455681516227815">
@@ -2608,6 +2613,18 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="HUD_HintMessage" sid="134155654346747">
+                <plugin id="NinePatch" />
+                <behaviors>
+                    <behavior-type name="LiteTween" sid="841412092507520">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                    <behavior-type name="LiteTween2" sid="553422693733852">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\gms-tasks\export\spr_textbox_uncle_swordsman.png" />
+            </object-type>
         </object-folder>
         <object-folder name="LevelCollisions">
             <object-type name="Col_Slope" sid="543657655845611">
@@ -3866,6 +3883,138 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-folder name="Custom">
+            <object-folder name="Backgrounds">
+                <object-type name="Custom_Background0" sid="551138722493846">
+                    <plugin id="TiledBg" />
+                    <texture />
+                </object-type>
+                <object-type name="Custom_Background1" sid="761504830368356">
+                    <plugin id="TiledBg" />
+                    <texture />
+                </object-type>
+                <object-type name="Custom_Background10" sid="534004019745226">
+                    <plugin id="TiledBg" />
+                    <texture />
+                </object-type>
+                <object-type name="Custom_Background11" sid="705472378923067">
+                    <plugin id="TiledBg" />
+                    <texture />
+                </object-type>
+                <object-type name="Custom_Background12" sid="273894841565895">
+                    <plugin id="TiledBg" />
+                    <texture />
+                </object-type>
+                <object-type name="Custom_Background13" sid="227511797903793">
+                    <plugin id="TiledBg" />
+                    <texture />
+                </object-type>
+                <object-type name="Custom_Background14" sid="254393823640805">
+                    <plugin id="TiledBg" />
+                    <texture />
+                </object-type>
+                <object-type name="Custom_Background15" sid="973188901744690">
+                    <plugin id="TiledBg" />
+                    <texture />
+                </object-type>
+                <object-type name="Custom_Background16" sid="967949867731090">
+                    <plugin id="TiledBg" />
+                    <texture />
+                </object-type>
+                <object-type name="Custom_Background17" sid="897843606036212">
+                    <plugin id="TiledBg" />
+                    <texture />
+                </object-type>
+                <object-type name="Custom_Background18" sid="857459469660962">
+                    <plugin id="TiledBg" />
+                    <texture />
+                </object-type>
+                <object-type name="Custom_Background19" sid="802354632668066">
+                    <plugin id="TiledBg" />
+                    <texture />
+                </object-type>
+                <object-type name="Custom_Background2" sid="927200062052503">
+                    <plugin id="TiledBg" />
+                    <texture />
+                </object-type>
+                <object-type name="Custom_Background20" sid="439267816258751">
+                    <plugin id="TiledBg" />
+                    <texture />
+                </object-type>
+                <object-type name="Custom_Background21" sid="590958612175684">
+                    <plugin id="TiledBg" />
+                    <texture />
+                </object-type>
+                <object-type name="Custom_Background22" sid="874181814707233">
+                    <plugin id="TiledBg" />
+                    <texture />
+                </object-type>
+                <object-type name="Custom_Background23" sid="601113776846517">
+                    <plugin id="TiledBg" />
+                    <texture />
+                </object-type>
+                <object-type name="Custom_Background24" sid="515026067341455">
+                    <plugin id="TiledBg" />
+                    <texture />
+                </object-type>
+                <object-type name="Custom_Background25" sid="922972518221731">
+                    <plugin id="TiledBg" />
+                    <texture />
+                </object-type>
+                <object-type name="Custom_Background26" sid="828968377743614">
+                    <plugin id="TiledBg" />
+                    <texture />
+                </object-type>
+                <object-type name="Custom_Background27" sid="154457405477393">
+                    <plugin id="TiledBg" />
+                    <texture />
+                </object-type>
+                <object-type name="Custom_Background28" sid="824669975598762">
+                    <plugin id="TiledBg" />
+                    <texture />
+                </object-type>
+                <object-type name="Custom_Background29" sid="326143866874540">
+                    <plugin id="TiledBg" />
+                    <texture />
+                </object-type>
+                <object-type name="Custom_Background3" sid="958157171723610">
+                    <plugin id="TiledBg" />
+                    <texture />
+                </object-type>
+                <object-type name="Custom_Background30" sid="643279291538131">
+                    <plugin id="TiledBg" />
+                    <texture />
+                </object-type>
+                <object-type name="Custom_Background31" sid="460639841829838">
+                    <plugin id="TiledBg" />
+                    <texture />
+                </object-type>
+                <object-type name="Custom_Background4" sid="264115882820030">
+                    <plugin id="TiledBg" />
+                    <texture />
+                </object-type>
+                <object-type name="Custom_Background5" sid="231710633406290">
+                    <plugin id="TiledBg" />
+                    <texture />
+                </object-type>
+                <object-type name="Custom_Background6" sid="538078307817842">
+                    <plugin id="TiledBg" />
+                    <texture />
+                </object-type>
+                <object-type name="Custom_Background8" sid="904634133650999">
+                    <plugin id="TiledBg" />
+                    <texture />
+                </object-type>
+                <object-type name="Custom_Background9" sid="109830812949718">
+                    <plugin id="TiledBg" />
+                    <texture />
+                </object-type>
+                <object-type name="Custom_Background7" sid="597855541237322">
+                    <plugin id="TiledBg" />
+                    <texture />
+                </object-type>
+            </object-folder>
+        </object-folder>
     </object-folder>
     <families>
         <family name="Text" plugin-id="Spritefont2" sid="193627768008748">
@@ -4060,6 +4209,55 @@
                     <behavior id="jumpthru" />
                 </behavior-type>
             </behaviors>
+        </family>
+        <family name="Custom_Backgrounds" plugin-id="TiledBg" sid="579291799017617">
+            <members>
+                <member>Custom_Background0</member>
+                <member>Custom_Background1</member>
+                <member>Custom_Background10</member>
+                <member>Custom_Background11</member>
+                <member>Custom_Background12</member>
+                <member>Custom_Background13</member>
+                <member>Custom_Background14</member>
+                <member>Custom_Background15</member>
+                <member>Custom_Background16</member>
+                <member>Custom_Background17</member>
+                <member>Custom_Background18</member>
+                <member>Custom_Background19</member>
+                <member>Custom_Background2</member>
+                <member>Custom_Background20</member>
+                <member>Custom_Background21</member>
+                <member>Custom_Background22</member>
+                <member>Custom_Background23</member>
+                <member>Custom_Background24</member>
+                <member>Custom_Background25</member>
+                <member>Custom_Background26</member>
+                <member>Custom_Background27</member>
+                <member>Custom_Background28</member>
+                <member>Custom_Background29</member>
+                <member>Custom_Background3</member>
+                <member>Custom_Background30</member>
+                <member>Custom_Background31</member>
+                <member>Custom_Background4</member>
+                <member>Custom_Background5</member>
+                <member>Custom_Background6</member>
+                <member>Custom_Background7</member>
+                <member>Custom_Background8</member>
+                <member>Custom_Background9</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Image" sid="491841313845489" type="number" />
+                <instance-variable name="ID" sid="524353919449010" type="string" />
+                <instance-variable name="InitialX" sid="211216130783672" type="number" />
+                <instance-variable name="InitialY" sid="201309587553931" type="number" />
+                <instance-variable name="ParallaxX" sid="806552173050889" type="number" />
+                <instance-variable name="ParallaxY" sid="874090417703309" type="number" />
+            </instance-variables>
+            <effects>
+                <effect-type name="Scroll">
+                    <effect id="scroll" />
+                </effect-type>
+            </effects>
         </family>
     </families>
     <layout-folder>
