@@ -58,6 +58,19 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block sid="443643218398133">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="978893340419786" type="Keyboard">
+                    <param id="0" name="Key">116</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="476751025319645" type="Function">
+                    <param id="0" name="Name">&quot;Room_Background&quot;</param>
+                    <param id="1" name="Parameter {n}">Var_Room.Background</param>
+                </action>
+            </actions>
+        </event-block>
         <comment></comment>
         <event-block sid="838985290239531">
             <conditions>
@@ -1454,6 +1467,32 @@
                                             <param id="1" name="Value">Self.InstanceArray&amp;instance&amp;&quot;,&quot;</param>
                                         </action>
                                     </actions>
+                                </event-block>
+                                <event-block sid="912149465103965">
+                                    <conditions>
+                                        <condition id="60" name="Is undefined" sid="382164109106055" type="JSON_PERSIST">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}">&quot;ImportRoom_GMS1&quot;{###}Function.Param(0){###}&quot;Background&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="870853250055119">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="509686999061977" type="System">
+                                                    <param id="0" name="Variable">instance</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;objFruitJuiceBackground&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="989248122849528" type="Var_Room">
+                                                    <param id="0" name="Instance variable">Background</param>
+                                                    <param id="1" name="Value">&quot;1r_palace&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <event-block sid="986907258541752">
                                     <conditions>
@@ -2895,35 +2934,106 @@
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="858673750758595">
+                                        <event-block sid="224376425535281">
                                             <conditions>
-                                                <condition id="-14" name="Compare variable" sid="799315145589844" type="System">
-                                                    <param id="0" name="Variable">instance</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;objWorld1Back&quot;</param>
+                                                <condition id="60" name="Is undefined" sid="524543846164121" type="JSON_PERSIST">
+                                                    <param id="0" name="Reference point">0</param>
+                                                    <param id="1" name="Key {n}">&quot;ImportRoom_&quot;&amp;game{###}Function.Param(0){###}&quot;Background&quot;</param>
                                                 </condition>
                                             </conditions>
-                                            <actions>
-                                                <action id="-10" name="Set value" sid="803564906720286" type="Var_Room">
-                                                    <param id="0" name="Instance variable">Background</param>
-                                                    <param id="1" name="Value">&quot;3_level1&quot;</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="354195912192704">
-                                            <conditions>
-                                                <condition id="-14" name="Compare variable" sid="211148318111494" type="System">
-                                                    <param id="0" name="Variable">instance</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;objWorld2Back&quot;</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-10" name="Set value" sid="851723110737297" type="Var_Room">
-                                                    <param id="0" name="Instance variable">Background</param>
-                                                    <param id="1" name="Value">&quot;3_level2&quot;</param>
-                                                </action>
-                                            </actions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="858673750758595">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="799315145589844" type="System">
+                                                            <param id="0" name="Variable">instance</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;objWorld1Back&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Set value" sid="803564906720286" type="Var_Room">
+                                                            <param id="0" name="Instance variable">Background</param>
+                                                            <param id="1" name="Value">&quot;3_level1&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="354195912192704">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="211148318111494" type="System">
+                                                            <param id="0" name="Variable">instance</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;objWorld2Back&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Set value" sid="851723110737297" type="Var_Room">
+                                                            <param id="0" name="Instance variable">Background</param>
+                                                            <param id="1" name="Value">&quot;3_level2&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="149006943388214">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="345731897377228" type="System">
+                                                            <param id="0" name="Variable">instance</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;objWorld6Back&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Set value" sid="188680808099255" type="Var_Room">
+                                                            <param id="0" name="Instance variable">Background</param>
+                                                            <param id="1" name="Value">&quot;3_level6&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="254818540298991">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="352849209516048" type="System">
+                                                            <param id="0" name="Variable">instance</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;objSunSurfaceBack&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Set value" sid="264268565106437" type="Var_Room">
+                                                            <param id="0" name="Instance variable">Background</param>
+                                                            <param id="1" name="Value">&quot;3_level7-1&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="453274010342389">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="543766370519131" type="System">
+                                                            <param id="0" name="Variable">instance</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;objWorld7OutsideBack&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Set value" sid="336605081682139" type="Var_Room">
+                                                            <param id="0" name="Instance variable">Background</param>
+                                                            <param id="1" name="Value">&quot;3_level7-2&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="794501323636276">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="946358788346564" type="System">
+                                                            <param id="0" name="Variable">instance</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;objRotatingTowerBack&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Set value" sid="906187407959239" type="Var_Room">
+                                                            <param id="0" name="Instance variable">Background</param>
+                                                            <param id="1" name="Value">&quot;3_level7-4&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                         <comment>&quot;tiles&quot; 2: the squeakvel</comment>
                                         <event-block any="1" sid="831325694272434">
@@ -15706,6 +15816,122 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="300579210165366">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="316724192074623" type="Custom_Backgrounds">
+                                    <param id="0" name="Instance variable">ScrollX</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="994189937171860" type="Custom_Backgrounds">
+                                    <param id="0" name="X">Self.X+Self.ScrollX</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="689607336595785">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="528221404654132" type="Custom_Backgrounds">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="X co-ordinate">Self.InitialX+Self.ImageWidth</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-1" name="Set X" sid="934423537720756" type="Custom_Backgrounds">
+                                            <param id="0" name="X">Self.InitialX</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="472111561842823">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="277228096032068" type="Custom_Backgrounds">
+                                    <param id="0" name="Instance variable">ScrollX</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="170786274567055" type="Custom_Backgrounds">
+                                    <param id="0" name="X">Self.X+Self.ScrollX</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="147546052495528">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="143225025722829" type="Custom_Backgrounds">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="X co-ordinate">Self.InitialX-Self.ImageWidth</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-1" name="Set X" sid="684078357857067" type="Custom_Backgrounds">
+                                            <param id="0" name="X">Self.InitialX</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="428115603687623">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="928870019619919" type="Custom_Backgrounds">
+                                    <param id="0" name="Instance variable">ScrollY</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="202458696630288" type="Custom_Backgrounds">
+                                    <param id="0" name="Y">Self.Y+Self.ScrollY</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="617384243971602">
+                                    <conditions>
+                                        <condition id="-2" name="Compare Y" sid="450443661241909" type="Custom_Backgrounds">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="Y co-ordinate">Self.InitialY+Self.ImageHeight</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Set Y" sid="343202141137234" type="Custom_Backgrounds">
+                                            <param id="0" name="Y">Self.InitialY</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="575538682963260">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="100782155772157" type="Custom_Backgrounds">
+                                    <param id="0" name="Instance variable">ScrollY</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="405596899765957" type="Custom_Backgrounds">
+                                    <param id="0" name="Y">Self.Y+Self.ScrollY</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="496921916663666">
+                                    <conditions>
+                                        <condition id="-2" name="Compare Y" sid="568553713879586" type="Custom_Backgrounds">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="Y co-ordinate">Self.InitialY-Self.ImageHeight</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Set Y" sid="420193717929376" type="Custom_Backgrounds">
+                                            <param id="0" name="Y">Self.InitialY</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                     </sub-events>
                 </event-block>
                 <comment></comment>
@@ -15717,7 +15943,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <variable constant="0" name="count" sid="444551879063999" static="1" type="number">-1</variable>
+                        <variable constant="0" name="image_count" sid="444551879063999" static="1" type="number">-1</variable>
                         <variable constant="0" name="image" sid="779578467342036" static="1" type="text"></variable>
                         <event-block sid="373240780979677">
                             <conditions />
@@ -15732,7 +15958,7 @@
                                     <param id="1" name="Key {n}"></param>
                                 </action>
                                 <action id="-9" name="Set value" sid="129801952819605" type="System">
-                                    <param id="0" name="Variable">count</param>
+                                    <param id="0" name="Variable">image_count</param>
                                     <param id="1" name="Value">-1</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="559489596998274" type="System">
@@ -15761,17 +15987,24 @@
                                             <param id="0" name="Reference point">0</param>
                                             <param id="1" name="Key {n}">&quot;Background&quot;</param>
                                         </condition>
-                                        <condition id="60" inverted="1" name="Is undefined" sid="507560036786765" type="JSON_Background">
-                                            <param id="0" name="Reference point">0</param>
-                                            <param id="1" name="Key {n}">&quot;Background&quot;{###}&quot;Color&quot;</param>
-                                        </condition>
                                     </conditions>
-                                    <actions>
-                                        <action id="-34" name="Set layer background color" sid="738457150792608" type="System">
-                                            <param id="0" name="Layer">&quot;BG&quot;</param>
-                                            <param id="1" name="Color">rgb(int(tokenat(JSON_Background.Value(0,&quot;Background&quot;,&quot;Color&quot;),0,&quot;,&quot;)), int(tokenat(JSON_Background.Value(0,&quot;Background&quot;,&quot;Color&quot;),1,&quot;,&quot;)), int(tokenat(JSON_Background.Value(0,&quot;Background&quot;,&quot;Color&quot;),2,&quot;,&quot;)))</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="869270336991538">
+                                            <conditions>
+                                                <condition id="60" inverted="1" name="Is undefined" sid="507560036786765" type="JSON_Background">
+                                                    <param id="0" name="Reference point">0</param>
+                                                    <param id="1" name="Key {n}">&quot;Background&quot;{###}&quot;Color&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-34" name="Set layer background color" sid="738457150792608" type="System">
+                                                    <param id="0" name="Layer">&quot;BG&quot;</param>
+                                                    <param id="1" name="Color">rgb(int(tokenat(JSON_Background.Value(0,&quot;Background&quot;,&quot;Color&quot;),0,&quot;,&quot;)), int(tokenat(JSON_Background.Value(0,&quot;Background&quot;,&quot;Color&quot;),1,&quot;,&quot;)), int(tokenat(JSON_Background.Value(0,&quot;Background&quot;,&quot;Color&quot;),2,&quot;,&quot;)))</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <event-block sid="959363553409176">
                                     <conditions>
@@ -15802,7 +16035,7 @@
                                             </conditions>
                                             <actions>
                                                 <action id="-10" name="Add to" sid="110307031866983" type="System">
-                                                    <param id="0" name="Variable">count</param>
+                                                    <param id="0" name="Variable">image_count</param>
                                                     <param id="1" name="Value">1</param>
                                                 </action>
                                             </actions>
@@ -15814,7 +16047,7 @@
                                                     <param id="0" name="Family object">Custom_Backgrounds</param>
                                                     <param id="1" name="Variable ID">0</param>
                                                     <param id="2" name="Comparison">0</param>
-                                                    <param id="3" name="Value">count</param>
+                                                    <param id="3" name="Value">image_count</param>
                                                     <param id="4" name="Layer">&quot;BG&quot;</param>
                                                     <param id="5" name="X">0</param>
                                                     <param id="6" name="Y">0</param>
@@ -15827,10 +16060,6 @@
                                                 <action id="-10" name="Set value" sid="960112535279097" type="Custom_Backgrounds">
                                                     <param id="0" name="Instance variable">ID</param>
                                                     <param id="1" name="Value">JSON_Background.CurrentKey</param>
-                                                </action>
-                                                <action id="-27" name="Set effect enabled" sid="151162647386534" type="Custom_Backgrounds">
-                                                    <param id="0" name="Mode">0</param>
-                                                    <param id="1" name="Effect">&quot;Scroll&quot;</param>
                                                 </action>
                                             </actions>
                                             <sub-events>
@@ -15846,9 +16075,6 @@
                                                             <param id="0" name="Instance variable">InitialX</param>
                                                             <param id="1" name="Value">int(JSON_Background.Value(0,JSON_Background.CurrentKey,&quot;X&quot;))</param>
                                                         </action>
-                                                        <action id="-1" name="Set X" sid="800786715577470" type="Custom_Backgrounds">
-                                                            <param id="0" name="X">Self.InitialX</param>
-                                                        </action>
                                                     </actions>
                                                 </event-block>
                                                 <event-block sid="237991842606646">
@@ -15863,8 +16089,18 @@
                                                             <param id="0" name="Instance variable">InitialY</param>
                                                             <param id="1" name="Value">int(JSON_Background.Value(0,JSON_Background.CurrentKey,&quot;Y&quot;))</param>
                                                         </action>
-                                                        <action id="-2" name="Set Y" sid="138839932087353" type="Custom_Backgrounds">
-                                                            <param id="0" name="Y">Self.InitialY</param>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="665251360418923">
+                                                    <conditions>
+                                                        <condition id="60" inverted="1" name="Is undefined" sid="479331771857935" type="JSON_Background">
+                                                            <param id="0" name="Reference point">0</param>
+                                                            <param id="1" name="Key {n}">JSON_Background.CurrentKey{###}&quot;Opacity&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-16" name="Set opacity" sid="142113307790249" type="Custom_Backgrounds">
+                                                            <param id="0" name="Opacity">int(JSON_Background.Value(0,JSON_Background.CurrentKey,&quot;Opacity&quot;))</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -15896,6 +16132,7 @@
                                                         </action>
                                                     </actions>
                                                 </event-block>
+                                                <comment>i don&apos;t think it&apos;s possible to have both parallax and scrolling</comment>
                                                 <event-block sid="529425155415376">
                                                     <conditions>
                                                         <condition id="60" inverted="1" name="Is undefined" sid="135432999843983" type="JSON_Background">
@@ -15904,14 +16141,9 @@
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action id="-27" name="Set effect enabled" sid="450178943601298" type="Custom_Backgrounds">
-                                                            <param id="0" name="Mode">1</param>
-                                                            <param id="1" name="Effect">&quot;Scroll&quot;</param>
-                                                        </action>
-                                                        <action id="-28" name="Set effect parameter" sid="504174883116675" type="Custom_Backgrounds">
-                                                            <param id="0" name="Effect">&quot;Scroll&quot;</param>
-                                                            <param id="1" name="Parameter index">0</param>
-                                                            <param id="2" name="Value">float(JSON_Background.Value(0,JSON_Background.CurrentKey,&quot;ScrollX&quot;))</param>
+                                                        <action id="-10" name="Set value" sid="411624639600155" type="Custom_Backgrounds">
+                                                            <param id="0" name="Instance variable">ScrollX</param>
+                                                            <param id="1" name="Value">float(JSON_Background.Value(0,JSON_Background.CurrentKey,&quot;ScrollX&quot;))</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -15923,14 +16155,9 @@
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action id="-27" name="Set effect enabled" sid="533605273146849" type="Custom_Backgrounds">
-                                                            <param id="0" name="Mode">1</param>
-                                                            <param id="1" name="Effect">&quot;Scroll&quot;</param>
-                                                        </action>
-                                                        <action id="-28" name="Set effect parameter" sid="663697203232727" type="Custom_Backgrounds">
-                                                            <param id="0" name="Effect">&quot;Scroll&quot;</param>
-                                                            <param id="1" name="Parameter index">1</param>
-                                                            <param id="2" name="Value">float(JSON_Background.Value(0,JSON_Background.CurrentKey,&quot;ScrollY&quot;))</param>
+                                                        <action id="-10" name="Set value" sid="516399642596168" type="Custom_Backgrounds">
+                                                            <param id="0" name="Instance variable">ScrollY</param>
+                                                            <param id="1" name="Value">float(JSON_Background.Value(0,JSON_Background.CurrentKey,&quot;ScrollY&quot;))</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -15957,17 +16184,64 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="327422705660624">
+                        <event-block sid="905287690792525">
                             <conditions>
-                                <condition id="-8" name="Compare two values" sid="268370693335906" type="System">
-                                    <param id="0" name="First value">find(JSON_Background.Value(0,Custom_Backgrounds.ID,&quot;Flags&quot;),&quot;TileX|&quot;)</param>
+                                <condition id="-7" name="Compare instance variable" sid="109505028039538" type="Custom_Backgrounds">
+                                    <param id="0" name="Instance variable">ScrollX</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="466639073463200" type="Custom_Backgrounds">
+                                    <param id="0" name="Instance variable">InitialX</param>
+                                    <param id="1" name="Value">Self.InitialX-Self.ImageWidth</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="557828184694711">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="170517883261921" type="Custom_Backgrounds">
+                                    <param id="0" name="Instance variable">ScrollY</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="722826144675804" type="Custom_Backgrounds">
+                                    <param id="0" name="Instance variable">InitialY</param>
+                                    <param id="1" name="Value">Self.InitialY-Self.ImageHeight</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="169719024756692">
+                            <conditions />
+                            <actions>
+                                <action id="-1" name="Set X" sid="800786715577470" type="Custom_Backgrounds">
+                                    <param id="0" name="X">Self.InitialX</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="138839932087353" type="Custom_Backgrounds">
+                                    <param id="0" name="Y">Self.InitialY</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="982595431352251" type="Custom_Backgrounds">
+                                    <param id="0" name="Width">Self.ImageWidth</param>
+                                </action>
+                                <action id="-6" name="Set height" sid="130214246606711" type="Custom_Backgrounds">
+                                    <param id="0" name="Height">Self.ImageHeight</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="306985448573680">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Compare two values" sid="422262789288323" type="System">
+                                    <param id="0" name="First value">find(JSON_Background.Value(0,Custom_Backgrounds.ID,&quot;Flags&quot;),&quot;Foreground|&quot;)</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Second value">-1</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-5" name="Set width" sid="982595431352251" type="Custom_Backgrounds">
-                                    <param id="0" name="Width">Self.ImageWidth</param>
+                                <action id="-26" name="Move to layer" sid="953279910440986" type="Custom_Backgrounds">
+                                    <param id="0" name="Layer">&quot;BGHigh&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -15981,21 +16255,7 @@
                             </conditions>
                             <actions>
                                 <action id="-5" name="Set width" sid="729008345519587" type="Custom_Backgrounds">
-                                    <param id="0" name="Width">Self.ImageWidth*ceil(Var_Room.Width/Self.ImageWidth)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="354830857099842">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="903153465126793" type="System">
-                                    <param id="0" name="First value">find(JSON_Background.Value(0,Custom_Backgrounds.ID,&quot;Flags&quot;),&quot;TileY|&quot;)</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">-1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-6" name="Set height" sid="130214246606711" type="Custom_Backgrounds">
-                                    <param id="0" name="Height">Self.ImageHeight</param>
+                                    <param id="0" name="Width">Self.ImageWidth*ceil(Var_Room.Width/Self.ImageWidth)+Self.ImageWidth</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -16009,10 +16269,11 @@
                             </conditions>
                             <actions>
                                 <action id="-6" name="Set height" sid="408103753673798" type="Custom_Backgrounds">
-                                    <param id="0" name="Height">Self.ImageHeight*ceil(Var_Room.Height/Self.ImageHeight)</param>
+                                    <param id="0" name="Height">Self.ImageHeight*ceil(Var_Room.Height/Self.ImageHeight)+Self.ImageHeight</param>
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>apparently you can use no more Y than ImageHeight</comment>
                         <event-block sid="359547273735282">
                             <conditions>
                                 <condition id="-8" inverted="1" name="Compare two values" sid="436020606316782" type="System">

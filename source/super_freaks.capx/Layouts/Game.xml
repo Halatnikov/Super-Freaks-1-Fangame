@@ -25,7 +25,7 @@
             <opacity>1</opacity>
             <force-own-texture>0</force-own-texture>
             <global>0</global>
-            <use-render-cells>1</use-render-cells>
+            <use-render-cells>0</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
@@ -41,15 +41,9 @@
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
+                        <ScrollX>0</ScrollX>
+                        <ScrollY>0</ScrollY>
                     </instance-variables>
-                    <effect-instances>
-                        <effect-instance type="Scroll">
-                            <parameters>
-                                <x-shift>0</x-shift>
-                                <y-shift>0</y-shift>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -77,15 +71,9 @@
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
+                        <ScrollX>0</ScrollX>
+                        <ScrollY>0</ScrollY>
                     </instance-variables>
-                    <effect-instances>
-                        <effect-instance type="Scroll">
-                            <parameters>
-                                <x-shift>0</x-shift>
-                                <y-shift>0</y-shift>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -113,15 +101,9 @@
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
+                        <ScrollX>0</ScrollX>
+                        <ScrollY>0</ScrollY>
                     </instance-variables>
-                    <effect-instances>
-                        <effect-instance type="Scroll">
-                            <parameters>
-                                <x-shift>0</x-shift>
-                                <y-shift>0</y-shift>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -149,15 +131,9 @@
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
+                        <ScrollX>0</ScrollX>
+                        <ScrollY>0</ScrollY>
                     </instance-variables>
-                    <effect-instances>
-                        <effect-instance type="Scroll">
-                            <parameters>
-                                <x-shift>0</x-shift>
-                                <y-shift>0</y-shift>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -185,15 +161,9 @@
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
+                        <ScrollX>0</ScrollX>
+                        <ScrollY>0</ScrollY>
                     </instance-variables>
-                    <effect-instances>
-                        <effect-instance type="Scroll">
-                            <parameters>
-                                <x-shift>0</x-shift>
-                                <y-shift>0</y-shift>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -221,15 +191,9 @@
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
+                        <ScrollX>0</ScrollX>
+                        <ScrollY>0</ScrollY>
                     </instance-variables>
-                    <effect-instances>
-                        <effect-instance type="Scroll">
-                            <parameters>
-                                <x-shift>0</x-shift>
-                                <y-shift>0</y-shift>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -257,15 +221,9 @@
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
+                        <ScrollX>0</ScrollX>
+                        <ScrollY>0</ScrollY>
                     </instance-variables>
-                    <effect-instances>
-                        <effect-instance type="Scroll">
-                            <parameters>
-                                <x-shift>0</x-shift>
-                                <y-shift>0</y-shift>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -293,15 +251,9 @@
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
+                        <ScrollX>0</ScrollX>
+                        <ScrollY>0</ScrollY>
                     </instance-variables>
-                    <effect-instances>
-                        <effect-instance type="Scroll">
-                            <parameters>
-                                <x-shift>0</x-shift>
-                                <y-shift>0</y-shift>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -329,15 +281,9 @@
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
+                        <ScrollX>0</ScrollX>
+                        <ScrollY>0</ScrollY>
                     </instance-variables>
-                    <effect-instances>
-                        <effect-instance type="Scroll">
-                            <parameters>
-                                <x-shift>0</x-shift>
-                                <y-shift>0</y-shift>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -365,15 +311,9 @@
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
+                        <ScrollX>0</ScrollX>
+                        <ScrollY>0</ScrollY>
                     </instance-variables>
-                    <effect-instances>
-                        <effect-instance type="Scroll">
-                            <parameters>
-                                <x-shift>0</x-shift>
-                                <y-shift>0</y-shift>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -401,15 +341,9 @@
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
+                        <ScrollX>0</ScrollX>
+                        <ScrollY>0</ScrollY>
                     </instance-variables>
-                    <effect-instances>
-                        <effect-instance type="Scroll">
-                            <parameters>
-                                <x-shift>0</x-shift>
-                                <y-shift>0</y-shift>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -437,15 +371,9 @@
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
+                        <ScrollX>0</ScrollX>
+                        <ScrollY>0</ScrollY>
                     </instance-variables>
-                    <effect-instances>
-                        <effect-instance type="Scroll">
-                            <parameters>
-                                <x-shift>0</x-shift>
-                                <y-shift>0</y-shift>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -473,15 +401,9 @@
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
+                        <ScrollX>0</ScrollX>
+                        <ScrollY>0</ScrollY>
                     </instance-variables>
-                    <effect-instances>
-                        <effect-instance type="Scroll">
-                            <parameters>
-                                <x-shift>0</x-shift>
-                                <y-shift>0</y-shift>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -509,15 +431,9 @@
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
+                        <ScrollX>0</ScrollX>
+                        <ScrollY>0</ScrollY>
                     </instance-variables>
-                    <effect-instances>
-                        <effect-instance type="Scroll">
-                            <parameters>
-                                <x-shift>0</x-shift>
-                                <y-shift>0</y-shift>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -545,15 +461,9 @@
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
+                        <ScrollX>0</ScrollX>
+                        <ScrollY>0</ScrollY>
                     </instance-variables>
-                    <effect-instances>
-                        <effect-instance type="Scroll">
-                            <parameters>
-                                <x-shift>0</x-shift>
-                                <y-shift>0</y-shift>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -581,15 +491,9 @@
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
+                        <ScrollX>0</ScrollX>
+                        <ScrollY>0</ScrollY>
                     </instance-variables>
-                    <effect-instances>
-                        <effect-instance type="Scroll">
-                            <parameters>
-                                <x-shift>0</x-shift>
-                                <y-shift>0</y-shift>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -617,15 +521,9 @@
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
+                        <ScrollX>0</ScrollX>
+                        <ScrollY>0</ScrollY>
                     </instance-variables>
-                    <effect-instances>
-                        <effect-instance type="Scroll">
-                            <parameters>
-                                <x-shift>0</x-shift>
-                                <y-shift>0</y-shift>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -653,15 +551,9 @@
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
+                        <ScrollX>0</ScrollX>
+                        <ScrollY>0</ScrollY>
                     </instance-variables>
-                    <effect-instances>
-                        <effect-instance type="Scroll">
-                            <parameters>
-                                <x-shift>0</x-shift>
-                                <y-shift>0</y-shift>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -689,15 +581,9 @@
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
+                        <ScrollX>0</ScrollX>
+                        <ScrollY>0</ScrollY>
                     </instance-variables>
-                    <effect-instances>
-                        <effect-instance type="Scroll">
-                            <parameters>
-                                <x-shift>0</x-shift>
-                                <y-shift>0</y-shift>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -725,15 +611,9 @@
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
+                        <ScrollX>0</ScrollX>
+                        <ScrollY>0</ScrollY>
                     </instance-variables>
-                    <effect-instances>
-                        <effect-instance type="Scroll">
-                            <parameters>
-                                <x-shift>0</x-shift>
-                                <y-shift>0</y-shift>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -761,15 +641,9 @@
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
+                        <ScrollX>0</ScrollX>
+                        <ScrollY>0</ScrollY>
                     </instance-variables>
-                    <effect-instances>
-                        <effect-instance type="Scroll">
-                            <parameters>
-                                <x-shift>0</x-shift>
-                                <y-shift>0</y-shift>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -797,15 +671,9 @@
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
+                        <ScrollX>0</ScrollX>
+                        <ScrollY>0</ScrollY>
                     </instance-variables>
-                    <effect-instances>
-                        <effect-instance type="Scroll">
-                            <parameters>
-                                <x-shift>0</x-shift>
-                                <y-shift>0</y-shift>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -833,15 +701,9 @@
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
+                        <ScrollX>0</ScrollX>
+                        <ScrollY>0</ScrollY>
                     </instance-variables>
-                    <effect-instances>
-                        <effect-instance type="Scroll">
-                            <parameters>
-                                <x-shift>0</x-shift>
-                                <y-shift>0</y-shift>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -869,15 +731,9 @@
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
+                        <ScrollX>0</ScrollX>
+                        <ScrollY>0</ScrollY>
                     </instance-variables>
-                    <effect-instances>
-                        <effect-instance type="Scroll">
-                            <parameters>
-                                <x-shift>0</x-shift>
-                                <y-shift>0</y-shift>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -905,15 +761,9 @@
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
+                        <ScrollX>0</ScrollX>
+                        <ScrollY>0</ScrollY>
                     </instance-variables>
-                    <effect-instances>
-                        <effect-instance type="Scroll">
-                            <parameters>
-                                <x-shift>0</x-shift>
-                                <y-shift>0</y-shift>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -941,15 +791,9 @@
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
+                        <ScrollX>0</ScrollX>
+                        <ScrollY>0</ScrollY>
                     </instance-variables>
-                    <effect-instances>
-                        <effect-instance type="Scroll">
-                            <parameters>
-                                <x-shift>0</x-shift>
-                                <y-shift>0</y-shift>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -977,15 +821,9 @@
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
+                        <ScrollX>0</ScrollX>
+                        <ScrollY>0</ScrollY>
                     </instance-variables>
-                    <effect-instances>
-                        <effect-instance type="Scroll">
-                            <parameters>
-                                <x-shift>0</x-shift>
-                                <y-shift>0</y-shift>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1013,15 +851,9 @@
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
+                        <ScrollX>0</ScrollX>
+                        <ScrollY>0</ScrollY>
                     </instance-variables>
-                    <effect-instances>
-                        <effect-instance type="Scroll">
-                            <parameters>
-                                <x-shift>0</x-shift>
-                                <y-shift>0</y-shift>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1049,15 +881,9 @@
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
+                        <ScrollX>0</ScrollX>
+                        <ScrollY>0</ScrollY>
                     </instance-variables>
-                    <effect-instances>
-                        <effect-instance type="Scroll">
-                            <parameters>
-                                <x-shift>0</x-shift>
-                                <y-shift>0</y-shift>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1085,15 +911,9 @@
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
+                        <ScrollX>0</ScrollX>
+                        <ScrollY>0</ScrollY>
                     </instance-variables>
-                    <effect-instances>
-                        <effect-instance type="Scroll">
-                            <parameters>
-                                <x-shift>0</x-shift>
-                                <y-shift>0</y-shift>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1121,15 +941,9 @@
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
+                        <ScrollX>0</ScrollX>
+                        <ScrollY>0</ScrollY>
                     </instance-variables>
-                    <effect-instances>
-                        <effect-instance type="Scroll">
-                            <parameters>
-                                <x-shift>0</x-shift>
-                                <y-shift>0</y-shift>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1157,15 +971,9 @@
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
+                        <ScrollX>0</ScrollX>
+                        <ScrollY>0</ScrollY>
                     </instance-variables>
-                    <effect-instances>
-                        <effect-instance type="Scroll">
-                            <parameters>
-                                <x-shift>0</x-shift>
-                                <y-shift>0</y-shift>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
