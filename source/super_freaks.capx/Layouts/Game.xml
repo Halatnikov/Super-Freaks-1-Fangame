@@ -35,14 +35,20 @@
                         <hotspot>Top-left</hotspot>
                     </properties>
                     <instance-variables>
-                        <Image>0</Image>
+                        <Object>0</Object>
+                        <Loaded>false</Loaded>
                         <ID></ID>
+                        <Image></Image>
                         <InitialX>0</InitialX>
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
                         <ScrollX>0</ScrollX>
                         <ScrollY>0</ScrollY>
+                        <AnimationSpeed>0</AnimationSpeed>
+                        <AnimationFrame>0</AnimationFrame>
+                        <ParallaxScrollX>0</ParallaxScrollX>
+                        <ParallaxScrollY>0</ParallaxScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -65,14 +71,20 @@
                         <hotspot>Top-left</hotspot>
                     </properties>
                     <instance-variables>
-                        <Image>1</Image>
+                        <Object>1</Object>
+                        <Loaded>false</Loaded>
                         <ID></ID>
+                        <Image></Image>
                         <InitialX>0</InitialX>
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
                         <ScrollX>0</ScrollX>
                         <ScrollY>0</ScrollY>
+                        <AnimationSpeed>0</AnimationSpeed>
+                        <AnimationFrame>0</AnimationFrame>
+                        <ParallaxScrollX>0</ParallaxScrollX>
+                        <ParallaxScrollY>0</ParallaxScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -95,14 +107,20 @@
                         <hotspot>Top-left</hotspot>
                     </properties>
                     <instance-variables>
-                        <Image>2</Image>
+                        <Object>2</Object>
+                        <Loaded>false</Loaded>
                         <ID></ID>
+                        <Image></Image>
                         <InitialX>0</InitialX>
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
                         <ScrollX>0</ScrollX>
                         <ScrollY>0</ScrollY>
+                        <AnimationSpeed>0</AnimationSpeed>
+                        <AnimationFrame>0</AnimationFrame>
+                        <ParallaxScrollX>0</ParallaxScrollX>
+                        <ParallaxScrollY>0</ParallaxScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -125,14 +143,20 @@
                         <hotspot>Top-left</hotspot>
                     </properties>
                     <instance-variables>
-                        <Image>3</Image>
+                        <Object>3</Object>
+                        <Loaded>false</Loaded>
                         <ID></ID>
+                        <Image></Image>
                         <InitialX>0</InitialX>
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
                         <ScrollX>0</ScrollX>
                         <ScrollY>0</ScrollY>
+                        <AnimationSpeed>0</AnimationSpeed>
+                        <AnimationFrame>0</AnimationFrame>
+                        <ParallaxScrollX>0</ParallaxScrollX>
+                        <ParallaxScrollY>0</ParallaxScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -155,14 +179,20 @@
                         <hotspot>Top-left</hotspot>
                     </properties>
                     <instance-variables>
-                        <Image>4</Image>
+                        <Object>4</Object>
+                        <Loaded>false</Loaded>
                         <ID></ID>
+                        <Image></Image>
                         <InitialX>0</InitialX>
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
                         <ScrollX>0</ScrollX>
                         <ScrollY>0</ScrollY>
+                        <AnimationSpeed>0</AnimationSpeed>
+                        <AnimationFrame>0</AnimationFrame>
+                        <ParallaxScrollX>0</ParallaxScrollX>
+                        <ParallaxScrollY>0</ParallaxScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -185,14 +215,20 @@
                         <hotspot>Top-left</hotspot>
                     </properties>
                     <instance-variables>
-                        <Image>5</Image>
+                        <Object>5</Object>
+                        <Loaded>false</Loaded>
                         <ID></ID>
+                        <Image></Image>
                         <InitialX>0</InitialX>
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
                         <ScrollX>0</ScrollX>
                         <ScrollY>0</ScrollY>
+                        <AnimationSpeed>0</AnimationSpeed>
+                        <AnimationFrame>0</AnimationFrame>
+                        <ParallaxScrollX>0</ParallaxScrollX>
+                        <ParallaxScrollY>0</ParallaxScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -215,14 +251,20 @@
                         <hotspot>Top-left</hotspot>
                     </properties>
                     <instance-variables>
-                        <Image>6</Image>
+                        <Object>6</Object>
+                        <Loaded>false</Loaded>
                         <ID></ID>
+                        <Image></Image>
                         <InitialX>0</InitialX>
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
                         <ScrollX>0</ScrollX>
                         <ScrollY>0</ScrollY>
+                        <AnimationSpeed>0</AnimationSpeed>
+                        <AnimationFrame>0</AnimationFrame>
+                        <ParallaxScrollX>0</ParallaxScrollX>
+                        <ParallaxScrollY>0</ParallaxScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -245,14 +287,20 @@
                         <hotspot>Top-left</hotspot>
                     </properties>
                     <instance-variables>
-                        <Image>7</Image>
+                        <Object>7</Object>
+                        <Loaded>false</Loaded>
                         <ID></ID>
+                        <Image></Image>
                         <InitialX>0</InitialX>
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
                         <ScrollX>0</ScrollX>
                         <ScrollY>0</ScrollY>
+                        <AnimationSpeed>0</AnimationSpeed>
+                        <AnimationFrame>0</AnimationFrame>
+                        <ParallaxScrollX>0</ParallaxScrollX>
+                        <ParallaxScrollY>0</ParallaxScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -275,14 +323,20 @@
                         <hotspot>Top-left</hotspot>
                     </properties>
                     <instance-variables>
-                        <Image>8</Image>
+                        <Object>8</Object>
+                        <Loaded>false</Loaded>
                         <ID></ID>
+                        <Image></Image>
                         <InitialX>0</InitialX>
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
                         <ScrollX>0</ScrollX>
                         <ScrollY>0</ScrollY>
+                        <AnimationSpeed>0</AnimationSpeed>
+                        <AnimationFrame>0</AnimationFrame>
+                        <ParallaxScrollX>0</ParallaxScrollX>
+                        <ParallaxScrollY>0</ParallaxScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -305,14 +359,20 @@
                         <hotspot>Top-left</hotspot>
                     </properties>
                     <instance-variables>
-                        <Image>9</Image>
+                        <Object>9</Object>
+                        <Loaded>false</Loaded>
                         <ID></ID>
+                        <Image></Image>
                         <InitialX>0</InitialX>
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
                         <ScrollX>0</ScrollX>
                         <ScrollY>0</ScrollY>
+                        <AnimationSpeed>0</AnimationSpeed>
+                        <AnimationFrame>0</AnimationFrame>
+                        <ParallaxScrollX>0</ParallaxScrollX>
+                        <ParallaxScrollY>0</ParallaxScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -335,14 +395,20 @@
                         <hotspot>Top-left</hotspot>
                     </properties>
                     <instance-variables>
-                        <Image>10</Image>
+                        <Object>10</Object>
+                        <Loaded>false</Loaded>
                         <ID></ID>
+                        <Image></Image>
                         <InitialX>0</InitialX>
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
                         <ScrollX>0</ScrollX>
                         <ScrollY>0</ScrollY>
+                        <AnimationSpeed>0</AnimationSpeed>
+                        <AnimationFrame>0</AnimationFrame>
+                        <ParallaxScrollX>0</ParallaxScrollX>
+                        <ParallaxScrollY>0</ParallaxScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -365,14 +431,20 @@
                         <hotspot>Top-left</hotspot>
                     </properties>
                     <instance-variables>
-                        <Image>11</Image>
+                        <Object>11</Object>
+                        <Loaded>false</Loaded>
                         <ID></ID>
+                        <Image></Image>
                         <InitialX>0</InitialX>
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
                         <ScrollX>0</ScrollX>
                         <ScrollY>0</ScrollY>
+                        <AnimationSpeed>0</AnimationSpeed>
+                        <AnimationFrame>0</AnimationFrame>
+                        <ParallaxScrollX>0</ParallaxScrollX>
+                        <ParallaxScrollY>0</ParallaxScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -395,14 +467,20 @@
                         <hotspot>Top-left</hotspot>
                     </properties>
                     <instance-variables>
-                        <Image>12</Image>
+                        <Object>12</Object>
+                        <Loaded>false</Loaded>
                         <ID></ID>
+                        <Image></Image>
                         <InitialX>0</InitialX>
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
                         <ScrollX>0</ScrollX>
                         <ScrollY>0</ScrollY>
+                        <AnimationSpeed>0</AnimationSpeed>
+                        <AnimationFrame>0</AnimationFrame>
+                        <ParallaxScrollX>0</ParallaxScrollX>
+                        <ParallaxScrollY>0</ParallaxScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -425,14 +503,20 @@
                         <hotspot>Top-left</hotspot>
                     </properties>
                     <instance-variables>
-                        <Image>13</Image>
+                        <Object>13</Object>
+                        <Loaded>false</Loaded>
                         <ID></ID>
+                        <Image></Image>
                         <InitialX>0</InitialX>
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
                         <ScrollX>0</ScrollX>
                         <ScrollY>0</ScrollY>
+                        <AnimationSpeed>0</AnimationSpeed>
+                        <AnimationFrame>0</AnimationFrame>
+                        <ParallaxScrollX>0</ParallaxScrollX>
+                        <ParallaxScrollY>0</ParallaxScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -455,14 +539,20 @@
                         <hotspot>Top-left</hotspot>
                     </properties>
                     <instance-variables>
-                        <Image>14</Image>
+                        <Object>14</Object>
+                        <Loaded>false</Loaded>
                         <ID></ID>
+                        <Image></Image>
                         <InitialX>0</InitialX>
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
                         <ScrollX>0</ScrollX>
                         <ScrollY>0</ScrollY>
+                        <AnimationSpeed>0</AnimationSpeed>
+                        <AnimationFrame>0</AnimationFrame>
+                        <ParallaxScrollX>0</ParallaxScrollX>
+                        <ParallaxScrollY>0</ParallaxScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -485,14 +575,20 @@
                         <hotspot>Top-left</hotspot>
                     </properties>
                     <instance-variables>
-                        <Image>15</Image>
+                        <Object>15</Object>
+                        <Loaded>false</Loaded>
                         <ID></ID>
+                        <Image></Image>
                         <InitialX>0</InitialX>
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
                         <ScrollX>0</ScrollX>
                         <ScrollY>0</ScrollY>
+                        <AnimationSpeed>0</AnimationSpeed>
+                        <AnimationFrame>0</AnimationFrame>
+                        <ParallaxScrollX>0</ParallaxScrollX>
+                        <ParallaxScrollY>0</ParallaxScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -515,14 +611,20 @@
                         <hotspot>Top-left</hotspot>
                     </properties>
                     <instance-variables>
-                        <Image>16</Image>
+                        <Object>16</Object>
+                        <Loaded>false</Loaded>
                         <ID></ID>
+                        <Image></Image>
                         <InitialX>0</InitialX>
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
                         <ScrollX>0</ScrollX>
                         <ScrollY>0</ScrollY>
+                        <AnimationSpeed>0</AnimationSpeed>
+                        <AnimationFrame>0</AnimationFrame>
+                        <ParallaxScrollX>0</ParallaxScrollX>
+                        <ParallaxScrollY>0</ParallaxScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -545,14 +647,20 @@
                         <hotspot>Top-left</hotspot>
                     </properties>
                     <instance-variables>
-                        <Image>17</Image>
+                        <Object>17</Object>
+                        <Loaded>false</Loaded>
                         <ID></ID>
+                        <Image></Image>
                         <InitialX>0</InitialX>
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
                         <ScrollX>0</ScrollX>
                         <ScrollY>0</ScrollY>
+                        <AnimationSpeed>0</AnimationSpeed>
+                        <AnimationFrame>0</AnimationFrame>
+                        <ParallaxScrollX>0</ParallaxScrollX>
+                        <ParallaxScrollY>0</ParallaxScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -575,14 +683,20 @@
                         <hotspot>Top-left</hotspot>
                     </properties>
                     <instance-variables>
-                        <Image>18</Image>
+                        <Object>18</Object>
+                        <Loaded>false</Loaded>
                         <ID></ID>
+                        <Image></Image>
                         <InitialX>0</InitialX>
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
                         <ScrollX>0</ScrollX>
                         <ScrollY>0</ScrollY>
+                        <AnimationSpeed>0</AnimationSpeed>
+                        <AnimationFrame>0</AnimationFrame>
+                        <ParallaxScrollX>0</ParallaxScrollX>
+                        <ParallaxScrollY>0</ParallaxScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -605,14 +719,20 @@
                         <hotspot>Top-left</hotspot>
                     </properties>
                     <instance-variables>
-                        <Image>19</Image>
+                        <Object>19</Object>
+                        <Loaded>false</Loaded>
                         <ID></ID>
+                        <Image></Image>
                         <InitialX>0</InitialX>
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
                         <ScrollX>0</ScrollX>
                         <ScrollY>0</ScrollY>
+                        <AnimationSpeed>0</AnimationSpeed>
+                        <AnimationFrame>0</AnimationFrame>
+                        <ParallaxScrollX>0</ParallaxScrollX>
+                        <ParallaxScrollY>0</ParallaxScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -635,14 +755,20 @@
                         <hotspot>Top-left</hotspot>
                     </properties>
                     <instance-variables>
-                        <Image>20</Image>
+                        <Object>20</Object>
+                        <Loaded>false</Loaded>
                         <ID></ID>
+                        <Image></Image>
                         <InitialX>0</InitialX>
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
                         <ScrollX>0</ScrollX>
                         <ScrollY>0</ScrollY>
+                        <AnimationSpeed>0</AnimationSpeed>
+                        <AnimationFrame>0</AnimationFrame>
+                        <ParallaxScrollX>0</ParallaxScrollX>
+                        <ParallaxScrollY>0</ParallaxScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -665,14 +791,20 @@
                         <hotspot>Top-left</hotspot>
                     </properties>
                     <instance-variables>
-                        <Image>21</Image>
+                        <Object>21</Object>
+                        <Loaded>false</Loaded>
                         <ID></ID>
+                        <Image></Image>
                         <InitialX>0</InitialX>
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
                         <ScrollX>0</ScrollX>
                         <ScrollY>0</ScrollY>
+                        <AnimationSpeed>0</AnimationSpeed>
+                        <AnimationFrame>0</AnimationFrame>
+                        <ParallaxScrollX>0</ParallaxScrollX>
+                        <ParallaxScrollY>0</ParallaxScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -695,14 +827,20 @@
                         <hotspot>Top-left</hotspot>
                     </properties>
                     <instance-variables>
-                        <Image>22</Image>
+                        <Object>22</Object>
+                        <Loaded>false</Loaded>
                         <ID></ID>
+                        <Image></Image>
                         <InitialX>0</InitialX>
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
                         <ScrollX>0</ScrollX>
                         <ScrollY>0</ScrollY>
+                        <AnimationSpeed>0</AnimationSpeed>
+                        <AnimationFrame>0</AnimationFrame>
+                        <ParallaxScrollX>0</ParallaxScrollX>
+                        <ParallaxScrollY>0</ParallaxScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -725,14 +863,20 @@
                         <hotspot>Top-left</hotspot>
                     </properties>
                     <instance-variables>
-                        <Image>23</Image>
+                        <Object>23</Object>
+                        <Loaded>false</Loaded>
                         <ID></ID>
+                        <Image></Image>
                         <InitialX>0</InitialX>
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
                         <ScrollX>0</ScrollX>
                         <ScrollY>0</ScrollY>
+                        <AnimationSpeed>0</AnimationSpeed>
+                        <AnimationFrame>0</AnimationFrame>
+                        <ParallaxScrollX>0</ParallaxScrollX>
+                        <ParallaxScrollY>0</ParallaxScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -755,14 +899,20 @@
                         <hotspot>Top-left</hotspot>
                     </properties>
                     <instance-variables>
-                        <Image>24</Image>
+                        <Object>24</Object>
+                        <Loaded>false</Loaded>
                         <ID></ID>
+                        <Image></Image>
                         <InitialX>0</InitialX>
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
                         <ScrollX>0</ScrollX>
                         <ScrollY>0</ScrollY>
+                        <AnimationSpeed>0</AnimationSpeed>
+                        <AnimationFrame>0</AnimationFrame>
+                        <ParallaxScrollX>0</ParallaxScrollX>
+                        <ParallaxScrollY>0</ParallaxScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -785,14 +935,20 @@
                         <hotspot>Top-left</hotspot>
                     </properties>
                     <instance-variables>
-                        <Image>25</Image>
+                        <Object>25</Object>
+                        <Loaded>false</Loaded>
                         <ID></ID>
+                        <Image></Image>
                         <InitialX>0</InitialX>
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
                         <ScrollX>0</ScrollX>
                         <ScrollY>0</ScrollY>
+                        <AnimationSpeed>0</AnimationSpeed>
+                        <AnimationFrame>0</AnimationFrame>
+                        <ParallaxScrollX>0</ParallaxScrollX>
+                        <ParallaxScrollY>0</ParallaxScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -815,14 +971,20 @@
                         <hotspot>Top-left</hotspot>
                     </properties>
                     <instance-variables>
-                        <Image>26</Image>
+                        <Object>26</Object>
+                        <Loaded>false</Loaded>
                         <ID></ID>
+                        <Image></Image>
                         <InitialX>0</InitialX>
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
                         <ScrollX>0</ScrollX>
                         <ScrollY>0</ScrollY>
+                        <AnimationSpeed>0</AnimationSpeed>
+                        <AnimationFrame>0</AnimationFrame>
+                        <ParallaxScrollX>0</ParallaxScrollX>
+                        <ParallaxScrollY>0</ParallaxScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -845,14 +1007,20 @@
                         <hotspot>Top-left</hotspot>
                     </properties>
                     <instance-variables>
-                        <Image>27</Image>
+                        <Object>27</Object>
+                        <Loaded>false</Loaded>
                         <ID></ID>
+                        <Image></Image>
                         <InitialX>0</InitialX>
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
                         <ScrollX>0</ScrollX>
                         <ScrollY>0</ScrollY>
+                        <AnimationSpeed>0</AnimationSpeed>
+                        <AnimationFrame>0</AnimationFrame>
+                        <ParallaxScrollX>0</ParallaxScrollX>
+                        <ParallaxScrollY>0</ParallaxScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -875,14 +1043,20 @@
                         <hotspot>Top-left</hotspot>
                     </properties>
                     <instance-variables>
-                        <Image>28</Image>
+                        <Object>28</Object>
+                        <Loaded>false</Loaded>
                         <ID></ID>
+                        <Image></Image>
                         <InitialX>0</InitialX>
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
                         <ScrollX>0</ScrollX>
                         <ScrollY>0</ScrollY>
+                        <AnimationSpeed>0</AnimationSpeed>
+                        <AnimationFrame>0</AnimationFrame>
+                        <ParallaxScrollX>0</ParallaxScrollX>
+                        <ParallaxScrollY>0</ParallaxScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -905,14 +1079,20 @@
                         <hotspot>Top-left</hotspot>
                     </properties>
                     <instance-variables>
-                        <Image>29</Image>
+                        <Object>29</Object>
+                        <Loaded>false</Loaded>
                         <ID></ID>
+                        <Image></Image>
                         <InitialX>0</InitialX>
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
                         <ScrollX>0</ScrollX>
                         <ScrollY>0</ScrollY>
+                        <AnimationSpeed>0</AnimationSpeed>
+                        <AnimationFrame>0</AnimationFrame>
+                        <ParallaxScrollX>0</ParallaxScrollX>
+                        <ParallaxScrollY>0</ParallaxScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -935,14 +1115,20 @@
                         <hotspot>Top-left</hotspot>
                     </properties>
                     <instance-variables>
-                        <Image>30</Image>
+                        <Object>30</Object>
+                        <Loaded>false</Loaded>
                         <ID></ID>
+                        <Image></Image>
                         <InitialX>0</InitialX>
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
                         <ScrollX>0</ScrollX>
                         <ScrollY>0</ScrollY>
+                        <AnimationSpeed>0</AnimationSpeed>
+                        <AnimationFrame>0</AnimationFrame>
+                        <ParallaxScrollX>0</ParallaxScrollX>
+                        <ParallaxScrollY>0</ParallaxScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -965,14 +1151,20 @@
                         <hotspot>Top-left</hotspot>
                     </properties>
                     <instance-variables>
-                        <Image>31</Image>
+                        <Object>31</Object>
+                        <Loaded>false</Loaded>
                         <ID></ID>
+                        <Image></Image>
                         <InitialX>0</InitialX>
                         <InitialY>0</InitialY>
                         <ParallaxX>0</ParallaxX>
                         <ParallaxY>0</ParallaxY>
                         <ScrollX>0</ScrollX>
                         <ScrollY>0</ScrollY>
+                        <AnimationSpeed>0</AnimationSpeed>
+                        <AnimationFrame>0</AnimationFrame>
+                        <ParallaxScrollX>0</ParallaxScrollX>
+                        <ParallaxScrollY>0</ParallaxScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3221,7 +3413,7 @@
                         <Obj_ImportID></Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
                         <Obj_Difficulty></Obj_Difficulty>
-                        <Obj9pParent_Child>Obj9p_WaterDeco</Obj9pParent_Child>
+                        <Obj9pParent_Child>Obj9p_1rWaterDeco</Obj9pParent_Child>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -5488,8 +5680,8 @@
         </instance>
         <instance type="Var_Level" uid="59">
             <instance-variables>
-                <RoomEngine>GM8_3</RoomEngine>
-                <Room>Stage3-1</Room>
+                <RoomEngine>GMS2</RoomEngine>
+                <Room>rm_star_1</Room>
                 <Difficulty>Normal</Difficulty>
                 <ImportErrorAttempts>0</ImportErrorAttempts>
             </instance-variables>

@@ -2,7 +2,7 @@
 <c2project>
     <name>Super Freaks 1 Fangame</name>
     <description></description>
-    <version>0.4.0-2</version>
+    <version>0.4.0-3</version>
     <author>Halatnikov</author>
     <author-email></author-email>
     <author-website>https://halatnikov.github.io</author-website>
@@ -4245,14 +4245,20 @@
                 <member>Custom_Background9</member>
             </members>
             <instance-variables>
-                <instance-variable name="Image" sid="491841313845489" type="number" />
+                <instance-variable name="Object" sid="491841313845489" type="number" />
+                <instance-variable name="Loaded" sid="249330430016282" type="boolean" />
                 <instance-variable name="ID" sid="524353919449010" type="string" />
+                <instance-variable name="Image" sid="742628574329656" type="string" />
                 <instance-variable name="InitialX" sid="211216130783672" type="number" />
                 <instance-variable name="InitialY" sid="201309587553931" type="number" />
                 <instance-variable name="ParallaxX" sid="806552173050889" type="number" />
                 <instance-variable name="ParallaxY" sid="874090417703309" type="number" />
                 <instance-variable name="ScrollX" sid="936028308172052" type="number" />
                 <instance-variable name="ScrollY" sid="530941338152533" type="number" />
+                <instance-variable name="AnimationSpeed" sid="791969003718012" type="number" />
+                <instance-variable name="AnimationFrame" sid="834550820695699" type="number" />
+                <instance-variable name="ParallaxScrollX" sid="259749702810671" type="number" />
+                <instance-variable name="ParallaxScrollY" sid="780942964748514" type="number" />
             </instance-variables>
         </family>
     </families>

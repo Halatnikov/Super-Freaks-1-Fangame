@@ -665,6 +665,18 @@
             </sub-events>
         </event-group>
         <comment></comment>
+        <event-block sid="767414081629319">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="213518755182561" type="System">
+                    <param id="0" name="Interval (seconds)">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="17" name="Execute Javascript" sid="106515611465121" type="Browser">
+                    <param id="0" name="Javascript">&quot;global.gc();&quot;</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="949200808020883">
             <conditions>
                 <condition id="0" name="On key pressed" sid="998880760192631" type="Keyboard">
