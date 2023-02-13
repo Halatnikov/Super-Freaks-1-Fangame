@@ -47,8 +47,8 @@
                         <ScrollY>0</ScrollY>
                         <AnimationSpeed>0</AnimationSpeed>
                         <AnimationFrame>0</AnimationFrame>
-                        <ParallaxScrollX>0</ParallaxScrollX>
-                        <ParallaxScrollY>0</ParallaxScrollY>
+                        <OffsetScrollX>0</OffsetScrollX>
+                        <OffsetScrollY>0</OffsetScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -83,8 +83,8 @@
                         <ScrollY>0</ScrollY>
                         <AnimationSpeed>0</AnimationSpeed>
                         <AnimationFrame>0</AnimationFrame>
-                        <ParallaxScrollX>0</ParallaxScrollX>
-                        <ParallaxScrollY>0</ParallaxScrollY>
+                        <OffsetScrollX>0</OffsetScrollX>
+                        <OffsetScrollY>0</OffsetScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -119,8 +119,8 @@
                         <ScrollY>0</ScrollY>
                         <AnimationSpeed>0</AnimationSpeed>
                         <AnimationFrame>0</AnimationFrame>
-                        <ParallaxScrollX>0</ParallaxScrollX>
-                        <ParallaxScrollY>0</ParallaxScrollY>
+                        <OffsetScrollX>0</OffsetScrollX>
+                        <OffsetScrollY>0</OffsetScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -155,8 +155,8 @@
                         <ScrollY>0</ScrollY>
                         <AnimationSpeed>0</AnimationSpeed>
                         <AnimationFrame>0</AnimationFrame>
-                        <ParallaxScrollX>0</ParallaxScrollX>
-                        <ParallaxScrollY>0</ParallaxScrollY>
+                        <OffsetScrollX>0</OffsetScrollX>
+                        <OffsetScrollY>0</OffsetScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -191,8 +191,8 @@
                         <ScrollY>0</ScrollY>
                         <AnimationSpeed>0</AnimationSpeed>
                         <AnimationFrame>0</AnimationFrame>
-                        <ParallaxScrollX>0</ParallaxScrollX>
-                        <ParallaxScrollY>0</ParallaxScrollY>
+                        <OffsetScrollX>0</OffsetScrollX>
+                        <OffsetScrollY>0</OffsetScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -227,8 +227,8 @@
                         <ScrollY>0</ScrollY>
                         <AnimationSpeed>0</AnimationSpeed>
                         <AnimationFrame>0</AnimationFrame>
-                        <ParallaxScrollX>0</ParallaxScrollX>
-                        <ParallaxScrollY>0</ParallaxScrollY>
+                        <OffsetScrollX>0</OffsetScrollX>
+                        <OffsetScrollY>0</OffsetScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -263,8 +263,8 @@
                         <ScrollY>0</ScrollY>
                         <AnimationSpeed>0</AnimationSpeed>
                         <AnimationFrame>0</AnimationFrame>
-                        <ParallaxScrollX>0</ParallaxScrollX>
-                        <ParallaxScrollY>0</ParallaxScrollY>
+                        <OffsetScrollX>0</OffsetScrollX>
+                        <OffsetScrollY>0</OffsetScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -299,8 +299,8 @@
                         <ScrollY>0</ScrollY>
                         <AnimationSpeed>0</AnimationSpeed>
                         <AnimationFrame>0</AnimationFrame>
-                        <ParallaxScrollX>0</ParallaxScrollX>
-                        <ParallaxScrollY>0</ParallaxScrollY>
+                        <OffsetScrollX>0</OffsetScrollX>
+                        <OffsetScrollY>0</OffsetScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -335,8 +335,8 @@
                         <ScrollY>0</ScrollY>
                         <AnimationSpeed>0</AnimationSpeed>
                         <AnimationFrame>0</AnimationFrame>
-                        <ParallaxScrollX>0</ParallaxScrollX>
-                        <ParallaxScrollY>0</ParallaxScrollY>
+                        <OffsetScrollX>0</OffsetScrollX>
+                        <OffsetScrollY>0</OffsetScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -371,8 +371,8 @@
                         <ScrollY>0</ScrollY>
                         <AnimationSpeed>0</AnimationSpeed>
                         <AnimationFrame>0</AnimationFrame>
-                        <ParallaxScrollX>0</ParallaxScrollX>
-                        <ParallaxScrollY>0</ParallaxScrollY>
+                        <OffsetScrollX>0</OffsetScrollX>
+                        <OffsetScrollY>0</OffsetScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -407,8 +407,8 @@
                         <ScrollY>0</ScrollY>
                         <AnimationSpeed>0</AnimationSpeed>
                         <AnimationFrame>0</AnimationFrame>
-                        <ParallaxScrollX>0</ParallaxScrollX>
-                        <ParallaxScrollY>0</ParallaxScrollY>
+                        <OffsetScrollX>0</OffsetScrollX>
+                        <OffsetScrollY>0</OffsetScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -443,8 +443,8 @@
                         <ScrollY>0</ScrollY>
                         <AnimationSpeed>0</AnimationSpeed>
                         <AnimationFrame>0</AnimationFrame>
-                        <ParallaxScrollX>0</ParallaxScrollX>
-                        <ParallaxScrollY>0</ParallaxScrollY>
+                        <OffsetScrollX>0</OffsetScrollX>
+                        <OffsetScrollY>0</OffsetScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -479,8 +479,8 @@
                         <ScrollY>0</ScrollY>
                         <AnimationSpeed>0</AnimationSpeed>
                         <AnimationFrame>0</AnimationFrame>
-                        <ParallaxScrollX>0</ParallaxScrollX>
-                        <ParallaxScrollY>0</ParallaxScrollY>
+                        <OffsetScrollX>0</OffsetScrollX>
+                        <OffsetScrollY>0</OffsetScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -515,8 +515,8 @@
                         <ScrollY>0</ScrollY>
                         <AnimationSpeed>0</AnimationSpeed>
                         <AnimationFrame>0</AnimationFrame>
-                        <ParallaxScrollX>0</ParallaxScrollX>
-                        <ParallaxScrollY>0</ParallaxScrollY>
+                        <OffsetScrollX>0</OffsetScrollX>
+                        <OffsetScrollY>0</OffsetScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -551,8 +551,8 @@
                         <ScrollY>0</ScrollY>
                         <AnimationSpeed>0</AnimationSpeed>
                         <AnimationFrame>0</AnimationFrame>
-                        <ParallaxScrollX>0</ParallaxScrollX>
-                        <ParallaxScrollY>0</ParallaxScrollY>
+                        <OffsetScrollX>0</OffsetScrollX>
+                        <OffsetScrollY>0</OffsetScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -587,8 +587,8 @@
                         <ScrollY>0</ScrollY>
                         <AnimationSpeed>0</AnimationSpeed>
                         <AnimationFrame>0</AnimationFrame>
-                        <ParallaxScrollX>0</ParallaxScrollX>
-                        <ParallaxScrollY>0</ParallaxScrollY>
+                        <OffsetScrollX>0</OffsetScrollX>
+                        <OffsetScrollY>0</OffsetScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -623,8 +623,8 @@
                         <ScrollY>0</ScrollY>
                         <AnimationSpeed>0</AnimationSpeed>
                         <AnimationFrame>0</AnimationFrame>
-                        <ParallaxScrollX>0</ParallaxScrollX>
-                        <ParallaxScrollY>0</ParallaxScrollY>
+                        <OffsetScrollX>0</OffsetScrollX>
+                        <OffsetScrollY>0</OffsetScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -659,8 +659,8 @@
                         <ScrollY>0</ScrollY>
                         <AnimationSpeed>0</AnimationSpeed>
                         <AnimationFrame>0</AnimationFrame>
-                        <ParallaxScrollX>0</ParallaxScrollX>
-                        <ParallaxScrollY>0</ParallaxScrollY>
+                        <OffsetScrollX>0</OffsetScrollX>
+                        <OffsetScrollY>0</OffsetScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -695,8 +695,8 @@
                         <ScrollY>0</ScrollY>
                         <AnimationSpeed>0</AnimationSpeed>
                         <AnimationFrame>0</AnimationFrame>
-                        <ParallaxScrollX>0</ParallaxScrollX>
-                        <ParallaxScrollY>0</ParallaxScrollY>
+                        <OffsetScrollX>0</OffsetScrollX>
+                        <OffsetScrollY>0</OffsetScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -731,8 +731,8 @@
                         <ScrollY>0</ScrollY>
                         <AnimationSpeed>0</AnimationSpeed>
                         <AnimationFrame>0</AnimationFrame>
-                        <ParallaxScrollX>0</ParallaxScrollX>
-                        <ParallaxScrollY>0</ParallaxScrollY>
+                        <OffsetScrollX>0</OffsetScrollX>
+                        <OffsetScrollY>0</OffsetScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -767,8 +767,8 @@
                         <ScrollY>0</ScrollY>
                         <AnimationSpeed>0</AnimationSpeed>
                         <AnimationFrame>0</AnimationFrame>
-                        <ParallaxScrollX>0</ParallaxScrollX>
-                        <ParallaxScrollY>0</ParallaxScrollY>
+                        <OffsetScrollX>0</OffsetScrollX>
+                        <OffsetScrollY>0</OffsetScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -803,8 +803,8 @@
                         <ScrollY>0</ScrollY>
                         <AnimationSpeed>0</AnimationSpeed>
                         <AnimationFrame>0</AnimationFrame>
-                        <ParallaxScrollX>0</ParallaxScrollX>
-                        <ParallaxScrollY>0</ParallaxScrollY>
+                        <OffsetScrollX>0</OffsetScrollX>
+                        <OffsetScrollY>0</OffsetScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -839,8 +839,8 @@
                         <ScrollY>0</ScrollY>
                         <AnimationSpeed>0</AnimationSpeed>
                         <AnimationFrame>0</AnimationFrame>
-                        <ParallaxScrollX>0</ParallaxScrollX>
-                        <ParallaxScrollY>0</ParallaxScrollY>
+                        <OffsetScrollX>0</OffsetScrollX>
+                        <OffsetScrollY>0</OffsetScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -875,8 +875,8 @@
                         <ScrollY>0</ScrollY>
                         <AnimationSpeed>0</AnimationSpeed>
                         <AnimationFrame>0</AnimationFrame>
-                        <ParallaxScrollX>0</ParallaxScrollX>
-                        <ParallaxScrollY>0</ParallaxScrollY>
+                        <OffsetScrollX>0</OffsetScrollX>
+                        <OffsetScrollY>0</OffsetScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -911,8 +911,8 @@
                         <ScrollY>0</ScrollY>
                         <AnimationSpeed>0</AnimationSpeed>
                         <AnimationFrame>0</AnimationFrame>
-                        <ParallaxScrollX>0</ParallaxScrollX>
-                        <ParallaxScrollY>0</ParallaxScrollY>
+                        <OffsetScrollX>0</OffsetScrollX>
+                        <OffsetScrollY>0</OffsetScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -947,8 +947,8 @@
                         <ScrollY>0</ScrollY>
                         <AnimationSpeed>0</AnimationSpeed>
                         <AnimationFrame>0</AnimationFrame>
-                        <ParallaxScrollX>0</ParallaxScrollX>
-                        <ParallaxScrollY>0</ParallaxScrollY>
+                        <OffsetScrollX>0</OffsetScrollX>
+                        <OffsetScrollY>0</OffsetScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -983,8 +983,8 @@
                         <ScrollY>0</ScrollY>
                         <AnimationSpeed>0</AnimationSpeed>
                         <AnimationFrame>0</AnimationFrame>
-                        <ParallaxScrollX>0</ParallaxScrollX>
-                        <ParallaxScrollY>0</ParallaxScrollY>
+                        <OffsetScrollX>0</OffsetScrollX>
+                        <OffsetScrollY>0</OffsetScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1019,8 +1019,8 @@
                         <ScrollY>0</ScrollY>
                         <AnimationSpeed>0</AnimationSpeed>
                         <AnimationFrame>0</AnimationFrame>
-                        <ParallaxScrollX>0</ParallaxScrollX>
-                        <ParallaxScrollY>0</ParallaxScrollY>
+                        <OffsetScrollX>0</OffsetScrollX>
+                        <OffsetScrollY>0</OffsetScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1055,8 +1055,8 @@
                         <ScrollY>0</ScrollY>
                         <AnimationSpeed>0</AnimationSpeed>
                         <AnimationFrame>0</AnimationFrame>
-                        <ParallaxScrollX>0</ParallaxScrollX>
-                        <ParallaxScrollY>0</ParallaxScrollY>
+                        <OffsetScrollX>0</OffsetScrollX>
+                        <OffsetScrollY>0</OffsetScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1091,8 +1091,8 @@
                         <ScrollY>0</ScrollY>
                         <AnimationSpeed>0</AnimationSpeed>
                         <AnimationFrame>0</AnimationFrame>
-                        <ParallaxScrollX>0</ParallaxScrollX>
-                        <ParallaxScrollY>0</ParallaxScrollY>
+                        <OffsetScrollX>0</OffsetScrollX>
+                        <OffsetScrollY>0</OffsetScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1127,8 +1127,8 @@
                         <ScrollY>0</ScrollY>
                         <AnimationSpeed>0</AnimationSpeed>
                         <AnimationFrame>0</AnimationFrame>
-                        <ParallaxScrollX>0</ParallaxScrollX>
-                        <ParallaxScrollY>0</ParallaxScrollY>
+                        <OffsetScrollX>0</OffsetScrollX>
+                        <OffsetScrollY>0</OffsetScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1163,8 +1163,8 @@
                         <ScrollY>0</ScrollY>
                         <AnimationSpeed>0</AnimationSpeed>
                         <AnimationFrame>0</AnimationFrame>
-                        <ParallaxScrollX>0</ParallaxScrollX>
-                        <ParallaxScrollY>0</ParallaxScrollY>
+                        <OffsetScrollX>0</OffsetScrollX>
+                        <OffsetScrollY>0</OffsetScrollY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1789,6 +1789,10 @@
                         <IgnoreBlockers>false</IgnoreBlockers>
                         <MoveOnlyOnFloor>false</MoveOnlyOnFloor>
                         <InitialHP>0</InitialHP>
+                        <timer_delay>1.5</timer_delay>
+                        <timer_frequency>2.5</timer_frequency>
+                        <projectile_speed>120</projectile_speed>
+                        <Timer>-99</Timer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -1803,6 +1807,19 @@
                                 <jump-sustain>0</jump-sustain>
                                 <default-controls>No</default-controls>
                                 <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>1.25</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>8</magnitude>
+                                <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -2938,12 +2955,12 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Player_YorbX2" uid="162">
+                <instance type="Particle_GM8ScaleDown" uid="162">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <initial-frame>6</initial-frame>
+                        <collisions>Disabled</collisions>
                     </properties>
                     <behavior-instances>
                         <behavior-instance type="LiteTween">
@@ -2958,11 +2975,20 @@
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="Tint">
+                            <parameters>
+                                <blue>0</blue>
+                                <green>0</green>
+                                <red>0</red>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-78</x>
-                        <y>421</y>
+                        <x>225</x>
+                        <y>-37</y>
                         <z>0</z>
                         <width>16</width>
                         <height>16</height>
@@ -3660,8 +3686,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>289</x>
-                        <y>159</y>
+                        <x>292</x>
+                        <y>-118</y>
                         <z>0</z>
                         <width>128</width>
                         <height>64</height>
@@ -3689,6 +3715,181 @@
                     <world>
                         <x>650</x>
                         <y>-42</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Obj_ConveyorBelt" uid="203">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Obj_ImportID></Obj_ImportID>
+                        <Obj_ImportInstance></Obj_ImportInstance>
+                        <Obj_Difficulty></Obj_Difficulty>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-60</x>
+                        <y>387</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Obj_1rKranionShipChase" uid="205">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Obj_ImportID></Obj_ImportID>
+                        <Obj_ImportInstance></Obj_ImportInstance>
+                        <Obj_Difficulty></Obj_Difficulty>
+                        <Active>false</Active>
+                        <speed>1.5</speed>
+                        <timer_frequency>0.125</timer_frequency>
+                        <drop_speed>3</drop_speed>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-245</x>
+                        <y>429</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Obj_ProjectileFalling" uid="206">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <YSpeed>0</YSpeed>
+                        <DestroyOnFloor>true</DestroyOnFloor>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-245</x>
+                        <y>481</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Obj_1rKranionFinalChase" uid="207">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Obj_ImportID></Obj_ImportID>
+                        <Obj_ImportInstance></Obj_ImportInstance>
+                        <Obj_Difficulty></Obj_Difficulty>
+                        <timer_frequency>2.125</timer_frequency>
+                        <drop_speed>2</drop_speed>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Angle</movement>
+                                <wave>Sine</wave>
+                                <period>1.75</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>16</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine2">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Value only</movement>
+                                <wave>Sine</wave>
+                                <period>4</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>150</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-363</x>
+                        <y>460</y>
+                        <z>0</z>
+                        <width>176</width>
+                        <height>176</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>1.570796371</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Obj_ProjectileBullet" uid="208">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>120</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>872</x>
+                        <y>196</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -4226,7 +4427,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Special_EnemyBlocker" uid="164">
+                <instance type="Special_Trigger" uid="164">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -4253,7 +4454,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Special_EnemyGroundCollision" uid="97">
+                <instance type="Special_SensorGroundCollision" uid="97">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -4303,6 +4504,44 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Col_Conveyor" uid="204">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <ID></ID>
+                        <speed>0</speed>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Jumpthru">
+                            <properties>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1</x>
+                        <y>-33</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -5681,7 +5920,7 @@
         <instance type="Var_Level" uid="59">
             <instance-variables>
                 <RoomEngine>GMS2</RoomEngine>
-                <Room>rm_star_1</Room>
+                <Room>rm_skyway_1</Room>
                 <Difficulty>Normal</Difficulty>
                 <ImportErrorAttempts>0</ImportErrorAttempts>
             </instance-variables>
