@@ -336,6 +336,14 @@
                             <param id="0" name="Instance variable">B</param>
                             <param id="1" name="Value">0</param>
                         </action>
+                        <action id="-13" name="Set boolean" sid="780688726811149" type="Var_Input">
+                            <param id="0" name="Instance variable">X</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="973857679732229" type="Var_Input">
+                            <param id="0" name="Instance variable">Y</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
                         <action id="-13" name="Set boolean" sid="270442582443194" type="Var_Input">
                             <param id="0" name="Instance variable">Start</param>
                             <param id="1" name="Value">0</param>
@@ -387,8 +395,8 @@
                                     <param id="0" name="Instance variable">Pressed_Up</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="491244393840009" type="System">
-                                    <param id="0" name="Seconds">0.017</param>
+                                <action id="-16" name="Wait" sid="542653231485198" type="System">
+                                    <param id="0" name="Seconds">dt+0.001</param>
                                 </action>
                                 <action id="-13" name="Set boolean" sid="212886632961745" type="Var_Input">
                                     <param id="0" name="Instance variable">Pressed_Up</param>
@@ -420,8 +428,8 @@
                                     <param id="0" name="Instance variable">Pressed_Down</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="591925441139516" type="System">
-                                    <param id="0" name="Seconds">0.017</param>
+                                <action id="-16" name="Wait" sid="294187990642531" type="System">
+                                    <param id="0" name="Seconds">dt+0.001</param>
                                 </action>
                                 <action id="-13" name="Set boolean" sid="835140906437703" type="Var_Input">
                                     <param id="0" name="Instance variable">Pressed_Down</param>
@@ -453,8 +461,8 @@
                                     <param id="0" name="Instance variable">Pressed_Left</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="105383376388804" type="System">
-                                    <param id="0" name="Seconds">0.017</param>
+                                <action id="-16" name="Wait" sid="211890056831859" type="System">
+                                    <param id="0" name="Seconds">dt+0.001</param>
                                 </action>
                                 <action id="-13" name="Set boolean" sid="801182955303655" type="Var_Input">
                                     <param id="0" name="Instance variable">Pressed_Left</param>
@@ -486,8 +494,8 @@
                                     <param id="0" name="Instance variable">Pressed_Right</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="541879895807862" type="System">
-                                    <param id="0" name="Seconds">0.017</param>
+                                <action id="-16" name="Wait" sid="256367233959261" type="System">
+                                    <param id="0" name="Seconds">dt+0.001</param>
                                 </action>
                                 <action id="-13" name="Set boolean" sid="906738958635490" type="Var_Input">
                                     <param id="0" name="Instance variable">Pressed_Right</param>
@@ -520,7 +528,7 @@
                                     <param id="1" name="Value">1</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="854371817673700" type="System">
-                                    <param id="0" name="Seconds">0.017</param>
+                                    <param id="0" name="Seconds">dt+0.001</param>
                                 </action>
                                 <action id="-13" name="Set boolean" sid="264981574735008" type="Var_Input">
                                     <param id="0" name="Instance variable">Pressed_A</param>
@@ -552,8 +560,8 @@
                                     <param id="0" name="Instance variable">Pressed_B</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="302479626075468" type="System">
-                                    <param id="0" name="Seconds">0.017</param>
+                                <action id="-16" name="Wait" sid="170610218133161" type="System">
+                                    <param id="0" name="Seconds">dt+0.001</param>
                                 </action>
                                 <action id="-13" name="Set boolean" sid="994756484004430" type="Var_Input">
                                     <param id="0" name="Instance variable">Pressed_B</param>
@@ -585,8 +593,8 @@
                                     <param id="0" name="Instance variable">Pressed_X</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="205178700713540" type="System">
-                                    <param id="0" name="Seconds">0.017</param>
+                                <action id="-16" name="Wait" sid="368812117338729" type="System">
+                                    <param id="0" name="Seconds">dt+0.001</param>
                                 </action>
                                 <action id="-13" name="Set boolean" sid="600424453939848" type="Var_Input">
                                     <param id="0" name="Instance variable">Pressed_X</param>
@@ -618,8 +626,8 @@
                                     <param id="0" name="Instance variable">Pressed_Y</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="532063326628741" type="System">
-                                    <param id="0" name="Seconds">0.017</param>
+                                <action id="-16" name="Wait" sid="259732053323344" type="System">
+                                    <param id="0" name="Seconds">dt+0.001</param>
                                 </action>
                                 <action id="-13" name="Set boolean" sid="124267196381457" type="Var_Input">
                                     <param id="0" name="Instance variable">Pressed_Y</param>
@@ -651,8 +659,8 @@
                                     <param id="0" name="Instance variable">Pressed_Start</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="572525286321978" type="System">
-                                    <param id="0" name="Seconds">0.017</param>
+                                <action id="-16" name="Wait" sid="848665079034905" type="System">
+                                    <param id="0" name="Seconds">dt+0.001</param>
                                 </action>
                                 <action id="-13" name="Set boolean" sid="889705713158244" type="Var_Input">
                                     <param id="0" name="Instance variable">Pressed_Start</param>
@@ -696,19 +704,6 @@
             <actions>
                 <action id="-26" name="Restart layout" sid="986751899849214" type="System" />
             </actions>
-        </event-block>
-        <event-block sid="948483132842872">
-            <conditions>
-                <condition id="0" name="On function" sid="731759598762194" type="Function">
-                    <param id="0" name="Name">&quot;Util_LogVerbose&quot;</param>
-                </condition>
-                <condition id="-7" name="Compare instance variable" sid="171205432113577" type="Var_CONSTANTS">
-                    <param id="0" name="Instance variable">LogVerbose</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">1</param>
-                </condition>
-            </conditions>
-            <actions />
         </event-block>
         <event-block sid="958348352765822">
             <conditions>

@@ -1,6 +1,8 @@
-## Sonic Robo-Blast! From The Past .gitignore
+## Super Freaks 1 Fangame .gitignore
 
 ###### IGNORE
+
+SuperFreaks/export/
 
 # Construct 2 files
 #*.autosave

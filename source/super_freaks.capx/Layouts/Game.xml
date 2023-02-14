@@ -2965,7 +2965,7 @@
                     <behavior-instances>
                         <behavior-instance type="LiteTween">
                             <properties>
-                                <active-on-start>Yes</active-on-start>
+                                <active-on-start>No</active-on-start>
                                 <tweened-property>Scale</tweened-property>
                                 <function>Linear</function>
                                 <target>0</target>
@@ -5914,7 +5914,6 @@
                 <Path_SourceCode1u></Path_SourceCode1u>
                 <Path_SourceCode1r></Path_SourceCode1r>
                 <Path_SourceCode3></Path_SourceCode3>
-                <LogVerbose>1</LogVerbose>
             </instance-variables>
         </instance>
         <instance type="Var_Level" uid="59">

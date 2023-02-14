@@ -2,7 +2,7 @@
 <c2project>
     <name>Super Freaks 1 Fangame</name>
     <description></description>
-    <version>0.4.0-4</version>
+    <version>0.4.0-5</version>
     <author>Halatnikov</author>
     <author-email></author-email>
     <author-website>https://halatnikov.github.io</author-website>
@@ -174,7 +174,6 @@
                     <instance-variable name="Path_SourceCode1u" sid="885943548537521" type="string" />
                     <instance-variable name="Path_SourceCode1r" sid="921199061794404" type="string" />
                     <instance-variable name="Path_SourceCode3" sid="677138954357210" type="string" />
-                    <instance-variable name="LogVerbose" sid="819295291835664" type="number" />
                 </instance-variables>
             </object-type>
             <object-type global="1" name="Var_Level" sid="285604653832218">
