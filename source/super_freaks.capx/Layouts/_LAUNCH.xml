@@ -226,14 +226,6 @@
         <instance type="InstanceBank2" uid="89" />
         <instance type="JSON_PERSIST" uid="111" />
         <instance type="XML_COMMON" uid="115" />
-        <instance type="Var_Main" uid="119">
-            <instance-variables>
-                <Music></Music>
-                <Skin>1u_scruffy</Skin>
-                <GameMode></GameMode>
-                <GameState></GameState>
-            </instance-variables>
-        </instance>
         <instance type="JSON_Background" uid="202" />
     </nonworld-instances>
     <effects />

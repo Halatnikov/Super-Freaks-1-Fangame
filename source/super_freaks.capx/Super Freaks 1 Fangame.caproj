@@ -2,7 +2,7 @@
 <c2project>
     <name>Super Freaks 1 Fangame</name>
     <description></description>
-    <version>0.4.0-5</version>
+    <version>0.4.0-6</version>
     <author>Halatnikov</author>
     <author-email></author-email>
     <author-website>https://halatnikov.github.io</author-website>
@@ -176,13 +176,17 @@
                     <instance-variable name="Path_SourceCode3" sid="677138954357210" type="string" />
                 </instance-variables>
             </object-type>
-            <object-type global="1" name="Var_Level" sid="285604653832218">
+            <object-type global="1" name="Var_Main" sid="285604653832218">
                 <plugin id="Globals" />
                 <instance-variables>
-                    <instance-variable name="RoomEngine" sid="914055926013925" type="string" />
-                    <instance-variable name="Room" sid="660012425076251" type="string" />
+                    <instance-variable name="Music" sid="135141272972365" type="string" />
+                    <instance-variable name="Skin" sid="152499350607016" type="string" />
                     <instance-variable name="Difficulty" sid="410674055749417" type="string" />
-                    <instance-variable name="ImportErrorAttempts" sid="628603414726465" type="number" />
+                    <instance-variable name="GameState" sid="634270575069622" type="string" />
+                    <instance-variable name="GameMode" sid="215516168057725" type="string" />
+                    <instance-variable name="Level" sid="807235905184356" type="string" />
+                    <instance-variable name="Room" sid="660012425076251" type="string" />
+                    <instance-variable name="ImportEngine" sid="914055926013925" type="string" />
                 </instance-variables>
             </object-type>
             <object-type global="1" name="Var_Player" sid="469904259964174">
@@ -240,15 +244,6 @@
                     <instance-variable name="Pressed_X" sid="960788531833259" type="boolean" />
                     <instance-variable name="Pressed_Y" sid="833476133843598" type="boolean" />
                     <instance-variable name="Pressed_Start" sid="711308605952506" type="boolean" />
-                </instance-variables>
-            </object-type>
-            <object-type global="1" name="Var_Main" sid="812996272456133">
-                <plugin id="Globals" />
-                <instance-variables>
-                    <instance-variable name="Music" sid="341867745078352" type="string" />
-                    <instance-variable name="Skin" sid="681194777325132" type="string" />
-                    <instance-variable name="GameMode" sid="934990862265436" type="string" />
-                    <instance-variable name="GameState" sid="678106201701660" type="string" />
                 </instance-variables>
             </object-type>
         </object-folder>
@@ -4481,6 +4476,9 @@
                 <instance-variable name="AnimationFrame" sid="834550820695699" type="number" />
                 <instance-variable name="OffsetScrollX" sid="259749702810671" type="number" />
                 <instance-variable name="OffsetScrollY" sid="780942964748514" type="number" />
+                <instance-variable name="XCameraRight" sid="741747935121038" type="boolean" />
+                <instance-variable name="YCameraBottom" sid="779824842230210" type="boolean" />
+                <instance-variable name="YRoomBottom" sid="647732571264375" type="boolean" />
             </instance-variables>
         </family>
     </families>

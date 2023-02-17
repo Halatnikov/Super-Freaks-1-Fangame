@@ -1310,8 +1310,8 @@
                 </event-block>
                 <event-block sid="105730973113728">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="129807690704591" type="Var_Level">
-                            <param id="0" name="Instance variable">RoomEngine</param>
+                        <condition id="-7" name="Compare instance variable" sid="129807690704591" type="Var_Main">
+                            <param id="0" name="Instance variable">ImportEngine</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;GMS2&quot;</param>
                         </condition>

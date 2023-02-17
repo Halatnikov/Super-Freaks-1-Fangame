@@ -13,10 +13,28 @@
     </margins>
     <unbounded-scrolling>1</unbounded-scrolling>
     <layers>
-        <layer name="BG" sid="290481335995164">
+        <layer name="BGIgnoreScale" sid="297808995864065">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>0</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>0</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances />
+            <effects />
+        </layer>
+        <layer name="BG" sid="290481335995164">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
             <parallax>
                 <x>1</x>
                 <y>1</y>
@@ -49,6 +67,9 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <XCameraRight>false</XCameraRight>
+                        <YCameraBottom>false</YCameraBottom>
+                        <YRoomBottom>false</YRoomBottom>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -85,6 +106,9 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <XCameraRight>false</XCameraRight>
+                        <YCameraBottom>false</YCameraBottom>
+                        <YRoomBottom>false</YRoomBottom>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -121,6 +145,9 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <XCameraRight>false</XCameraRight>
+                        <YCameraBottom>false</YCameraBottom>
+                        <YRoomBottom>false</YRoomBottom>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -157,6 +184,9 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <XCameraRight>false</XCameraRight>
+                        <YCameraBottom>false</YCameraBottom>
+                        <YRoomBottom>false</YRoomBottom>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -193,6 +223,9 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <XCameraRight>false</XCameraRight>
+                        <YCameraBottom>false</YCameraBottom>
+                        <YRoomBottom>false</YRoomBottom>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -229,6 +262,9 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <XCameraRight>false</XCameraRight>
+                        <YCameraBottom>false</YCameraBottom>
+                        <YRoomBottom>false</YRoomBottom>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -265,6 +301,9 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <XCameraRight>false</XCameraRight>
+                        <YCameraBottom>false</YCameraBottom>
+                        <YRoomBottom>false</YRoomBottom>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -301,6 +340,9 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <XCameraRight>false</XCameraRight>
+                        <YCameraBottom>false</YCameraBottom>
+                        <YRoomBottom>false</YRoomBottom>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -337,6 +379,9 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <XCameraRight>false</XCameraRight>
+                        <YCameraBottom>false</YCameraBottom>
+                        <YRoomBottom>false</YRoomBottom>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -373,6 +418,9 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <XCameraRight>false</XCameraRight>
+                        <YCameraBottom>false</YCameraBottom>
+                        <YRoomBottom>false</YRoomBottom>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -409,6 +457,9 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <XCameraRight>false</XCameraRight>
+                        <YCameraBottom>false</YCameraBottom>
+                        <YRoomBottom>false</YRoomBottom>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -445,6 +496,9 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <XCameraRight>false</XCameraRight>
+                        <YCameraBottom>false</YCameraBottom>
+                        <YRoomBottom>false</YRoomBottom>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -481,6 +535,9 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <XCameraRight>false</XCameraRight>
+                        <YCameraBottom>false</YCameraBottom>
+                        <YRoomBottom>false</YRoomBottom>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -517,6 +574,9 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <XCameraRight>false</XCameraRight>
+                        <YCameraBottom>false</YCameraBottom>
+                        <YRoomBottom>false</YRoomBottom>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -553,6 +613,9 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <XCameraRight>false</XCameraRight>
+                        <YCameraBottom>false</YCameraBottom>
+                        <YRoomBottom>false</YRoomBottom>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -589,6 +652,9 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <XCameraRight>false</XCameraRight>
+                        <YCameraBottom>false</YCameraBottom>
+                        <YRoomBottom>false</YRoomBottom>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -625,6 +691,9 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <XCameraRight>false</XCameraRight>
+                        <YCameraBottom>false</YCameraBottom>
+                        <YRoomBottom>false</YRoomBottom>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -661,6 +730,9 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <XCameraRight>false</XCameraRight>
+                        <YCameraBottom>false</YCameraBottom>
+                        <YRoomBottom>false</YRoomBottom>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -697,6 +769,9 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <XCameraRight>false</XCameraRight>
+                        <YCameraBottom>false</YCameraBottom>
+                        <YRoomBottom>false</YRoomBottom>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -733,6 +808,9 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <XCameraRight>false</XCameraRight>
+                        <YCameraBottom>false</YCameraBottom>
+                        <YRoomBottom>false</YRoomBottom>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -769,6 +847,9 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <XCameraRight>false</XCameraRight>
+                        <YCameraBottom>false</YCameraBottom>
+                        <YRoomBottom>false</YRoomBottom>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -805,6 +886,9 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <XCameraRight>false</XCameraRight>
+                        <YCameraBottom>false</YCameraBottom>
+                        <YRoomBottom>false</YRoomBottom>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -841,6 +925,9 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <XCameraRight>false</XCameraRight>
+                        <YCameraBottom>false</YCameraBottom>
+                        <YRoomBottom>false</YRoomBottom>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -877,6 +964,9 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <XCameraRight>false</XCameraRight>
+                        <YCameraBottom>false</YCameraBottom>
+                        <YRoomBottom>false</YRoomBottom>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -913,6 +1003,9 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <XCameraRight>false</XCameraRight>
+                        <YCameraBottom>false</YCameraBottom>
+                        <YRoomBottom>false</YRoomBottom>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -949,6 +1042,9 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <XCameraRight>false</XCameraRight>
+                        <YCameraBottom>false</YCameraBottom>
+                        <YRoomBottom>false</YRoomBottom>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -985,6 +1081,9 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <XCameraRight>false</XCameraRight>
+                        <YCameraBottom>false</YCameraBottom>
+                        <YRoomBottom>false</YRoomBottom>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1021,6 +1120,9 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <XCameraRight>false</XCameraRight>
+                        <YCameraBottom>false</YCameraBottom>
+                        <YRoomBottom>false</YRoomBottom>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1057,6 +1159,9 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <XCameraRight>false</XCameraRight>
+                        <YCameraBottom>false</YCameraBottom>
+                        <YRoomBottom>false</YRoomBottom>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1093,6 +1198,9 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <XCameraRight>false</XCameraRight>
+                        <YCameraBottom>false</YCameraBottom>
+                        <YRoomBottom>false</YRoomBottom>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1129,6 +1237,9 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <XCameraRight>false</XCameraRight>
+                        <YCameraBottom>false</YCameraBottom>
+                        <YRoomBottom>false</YRoomBottom>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1165,6 +1276,9 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <XCameraRight>false</XCameraRight>
+                        <YCameraBottom>false</YCameraBottom>
+                        <YRoomBottom>false</YRoomBottom>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -5916,12 +6030,16 @@
                 <Path_SourceCode3></Path_SourceCode3>
             </instance-variables>
         </instance>
-        <instance type="Var_Level" uid="59">
+        <instance type="Var_Main" uid="59">
             <instance-variables>
-                <RoomEngine>GMS2</RoomEngine>
-                <Room>rm_skyway_1</Room>
+                <Music></Music>
+                <Skin>1u_scruffy</Skin>
                 <Difficulty>Normal</Difficulty>
-                <ImportErrorAttempts>0</ImportErrorAttempts>
+                <GameState></GameState>
+                <GameMode></GameMode>
+                <Level></Level>
+                <Room>Stage7-4</Room>
+                <ImportEngine>GM8_3</ImportEngine>
             </instance-variables>
         </instance>
         <instance type="Var_Player" uid="77">

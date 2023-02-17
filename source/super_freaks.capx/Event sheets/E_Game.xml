@@ -1287,7 +1287,7 @@
                                 <condition id="-7" inverted="1" name="Compare instance variable" sid="744602029739529" type="Var_Gameplay">
                                     <param id="0" name="Instance variable">CheckpointRoom</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">Var_Level.Room</param>
+                                    <param id="2" name="Value">Var_Main.Room</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -1297,7 +1297,7 @@
                                 </action>
                                 <action id="-10" name="Set value" sid="996125981298012" type="Var_Gameplay">
                                     <param id="0" name="Instance variable">CheckpointRoom</param>
-                                    <param id="1" name="Value">Var_Level.Room</param>
+                                    <param id="1" name="Value">Var_Main.Room</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1922,7 +1922,7 @@
                                     <sub-events>
                                         <event-block sid="484456889972839">
                                             <conditions>
-                                                <condition id="-7" inverted="1" name="Compare instance variable" sid="431703552473494" type="Var_Level">
+                                                <condition id="-7" inverted="1" name="Compare instance variable" sid="431703552473494" type="Var_Main">
                                                     <param id="0" name="Instance variable">Difficulty</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">&quot;Hard&quot;</param>
@@ -1943,7 +1943,7 @@
                                         </event-block>
                                         <event-block sid="198176284834886">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="701334641070535" type="Var_Level">
+                                                <condition id="-7" name="Compare instance variable" sid="701334641070535" type="Var_Main">
                                                     <param id="0" name="Instance variable">Difficulty</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">&quot;Hard&quot;</param>
@@ -1994,7 +1994,7 @@
                                     <sub-events>
                                         <event-block sid="196641712919895">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="222767623479785" type="Var_Level">
+                                                <condition id="-7" name="Compare instance variable" sid="222767623479785" type="Var_Main">
                                                     <param id="0" name="Instance variable">Difficulty</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">&quot;Easy&quot;</param>
@@ -2012,7 +2012,7 @@
                                         </event-block>
                                         <event-block sid="961353025628488">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="609324132379858" type="Var_Level">
+                                                <condition id="-7" name="Compare instance variable" sid="609324132379858" type="Var_Main">
                                                     <param id="0" name="Instance variable">Difficulty</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">&quot;Hard&quot;</param>
@@ -2068,7 +2068,7 @@
                                     <sub-events>
                                         <event-block sid="140757997835363">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="337428703400401" type="Var_Level">
+                                                <condition id="-7" name="Compare instance variable" sid="337428703400401" type="Var_Main">
                                                     <param id="0" name="Instance variable">Difficulty</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">&quot;Hard&quot;</param>
@@ -2120,7 +2120,7 @@
                                     <sub-events>
                                         <event-block sid="117306338086658">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="705093226688809" type="Var_Level">
+                                                <condition id="-7" name="Compare instance variable" sid="705093226688809" type="Var_Main">
                                                     <param id="0" name="Instance variable">Difficulty</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">&quot;Easy&quot;</param>
@@ -2190,7 +2190,7 @@
                                     <sub-events>
                                         <event-block sid="424239099311828">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="613982151540753" type="Var_Level">
+                                                <condition id="-7" name="Compare instance variable" sid="613982151540753" type="Var_Main">
                                                     <param id="0" name="Instance variable">Difficulty</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">&quot;Hard&quot;</param>
@@ -2255,7 +2255,7 @@
                                     <sub-events>
                                         <event-block sid="720355875178320">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="711359225391906" type="Var_Level">
+                                                <condition id="-7" name="Compare instance variable" sid="711359225391906" type="Var_Main">
                                                     <param id="0" name="Instance variable">Difficulty</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">&quot;Easy&quot;</param>
@@ -2270,7 +2270,7 @@
                                         </event-block>
                                         <event-block sid="870889635091532">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="985533504975044" type="Var_Level">
+                                                <condition id="-7" name="Compare instance variable" sid="985533504975044" type="Var_Main">
                                                     <param id="0" name="Instance variable">Difficulty</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">&quot;Hard&quot;</param>
@@ -2327,7 +2327,7 @@
                                     <sub-events>
                                         <event-block sid="352161586997347">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="716028158268667" type="Var_Level">
+                                                <condition id="-7" name="Compare instance variable" sid="716028158268667" type="Var_Main">
                                                     <param id="0" name="Instance variable">Difficulty</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">&quot;Easy&quot;</param>
@@ -2346,7 +2346,7 @@
                                         </event-block>
                                         <event-block sid="763975087768420">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="754718534283850" type="Var_Level">
+                                                <condition id="-7" name="Compare instance variable" sid="754718534283850" type="Var_Main">
                                                     <param id="0" name="Instance variable">Difficulty</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">&quot;Hard&quot;</param>
@@ -2411,7 +2411,7 @@
                                     <sub-events>
                                         <event-block sid="260648706787880">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="720387338745170" type="Var_Level">
+                                                <condition id="-7" name="Compare instance variable" sid="720387338745170" type="Var_Main">
                                                     <param id="0" name="Instance variable">Difficulty</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">&quot;Easy&quot;</param>
@@ -2426,7 +2426,7 @@
                                         </event-block>
                                         <event-block sid="773294538160201">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="212555791627622" type="Var_Level">
+                                                <condition id="-7" name="Compare instance variable" sid="212555791627622" type="Var_Main">
                                                     <param id="0" name="Instance variable">Difficulty</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">&quot;Hard&quot;</param>
@@ -2484,7 +2484,7 @@
                                     <sub-events>
                                         <event-block sid="830194177509690">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="527255905596650" type="Var_Level">
+                                                <condition id="-7" name="Compare instance variable" sid="527255905596650" type="Var_Main">
                                                     <param id="0" name="Instance variable">Difficulty</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">&quot;Easy&quot;</param>
@@ -2499,7 +2499,7 @@
                                         </event-block>
                                         <event-block sid="178602557819327">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="322798787722012" type="Var_Level">
+                                                <condition id="-7" name="Compare instance variable" sid="322798787722012" type="Var_Main">
                                                     <param id="0" name="Instance variable">Difficulty</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">&quot;Hard&quot;</param>
@@ -2553,7 +2553,7 @@
                                     <sub-events>
                                         <event-block sid="517340368189393">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="294384069277320" type="Var_Level">
+                                                <condition id="-7" name="Compare instance variable" sid="294384069277320" type="Var_Main">
                                                     <param id="0" name="Instance variable">Difficulty</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">&quot;Easy&quot;</param>
@@ -2568,7 +2568,7 @@
                                         </event-block>
                                         <event-block sid="212850918439149">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="395486835526804" type="Var_Level">
+                                                <condition id="-7" name="Compare instance variable" sid="395486835526804" type="Var_Main">
                                                     <param id="0" name="Instance variable">Difficulty</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">&quot;Hard&quot;</param>
@@ -2610,7 +2610,7 @@
                                     <sub-events>
                                         <event-block sid="199863962349819">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="862053260724867" type="Var_Level">
+                                                <condition id="-7" name="Compare instance variable" sid="862053260724867" type="Var_Main">
                                                     <param id="0" name="Instance variable">Difficulty</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">&quot;Easy&quot;</param>
@@ -2625,7 +2625,7 @@
                                         </event-block>
                                         <event-block sid="241839208034197">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="947704401110807" type="Var_Level">
+                                                <condition id="-7" name="Compare instance variable" sid="947704401110807" type="Var_Main">
                                                     <param id="0" name="Instance variable">Difficulty</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">&quot;Hard&quot;</param>
@@ -2741,7 +2741,7 @@
                                     <sub-events>
                                         <event-block sid="967193350683285">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="609826203434885" type="Var_Level">
+                                                <condition id="-7" name="Compare instance variable" sid="609826203434885" type="Var_Main">
                                                     <param id="0" name="Instance variable">Difficulty</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">&quot;Easy&quot;</param>
@@ -2756,7 +2756,7 @@
                                         </event-block>
                                         <event-block sid="286965512009556">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="632007368104073" type="Var_Level">
+                                                <condition id="-7" name="Compare instance variable" sid="632007368104073" type="Var_Main">
                                                     <param id="0" name="Instance variable">Difficulty</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">&quot;Hard&quot;</param>
@@ -3103,7 +3103,7 @@
                                 </action>
                                 <action id="-10" name="Set value" sid="939860024647198" type="Var_Gameplay">
                                     <param id="0" name="Instance variable">CheckpointRoom</param>
-                                    <param id="1" name="Value">Var_Level.Room</param>
+                                    <param id="1" name="Value">Var_Main.Room</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -3894,11 +3894,6 @@
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">&quot;objScruffyCutscene2&quot;</param>
                                                 </condition>
-                                                <condition id="-14" name="Compare variable" sid="804795352756421" type="System">
-                                                    <param id="0" name="Variable">instance</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;objSCar&quot;</param>
-                                                </condition>
                                             </conditions>
                                             <actions>
                                                 <action id="-3" name="Create object" sid="505263998737696" type="System">
@@ -3922,6 +3917,16 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
+                                                <action id="-3" name="Create object" sid="523682265507057" type="System">
+                                                    <param id="0" name="Object to create">Special_StartPos</param>
+                                                    <param id="1" name="Layer">&quot;Collisions&quot;</param>
+                                                    <param id="2" name="X">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;x&quot;))+64</param>
+                                                    <param id="3" name="Y">int(JSON_Room.Value(0,&quot;room&quot;,&quot;instances&quot;,&quot;instance&quot;,JSON_Room.CurrentKey,&quot;position&quot;,&quot;y&quot;))+32</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="440215675281629" type="Special_StartPos">
+                                                    <param id="0" name="Instance variable">Obj_ImportID</param>
+                                                    <param id="1" name="Value">instance</param>
+                                                </action>
                                                 <action id="-3" name="Create object" sid="379095793330205" type="System">
                                                     <param id="0" name="Object to create">Obj_Car</param>
                                                     <param id="1" name="Layer">&quot;Objects&quot;</param>
@@ -5217,7 +5222,7 @@
                                     <actions>
                                         <action id="-10" name="Set value" sid="460093816012325" type="Obj_NumberStar">
                                             <param id="0" name="Instance variable">InstanceCreationCode</param>
-                                            <param id="1" name="Value">NWjs.ReadFile(Var_CONSTANTS.Path_SourceCode1u&amp;&quot;\rooms\&quot;&amp;Var_Level.Room&amp;&quot;\InstanceCreationCode_&quot;&amp;Self.Obj_ImportInstance&amp;&quot;.gml&quot;)</param>
+                                            <param id="1" name="Value">NWjs.ReadFile(Var_CONSTANTS.Path_SourceCode1u&amp;&quot;\rooms\&quot;&amp;Var_Main.Room&amp;&quot;\InstanceCreationCode_&quot;&amp;Self.Obj_ImportInstance&amp;&quot;.gml&quot;)</param>
                                         </action>
                                         <action id="-10" name="Set value" sid="728528016762133" type="Obj_NumberStar">
                                             <param id="0" name="Instance variable">InstanceCreationCode</param>
@@ -5398,7 +5403,7 @@
                                     <actions>
                                         <action id="-10" name="Set value" sid="873699352712359" type="Obj_TimeStar">
                                             <param id="0" name="Instance variable">InstanceCreationCode</param>
-                                            <param id="1" name="Value">NWjs.ReadFile(Var_CONSTANTS.Path_SourceCode1u&amp;&quot;\rooms\&quot;&amp;Var_Level.Room&amp;&quot;\InstanceCreationCode_&quot;&amp;Self.Obj_ImportInstance&amp;&quot;.gml&quot;)</param>
+                                            <param id="1" name="Value">NWjs.ReadFile(Var_CONSTANTS.Path_SourceCode1u&amp;&quot;\rooms\&quot;&amp;Var_Main.Room&amp;&quot;\InstanceCreationCode_&quot;&amp;Self.Obj_ImportInstance&amp;&quot;.gml&quot;)</param>
                                         </action>
                                         <action id="-10" name="Set value" sid="118580724165235" type="Obj_TimeStar">
                                             <param id="0" name="Instance variable">InstanceCreationCode</param>
@@ -5568,7 +5573,7 @@
                             <param id="2" name="Value">&quot;&quot;</param>
                         </condition>
                         <condition id="-8" name="Compare two values" sid="116978643251170" type="System">
-                            <param id="0" name="First value">find(ObjCompat_PathVisual.Obj_Difficulty,Var_Level.Difficulty)</param>
+                            <param id="0" name="First value">find(ObjCompat_PathVisual.Obj_Difficulty,Var_Main.Difficulty)</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Second value">-1</param>
                         </condition>
@@ -5659,10 +5664,6 @@
                             <param id="0" name="Instance variable">RoomLoaded</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action id="-10" name="Set value" sid="422295673508747" type="Var_Level">
-                            <param id="0" name="Instance variable">ImportErrorAttempts</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
                         <action id="-4" name="Set layer visible" sid="305402858157734" type="System">
                             <param id="0" name="Layer">&quot;GLOBAL_Loading&quot;</param>
                             <param id="1" name="Visibility">1</param>
@@ -5677,7 +5678,7 @@
                         </action>
                         <action id="0" name="Call function" sid="435664675302658" type="Function">
                             <param id="0" name="Name">&quot;Room_Load&quot;</param>
-                            <param id="1" name="Parameter {n}">Var_Level.Room{###}Var_Level.RoomEngine</param>
+                            <param id="1" name="Parameter {n}">Var_Main.Room{###}Var_Main.ImportEngine</param>
                         </action>
                     </actions>
                 </event-block>
@@ -5689,25 +5690,63 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block any="1" sid="682813979433492">
+                        <event-block sid="577974759401570">
+                            <conditions />
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="717358762709120" type="System">
+                                    <param id="0" name="Layer">&quot;HUD&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="489655588627107" type="System">
+                                    <param id="0" name="Layer">&quot;Player&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="903736168981180">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="966885268851186" type="Var_Main">
+                                    <param id="0" name="Instance variable">GameMode</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="846370344519330" type="Var_Main">
+                                    <param id="0" name="Instance variable">GameMode</param>
+                                    <param id="1" name="Value">&quot;ImportRoom&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="178412963481741">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="778110305437023" type="Var_Main">
+                                    <param id="0" name="Instance variable">GameState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="722457765193424" type="Var_Main">
+                                    <param id="0" name="Instance variable">GameState</param>
+                                    <param id="1" name="Value">&quot;Game&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="682813979433492">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="173552569730617" type="Var_Main">
                                     <param id="0" name="Instance variable">GameMode</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;ImportRoom&quot;</param>
                                 </condition>
-                                <condition id="-7" name="Compare instance variable" sid="791381395940155" type="Var_Main">
-                                    <param id="0" name="Instance variable">GameMode</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;&quot;</param>
-                                </condition>
                             </conditions>
                             <actions />
                             <sub-events>
                                 <event-block sid="139710192640196">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="358301152586340" type="Var_Level">
-                                            <param id="0" name="Instance variable">RoomEngine</param>
+                                        <condition id="-7" name="Compare instance variable" sid="358301152586340" type="Var_Main">
+                                            <param id="0" name="Instance variable">ImportEngine</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;GMS2&quot;</param>
                                         </condition>
@@ -5721,8 +5760,8 @@
                                 </event-block>
                                 <event-block sid="168569860632731">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="106798560707694" type="Var_Level">
-                                            <param id="0" name="Instance variable">RoomEngine</param>
+                                        <condition id="-7" name="Compare instance variable" sid="106798560707694" type="Var_Main">
+                                            <param id="0" name="Instance variable">ImportEngine</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;GMS1&quot;</param>
                                         </condition>
@@ -5737,7 +5776,7 @@
                                 <event-block sid="525405472304194">
                                     <conditions>
                                         <condition id="-8" inverted="1" name="Compare two values" sid="340054456343930" type="System">
-                                            <param id="0" name="First value">find(Var_Level.RoomEngine,&quot;GM8&quot;)</param>
+                                            <param id="0" name="First value">find(Var_Main.ImportEngine,&quot;GM8&quot;)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">-1</param>
                                         </condition>
@@ -5771,26 +5810,6 @@
                         <action id="-10" name="Set value" sid="540263338152082" type="Var_Gameplay">
                             <param id="0" name="Instance variable">LevelTimer</param>
                             <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block disabled="1" sid="319075703561400">
-                    <conditions>
-                        <condition id="200" name="On JSON Parse Error" sid="431246790778651" type="JSON_Room" />
-                        <condition id="-7" name="Compare instance variable" sid="691300799214451" type="Var_Level">
-                            <param id="0" name="Instance variable">ImportErrorAttempts</param>
-                            <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">3</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-11" name="Add to" sid="531982512495477" type="Var_Level">
-                            <param id="0" name="Instance variable">ImportErrorAttempts</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="0" name="Call function" sid="580502496495940" type="Function">
-                            <param id="0" name="Name">&quot;GMS2_RoomImport&quot;</param>
-                            <param id="1" name="Parameter {n}">Var_Level.Room</param>
                         </action>
                     </actions>
                 </event-block>
@@ -5911,6 +5930,7 @@
                         <action behavior="Platform" id="11" name="Set enabled" sid="123374044350429" type="Player">
                             <param id="0" name="State">0</param>
                         </action>
+                        <action id="-9" name="Destroy" sid="133426179935406" type="Custom_Backgrounds" />
                     </actions>
                 </event-block>
                 <comment>after loading room</comment>
@@ -5932,9 +5952,9 @@
                                 <action behavior="Platform" id="11" name="Set enabled" sid="437317433999193" type="Player">
                                     <param id="0" name="State">0</param>
                                 </action>
-                                <action id="0" name="Call function" sid="249261103437319" type="Function">
-                                    <param id="0" name="Name">&quot;Room_Background&quot;</param>
-                                    <param id="1" name="Parameter {n}">Var_Room.Background</param>
+                                <action id="-3" name="Set position" sid="593760785653928" type="Player">
+                                    <param id="0" name="X">Special_StartPos.X</param>
+                                    <param id="1" name="Y">Special_StartPos.Y+8</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -5951,7 +5971,7 @@
                                 <event-block sid="487360656869129">
                                     <conditions>
                                         <condition id="-8" inverted="1" name="Compare two values" sid="913678315252046" type="System">
-                                            <param id="0" name="First value">find(Var_Level.RoomEngine,&quot;GM8&quot;)</param>
+                                            <param id="0" name="First value">find(Var_Main.ImportEngine,&quot;GM8&quot;)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">-1</param>
                                         </condition>
@@ -6079,7 +6099,7 @@
                                     <conditions>
                                         <condition id="60" inverted="1" name="Is undefined" sid="432281037870633" type="JSON_PERSIST">
                                             <param id="0" name="Reference point">0</param>
-                                            <param id="1" name="Key {n}">&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine{###}Var_Level.Room{###}&quot;TitleWorld&quot;</param>
+                                            <param id="1" name="Key {n}">&quot;ImportRoom_&quot;&amp;Var_Main.ImportEngine{###}Var_Main.Room{###}&quot;TitleWorld&quot;</param>
                                         </condition>
                                         <condition id="-7" name="Compare instance variable" sid="365461852847029" type="Text">
                                             <param id="0" name="Instance variable">ID</param>
@@ -6089,7 +6109,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Set text" sid="132774710491253" type="Text">
-                                            <param id="0" name="Text">uppercase(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine,Var_Level.Room,&quot;TitleWorld&quot;))</param>
+                                            <param id="0" name="Text">uppercase(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Main.ImportEngine,Var_Main.Room,&quot;TitleWorld&quot;))</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -6097,7 +6117,7 @@
                                     <conditions>
                                         <condition id="60" inverted="1" name="Is undefined" sid="756251505140984" type="JSON_PERSIST">
                                             <param id="0" name="Reference point">0</param>
-                                            <param id="1" name="Key {n}">&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine{###}Var_Level.Room{###}&quot;Title&quot;</param>
+                                            <param id="1" name="Key {n}">&quot;ImportRoom_&quot;&amp;Var_Main.ImportEngine{###}Var_Main.Room{###}&quot;Title&quot;</param>
                                         </condition>
                                         <condition id="-7" name="Compare instance variable" sid="968707692969552" type="Text">
                                             <param id="0" name="Instance variable">ID</param>
@@ -6107,7 +6127,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Set text" sid="567558742813135" type="Text">
-                                            <param id="0" name="Text">uppercase(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine,Var_Level.Room,&quot;Title&quot;))</param>
+                                            <param id="0" name="Text">uppercase(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Main.ImportEngine,Var_Main.Room,&quot;Title&quot;))</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -6115,7 +6135,7 @@
                                     <conditions>
                                         <condition id="60" name="Is undefined" sid="590537932089977" type="JSON_PERSIST">
                                             <param id="0" name="Reference point">0</param>
-                                            <param id="1" name="Key {n}">&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine{###}Var_Level.Room{###}&quot;Title&quot;</param>
+                                            <param id="1" name="Key {n}">&quot;ImportRoom_&quot;&amp;Var_Main.ImportEngine{###}Var_Main.Room{###}&quot;Title&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -6129,17 +6149,17 @@
                                     <conditions>
                                         <condition id="60" inverted="1" name="Is undefined" sid="141594810837350" type="JSON_PERSIST">
                                             <param id="0" name="Reference point">0</param>
-                                            <param id="1" name="Key {n}">&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine{###}Var_Level.Room{###}&quot;WaterLevel&quot;</param>
+                                            <param id="1" name="Key {n}">&quot;ImportRoom_&quot;&amp;Var_Main.ImportEngine{###}Var_Main.Room{###}&quot;WaterLevel&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-10" name="Set value" sid="661300764530576" type="Var_Room">
                                             <param id="0" name="Instance variable">Water</param>
-                                            <param id="1" name="Value">int(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine,Var_Level.Room,&quot;WaterLevel&quot;))</param>
+                                            <param id="1" name="Value">int(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Main.ImportEngine,Var_Main.Room,&quot;WaterLevel&quot;))</param>
                                         </action>
                                         <action id="-10" name="Set value" sid="325587312976779" type="Var_Room">
                                             <param id="0" name="Instance variable">Water_Type</param>
-                                            <param id="1" name="Value">JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine,Var_Level.Room,&quot;WaterType&quot;)</param>
+                                            <param id="1" name="Value">JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Main.ImportEngine,Var_Main.Room,&quot;WaterType&quot;)</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -6147,13 +6167,13 @@
                                     <conditions>
                                         <condition id="60" inverted="1" name="Is undefined" sid="668381444201092" type="JSON_PERSIST">
                                             <param id="0" name="Reference point">0</param>
-                                            <param id="1" name="Key {n}">&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine{###}Var_Level.Room{###}&quot;WaterLevel&quot;</param>
+                                            <param id="1" name="Key {n}">&quot;ImportRoom_&quot;&amp;Var_Main.ImportEngine{###}Var_Main.Room{###}&quot;WaterLevel&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-10" name="Set value" sid="379121736202199" type="Var_Room">
                                             <param id="0" name="Instance variable">Water</param>
-                                            <param id="1" name="Value">int(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine,Var_Level.Room,&quot;WaterLevel&quot;))</param>
+                                            <param id="1" name="Value">int(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Main.ImportEngine,Var_Main.Room,&quot;WaterLevel&quot;))</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -6161,13 +6181,13 @@
                                     <conditions>
                                         <condition id="60" inverted="1" name="Is undefined" sid="705171975288366" type="JSON_PERSIST">
                                             <param id="0" name="Reference point">0</param>
-                                            <param id="1" name="Key {n}">&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine{###}Var_Level.Room{###}&quot;ScreenWrap&quot;</param>
+                                            <param id="1" name="Key {n}">&quot;ImportRoom_&quot;&amp;Var_Main.ImportEngine{###}Var_Main.Room{###}&quot;ScreenWrap&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-10" name="Set value" sid="758649419916694" type="Var_Room">
                                             <param id="0" name="Instance variable">ScreenWrap</param>
-                                            <param id="1" name="Value">JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine,Var_Level.Room,&quot;ScreenWrap&quot;)</param>
+                                            <param id="1" name="Value">JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Main.ImportEngine,Var_Main.Room,&quot;ScreenWrap&quot;)</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -6175,13 +6195,13 @@
                                     <conditions>
                                         <condition id="60" inverted="1" name="Is undefined" sid="268097362554263" type="JSON_PERSIST">
                                             <param id="0" name="Reference point">0</param>
-                                            <param id="1" name="Key {n}">&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine{###}Var_Level.Room{###}&quot;BackgroundColor&quot;</param>
+                                            <param id="1" name="Key {n}">&quot;ImportRoom_&quot;&amp;Var_Main.ImportEngine{###}Var_Main.Room{###}&quot;BackgroundColor&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-34" name="Set layer background color" sid="951177001383077" type="System">
                                             <param id="0" name="Layer">&quot;BG&quot;</param>
-                                            <param id="1" name="Color">rgb(int(tokenat(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine,Var_Level.Room,&quot;BackgroundColor&quot;),0,&quot;,&quot;)), int(tokenat(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine,Var_Level.Room,&quot;BackgroundColor&quot;),1,&quot;,&quot;)), int(tokenat(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine,Var_Level.Room,&quot;BackgroundColor&quot;),2,&quot;,&quot;)))</param>
+                                            <param id="1" name="Color">rgb(int(tokenat(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Main.ImportEngine,Var_Main.Room,&quot;BackgroundColor&quot;),0,&quot;,&quot;)), int(tokenat(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Main.ImportEngine,Var_Main.Room,&quot;BackgroundColor&quot;),1,&quot;,&quot;)), int(tokenat(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Main.ImportEngine,Var_Main.Room,&quot;BackgroundColor&quot;),2,&quot;,&quot;)))</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -6236,6 +6256,10 @@
                                             <param id="0" name="Name">&quot;Player_Init&quot;</param>
                                             <param id="1" name="Parameter {n}"></param>
                                         </action>
+                                        <action id="0" name="Call function" sid="782116680254531" type="Function">
+                                            <param id="0" name="Name">&quot;Room_Background&quot;</param>
+                                            <param id="1" name="Parameter {n}">Var_Room.Background</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="404372596354659">
@@ -6254,6 +6278,10 @@
                                         <action id="0" name="Call function" sid="474522737476837" type="Function">
                                             <param id="0" name="Name">&quot;Player_Init&quot;</param>
                                             <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="249261103437319" type="Function">
+                                            <param id="0" name="Name">&quot;Room_Background&quot;</param>
+                                            <param id="1" name="Parameter {n}">Var_Room.Background</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -6300,7 +6328,15 @@
                                     <actions>
                                         <action id="0" name="Call function" sid="735010552991212" type="Function">
                                             <param id="0" name="Name">&quot;Audio_PlayMusic&quot;</param>
-                                            <param id="1" name="Parameter {n}">JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine,Var_Level.Room,&quot;Music&quot;)</param>
+                                            <param id="1" name="Parameter {n}">JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Main.ImportEngine,Var_Main.Room,&quot;Music&quot;)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="325285367641725">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="717231668862369" type="System">
+                                            <param id="0" name="Seconds">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -6516,7 +6552,7 @@
                                     <param id="2" name="Value">&quot;&quot;</param>
                                 </condition>
                                 <condition id="-8" name="Compare two values" sid="978019742624933" type="System">
-                                    <param id="0" name="First value">find(LevelObjects.Obj_Difficulty,Var_Level.Difficulty)</param>
+                                    <param id="0" name="First value">find(LevelObjects.Obj_Difficulty,Var_Main.Difficulty)</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Second value">-1</param>
                                 </condition>
@@ -7030,6 +7066,10 @@
                         <action id="-10" name="Set value" sid="434713862251633" type="Player_Camera">
                             <param id="0" name="Instance variable">SelfY</param>
                             <param id="1" name="Value">clamp(Player_Camera.SelfY,(Player_Camera.Height/2),Var_Room.Height-(Player_Camera.Height/2))</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="492573862302476" type="Player_Camera">
+                            <param id="0" name="X">Self.SelfX</param>
+                            <param id="1" name="Y">Self.SelfY</param>
                         </action>
                     </actions>
                 </event-block>
@@ -7648,7 +7688,7 @@
                         </action>
                         <action id="-10" name="Set value" sid="942039950325600" type="Var_Gameplay">
                             <param id="0" name="Instance variable">CheckpointRoom</param>
-                            <param id="1" name="Value">Var_Level.Room</param>
+                            <param id="1" name="Value">Var_Main.Room</param>
                         </action>
                         <action id="-10" name="Set value" sid="706493253567625" type="Var_Gameplay">
                             <param id="0" name="Instance variable">CheckpointDeaths</param>
@@ -8304,7 +8344,7 @@
                         <event-block sid="200128472844647">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="942934246985884" type="System">
-                                    <param id="0" name="First value">find(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine,Var_Level.Room,&quot;Flags&quot;),&quot;|GM8&quot;)</param>
+                                    <param id="0" name="First value">find(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Main.ImportEngine,Var_Main.Room,&quot;Flags&quot;),&quot;|GM8&quot;)</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Second value">-1</param>
                                 </condition>
@@ -8333,12 +8373,12 @@
                                 <condition id="-7" inverted="1" name="Compare instance variable" sid="157970179199238" type="Var_Gameplay">
                                     <param id="0" name="Instance variable">CheckpointRoom</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">Var_Level.Room</param>
+                                    <param id="2" name="Value">Var_Main.Room</param>
                                 </condition>
                                 <condition id="-4" name="Trigger once while true" sid="806209876897901" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" sid="838368195798650" type="Var_Level">
+                                <action id="-10" name="Set value" sid="838368195798650" type="Var_Main">
                                     <param id="0" name="Instance variable">Room</param>
                                     <param id="1" name="Value">Var_Gameplay.CheckpointRoom</param>
                                 </action>
@@ -8374,7 +8414,7 @@
                                 <event-block sid="122607729222344">
                                     <conditions>
                                         <condition id="-8" inverted="1" name="Compare two values" sid="594702253566713" type="System">
-                                            <param id="0" name="First value">find(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine,Var_Level.Room,&quot;Flags&quot;),&quot;|GM8&quot;)</param>
+                                            <param id="0" name="First value">find(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Main.ImportEngine,Var_Main.Room,&quot;Flags&quot;),&quot;|GM8&quot;)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">-1</param>
                                         </condition>
@@ -8417,7 +8457,7 @@
                                 </action>
                                 <action id="0" name="Call function" sid="751844138066739" type="Function">
                                     <param id="0" name="Name">&quot;Room_Load&quot;</param>
-                                    <param id="1" name="Parameter {n}">Var_Level.Room{###}Var_Level.RoomEngine</param>
+                                    <param id="1" name="Parameter {n}">Var_Main.Room{###}Var_Main.ImportEngine</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -9039,6 +9079,17 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="578933220224690">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="433742085998738" type="Player_SuitFist">
+                            <param id="0" name="Object">LevelCollisions</param>
+                        </condition>
+                        <condition behavior="Solid" id="0" name="Is enabled" sid="367533645562726" type="LevelCollisions" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="400417527612156" type="Player_SuitFist" />
+                    </actions>
+                </event-block>
                 <event-block sid="938710058490487">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="328767134153565" type="Player_SuitFist">
@@ -9052,6 +9103,16 @@
                             <param id="0" name="Name">&quot;Audio_PlaySFX&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;explode_short&quot;</param>
                         </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="352504647698010">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="572689543507197" type="Player_SuitFist">
+                            <param id="0" name="Object">Obj_Hazard</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="717912885731920" type="Player_SuitFist" />
                     </actions>
                 </event-block>
                 <event-block sid="223813421040836">
@@ -9222,27 +9283,6 @@
                             </actions>
                         </event-block>
                     </sub-events>
-                </event-block>
-                <event-block sid="578933220224690">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="433742085998738" type="Player_SuitFist">
-                            <param id="0" name="Object">LevelCollisions</param>
-                        </condition>
-                        <condition behavior="Solid" id="0" name="Is enabled" sid="367533645562726" type="LevelCollisions" />
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="400417527612156" type="Player_SuitFist" />
-                    </actions>
-                </event-block>
-                <event-block any="1" sid="352504647698010">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="572689543507197" type="Player_SuitFist">
-                            <param id="0" name="Object">Obj_Hazard</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="717912885731920" type="Player_SuitFist" />
-                    </actions>
                 </event-block>
                 <comment></comment>
                 <event-block sid="571578010242292">
@@ -9626,7 +9666,7 @@
                                 <event-block sid="145043545765503">
                                     <conditions>
                                         <condition id="-8" inverted="1" name="Compare two values" sid="827797881234452" type="System">
-                                            <param id="0" name="First value">find(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine,Var_Level.Room,&quot;Flags&quot;),&quot;|StrongSuit&quot;)</param>
+                                            <param id="0" name="First value">find(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Main.ImportEngine,Var_Main.Room,&quot;Flags&quot;),&quot;|StrongSuit&quot;)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">-1</param>
                                         </condition>
@@ -9644,12 +9684,12 @@
                                 <event-block sid="974230446626220">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="350558904196789" type="System">
-                                            <param id="0" name="First value">find(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine,Var_Level.Room,&quot;Flags&quot;),&quot;|StrongSuit&quot;)</param>
+                                            <param id="0" name="First value">find(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Main.ImportEngine,Var_Main.Room,&quot;Flags&quot;),&quot;|StrongSuit&quot;)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">-1</param>
                                         </condition>
                                         <condition id="-8" inverted="1" name="Compare two values" sid="289442590829012" type="System">
-                                            <param id="0" name="First value">find(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine,Var_Level.Room,&quot;Flags&quot;),&quot;|SpeedSuit&quot;)</param>
+                                            <param id="0" name="First value">find(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Main.ImportEngine,Var_Main.Room,&quot;Flags&quot;),&quot;|SpeedSuit&quot;)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">-1</param>
                                         </condition>
@@ -9679,7 +9719,7 @@
                                 <event-block sid="692769475972937">
                                     <conditions>
                                         <condition id="-8" inverted="1" name="Compare two values" sid="218907740082326" type="System">
-                                            <param id="0" name="First value">find(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine,Var_Level.Room,&quot;Flags&quot;),&quot;|SpeedSuit&quot;)</param>
+                                            <param id="0" name="First value">find(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Main.ImportEngine,Var_Main.Room,&quot;Flags&quot;),&quot;|SpeedSuit&quot;)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">-1</param>
                                         </condition>
@@ -9697,7 +9737,7 @@
                                 <event-block sid="400802967778502">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="619518166522317" type="System">
-                                            <param id="0" name="First value">find(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine,Var_Level.Room,&quot;Flags&quot;),&quot;|SpeedSuit&quot;)</param>
+                                            <param id="0" name="First value">find(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Main.ImportEngine,Var_Main.Room,&quot;Flags&quot;),&quot;|SpeedSuit&quot;)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">-1</param>
                                         </condition>
@@ -9810,7 +9850,7 @@
                                     <conditions>
                                         <condition id="60" name="Is undefined" sid="528933754135999" type="JSON_PERSIST">
                                             <param id="0" name="Reference point">0</param>
-                                            <param id="1" name="Key {n}">&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine{###}Var_Level.Room{###}&quot;TitleWorld&quot;</param>
+                                            <param id="1" name="Key {n}">&quot;ImportRoom_&quot;&amp;Var_Main.ImportEngine{###}Var_Main.Room{###}&quot;TitleWorld&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -9854,7 +9894,7 @@
                                     <conditions>
                                         <condition id="60" name="Is undefined" sid="266548922148842" type="JSON_PERSIST">
                                             <param id="0" name="Reference point">0</param>
-                                            <param id="1" name="Key {n}">&quot;ImportRoom_&quot;&amp;Var_Level.RoomEngine{###}Var_Level.Room{###}&quot;TitleWorld&quot;</param>
+                                            <param id="1" name="Key {n}">&quot;ImportRoom_&quot;&amp;Var_Main.ImportEngine{###}Var_Main.Room{###}&quot;TitleWorld&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -10019,6 +10059,10 @@
                                         <action id="0" name="Call function" sid="422418546083623" type="Function">
                                             <param id="0" name="Name">&quot;Player_Init&quot;</param>
                                             <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="493447897967299" type="Function">
+                                            <param id="0" name="Name">&quot;Room_Background&quot;</param>
+                                            <param id="1" name="Parameter {n}">Var_Room.Background</param>
                                         </action>
                                         <action id="-16" name="Wait" sid="586972507816406" type="System">
                                             <param id="0" name="Seconds">0.5</param>
@@ -10604,7 +10648,7 @@
                                     <param id="0" name="X">Special_StartPos.X</param>
                                     <param id="1" name="Y">Special_StartPos.Y+8</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="432149721351695" type="Var_Level">
+                                <action id="-10" name="Set value" sid="432149721351695" type="Var_Main">
                                     <param id="0" name="Instance variable">Room</param>
                                     <param id="1" name="Value">Obj_Portal.destination_room</param>
                                 </action>
@@ -10614,7 +10658,7 @@
                                 </action>
                                 <action id="0" name="Call function" sid="929188833378152" type="Function">
                                     <param id="0" name="Name">&quot;Room_Load&quot;</param>
-                                    <param id="1" name="Parameter {n}">Var_Level.Room{###}Var_Level.RoomEngine</param>
+                                    <param id="1" name="Parameter {n}">Var_Main.Room{###}Var_Main.ImportEngine</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -10842,7 +10886,7 @@
                     <sub-events>
                         <event-block sid="288357472780841">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="504032737239849" type="Var_Level">
+                                <condition id="-7" name="Compare instance variable" sid="504032737239849" type="Var_Main">
                                     <param id="0" name="Instance variable">Difficulty</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;Hard&quot;</param>
@@ -11429,7 +11473,7 @@
                         </action>
                         <action id="-10" name="Set value" sid="128945638307550" type="Var_Gameplay">
                             <param id="0" name="Instance variable">CheckpointRoom</param>
-                            <param id="1" name="Value">Var_Level.Room</param>
+                            <param id="1" name="Value">Var_Main.Room</param>
                         </action>
                         <action id="-10" name="Set value" sid="105165270323197" type="Var_Gameplay">
                             <param id="0" name="Instance variable">CheckpointDeaths</param>
@@ -11882,20 +11926,7 @@
                                 </condition>
                                 <condition id="-4" name="Trigger once while true" sid="984528660143592" type="System" />
                             </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="281520449389121" type="Var_Player">
-                                    <param id="0" name="Instance variable">ActiveStarTrophy</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="241393015566307" type="Var_Player">
-                                    <param id="0" name="Instance variable">NumberStarStreak</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="0" name="Call function" sid="192008989604593" type="Function">
-                                    <param id="0" name="Name">&quot;Audio_PlaySFX&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;cymbal_crash&quot;</param>
-                                </action>
-                            </actions>
+                            <actions />
                             <sub-events>
                                 <event-block sid="915615177256674">
                                     <conditions>
@@ -11910,6 +11941,23 @@
                                         <action id="-13" name="Set boolean" sid="379478747098978" type="Obj_Trophy">
                                             <param id="0" name="Instance variable">Locked</param>
                                             <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="674379859708055">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="281520449389121" type="Var_Player">
+                                            <param id="0" name="Instance variable">ActiveStarTrophy</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="241393015566307" type="Var_Player">
+                                            <param id="0" name="Instance variable">NumberStarStreak</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="192008989604593" type="Function">
+                                            <param id="0" name="Name">&quot;Audio_PlaySFX&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;cymbal_crash&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -12176,23 +12224,7 @@
                                 </condition>
                                 <condition id="-4" name="Trigger once while true" sid="676905581510942" type="System" />
                             </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="579081964603866" type="Var_Player">
-                                    <param id="0" name="Instance variable">ActiveStarTrophy</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="825834273359398" type="Var_Player">
-                                    <param id="0" name="Instance variable">TimedStarStreak</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="6" name="Stop" sid="564522572841607" type="BetterAudio">
-                                    <param id="0" name="Tag">&quot;SFX_clock_ticking_loop&quot;</param>
-                                </action>
-                                <action id="0" name="Call function" sid="498277310585553" type="Function">
-                                    <param id="0" name="Name">&quot;Audio_PlaySFX&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;cymbal_crash&quot;</param>
-                                </action>
-                            </actions>
+                            <actions />
                             <sub-events>
                                 <event-block sid="510265125677397">
                                     <conditions>
@@ -12207,6 +12239,26 @@
                                         <action id="-13" name="Set boolean" sid="999340942342633" type="Obj_Trophy">
                                             <param id="0" name="Instance variable">Locked</param>
                                             <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="587391547611241">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="579081964603866" type="Var_Player">
+                                            <param id="0" name="Instance variable">ActiveStarTrophy</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="825834273359398" type="Var_Player">
+                                            <param id="0" name="Instance variable">TimedStarStreak</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="6" name="Stop" sid="564522572841607" type="BetterAudio">
+                                            <param id="0" name="Tag">&quot;SFX_clock_ticking_loop&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="498277310585553" type="Function">
+                                            <param id="0" name="Name">&quot;Audio_PlaySFX&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;cymbal_crash&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -12396,6 +12448,26 @@
                                     <param id="0" name="Seconds">0.2</param>
                                 </action>
                                 <action id="-24" name="Move to top" sid="869186825013133" type="Enemies" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="945808968453429">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="327870874379277" type="Special_SensorGroundCollision" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="790576827245568" type="System">
+                            <param id="0" name="Seconds">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="873118834725615">
+                            <conditions>
+                                <condition behavior="Pin" id="0" inverted="1" name="Is pinned" sid="706660546525128" type="Special_SensorGroundCollision" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="848210273355409" type="Special_SensorGroundCollision" />
                             </actions>
                         </event-block>
                     </sub-events>
@@ -16375,6 +16447,26 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block sid="732054080004587">
+            <conditions>
+                <condition id="-18" name="On created" sid="273983410779285" type="Special_SkizzorCollisions" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="416330851008489" type="System">
+                    <param id="0" name="Seconds">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="504497112298947">
+                    <conditions>
+                        <condition behavior="Pin" id="0" inverted="1" name="Is pinned" sid="419269912851349" type="Special_SkizzorCollisions" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="861470705085694" type="Special_SkizzorCollisions" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
         <comment></comment>
         <event-block sid="759663275162259">
             <conditions>
@@ -16432,9 +16524,6 @@
                 <comment>should be ordered after camera</comment>
                 <event-block sid="163697082509758">
                     <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="769134216212490" type="Var_Gameplay">
-                            <param id="0" name="Instance variable">TimerActive</param>
-                        </condition>
                         <condition id="-11" name="For Each" sid="402542449591009" type="System">
                             <param id="0" name="Object">Custom_Backgrounds</param>
                         </condition>
@@ -16443,7 +16532,12 @@
                     <sub-events>
                         <event-block sid="102137605084525">
                             <conditions>
-                                <condition id="-7" inverted="1" name="Compare instance variable" sid="944088019929129" type="Custom_Backgrounds">
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="381948451145742" type="Custom_Backgrounds">
+                                    <param id="0" name="Instance variable">ParallaxX</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="193726367107611" type="Custom_Backgrounds">
                                     <param id="0" name="Instance variable">ParallaxX</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">0</param>
@@ -16451,13 +16545,18 @@
                             </conditions>
                             <actions>
                                 <action id="-1" name="Set X" sid="828421895487725" type="Custom_Backgrounds">
-                                    <param id="0" name="X">(ScrollX/Self.ParallaxX)-Self.ImageWidth+(Self.InitialX)+Self.OffsetScrollX</param>
+                                    <param id="0" name="X">((Player_Camera.Width/2)-((Player_Camera.Width/2)*(1/LayoutScale)))+((Player_Camera.SelfX-((Player_Camera.Width/2)*(1/LayoutScale)))/Self.ParallaxX)-Self.ImageWidth+(Self.InitialX)+Self.OffsetScrollX</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block sid="937659096317510">
                             <conditions>
-                                <condition id="-7" inverted="1" name="Compare instance variable" sid="309963446945767" type="Custom_Backgrounds">
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="994506196319850" type="Custom_Backgrounds">
+                                    <param id="0" name="Instance variable">ParallaxY</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="554461053181308" type="Custom_Backgrounds">
                                     <param id="0" name="Instance variable">ParallaxY</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">0</param>
@@ -16465,45 +16564,108 @@
                             </conditions>
                             <actions>
                                 <action id="-2" name="Set Y" sid="304462707840885" type="Custom_Backgrounds">
-                                    <param id="0" name="Y">(ScrollY/Self.ParallaxY)-Self.ImageHeight+(Self.InitialY)+Self.OffsetScrollY</param>
+                                    <param id="0" name="Y">((Player_Camera.Height/2)-((Player_Camera.Height/2)*(1/LayoutScale)))+((Player_Camera.SelfY-((Player_Camera.Height/2)*(1/LayoutScale)))/Self.ParallaxY)-Self.ImageHeight+(Self.InitialY)+Self.OffsetScrollY</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="281339366154751">
+                        <event-block sid="865173546170782">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="536274258196177" type="Custom_Backgrounds">
+                                <condition id="-7" name="Compare instance variable" sid="633756434819932" type="Custom_Backgrounds">
+                                    <param id="0" name="Instance variable">ParallaxX</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="718210883392555" type="Custom_Backgrounds">
+                                    <param id="0" name="X">(Player_Camera.SelfX-((Player_Camera.Width/2)*(1/LayoutScale)))+Self.InitialX+Self.OffsetScrollX</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="464511634939958">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="904424713289766" type="Custom_Backgrounds">
+                                    <param id="0" name="Instance variable">ParallaxY</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="711645957783662" type="Custom_Backgrounds">
+                                    <param id="0" name="Y">(Player_Camera.SelfY-((Player_Camera.Height/2)*(1/LayoutScale)))+Self.InitialY+Self.OffsetScrollY</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="666651022744997">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="721057664812511" type="Custom_Backgrounds">
                                     <param id="0" name="Instance variable">ParallaxX</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
-                                <condition id="-7" inverted="1" name="Compare instance variable" sid="383842355292072" type="Custom_Backgrounds">
-                                    <param id="0" name="Instance variable">ScrollX</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="547769268545570" type="Custom_Backgrounds">
+                                    <param id="0" name="Instance variable">XCameraRight</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-1" name="Set X" sid="680383000875176" type="Custom_Backgrounds">
-                                    <param id="0" name="X">Self.InitialX+Self.OffsetScrollX</param>
+                                <action id="-1" name="Set X" sid="340896281280491" type="Custom_Backgrounds">
+                                    <param id="0" name="X">((Player_Camera.Width/2)-((Player_Camera.Width/2)*(1/LayoutScale)))+Self.InitialX+Self.OffsetScrollX</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="401450912354159">
+                        <event-block sid="698736629809688">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="722340367813313" type="Custom_Backgrounds">
+                                <condition id="-8" name="Is boolean instance variable set" sid="592278377120865" type="Custom_Backgrounds">
+                                    <param id="0" name="Instance variable">XCameraRight</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="828166764638162" type="Custom_Backgrounds">
+                                    <param id="0" name="X">(Player_Camera.SelfX+((Player_Camera.Width/2)*(1/LayoutScale)))+Self.InitialX+Self.OffsetScrollX</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="785396051382760">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="702921234579992" type="Custom_Backgrounds">
                                     <param id="0" name="Instance variable">ParallaxY</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
-                                <condition id="-7" inverted="1" name="Compare instance variable" sid="885474720521701" type="Custom_Backgrounds">
-                                    <param id="0" name="Instance variable">ScrollY</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="746082604545356" type="Custom_Backgrounds">
+                                    <param id="0" name="Instance variable">YCameraBottom</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="416568152328982" type="Custom_Backgrounds">
+                                    <param id="0" name="Instance variable">YRoomBottom</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-2" name="Set Y" sid="162352576619862" type="Custom_Backgrounds">
-                                    <param id="0" name="Y">Self.InitialY+Self.OffsetScrollY</param>
+                                <action id="-2" name="Set Y" sid="456682762970521" type="Custom_Backgrounds">
+                                    <param id="0" name="Y">((Player_Camera.Height/2)-((Player_Camera.Height/2)*(1/LayoutScale)))+Self.InitialY+Self.OffsetScrollY</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="258959284099044">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="111935612086101" type="Custom_Backgrounds">
+                                    <param id="0" name="Instance variable">YCameraBottom</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="268655650749849" type="Custom_Backgrounds">
+                                    <param id="0" name="Y">(Player_Camera.SelfY+((Player_Camera.Height/2)*(1/LayoutScale)))+Self.InitialY+Self.OffsetScrollY</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="955376971496393">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="672850817964173" type="Custom_Backgrounds">
+                                    <param id="0" name="Instance variable">YRoomBottom</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="291119778082403" type="Custom_Backgrounds">
+                                    <param id="0" name="Y">abs(((Player_Camera.Height/2)-((Player_Camera.Height/2)*(1/LayoutScale))))+Var_Room.Height+Self.InitialY+Self.OffsetScrollY</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -16527,13 +16689,13 @@
                                         <condition id="-7" name="Compare instance variable" sid="740273776061063" type="Custom_Backgrounds">
                                             <param id="0" name="Instance variable">OffsetScrollX</param>
                                             <param id="1" name="Comparison">4</param>
-                                            <param id="2" name="Value">Self.ImageWidth</param>
+                                            <param id="2" name="Value">0</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-10" name="Set value" sid="544373998383379" type="Custom_Backgrounds">
                                             <param id="0" name="Instance variable">OffsetScrollX</param>
-                                            <param id="1" name="Value">0</param>
+                                            <param id="1" name="Value">-Self.ImageWidth</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -16548,7 +16710,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-11" name="Add to" sid="267878634079190" type="Custom_Backgrounds">
+                                <action id="-11" name="Add to" sid="660968937652878" type="Custom_Backgrounds">
                                     <param id="0" name="Instance variable">OffsetScrollX</param>
                                     <param id="1" name="Value">Self.ScrollX</param>
                                 </action>
@@ -16591,13 +16753,13 @@
                                         <condition id="-7" name="Compare instance variable" sid="901013543321470" type="Custom_Backgrounds">
                                             <param id="0" name="Instance variable">OffsetScrollY</param>
                                             <param id="1" name="Comparison">4</param>
-                                            <param id="2" name="Value">Self.ImageHeight</param>
+                                            <param id="2" name="Value">0</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-10" name="Set value" sid="627461721848176" type="Custom_Backgrounds">
                                             <param id="0" name="Instance variable">OffsetScrollY</param>
-                                            <param id="1" name="Value">0</param>
+                                            <param id="1" name="Value">-Self.ImageHeight</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -16612,7 +16774,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-11" name="Add to" sid="271735696615730" type="Custom_Backgrounds">
+                                <action id="-11" name="Add to" sid="697032920365780" type="Custom_Backgrounds">
                                     <param id="0" name="Instance variable">OffsetScrollY</param>
                                     <param id="1" name="Value">Self.ScrollY</param>
                                 </action>
@@ -16725,8 +16887,16 @@
                                     <param id="1" name="Value">&quot;&quot;</param>
                                 </action>
                                 <action id="-34" name="Set layer background color" sid="638243095874951" type="System">
-                                    <param id="0" name="Layer">&quot;BG&quot;</param>
+                                    <param id="0" name="Layer">&quot;BGIgnoreScale&quot;</param>
                                     <param id="1" name="Color">rgb(255,255,255)</param>
+                                </action>
+                                <action id="-19" name="Set layer scale rate" sid="692005845323654" type="System">
+                                    <param id="0" name="Layer">&quot;BG&quot;</param>
+                                    <param id="1" name="Scale rate">1</param>
+                                </action>
+                                <action id="-19" name="Set layer scale rate" sid="218014085050784" type="System">
+                                    <param id="0" name="Layer">&quot;BGHigh&quot;</param>
+                                    <param id="1" name="Scale rate">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -16749,6 +16919,24 @@
                                     </conditions>
                                     <actions />
                                     <sub-events>
+                                        <event-block sid="392123861726805">
+                                            <conditions>
+                                                <condition id="60" inverted="1" name="Is undefined" sid="238266785394300" type="JSON_Background">
+                                                    <param id="0" name="Reference point">0</param>
+                                                    <param id="1" name="Key {n}">&quot;Background&quot;{###}&quot;ScaleRate&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-19" name="Set layer scale rate" sid="467925428424882" type="System">
+                                                    <param id="0" name="Layer">&quot;BG&quot;</param>
+                                                    <param id="1" name="Scale rate">float(JSON_Background.Value(0,&quot;Background&quot;,&quot;ScaleRate&quot;))</param>
+                                                </action>
+                                                <action id="-19" name="Set layer scale rate" sid="504118640632060" type="System">
+                                                    <param id="0" name="Layer">&quot;BGHigh&quot;</param>
+                                                    <param id="1" name="Scale rate">float(JSON_Background.Value(0,&quot;Background&quot;,&quot;ScaleRate&quot;))</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
                                         <event-block sid="869270336991538">
                                             <conditions>
                                                 <condition id="60" inverted="1" name="Is undefined" sid="507560036786765" type="JSON_Background">
@@ -16758,7 +16946,7 @@
                                             </conditions>
                                             <actions>
                                                 <action id="-34" name="Set layer background color" sid="738457150792608" type="System">
-                                                    <param id="0" name="Layer">&quot;BG&quot;</param>
+                                                    <param id="0" name="Layer">&quot;BGIgnoreScale&quot;</param>
                                                     <param id="1" name="Color">rgb(int(tokenat(JSON_Background.Value(0,&quot;Background&quot;,&quot;Color&quot;),0,&quot;,&quot;)), int(tokenat(JSON_Background.Value(0,&quot;Background&quot;,&quot;Color&quot;),1,&quot;,&quot;)), int(tokenat(JSON_Background.Value(0,&quot;Background&quot;,&quot;Color&quot;),2,&quot;,&quot;)))</param>
                                                 </action>
                                             </actions>
@@ -16984,11 +17172,6 @@
                     <sub-events>
                         <event-block sid="905287690792525">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="109505028039538" type="Custom_Backgrounds">
-                                    <param id="0" name="Instance variable">ParallaxX</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
                                 <condition id="-7" name="Compare instance variable" sid="363878449332723" type="Custom_Backgrounds">
                                     <param id="0" name="Instance variable">ScrollX</param>
                                     <param id="1" name="Comparison">4</param>
@@ -17004,11 +17187,6 @@
                         </event-block>
                         <event-block sid="557828184694711">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="375310106843151" type="Custom_Backgrounds">
-                                    <param id="0" name="Instance variable">ParallaxY</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
                                 <condition id="-7" name="Compare instance variable" sid="170517883261921" type="Custom_Backgrounds">
                                     <param id="0" name="Instance variable">ScrollY</param>
                                     <param id="1" name="Comparison">4</param>
@@ -17025,12 +17203,6 @@
                         <event-block sid="169719024756692">
                             <conditions />
                             <actions>
-                                <action id="-1" name="Set X" sid="800786715577470" type="Custom_Backgrounds">
-                                    <param id="0" name="X">Self.InitialX</param>
-                                </action>
-                                <action id="-2" name="Set Y" sid="138839932087353" type="Custom_Backgrounds">
-                                    <param id="0" name="Y">Self.InitialY</param>
-                                </action>
                                 <action id="-5" name="Set width" sid="982595431352251" type="Custom_Backgrounds">
                                     <param id="0" name="Width">Self.ImageWidth</param>
                                 </action>
@@ -17039,94 +17211,117 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="260990969373962">
+                        <event-block sid="565039248509174">
                             <conditions>
-                                <condition id="-8" inverted="1" name="Compare two values" sid="153206398768146" type="System">
-                                    <param id="0" name="First value">find(JSON_Background.Value(0,Custom_Backgrounds.ID,&quot;Flags&quot;),&quot;Foreground|&quot;)</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">-1</param>
+                                <condition id="60" inverted="1" name="Is undefined" sid="169147168117241" type="JSON_Background">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}">Custom_Backgrounds.ID{###}&quot;Flags&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-26" name="Move to layer" sid="568524016632427" type="Custom_Backgrounds">
-                                    <param id="0" name="Layer">&quot;BGHigh&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="331441695379745">
-                            <conditions>
-                                <condition id="-8" inverted="1" name="Compare two values" sid="335031220101656" type="System">
-                                    <param id="0" name="First value">find(JSON_Background.Value(0,Custom_Backgrounds.ID,&quot;Flags&quot;),&quot;TileX|&quot;)</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">-1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-5" name="Set width" sid="729008345519587" type="Custom_Backgrounds">
-                                    <param id="0" name="Width">Self.ImageWidth*ceil(Var_Room.Width/Self.ImageWidth)+Self.ImageWidth</param>
-                                </action>
-                            </actions>
+                            <actions />
                             <sub-events>
-                                <event-block sid="198454960438037">
+                                <event-block sid="260990969373962">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="467800979640389" type="Custom_Backgrounds">
-                                            <param id="0" name="Instance variable">InitialX</param>
-                                            <param id="1" name="Comparison">2</param>
-                                            <param id="2" name="Value">0</param>
+                                        <condition id="-8" inverted="1" name="Compare two values" sid="153206398768146" type="System">
+                                            <param id="0" name="First value">find(JSON_Background.Value(0,Custom_Backgrounds.ID,&quot;Flags&quot;),&quot;Foreground|&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">-1</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-5" name="Set width" sid="224311274966527" type="Custom_Backgrounds">
-                                            <param id="0" name="Width">Self.Width+abs(Self.InitialX)</param>
+                                        <action id="-26" name="Move to layer" sid="568524016632427" type="Custom_Backgrounds">
+                                            <param id="0" name="Layer">&quot;BGHigh&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="331441695379745">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Compare two values" sid="335031220101656" type="System">
+                                            <param id="0" name="First value">find(JSON_Background.Value(0,Custom_Backgrounds.ID,&quot;Flags&quot;),&quot;TileX|&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">-1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-5" name="Set width" sid="729008345519587" type="Custom_Backgrounds">
+                                            <param id="0" name="Width">Self.ImageWidth*2+(Self.ImageWidth*ceil(Var_Room.Width/Self.ImageWidth))+abs(Self.InitialX)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="846720471988864">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Compare two values" sid="157945551756786" type="System">
+                                            <param id="0" name="First value">find(JSON_Background.Value(0,Custom_Backgrounds.ID,&quot;Flags&quot;),&quot;TileY|&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">-1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-6" name="Set height" sid="408103753673798" type="Custom_Backgrounds">
+                                            <param id="0" name="Height">Self.ImageHeight*2+(Self.ImageHeight*ceil(Var_Room.Height/Self.ImageHeight))+abs(Self.InitialY)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="359547273735282">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Compare two values" sid="436020606316782" type="System">
+                                            <param id="0" name="First value">find(JSON_Background.Value(0,Custom_Backgrounds.ID,&quot;Flags&quot;),&quot;YRoomBottom|&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">-1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="860404016926173" type="Custom_Backgrounds">
+                                            <param id="0" name="Instance variable">YRoomBottom</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="404049192347330">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Compare two values" sid="135687179946149" type="System">
+                                            <param id="0" name="First value">find(JSON_Background.Value(0,Custom_Backgrounds.ID,&quot;Flags&quot;),&quot;XCameraRight|&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">-1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="322932449085776" type="Custom_Backgrounds">
+                                            <param id="0" name="Instance variable">XCameraRight</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="150391520521657">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Compare two values" sid="642238541747763" type="System">
+                                            <param id="0" name="First value">find(JSON_Background.Value(0,Custom_Backgrounds.ID,&quot;Flags&quot;),&quot;YCameraBottom|&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">-1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="761222211185965" type="Custom_Backgrounds">
+                                            <param id="0" name="Instance variable">YCameraBottom</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="813020750760409">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Compare two values" sid="268890827566543" type="System">
+                                            <param id="0" name="First value">find(JSON_Background.Value(0,Custom_Backgrounds.ID,&quot;Flags&quot;),&quot;IgnoreScale|&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">-1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-26" name="Move to layer" sid="797294181718373" type="Custom_Backgrounds">
+                                            <param id="0" name="Layer">&quot;BGIgnoreScale&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
-                        </event-block>
-                        <event-block sid="846720471988864">
-                            <conditions>
-                                <condition id="-8" inverted="1" name="Compare two values" sid="157945551756786" type="System">
-                                    <param id="0" name="First value">find(JSON_Background.Value(0,Custom_Backgrounds.ID,&quot;Flags&quot;),&quot;TileY|&quot;)</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">-1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-6" name="Set height" sid="408103753673798" type="Custom_Backgrounds">
-                                    <param id="0" name="Height">Self.ImageHeight*ceil(Var_Room.Height/Self.ImageHeight)+Self.ImageHeight</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="905706048520386">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="675438283477227" type="Custom_Backgrounds">
-                                            <param id="0" name="Instance variable">InitialY</param>
-                                            <param id="1" name="Comparison">2</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-6" name="Set height" sid="367446522098490" type="Custom_Backgrounds">
-                                            <param id="0" name="Height">Self.Height+abs(Self.InitialY)</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <comment>the Y that corresponds with the bottom of the screen is ImageHeight</comment>
-                        <event-block sid="359547273735282">
-                            <conditions>
-                                <condition id="-8" inverted="1" name="Compare two values" sid="436020606316782" type="System">
-                                    <param id="0" name="First value">find(JSON_Background.Value(0,Custom_Backgrounds.ID,&quot;Flags&quot;),&quot;YRoomBottom|&quot;)</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">-1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-2" name="Set Y" sid="690251137396596" type="Custom_Backgrounds">
-                                    <param id="0" name="Y">Var_Room.Height-Self.ImageHeight-(Self.ImageHeight-Self.InitialY)</param>
-                                </action>
-                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
