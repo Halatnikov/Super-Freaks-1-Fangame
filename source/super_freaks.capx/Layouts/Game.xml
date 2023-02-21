@@ -67,6 +67,10 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <TileWidth>0</TileWidth>
+                        <TileHeight>0</TileHeight>
+                        <TileX>false</TileX>
+                        <TileY>false</TileY>
                         <XCameraRight>false</XCameraRight>
                         <YCameraBottom>false</YCameraBottom>
                         <YRoomBottom>false</YRoomBottom>
@@ -106,6 +110,10 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <TileWidth>0</TileWidth>
+                        <TileHeight>0</TileHeight>
+                        <TileX>false</TileX>
+                        <TileY>false</TileY>
                         <XCameraRight>false</XCameraRight>
                         <YCameraBottom>false</YCameraBottom>
                         <YRoomBottom>false</YRoomBottom>
@@ -145,6 +153,10 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <TileWidth>0</TileWidth>
+                        <TileHeight>0</TileHeight>
+                        <TileX>false</TileX>
+                        <TileY>false</TileY>
                         <XCameraRight>false</XCameraRight>
                         <YCameraBottom>false</YCameraBottom>
                         <YRoomBottom>false</YRoomBottom>
@@ -184,6 +196,10 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <TileWidth>0</TileWidth>
+                        <TileHeight>0</TileHeight>
+                        <TileX>false</TileX>
+                        <TileY>false</TileY>
                         <XCameraRight>false</XCameraRight>
                         <YCameraBottom>false</YCameraBottom>
                         <YRoomBottom>false</YRoomBottom>
@@ -223,6 +239,10 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <TileWidth>0</TileWidth>
+                        <TileHeight>0</TileHeight>
+                        <TileX>false</TileX>
+                        <TileY>false</TileY>
                         <XCameraRight>false</XCameraRight>
                         <YCameraBottom>false</YCameraBottom>
                         <YRoomBottom>false</YRoomBottom>
@@ -262,6 +282,10 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <TileWidth>0</TileWidth>
+                        <TileHeight>0</TileHeight>
+                        <TileX>false</TileX>
+                        <TileY>false</TileY>
                         <XCameraRight>false</XCameraRight>
                         <YCameraBottom>false</YCameraBottom>
                         <YRoomBottom>false</YRoomBottom>
@@ -301,6 +325,10 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <TileWidth>0</TileWidth>
+                        <TileHeight>0</TileHeight>
+                        <TileX>false</TileX>
+                        <TileY>false</TileY>
                         <XCameraRight>false</XCameraRight>
                         <YCameraBottom>false</YCameraBottom>
                         <YRoomBottom>false</YRoomBottom>
@@ -340,6 +368,10 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <TileWidth>0</TileWidth>
+                        <TileHeight>0</TileHeight>
+                        <TileX>false</TileX>
+                        <TileY>false</TileY>
                         <XCameraRight>false</XCameraRight>
                         <YCameraBottom>false</YCameraBottom>
                         <YRoomBottom>false</YRoomBottom>
@@ -379,6 +411,10 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <TileWidth>0</TileWidth>
+                        <TileHeight>0</TileHeight>
+                        <TileX>false</TileX>
+                        <TileY>false</TileY>
                         <XCameraRight>false</XCameraRight>
                         <YCameraBottom>false</YCameraBottom>
                         <YRoomBottom>false</YRoomBottom>
@@ -418,6 +454,10 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <TileWidth>0</TileWidth>
+                        <TileHeight>0</TileHeight>
+                        <TileX>false</TileX>
+                        <TileY>false</TileY>
                         <XCameraRight>false</XCameraRight>
                         <YCameraBottom>false</YCameraBottom>
                         <YRoomBottom>false</YRoomBottom>
@@ -457,6 +497,10 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <TileWidth>0</TileWidth>
+                        <TileHeight>0</TileHeight>
+                        <TileX>false</TileX>
+                        <TileY>false</TileY>
                         <XCameraRight>false</XCameraRight>
                         <YCameraBottom>false</YCameraBottom>
                         <YRoomBottom>false</YRoomBottom>
@@ -496,6 +540,10 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <TileWidth>0</TileWidth>
+                        <TileHeight>0</TileHeight>
+                        <TileX>false</TileX>
+                        <TileY>false</TileY>
                         <XCameraRight>false</XCameraRight>
                         <YCameraBottom>false</YCameraBottom>
                         <YRoomBottom>false</YRoomBottom>
@@ -535,6 +583,10 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <TileWidth>0</TileWidth>
+                        <TileHeight>0</TileHeight>
+                        <TileX>false</TileX>
+                        <TileY>false</TileY>
                         <XCameraRight>false</XCameraRight>
                         <YCameraBottom>false</YCameraBottom>
                         <YRoomBottom>false</YRoomBottom>
@@ -574,6 +626,10 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <TileWidth>0</TileWidth>
+                        <TileHeight>0</TileHeight>
+                        <TileX>false</TileX>
+                        <TileY>false</TileY>
                         <XCameraRight>false</XCameraRight>
                         <YCameraBottom>false</YCameraBottom>
                         <YRoomBottom>false</YRoomBottom>
@@ -613,6 +669,10 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <TileWidth>0</TileWidth>
+                        <TileHeight>0</TileHeight>
+                        <TileX>false</TileX>
+                        <TileY>false</TileY>
                         <XCameraRight>false</XCameraRight>
                         <YCameraBottom>false</YCameraBottom>
                         <YRoomBottom>false</YRoomBottom>
@@ -652,6 +712,10 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <TileWidth>0</TileWidth>
+                        <TileHeight>0</TileHeight>
+                        <TileX>false</TileX>
+                        <TileY>false</TileY>
                         <XCameraRight>false</XCameraRight>
                         <YCameraBottom>false</YCameraBottom>
                         <YRoomBottom>false</YRoomBottom>
@@ -691,6 +755,10 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <TileWidth>0</TileWidth>
+                        <TileHeight>0</TileHeight>
+                        <TileX>false</TileX>
+                        <TileY>false</TileY>
                         <XCameraRight>false</XCameraRight>
                         <YCameraBottom>false</YCameraBottom>
                         <YRoomBottom>false</YRoomBottom>
@@ -730,6 +798,10 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <TileWidth>0</TileWidth>
+                        <TileHeight>0</TileHeight>
+                        <TileX>false</TileX>
+                        <TileY>false</TileY>
                         <XCameraRight>false</XCameraRight>
                         <YCameraBottom>false</YCameraBottom>
                         <YRoomBottom>false</YRoomBottom>
@@ -769,6 +841,10 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <TileWidth>0</TileWidth>
+                        <TileHeight>0</TileHeight>
+                        <TileX>false</TileX>
+                        <TileY>false</TileY>
                         <XCameraRight>false</XCameraRight>
                         <YCameraBottom>false</YCameraBottom>
                         <YRoomBottom>false</YRoomBottom>
@@ -808,6 +884,10 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <TileWidth>0</TileWidth>
+                        <TileHeight>0</TileHeight>
+                        <TileX>false</TileX>
+                        <TileY>false</TileY>
                         <XCameraRight>false</XCameraRight>
                         <YCameraBottom>false</YCameraBottom>
                         <YRoomBottom>false</YRoomBottom>
@@ -847,6 +927,10 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <TileWidth>0</TileWidth>
+                        <TileHeight>0</TileHeight>
+                        <TileX>false</TileX>
+                        <TileY>false</TileY>
                         <XCameraRight>false</XCameraRight>
                         <YCameraBottom>false</YCameraBottom>
                         <YRoomBottom>false</YRoomBottom>
@@ -886,6 +970,10 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <TileWidth>0</TileWidth>
+                        <TileHeight>0</TileHeight>
+                        <TileX>false</TileX>
+                        <TileY>false</TileY>
                         <XCameraRight>false</XCameraRight>
                         <YCameraBottom>false</YCameraBottom>
                         <YRoomBottom>false</YRoomBottom>
@@ -925,6 +1013,10 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <TileWidth>0</TileWidth>
+                        <TileHeight>0</TileHeight>
+                        <TileX>false</TileX>
+                        <TileY>false</TileY>
                         <XCameraRight>false</XCameraRight>
                         <YCameraBottom>false</YCameraBottom>
                         <YRoomBottom>false</YRoomBottom>
@@ -964,6 +1056,10 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <TileWidth>0</TileWidth>
+                        <TileHeight>0</TileHeight>
+                        <TileX>false</TileX>
+                        <TileY>false</TileY>
                         <XCameraRight>false</XCameraRight>
                         <YCameraBottom>false</YCameraBottom>
                         <YRoomBottom>false</YRoomBottom>
@@ -1003,6 +1099,10 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <TileWidth>0</TileWidth>
+                        <TileHeight>0</TileHeight>
+                        <TileX>false</TileX>
+                        <TileY>false</TileY>
                         <XCameraRight>false</XCameraRight>
                         <YCameraBottom>false</YCameraBottom>
                         <YRoomBottom>false</YRoomBottom>
@@ -1042,6 +1142,10 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <TileWidth>0</TileWidth>
+                        <TileHeight>0</TileHeight>
+                        <TileX>false</TileX>
+                        <TileY>false</TileY>
                         <XCameraRight>false</XCameraRight>
                         <YCameraBottom>false</YCameraBottom>
                         <YRoomBottom>false</YRoomBottom>
@@ -1081,6 +1185,10 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <TileWidth>0</TileWidth>
+                        <TileHeight>0</TileHeight>
+                        <TileX>false</TileX>
+                        <TileY>false</TileY>
                         <XCameraRight>false</XCameraRight>
                         <YCameraBottom>false</YCameraBottom>
                         <YRoomBottom>false</YRoomBottom>
@@ -1120,6 +1228,10 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <TileWidth>0</TileWidth>
+                        <TileHeight>0</TileHeight>
+                        <TileX>false</TileX>
+                        <TileY>false</TileY>
                         <XCameraRight>false</XCameraRight>
                         <YCameraBottom>false</YCameraBottom>
                         <YRoomBottom>false</YRoomBottom>
@@ -1159,6 +1271,10 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <TileWidth>0</TileWidth>
+                        <TileHeight>0</TileHeight>
+                        <TileX>false</TileX>
+                        <TileY>false</TileY>
                         <XCameraRight>false</XCameraRight>
                         <YCameraBottom>false</YCameraBottom>
                         <YRoomBottom>false</YRoomBottom>
@@ -1198,6 +1314,10 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <TileWidth>0</TileWidth>
+                        <TileHeight>0</TileHeight>
+                        <TileX>false</TileX>
+                        <TileY>false</TileY>
                         <XCameraRight>false</XCameraRight>
                         <YCameraBottom>false</YCameraBottom>
                         <YRoomBottom>false</YRoomBottom>
@@ -1237,6 +1357,10 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <TileWidth>0</TileWidth>
+                        <TileHeight>0</TileHeight>
+                        <TileX>false</TileX>
+                        <TileY>false</TileY>
                         <XCameraRight>false</XCameraRight>
                         <YCameraBottom>false</YCameraBottom>
                         <YRoomBottom>false</YRoomBottom>
@@ -1276,6 +1400,10 @@
                         <AnimationFrame>0</AnimationFrame>
                         <OffsetScrollX>0</OffsetScrollX>
                         <OffsetScrollY>0</OffsetScrollY>
+                        <TileWidth>0</TileWidth>
+                        <TileHeight>0</TileHeight>
+                        <TileX>false</TileX>
+                        <TileY>false</TileY>
                         <XCameraRight>false</XCameraRight>
                         <YCameraBottom>false</YCameraBottom>
                         <YRoomBottom>false</YRoomBottom>
@@ -1343,6 +1471,10 @@
                         <tile-y-spacing>0</tile-y-spacing>
                         <seamless-mode>On</seamless-mode>
                     </properties>
+                    <instance-variables>
+                        <ImageWidth>0</ImageWidth>
+                        <ImageHeight>0</ImageHeight>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -6004,6 +6136,28 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="DummySprite" uid="119">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>445</x>
+                        <y>-44</y>
+                        <z>0</z>
+                        <width>48</width>
+                        <height>40</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -6038,8 +6192,8 @@
                 <GameState></GameState>
                 <GameMode></GameMode>
                 <Level></Level>
-                <Room>Stage7-4</Room>
-                <ImportEngine>GM8_3</ImportEngine>
+                <Room>rmChilledCavern2</Room>
+                <ImportEngine>GMS1</ImportEngine>
             </instance-variables>
         </instance>
         <instance type="Var_Player" uid="77">

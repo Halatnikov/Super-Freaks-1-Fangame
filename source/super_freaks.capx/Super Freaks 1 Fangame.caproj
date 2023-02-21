@@ -2,7 +2,7 @@
 <c2project>
     <name>Super Freaks 1 Fangame</name>
     <description></description>
-    <version>0.4.0-6</version>
+    <version>0.4.0-7</version>
     <author>Halatnikov</author>
     <author-email></author-email>
     <author-website>https://halatnikov.github.io</author-website>
@@ -3417,6 +3417,10 @@
         <object-folder name="Level">
             <object-type name="Tiles_Main" sid="569645948577950">
                 <plugin id="Tilemap" />
+                <instance-variables>
+                    <instance-variable name="ImageWidth" sid="541913609877979" type="number" />
+                    <instance-variable name="ImageHeight" sid="452178794159756" type="number" />
+                </instance-variables>
                 <texture />
                 <tiles />
             </object-type>
@@ -4094,6 +4098,14 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="DummySprite" sid="639714436703108">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="259242360369431" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Custom">
             <object-folder name="Backgrounds">
@@ -4476,6 +4488,10 @@
                 <instance-variable name="AnimationFrame" sid="834550820695699" type="number" />
                 <instance-variable name="OffsetScrollX" sid="259749702810671" type="number" />
                 <instance-variable name="OffsetScrollY" sid="780942964748514" type="number" />
+                <instance-variable name="TileWidth" sid="807274331084152" type="number" />
+                <instance-variable name="TileHeight" sid="835569616139504" type="number" />
+                <instance-variable name="TileX" sid="276475893980580" type="boolean" />
+                <instance-variable name="TileY" sid="397095022640048" type="boolean" />
                 <instance-variable name="XCameraRight" sid="741747935121038" type="boolean" />
                 <instance-variable name="YCameraBottom" sid="779824842230210" type="boolean" />
                 <instance-variable name="YRoomBottom" sid="647732571264375" type="boolean" />
