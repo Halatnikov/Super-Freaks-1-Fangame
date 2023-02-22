@@ -252,6 +252,11 @@
                                     <param id="1" name="Reference point">0</param>
                                     <param id="2" name="Key {n}">&quot;Config&quot;</param>
                                 </action>
+                                <action id="60" name="LoadJSON" sid="573664466789528" type="JSON_PERSIST">
+                                    <param id="0" name="JSON">INI.INI2JSON(NWjs.ReadFile(Var_CONSTANTS.Path_Assets&amp;&quot;\assets\ogmo.ini&quot;))</param>
+                                    <param id="1" name="Reference point">0</param>
+                                    <param id="2" name="Key {n}">&quot;Ogmo&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="244078225517017">
@@ -790,6 +795,18 @@
                 <action id="-10" name="Set value" sid="677873880387433" type="Var_CONSTANTS">
                     <param id="0" name="Instance variable">ExecJS_Return</param>
                     <param id="1" name="Value">Function.Param(0)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="722973730869300">
+            <conditions>
+                <condition id="0" name="On function" sid="321014315393566" type="Function">
+                    <param id="0" name="Name">&quot;Util_RoundToDp&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="607307007926909" type="Function">
+                    <param id="0" name="Value">float(left(str(Function.Param(0)),len(str(int(Function.Param(0))))+1+Function.Param(1)))</param>
                 </action>
             </actions>
         </event-block>

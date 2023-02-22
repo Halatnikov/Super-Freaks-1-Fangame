@@ -2,7 +2,7 @@
 <c2project>
     <name>Super Freaks 1 Fangame</name>
     <description></description>
-    <version>0.4.0-7</version>
+    <version>0.4.0-8</version>
     <author>Halatnikov</author>
     <author-email></author-email>
     <author-website>https://halatnikov.github.io</author-website>
@@ -32,7 +32,6 @@
         <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
         <plugin author="Valera Popov" id="ValerypopoffEase" version="1">Valerypopoff Ease</plugin>
         <plugin author="Scirra" id="XML" version="1">XML</plugin>
-        <plugin author="R0J0hound" id="rojo_spritesheet" version="1">Sprite sheet</plugin>
         <plugin author="&lt;your name/organisation&gt;" id="xml2json" version="1">xml2json</plugin>
     </used-plugins>
     <used-behaviors>
@@ -149,6 +148,9 @@
                 <plugin id="Photon" />
             </object-type>
             <object-type global="1" name="JSON_Background" sid="477807435174117">
+                <plugin id="JSON" />
+            </object-type>
+            <object-type global="1" name="JSON_OgmoEditor" sid="158331974576989">
                 <plugin id="JSON" />
             </object-type>
         </object-folder>
@@ -3418,8 +3420,7 @@
             <object-type name="Tiles_Main" sid="569645948577950">
                 <plugin id="Tilemap" />
                 <instance-variables>
-                    <instance-variable name="ImageWidth" sid="541913609877979" type="number" />
-                    <instance-variable name="ImageHeight" sid="452178794159756" type="number" />
+                    <instance-variable name="Tileset" sid="930898280886703" type="string" />
                 </instance-variables>
                 <texture />
                 <tiles />
@@ -3480,10 +3481,6 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\Sprites\Level Design\spr_view_trapper.png" />
                     </animation>
                 </animation-folder>
-            </object-type>
-            <object-type name="Tiles_GMS1" sid="841165400702499">
-                <plugin id="rojo_spritesheet" />
-                <texture />
             </object-type>
             <object-type name="Level_Water" sid="902501552467994">
                 <plugin id="TiledSprite" />
@@ -4026,10 +4023,6 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="Tiles_GM8" sid="195484576286120">
-                <plugin id="rojo_spritesheet" />
-                <texture />
-            </object-type>
             <object-type name="Player_SuitFist" sid="116471528834366">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -4098,13 +4091,15 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="DummySprite" sid="639714436703108">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="259242360369431" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
+            <object-type name="Tiles_Main1" sid="391958346403097">
+                <plugin id="Tilemap" />
+                <texture />
+                <tiles />
+            </object-type>
+            <object-type name="Tiles_Main2" sid="310998088862414">
+                <plugin id="Tilemap" />
+                <texture />
+                <tiles />
             </object-type>
         </object-folder>
         <object-folder name="Custom">
@@ -4314,6 +4309,7 @@
             <instance-variables>
                 <instance-variable name="Obj_ImportID" sid="355071632191646" type="string" />
                 <instance-variable name="Obj_ImportInstance" sid="243342808568357" type="string" />
+                <instance-variable name="Obj_ExportID" sid="860034461148031" type="string" />
                 <instance-variable name="Obj_Difficulty" sid="595234781307880" type="string" />
             </instance-variables>
         </family>
@@ -4428,6 +4424,7 @@
             </members>
             <instance-variables>
                 <instance-variable name="ID" sid="435863362506392" type="string" />
+                <instance-variable name="Export" sid="940532147117614" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Solid" sid="109109887936275">

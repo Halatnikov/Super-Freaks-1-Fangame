@@ -227,6 +227,7 @@
         <instance type="JSON_PERSIST" uid="111" />
         <instance type="XML_COMMON" uid="115" />
         <instance type="JSON_Background" uid="202" />
+        <instance type="JSON_OgmoEditor" uid="51" />
     </nonworld-instances>
     <effects />
 </c2layout>
