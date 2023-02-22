@@ -2,7 +2,7 @@
 
 ###### IGNORE
 
-SuperFreaks/export/
+SuperFreaks/export/*
 
 # Construct 2 files
 #*.autosave
@@ -29,3 +29,5 @@ desktop.ini
 
 # A file to prevent ignoring of empty directories
 !*.empty
+
+!super_freaks.ogmo
