@@ -106,11 +106,6 @@
                                     <param id="1" name="Reference point">0</param>
                                     <param id="2" name="Key {n}">&quot;ogmoVersion&quot;</param>
                                 </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="714186711473545">
-                            <conditions />
-                            <actions>
                                 <action id="20" name="Set Value" sid="984004427261012" type="JSON_OgmoEditor">
                                     <param id="0" name="Value">Var_Room.Width</param>
                                     <param id="1" name="Reference point">0</param>
@@ -598,7 +593,6 @@
                                             </conditions>
                                             <actions />
                                             <sub-events>
-                                                <comment>yorb</comment>
                                                 <event-block sid="286461463489390">
                                                     <conditions>
                                                         <condition id="-7" name="Compare instance variable" sid="584308354433399" type="LevelObjects">
@@ -657,17 +651,12 @@
                                                     <actions>
                                                         <action id="0" name="Call function" sid="634952400041208" type="Function">
                                                             <param id="0" name="Name">&quot;Export_AddObject&quot;</param>
-                                                            <param id="1" name="Parameter {n}">LevelObjects.UID{###}&quot;&quot;</param>
+                                                            <param id="1" name="Parameter {n}">LevelObjects.UID{###}&quot;NoAngle|&quot;</param>
                                                         </action>
                                                         <action id="20" name="Set Value" sid="855760100421165" type="JSON_OgmoEditor">
                                                             <param id="0" name="Value">Obj_YorbStar.checkpoint_id</param>
                                                             <param id="1" name="Reference point">0</param>
                                                             <param id="2" name="Key {n}">&quot;layers&quot;{###}JSON_OgmoEditor.Size(0,&quot;layers&quot;)-1{###}&quot;entities&quot;{###}Function.ReturnValue{###}&quot;values&quot;{###}&quot;Checkpoint ID&quot;</param>
-                                                        </action>
-                                                        <action id="20" name="Set Value" sid="854456997911611" type="JSON_OgmoEditor">
-                                                            <param id="0" name="Value">0</param>
-                                                            <param id="1" name="Reference point">0</param>
-                                                            <param id="2" name="Key {n}">&quot;layers&quot;{###}JSON_OgmoEditor.Size(0,&quot;layers&quot;)-1{###}&quot;entities&quot;{###}Function.ReturnValue{###}&quot;rotation&quot;</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -747,6 +736,165 @@
                                                             <param id="2" name="Key {n}">&quot;layers&quot;{###}JSON_OgmoEditor.Size(0,&quot;layers&quot;)-1{###}&quot;entities&quot;{###}Function.ReturnValue{###}&quot;values&quot;{###}&quot;ID&quot;</param>
                                                         </action>
                                                     </actions>
+                                                </event-block>
+                                                <event-block sid="191202011600903">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="342858179328816" type="LevelObjects">
+                                                            <param id="0" name="Instance variable">Obj_ExportID</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;obj_number_star&quot;</param>
+                                                        </condition>
+                                                        <condition id="-33" name="Pick by comparison" sid="584752908275825" type="System">
+                                                            <param id="0" name="Object">Obj_NumberStar</param>
+                                                            <param id="1" name="Expression">Obj_NumberStar.UID</param>
+                                                            <param id="2" name="Comparison">0</param>
+                                                            <param id="3" name="Value">LevelObjects.UID</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <variable constant="0" name="trophy" sid="358770104921608" static="1" type="number">0</variable>
+                                                        <event-block sid="999945413537074">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="485882345034229" type="Obj_NumberStar">
+                                                                    <param id="0" name="Instance variable">ID</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">1</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Call function" sid="118160243307138" type="Function">
+                                                                    <param id="0" name="Name">&quot;Export_AddObject&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">LevelObjects.UID{###}&quot;NoAngle|&quot;</param>
+                                                                </action>
+                                                                <action id="20" name="Set Value" sid="470055943720033" type="JSON_OgmoEditor">
+                                                                    <param id="0" name="Value">Obj_NumberStar.TrophyID</param>
+                                                                    <param id="1" name="Reference point">0</param>
+                                                                    <param id="2" name="Key {n}">&quot;layers&quot;{###}JSON_OgmoEditor.Size(0,&quot;layers&quot;)-1{###}&quot;entities&quot;{###}Function.ReturnValue{###}&quot;values&quot;{###}&quot;Trophy ID&quot;</param>
+                                                                </action>
+                                                                <action id="10" name="Set New Array" sid="779667627619172" type="JSON_OgmoEditor">
+                                                                    <param id="0" name="Reference point">0</param>
+                                                                    <param id="1" name="Key {n}">&quot;layers&quot;{###}JSON_OgmoEditor.Size(0,&quot;layers&quot;)-1{###}&quot;entities&quot;{###}Function.ReturnValue{###}&quot;nodes&quot;</param>
+                                                                </action>
+                                                                <action id="-9" name="Set value" sid="747474846779441" type="System">
+                                                                    <param id="0" name="Variable">trophy</param>
+                                                                    <param id="1" name="Value">Obj_NumberStar.TrophyID</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="954943708749414">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="470102513145001" type="Obj_NumberStar">
+                                                                    <param id="0" name="Instance variable">ID</param>
+                                                                    <param id="1" name="Comparison">4</param>
+                                                                    <param id="2" name="Value">1</param>
+                                                                </condition>
+                                                                <condition id="-7" name="Compare instance variable" sid="172625459876341" type="Obj_NumberStar">
+                                                                    <param id="0" name="Instance variable">TrophyID</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">trophy</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Set New Object" sid="147360831196508" type="JSON_OgmoEditor">
+                                                                    <param id="0" name="Reference point">0</param>
+                                                                    <param id="1" name="Key {n}">&quot;layers&quot;{###}JSON_OgmoEditor.Size(0,&quot;layers&quot;)-1{###}&quot;entities&quot;{###}Function.ReturnValue{###}&quot;nodes&quot;{###}Obj_NumberStar.ID-2</param>
+                                                                </action>
+                                                                <action id="20" name="Set Value" sid="112390133569129" type="JSON_OgmoEditor">
+                                                                    <param id="0" name="Value">Obj_NumberStar.X</param>
+                                                                    <param id="1" name="Reference point">0</param>
+                                                                    <param id="2" name="Key {n}">&quot;layers&quot;{###}JSON_OgmoEditor.Size(0,&quot;layers&quot;)-1{###}&quot;entities&quot;{###}Function.ReturnValue{###}&quot;nodes&quot;{###}Obj_NumberStar.ID-2{###}&quot;x&quot;</param>
+                                                                </action>
+                                                                <action id="20" name="Set Value" sid="345282386675669" type="JSON_OgmoEditor">
+                                                                    <param id="0" name="Value">Obj_NumberStar.Y</param>
+                                                                    <param id="1" name="Reference point">0</param>
+                                                                    <param id="2" name="Key {n}">&quot;layers&quot;{###}JSON_OgmoEditor.Size(0,&quot;layers&quot;)-1{###}&quot;entities&quot;{###}Function.ReturnValue{###}&quot;nodes&quot;{###}Obj_NumberStar.ID-2{###}&quot;y&quot;</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="749720990483179">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="295804817377100" type="LevelObjects">
+                                                            <param id="0" name="Instance variable">Obj_ExportID</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;obj_time_star&quot;</param>
+                                                        </condition>
+                                                        <condition id="-33" name="Pick by comparison" sid="673411288445727" type="System">
+                                                            <param id="0" name="Object">Obj_TimeStar</param>
+                                                            <param id="1" name="Expression">Obj_TimeStar.UID</param>
+                                                            <param id="2" name="Comparison">0</param>
+                                                            <param id="3" name="Value">LevelObjects.UID</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <variable constant="0" name="trophy" sid="376250594899019" static="1" type="number">0</variable>
+                                                        <event-block sid="232383460938657">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="272634160421482" type="Obj_TimeStar">
+                                                                    <param id="0" name="Instance variable">ID</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">1</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Call function" sid="724533741428332" type="Function">
+                                                                    <param id="0" name="Name">&quot;Export_AddObject&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">LevelObjects.UID{###}&quot;NoAngle|&quot;</param>
+                                                                </action>
+                                                                <action id="20" name="Set Value" sid="530246920919274" type="JSON_OgmoEditor">
+                                                                    <param id="0" name="Value">Obj_TimeStar.TrophyID</param>
+                                                                    <param id="1" name="Reference point">0</param>
+                                                                    <param id="2" name="Key {n}">&quot;layers&quot;{###}JSON_OgmoEditor.Size(0,&quot;layers&quot;)-1{###}&quot;entities&quot;{###}Function.ReturnValue{###}&quot;values&quot;{###}&quot;Trophy ID&quot;</param>
+                                                                </action>
+                                                                <action id="20" name="Set Value" sid="798317181904972" type="JSON_OgmoEditor">
+                                                                    <param id="0" name="Value">Obj_TimeStar.TrophyID</param>
+                                                                    <param id="1" name="Reference point">0</param>
+                                                                    <param id="2" name="Key {n}">&quot;layers&quot;{###}JSON_OgmoEditor.Size(0,&quot;layers&quot;)-1{###}&quot;entities&quot;{###}Function.ReturnValue{###}&quot;values&quot;{###}&quot;Trophy ID&quot;</param>
+                                                                </action>
+                                                                <action id="10" name="Set New Array" sid="182502506076759" type="JSON_OgmoEditor">
+                                                                    <param id="0" name="Reference point">0</param>
+                                                                    <param id="1" name="Key {n}">&quot;layers&quot;{###}JSON_OgmoEditor.Size(0,&quot;layers&quot;)-1{###}&quot;entities&quot;{###}Function.ReturnValue{###}&quot;nodes&quot;</param>
+                                                                </action>
+                                                                <action id="-9" name="Set value" sid="688964612102386" type="System">
+                                                                    <param id="0" name="Variable">trophy</param>
+                                                                    <param id="1" name="Value">Obj_TimeStar.TrophyID</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="393296936815977">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="968242734787943" type="Obj_TimeStar">
+                                                                    <param id="0" name="Instance variable">ID</param>
+                                                                    <param id="1" name="Comparison">4</param>
+                                                                    <param id="2" name="Value">1</param>
+                                                                </condition>
+                                                                <condition id="-7" name="Compare instance variable" sid="910562161055180" type="Obj_TimeStar">
+                                                                    <param id="0" name="Instance variable">TrophyID</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">trophy</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Set New Object" sid="319965127539683" type="JSON_OgmoEditor">
+                                                                    <param id="0" name="Reference point">0</param>
+                                                                    <param id="1" name="Key {n}">&quot;layers&quot;{###}JSON_OgmoEditor.Size(0,&quot;layers&quot;)-1{###}&quot;entities&quot;{###}Function.ReturnValue{###}&quot;nodes&quot;{###}Obj_TimeStar.ID-2</param>
+                                                                </action>
+                                                                <action id="20" name="Set Value" sid="304743182826349" type="JSON_OgmoEditor">
+                                                                    <param id="0" name="Value">Obj_TimeStar.X</param>
+                                                                    <param id="1" name="Reference point">0</param>
+                                                                    <param id="2" name="Key {n}">&quot;layers&quot;{###}JSON_OgmoEditor.Size(0,&quot;layers&quot;)-1{###}&quot;entities&quot;{###}Function.ReturnValue{###}&quot;nodes&quot;{###}Obj_TimeStar.ID-2{###}&quot;x&quot;</param>
+                                                                </action>
+                                                                <action id="20" name="Set Value" sid="704863266236063" type="JSON_OgmoEditor">
+                                                                    <param id="0" name="Value">Obj_TimeStar.Y</param>
+                                                                    <param id="1" name="Reference point">0</param>
+                                                                    <param id="2" name="Key {n}">&quot;layers&quot;{###}JSON_OgmoEditor.Size(0,&quot;layers&quot;)-1{###}&quot;entities&quot;{###}Function.ReturnValue{###}&quot;nodes&quot;{###}Obj_TimeStar.ID-2{###}&quot;y&quot;</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                                 <event-block sid="987001717378988">
                                                     <conditions>
@@ -861,6 +1009,32 @@
                                                         </action>
                                                     </actions>
                                                 </event-block>
+                                                <event-block sid="817066189740562">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="657613851161983" type="LevelObjects">
+                                                            <param id="0" name="Instance variable">Obj_ExportID</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;obj_platform_normal&quot;</param>
+                                                        </condition>
+                                                        <condition id="-33" name="Pick by comparison" sid="464270708178629" type="System">
+                                                            <param id="0" name="Object">Obj_Platform</param>
+                                                            <param id="1" name="Expression">Obj_Platform.UID</param>
+                                                            <param id="2" name="Comparison">0</param>
+                                                            <param id="3" name="Value">LevelObjects.UID</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="784570574959070" type="Function">
+                                                            <param id="0" name="Name">&quot;Export_AddObject&quot;</param>
+                                                            <param id="1" name="Parameter {n}">LevelObjects.UID{###}&quot;OriginX|&quot;</param>
+                                                        </action>
+                                                        <action id="20" name="Set Value" sid="628970651873390" type="JSON_OgmoEditor">
+                                                            <param id="0" name="Value">Obj_Platform.speed_move</param>
+                                                            <param id="1" name="Reference point">0</param>
+                                                            <param id="2" name="Key {n}">&quot;layers&quot;{###}JSON_OgmoEditor.Size(0,&quot;layers&quot;)-1{###}&quot;entities&quot;{###}Function.ReturnValue{###}&quot;values&quot;{###}&quot;Speed X&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
                                                 <event-block sid="718354962113310">
                                                     <conditions>
                                                         <condition id="-7" name="Compare instance variable" sid="606646491402584" type="LevelObjects">
@@ -897,6 +1071,40 @@
                                                         </action>
                                                     </actions>
                                                 </event-block>
+                                                <event-block any="1" sid="147800654397949">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="937517565893639" type="LevelObjects">
+                                                            <param id="0" name="Instance variable">Obj_ExportID</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;obj_boneym&quot;</param>
+                                                        </condition>
+                                                        <condition id="-7" name="Compare instance variable" sid="722421967246316" type="LevelObjects">
+                                                            <param id="0" name="Instance variable">Obj_ExportID</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;obj_boneym_giant&quot;</param>
+                                                        </condition>
+                                                        <condition id="-7" name="Compare instance variable" sid="891546668879492" type="LevelObjects">
+                                                            <param id="0" name="Instance variable">Obj_ExportID</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;obj_pinhead&quot;</param>
+                                                        </condition>
+                                                        <condition id="-7" name="Compare instance variable" sid="726694830437425" type="LevelObjects">
+                                                            <param id="0" name="Instance variable">Obj_ExportID</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;obj_skizzor&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="948384861279955" type="Function">
+                                                            <param id="0" name="Name">&quot;Export_AddObject&quot;</param>
+                                                            <param id="1" name="Parameter {n}">LevelObjects.UID{###}&quot;OriginX|OriginY|&quot;</param>
+                                                        </action>
+                                                        <action id="0" name="Call function" sid="349685352168110" type="Function">
+                                                            <param id="0" name="Name">&quot;Export_AppendEnemy&quot;</param>
+                                                            <param id="1" name="Parameter {n}">LevelObjects.UID{###}Function.ReturnValue{###}&quot;&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
                                             </sub-events>
                                         </event-block>
                                     </sub-events>
@@ -910,7 +1118,7 @@
                                     <param id="0" name="Seconds">0.1</param>
                                 </action>
                                 <action id="0" name="Write file" sid="987320732925895" type="NWjs">
-                                    <param id="0" name="Path">&quot;D:\Users\DoorOpener\Desktop\C2andWADs\ogmo_editor\level_editor\levels\export_test_real.json&quot;</param>
+                                    <param id="0" name="Path">&quot;D:\Users\DoorOpener\Desktop\C2andWADs\super_freaks\github\SuperFreaks\export\export_test_real.json&quot;</param>
                                     <param id="1" name="Contents">JSON_OgmoEditor.AsJson(0)</param>
                                 </action>
                             </actions>
@@ -979,19 +1187,14 @@
                                     <param id="2" name="Key {n}">&quot;layers&quot;{###}layer{###}&quot;entities&quot;{###}entity_count{###}&quot;y&quot;</param>
                                 </action>
                                 <action id="20" name="Set Value" sid="329826447524577" type="JSON_OgmoEditor">
-                                    <param id="0" name="Value">LevelObjects.Width</param>
+                                    <param id="0" name="Value">abs(LevelObjects.Width)</param>
                                     <param id="1" name="Reference point">0</param>
                                     <param id="2" name="Key {n}">&quot;layers&quot;{###}layer{###}&quot;entities&quot;{###}entity_count{###}&quot;width&quot;</param>
                                 </action>
                                 <action id="20" name="Set Value" sid="625797960024850" type="JSON_OgmoEditor">
-                                    <param id="0" name="Value">LevelObjects.Height</param>
+                                    <param id="0" name="Value">abs(LevelObjects.Height)</param>
                                     <param id="1" name="Reference point">0</param>
                                     <param id="2" name="Key {n}">&quot;layers&quot;{###}layer{###}&quot;entities&quot;{###}entity_count{###}&quot;height&quot;</param>
-                                </action>
-                                <action id="20" name="Set Value" sid="102002936083026" type="JSON_OgmoEditor">
-                                    <param id="0" name="Value">LevelObjects.Angle</param>
-                                    <param id="1" name="Reference point">0</param>
-                                    <param id="2" name="Key {n}">&quot;layers&quot;{###}layer{###}&quot;entities&quot;{###}entity_count{###}&quot;rotation&quot;</param>
                                 </action>
                                 <action id="30" name="Set Boolean" sid="902740013119982" type="JSON_OgmoEditor">
                                     <param id="0" name="value">1</param>
@@ -1038,7 +1241,10 @@
                                 </event-block>
                                 <event-block sid="131327968024015">
                                     <conditions>
-                                        <condition id="7" name="Is mirrored" sid="120655824089108" type="LevelObjects" />
+                                        <condition id="-5" name="Compare width" sid="120655824089108" type="LevelObjects">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="Width">0</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="30" name="Set Boolean" sid="515287538859394" type="JSON_OgmoEditor">
@@ -1050,13 +1256,32 @@
                                 </event-block>
                                 <event-block sid="246101992217269">
                                     <conditions>
-                                        <condition id="8" name="Is flipped" sid="969905458992153" type="LevelObjects" />
+                                        <condition id="-6" name="Compare height" sid="969905458992153" type="LevelObjects">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="Height">0</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="30" name="Set Boolean" sid="617768397999843" type="JSON_OgmoEditor">
                                             <param id="0" name="value">0</param>
                                             <param id="1" name="Reference point">0</param>
                                             <param id="2" name="Key {n}">&quot;layers&quot;{###}layer{###}&quot;entities&quot;{###}entity_count{###}&quot;flippedY&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="220253509534783">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="553267502163081" type="System">
+                                            <param id="0" name="First value">find(Function.Param(1),&quot;NoAngle|&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">-1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="20" name="Set Value" sid="102002936083026" type="JSON_OgmoEditor">
+                                            <param id="0" name="Value">LevelObjects.Angle</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;layers&quot;{###}layer{###}&quot;entities&quot;{###}entity_count{###}&quot;rotation&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1101,6 +1326,117 @@
                                     <param id="0" name="Value">entity_count</param>
                                 </action>
                             </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="541658866856501">
+                    <conditions>
+                        <condition id="0" name="On function" sid="446657997563656" type="Function">
+                            <param id="0" name="Name">&quot;Export_AppendEnemy&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="layer" sid="117046591220282" static="1" type="number">0</variable>
+                        <event-block sid="726967186558789">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="995881901966936" type="System">
+                                    <param id="0" name="Variable">layer</param>
+                                    <param id="1" name="Value">JSON_OgmoEditor.Size(0,&quot;layers&quot;)-1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="915987408503272">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="567182031009956" type="System">
+                                    <param id="0" name="Object">Enemies</param>
+                                    <param id="1" name="Expression">Enemies.UID</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="20" name="Set Value" sid="814383219326520" type="JSON_OgmoEditor">
+                                    <param id="0" name="Value">Enemies.walk_speed</param>
+                                    <param id="1" name="Reference point">0</param>
+                                    <param id="2" name="Key {n}">&quot;layers&quot;{###}layer{###}&quot;entities&quot;{###}Function.Param(1){###}&quot;values&quot;{###}&quot;Walk Speed&quot;</param>
+                                </action>
+                                <action id="20" name="Set Value" sid="246077204528412" type="JSON_OgmoEditor">
+                                    <param id="0" name="Value">Enemies.HP</param>
+                                    <param id="1" name="Reference point">0</param>
+                                    <param id="2" name="Key {n}">&quot;layers&quot;{###}layer{###}&quot;entities&quot;{###}Function.Param(1){###}&quot;values&quot;{###}&quot;HP&quot;</param>
+                                </action>
+                                <action id="20" name="Set Value" sid="230891380162652" type="JSON_OgmoEditor">
+                                    <param id="0" name="Value">Enemies.DamageType</param>
+                                    <param id="1" name="Reference point">0</param>
+                                    <param id="2" name="Key {n}">&quot;layers&quot;{###}layer{###}&quot;entities&quot;{###}Function.Param(1){###}&quot;values&quot;{###}&quot;Damage Type&quot;</param>
+                                </action>
+                                <action id="20" name="Set Value" sid="825430389306172" type="JSON_OgmoEditor">
+                                    <param id="0" name="Value">Enemies.ScreenWrap</param>
+                                    <param id="1" name="Reference point">0</param>
+                                    <param id="2" name="Key {n}">&quot;layers&quot;{###}layer{###}&quot;entities&quot;{###}Function.Param(1){###}&quot;values&quot;{###}&quot;Screen Wrap&quot;</param>
+                                </action>
+                                <action id="30" name="Set Boolean" sid="623324884285131" type="JSON_OgmoEditor">
+                                    <param id="0" name="value">1</param>
+                                    <param id="1" name="Reference point">0</param>
+                                    <param id="2" name="Key {n}">&quot;layers&quot;{###}layer{###}&quot;entities&quot;{###}Function.Param(1){###}&quot;values&quot;{###}&quot;Ignore Blockers&quot;</param>
+                                </action>
+                                <action id="30" name="Set Boolean" sid="637543609586742" type="JSON_OgmoEditor">
+                                    <param id="0" name="value">1</param>
+                                    <param id="1" name="Reference point">0</param>
+                                    <param id="2" name="Key {n}">&quot;layers&quot;{###}layer{###}&quot;entities&quot;{###}Function.Param(1){###}&quot;values&quot;{###}&quot;Move Only On Floor&quot;</param>
+                                </action>
+                                <action id="30" name="Set Boolean" sid="979584478443219" type="JSON_OgmoEditor">
+                                    <param id="0" name="value">1</param>
+                                    <param id="1" name="Reference point">0</param>
+                                    <param id="2" name="Key {n}">&quot;layers&quot;{###}layer{###}&quot;entities&quot;{###}Function.Param(1){###}&quot;values&quot;{###}&quot;Fall Off Ledges&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="549505008465105">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="516262317099055" type="Enemies">
+                                            <param id="0" name="Instance variable">IgnoreBlockers</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="30" name="Set Boolean" sid="179078359728416" type="JSON_OgmoEditor">
+                                            <param id="0" name="value">0</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;layers&quot;{###}layer{###}&quot;entities&quot;{###}Function.Param(1){###}&quot;values&quot;{###}&quot;Ignore Blockers&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="859323431163709">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="363349295345270" type="Enemies">
+                                            <param id="0" name="Instance variable">MoveOnlyOnFloor</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="30" name="Set Boolean" sid="212984991265924" type="JSON_OgmoEditor">
+                                            <param id="0" name="value">0</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;layers&quot;{###}layer{###}&quot;entities&quot;{###}Function.Param(1){###}&quot;values&quot;{###}&quot;Move Only On Floor&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="687584664677077">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="674426048443572" type="Enemies">
+                                            <param id="0" name="Instance variable">FallOffLedges</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="30" name="Set Boolean" sid="521591816108188" type="JSON_OgmoEditor">
+                                            <param id="0" name="value">0</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;layers&quot;{###}layer{###}&quot;entities&quot;{###}Function.Param(1){###}&quot;values&quot;{###}&quot;Fall Off Ledges&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -2774,7 +3110,7 @@
                                                     <param id="1" name="Value">instance</param>
                                                 </action>
                                                 <action id="-16" name="Wait" sid="849850340182606" type="System">
-                                                    <param id="0" name="Seconds">0.2</param>
+                                                    <param id="0" name="Seconds">0.1</param>
                                                 </action>
                                                 <action id="-10" name="Set value" sid="710141379653017" type="Obj_Portal">
                                                     <param id="0" name="Instance variable">destination_room</param>
@@ -5173,7 +5509,7 @@
                                                             <conditions />
                                                             <actions>
                                                                 <action id="-16" name="Wait" sid="438200522823356" type="System">
-                                                                    <param id="0" name="Seconds">0.2</param>
+                                                                    <param id="0" name="Seconds">0.1</param>
                                                                 </action>
                                                                 <action id="-10" name="Set value" sid="361459397862137" type="Obj_Portal">
                                                                     <param id="0" name="Instance variable">destination_room</param>
@@ -6527,7 +6863,7 @@
                     </conditions>
                     <actions>
                         <action id="-16" name="Wait" sid="256918480456563" type="System">
-                            <param id="0" name="Seconds">0.1</param>
+                            <param id="0" name="Seconds">0</param>
                         </action>
                         <action id="-10" name="Set value" sid="607674570645341" type="Obj_NumberStar">
                             <param id="0" name="Instance variable">path</param>
@@ -6611,7 +6947,7 @@
                                             <conditions />
                                             <actions>
                                                 <action id="-16" name="Wait" sid="836584261564490" type="System">
-                                                    <param id="0" name="Seconds">0.1</param>
+                                                    <param id="0" name="Seconds">0</param>
                                                 </action>
                                                 <action id="-10" name="Set value" sid="439551052948381" type="Obj_Trophy">
                                                     <param id="0" name="Instance variable">NumberStars</param>
@@ -6703,7 +7039,7 @@
                     </conditions>
                     <actions>
                         <action id="-16" name="Wait" sid="136293983916020" type="System">
-                            <param id="0" name="Seconds">0.1</param>
+                            <param id="0" name="Seconds">0</param>
                         </action>
                         <action id="-10" name="Set value" sid="982742248503146" type="Obj_TimeStar">
                             <param id="0" name="Instance variable">path</param>
@@ -6792,7 +7128,7 @@
                                             <conditions />
                                             <actions>
                                                 <action id="-16" name="Wait" sid="926597356002882" type="System">
-                                                    <param id="0" name="Seconds">0.1</param>
+                                                    <param id="0" name="Seconds">0</param>
                                                 </action>
                                                 <action id="-10" name="Set value" sid="868873868774729" type="Obj_Trophy">
                                                     <param id="0" name="Instance variable">TimedStars</param>
@@ -6849,6 +7185,10 @@
                                                     <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                     <param id="2" name="X">float(JSON_Common.Value(0,&quot;points&quot;,JSON_Common.CurrentKey,&quot;x&quot;))</param>
                                                     <param id="3" name="Y">float(JSON_Common.Value(0,&quot;points&quot;,JSON_Common.CurrentKey,&quot;y&quot;))</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="330366486758375" type="Obj_TimeStar">
+                                                    <param id="0" name="Instance variable">ID</param>
+                                                    <param id="1" name="Value">int(JSON_Common.CurrentKey)+1</param>
                                                 </action>
                                                 <action id="-10" name="Set value" sid="883058675407101" type="Obj_TimeStar">
                                                     <param id="0" name="Instance variable">TrophyID</param>
@@ -7884,7 +8224,7 @@
                     </conditions>
                     <actions>
                         <action id="-16" name="Wait" sid="104794380301321" type="System">
-                            <param id="0" name="Seconds">0.3</param>
+                            <param id="0" name="Seconds">0.35</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -11798,7 +12138,7 @@
                     </conditions>
                     <actions>
                         <action id="-16" name="Wait" sid="796641674049136" type="System">
-                            <param id="0" name="Seconds">0.3</param>
+                            <param id="0" name="Seconds">0.35</param>
                         </action>
                     </actions>
                     <sub-events>

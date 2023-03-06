@@ -224,7 +224,7 @@
                             <actions>
                                 <action id="-10" name="Set value" sid="322133388154988" type="Var_CONSTANTS">
                                     <param id="0" name="Instance variable">Path_Assets</param>
-                                    <param id="1" name="Value">&quot;D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\github\SuperFreaks&quot;</param>
+                                    <param id="1" name="Value">&quot;D:\Users\DoorOpener\Desktop\C2andWADs\super_freaks\github\SuperFreaks&quot;</param>
                                 </action>
                             </actions>
                         </event-block>

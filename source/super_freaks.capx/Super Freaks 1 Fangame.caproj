@@ -2,7 +2,7 @@
 <c2project>
     <name>Super Freaks 1 Fangame</name>
     <description></description>
-    <version>0.4.0-8</version>
+    <version>0.4.0-9</version>
     <author>Halatnikov</author>
     <author-email></author-email>
     <author-website>https://halatnikov.github.io</author-website>
@@ -1692,6 +1692,7 @@
                     <plugin id="Sprite" />
                     <instance-variables>
                         <instance-variable name="path" sid="710317432595149" type="string" />
+                        <instance-variable name="ID" sid="131538815944232" type="number" />
                         <instance-variable name="time" sid="821574805675591" type="number" />
                         <instance-variable name="InstanceCreationCode" sid="917264527803464" type="string" />
                         <instance-variable name="TrophyID" sid="733176017409577" type="number" />
@@ -4373,6 +4374,7 @@
                 <instance-variable name="ScreenWrap" sid="656632667359998" type="string" />
                 <instance-variable name="IgnoreBlockers" sid="787016242216019" type="boolean" />
                 <instance-variable name="MoveOnlyOnFloor" sid="871234221551948" type="boolean" />
+                <instance-variable name="FallOffLedges" sid="386114981590345" type="boolean" />
                 <instance-variable name="InitialHP" sid="210115062667098" type="number" />
             </instance-variables>
             <behaviors>

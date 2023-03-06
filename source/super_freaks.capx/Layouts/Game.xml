@@ -1724,6 +1724,7 @@
                         <ScreenWrap></ScreenWrap>
                         <IgnoreBlockers>false</IgnoreBlockers>
                         <MoveOnlyOnFloor>false</MoveOnlyOnFloor>
+                        <FallOffLedges>false</FallOffLedges>
                         <InitialHP>0</InitialHP>
                     </instance-variables>
                     <behavior-instances>
@@ -1775,6 +1776,7 @@
                         <ScreenWrap></ScreenWrap>
                         <IgnoreBlockers>false</IgnoreBlockers>
                         <MoveOnlyOnFloor>false</MoveOnlyOnFloor>
+                        <FallOffLedges>false</FallOffLedges>
                         <InitialHP>0</InitialHP>
                     </instance-variables>
                     <behavior-instances>
@@ -1954,7 +1956,7 @@
                     <instance-variables>
                         <Obj_ImportID>obj_trophy</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_ExportID></Obj_ExportID>
+                        <Obj_ExportID>obj_trophy</Obj_ExportID>
                         <Obj_Difficulty></Obj_Difficulty>
                         <trophy_id>-1</trophy_id>
                         <NumberStars>0</NumberStars>
@@ -2062,6 +2064,7 @@
                         <ScreenWrap></ScreenWrap>
                         <IgnoreBlockers>false</IgnoreBlockers>
                         <MoveOnlyOnFloor>false</MoveOnlyOnFloor>
+                        <FallOffLedges>false</FallOffLedges>
                         <InitialHP>0</InitialHP>
                         <timer_delay>1.5</timer_delay>
                         <timer_frequency>2.5</timer_frequency>
@@ -2368,6 +2371,7 @@
                         <ScreenWrap></ScreenWrap>
                         <IgnoreBlockers>false</IgnoreBlockers>
                         <MoveOnlyOnFloor>true</MoveOnlyOnFloor>
+                        <FallOffLedges>false</FallOffLedges>
                         <InitialHP>0</InitialHP>
                     </instance-variables>
                     <behavior-instances>
@@ -2411,7 +2415,7 @@
                     <instance-variables>
                         <Obj_ImportID>obj_number_star</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_ExportID></Obj_ExportID>
+                        <Obj_ExportID>obj_number_star</Obj_ExportID>
                         <Obj_Difficulty></Obj_Difficulty>
                         <path></path>
                         <ID>0</ID>
@@ -2458,9 +2462,10 @@
                     <instance-variables>
                         <Obj_ImportID>obj_time_star</Obj_ImportID>
                         <Obj_ImportInstance></Obj_ImportInstance>
-                        <Obj_ExportID></Obj_ExportID>
+                        <Obj_ExportID>obj_time_star</Obj_ExportID>
                         <Obj_Difficulty></Obj_Difficulty>
                         <path></path>
+                        <ID>0</ID>
                         <time>1</time>
                         <InstanceCreationCode></InstanceCreationCode>
                         <TrophyID>0</TrophyID>
@@ -3063,6 +3068,7 @@
                         <ScreenWrap></ScreenWrap>
                         <IgnoreBlockers>false</IgnoreBlockers>
                         <MoveOnlyOnFloor>false</MoveOnlyOnFloor>
+                        <FallOffLedges>false</FallOffLedges>
                         <InitialHP>0</InitialHP>
                     </instance-variables>
                     <behavior-instances>
@@ -3315,6 +3321,7 @@
                         <ScreenWrap></ScreenWrap>
                         <IgnoreBlockers>false</IgnoreBlockers>
                         <MoveOnlyOnFloor>false</MoveOnlyOnFloor>
+                        <FallOffLedges>false</FallOffLedges>
                         <InitialHP>0</InitialHP>
                         <speed_move>0</speed_move>
                         <timer_delay>0</timer_delay>
@@ -3809,6 +3816,7 @@
                         <ScreenWrap>XY</ScreenWrap>
                         <IgnoreBlockers>false</IgnoreBlockers>
                         <MoveOnlyOnFloor>false</MoveOnlyOnFloor>
+                        <FallOffLedges>false</FallOffLedges>
                         <InitialHP>0</InitialHP>
                         <speed_move_x>0</speed_move_x>
                         <speed_move_y>0</speed_move_y>
@@ -6242,7 +6250,7 @@
                 <GameState></GameState>
                 <GameMode></GameMode>
                 <Level></Level>
-                <Room>rm_secrettoy_1</Room>
+                <Room>rm_stadium_2</Room>
                 <ImportEngine>GMS2</ImportEngine>
             </instance-variables>
         </instance>

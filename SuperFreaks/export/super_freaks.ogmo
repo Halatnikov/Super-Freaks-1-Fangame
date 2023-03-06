@@ -3,7 +3,7 @@
   "ogmoVersion": "3.4.0",
   "levelPaths": ["."],
   "backgroundColor": "#d1d1d1ff",
-  "gridColor": "#3c404900",
+  "gridColor": "#3c404964",
   "anglesRadians": false,
   "directoryDepth": 5,
   "layerGridDefaultSize": {"x": 32, "y": 32},
@@ -19,7 +19,7 @@
   "compactExport": false,
   "externalScript": "",
   "playCommand": "",
-  "entityTags": ["Objects", "Collisions"],
+  "entityTags": ["Objects", "Collisions", "Common", "Level Specific", "1 Remastered", "Enemies"],
   "layers": [
     {
       "definition": "entity",
@@ -107,7 +107,7 @@
       "nodeLimit": 0,
       "nodeDisplay": 3,
       "nodeGhost": false,
-      "tags": ["Objects"],
+      "tags": ["Objects", "Common"],
       "values": [
         {
           "name": "Difficulty",
@@ -153,7 +153,7 @@
       "nodeLimit": 0,
       "nodeDisplay": 3,
       "nodeGhost": false,
-      "tags": ["Objects"],
+      "tags": ["Objects", "Common"],
       "values": [
         {"name": "ID", "definition": "Integer", "display": 1, "defaults": 0, "bounded": false, "min": 0, "max": 100},
         {"name": "Visible", "definition": "Boolean", "display": 0, "defaults": true},
@@ -201,7 +201,7 @@
       "nodeLimit": 0,
       "nodeDisplay": 3,
       "nodeGhost": false,
-      "tags": ["Objects"],
+      "tags": ["Objects", "Common"],
       "values": [
         {"name": "Checkpoint ID", "definition": "Integer", "display": 1, "defaults": 0, "bounded": false, "min": 0, "max": 100},
         {
@@ -248,7 +248,7 @@
       "nodeLimit": 0,
       "nodeDisplay": 3,
       "nodeGhost": false,
-      "tags": ["Objects"],
+      "tags": ["Objects", "Common"],
       "values": [
         {"name": "Visible", "definition": "Boolean", "display": 0, "defaults": true},
         {
@@ -305,7 +305,7 @@
       "nodeLimit": 0,
       "nodeDisplay": 3,
       "nodeGhost": false,
-      "tags": ["Objects"],
+      "tags": ["Objects", "Common"],
       "values": [
         {"name": "Visible", "definition": "Boolean", "display": 0, "defaults": true},
         {
@@ -359,7 +359,7 @@
       "nodeLimit": 0,
       "nodeDisplay": 3,
       "nodeGhost": false,
-      "tags": ["Objects"],
+      "tags": ["Objects", "Common"],
       "values": [
         {"name": "ID", "definition": "Integer", "display": 1, "defaults": 1, "bounded": false, "min": 0, "max": 100},
         {
@@ -372,6 +372,87 @@
       ],
       "texture": "_preview_images/common_trophy.png",
       "textureImage": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALXSURBVHhe7ZpRcsMgDERzxpyoh8lvz9Dr5K9HcFkJYSASBhsntsvOvJkYEN4VtF++DQ0NDQ0NDQ0N1Wk6Cbtoejwe0/P5PDTwCK9sua/UFx4ReGXLffUvb4BsNt3v9+58uX2BNreV2LujWVQ4fTPh928/EPzHg9/amtXEnv1vT5XSsLJZ/IKtuD0ptId+x+/sgJUDAUtSi3qbk9NHeLD7LcjGENSStrhvA9xe8ekL3W+B4d+PqbIWhrEe5Kcv7HEL4J0jRONzY15kLZrHt+L21U5f6H0L4J0juGf9cINKC8L4Jnx47fSFcAs6NQHeOQJpnnP745mHWXWFtSCAD5zjNi6i1vj91HcVgHeOQCrNFSerXq4Zx4mWTnwJqdf21jwkOM/wzhFIyTyeeZhVmqxuwJawtUhDNA8JzQ2IQuKZh4OSYhVXL6ezRyPim1BzIPDM1oPm+dfmkEoL5rklOjeiNbgAz2ydlNTimYdTlRY1vZzY2Ii1wQm3Hp7ZOqk0l0hbSDSbEFxdCFLJ6uBCwbsfM6W/1G/4Ml6Lq29tgOqjkqUcCFqSWmyN14BALX8Gcv21vRbxIa1xBKwRbxIHtjZewtW1nL6w9hZYvj3NiouJVlOtpy+sugVp2Jiuqm+CW6edfvwfXtCaRLUN74I3tri/dBMZebA4eBLMN8paH+9pAU9s7T1aPhkfCiHM4DlZI0IDKt4FT2ztfSoakxASaDFETNYIqtfWgQ+FF5nBVgXPiRphzcMDW/mctoVcy0HCi8jMWxoxBz9M+Fj7NuFgp26JTHZtxMFP3VIwvaoZaWhwaoUg1AytIX48Xuu4pPKQOZfWfAMMsIaXXlOvVz8Da3jp9cSnrIROuPAt0AMrYC2XXEd1py9c8BboQQughkvPr7bTFy50C/SAFaCWtziv1E/YWsAevNU5tenjyj0/e32HunxZeuYm/PsGQGJ+K0NDQ0NDQ0O9dbv9AaxbVkhbgLnWAAAAAElFTkSuQmCC"
+    },
+    {
+      "exportID": "04244992",
+      "name": "Trophy Number Star",
+      "limit": -1,
+      "size": {"x": 64, "y": 64},
+      "origin": {"x": 32, "y": 23},
+      "originAnchored": true,
+      "shape": {
+        "label": "Rectangle",
+        "points": [
+          {"x": -1, "y": -1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": 1}
+        ]
+      },
+      "color": "#ff0000ff",
+      "tileX": false,
+      "tileY": false,
+      "tileSize": {"x": 32, "y": 32},
+      "resizeableX": false,
+      "resizeableY": false,
+      "rotatable": false,
+      "rotationDegrees": 360,
+      "canFlipX": false,
+      "canFlipY": false,
+      "canSetColor": false,
+      "hasNodes": true,
+      "nodeLimit": 0,
+      "nodeDisplay": 0,
+      "nodeGhost": true,
+      "tags": ["Objects", "Common"],
+      "values": [
+        {"name": "Trophy ID", "definition": "Integer", "display": 0, "defaults": 1, "bounded": true, "min": 1, "max": 100}
+      ],
+      "texture": "_preview_images/common_numberstar.png",
+      "textureImage": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIESURBVHhe7ZRLbsMwDER9hW677UFzhp6oR3PBhgMwE8q2qr+sAd6ijURyhkq2paWlpVb6eGy7oH/eS2L88+fJ7UKA+a/9ye1CELMwD24TAG8f3OYVeNsH0wcQ2j6Y/hUcbR9MG8DZ9sG0r+DK9sF0AXjb/94fL9jPpnsFvH02D+yZaQK4sn1gz0zzCnj74Mg8GD4Ab/sxDP8KQtuPYdgAUrcPhn0FObYPhgpAhs21fYBX0G0QGC63ccYGIWj7+rJDCCVNh+AwBB2vjGyjFobPKPI6bMEeTYdICsNeHMl0iKgwZjEdAmGo3XetADQA4BUZEevpMACRHJglCOsBvtTmuUYOws4cbZw1UhB2xmTjrJ6DsDNlN87qKQg7Q3HjrJZB2J7VjbM4CG/gnHRjnIWBvKFz0p1xq1oBaLu+JIPV+gp0GUKN7YMVwAqgswBkoBrff9Dd70DN7YMVQC8ByCA1nz/o5muQsn0xkRLesAHAOOOdPWK4ANiw3BX4/95dj+YBYHhvOAsbhHEt81cHtSxeLQtqaZn6kubeYIANwahefxM+53tebXBUr7ikuTcUG4AxvXYqnOc6Xq+YulmFAe0wPDCM6JVo4T7X5Z4pPf4tbzCAwfVoslDP6yXk7HVZ3kAYVI9kF+p7ffVIPdlBMJh+VFzo1zQAUW3jrNb9l5aWlgbXtv0CYlC/Lu7uAkcAAAAASUVORK5CYII="
+    },
+    {
+      "exportID": "04261952",
+      "name": "Trophy Timed Star",
+      "limit": -1,
+      "size": {"x": 64, "y": 64},
+      "origin": {"x": 32, "y": 23},
+      "originAnchored": true,
+      "shape": {
+        "label": "Rectangle",
+        "points": [
+          {"x": -1, "y": -1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": 1}
+        ]
+      },
+      "color": "#ff0000ff",
+      "tileX": false,
+      "tileY": false,
+      "tileSize": {"x": 32, "y": 32},
+      "resizeableX": false,
+      "resizeableY": false,
+      "rotatable": false,
+      "rotationDegrees": 360,
+      "canFlipX": false,
+      "canFlipY": false,
+      "canSetColor": false,
+      "hasNodes": true,
+      "nodeLimit": 0,
+      "nodeDisplay": 1,
+      "nodeGhost": true,
+      "tags": ["Objects", "Common"],
+      "values": [
+        {"name": "Trophy ID", "definition": "Integer", "display": 0, "defaults": 1, "bounded": true, "min": 1, "max": 100},
+        {"name": "Time", "definition": "Float", "display": 0, "defaults": 1, "bounded": false, "min": 0, "max": 100}
+      ],
+      "texture": "_preview_images/common_timestar.png",
+      "textureImage": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAL2SURBVHhe7ZaBbd0wEEM9zl+ge3SQ7tDROlp6DMTg/oWyJVuyJccEHppv69+RjFBkuVJ/l18fIH38OWLwf8vvT35MET74x/LnjdsXkQseYRHpa/dQaXhyqxJqw5NblLA3PJm2BJg+Gp6whGmKyAXHM2BHVuE59f3hS4jhVeDX67VKPB/nDVuCD++Dq5A1cI6fPVQJMMPwLYNHOJd7uNeeXSMf3P/WlfmWYIffeXoRueBAGe4B951aRAx+5m89B3ZHP82LUMFHCE/gQXk7XEQuOBfYEWnoCuAl57O6iLXgxI5JI1cCT8orKCqiJDjAezsuTVwJPJV4/1ZEaXAwangCb6U5vopg+JIvjhyewKPy7mHeqgLwfpYCSrKAzwIglqAOkxnCE3hVGchbeGjrFuC5HZPLRgRe17KAtwKgtVtgr+WikYFnlUWGh54CUgGxBHy213LJyMCzygJkAZC6BXcrIBseUrfAHssFMwDvPvxmAVC8BfZIDp8BePcFbIaHngJSASzBHsnhMwDvDF9cAORvgX2Uw2cA3qt++9RTQCoA2Ec5fAbgnTmqCoBYgv0oh88AvO8KD81+C+CZ/ncVAM18C+D5UHjoKeApYM7/B+CVvg8VAM14C+C1SXhotlsAj/TbtIBZ/iqEx11//eXkC8C/9kguHgF4816bFjB6CfDkPYImBUD+FgB7JE1cCTzRX9PwUCwAP9tjaeQK4CX661rASCXAg/LWvQAustfS2Blgd85XlwLWSgDKZA+4L+cHNC0Ayt0CwiKU4ZZgx5aP5uGhrQIASwDK/BE4t8TDZQWQlkVwTs3uywsgvgiiQnri+T07uxZQa4jwuzZqlRY7uhQA7bkFChqNqLM1YEa38NCRAnxQGvXE92rGFpyb7LaXN6oMRHiW+MBp5Jf8u/g9NTvCs2p2M0VzORMeHyyN2ZT/jpq5trdmT7VyhjzefAszcZ7a6Wmxc1XKhDeYjnWT36V8pGP9xMXeSHp1uryHUws4ZVGl9vlalv9LfaV6zBrrBwAAAABJRU5ErkJggg=="
     },
     {
       "exportID": "89107380",
@@ -406,7 +487,7 @@
       "nodeLimit": 0,
       "nodeDisplay": 3,
       "nodeGhost": false,
-      "tags": ["Objects"],
+      "tags": ["Objects", "Common"],
       "values": [
         {
           "name": "Difficulty",
@@ -452,7 +533,7 @@
       "nodeLimit": 0,
       "nodeDisplay": 3,
       "nodeGhost": false,
-      "tags": ["Objects"],
+      "tags": ["Objects", "Common"],
       "values": [
         {
           "name": "Difficulty",
@@ -498,7 +579,7 @@
       "nodeLimit": 0,
       "nodeDisplay": 3,
       "nodeGhost": false,
-      "tags": ["Objects"],
+      "tags": ["Objects", "Common"],
       "values": [
         {"name": "Message", "definition": "Text", "display": 1, "defaults": "Yo what's up gamers"},
         {
@@ -545,7 +626,7 @@
       "nodeLimit": 0,
       "nodeDisplay": 3,
       "nodeGhost": false,
-      "tags": ["Objects"],
+      "tags": ["Objects", "Common"],
       "values": [
         {"name": "Launch Speed", "definition": "Float", "display": 0, "defaults": 0, "bounded": false, "min": 0, "max": 100},
         {"name": "Launch Duration", "definition": "Float", "display": 0, "defaults": 0, "bounded": false, "min": 0, "max": 100},
@@ -593,7 +674,7 @@
       "nodeLimit": 0,
       "nodeDisplay": 3,
       "nodeGhost": false,
-      "tags": ["Objects"],
+      "tags": ["Objects", "Common"],
       "values": [
         {"name": "Bounce Height", "definition": "Float", "display": 1, "defaults": -600, "bounded": false, "min": 0, "max": 100},
         {
@@ -606,6 +687,102 @@
       ],
       "texture": "_preview_images/obj_spring.png",
       "textureImage": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAESSURBVFhHxZCLkcMgDEQpK41cI2kgTaQfl0aCuUWLImyYSM7OvEmGj96atJg8iVu6wdtfyvl+TDmj771Zzn5xRniGKnQaN7FmpkiIWENFulwiB1YJ82AkxVnVF3894Ff4fYGCdSgSeFuBK1+Bvr4WeNyuKwE5nK0ALYQU4a9WPlkoh7yLaDEc5JEFHNBFwEwhFgI9F/zvywIO4DBDF045moFfmrenLepL3ljykiaPLMGO4qxqSagcjOTIvhlRhMRDOcetyKpYhy9PFVJC8HVyem7WYBs56xYZvOVj+qJu6QdbRfR+/e8WW6ThYnXNLfZXjwh5gdkS/Qu5hgf3ZXopcI9ILeHnXkhEZBEsRyAZsZCUXoFfvXK/WgyOAAAAAElFTkSuQmCC"
+    },
+    {
+      "exportID": "27032219",
+      "name": "Moving Platform",
+      "limit": -1,
+      "size": {"x": 16, "y": 24},
+      "origin": {"x": 8, "y": 12},
+      "originAnchored": true,
+      "shape": {
+        "label": "Rectangle",
+        "points": [
+          {"x": -1, "y": -1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": 1}
+        ]
+      },
+      "color": "#ff0000ff",
+      "tileX": false,
+      "tileY": false,
+      "tileSize": {"x": 0, "y": 0},
+      "resizeableX": true,
+      "resizeableY": false,
+      "rotatable": true,
+      "rotationDegrees": 360,
+      "canFlipX": false,
+      "canFlipY": false,
+      "canSetColor": false,
+      "hasNodes": false,
+      "nodeLimit": 0,
+      "nodeDisplay": 3,
+      "nodeGhost": false,
+      "tags": ["Objects", "Common"],
+      "values": [
+        {
+          "name": "Difficulty",
+          "definition": "Enum",
+          "display": 1,
+          "choices": ["All", "Easy", "Normal", "Hard", "Easy, Normal", "Normal, Hard", "Easy, Hard"],
+          "defaults": 0
+        },
+        {"name": "Speed X", "definition": "Float", "display": 0, "defaults": 1, "bounded": false, "min": 0, "max": 100}
+      ],
+      "texture": "_preview_images/common_platform.png",
+      "textureImage": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAYCAYAAADzoH0MAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB1SURBVDhP3ZDJDYAwDATdJP2kHppwKZRi2FyyIUTYL5SV5pFjx5KpRoLkiFAS4cPH1UG3CBKHWEqAJQ4+TDFLhCBAF+y0hTCC0YQZPxMwl61m7lEl/b6aAIeel0JPvcfQ5QS69AF0jMAjaf8fAi9NgLSDE6ITlYi9MoZpX5IAAAAASUVORK5CYII="
+    },
+    {
+      "exportID": "88852983",
+      "name": "Apple Rocket Platform",
+      "limit": -1,
+      "size": {"x": 48, "y": 56},
+      "origin": {"x": 24, "y": 28},
+      "originAnchored": true,
+      "shape": {
+        "label": "Rectangle",
+        "points": [
+          {"x": -1, "y": -1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": 1}
+        ]
+      },
+      "color": "#ff0000ff",
+      "tileX": false,
+      "tileY": false,
+      "tileSize": {"x": 48, "y": 56},
+      "resizeableX": true,
+      "resizeableY": false,
+      "rotatable": false,
+      "rotationDegrees": 360,
+      "canFlipX": false,
+      "canFlipY": false,
+      "canSetColor": false,
+      "hasNodes": false,
+      "nodeLimit": 0,
+      "nodeDisplay": 3,
+      "nodeGhost": false,
+      "tags": ["Objects", "Level Specific"],
+      "values": [
+        {"name": "Fly Height", "definition": "Float", "display": 0, "defaults": 128, "bounded": false, "min": 0, "max": 100},
+        {"name": "Fly Speed", "definition": "Float", "display": 0, "defaults": 0.5, "bounded": false, "min": 0, "max": 100},
+        {"name": "Descend Speed", "definition": "Float", "display": 0, "defaults": 0.75, "bounded": false, "min": 0, "max": 100},
+        {
+          "name": "Difficulty",
+          "definition": "Enum",
+          "display": 1,
+          "choices": ["All", "Easy", "Normal", "Hard", "Easy, Normal", "Normal, Hard", "Easy, Hard"],
+          "defaults": 0
+        }
+      ],
+      "texture": "_preview_images/obj_rocketapple.png",
+      "textureImage": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAA4CAYAAAC7UXvqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKfSURBVGhD7ZbBdcMgEETVS8rIIT24lDQQF+NrTsk9JeWYI2FWGrKsQRZgkPKe570f26CFWUaWM22Q25lmua+PybmfNzdMfi/sib1nC20KC0oTA+Be2Hu20Kah5skjAaVHAqU8EjDiQnvRrDmBb88o+b3umgAXlCYGwL2w92yhTUPNk8Ml8Ole3JObAvicug4cLgFrnqSuJYdJIGf+3yRQap7sm8C759mDWuDfl5rHK/aeLbRpu3lr3II5XJOqNYxN4JZxy41GxidQYp6gJrXWwrgEcJLaWAmZFMYmUHP6ZCWFMQm0nD5JpDAugZbTJ5kUmhM4nU4O+LdhQbtJMNGKWVcnoHxsEwsul4v8a+6H8gloEy0k1mYCELxsakQbp/xwWNBu0usW0glosRExa4UJWdDIT+UT6PQlBjqBSH4s2URoAJzPy9X4+Leg3URoSWHlC4xX2ZuCp6XuqgEMyK3DhRV+Om8etKSQOX0QEkhwdSvJ6VOqU+Cnw4J2k0BNCpnTB1ECGnVnhAbC6WeERVbNA5xkSRO4duX0QUggo5CCnP7KhbLIsqDdJGJrExvN43WtAawVNwBURNSmBDRshEbt51RNgmwC9sscNZBgcwJ3JEpghb8GoMQFoDiBOxESyOEVNwCZJxA4XAL2SYQ/zU+hDoQEMop+C9aaYAN7kGsgMk9hIIWf2pWUJ+DnruVH48cdH4HzYkNV7EUKXhfUvRjGcoUdVOxFCtAdJu2PDT5jfFASVV6kCBNAFxDO6aJOqvJSVdRJVV6k6D/fQpAUYhLoIo7Zgo6q8lJV1ElVXqIiRsfIckWdVOVFinjvAd3xoPufqvYihbxwp9OnqrxIke4cDD59qtqLFOqiWwUdVe1FCnc6eatqL0cwTx3Jy501Tb+c+2xOJyhvHAAAAABJRU5ErkJggg=="
     },
     {
       "exportID": "88530075",
@@ -958,55 +1135,6 @@
       "values": []
     },
     {
-      "exportID": "88852983",
-      "name": "Apple Rocket Platform",
-      "limit": -1,
-      "size": {"x": 48, "y": 56},
-      "origin": {"x": 24, "y": 28},
-      "originAnchored": true,
-      "shape": {
-        "label": "Rectangle",
-        "points": [
-          {"x": -1, "y": -1},
-          {"x": 1, "y": -1},
-          {"x": -1, "y": 1},
-          {"x": 1, "y": -1},
-          {"x": -1, "y": 1},
-          {"x": 1, "y": 1}
-        ]
-      },
-      "color": "#ff0000ff",
-      "tileX": false,
-      "tileY": false,
-      "tileSize": {"x": 48, "y": 56},
-      "resizeableX": true,
-      "resizeableY": false,
-      "rotatable": false,
-      "rotationDegrees": 360,
-      "canFlipX": false,
-      "canFlipY": false,
-      "canSetColor": false,
-      "hasNodes": false,
-      "nodeLimit": 0,
-      "nodeDisplay": 3,
-      "nodeGhost": false,
-      "tags": ["Objects"],
-      "values": [
-        {"name": "Fly Height", "definition": "Float", "display": 0, "defaults": 0, "bounded": false, "min": 0, "max": 100},
-        {"name": "Fly Speed", "definition": "Float", "display": 0, "defaults": 0, "bounded": false, "min": 0, "max": 100},
-        {"name": "Descend Speed", "definition": "Float", "display": 0, "defaults": 0, "bounded": false, "min": 0, "max": 100},
-        {
-          "name": "Difficulty",
-          "definition": "Enum",
-          "display": 1,
-          "choices": ["All", "Easy", "Normal", "Hard", "Easy, Normal", "Normal, Hard", "Easy, Hard"],
-          "defaults": 0
-        }
-      ],
-      "texture": "_preview_images/obj_rocketapple.png",
-      "textureImage": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAA4CAYAAAC7UXvqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKfSURBVGhD7ZbBdcMgEETVS8rIIT24lDQQF+NrTsk9JeWYI2FWGrKsQRZgkPKe570f26CFWUaWM22Q25lmua+PybmfNzdMfi/sib1nC20KC0oTA+Be2Hu20Kah5skjAaVHAqU8EjDiQnvRrDmBb88o+b3umgAXlCYGwL2w92yhTUPNk8Ml8Ole3JObAvicug4cLgFrnqSuJYdJIGf+3yRQap7sm8C759mDWuDfl5rHK/aeLbRpu3lr3II5XJOqNYxN4JZxy41GxidQYp6gJrXWwrgEcJLaWAmZFMYmUHP6ZCWFMQm0nD5JpDAugZbTJ5kUmhM4nU4O+LdhQbtJMNGKWVcnoHxsEwsul4v8a+6H8gloEy0k1mYCELxsakQbp/xwWNBu0usW0glosRExa4UJWdDIT+UT6PQlBjqBSH4s2URoAJzPy9X4+Leg3URoSWHlC4xX2ZuCp6XuqgEMyK3DhRV+Om8etKSQOX0QEkhwdSvJ6VOqU+Cnw4J2k0BNCpnTB1ECGnVnhAbC6WeERVbNA5xkSRO4duX0QUggo5CCnP7KhbLIsqDdJGJrExvN43WtAawVNwBURNSmBDRshEbt51RNgmwC9sscNZBgcwJ3JEpghb8GoMQFoDiBOxESyOEVNwCZJxA4XAL2SYQ/zU+hDoQEMop+C9aaYAN7kGsgMk9hIIWf2pWUJ+DnruVH48cdH4HzYkNV7EUKXhfUvRjGcoUdVOxFCtAdJu2PDT5jfFASVV6kCBNAFxDO6aJOqvJSVdRJVV6k6D/fQpAUYhLoIo7Zgo6q8lJV1ElVXqIiRsfIckWdVOVFinjvAd3xoPufqvYihbxwp9OnqrxIke4cDD59qtqLFOqiWwUdVe1FCnc6eatqL0cwTx3Jy501Tb+c+2xOJyhvHAAAAABJRU5ErkJggg=="
-    },
-    {
       "exportID": "88917163",
       "name": "Yorb 10",
       "limit": -1,
@@ -1039,7 +1167,7 @@
       "nodeLimit": 0,
       "nodeDisplay": 3,
       "nodeGhost": false,
-      "tags": ["Objects"],
+      "tags": ["Objects", "1 Remastered"],
       "values": [
         {
           "name": "Difficulty",
@@ -1085,7 +1213,7 @@
       "nodeLimit": 0,
       "nodeDisplay": 3,
       "nodeGhost": false,
-      "tags": ["Objects"],
+      "tags": ["Objects", "1 Remastered"],
       "values": [
         {
           "name": "Difficulty",
@@ -1131,7 +1259,7 @@
       "nodeLimit": 0,
       "nodeDisplay": 3,
       "nodeGhost": false,
-      "tags": ["Objects"],
+      "tags": ["Objects", "1 Remastered"],
       "values": [
         {"name": "Speed", "definition": "Float", "display": 0, "defaults": 0.5, "bounded": false, "min": 0, "max": 100},
         {
@@ -1186,7 +1314,7 @@
       "nodeLimit": 0,
       "nodeDisplay": 3,
       "nodeGhost": false,
-      "tags": ["Objects"],
+      "tags": ["Objects", "1 Remastered"],
       "values": [
         {
           "name": "Difficulty",
@@ -1232,7 +1360,7 @@
       "nodeLimit": 0,
       "nodeDisplay": 3,
       "nodeGhost": false,
-      "tags": ["Objects"],
+      "tags": ["Objects", "1 Remastered"],
       "values": [
         {
           "name": "Difficulty",
@@ -1244,6 +1372,199 @@
       ],
       "texture": "_preview_images/obj_gravityhigh.png",
       "textureImage": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADASURBVFhHvZBBDsMgDAT5/6vys7SgjlKQkwBee6RVDhY7q5TzOE4rRYzlqLmO308XjgKm+qNGLPWqR2z1qUa4erwjvO8buyUSOayWSeUwWxoih7fyUDncSVLkYMrGRMnhcUS0HMwRWXLoRmTLoY3wyikZ8zvLsBw117H+yv9wFDDVHzViqVc9YqtPNcLV4x3hfd/YLZHIYbVMKofZ0hA5vJWHyuFOkiIHUzYmSg6PI6LlYI7IkkM3IlsObYRLXsoHuIo/phgPnj4AAAAASUVORK5CYII="
+    },
+    {
+      "exportID": "03651249",
+      "name": "Boney M",
+      "limit": -1,
+      "size": {"x": 32, "y": 48},
+      "origin": {"x": 16, "y": 29},
+      "originAnchored": true,
+      "shape": {
+        "label": "Rectangle",
+        "points": [
+          {"x": -1, "y": -1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": 1}
+        ]
+      },
+      "color": "#ff0000a6",
+      "tileX": false,
+      "tileY": false,
+      "tileSize": {"x": 32, "y": 48},
+      "resizeableX": true,
+      "resizeableY": true,
+      "rotatable": false,
+      "rotationDegrees": 360,
+      "canFlipX": true,
+      "canFlipY": false,
+      "canSetColor": false,
+      "hasNodes": false,
+      "nodeLimit": 0,
+      "nodeDisplay": 3,
+      "nodeGhost": false,
+      "tags": ["Objects", "Enemies"],
+      "values": [
+        {"name": "Walk Speed", "definition": "Float", "display": 0, "defaults": 1, "bounded": false, "min": 0, "max": 100},
+        {"name": "HP", "definition": "Integer", "display": 0, "defaults": 1, "bounded": true, "min": 1, "max": 100},
+        {
+          "name": "Damage Type",
+          "definition": "Enum",
+          "display": 1,
+          "choices": ["Normal", "Heavy", "InvulnerableSides", "Bounce", "StrongSuit", "StrongPushAway"],
+          "defaults": 0
+        },
+        {
+          "name": "Screen Wrap",
+          "definition": "Enum",
+          "display": 2,
+          "choices": ["No", "X", "Y", "XY"],
+          "defaults": 0
+        },
+        {"name": "Ignore Blockers", "definition": "Boolean", "display": 0, "defaults": false},
+        {"name": "Move Only On Floor", "definition": "Boolean", "display": 0, "defaults": false},
+        {"name": "Fall Off Ledges", "definition": "Boolean", "display": 0, "defaults": false},
+        {
+          "name": "Difficulty",
+          "definition": "Enum",
+          "display": 1,
+          "choices": ["All", "Easy", "Normal", "Hard", "Easy, Normal", "Normal, Hard", "Easy, Hard"],
+          "defaults": 0
+        }
+      ],
+      "texture": "_preview_images/enemy_boneym.png",
+      "textureImage": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAwCAYAAABwrHhvAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHaSURBVFhH7VKJkcQgDNuy0sjWs/1cE6ni6slZEBHbyxcS7uZmVjMi2BhLBB4ffPDBALYGpyEIvF6vKlmHDXehS9iT+9DgCrLNS1zXdQPwZQ49YqvzMM1bpDhx1YRp3qIXJ0ZNmOY9LBkAdB16R4kyzIYzLJnwddCIUnm8behlzzWA0IhSDlzUxWdYQ+YtvJvAIgplasiNNdZO7/vJwLkFGnnkGlylDJwfqJ0iBxpTzU5RBs4jcqdvQbb9HwNSaONjHjFioHYNXlBTBh1HjBgAZGvWQIvqcUeMGmg9RqwrsZRTcQQMYKEXbJITIEv9sLatqe7Amb8g5alJyzhqNLFPsowPnDYgTdRJiqQga8O8ZKB1GkLKMSb6uJRP8WHcAiZ6jEgpxkQfl/IhjuJ10EjJkJRgTPSxydsrGIM3JCnf+IjJK4IFbM/ns4uojVvuQ2js/wSoBANnmdi+lYg2gJhvBF9XextCw2VZwleGxBArIJ5iAOI0AMoQSDEtPu0PgF87dc5fwZQ3AEJYJoE0kXuE+/xWGHGSJvSj/FMDs8QJY0KL+2sQTkFoDmGKa7r8NBhRJHakP4O54u3wQkTKk7P+RhLAXBOCyJPTDZBKqMRb8WsnLYFiOQ7g8fgBohBfNrf9YvUAAAAASUVORK5CYII="
+    },
+    {
+      "exportID": "03860133",
+      "name": "Pinhead",
+      "limit": -1,
+      "size": {"x": 36, "y": 36},
+      "origin": {"x": 18, "y": 18},
+      "originAnchored": true,
+      "shape": {
+        "label": "Rectangle",
+        "points": [
+          {"x": -1, "y": -1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": 1}
+        ]
+      },
+      "color": "#ff0000a6",
+      "tileX": false,
+      "tileY": false,
+      "tileSize": {"x": 32, "y": 32},
+      "resizeableX": true,
+      "resizeableY": true,
+      "rotatable": false,
+      "rotationDegrees": 360,
+      "canFlipX": true,
+      "canFlipY": false,
+      "canSetColor": false,
+      "hasNodes": false,
+      "nodeLimit": 0,
+      "nodeDisplay": 3,
+      "nodeGhost": false,
+      "tags": ["Objects", "Enemies"],
+      "values": [
+        {"name": "Walk Speed", "definition": "Float", "display": 0, "defaults": 1, "bounded": false, "min": 0, "max": 100},
+        {
+          "name": "Damage Type",
+          "definition": "Enum",
+          "display": 1,
+          "choices": ["Hazard", "HazardStrong", "HazardStrongPush"],
+          "defaults": 0
+        },
+        {
+          "name": "Screen Wrap",
+          "definition": "Enum",
+          "display": 0,
+          "choices": ["No", "X", "Y", "XY"],
+          "defaults": 0
+        },
+        {"name": "Ignore Blockers", "definition": "Boolean", "display": 0, "defaults": false},
+        {"name": "Move Only On Floor", "definition": "Boolean", "display": 0, "defaults": false},
+        {"name": "Fall Off Ledges", "definition": "Boolean", "display": 0, "defaults": false},
+        {
+          "name": "Difficulty",
+          "definition": "Enum",
+          "display": 1,
+          "choices": ["All", "Easy", "Normal", "Hard", "Easy, Normal", "Normal, Hard", "Easy, Hard"],
+          "defaults": 0
+        }
+      ],
+      "texture": "_preview_images/enemy_pinhead.png",
+      "textureImage": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJCSURBVFhH7ZTLccMwDETdZBrJ1Zc0lFMKUA2uJCUoWBjLWYHUh6R9y86sZYIA+ERKuv3rlbrf7yscw5dpuC+KHo/Hy6AIMtwTRRAbDDUJEYSaAlqXZbXqdTH3NkJ+hoHGgQxC3QPVAoHmjoww2KVoZlOnRi3gWxqCgRyoAbJ82ELf5t+2CwwdPag5IBNhHOTT3APT8BRQBQM3QGDegCtehJangOyyhdnZHcJXaoBNAxWY2B3Elp/nfwU6lcENw4S2u2MGCOI+J1C7O5Q0DaQwOC7E+ND6/4DC9QpUAA1BVbtDIMC47Qg8L0HtgSE2BbSBgW1Rj9OxCGJwCywbc5HfrV2g8p0RKZjnBFy2AMG18h1EGCog/j9edza0n0CpleGyZb4WIJAA4c4FrAkE+xg+EHr5TobyGD3MtbC4Sz9g8bAqkI8FyJujZkc+D4fyOHq25VBSYKHNG4YxTCAem95xr6JnWwUoZKECQyCee4bicffo8BmCHMi2n4n5+4OYNroKxXydZyy8Lz7I1ccwATEvQ+25NS+xQ3nil13VCgQYQOldEqzHV4AKQHkb4j/j3B2KcKgddFM+mUGyCQYASuEoxo7m5CYqlSMiDK4ohDMgoai8qO4grgrPuSMYqgChgEWlOQDCBOJCPi9iLVTqQ5zDes9lD4RFtBnlDW1OjVwrqRbMY0jHqAmfq3eH+NbBEHNxVWHMPPN1EciqNmCM0Qqk3yeFwTh5TArVMmEs9dDMi9w5sZGCXVmA82d5w3r7Ahvdbn/zVqk7THv0zAAAAABJRU5ErkJggg=="
+    },
+    {
+      "exportID": "03903974",
+      "name": "Skizzor",
+      "limit": -1,
+      "size": {"x": 32, "y": 32},
+      "origin": {"x": 16, "y": 16},
+      "originAnchored": true,
+      "shape": {
+        "label": "Rectangle",
+        "points": [
+          {"x": -1, "y": -1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": 1}
+        ]
+      },
+      "color": "#ff0000a6",
+      "tileX": false,
+      "tileY": false,
+      "tileSize": {"x": 32, "y": 32},
+      "resizeableX": false,
+      "resizeableY": false,
+      "rotatable": false,
+      "rotationDegrees": 360,
+      "canFlipX": true,
+      "canFlipY": false,
+      "canSetColor": false,
+      "hasNodes": false,
+      "nodeLimit": 0,
+      "nodeDisplay": 3,
+      "nodeGhost": false,
+      "tags": ["Objects", "Enemies"],
+      "values": [
+        {"name": "Walk Speed", "definition": "Float", "display": 0, "defaults": 1, "bounded": false, "min": 0, "max": 100},
+        {
+          "name": "Damage Type",
+          "definition": "Enum",
+          "display": 1,
+          "choices": ["Hazard", "HazardStrong", "HazardStrongPush"],
+          "defaults": 0
+        },
+        {
+          "name": "Screen Wrap",
+          "definition": "Enum",
+          "display": 0,
+          "choices": ["No", "X", "Y", "XY"],
+          "defaults": 0
+        },
+        {"name": "Ignore Blockers", "definition": "Boolean", "display": 0, "defaults": false},
+        {"name": "Move Only On Floor", "definition": "Boolean", "display": 0, "defaults": true},
+        {"name": "Fall Off Ledges", "definition": "Boolean", "display": 0, "defaults": false},
+        {
+          "name": "Difficulty",
+          "definition": "Enum",
+          "display": 0,
+          "choices": ["All", "Easy", "Normal", "Hard", "Easy, Normal", "Normal, Hard", "Easy, Hard"],
+          "defaults": 0
+        }
+      ],
+      "texture": "_preview_images/enemy_skizzor.png",
+      "textureImage": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD9SURBVFhH7ZJBDoMwDAR5I9/haRz6NNoJXmQHFxEVUA8ZaZXE3ngBMXQ6nU6n8y8stj7JlrkA63p8hJAZDg8RMpd5nkPhZkoWmexDAax4x4OUuVC/8Fbwqy7IlNDkOchYm14yaNUQr3Ecl2maithnnmyWl/kKu6Yu+BWfD66lB4Fshhc+gsXO4KUB+LJgL83SnW/CR7AnNUr0j95e0lfIZkj0CcxILyB6LcpmIOsfkg6g5ilnU9bL7ptO4y8VMUhwfpnYiyrM6xIsJgbVD4bxDnZh7OuzfFy4kvC50bfgyncJ289WDdY+1PB8DkWc1/JvtL5Vq/8UrcNO+ofhDZ2Swan24ACMAAAAAElFTkSuQmCC"
     },
     {
       "exportID": "88373770",
@@ -1288,6 +1609,102 @@
           "defaults": 0
         }
       ]
+    },
+    {
+      "exportID": "27132194",
+      "name": "Path (Open)",
+      "limit": -1,
+      "size": {"x": 16, "y": 16},
+      "origin": {"x": 8, "y": 8},
+      "originAnchored": true,
+      "shape": {
+        "label": "Rectangle",
+        "points": [
+          {"x": -1, "y": -1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": 1}
+        ]
+      },
+      "color": "#ff0000ff",
+      "tileX": false,
+      "tileY": false,
+      "tileSize": {"x": 32, "y": 32},
+      "resizeableX": false,
+      "resizeableY": false,
+      "rotatable": false,
+      "rotationDegrees": 360,
+      "canFlipX": false,
+      "canFlipY": false,
+      "canSetColor": false,
+      "hasNodes": true,
+      "nodeLimit": 0,
+      "nodeDisplay": 0,
+      "nodeGhost": true,
+      "tags": ["Objects"],
+      "values": [
+        {"name": "Path ID", "definition": "String", "display": 1, "defaults": "", "maxLength": 0, "trimWhitespace": true},
+        {"name": "Visible", "definition": "Boolean", "display": 0, "defaults": true},
+        {
+          "name": "Difficulty",
+          "definition": "Enum",
+          "display": 1,
+          "choices": ["All", "Easy", "Normal", "Hard", "Easy, Normal", "Normal, Hard", "Easy, Hard"],
+          "defaults": 0
+        }
+      ],
+      "texture": "_preview_images/obj_path.png",
+      "textureImage": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABzSURBVDhPzZBRDsAgCEM5mkfzZjuas44uDgO4n2VNXjRIC1H+qyrSZrSci4aj010D3LeCrNHCIG1fhcfRXEprtV4na4ob8JgOM2FNcbe4p4NgA5AHJLgB0QeS8CN3tnDNULZFOJ1Cgw2iMTXPouG18WOJnO+B00Eww/FAAAAAAElFTkSuQmCC"
+    },
+    {
+      "exportID": "27156579",
+      "name": "Path (Closed)",
+      "limit": -1,
+      "size": {"x": 16, "y": 16},
+      "origin": {"x": 8, "y": 8},
+      "originAnchored": true,
+      "shape": {
+        "label": "Rectangle",
+        "points": [
+          {"x": -1, "y": -1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": 1}
+        ]
+      },
+      "color": "#ff0000ff",
+      "tileX": false,
+      "tileY": false,
+      "tileSize": {"x": 32, "y": 32},
+      "resizeableX": false,
+      "resizeableY": false,
+      "rotatable": false,
+      "rotationDegrees": 360,
+      "canFlipX": false,
+      "canFlipY": false,
+      "canSetColor": false,
+      "hasNodes": true,
+      "nodeLimit": 0,
+      "nodeDisplay": 1,
+      "nodeGhost": true,
+      "tags": ["Objects"],
+      "values": [
+        {"name": "Path ID", "definition": "String", "display": 1, "defaults": "", "maxLength": 0, "trimWhitespace": true},
+        {"name": "Visible", "definition": "Boolean", "display": 0, "defaults": true},
+        {
+          "name": "Difficulty",
+          "definition": "Enum",
+          "display": 1,
+          "choices": ["All", "Easy", "Normal", "Hard", "Easy, Normal", "Normal, Hard", "Easy, Hard"],
+          "defaults": 0
+        }
+      ],
+      "texture": "_preview_images/obj_path.png",
+      "textureImage": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABzSURBVDhPzZBRDsAgCEM5mkfzZjuas44uDgO4n2VNXjRIC1H+qyrSZrSci4aj010D3LeCrNHCIG1fhcfRXEprtV4na4ob8JgOM2FNcbe4p4NgA5AHJLgB0QeS8CN3tnDNULZFOJ1Cgw2iMTXPouG18WOJnO+B00Eww/FAAAAAAElFTkSuQmCC"
     }
   ],
   "tilesets": [
