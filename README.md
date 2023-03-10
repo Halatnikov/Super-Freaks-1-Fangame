@@ -12,4 +12,4 @@ https://github.com/stars/Halatnikov/lists/used-for-super-freaks-1-fangame
 
 https://goessner.net/download/prj/jsonxml/
 
-https://github.com/JorJoe05/Super-Freaks-1-Ultimate-Godot
+https://github.com/JorJoe05/Super-Freaks-1-Ultimate-Godot 
