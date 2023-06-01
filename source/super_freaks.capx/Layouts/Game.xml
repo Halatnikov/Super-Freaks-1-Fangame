@@ -2515,7 +2515,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>229</x>
+                        <x>230</x>
                         <y>606</y>
                         <z>0</z>
                         <width>46</width>
@@ -6250,8 +6250,8 @@
                 <GameState></GameState>
                 <GameMode></GameMode>
                 <Level></Level>
-                <Room>rm_stadium_2</Room>
-                <ImportEngine>GMS2</ImportEngine>
+                <Room>Stage3-3</Room>
+                <ImportEngine>GM8_3</ImportEngine>
             </instance-variables>
         </instance>
         <instance type="Var_Player" uid="77">

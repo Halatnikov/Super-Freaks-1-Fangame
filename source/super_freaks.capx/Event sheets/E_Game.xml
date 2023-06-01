@@ -7882,8 +7882,12 @@
                                     </conditions>
                                     <actions>
                                         <action id="-34" name="Set layer background color" sid="951177001383077" type="System">
-                                            <param id="0" name="Layer">&quot;BG&quot;</param>
+                                            <param id="0" name="Layer">&quot;BGIgnoreScale&quot;</param>
                                             <param id="1" name="Color">rgb(int(tokenat(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Main.ImportEngine,Var_Main.Room,&quot;BackgroundColor&quot;),0,&quot;,&quot;)), int(tokenat(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Main.ImportEngine,Var_Main.Room,&quot;BackgroundColor&quot;),1,&quot;,&quot;)), int(tokenat(JSON_PERSIST.Value(0,&quot;ImportRoom_&quot;&amp;Var_Main.ImportEngine,Var_Main.Room,&quot;BackgroundColor&quot;),2,&quot;,&quot;)))</param>
+                                        </action>
+                                        <action id="14" name="Log" sid="468792659356515" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">0</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -7893,7 +7897,7 @@
                                         <action id="-16" name="Wait" sid="572738178563852" type="System">
                                             <param id="0" name="Seconds">0.2</param>
                                         </action>
-                                        <action id="0" name="Call function" sid="460819851876132" type="Function">
+                                        <action disabled="1" id="0" name="Call function" sid="460819851876132" type="Function">
                                             <param id="0" name="Name">&quot;Room_Export&quot;</param>
                                             <param id="1" name="Parameter {n}"></param>
                                         </action>
@@ -17205,6 +17209,9 @@
                 <condition id="-8" name="Is boolean instance variable set" sid="419050782869220" type="Var_Gameplay">
                     <param id="0" name="Instance variable">TimerActive</param>
                 </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="624238647208507" type="Var_Gameplay">
+                    <param id="0" name="Instance variable">RoomLoaded</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-10" name="Set value" sid="499936477866384" type="Var_Player">
@@ -18590,7 +18597,7 @@
                                     <param id="0" name="Variable">image</param>
                                     <param id="1" name="Value">&quot;&quot;</param>
                                 </action>
-                                <action id="-34" name="Set layer background color" sid="638243095874951" type="System">
+                                <action disabled="1" id="-34" name="Set layer background color" sid="638243095874951" type="System">
                                     <param id="0" name="Layer">&quot;BGIgnoreScale&quot;</param>
                                     <param id="1" name="Color">rgb(255,255,255)</param>
                                 </action>

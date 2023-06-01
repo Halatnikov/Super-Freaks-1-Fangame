@@ -2330,13 +2330,25 @@
                                                             <param id="2" name="Second value">&quot;Level&quot;</param>
                                                         </condition>
                                                     </conditions>
-                                                    <actions>
-                                                        <action id="20" name="Set Value" sid="973878693140779" type="JSON_PERSIST">
-                                                            <param id="0" name="Value">&quot;|GM8|SpeedSuit|StrongSuit&quot;</param>
-                                                            <param id="1" name="Reference point">0</param>
-                                                            <param id="2" name="Key {n}">&quot;ImportRoom_GM8_&quot;&amp;game{###}room{###}&quot;Flags&quot;</param>
-                                                        </action>
-                                                    </actions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="467916688123706">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="349467972045912" type="System">
+                                                                    <param id="0" name="Variable">game</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">3</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="20" name="Set Value" sid="973878693140779" type="JSON_PERSIST">
+                                                                    <param id="0" name="Value">&quot;|GM8|SpeedSuit|StrongSuit&quot;</param>
+                                                                    <param id="1" name="Reference point">0</param>
+                                                                    <param id="2" name="Key {n}">&quot;ImportRoom_GM8_&quot;&amp;game{###}room{###}&quot;Flags&quot;</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                                 <event-block sid="832569912601444">
                                                     <conditions>
