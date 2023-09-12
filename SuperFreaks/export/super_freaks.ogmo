@@ -723,14 +723,14 @@
       "nodeGhost": false,
       "tags": ["Objects", "Common"],
       "values": [
+        {"name": "Speed X", "definition": "Float", "display": 0, "defaults": 1, "bounded": false, "min": 0, "max": 100},
         {
           "name": "Difficulty",
           "definition": "Enum",
           "display": 1,
           "choices": ["All", "Easy", "Normal", "Hard", "Easy, Normal", "Normal, Hard", "Easy, Hard"],
           "defaults": 0
-        },
-        {"name": "Speed X", "definition": "Float", "display": 0, "defaults": 1, "bounded": false, "min": 0, "max": 100}
+        }
       ],
       "texture": "_preview_images/common_platform.png",
       "textureImage": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAYCAYAAADzoH0MAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB1SURBVDhP3ZDJDYAwDATdJP2kHppwKZRi2FyyIUTYL5SV5pFjx5KpRoLkiFAS4cPH1UG3CBKHWEqAJQ4+TDFLhCBAF+y0hTCC0YQZPxMwl61m7lEl/b6aAIeel0JPvcfQ5QS69AF0jMAjaf8fAi9NgLSDE6ITlYi9MoZpX5IAAAAASUVORK5CYII="
@@ -1259,7 +1259,7 @@
       "nodeLimit": 0,
       "nodeDisplay": 3,
       "nodeGhost": false,
-      "tags": ["Objects", "1 Remastered"],
+      "tags": ["Objects"],
       "values": [
         {"name": "Speed", "definition": "Float", "display": 0, "defaults": 0.5, "bounded": false, "min": 0, "max": 100},
         {
@@ -1314,7 +1314,7 @@
       "nodeLimit": 0,
       "nodeDisplay": 3,
       "nodeGhost": false,
-      "tags": ["Objects", "1 Remastered"],
+      "tags": ["Objects"],
       "values": [
         {
           "name": "Difficulty",
@@ -1360,7 +1360,7 @@
       "nodeLimit": 0,
       "nodeDisplay": 3,
       "nodeGhost": false,
-      "tags": ["Objects", "1 Remastered"],
+      "tags": ["Objects"],
       "values": [
         {
           "name": "Difficulty",

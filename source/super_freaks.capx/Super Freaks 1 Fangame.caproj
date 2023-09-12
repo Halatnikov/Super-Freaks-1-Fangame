@@ -2685,7 +2685,7 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
-                    <animation framecount="8" loop="1" name="Fast_1r" pingpong="0" repeatcount="1" repeatto="0" sid="469517149934148" speed="60">
+                    <animation framecount="8" loop="1" name="Fast_1r" pingpong="0" repeatcount="1" repeatto="0" sid="469517149934148" speed="30">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\sprConveyorBeltFast_0.png" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\sprConveyorBeltFast_1.png" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\DoorOpener\Desktop\C2andWADs\super freaks\1rem\Super_Freaks_1.gmx\sprites\images\sprConveyorBeltFast_2.png" />
@@ -3278,7 +3278,7 @@
             <object-type name="Loading2" sid="219638312450494">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="16" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="403256749222807" speed="15">
+                    <animation framecount="16" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="403256749222807" speed="12">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />

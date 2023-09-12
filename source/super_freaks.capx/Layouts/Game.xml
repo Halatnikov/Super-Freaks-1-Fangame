@@ -3756,8 +3756,8 @@
                         <x>-179</x>
                         <y>368</y>
                         <z>0</z>
-                        <width>32</width>
-                        <height>32</height>
+                        <width>31</width>
+                        <height>30</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -3790,8 +3790,8 @@
                         <x>-147</x>
                         <y>370</y>
                         <z>0</z>
-                        <width>48</width>
-                        <height>48</height>
+                        <width>30</width>
+                        <height>42</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
